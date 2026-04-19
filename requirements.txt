@@ -13,3 +13,5 @@ pandas
 numpy
 httpx
 requests
+notion-client
+networkx
