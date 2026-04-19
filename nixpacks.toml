@@ -1,0 +1,13 @@
+providers = ["python", "node"]
+
+[phases.setup]
+nixPkgs = ["python3", "gcc", "nodejs_20"]
+
+[phases.build]
+cmds = [
+    "cd frontend_v2 && npm install && npm run build",
+    "pip install -r requirements.txt --no-cache-dir"
+]
+
+[start]
+cmd = "uvicorn backend.main:app --host 0.0.0.0 --port $PORT"
