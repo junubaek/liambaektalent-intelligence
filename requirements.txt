@@ -1,10 +1,15 @@
-streamlit
+fastapi
+uvicorn
+pydantic
+neo4j
+pinecone-client
+google-genai
+pdfplumber
+python-docx
+python-jose[cryptography]
+bcrypt
+python-multipart
 pandas
-altair
-# OpenAI and Pinecone clients are implemented via urllib.request in this project,
-# so extra library installations might not be strictly necessary for them,
-# but adding common ones for robustness.
 numpy
-# If any other scripts use these:
-# openpyxl
-# python-docx
+httpx
+requests
