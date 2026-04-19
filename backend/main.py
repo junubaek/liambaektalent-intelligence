@@ -15,6 +15,25 @@ from typing import Dict
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT_DIR)
 
+# Auto-generate secrets.json from environment variables in cloud deployment
+secrets_path = os.path.join(ROOT_DIR, "secrets.json")
+if not os.path.exists(secrets_path):
+    print("secrets.json not found. Generating from environment variables...")
+    cloud_secrets = {
+        "OPENAI_API_KEY": os.environ.get("OPENAI_API_KEY", ""),
+        "PINECONE_API_KEY": os.environ.get("PINECONE_API_KEY", ""),
+        "PINECONE_HOST": os.environ.get("PINECONE_HOST", ""),
+        "PINECONE_INDEX_NAME": os.environ.get("PINECONE_INDEX_NAME", ""),
+        "GEMINI_API_KEY": os.environ.get("GEMINI_API_KEY", ""),
+        "NOTION_API_KEY": os.environ.get("NOTION_API_KEY", ""),
+        "NEO4J_URI": os.environ.get("NEO4J_URI", ""),
+        "NEO4J_USERNAME": os.environ.get("NEO4J_USERNAME", ""),
+        "NEO4J_PASSWORD": os.environ.get("NEO4J_PASSWORD", "")
+    }
+    with open(secrets_path, "w", encoding="utf-8") as f:
+        json.dump(cloud_secrets, f, indent=4)
+
+
 from matcher_v4_2 import MatcherV4_2
 from data_curator import DataCurator
 from sync_coordinator import SyncCoordinator
