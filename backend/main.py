@@ -1,6 +1,12 @@
-
 import os
 import sys
+
+# --- [DB Auto-Downloader] ---
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+from backend.startup import ensure_db
+ensure_db()
+# ----------------------------
+
 import json
 import logging
 from typing import List, Optional
