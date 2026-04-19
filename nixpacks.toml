@@ -1,5 +1,8 @@
 providers = ["python", "node"]
 
+[variables]
+NIXPACKS_NODE_VERSION = "20"
+
 [phases.build]
 cmds = [
     "cd frontend_v2 && npm install && npm run build",
