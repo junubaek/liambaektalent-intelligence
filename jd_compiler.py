@@ -16,13 +16,22 @@ from openai import OpenAI
 
 
 
-# Secret Data for OpenAI/Pinecone
+import os
 
-with open("secrets.json", "r") as f:
+def _get_secret(key):
+    val = os.environ.get(key)
+    if val: return val
+    try:
+        with open("secrets.json", "r", encoding="utf-8") as f:
+            return json.load(f).get(key, "")
+    except Exception:
+        return ""
 
-    secret_data = json.load(f)
-
-
+secret_data = {
+    "OPENAI_API_KEY": _get_secret("OPENAI_API_KEY"),
+    "PINECONE_HOST": _get_secret("PINECONE_HOST"),
+    "PINECONE_API_KEY": _get_secret("PINECONE_API_KEY")
+}
 
 openai_client = OpenAI(api_key=secret_data.get("OPENAI_API_KEY", ""))
 
@@ -312,19 +321,14 @@ logger = logging.getLogger(__name__)
 
 # --- 1. Load Secrets and Setup Gemini ---
 
-try:
-
-    with open("secrets.json", "r", encoding="utf-8") as f:
-
-        secrets = json.load(f)
-
-        GENAI_KEY = secrets.get("GEMINI_API_KEY", "")
-
-except Exception as e:
-
-    logger.warning("secrets.json not found or invalid format.")
-
-    GENAI_KEY = "PLEASE_SET_KEY"
+GENAI_KEY = os.environ.get("GEMINI_API_KEY")
+if not GENAI_KEY:
+    try:
+        with open("secrets.json", "r", encoding="utf-8") as f:
+            GENAI_KEY = json.load(f).get("GEMINI_API_KEY", "PLEASE_SET_KEY")
+    except Exception as e:
+        logger.warning("secrets.json not found or invalid format.")
+        GENAI_KEY = "PLEASE_SET_KEY"
 
 
 
@@ -338,9 +342,11 @@ def get_history_bonus_scores(jd_text: str, top_k: int = 50) -> Dict[str, Dict]:
 
     try:
 
-        with open("secrets.json", "r", encoding="utf-8") as f:
-
-            secret_data = json.load(f)
+        secret_data = {
+            "PINECONE_HOST": _get_secret("PINECONE_HOST"),
+            "PINECONE_API_KEY": _get_secret("PINECONE_API_KEY"),
+            "OPENAI_API_KEY": _get_secret("OPENAI_API_KEY")
+        }
 
             
 

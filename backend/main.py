@@ -77,7 +77,7 @@ ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_DAYS = 7
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="api/auth/login")
 
-DB_PATH = os.path.join(ROOT_DIR, "candidates.db")
+DB_PATH = os.environ.get("DB_PATH", os.path.join(ROOT_DIR, "candidates.db"))
 
 def get_db():
     conn = sqlite3.connect(DB_PATH)
