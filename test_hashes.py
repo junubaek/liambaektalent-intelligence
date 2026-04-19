@@ -22,13 +22,13 @@ def read_doc_text(path):
     return t.strip()
 
 processed_hashes = set()
-with open(r'c:\Users\cazam\Downloads\ÀÌ·Â¼­ÀÚµ¿ºĞ¼®°Ë»ö½Ã½ºÅÛ\processed.json', 'r', encoding='utf-8') as f:
+with open(r'c:\Users\cazam\Downloads\ì´ë ¥ì„œìë™ë¶„ì„ê²€ìƒ‰ì‹œìŠ¤í…œ\processed.json', 'r', encoding='utf-8') as f:
     d = json.load(f)
     for v in d.values():
         if isinstance(v, dict) and 'text_hash' in v: processed_hashes.add(v['text_hash'])
 
 new_files = []
-d = r'C:\Users\cazam\Downloads\02_resume ÀüÃ³¸®'
+d = r'C:\Users\cazam\Downloads\02_resume ì „ì²˜ë¦¬'
 for f in os.listdir(d):
     if f.startswith('~$'): continue
     if f.endswith('.pdf') or f.endswith('.docx') or f.endswith('.doc'):

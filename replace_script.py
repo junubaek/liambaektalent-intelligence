@@ -1,6 +1,6 @@
 import re
 
-with open('c:/Users/cazam/Downloads/ÀÌ·Â¼­ÀÚµ¿ºĞ¼®°Ë»ö½Ã½ºÅÛ/frontend_v2/src/App.jsx', 'r', encoding='utf-8') as f:
+with open('c:/Users/cazam/Downloads/ì´ë ¥ì„œìë™ë¶„ì„ê²€ìƒ‰ì‹œìŠ¤í…œ/frontend_v2/src/App.jsx', 'r', encoding='utf-8') as f:
     text = f.read()
 
 start_str = '  const renderCareerDetails = (candidate, summary) => {'
@@ -14,14 +14,14 @@ if start_str in text and end_str in text:
     let edges = candidate.matched_edges ? candidate.matched_edges.slice(0, 3) : [];
     let actions = candidate.matched_actions ? candidate.matched_actions.slice(0, 2) : [];
     let matchStr = [...edges, ...actions].join(', ');
-    if (!matchStr) matchStr = 'Á÷¹« ÇÙ½É Å°¿öµå ¸ÅÄª ÁøÇà';
+    if (!matchStr) matchStr = 'ì§ë¬´ í•µì‹¬ í‚¤ì›Œë“œ ë§¤ì¹­ ì§„í–‰';
 
     return (
         <div className="pt-8 animate-fade-in border-t border-gray-100 mt-6 relative z-10 cursor-default" onClick={(e) => e.stopPropagation()}>
             <div className="flex justify-between items-start mb-8 tracking-tighter">
                 <div className="flex-1 pr-6">
                     <h5 className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-3">GRAPHPATH</h5>
-                    <p className="text-sm font-black text-gray-800 uppercase leading-snug">{candidate.target_job || candidate.sector || 'ºĞ¼® ÁøÇàÁß'}</p>
+                    <p className="text-sm font-black text-gray-800 uppercase leading-snug">{candidate.target_job || candidate.sector || 'ë¶„ì„ ì§„í–‰ì¤‘'}</p>
                 </div>
                 <div className="flex-[1.5] px-6 border-l border-gray-100">
                     <h5 className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-3">MATCHEDGE</h5>
@@ -37,8 +37,8 @@ if start_str in text and end_str in text:
             </div>
             
             <div className="flex items-center gap-6 text-xs font-bold text-gray-400 mb-12">
-                <span className="flex items-center gap-1.5"><Phone className="w-3.5 h-3.5" /> {candidate.phone || candidate['ÀüÈ­¹øÈ£'] || 'N/A'}</span>
-                <span className="flex items-center gap-1.5"><Mail className="w-3.5 h-3.5" /> {candidate.email || candidate['ÀÌ¸ŞÀÏ'] || 'N/A'}</span>
+                <span className="flex items-center gap-1.5"><Phone className="w-3.5 h-3.5" /> {candidate.phone || candidate['ì „í™”ë²ˆí˜¸'] || 'N/A'}</span>
+                <span className="flex items-center gap-1.5"><Mail className="w-3.5 h-3.5" /> {candidate.email || candidate['ì´ë©”ì¼'] || 'N/A'}</span>
             </div>
         
             <div className="mb-6 flex items-center gap-2 text-black">
@@ -48,17 +48,17 @@ if start_str in text and end_str in text:
             
             <div className="bg-white border border-gray-200 shadow-sm rounded-[2.5rem] p-8 md:p-10 mb-4">
                 <div className="mb-10 flex flex-col md:flex-row gap-6">
-                    <div className="w-32 font-black text-black text-[13px] tracking-tight flex-shrink-0 pt-0.5">¨ç ÇÁ·ÎÇÊ ÇÙ½É ¿ä¾à</div>
+                    <div className="w-32 font-black text-black text-[13px] tracking-tight flex-shrink-0 pt-0.5">â‘  í”„ë¡œí•„ í•µì‹¬ ìš”ì•½</div>
                     <div className="flex-1 text-[13px] font-bold text-gray-500 leading-relaxed whitespace-pre-wrap pt-[1px]">
                         "{summary}"
                     </div>
                 </div>
                 
                 <div className="mb-10 flex flex-col md:flex-row gap-6">
-                    <div className="w-32 font-black text-black text-[13px] tracking-tight flex-shrink-0 pt-0.5">¨è °æ·Â »ó¼¼ ÀÌ·Â</div>
+                    <div className="w-32 font-black text-black text-[13px] tracking-tight flex-shrink-0 pt-0.5">â‘¡ ê²½ë ¥ ìƒì„¸ ì´ë ¥</div>
                     <div className="flex-1">
                         {(!candidate.isParsed || !candidate.career) ? (
-                            <div className="text-[13px] font-bold text-gray-400 pt-[1px]">ÆÄÀÌÇÁ¶óÀÎ ºĞ¼® Áß...</div>
+                            <div className="text-[13px] font-bold text-gray-400 pt-[1px]">íŒŒì´í”„ë¼ì¸ ë¶„ì„ ì¤‘...</div>
                         ) : (
                             <div className="space-y-4 mt-[1px]">
                                 {candidate.career.map((chunk, idx) => (
@@ -77,9 +77,9 @@ if start_str in text and end_str in text:
                 </div>
 
                 <div className="flex flex-col md:flex-row gap-6">
-                    <div className="w-32 font-black text-black text-[13px] tracking-tight flex-shrink-0 pt-0.5">¨é ÇĞ·Â ¹× Àü°ø</div>
+                    <div className="w-32 font-black text-black text-[13px] tracking-tight flex-shrink-0 pt-0.5">â‘¢ í•™ë ¥ ë° ì „ê³µ</div>
                     <div className="flex-1 text-[13px] font-bold text-gray-500 leading-relaxed whitespace-pre-wrap pt-[1px]">
-                        {candidate.education || candidate['ÇĞ·Â'] || 'µ¥ÀÌÅÍ ¾øÀ½'}
+                        {candidate.education || candidate['í•™ë ¥'] || 'ë°ì´í„° ì—†ìŒ'}
                     </div>
                 </div>
             </div>
@@ -89,11 +89,11 @@ if start_str in text and end_str in text:
 
   const renderCandidateCard = (candidate, isModalExpanded = false) => {
     const isBookmarked = userBookmarks.includes(candidate.id);
-    const name = (candidate.ÀÌ¸§ || candidate.name || 'Unknown').replace(/\[.*?\]/, '').trim();
-    const currentCompany = candidate.current_company || candidate.current || '¹Ì»ó';
-    const sector = candidate.sector || '¹ÌºĞ·ù';
-    const titleSeniority = candidate.¿¬Â÷µî±Ş || candidate.seniority || '¹Ì»ó';
-    const summary = candidate.profile_summary || candidate['Experience Summary'] || candidate.snippet || 'Á¤º¸ ¾øÀ½';
+    const name = (candidate.ì´ë¦„ || candidate.name || 'Unknown').replace(/\[.*?\]/, '').trim();
+    const currentCompany = candidate.current_company || candidate.current || 'ë¯¸ìƒ';
+    const sector = candidate.sector || 'ë¯¸ë¶„ë¥˜';
+    const titleSeniority = candidate.ì—°ì°¨ë“±ê¸‰ || candidate.seniority || 'ë¯¸ìƒ';
+    const summary = candidate.profile_summary || candidate['Experience Summary'] || candidate.snippet || 'ì •ë³´ ì—†ìŒ';
 
     return (
       <div key={candidate.id} onClick={!isModalExpanded ? () => toggleExpand(candidate.id) : undefined} className={g-white rounded-[3rem] border  p-6 transition-all flex flex-col mb-4 relative cursor-pointer}>
@@ -144,7 +144,7 @@ if start_str in text and end_str in text:
   };
 '''
     
-    with open('c:/Users/cazam/Downloads/ÀÌ·Â¼­ÀÚµ¿ºĞ¼®°Ë»ö½Ã½ºÅÛ/frontend_v2/src/App.jsx', 'w', encoding='utf-8') as f:
+    with open('c:/Users/cazam/Downloads/ì´ë ¥ì„œìë™ë¶„ì„ê²€ìƒ‰ì‹œìŠ¤í…œ/frontend_v2/src/App.jsx', 'w', encoding='utf-8') as f:
         f.write(before + replacement + '\n' + after)
     print('SUCCESS')
 else:
