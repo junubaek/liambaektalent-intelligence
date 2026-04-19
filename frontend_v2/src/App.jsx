@@ -401,7 +401,7 @@ export default function AntigravityMain() {
   };
 
   const renderCandidateCard = (candidate, isModalExpanded = false) => {
-    const isBookmarked = userBookmarks.includes(candidate.id);
+    const isBookmarked = userBookmarks.map(String).includes(String(candidate.id));
     const name = (candidate.이름 || candidate.name || 'Unknown').replace(/\[.*?\]/, '').trim();
     const currentCompany = candidate.current_company || candidate.current || '미상';
     const sector = candidate.sector || '미분류';
@@ -439,7 +439,7 @@ export default function AntigravityMain() {
                   <span>⬡ {candidate.matched_edges ? candidate.matched_edges.length : 0} nodes</span>
                 </div>
               </div>
-              <button onClick={(e) => toggleBookmark(candidate.id, e)} className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors border ${isBookmarked ? 'bg-black border-black text-white hover:bg-gray-800' : 'bg-transparent border-gray-200 text-gray-400 hover:border-gray-400 hover:text-black hover:bg-gray-50'}`}>
+              <button onClick={(e) => toggleBookmark(String(candidate.id), e)} className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors border ${isBookmarked ? 'bg-black border-black text-white hover:bg-gray-800' : 'bg-transparent border-gray-200 text-gray-400 hover:border-gray-400 hover:text-black hover:bg-gray-50'}`}>
                 <Bookmark className={`w-4 h-4 ${isBookmarked ? 'fill-current' : ''}`} />
               </button>
               {!isModalExpanded && (
@@ -664,10 +664,10 @@ export default function AntigravityMain() {
                               {bookmarkedCandidates.length > 0 ? (
                                   bookmarkedCandidates.slice((bookmarkPage - 1) * 10, bookmarkPage * 10).map(cand => renderCandidateCard(cand))
                               ) : (
-                                  candidates.filter(c => userBookmarks.includes(c.id)).slice((bookmarkPage - 1) * 10, bookmarkPage * 10).map(cand => renderCandidateCard(cand))
+                                  candidates.filter(c => userBookmarks.map(String).includes(String(c.id))).slice((bookmarkPage - 1) * 10, bookmarkPage * 10).map(cand => renderCandidateCard(cand))
                               )}
 
-                              {userBookmarks.length > 0 && bookmarkedCandidates.length === 0 && candidates.filter(c => userBookmarks.includes(c.id)).length === 0 && (
+                              {userBookmarks.length > 0 && bookmarkedCandidates.length === 0 && candidates.filter(c => userBookmarks.map(String).includes(String(c.id))).length === 0 && (
                                   <p className="text-center text-gray-400 text-sm mt-10 text-[10px] font-black tracking-widest uppercase">Backend needs restart / perform a search to see details.</p>
                               )}
                               
