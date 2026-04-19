@@ -1,0 +1,4 @@
+Total: 1425
+Parsed: 0
+Pinecone: 1425
+Neo4j: 0

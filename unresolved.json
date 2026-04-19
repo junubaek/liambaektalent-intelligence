@@ -1,0 +1,56 @@
+[
+  {
+    "jd_query": "투자 금융 모델링",
+    "candidate_name": "정준영",
+    "candidate_neo4j_id": "",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "BEP",
+    "raw_filename": "[BEP] 정준영(투자 금융 모델링)부문.pdf"
+  },
+  {
+    "jd_query": "Infra Engineer",
+    "candidate_name": "조만희",
+    "candidate_neo4j_id": "",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "GME",
+    "raw_filename": "[GME] 조만희(Infra Engineer)부문.doc"
+  },
+  {
+    "jd_query": "Tech본부장",
+    "candidate_name": "강은태",
+    "candidate_neo4j_id": "",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "에스엠코어",
+    "raw_filename": "[에스엠코어] 강은태(Tech본부_본부장)부문.docx"
+  },
+  {
+    "jd_query": "Cloud Backend Engineer (MLOps)",
+    "candidate_name": "강동현",
+    "candidate_neo4j_id": "",
+    "label": "positive",
+    "stage": "최종합격",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 강동현(Cloud Backend Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "Data Scientist/ML Engineer",
+    "candidate_name": "이동훈",
+    "candidate_neo4j_id": "",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "우아한형제들",
+    "raw_filename": "[우아한형제들] 이동훈(data scientist)부문.docx"
+  },
+  {
+    "jd_query": "Data Scientist/ML Engineer",
+    "candidate_name": "김정수",
+    "candidate_neo4j_id": "",
+    "label": "positive",
+    "stage": "최종합격",
+    "company": "우아한형제들",
+    "raw_filename": "[우아한형제들] 김정수(Data Scientist)부문.doc"
+  }
+]

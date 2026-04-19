@@ -1,0 +1,20 @@
+=== 삭제 대상 노드 DETACH DELETE 완료 ===
+추가 복합 명사구 치환 완료: 16 종
+치환 완료 후 총 엣지 수: 24619
+
+=== 남은 복합 명사구 노드 (_and_ 또는 _or_) ===
+[ 554 edges] Logistics_and_Supply_Chain
+[  67 edges] FP_and_A
+[  51 edges] Mergers_and_Acquisitions
+[   5 edges] Data_Privacy_and_Compliance
+[   2 edges] Learning_and_Development
+[   1 edges] Infrastructure_and_and_Cloud
+[   1 edges] PKG_Development_and_Manufacturing
+[   1 edges] Profit_and_Loss_Analysis
+[   1 edges] Generative_AI_and_3D_Vision
+[   0 edges] Performance_and_Compensation
+[   0 edges] 3D_Simulation_and_Viewer_Development
+[   0 edges] Brand_and_Visual_Design
+
+=== [Step 5] 카테고리 속성 부여 ===
+총 162개 Skill 노드들에 카테고리(category) 속성 부여 완료.

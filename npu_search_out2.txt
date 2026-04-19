@@ -1,0 +1,3 @@
+=== Search Test Results (Post-Repair) ===
+Query: 'NPU 런타임 엔지니어' -> Matched: 12명, Nearby: 0명 (전체: 12명)
+Query: 'AI 가속기 시스템SW' -> Matched: 12명, Nearby: 0명 (전체: 12명)

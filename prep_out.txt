@@ -1,0 +1,28 @@
+=== 1. V9 청크(Experience_Chunk) 데이터 삭제 ===
+삭제된 Experience_Chunk 노드 수: 0
+남은 후보자 엣지 연결 수: 24837개 (후보자 연관)
+전체 DB 엣지 수: 24837개
+
+=== 2. 치환 대상 구 노드 (Top 20) ===
+[  52 edges] '내부통제'  ==>  'Internal_Control'
+[  36 edges] '연결회계'  ==>  'Consolidated_Accounting'
+[  33 edges] 'Python'  ==>  'Backend_Python'
+[  25 edges] '네트워크'  ==>  'Networking'
+[  19 edges] 'SQL'  ==>  'Data_Science_and_Analysis'
+[  17 edges] 'PR'  ==>  'Public_Relations'
+[  14 edges] 'IR'  ==>  'Investor_Relations'
+[  13 edges] 'Android'  ==>  'Android_Development'
+[  11 edges] 'K-IFRS'  ==>  'K_IFRS'
+[  11 edges] 'iOS'  ==>  'Mobile_iOS'
+[  10 edges] 'ISMS'  ==>  'Enterprise_Security_Consulting'
+[   9 edges] '펌웨어'  ==>  'FW_컨트롤러'
+[   9 edges] 'React'  ==>  'Frontend_Development'
+[   9 edges] 'Java'  ==>  'Backend_Java'
+[   8 edges] 'Project_Manager'  ==>  'Product_Manager'
+[   8 edges] 'C#'  ==>  'Game_Client_Development'
+[   7 edges] 'M&A'  ==>  'Mergers_and_Acquisitions'
+[   7 edges] '이전가격'  ==>  'Transfer_Pricing'
+[   7 edges] 'Kotlin'  ==>  'Robot_Control_Software'
+[   7 edges] 'Hadoop'  ==>  'Big_Data_Processing'
+
+총 치환 대상이 될 수 있는 노드 종류 수: 134

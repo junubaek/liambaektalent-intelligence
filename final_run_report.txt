@@ -1,0 +1,5 @@
+Denominator (Total Golden Cases): 55
+Numerator (Total Hits in Top-10): 25
+Unique Hit Names Count: 25
+Hit Names: 김대중, 김완희, 남연우, 문태경, 박우람, 박종모, 배문성, 성시민, 신동주, 안영택, 양근식, 오승택, 오원교, 유준상, 이다미, 이민찬, 이범기, 이영도, 이진호, 임동진, 임훈, 장봉원, 전형준, 정예린, 조재영
+NDCG approximation (Hit Rate): 0.4545

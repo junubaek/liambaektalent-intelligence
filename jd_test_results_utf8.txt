@@ -1,0 +1,116 @@
+﻿============================================================
+?빑截뤴띯셽截?[JD Compiler] Input : IPO/????鍮??먭툑 ?대떦??6?꾩감
+============================================================
+
+[Phase 1] Extracted Intention (JSON):
+{
+  "min_years": 6,
+  "conditions": [
+    {
+      "action": "MANAGED",
+      "skill": "?щТ?뚭퀎",
+      "weight": 1.0,
+      "is_mandatory": true
+    },
+    {
+      "action": "MANAGED",
+      "skill": "?꾨왂_寃쎌쁺湲고쉷",
+      "weight": 0.9,
+      "is_mandatory": false
+    },
+    {
+      "action": "MANAGED",
+      "skill": "Capital_Markets_Fundraising",
+      "weight": 0.9,
+      "is_mandatory": false
+    }
+  ]
+}
+
+[Phase 2] Executing Vector Prefilter (TF-IDF)...
+
+[Phase 3] Executing Neo4j OPTIONAL MATCH Score calculation (min_years: 6)...
+
+============================================================
+?룇 [FINAL RANKED CANDIDATES] (Top 20 | Pass Hurdle: 40%)
+============================================================
+1. Name: [BEP] ?댁옱???щТ?ъ옄湲덉쑖 ?꾩썝)遺臾?| Total Score: 1.9
+   [+] Matched: ['MANAGED:?щТ?뚭퀎', 'MANAGED:?꾨왂_寃쎌쁺湲고쉷']
+   [-] Missing (for interview): ['MANAGED:Capital_Markets_Fundraising']
+----------------------------------------
+2. Name: [CGV] 二쇱닔???꾨왂湲고쉷)遺臾?| Total Score: 1.9
+   [+] Matched: ['MANAGED:?щТ?뚭퀎', 'MANAGED:?꾨왂_寃쎌쁺湲고쉷']
+   [-] Missing (for interview): ['MANAGED:Capital_Markets_Fundraising']
+----------------------------------------
+3. Name: [NXC] 源?뺤슫(?곌껐?뚭퀎 ?대떦??遺臾?| Total Score: 1.9
+   [+] Matched: ['MANAGED:?щТ?뚭퀎', 'MANAGED:?꾨왂_寃쎌쁺湲고쉷']
+   [-] Missing (for interview): ['MANAGED:Capital_Markets_Fundraising']
+----------------------------------------
+4. Name: [NXC] 源吏?(媛먯궗)遺臾?| Total Score: 1.9
+   [+] Matched: ['MANAGED:?щТ?뚭퀎', 'MANAGED:?꾨왂_寃쎌쁺湲고쉷']
+   [-] Missing (for interview): ['MANAGED:Capital_Markets_Fundraising']
+----------------------------------------
+5. Name: [NXC] ?ν깭???곌껐?뚭퀎 ?대떦??遺臾?| Total Score: 1.9
+   [+] Matched: ['MANAGED:?щТ?뚭퀎', 'MANAGED:?꾨왂_寃쎌쁺湲고쉷']
+   [-] Missing (for interview): ['MANAGED:Capital_Markets_Fundraising']
+----------------------------------------
+6. Name: [臾명뵾?? ?닿???愿由ы쉶怨?遺臾?| Total Score: 1.9
+   [+] Matched: ['MANAGED:?щТ?뚭퀎', 'MANAGED:?꾨왂_寃쎌쁺湲고쉷']
+   [-] Missing (for interview): ['MANAGED:Capital_Markets_Fundraising']
+----------------------------------------
+7. Name: [?ㅽ?鍮꾩졏] 源愿묓깭(?щТ?뚭퀎_由щ뜑湲?遺臾?| Total Score: 1.9
+   [+] Matched: ['MANAGED:?щТ?뚭퀎', 'MANAGED:?꾨왂_寃쎌쁺湲고쉷']
+   [-] Missing (for interview): ['MANAGED:Capital_Markets_Fundraising']
+----------------------------------------
+8. Name: [?ㅽ?鍮꾩졏] 源?깅?(?щТ?뚭퀎)遺臾?| Total Score: 1.9
+   [+] Matched: ['MANAGED:?щТ?뚭퀎', 'MANAGED:?꾨왂_寃쎌쁺湲고쉷']
+   [-] Missing (for interview): ['MANAGED:Capital_Markets_Fundraising']
+----------------------------------------
+9. Name: [?ㅽ?鍮꾩졏] ?몄옣???щТ?뚭퀎_由щ뜑湲?遺臾?| Total Score: 1.9
+   [+] Matched: ['MANAGED:?щТ?뚭퀎', 'MANAGED:?꾨왂_寃쎌쁺湲고쉷']
+   [-] Missing (for interview): ['MANAGED:Capital_Markets_Fundraising']
+----------------------------------------
+10. Name: [?ㅽ?鍮꾩졏] 諛뺤????щТ?뚭퀎)遺臾?| Total Score: 1.9
+   [+] Matched: ['MANAGED:?щТ?뚭퀎', 'MANAGED:?꾨왂_寃쎌쁺湲고쉷']
+   [-] Missing (for interview): ['MANAGED:Capital_Markets_Fundraising']
+----------------------------------------
+11. Name: [?ㅽ?鍮꾩졏] 諛뺤????몄궗珥앸Т)遺臾?| Total Score: 1.9
+   [+] Matched: ['MANAGED:?щТ?뚭퀎', 'MANAGED:?꾨왂_寃쎌쁺湲고쉷']
+   [-] Missing (for interview): ['MANAGED:Capital_Markets_Fundraising']
+----------------------------------------
+12. Name: [?ㅽ?鍮꾩졏] 諛곗쥌洹??щТ?뚭퀎)遺臾?| Total Score: 1.9
+   [+] Matched: ['MANAGED:?щТ?뚭퀎', 'MANAGED:?꾨왂_寃쎌쁺湲고쉷']
+   [-] Missing (for interview): ['MANAGED:Capital_Markets_Fundraising']
+----------------------------------------
+13. Name: [?꾪봽由ъ뭅?곕퉬] 諛뺤쑄誘??щ궡蹂?몄궗)遺臾?| Total Score: 1.9
+   [+] Matched: ['MANAGED:?щТ?뚭퀎', 'MANAGED:?꾨왂_寃쎌쁺湲고쉷']
+   [-] Missing (for interview): ['MANAGED:Capital_Markets_Fundraising']
+----------------------------------------
+14. Name: [?꾪봽由ъ뭅?곕퉬] ?덉듅誘?怨듭떆.IR)遺臾?| Total Score: 1.9
+   [+] Matched: ['MANAGED:?щТ?뚭퀎', 'MANAGED:?꾨왂_寃쎌쁺湲고쉷']
+   [-] Missing (for interview): ['MANAGED:Capital_Markets_Fundraising']
+----------------------------------------
+15. Name: [?꾪봽由ъ뭅?곕퉬] ?댁슜???щ궡蹂?몄궗)遺臾?| Total Score: 1.9
+   [+] Matched: ['MANAGED:?щТ?뚭퀎', 'MANAGED:?꾨왂_寃쎌쁺湲고쉷']
+   [-] Missing (for interview): ['MANAGED:Capital_Markets_Fundraising']
+----------------------------------------
+16. Name: [?ㅽ샇?? 源?곸썝(CFO)遺臾?| Total Score: 1.9
+   [+] Matched: ['MANAGED:?щТ?뚭퀎', 'MANAGED:?꾨왂_寃쎌쁺湲고쉷']
+   [-] Missing (for interview): ['MANAGED:Capital_Markets_Fundraising']
+----------------------------------------
+17. Name: [?낆쭊] 源?꾩슦(?꾨왂湲고쉷?)遺臾?| Total Score: 1.9
+   [+] Matched: ['MANAGED:?щТ?뚭퀎', 'MANAGED:?꾨왂_寃쎌쁺湲고쉷']
+   [-] Missing (for interview): ['MANAGED:Capital_Markets_Fundraising']
+----------------------------------------
+18. Name: [?대젅?? 源?곸썝(CFO)遺臾?| Total Score: 1.9
+   [+] Matched: ['MANAGED:?щТ?뚭퀎', 'MANAGED:?꾨왂_寃쎌쁺湲고쉷']
+   [-] Missing (for interview): ['MANAGED:Capital_Markets_Fundraising']
+----------------------------------------
+19. Name: [?대젅?? ?ㅼ꽭洹?CFO)遺臾?| Total Score: 1.9
+   [+] Matched: ['MANAGED:?щТ?뚭퀎', 'MANAGED:?꾨왂_寃쎌쁺湲고쉷']
+   [-] Missing (for interview): ['MANAGED:Capital_Markets_Fundraising']
+----------------------------------------
+20. Name: JY_源?덇꼍(湲濡쒕쾶罹먯뒪?낅떞???몃룄?ㅼ떆??遺臾??먮낯 | Total Score: 1.9
+   [+] Matched: ['MANAGED:?щТ?뚭퀎', 'MANAGED:?꾨왂_寃쎌쁺湲고쉷']
+   [-] Missing (for interview): ['MANAGED:Capital_Markets_Fundraising']
+----------------------------------------

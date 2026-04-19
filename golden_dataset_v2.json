@@ -1,0 +1,209 @@
+[
+  {
+    "jd_query": "vllm pytorch llm serving machine learning",
+    "candidate_name": "홍기재",
+    "candidate_neo4j_id": "274a48353de98776b52a80a0f9f802763f2a4d3c24d4761f059530bfa8eb6c67",
+    "label": "positive",
+    "stage": "최종합격",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 홍기재(Framework Software Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "ethernet firmware embedded network rtos",
+    "candidate_name": "이수진",
+    "candidate_neo4j_id": "c208a88a01be105ca6fe8e09c7d3ba2d048dc03097d3b2f8a6b4845b2da1a5a1",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 이수진(Ethernet Firmware Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "kubernetes terraform devops aws infrastructure",
+    "candidate_name": "유준상",
+    "candidate_neo4j_id": "e6d7e66afdfc541a933d353c768b02579565182e2f89b2cd11e5a6c778460deb",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 유준상(DevOps&Platform Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "soc architecture pcie cxl scale-out",
+    "candidate_name": "전우형",
+    "candidate_neo4j_id": "1c83d7f771126efaff5f0f9db5afa0e6291a762f79814662f7bdc98c4d8cf4a9",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 전우형(SoC Architect for Scale-Up and Scale-Out)부문.pdf"
+  },
+  {
+    "jd_query": "npu runtime cpp llm serving compiler",
+    "candidate_name": "이석현",
+    "candidate_neo4j_id": "4da4991f551ec46624279df6ba3f350ea46e519d0667286b2aaebf07ac60e9b2",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 이석현(NPU Runtime Software Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "kubernetes terraform devops aws infrastructure",
+    "candidate_name": "오원교",
+    "candidate_neo4j_id": "a43286210b71dcc50732ce234c4abc28e45603b94a9be0fb501775c6aea7070b",
+    "label": "positive",
+    "stage": "최종합격",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 오원교(DevOps & Platform Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "npu runtime cpp llm serving compiler",
+    "candidate_name": "전형준",
+    "candidate_neo4j_id": "6c6d435afb44d6545adb2548c6df6d002fdbef8b8718af147240456e6f294a0d",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 전형준(Moreh Software Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "vllm pytorch llm serving machine learning",
+    "candidate_name": "김학주",
+    "candidate_neo4j_id": "7c031dd202b128b5c383c2e86d11ef42e1ebda01bbfae112bfcad530aefdd014",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 김학주(NPU Runtime Software Engineer)부문.docx"
+  },
+  {
+    "jd_query": "cloud infrastructure aws mlops kubernetes",
+    "candidate_name": "이준호",
+    "candidate_neo4j_id": "35081aa23d60b27d558ac3073105b797d812a6c42337804359eba67b7c5598ed",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 이준호(Cloud Backend Engineer (MLOps Engineer))부문.pdf"
+  },
+  {
+    "jd_query": "npu runtime cpp llm serving compiler",
+    "candidate_name": "김범규",
+    "candidate_neo4j_id": "6c8ae021b2b543d4430bbc22d2a8de72ee10945887be7f11e833b961d4d01ffa",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 김범규(Motif Research Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "npu library c c++ cuda ai semiconductor",
+    "candidate_name": "전예찬",
+    "candidate_neo4j_id": "ebc11cc994c86db8a814ed4725376246f8181e80178aaae6ab51fb399c8d15c1",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 전예찬(NPU Library Software Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "cloud infrastructure aws mlops kubernetes",
+    "candidate_name": "정윤오",
+    "candidate_neo4j_id": "b1fad4bc351d064b391a0473342d90d40189e787d45b9cde56b1fc59dbba88ae",
+    "label": "positive",
+    "stage": "최종합격",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 정윤오(Kubernetes InfrastructureDevOps Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "vllm pytorch llm serving machine learning",
+    "candidate_name": "박지민",
+    "candidate_neo4j_id": "0354b83a1e2765b1c2b7882b54c2f8c6797db066423d31908bdd78016af8d45b",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 박지민(NPU Runtime Software Engineer (LLM Serving))부문.pdf"
+  },
+  {
+    "jd_query": "npu library c c++ cuda ai semiconductor",
+    "candidate_name": "김정근",
+    "candidate_neo4j_id": "32e22567-1b6f-81e7-b76e-ce60c2ccfaa7",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 김정근(NPU Library Software Engineer)부문.docx"
+  },
+  {
+    "jd_query": "python c++ performance profiling ai hardware",
+    "candidate_name": "임수환",
+    "candidate_neo4j_id": "a5e56a10ed0d93a252e160bfe5fb00a22c9688f441b749b182daae7516a8ef9a",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 임수환(System Tools Engineer - AI Hardware)부문.pdf"
+  },
+  {
+    "jd_query": "firmware verification rtl uvm fpga",
+    "candidate_name": "오승택",
+    "candidate_neo4j_id": "4c014e5bc70554639aac53a0ee919173cbf0be514180d63f4a42ea2b48d9becf",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 오승택(Firmware Verification Engineer)부문_신입.pdf"
+  },
+  {
+    "jd_query": "python c++ performance profiling ai hardware",
+    "candidate_name": "박원호",
+    "candidate_neo4j_id": "385c5062987be462cf7804623c3b819e9afc401dde8d199be61c712ea14a619d",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 박원호(System Tool Engineer - AI Hardware)부문.pdf"
+  },
+  {
+    "jd_query": "firmware verification rtl uvm fpga",
+    "candidate_name": "이진호",
+    "candidate_neo4j_id": "a54a208a1b6c8b575e269cd5a73473549ec2fbda2bc394fd8f52164ca2aa9435",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 이진호(Firmware Verification Engineer)부문_신입.pdf"
+  },
+  {
+    "jd_query": "firmware verification rtl uvm fpga",
+    "candidate_name": "정영훈",
+    "candidate_neo4j_id": "63806622add3bfbad36a07ebffc6d1758724e71c6e4890c454051c3a97eacb80",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 정영훈(Firmware Verification Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "device driver linux pcie c++",
+    "candidate_name": "정예린",
+    "candidate_neo4j_id": "e3c395e824bcf689b865c4a572bfc5dd7b81697d7087c036585dabd09192520a",
+    "label": "positive",
+    "stage": "최종합격",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 정예린(Device Driver Engineer - User-Mode Driver)부문.pdf"
+  },
+  {
+    "jd_query": "firmware verification rtl uvm fpga",
+    "candidate_name": "정호진",
+    "candidate_neo4j_id": "eb2ea265a8a3068f6d43cf6b12728503f37980de99be62aef4e58b3dbf88f55e",
+    "label": "positive",
+    "stage": "최종합격",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 정호진(Firmware Verification Engineer)부문_신입_병역특례.pdf"
+  },
+  {
+    "jd_query": "npu runtime cpp llm serving compiler",
+    "candidate_name": "김기덕",
+    "candidate_neo4j_id": "7f19d7ddbb4c19e75e4c472a91bd6bbd360bc5d1acb7392518b52db670b870dd",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 김기덕(NPU Runtime Software Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "npu runtime cpp llm serving compiler",
+    "candidate_name": "장봉원",
+    "candidate_neo4j_id": "76aae99c2120567ec246b3890c80e0a6eb128fc312266158cba64631dcb43214",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 장봉원(NPU Runtime Software Engineer)부문.pdf"
+  }
+]

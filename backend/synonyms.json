@@ -1,0 +1,384 @@
+[
+    [
+        "데이터 분석가",
+        "data analyst",
+        "데이터 분석",
+        "da",
+        "analyst",
+        "데이터분석가"
+    ],
+    [
+        "데이터 엔지니어",
+        "data engineer",
+        "de"
+    ],
+    [
+        "데이터 사이언티스트",
+        "data scientist",
+        "ds",
+        "머신러닝 엔지니어"
+    ],
+    [
+        "데이터",
+        "data",
+        "데이타"
+    ],
+    [
+        "백엔드",
+        "backend",
+        "be",
+        "서버 개발"
+    ],
+    [
+        "프론트엔드",
+        "frontend",
+        "fe",
+        "프론트"
+    ],
+    [
+        "풀스택",
+        "fullstack",
+        "full stack"
+    ],
+    [
+        "devops",
+        "데브옵스",
+        "sre",
+        "인프라",
+        "AWS",
+        "Grafana",
+        "GitHub Workflows",
+        "Prometheus",
+        "Terraform",
+        "Kubernetes",
+        "Linux",
+        "DevOps_SRE",
+        "인프라_Cloud",
+        "PXE server",
+        "Docker",
+        "엔지니어(Serving/MLOps)",
+        "ArgoCD",
+        "Terragrunt"
+    ],
+    [
+        "모바일",
+        "mobile",
+        "ios",
+        "android",
+        "Mobile (iOS; Android)",
+        "Mobile(iOS; Android)"
+    ],
+    [
+        "ai",
+        "인공지능",
+        "artificial intelligence"
+    ],
+    [
+        "머신러닝",
+        "machine learning",
+        "ml",
+        "regression ensemble methods",
+        "리서쳐(모델링)"
+    ],
+    [
+        "딥러닝",
+        "deep learning",
+        "dl"
+    ],
+    [
+        "nlp",
+        "자연어처리",
+        "natural language processing"
+    ],
+    [
+        "컴퓨터비전",
+        "computer vision",
+        "cv"
+    ],
+    [
+        "fp&a",
+        "재무기획",
+        "재무 기획",
+        "financial planning"
+    ],
+    [
+        "재무",
+        "finance",
+        "파이낸스"
+    ],
+    [
+        "회계",
+        "accounting",
+        "cpa"
+    ],
+    [
+        "ir",
+        "investor relations",
+        "투자",
+        "투자담당자(Investment/VC/PE)"
+    ],
+    [
+        "세무",
+        "tax",
+        "taxation"
+    ],
+    [
+        "hr",
+        "인사",
+        "인사관리",
+        "피플"
+    ],
+    [
+        "채용",
+        "ta",
+        "talent acquisition",
+        "리크루팅"
+    ],
+    [
+        "보상기획",
+        "c&b",
+        "compensation"
+    ],
+    [
+        "마케팅",
+        "marketing",
+        "마케팅기획"
+    ],
+    [
+        "퍼포먼스 마케팅",
+        "performance marketing",
+        "그로스",
+        "퍼포먼스"
+    ],
+    [
+        "브랜드",
+        "brand",
+        "브랜딩"
+    ],
+    [
+        "pm",
+        "po",
+        "product manager",
+        "product owner",
+        "서비스 기획",
+        "서비스기획(화면설계)",
+        "Project Manager(PM)"
+    ],
+    [
+        "영업",
+        "sales",
+        "세일즈",
+        "biz dev"
+    ],
+    [
+        "b2b",
+        "기업영업",
+        "법인영업"
+    ],
+    [
+        "해외영업",
+        "global sales",
+        "international sales"
+    ],
+    [
+        "전략",
+        "strategy",
+        "경영기획",
+        "biz",
+        "전략_경영기획"
+    ],
+    [
+        "신사업",
+        "new business",
+        "사업개발",
+        "신사업 발굴 및 런칭"
+    ],
+    [
+        "반도체",
+        "semiconductor",
+        "TI IC",
+        "DTV IC",
+        "ADC/DAC",
+        "Video Decoder"
+    ],
+    [
+        "hw",
+        "하드웨어",
+        "hardware"
+    ],
+    [
+        "임베디드",
+        "embedded",
+        "펌웨어",
+        "firmware",
+        "군 중대급 Miles 장비 통제기",
+        "FW(컨트롤러)"
+    ],
+    [
+        "회로설계",
+        "circuit design",
+        "rtl",
+        "HW(SoC; RTL)",
+        "FPGA",
+        "회로설계(PCB)"
+    ],
+    [
+        "보안",
+        "security",
+        "정보보안",
+        "cybersecurity"
+    ],
+    [
+        "scm",
+        "공급망",
+        "supply chain",
+        "물류"
+    ],
+    [
+        "구매",
+        "procurement",
+        "소싱",
+        "sourcing"
+    ],
+    [
+        "개인정보보호(CPO; 규제 대응)"
+    ],
+    [
+        "전환사채 투자계약서"
+    ],
+    [
+        "소프트웨어 최종사용자 계약서"
+    ],
+    [
+        "컴플라이언스"
+    ],
+    [
+        "건축물 저작권"
+    ],
+    [
+        "Term-Sheet"
+    ],
+    [
+        "용역 계약서"
+    ],
+    [
+        "주식매수선택권"
+    ],
+    [
+        "구주양수도 계약서"
+    ],
+    [
+        "증권취득신고"
+    ],
+    [
+        "개인정보처리방침"
+    ],
+    [
+        "개인정보보호법"
+    ],
+    [
+        "사모투자전문회사(PEF) 등록"
+    ],
+    [
+        "상환전환우선주"
+    ],
+    [
+        "M&A"
+    ],
+    [
+        "특별법"
+    ],
+    [
+        "지식재산권 이용 허락/양도 계약서"
+    ],
+    [
+        "상표권"
+    ],
+    [
+        "혁신금융서비스 수요조사 신청서"
+    ],
+    [
+        "이사회 의사록"
+    ],
+    [
+        "주주총회 의사록"
+    ],
+    [
+        "내용증명"
+    ],
+    [
+        "위탁 계약서"
+    ],
+    [
+        "비밀유지계약서(NDA)"
+    ],
+    [
+        "개인투자조합 규약"
+    ],
+    [
+        "동의서"
+    ],
+    [
+        "공급 계약서"
+    ],
+    [
+        "인허가"
+    ],
+    [
+        "지적재산권(IP)"
+    ],
+    [
+        "보통주"
+    ],
+    [
+        "이용약관"
+    ],
+    [
+        "일반법무"
+    ],
+    [
+        "법률실사보고서"
+    ],
+    [
+        "주주간 계약서"
+    ],
+    [
+        "기구설계"
+    ],
+    [
+        "diffusion MRI"
+    ],
+    [
+        "CT"
+    ],
+    [
+        "high-field MRI atlases"
+    ],
+    [
+        "MRI"
+    ],
+    [
+        "DFT filter banks"
+    ],
+    [
+        "7T MRI"
+    ],
+    [
+        "휴대용 프로젝터"
+    ],
+    [
+        "비디오 프로젝터"
+    ],
+    [
+        "TV"
+    ],
+    [
+        "서바이벌 게임 장비"
+    ],
+    [
+        "무선 어학기기"
+    ],
+    [
+        "TPMS 수신기"
+    ]
+]

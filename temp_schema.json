@@ -1,0 +1,1326 @@
+﻿{
+    "object":  "database",
+    "id":  "31f22567-1b6f-8190-b3a8-dc4f8422f01b",
+    "cover":  null,
+    "icon":  null,
+    "created_time":  "2026-03-10T14:12:00.000Z",
+    "created_by":  {
+                       "object":  "user",
+                       "id":  "01be2a71-e071-4fda-907b-8e8fe21c8bd7"
+                   },
+    "last_edited_by":  {
+                           "object":  "user",
+                           "id":  "01be2a71-e071-4fda-907b-8e8fe21c8bd7"
+                       },
+    "last_edited_time":  "2026-03-15T04:39:00.000Z",
+    "title":  [
+                  {
+                      "type":  "text",
+                      "text":  {
+                                   "content":  "🌌 AI Talent Intelligence v8.0 Master Hub",
+                                   "link":  null
+                               },
+                      "annotations":  {
+                                          "bold":  false,
+                                          "italic":  false,
+                                          "strikethrough":  false,
+                                          "underline":  false,
+                                          "code":  false,
+                                          "color":  "default"
+                                      },
+                      "plain_text":  "🌌 AI Talent Intelligence v8.0 Master Hub",
+                      "href":  null
+                  }
+              ],
+    "description":  [
+
+                    ],
+    "is_inline":  true,
+    "properties":  {
+                       "Seniority Bucket":  {
+                                                "id":  "%3FXhx",
+                                                "name":  "Seniority Bucket",
+                                                "description":  null,
+                                                "type":  "select",
+                                                "select":  {
+                                                               "options":  [
+                                                                               {
+                                                                                   "id":  "a3f37299-ae95-4d3c-bf6e-dc34a99bb767",
+                                                                                   "name":  "Middle",
+                                                                                   "color":  "default",
+                                                                                   "description":  null
+                                                                               },
+                                                                               {
+                                                                                   "id":  "39d83e68-aaf5-4d84-ac5c-7cf192e891be",
+                                                                                   "name":  "Senior",
+                                                                                   "color":  "green",
+                                                                                   "description":  null
+                                                                               },
+                                                                               {
+                                                                                   "id":  "161a1649-7e5a-4816-b521-4eaeaa553575",
+                                                                                   "name":  "Junior",
+                                                                                   "color":  "orange",
+                                                                                   "description":  null
+                                                                               },
+                                                                               {
+                                                                                   "id":  "be172d25-7ed3-4bbc-891b-7c32f93bbc6c",
+                                                                                   "name":  "Unknown",
+                                                                                   "color":  "pink",
+                                                                                   "description":  null
+                                                                               },
+                                                                               {
+                                                                                   "id":  "5c40af34-743f-4538-a2a9-cccd0f45f512",
+                                                                                   "name":  "N/A",
+                                                                                   "color":  "gray",
+                                                                                   "description":  null
+                                                                               }
+                                                                           ]
+                                                           }
+                                            },
+                       "Functional Patterns":  {
+                                                   "id":  "F%5CrW",
+                                                   "name":  "Functional Patterns",
+                                                   "description":  null,
+                                                   "type":  "multi_select",
+                                                   "multi_select":  {
+                                                                        "options":  [
+                                                                                        {
+                                                                                            "id":  "3fb72d2b-3dc5-4cb3-9876-e2642ca0cc67",
+                                                                                            "name":  "경영 전략 및 기획 업무 총괄",
+                                                                                            "color":  "green",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "faedd6db-757f-4b56-b8e7-207a170b89ef",
+                                                                                            "name":  "캠페인 기획",
+                                                                                            "color":  "pink",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "bfd989d0-2e8e-4336-b0e1-74bce79a44da",
+                                                                                            "name":  "마케팅 데이터 분석",
+                                                                                            "color":  "red",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "d8392fb5-8b55-4fac-8706-a4ed09213342",
+                                                                                            "name":  "전략 실행",
+                                                                                            "color":  "blue",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "35d5e7a6-0e35-4688-9cc0-224bf117146c",
+                                                                                            "name":  "캠페인 관리",
+                                                                                            "color":  "yellow",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "9a6db6d0-fa2b-4659-892d-07534b99b263",
+                                                                                            "name":  "경영 전략 및 기획 업무 실행",
+                                                                                            "color":  "purple",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "62b2259c-bc02-4375-adef-733633c822f1",
+                                                                                            "name":  "전략 수립",
+                                                                                            "color":  "brown",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "172715db-6e67-4983-a908-83a73b708e3c",
+                                                                                            "name":  "Created and operated iOS study curricula",
+                                                                                            "color":  "default",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "564f027d-d213-4a92-9098-2765c5d1e697",
+                                                                                            "name":  "Implemented custom views",
+                                                                                            "color":  "orange",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "8357be9a-ad81-417a-91fa-6774cbde827e",
+                                                                                            "name":  "Designed and planned service MVP",
+                                                                                            "color":  "gray",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "e0b803ee-7459-45cb-8a64-2dfaa923f991",
+                                                                                            "name":  "Led iOS app development",
+                                                                                            "color":  "yellow",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "ba4f2d71-4b23-4794-903b-213d506c9d81",
+                                                                                            "name":  "Learned and applied architectures and skills",
+                                                                                            "color":  "orange",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "4b9260d4-aa4f-4793-99b1-a8d73ba6c958",
+                                                                                            "name":  "Launched keyword-based diary app",
+                                                                                            "color":  "brown",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "58bf80ca-e546-46fe-9f56-7ac4505fb073",
+                                                                                            "name":  "참여 국내 외국인투자법인 설립",
+                                                                                            "color":  "orange",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "a30dddfe-5c88-4ff1-8440-2855c66c493d",
+                                                                                            "name":  "작성 지식재산권 침해 행위에 대한 내용증명",
+                                                                                            "color":  "yellow",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "5d947114-f54d-400d-9afb-01198bac9e16",
+                                                                                            "name":  "확보 분쟁 발생 예측 가능성",
+                                                                                            "color":  "gray",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "626611a8-dcb4-48bd-8101-6fab2b4020cb",
+                                                                                            "name":  "작성 혁신금융서비스 수요조사 신청서",
+                                                                                            "color":  "blue",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "185e89cd-ac31-43e9-b7cc-6555a86ad22c",
+                                                                                            "name":  "작성 지식재산권 이용 허락/양도 계약서",
+                                                                                            "color":  "brown",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "09cbdbf9-8632-4f6c-9158-72e7696bff40",
+                                                                                            "name":  "제공 지분 희석 방지 조항 등 주요 경영사항에 대한 자문",
+                                                                                            "color":  "yellow",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "462fd739-3665-4c42-98c7-12f734d8c5d3",
+                                                                                            "name":  "담당 투자 및 법인 설립 관련 규제 준수 업무",
+                                                                                            "color":  "purple",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "6d966765-77a7-4ca7-b766-42456daa1567",
+                                                                                            "name":  "수행 사모투자전문회사(PEF)의 업무집행조합원(GP) 등록 전 과정",
+                                                                                            "color":  "yellow",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "3e93d7c8-17bd-4a2f-9e2b-5ac28ee26f10",
+                                                                                            "name":  "처리 각종 인허가 업무",
+                                                                                            "color":  "red",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "cf006171-b5d4-49df-8dc0-486062f7b173",
+                                                                                            "name":  "작성 주식매수선택권 부여  주주간 계약서  구주양수도 계약서",
+                                                                                            "color":  "default",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "f96978db-0eab-40aa-aeee-93fa44518c7b",
+                                                                                            "name":  "검토 메타버스 내 건축물 저작권/상표권 침해 여부",
+                                                                                            "color":  "gray",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "66589d86-3f61-4385-b763-494b31c0e344",
+                                                                                            "name":  "요청 침해 중지",
+                                                                                            "color":  "purple",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "d4f6160f-a647-4b05-a41d-49a047e21c39",
+                                                                                            "name":  "작성 이용약관 및 비밀유지계약서(NDA)",
+                                                                                            "color":  "purple",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "ffcc82e4-e8c1-4d23-8e63-c2afb234d70c",
+                                                                                            "name":  "분석 법적 위험",
+                                                                                            "color":  "pink",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "9d00e997-3b1c-429a-ab50-15ab61accc2f",
+                                                                                            "name":  "참여 Term-Sheet부터 본계약까지 전 과정",
+                                                                                            "color":  "gray",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "cd083ec4-7cb9-4fc8-824e-7dfc68c7cca2",
+                                                                                            "name":  "작성 개인투자조합 결성을 위한 규약",
+                                                                                            "color":  "red",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "5e521a21-ca97-41c0-b139-9a5e96eb71d6",
+                                                                                            "name":  "제공 기업 운영 전반의 법률 자문",
+                                                                                            "color":  "green",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "7dbec763-72f5-427b-90b1-fa759d9c93f3",
+                                                                                            "name":  "검토 및 관리 이사회 및 주주총회 의사록",
+                                                                                            "color":  "default",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "5e9732a1-f569-467d-8ddb-92fb305b60f6",
+                                                                                            "name":  "작성 개인정보처리방침 및 동의서",
+                                                                                            "color":  "default",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "5d4737be-7a7e-4888-8638-59a89589708e",
+                                                                                            "name":  "대응 한국인터넷진흥원 모니터링",
+                                                                                            "color":  "default",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "578d39d8-cf6f-4265-936b-bec7d06fac78",
+                                                                                            "name":  "기계설계 수행 (Performed mechanical design) MDF 신규 공장 및 환경설비",
+                                                                                            "color":  "default",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "8969b87f-0099-40d1-8add-183340eeb977",
+                                                                                            "name":  "제작 관리 (Managed manufacturing) 플랜트 공사 관련",
+                                                                                            "color":  "green",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "336e09b4-b50d-4233-a118-df4a94adb9bc",
+                                                                                            "name":  "PR 수행 (Performed PR) 플랜트 공사 관련",
+                                                                                            "color":  "pink",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "33c92aa3-6083-4d6b-9e46-09ad59a5c60e",
+                                                                                            "name":  "시운전 수행 (Conducted commissioning) 플랜트 공사 관련",
+                                                                                            "color":  "blue",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "03cbf6ae-6c98-4ecb-af09-1e5d7883229d",
+                                                                                            "name":  "RFQ 작성 (Prepared RFQ) 플랜트 공사 관련",
+                                                                                            "color":  "yellow",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "df8a3f32-6953-456c-a0bd-aa24e5bf1c5b",
+                                                                                            "name":  "기계설계 수행 (Performed mechanical design) 남아공 바이오매스 에너지 플랜트 및 선박 탈황설비",
+                                                                                            "color":  "default",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "268d04eb-d124-415d-a762-9cc8fe40fb6c",
+                                                                                            "name":  "기계설계 수행 (Performed mechanical design) 베트남 및 인천공장 환경설비 통합 투자공사",
+                                                                                            "color":  "brown",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "5a26f516-3e52-4767-a681-288d8534dd23",
+                                                                                            "name":  "TBE 수행 (Conducted TBE) 플랜트 공사 관련",
+                                                                                            "color":  "orange",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "9f5e2100-6ae1-4a42-b5d5-c570e3ee6d89",
+                                                                                            "name":  "공정 설계 (Designed processes)",
+                                                                                            "color":  "blue",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "32d6f602-0092-422b-8edc-fea08d9ecc3f",
+                                                                                            "name":  "프로젝트 수행 (Executed projects) 한화에너지 군산 증설공사 및 Yanbu2 PKG1",
+                                                                                            "color":  "orange",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "fab1ee80-5258-4b40-8ce9-5a8697c161af",
+                                                                                            "name":  "신사업 프로젝트 리딩 (Led new business projects)",
+                                                                                            "color":  "orange",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "a1a1250d-3c5d-452e-9ede-d2ee20659694",
+                                                                                            "name":  "기계설계 담당 (Responsible for mechanical design) Cooling Tower  Pump  FGD PKG 등 플랜트 기자재",
+                                                                                            "color":  "purple",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "c0057c23-3ee1-4b49-b43a-86fbfd4a0b93",
+                                                                                            "name":  "사업 관리 (Managed projects) 보일러 EP 공사 및 Saudi Amiral PJT Aux. Boiler",
+                                                                                            "color":  "orange",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "2807899f-4757-440d-a610-f4699e6e4642",
+                                                                                            "name":  "설치감독 (Supervised installation) 플랜트 공사 관련",
+                                                                                            "color":  "purple",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "7fba72b2-cff0-44dd-8400-6d51616f11ce",
+                                                                                            "name":  "Developed and localized DBS algorithms",
+                                                                                            "color":  "blue",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "66e14c77-8189-44d0-84bc-445c3b8e069f",
+                                                                                            "name":  "Designed and implemented 3D fully convolutional networks",
+                                                                                            "color":  "orange",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "3eb27826-4d2e-4bc1-87c5-41ec698d985f",
+                                                                                            "name":  "Analyzed CT data",
+                                                                                            "color":  "yellow",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "b322313f-f8f6-4a5b-8494-91d9b6b99b50",
+                                                                                            "name":  "Designed and implemented image processing algorithms",
+                                                                                            "color":  "yellow",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "6d22dc90-3116-4589-a527-5a93b11cf712",
+                                                                                            "name":  "Developed software",
+                                                                                            "color":  "green",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "d5be0cf4-87fe-4ac6-9053-b633e3c85fb3",
+                                                                                            "name":  "Implemented and optimized prediction algorithms",
+                                                                                            "color":  "red",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "a6b72226-d54e-4071-aa8b-2d1e92c2dd68",
+                                                                                            "name":  "Developed and applied generative adversarial learning",
+                                                                                            "color":  "purple",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "a0abdc60-2cb2-4b35-b273-5553bd8f2ef1",
+                                                                                            "name":  "Developed 3D fully convolutional dense context networks",
+                                                                                            "color":  "orange",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "17249ef2-ca5f-4c6b-a644-170441bf8b97",
+                                                                                            "name":  "TPMS 수신기 하드웨어 검토 및 펌웨어 개발",
+                                                                                            "color":  "orange",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "f73b4fde-560e-4513-ac1f-5c6e2fc09114",
+                                                                                            "name":  "TV 제품 하드웨어 설계 및 IC Driver 설정",
+                                                                                            "color":  "green",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "ab4dd559-d99d-47f0-9581-6fa4c85e8801",
+                                                                                            "name":  "임베디드 시스템 하드웨어 설계 및 펌웨어 개발",
+                                                                                            "color":  "yellow",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "26efa928-c47f-49eb-a844-46aedde3e8fe",
+                                                                                            "name":  "회로 및 펌웨어 기술 지원",
+                                                                                            "color":  "purple",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "fbb49ced-f64b-4a34-9ae3-0521d505fd84",
+                                                                                            "name":  "Converted development environments",
+                                                                                            "color":  "purple",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "333ce757-fa30-481f-85be-ded3eb372687",
+                                                                                            "name":  "Reconstructed server clusters",
+                                                                                            "color":  "red",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "3ee7b750-2c55-4b4e-a3fa-b04bc0fad896",
+                                                                                            "name":  "Managed Kubernetes clusters",
+                                                                                            "color":  "brown",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "39f8f7ab-a134-4e86-8f2e-04bb10b60535",
+                                                                                            "name":  "Managed datacenter devices",
+                                                                                            "color":  "brown",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "eb40320f-1677-41ca-958c-5952ceae8768",
+                                                                                            "name":  "Established AWS environments",
+                                                                                            "color":  "yellow",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "0b383d4f-9f01-4b31-909f-337cb9689b08",
+                                                                                            "name":  "Implemented and managed CI/CD pipelines",
+                                                                                            "color":  "red",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "f9dc2e3d-f538-45cb-a049-82dcf7d4576e",
+                                                                                            "name":  "Developed and automated GPU monitoring tool",
+                                                                                            "color":  "green",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "37b19897-5699-4807-94bf-b64fd213bf1a",
+                                                                                            "name":  "Managed SysOps team",
+                                                                                            "color":  "purple",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "1bc0ff56-e2f6-4693-9284-df8b86de5880",
+                                                                                            "name":  "Led deployment of NPU servers",
+                                                                                            "color":  "pink",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "a28f3cf5-ebb8-4f91-a087-59a4024c2f6c",
+                                                                                            "name":  "Automated installation processes",
+                                                                                            "color":  "gray",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "b221e4fa-aaef-482c-9db8-9b5ed1f58276",
+                                                                                            "name":  "작성했습니다 기능성 보고 자료 및 기술 문서",
+                                                                                            "color":  "orange",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "f45c5fc2-f9fe-4cc7-bc32-2bf1145b3af3",
+                                                                                            "name":  "수립했습니다 제품 컨셉 및 기능성 원료 전략",
+                                                                                            "color":  "purple",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "b376c2bc-e72d-4c42-a4ff-a2b41a6f01a4",
+                                                                                            "name":  "실험 및 조정했습니다 배합 비율  점도  pH  공정 조건",
+                                                                                            "color":  "red",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "083ebd11-43de-4e7e-af2f-4b9e990489bf",
+                                                                                            "name":  "개발했습니다 기초화장품 제품",
+                                                                                            "color":  "gray",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "f65bd60d-0304-414a-9038-4b011dd61700",
+                                                                                            "name":  "주도 및 관리했습니다 제품 개발 프로세스",
+                                                                                            "color":  "yellow",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "b71b478d-5c6e-4d20-81eb-3685a3fbe0f9",
+                                                                                            "name":  "완수하고 지원했습니다 프로젝트 상용화",
+                                                                                            "color":  "pink",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "cdba6cc9-bc30-4511-8417-13c3efa644b1",
+                                                                                            "name":  "기여했습니다 마케팅 메시지 구성",
+                                                                                            "color":  "green",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "f93ddae4-19bd-4050-8b32-be4e25573dde",
+                                                                                            "name":  "Designed and implemented server systems for IoT services",
+                                                                                            "color":  "green",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "07dbb06a-9b01-4e1f-aa8c-c295d7aef52a",
+                                                                                            "name":  "Led design and development of AI system",
+                                                                                            "color":  "green",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "c9e90814-53b1-4c8b-8cb6-27e521af077a",
+                                                                                            "name":  "Designed and developed back-end architecture",
+                                                                                            "color":  "pink",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "861d5814-5074-4233-8348-d48b16828bb1",
+                                                                                            "name":  "Built and managed crawling engine",
+                                                                                            "color":  "orange",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "9d21f713-fe31-4e9b-a012-a69a290705e2",
+                                                                                            "name":  "지원 IP 보호 및 활용",
+                                                                                            "color":  "orange",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "7ba3a627-8489-45df-afb8-f2ad5ff7d77d",
+                                                                                            "name":  "출원 상표권 등록 업무",
+                                                                                            "color":  "orange",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "d0730a03-0222-48e2-aa4f-7945e23ab0ec",
+                                                                                            "name":  "지원 개인정보보호법 및 특별법 준수",
+                                                                                            "color":  "pink",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "5cc136cd-4a78-4239-a22b-bccece97a476",
+                                                                                            "name":  "신고 러시아인의 국내 증권취득",
+                                                                                            "color":  "green",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "0ba62b1a-48fb-4386-a583-ddfa047d6815",
+                                                                                            "name":  "검토 의료정보 익명/가명 처리",
+                                                                                            "color":  "red",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "dfec8e63-aba8-42f5-9c53-5d569ef517fd",
+                                                                                            "name":  "검토 투자계약서",
+                                                                                            "color":  "brown",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "9d6e3590-94a8-4738-a19d-3f03dd2fba71",
+                                                                                            "name":  "작성 및 검토 각종 용역  공급  위탁  소프트웨어 최종사용자 계약서",
+                                                                                            "color":  "green",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "a5711d60-3733-459c-be0f-95235f5bdacf",
+                                                                                            "name":  "수행 기업 지배구조 관련 법적 절차",
+                                                                                            "color":  "pink",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "81e306ec-e24d-4196-a268-80c4d02dcfd9",
+                                                                                            "name":  "검토 통신판매중개업 신고 필요성",
+                                                                                            "color":  "blue",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "128d4809-4ffb-4ae7-a746-4fe11dd1a8e4",
+                                                                                            "name":  "작성 법률실사보고서",
+                                                                                            "color":  "yellow",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "6b926581-eeec-46c0-a3b8-44fe6f6f72ba",
+                                                                                            "name":  "Test Pattern Update",
+                                                                                            "color":  "purple",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "3a4ecb44-9934-4ee7-84e7-d0dce015e058",
+                                                                                            "name":  "General Professional Experience",
+                                                                                            "color":  "gray",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "6ce01072-cb1e-4c4d-8ccb-e01bef091c99",
+                                                                                            "name":  "Managed 16 angel investment matching funds totaling approximately 192 billion KRW.",
+                                                                                            "color":  "brown",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "4bb4ea1c-1d28-49fc-bb8b-f1c910f416f8",
+                                                                                            "name":  "Executed formation and post-management of global VC funds in collaboration with international organi",
+                                                                                            "color":  "purple",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "9a0dfdbd-a701-46c5-9faf-9b2d1f2d3405",
+                                                                                            "name":  "Performed compliance reviews and risk management for Mother-Fund (FoF) investment projects.",
+                                                                                            "color":  "red",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "7212935f-d6bb-4823-b727-0ceda79d5bc4",
+                                                                                            "name":  "엔젤투자매칭펀드 투자심사 및 16개사 투자 집행",
+                                                                                            "color":  "default",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "3d8a2443-dd03-4ded-bb7f-07f1fec1bbd1",
+                                                                                            "name":  "해외 VC 글로벌펀드 결성 및 국제 협력 추진",
+                                                                                            "color":  "yellow",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "aeba6c09-7460-4cca-9216-06352b537ab9",
+                                                                                            "name":  "투자기업의 후속 투자 유치 지원 및 Value-up",
+                                                                                            "color":  "blue",
+                                                                                            "description":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "id":  "c237c09d-ade0-4ac0-9a5f-b863274eabf2",
+                                                                                            "name":  "모태펀드 출자사업 준법성 심사 및 리스크 관리",
+                                                                                            "color":  "green",
+                                                                                            "description":  null
+                                                                                        }
+                                                                                    ]
+                                                                    }
+                                               },
+                       "AI Last Optimized":  {
+                                                 "id":  "JgX~",
+                                                 "name":  "AI Last Optimized",
+                                                 "description":  null,
+                                                 "type":  "date",
+                                                 "date":  {
+
+                                                          }
+                                             },
+                       "Sub Sectors":  {
+                                           "id":  "%5CTAE",
+                                           "name":  "Sub Sectors",
+                                           "description":  null,
+                                           "type":  "multi_select",
+                                           "multi_select":  {
+                                                                "options":  [
+                                                                                {
+                                                                                    "id":  "27dca20d-f252-4e0c-8418-3fa2cb0f22bd",
+                                                                                    "name":  "B2B영업",
+                                                                                    "color":  "pink",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "92382605-eace-49b2-b24f-3d6f2ea32bcc",
+                                                                                    "name":  "BE(서버)",
+                                                                                    "color":  "pink",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "6bc942b9-c1a7-4b6b-9c47-f3f87266c1fe",
+                                                                                    "name":  "Business Operation(프로세스 효율화)",
+                                                                                    "color":  "default",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "283b5834-75cc-472c-b655-c64c2b3d8a39",
+                                                                                    "name":  "DBA(DBMS 운영; 성능 최적화; 보안)",
+                                                                                    "color":  "purple",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "76bd710d-11ee-4320-af65-8041184340c4",
+                                                                                    "name":  "DevOps_SRE",
+                                                                                    "color":  "orange",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "39dbe9bc-ac2b-4ee8-afe2-34e3807af857",
+                                                                                    "name":  "FAE_CE",
+                                                                                    "color":  "red",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "d884803e-500b-4756-ae77-2d4f42ffae69",
+                                                                                    "name":  "FE(웹)",
+                                                                                    "color":  "pink",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "4221c364-6c9c-4c25-9bf2-f65e22d85c97",
+                                                                                    "name":  "FP\u0026A(경영분석)",
+                                                                                    "color":  "yellow",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "20a0d5c9-b5d2-4849-b40c-8592cb018793",
+                                                                                    "name":  "FW(컨트롤러)",
+                                                                                    "color":  "blue",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "b9783d1b-75c6-4e3f-a83e-2a1447875369",
+                                                                                    "name":  "HW(SoC; RTL)",
+                                                                                    "color":  "brown",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "3f5a3be0-fe07-4a59-8e92-ce023ea71c51",
+                                                                                    "name":  "IR",
+                                                                                    "color":  "orange",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "dba7ec28-41a4-493f-98e3-a67f1305b18a",
+                                                                                    "name":  "M\u0026A",
+                                                                                    "color":  "gray",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "81a58d0d-195a-4e4c-ae75-cd53b8c2c5d4",
+                                                                                    "name":  "Mobile(iOS; Android)",
+                                                                                    "color":  "default",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "63dd2c4b-01a1-4168-979e-e1a7de4361c0",
+                                                                                    "name":  "Product Owner(PO)",
+                                                                                    "color":  "orange",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "e7c8bbed-baf9-4b28-aac4-c305e4dcdbc9",
+                                                                                    "name":  "Project Manager(PM)",
+                                                                                    "color":  "default",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "174426dd-9bf0-4dbc-af3b-73512f4afe96",
+                                                                                    "name":  "SCM(수요예측/공급망)",
+                                                                                    "color":  "green",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "400b7503-3c4f-4430-899f-6f77929ee7ec",
+                                                                                    "name":  "SW(하단 드라이버)",
+                                                                                    "color":  "purple",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "d1f2f996-be29-41cc-95f7-9824f965a7b8",
+                                                                                    "name":  "TPM",
+                                                                                    "color":  "pink",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "3eaf9f67-c7f4-42e1-a547-a94c8fcea364",
+                                                                                    "name":  "UIUX",
+                                                                                    "color":  "green",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "42c58d63-c1e9-4b7c-a55e-76196c52ebbb",
+                                                                                    "name":  "개인정보보호(CPO; 규제 대응)",
+                                                                                    "color":  "brown",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "f995ecd0-5260-4f8d-8070-7dbb3edbe2ef",
+                                                                                    "name":  "공정(Yield/FAB)",
+                                                                                    "color":  "yellow",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "29e5f6e5-85a7-4b62-9154-b71d551d2e2e",
+                                                                                    "name":  "교육(L\u0026D)",
+                                                                                    "color":  "purple",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "671f86e9-92b2-4f99-b7f4-f638886f6a9e",
+                                                                                    "name":  "구매",
+                                                                                    "color":  "blue",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "152f4722-3e42-40e2-9324-349f4d170f2f",
+                                                                                    "name":  "그로스",
+                                                                                    "color":  "blue",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "28b0ad51-834c-40c2-9778-db653ddeb461",
+                                                                                    "name":  "급여(Payroll)",
+                                                                                    "color":  "pink",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "0492a6bf-6ac6-4a69-b92a-9e2d95e42d77",
+                                                                                    "name":  "기구설계",
+                                                                                    "color":  "yellow",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "c4c19c32-6b51-4d69-8a79-e1a1686af2cf",
+                                                                                    "name":  "기술영업(Pre-sales)",
+                                                                                    "color":  "orange",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "606f0e93-0c2f-465f-a0fa-2bb7531aebe9",
+                                                                                    "name":  "기타",
+                                                                                    "color":  "default",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "9d02e0af-8e26-4c82-b7e6-4b6c76767da1",
+                                                                                    "name":  "기획(AI Governance; DT; AT; AX 전략 설계)",
+                                                                                    "color":  "pink",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "000bffb8-77be-4f65-a109-29b93febd29c",
+                                                                                    "name":  "내부통제_감사",
+                                                                                    "color":  "purple",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "8f8c4672-243b-4f36-a095-71f52ce1b3a4",
+                                                                                    "name":  "노무(ER)",
+                                                                                    "color":  "yellow",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "34d472c2-6247-42db-a151-5167b783b4be",
+                                                                                    "name":  "데이터분석가",
+                                                                                    "color":  "gray",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "9d3313c6-57c5-43c3-921c-33b6a44702fe",
+                                                                                    "name":  "데이터사이언티스트",
+                                                                                    "color":  "red",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "3f1b6de6-d854-4c77-ac9a-6d4f3bcf533b",
+                                                                                    "name":  "데이터엔지니어",
+                                                                                    "color":  "gray",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "ab374016-37b3-4e13-a63f-935329dc83b0",
+                                                                                    "name":  "디자인 기획 및 시스템 구축",
+                                                                                    "color":  "orange",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "487b3fd9-0e3d-4107-853e-020663ede742",
+                                                                                    "name":  "로보틱스",
+                                                                                    "color":  "brown",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "0191d5f1-4c2d-4d3e-852e-5701ea1257c8",
+                                                                                    "name":  "리서쳐(모델링)",
+                                                                                    "color":  "orange",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "090dfc4a-b106-4bf3-b548-6868cf0bf373",
+                                                                                    "name":  "마케팅기획",
+                                                                                    "color":  "purple",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "84d88735-5a16-46bc-ab83-d8fdea45d030",
+                                                                                    "name":  "물류기획 및 프로세스 최적화",
+                                                                                    "color":  "purple",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "cf70bff9-947e-48f5-abba-2a30447835a8",
+                                                                                    "name":  "변호사",
+                                                                                    "color":  "default",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "8f0371de-4926-4b82-87b2-1490b2b85f1f",
+                                                                                    "name":  "복리후생 운영",
+                                                                                    "color":  "purple",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "30dcda90-b18a-4e35-ba66-b117691624cd",
+                                                                                    "name":  "브랜드",
+                                                                                    "color":  "gray",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "e294d0b7-4c6a-4bd6-9495-393c9810f683",
+                                                                                    "name":  "상품기획(Selection)",
+                                                                                    "color":  "blue",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "1433c8cc-031c-4eee-81a6-c9499c010fb2",
+                                                                                    "name":  "서비스기획(화면설계)",
+                                                                                    "color":  "blue",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "92e6b442-8a78-451c-99b0-982e97edd211",
+                                                                                    "name":  "세무",
+                                                                                    "color":  "yellow",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "707c4510-363a-40c0-8d4e-33737a2dc70a",
+                                                                                    "name":  "소싱MD(해외 직소싱/원가)",
+                                                                                    "color":  "pink",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "8af8a2fd-5e7b-42ed-96a0-4a7872a2eede",
+                                                                                    "name":  "신사업 발굴 및 런칭",
+                                                                                    "color":  "red",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "b0781498-5c5e-4586-a3c4-cb31ddd2135e",
+                                                                                    "name":  "언론홍보(PR)",
+                                                                                    "color":  "yellow",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "c28c2c61-a351-4f9d-8077-e4fc158bda07",
+                                                                                    "name":  "엔지니어(Serving/MLOps)",
+                                                                                    "color":  "pink",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "82c887ff-7fed-4457-9ce6-bba6f1e49862",
+                                                                                    "name":  "영업MD(채널 매출 관리)",
+                                                                                    "color":  "orange",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "e63ebb19-24bd-4279-bb67-e8760e2792a1",
+                                                                                    "name":  "영업기획",
+                                                                                    "color":  "pink",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "cb458334-e7be-40ee-b31d-3f6770392c34",
+                                                                                    "name":  "영업지원",
+                                                                                    "color":  "yellow",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "a7e37073-e27a-4c33-beae-e0c5626d1cd1",
+                                                                                    "name":  "웹",
+                                                                                    "color":  "blue",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "dcdfcdcc-7d94-4035-9c0f-c34efc4559ab",
+                                                                                    "name":  "유통망 관리",
+                                                                                    "color":  "default",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "05e62398-b873-4b6d-8923-15c294902ad8",
+                                                                                    "name":  "인사기획",
+                                                                                    "color":  "pink",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "36460a7e-a83e-4367-81b5-6215d335689a",
+                                                                                    "name":  "인프라_Cloud",
+                                                                                    "color":  "pink",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "33c94f51-4e9c-4819-9380-764adbd41831",
+                                                                                    "name":  "일반법무",
+                                                                                    "color":  "orange",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "b445fcb4-0484-4b95-b6da-b0effd77635f",
+                                                                                    "name":  "임베디드",
+                                                                                    "color":  "pink",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "7a50ba63-de1a-409e-a170-bb5a7a476c02",
+                                                                                    "name":  "자금",
+                                                                                    "color":  "blue",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "250cd71d-1ed4-4a4e-b21d-b31b95f48cea",
+                                                                                    "name":  "자동화(PLC)",
+                                                                                    "color":  "default",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "a180395e-3f29-4721-92e1-83cffdaf09d7",
+                                                                                    "name":  "자산관리(부동산; 법인자산; IT 비품 구매 및 관리)",
+                                                                                    "color":  "default",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "38a67e72-9c64-43ac-bf7b-c9baeed8889a",
+                                                                                    "name":  "재무회계",
+                                                                                    "color":  "gray",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "69ba4b3c-7333-4a90-896c-5bc96b9bca94",
+                                                                                    "name":  "전략_경영기획",
+                                                                                    "color":  "brown",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "ea7166ff-cfc9-488a-9aaf-2635da8e2106",
+                                                                                    "name":  "정보보안(인프라/인증)",
+                                                                                    "color":  "orange",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "bb68ec5b-cb07-4789-95b4-bd8032c32a48",
+                                                                                    "name":  "제품",
+                                                                                    "color":  "default",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "26bfc5bc-ffd4-40c2-b672-a3e16f0f172d",
+                                                                                    "name":  "지적재산권(IP)",
+                                                                                    "color":  "orange",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "fd9c04f9-8828-4a8f-8b07-d49d0c26aae9",
+                                                                                    "name":  "채용(TA)",
+                                                                                    "color":  "red",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "2398c9e6-a716-4e47-965d-dde57fb64700",
+                                                                                    "name":  "컴플라이언스",
+                                                                                    "color":  "blue",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "b50c5161-7643-4825-8667-382e33524c76",
+                                                                                    "name":  "콘텐츠(인플루언서 협업/제휴 포함)",
+                                                                                    "color":  "purple",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "0cc1c65f-5da0-42bb-86ff-108b8644cf52",
+                                                                                    "name":  "퍼포먼스",
+                                                                                    "color":  "yellow",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "d0220d0b-0d66-4d44-8507-119823c39ba7",
+                                                                                    "name":  "평가보상(C\u0026B)",
+                                                                                    "color":  "blue",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "3d1cc78d-d38e-4ec5-8a66-4f3dc27842c2",
+                                                                                    "name":  "해외영업",
+                                                                                    "color":  "blue",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "cd283218-8c3d-4cb7-aea4-6631c6ce3388",
+                                                                                    "name":  "회계사(CPA)",
+                                                                                    "color":  "gray",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "ea66e808-fc71-4477-9dda-a28441b102dc",
+                                                                                    "name":  "회로설계(PCB)",
+                                                                                    "color":  "purple",
+                                                                                    "description":  null
+                                                                                },
+                                                                                {
+                                                                                    "id":  "8a31e0c7-a23b-4be1-8acd-7ee9c144c1bd",
+                                                                                    "name":  "투자담당자(Investment/VC/PE)",
+                                                                                    "color":  "pink",
+                                                                                    "description":  null
+                                                                                }
+                                                                            ]
+                                                            }
+                                       },
+                       "Gap Analysis":  {
+                                            "id":  "%5D%5Bcc",
+                                            "name":  "Gap Analysis",
+                                            "description":  null,
+                                            "type":  "rich_text",
+                                            "rich_text":  {
+
+                                                          }
+                                        },
+                       "Experience Summary":  {
+                                                  "id":  "dSe%7C",
+                                                  "name":  "Experience Summary",
+                                                  "description":  null,
+                                                  "type":  "rich_text",
+                                                  "rich_text":  {
+
+                                                                }
+                                              },
+                       "Main Sectors":  {
+                                            "id":  "g%7D%3D%7C",
+                                            "name":  "Main Sectors",
+                                            "description":  null,
+                                            "type":  "multi_select",
+                                            "multi_select":  {
+                                                                 "options":  [
+                                                                                 {
+                                                                                     "id":  "e9159160-c988-406e-8994-2e46abb0f556",
+                                                                                     "name":  "AI (Artificial Intelligence)",
+                                                                                     "color":  "default",
+                                                                                     "description":  null
+                                                                                 },
+                                                                                 {
+                                                                                     "id":  "9903f51b-ae1c-440e-ba4f-62683130e54a",
+                                                                                     "name":  "DATA (데이터)",
+                                                                                     "color":  "default",
+                                                                                     "description":  null
+                                                                                 },
+                                                                                 {
+                                                                                     "id":  "f0b04e11-36f5-48f8-9772-f5feee8e054e",
+                                                                                     "name":  "Finance (재무/회계)",
+                                                                                     "color":  "default",
+                                                                                     "description":  null
+                                                                                 },
+                                                                                 {
+                                                                                     "id":  "ec9157a3-f2e1-4188-8f11-0d06aa028608",
+                                                                                     "name":  "HR (Human Resources)",
+                                                                                     "color":  "default",
+                                                                                     "description":  null
+                                                                                 },
+                                                                                 {
+                                                                                     "id":  "d5680abc-a492-4ce9-ba49-cc1e256cb428",
+                                                                                     "name":  "HW (Hardware)",
+                                                                                     "color":  "gray",
+                                                                                     "description":  null
+                                                                                 },
+                                                                                 {
+                                                                                     "id":  "e3e5c757-8680-4fe3-a31c-3b45c7d9b147",
+                                                                                     "name":  "MD (Commerce)",
+                                                                                     "color":  "default",
+                                                                                     "description":  null
+                                                                                 },
+                                                                                 {
+                                                                                     "id":  "5f81f96f-abbc-485f-8d41-02902642de46",
+                                                                                     "name":  "PRODUCT (제품 기획)",
+                                                                                     "color":  "default",
+                                                                                     "description":  null
+                                                                                 },
+                                                                                 {
+                                                                                     "id":  "cab0e302-8849-4d5f-94c5-718283005bf8",
+                                                                                     "name":  "STRATEGY (전략)",
+                                                                                     "color":  "default",
+                                                                                     "description":  null
+                                                                                 },
+                                                                                 {
+                                                                                     "id":  "46da5d6f-4d6d-460c-b415-7405e92e3f84",
+                                                                                     "name":  "SW (Software)",
+                                                                                     "color":  "purple",
+                                                                                     "description":  null
+                                                                                 },
+                                                                                 {
+                                                                                     "id":  "9497984f-6e4c-4e2e-8c04-bd2d68076a26",
+                                                                                     "name":  "기타",
+                                                                                     "color":  "purple",
+                                                                                     "description":  null
+                                                                                 },
+                                                                                 {
+                                                                                     "id":  "85b881f6-9042-4c30-827d-e64da21e9c63",
+                                                                                     "name":  "디자인 (Design)",
+                                                                                     "color":  "default",
+                                                                                     "description":  null
+                                                                                 },
+                                                                                 {
+                                                                                     "id":  "f5339ce7-2c60-40f2-9bb6-bac7e90d154b",
+                                                                                     "name":  "마케팅 (Marketing)",
+                                                                                     "color":  "default",
+                                                                                     "description":  null
+                                                                                 },
+                                                                                 {
+                                                                                     "id":  "88fc6495-0272-4493-967a-174c9d77aa54",
+                                                                                     "name":  "물류/유통 (Logistics \u0026 SCM)",
+                                                                                     "color":  "default",
+                                                                                     "description":  null
+                                                                                 },
+                                                                                 {
+                                                                                     "id":  "e80d2bd7-8c28-43fd-880f-b2496d212a8f",
+                                                                                     "name":  "반도체 (Semiconductor)",
+                                                                                     "color":  "default",
+                                                                                     "description":  null
+                                                                                 },
+                                                                                 {
+                                                                                     "id":  "618da2ce-5782-428d-aade-61826bdff20c",
+                                                                                     "name":  "법무 (Legal)",
+                                                                                     "color":  "default",
+                                                                                     "description":  null
+                                                                                 },
+                                                                                 {
+                                                                                     "id":  "58f81a4e-12b8-43ef-bc8d-3479a7c946e3",
+                                                                                     "name":  "보안 (Security)",
+                                                                                     "color":  "default",
+                                                                                     "description":  null
+                                                                                 },
+                                                                                 {
+                                                                                     "id":  "8f8fe680-e730-42f1-86f1-593832ee18a5",
+                                                                                     "name":  "영업 (Sales)",
+                                                                                     "color":  "default",
+                                                                                     "description":  null
+                                                                                 },
+                                                                                 {
+                                                                                     "id":  "607b9335-04d6-4894-95be-fedd9b01638f",
+                                                                                     "name":  "총무 (General Affairs)",
+                                                                                     "color":  "default",
+                                                                                     "description":  null
+                                                                                 }
+                                                                             ]
+                                                             }
+                                        },
+                       "구글드라이브 링크":  {
+                                         "id":  "rvOr",
+                                         "name":  "구글드라이브 링크",
+                                         "description":  null,
+                                         "type":  "url",
+                                         "url":  {
+
+                                                 }
+                                     },
+                       "Context Tags":  {
+                                            "id":  "%7BtO%7D",
+                                            "name":  "Context Tags",
+                                            "description":  null,
+                                            "type":  "rich_text",
+                                            "rich_text":  {
+
+                                                          }
+                                        },
+                       "이름":  {
+                                  "id":  "title",
+                                  "name":  "이름",
+                                  "description":  null,
+                                  "type":  "title",
+                                  "title":  {
+
+                                            }
+                              }
+                   },
+    "parent":  {
+                   "type":  "page_id",
+                   "page_id":  "2ce22567-1b6f-8084-8f00-f20994eae35e"
+               },
+    "url":  "https://www.notion.so/31f225671b6f8190b3a8dc4f8422f01b",
+    "public_url":  null,
+    "in_trash":  false,
+    "archived":  false,
+    "request_id":  "7a29a64f-f9e0-471e-b3ce-3c7d6562af91"
+}

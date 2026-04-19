@@ -1,0 +1,1 @@
+["Seniority Bucket", "Functional Patterns", "AI Last Optimized", "Data Quality", "전화번호", "Name", "Sub Sectors", "Gap Analysis", "AI_Generated", "Experience Summary", "Main Sectors", "Graph_Nodes", "구글드라이브 링크", "이메일", "Role Cluster", "Context Tags", "파일명"]

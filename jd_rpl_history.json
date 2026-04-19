@@ -1,0 +1,20 @@
+[
+  {
+    "timestamp": "2026-03-10 13:48:33",
+    "jd_hash": "41c99d1f71b140c1bca292dc7d6fd272",
+    "difficulty_score": 5,
+    "avg_rpl": 10.06,
+    "pass_rate_at_cutline": 0.0,
+    "cutline_used": 45,
+    "candidate_count": 50
+  },
+  {
+    "timestamp": "2026-03-10 14:13:22",
+    "jd_hash": "41c99d1f71b140c1bca292dc7d6fd272",
+    "difficulty_score": 5,
+    "avg_rpl": 10.0,
+    "pass_rate_at_cutline": 0.0,
+    "cutline_used": 45,
+    "candidate_count": 50
+  }
+]

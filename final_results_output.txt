@@ -1,0 +1,5 @@
+Query '반도체 공정 엔지니어': 20 hits
+Query '자동차 소프트웨어 개발자': 20 hits
+Query '배터리 개발 연구원': 10 hits
+Query '로봇 소프트웨어 엔지니어': 14 hits
+Query 'AI 반도체 설계': 10 hits

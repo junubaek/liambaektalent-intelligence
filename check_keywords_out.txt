@@ -1,0 +1,16 @@
+=== Keyword Search Targets ===
+   type  count
+ NPU런타임     23
+    HBM      5
+ PCIe검증      9
+   vLLM      6
+   NCCL      2
+ SerDes      4
+ RISC-V      1
+    CXL      1
+   eBPF      0
+5G_ORAN      3
+
+=== Over 10 Filter ===
+  type  count
+NPU런타임     23

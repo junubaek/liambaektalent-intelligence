@@ -1,0 +1,16 @@
+=== STEP 6 FINAL REPORT ===
+총 후보자 수: 6395 명
+총 파싱 완료 엣지 수: 63345 개
+평균 엣지 수: 9.91 개 (기존 8.28개 대비 비교용)
+에러 케이스: processed_step6.json 로그 참조
+
+=== NDCG@10 측정 결과 ===
+
+
+오류 로그:
+Traceback (most recent call last):
+  File "C:\Users\cazam\Downloads\̷¼ڵм˻ý\run_real_evaluate_v3.py", line 101, in <module>
+    run_real_evaluation()
+  File "C:\Users\cazam\Downloads\̷¼ڵм˻ý\run_real_evaluate_v3.py", line 24, in run_real_evaluation
+    print(f"\U0001f680 V8.6.3   NDCG@10 ǽð   ( {total_cases})...\n")
+UnicodeEncodeError: 'cp949' codec can't encode character '\U0001f680' in position 0: illegal multibyte sequence

@@ -1,0 +1,60 @@
+==================================================
+🔍 [Query] : vLLM PyTorch
+==================================================
+[1위] 김학주  (Score: 1.09)
+       ► 매칭 스킬: vLLM(BUILT), vLLM(SUPPORTED), vLLM(ANALYZED), vLLM(USED), vLLM(DESIGNED), vLLM(SUPPORTED), vLLM(ANALYZED), vLLM(MANAGED), Backend_Python(BUILT), vLLM(BUILT)
+[2위] 곽철현  (Score: 1.03)
+       ► 매칭 스킬: Backend_Python(BUILT), PyTorch(BUILT), Backend_Python(MANAGED), Pytorch(BUILT), PyTorch(USED)
+[3위] 이석현  (Score: 1.03)
+       ► 매칭 스킬: vLLM(BUILT), vLLM(BUILT), PyTorch(BUILT), PyTorch(GREW)
+[4위] 송지은  (Score: 0.97)
+       ► 매칭 스킬: Backend_Python(BUILT), PyTorch(BUILT)
+[5위] 김형기  (Score: 0.97)
+       ► 매칭 스킬: Backend_Python(BUILT), PyTorch(BUILT)
+
+
+==================================================
+🔍 [Query] : Kubernetes DevOps
+==================================================
+[1위] 김용만  (Score: 1.5)
+       ► 매칭 스킬: DevOps(BUILT), MSA_Architecture(BUILT), DevOps(DESIGNED), DevOps(MANAGED), Kubernetes(BUILT), Infrastructure_and_Cloud(BUILT), Kubernetes(DESIGNED), Infrastructure_and_Cloud(DESIGNED), Infrastructure_and_Cloud(ANALYZED), Kubernetes(MANAGED), Infrastructure_and_Cloud(MANAGED), Infrastructure_and_Cloud(MIGRATED), DevOps(USED), MSA_Architecture(USED)
+[2위] 이준호  (Score: 1.49)
+       ► 매칭 스킬: Kubernetes(BUILT), Infrastructure_and_Cloud(BUILT), Kubernetes(DESIGNED), Infrastructure_and_Cloud(DESIGNED), DevOps(ANALYZED), Infrastructure_and_Cloud(ANALYZED), DevOps(DEPLOYED), Kubernetes(DEPLOYED), IaC(DEPLOYED), DevOps(RESOLVED), DevOps(MANAGED), Kubernetes(MANAGED), Infrastructure_and_Cloud(MANAGED), IaC(MANAGED)
+[3위] 윤태식  (Score: 1.47)
+       ► 매칭 스킬: DevOps(BUILT), Kubernetes(BUILT), DevOps(DESIGNED), Kubernetes(DESIGNED), DevOps(SUPPORTED), DevOps(ANALYZED), DevOps(MANAGED), Kubernetes(BUILT), Kubernetes(DESIGNED), Infrastructure_and_Cloud(DESIGNED), MSA_Architecture(DESIGNED), Infrastructure_and_Cloud(SUPPORTED), Infrastructure_and_Cloud(MANAGED), DevOps(USED)
+[4위] 고승수  (Score: 1.45)
+       ► 매칭 스킬: DevOps(BUILT), Kubernetes(BUILT), DevOps(DESIGNED), DevOps(MANAGED), DevOps(DESIGNED), Infrastructure_and_Cloud(DESIGNED), Kubernetes(MIGRATED), Kubernetes(RESOLVED), Monitoring_System(USED), MSA_Architecture(USED), DevOps(BUILT), Kubernetes(BUILT), Infrastructure_and_Cloud(BUILT), DevOps(MANAGED), Kubernetes(MANAGED), Infrastructure_and_Cloud(MANAGED), IaC(MANAGED)
+[5위] 윤영필  (Score: 1.45)
+       ► 매칭 스킬: DevOps(BUILT), Kubernetes(BUILT), DevOps(DESIGNED), DevOps(SUPPORTED), Kubernetes(MANAGED), Infrastructure_and_Cloud(DESIGNED), DevOps(MANAGED), Infrastructure_and_Cloud(MANAGED), DevOps(BUILT), Kubernetes(BUILT), IaC(BUILT)
+
+
+==================================================
+🔍 [Query] : 연결회계 IFRS
+==================================================
+[1위] 김민철  (Score: 1.34)
+       ► 매칭 스킬: Financial_Accounting(BUILT), IFRS(BUILT), Consolidated_Accounting(BUILT), Financial_Accounting(SUPPORTED), Financial_Accounting(MANAGED), IFRS(MANAGED), Consolidated_Accounting(MANAGED), Financial_Accounting(BUILT), Financial_Accounting(ANALYZED), Financial_Accounting(MANAGED), IFRS(USED)
+[2위] 김미나  (Score: 1.34)
+       ► 매칭 스킬: Financial_Accounting(BUILT), Consolidated_Accounting(BUILT), Financial_Accounting(SUPPORTED), Financial_Accounting(ANALYZED), Financial_Accounting(MANAGED), IFRS(MANAGED), Consolidated_Accounting(MANAGED), IFRS(BUILT), Financial_Accounting(ANALYZED), Financial_Accounting(MANAGED), Consolidated_Accounting(USED)
+[3위] 김은형  (Score: 1.32)
+       ► 매칭 스킬: IFRS(DESIGNED), Financial_Accounting(ANALYZED), IFRS(ANALYZED), Financial_Accounting(MANAGED), IFRS(MANAGED), Consolidated_Accounting(USED), Financial_Accounting(BUILT), Consolidated_Accounting(BUILT), Financial_Accounting(DESIGNED), Financial_Accounting(ANALYZED), Financial_Accounting(MANAGED), Financial_Accounting(GREW), Financial_Accounting(MANAGED), Financial_Accounting(ANALYZED), IFRS(ANALYZED), Financial_Accounting(MANAGED), Consolidated_Accounting(USED)
+[4위] 김승준  (Score: 1.26)
+       ► 매칭 스킬: Financial_Accounting(DESIGNED), IFRS(DESIGNED), Consolidated_Accounting(DESIGNED), Financial_Accounting(ANALYZED), Financial_Accounting(MANAGED), Consolidated_Accounting(MANAGED)
+[5위] 장태희  (Score: 1.2)
+       ► 매칭 스킬: Financial_Accounting(BUILT), Financial_Accounting(DESIGNED), Financial_Accounting(SUPPORTED), Financial_Accounting(ANALYZED), IFRS(ANALYZED), Consolidated_Accounting(ANALYZED), Financial_Accounting(MANAGED), Consolidated_Accounting(MANAGED), Financial_Accounting(BUILT), Financial_Accounting(SUPPORTED), Financial_Accounting(ANALYZED), Financial_Accounting(MANAGED), Financial_Accounting(GREW), IFRS(USED)
+
+
+==================================================
+🔍 [Query] : Treasury FX Risk
+==================================================
+[1위] 정성규  (Score: 1.5)
+       ► 매칭 스킬: Treasury_Management(ANALYZED), Treasury_Management(MANAGED), Corporate_Funding(MANAGED), Financial_Accounting(MANAGED), FX_Dealing(MANAGED), Financial_Accounting(NEGOTIATED), FX_Dealing(NEGOTIATED), Treasury_Management(GREW), Financial_Accounting(DRAFTED), Corporate_Funding(BUILT), Financial_Accounting(BUILT), Treasury_Management(DESIGNED), Treasury_Management(ANALYZED), Corporate_Funding(ANALYZED), Financial_Accounting(ANALYZED), Treasury_Management(MANAGED), Corporate_Funding(MANAGED), Financial_Accounting(MANAGED), FX_Dealing(MANAGED), Corporate_Funding(NEGOTIATED), FX_Dealing(NEGOTIATED), Financial_Accounting(DRAFTED)
+[2위] 김대중  (Score: 1.49)
+       ► 매칭 스킬: Treasury_Management(BUILT), FX_Dealing(DESIGNED), Treasury_Management(ANALYZED), Financial_Accounting(ANALYZED), Treasury_Management(MANAGED), Corporate_Funding(MANAGED), FX_Dealing(MANAGED), Corporate_Funding(NEGOTIATED), Treasury_Management(GREW), Corporate_Funding(GREW), Financial_Accounting(DRAFTED), Treasury_Management(BUILT), Corporate_Funding(BUILT), FX_Dealing(DESIGNED), Treasury_Management(MANAGED), Financial_Accounting(MANAGED), FX_Dealing(MANAGED), Treasury_Management(NEGOTIATED)
+[3위] 김태준  (Score: 1.47)
+       ► 매칭 스킬: Treasury_Management(BUILT), FX_Dealing(BUILT), Treasury_Management(DESIGNED), FX_Dealing(DESIGNED), Treasury_Management(SUPPORTED), Corporate_Funding(SUPPORTED), Treasury_Management(MANAGED), Corporate_Funding(MANAGED), Financial_Accounting(MANAGED), FX_Dealing(MANAGED), Corporate_Funding(NEGOTIATED), FX_Dealing(NEGOTIATED), Treasury_Management(BUILT), Corporate_Funding(BUILT), FX_Dealing(BUILT), Treasury_Management(DESIGNED), FX_Dealing(DESIGNED), Treasury_Management(SUPPORTED), Corporate_Funding(SUPPORTED), Treasury_Management(ANALYZED), FX_Dealing(ANALYZED), Treasury_Management(MANAGED), Corporate_Funding(MANAGED), FX_Dealing(MANAGED), FX_Dealing(NEGOTIATED), Financial_Accounting(USED)
+[4위] 자금  (Score: 1.47)
+       ► 매칭 스킬: Financial_Accounting(BUILT), Financial_Accounting(SUPPORTED), Treasury_Management(MANAGED), Financial_Accounting(MANAGED), Corporate_Funding(SUPPORTED), Treasury_Management(MANAGED), Corporate_Funding(MANAGED), FX_Dealing(MANAGED), Corporate_Funding(NEGOTIATED), Treasury_Management(MANAGED), Corporate_Funding(MANAGED), Financial_Accounting(MANAGED), FX_Dealing(MANAGED), Treasury_Management(BUILT), Financial_Accounting(BUILT), Treasury_Management(DESIGNED), Corporate_Funding(DESIGNED), Treasury_Management(MANAGED), Corporate_Funding(MANAGED), Financial_Accounting(MANAGED), Corporate_Funding(BUILT), Corporate_Funding(SUPPORTED), Financial_Accounting(SUPPORTED), FX_Dealing(SUPPORTED), Corporate_Funding(ANALYZED), Treasury_Management(MANAGED), Corporate_Funding(MANAGED), Financial_Accounting(MANAGED), FX_Dealing(MANAGED)
+[5위] 이범기  (Score: 1.46)
+       ► 매칭 스킬: Corporate_Funding(BUILT), Financial_Accounting(BUILT), Treasury_Management(DESIGNED), Corporate_Funding(DESIGNED), Financial_Accounting(SUPPORTED), Financial_Accounting(ANALYZED), Treasury_Management(MANAGED), Corporate_Funding(MANAGED), Financial_Accounting(MANAGED), FX_Dealing(MANAGED), Corporate_Funding(NEGOTIATED), Treasury_Management(GREW), Corporate_Funding(LAUNCHED), IPO_Management(USED), Corporate_Funding(BUILT), Treasury_Management(DESIGNED), Corporate_Funding(DESIGNED), Financial_Accounting(DESIGNED), Financial_Accounting(SUPPORTED), Financial_Accounting(ANALYZED), Treasury_Management(MANAGED), Corporate_Funding(MANAGED), FX_Dealing(MANAGED), Treasury_Management(NEGOTIATED), Corporate_Funding(NEGOTIATED), Treasury_Management(GREW), IPO_Management(USED)
+
+

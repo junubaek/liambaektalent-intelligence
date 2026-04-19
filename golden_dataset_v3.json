@@ -1,0 +1,1109 @@
+[
+  {
+    "jd_query": "SAP SQL DB Design",
+    "candidate_name": "윤현진",
+    "candidate_neo4j_id": "f7d96236ca61ea4e23af612a04763ec4e07d2f38fae5d525e0a282836dfa8335",
+    "label": "positive",
+    "stage": "2차면접",
+    "company": "토스인슈어런스",
+    "raw_filename": "[YG PLUS] 윤현진(IT PM)부문.pdf"
+  },
+  {
+    "jd_query": "RTL Design SoC Integration DFT",
+    "candidate_name": "이민찬",
+    "candidate_neo4j_id": "70a1ee5d686d235561476fcd2e9717d095ff4b907d6cdec9f4482920008338cf",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 이민찬(SoC.Subsystem Design Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "IPO IR AI",
+    "candidate_name": "남연우",
+    "candidate_neo4j_id": "afa7d11625ce8d338ba7cecece1b26af92a726532227889ed62c22a4dea3ae7e",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 남연우(Public Relations Lead)부문.pdf"
+  },
+  {
+    "jd_query": "Treasury CMS FX Risk Management",
+    "candidate_name": "김대중",
+    "candidate_neo4j_id": "91671759f4ffbc105f33e40692fb4ed1c03f8efa4a116f93610775a6495f6467",
+    "label": "positive",
+    "stage": "2차면접",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 김대중(Treasury Manager)부문.pdf"
+  },
+  {
+    "jd_query": "Treasury CMS FX Risk Management",
+    "candidate_name": "이범기",
+    "candidate_neo4j_id": "0e1c1aa9881cb89a9ae16493869be98a0ff73d2a8740e3735a17fd012a73d713",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 이범기(Treasury Manager)부문.pdf"
+  },
+  {
+    "jd_query": "Financial Modeling SQL BI Dashboard",
+    "candidate_name": "이상욱",
+    "candidate_neo4j_id": "6a4f0bff1b6c7682a95ab64a8a6a4bf7cc0dd30250a71dbf1e08b688259358d4",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "토스인슈어런스",
+    "raw_filename": "[토스인슈어런스] 이상욱(Strategic Finance Manager(FP&A))부문.pdf"
+  },
+  {
+    "jd_query": "Financial Modeling SQL BI Dashboard",
+    "candidate_name": "김병준",
+    "candidate_neo4j_id": "3b06d3b61070341d2eefdcb08f7c41008cf32dc22c8eac4e1f1a8814075be9dd",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "토스인슈어런스",
+    "raw_filename": "[토스인슈어런스] 김병준(Strategic Finance Manager(FP&A))부문.pdf"
+  },
+  {
+    "jd_query": "Financial Modeling SQL BI Dashboard",
+    "candidate_name": "정준영",
+    "candidate_neo4j_id": "5462528d7f415f83c64c1152afb293b72fd351dead300d397e8879e4a3539800",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "토스인슈어런스",
+    "raw_filename": "[토스인슈어런스] 정준영(Strategic Finance Manager(FP&A))부문.pdf"
+  },
+  {
+    "jd_query": "PyTorch vLLM KV-cache management",
+    "candidate_name": "홍기재",
+    "candidate_neo4j_id": "274a48353de98776b52a80a0f9f802763f2a4d3c24d4761f059530bfa8eb6c67",
+    "label": "positive",
+    "stage": "최종합격",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 홍기재(Framework Software Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "SQL Tableau Data Modeling",
+    "candidate_name": "박유연",
+    "candidate_neo4j_id": "c0d6133fc9325d595e1b97ae639214b9d49225923d9d439748078d1da88892a6",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "토스인슈어런스",
+    "raw_filename": "[토스인슈어런스] 박유연(Data Analyst)부문.pdf"
+  },
+  {
+    "jd_query": "Ethernet Layer 2/3 Protocols RoCE RDMA Silicon Validation",
+    "candidate_name": "이수진",
+    "candidate_neo4j_id": "c208a88a01be105ca6fe8e09c7d3ba2d048dc03097d3b2f8a6b4845b2da1a5a1",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 이수진(Ethernet Firmware Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "Kubernetes Terraform LangGraph",
+    "candidate_name": "유준상",
+    "candidate_neo4j_id": "e6d7e66afdfc541a933d353c768b02579565182e2f89b2cd11e5a6c778460deb",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 유준상(DevOps&Platform Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "Collective Communication Algorithms C/C++ RDMA/RoCE",
+    "candidate_name": "김동우",
+    "candidate_neo4j_id": "540b0fac690b6135f6a403df64ebf38b9511bd5ad84f649b5b7834c5be6cf5bb",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 김동우(Collective Communication Library Engineer (Software))부문.pdf"
+  },
+  {
+    "jd_query": "SoC Architecture Scale-Up/Scale-Out Architecture IO Architecture",
+    "candidate_name": "전우형",
+    "candidate_neo4j_id": "1c83d7f771126efaff5f0f9db5afa0e6291a762f79814662f7bdc98c4d8cf4a9",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 전우형(SoC Architect for Scale-Up and Scale-Out)부문.pdf"
+  },
+  {
+    "jd_query": "SAP SQL DB Design",
+    "candidate_name": "김완희",
+    "candidate_neo4j_id": "9c343c3ab5b1705c36677854ac85bc8d1bbc1966da5bfd6707acf5bd145e2fe5",
+    "label": "positive",
+    "stage": "최종합격",
+    "company": "토스인슈어런스",
+    "raw_filename": "[토스인슈어런스] 김완희(Financial Systems Manager)부문.pdf"
+  },
+  {
+    "jd_query": "C/C++ Linux Kernel Drivers Computer Architecture",
+    "candidate_name": "김영인",
+    "candidate_neo4j_id": "4cc7568681e214efd303c080f36ccce973e14066ea5cd1f3c3a8f65ce91a1279",
+    "label": "positive",
+    "stage": "최종합격",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 김영인(System Software Architect)부문.pdf"
+  },
+  {
+    "jd_query": "vLLM torch.compile PyTorch",
+    "candidate_name": "이석현",
+    "candidate_neo4j_id": "4da4991f551ec46624279df6ba3f350ea46e519d0667286b2aaebf07ac60e9b2",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 이석현(NPU Runtime Software Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "ERP Excel Labor Law",
+    "candidate_name": "전상건",
+    "candidate_neo4j_id": "a801f078b280466c3208a21ff574a6ec94509b14498238df9bf3b978876c6e76",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "스타비젼",
+    "raw_filename": "[스타비젼] 전상건(인사팀)부문.docx"
+  },
+  {
+    "jd_query": "Kubernetes Terraform LangGraph",
+    "candidate_name": "오원교",
+    "candidate_neo4j_id": "a43286210b71dcc50732ce234c4abc28e45603b94a9be0fb501775c6aea7070b",
+    "label": "positive",
+    "stage": "최종합격",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 오원교(DevOps & Platform Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "vLLM torch.compile PyTorch",
+    "candidate_name": "전형준",
+    "candidate_neo4j_id": "6c6d435afb44d6545adb2548c6df6d002fdbef8b8718af147240456e6f294a0d",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 전형준(Moreh Software Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "PyTorch vLLM KV-cache management",
+    "candidate_name": "김학주",
+    "candidate_neo4j_id": "7c031dd202b128b5c383c2e86d11ef42e1ebda01bbfae112bfcad530aefdd014",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 김학주(NPU Runtime Software Engineer)부문.docx"
+  },
+  {
+    "jd_query": "Kubernetes Go Kubeflow",
+    "candidate_name": "이준호",
+    "candidate_neo4j_id": "35081aa23d60b27d558ac3073105b797d812a6c42337804359eba67b7c5598ed",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 이준호(Cloud Backend Engineer (MLOps Engineer))부문.pdf"
+  },
+  {
+    "jd_query": "vLLM torch.compile PyTorch",
+    "candidate_name": "김범규",
+    "candidate_neo4j_id": "6c8ae021b2b543d4430bbc22d2a8de72ee10945887be7f11e833b961d4d01ffa",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 김범규(Motif Research Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "Neural Network Operations Parallel Programming C++",
+    "candidate_name": "전예찬",
+    "candidate_neo4j_id": "ebc11cc994c86db8a814ed4725376246f8181e80178aaae6ab51fb399c8d15c1",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 전예찬(NPU Library Software Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "Kubernetes Go Kubeflow",
+    "candidate_name": "정윤오",
+    "candidate_neo4j_id": "b1fad4bc351d064b391a0473342d90d40189e787d45b9cde56b1fc59dbba88ae",
+    "label": "positive",
+    "stage": "최종합격",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 정윤오(Kubernetes InfrastructureDevOps Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "PyTorch vLLM KV-cache management",
+    "candidate_name": "박지민",
+    "candidate_neo4j_id": "0354b83a1e2765b1c2b7882b54c2f8c6797db066423d31908bdd78016af8d45b",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 박지민(NPU Runtime Software Engineer (LLM Serving))부문.pdf"
+  },
+  {
+    "jd_query": "Neural Network Operations Parallel Programming C++",
+    "candidate_name": "김정근",
+    "candidate_neo4j_id": "32e22567-1b6f-81e7-b76e-ce60c2ccfaa7",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 김정근(NPU Library Software Engineer)부문.docx"
+  },
+  {
+    "jd_query": "Kubernetes OpenStack Terraform",
+    "candidate_name": "최호진",
+    "candidate_neo4j_id": "2fd8ff105c986152a77d4a136deef6c2876a5e77e6b01723f21d355178728a87",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 최호진(AI Cloud Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "SAP SQL DB Design",
+    "candidate_name": "박우람",
+    "candidate_neo4j_id": "d87e312724d2b567fd06830e9288db5a469e54498f45eee555fd306370fc11eb",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "토스인슈어런스",
+    "raw_filename": "[토스인슈어런스] 박우람(Financial System Manager)부문.pdf"
+  },
+  {
+    "jd_query": "SAP SQL DB Design",
+    "candidate_name": "이기준",
+    "candidate_neo4j_id": "21fcb09a3ce88f3aee2c16bf5fd6552ba1cd2b8d717c7c5b879e2f2c48ff5deb",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "토스인슈어런스",
+    "raw_filename": "[토스인슈어런스] 이기준(Financial Systems Manager)부문.pdf"
+  },
+  {
+    "jd_query": "SAP SQL DB Design",
+    "candidate_name": "신종수",
+    "candidate_neo4j_id": "569f4a0886fe9f9380a81c6fe6bf32ae28373c510e594a982b21dc4cd9fa8532",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "토스인슈어런스",
+    "raw_filename": "[토스인슈어런스] 신종수(Financial Systems Manager)부문.pdf"
+  },
+  {
+    "jd_query": "SAP SQL DB Design",
+    "candidate_name": "김상엽",
+    "candidate_neo4j_id": "076fb8ce00b2de47e9cc25458a6361b490fab55bb9e55ab2d11d89459d3d9a5b",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "토스인슈어런스",
+    "raw_filename": "[토스인슈어런스] 김상엽(Financial System Manager)부문.docx"
+  },
+  {
+    "jd_query": "C/C++ Linux Kernel Drivers Computer Architecture",
+    "candidate_name": "이원철",
+    "candidate_neo4j_id": "8f8508163547d2331e95b4c74052844e8f6bb8544dbc45a53f456d330c6ad9a2",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 이원철(System Software Architect)부문.pdf"
+  },
+  {
+    "jd_query": "Layer 2/3 protocols RoCE Silicon Validation",
+    "candidate_name": "문태경",
+    "candidate_neo4j_id": "56cf8d7ba683178a48c0044400fe609ef9cade3bae350dd1bdff095e9344fc3a",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 문태경(Ethernet Verification Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "Kubernetes Terraform ArgoCD",
+    "candidate_name": "윤영필",
+    "candidate_neo4j_id": "fce7c0432c40c03a7e8e87c34151295cfe0b3986b554a1d0a0c119f9a83abf60",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 윤영필(Kubernetes Infrastructure.DevOps Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "ERP K-IFRS FP&A",
+    "candidate_name": "배종규",
+    "candidate_neo4j_id": "f3c382a0d42d1c2353976b967fd58e58365eee407a942caf922bc06ec8e714f4",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "스타비젼",
+    "raw_filename": "[스타비젼] 배종규(재무회계)부문.docx"
+  },
+  {
+    "jd_query": "ERP K-IFRS FP&A",
+    "candidate_name": "박준영",
+    "candidate_neo4j_id": "38e7ea1e3d6f57af8cc9fa26b58721dcef2b858a4336a02dd24e6de82613edb5",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "스타비젼",
+    "raw_filename": "[스타비젼] 박준영(재무회계)부문.docx"
+  },
+  {
+    "jd_query": "ERP K-IFRS FP&A",
+    "candidate_name": "김정태",
+    "candidate_neo4j_id": "94334c1cad5c77436c04ea6832753ae008141017712a6e840ae4932c3957ebbc",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "스타비젼",
+    "raw_filename": "[스타비젼] 김정태(재무회계)부문.pdf"
+  },
+  {
+    "jd_query": "ERP K-IFRS FP&A",
+    "candidate_name": "안병선",
+    "candidate_neo4j_id": "3f49f64e990680c486aaf1096f8b46252f46c182e399a1daefc230930cddbcad",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "스타비젼",
+    "raw_filename": "[스타비젼] 안병선(재무회계)부문.docx"
+  },
+  {
+    "jd_query": "ISMS-P Vulnerability Assessment Risk Assessment",
+    "candidate_name": "임동진",
+    "candidate_neo4j_id": "c4b1711fc4d24f6fa7177331147d73304703499217edf4ba5af46c14f8486bdd",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "GME",
+    "raw_filename": "[GME] 임동진(정보보안)부문.docx"
+  },
+  {
+    "jd_query": "C/C++ Linux Systems Engineering GPU Internals",
+    "candidate_name": "임수환",
+    "candidate_neo4j_id": "a5e56a10ed0d93a252e160bfe5fb00a22c9688f441b749b182daae7516a8ef9a",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 임수환(System Tools Engineer - AI Hardware)부문.pdf"
+  },
+  {
+    "jd_query": "Hardware Accelerators Kernel Debugging Linux",
+    "candidate_name": "김상조",
+    "candidate_neo4j_id": "7701bae0d77ab4b3ba9c265ad60159ae217c7575609041832ee1d163baaf6324",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 김상조(AI System Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "ERP Inventory Optimization KPI Analysis",
+    "candidate_name": "박종모",
+    "candidate_neo4j_id": "edbabe1a75ab8dbba85d5779d593a2df2543834d12d01901e9939c7216fea705",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "스타비젼",
+    "raw_filename": "[스타비젼] 박종모(SCM 프로세스 고도화 및 운영)부문.docx"
+  },
+  {
+    "jd_query": "ERP Excel Labor Law",
+    "candidate_name": "전유완",
+    "candidate_neo4j_id": "83b58fd8a38057d78cbc4bffe0f4ad2fd7d4a986af94aa2c4fb1a7a44bbf2a11",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "스타비젼",
+    "raw_filename": "[스타비젼] 전유완(인사총무)부문.docx"
+  },
+  {
+    "jd_query": "ERP Excel Labor Law",
+    "candidate_name": "박지웅",
+    "candidate_neo4j_id": "2f91775b86da0e0929b3cd39b8d1e1e35bf5f55f2b4a4d49a6f163c9621e45e6",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "스타비젼",
+    "raw_filename": "[스타비젼] 박지웅(인사총무)부문.docx"
+  },
+  {
+    "jd_query": "ERP Excel Labor Law",
+    "candidate_name": "안진형",
+    "candidate_neo4j_id": "4c811f9e4636653a85e9433aaa1ca534b355bcf882ec4f30dbba4f1ba4ac4740",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "스타비젼",
+    "raw_filename": "[스타비젼] 안진형(인사총무)부문.docx"
+  },
+  {
+    "jd_query": "ERP Excel Labor Law",
+    "candidate_name": "안이슬",
+    "candidate_neo4j_id": "f2bce00f5b2d5c1c296b0a575dbc512d809240759acab118b6c2f490e7cd3603",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "스타비젼",
+    "raw_filename": "[스타비젼] 안이슬(인사총무)부문.docx"
+  },
+  {
+    "jd_query": "OEM ExportCompliance MarketResearch",
+    "candidate_name": "김대용",
+    "candidate_neo4j_id": "7eb733f18c9cc6c117441acf3cff9635461eca9be6d3de4d894e62f9173e30d0",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "스타비젼",
+    "raw_filename": "[스타비젼] 김대용(해외영업(B2B)_리더급)부문.docx"
+  },
+  {
+    "jd_query": "OEM ExportCompliance MarketResearch",
+    "candidate_name": "이상헌",
+    "candidate_neo4j_id": "33ac9ba3072bfa10623bb870ddb50df0fb30174d9fd61b2dee8004adb0c6e430",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "스타비젼",
+    "raw_filename": "[스타비젼] 이상헌(해외영업(B2B)_리더급)부문.docx"
+  },
+  {
+    "jd_query": "OEM ExportCompliance MarketResearch",
+    "candidate_name": "이학주",
+    "candidate_neo4j_id": "569e186d334322908c2a6dd3b68ebc705076ce74e96c47cf3395cce9c046492c",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "스타비젼",
+    "raw_filename": "[스타비젼] 이학주(해외영업(B2B)_리더급)부문.docx"
+  },
+  {
+    "jd_query": "OEM ExportCompliance MarketResearch",
+    "candidate_name": "김승현",
+    "candidate_neo4j_id": "31f22567-1b6f-815c-9c21-c65d69bf9c83",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "스타비젼",
+    "raw_filename": "[스타비젼] 김승현(해외영업(B2B)_과장급)부문.docx"
+  },
+  {
+    "jd_query": "ERP Inventory Optimization KPI Analysis",
+    "candidate_name": "염대현",
+    "candidate_neo4j_id": "67c99b0aeeaed6178c520a633986333c29d738ac32f71a2f7cef28cafc0d26db",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "스타비젼",
+    "raw_filename": "[스타비젼] 염대현(SCM 프로세스 고도화 및 운영)부문_포트폴리오.pdf"
+  },
+  {
+    "jd_query": "PCIe Memory Controllers ARM Architecture",
+    "candidate_name": "오승택",
+    "candidate_neo4j_id": "4c014e5bc70554639aac53a0ee919173cbf0be514180d63f4a42ea2b48d9becf",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 오승택(Firmware Verification Engineer)부문_신입.pdf"
+  },
+  {
+    "jd_query": "C/C++ Linux Systems Engineering GPU Internals",
+    "candidate_name": "박원호",
+    "candidate_neo4j_id": "385c5062987be462cf7804623c3b819e9afc401dde8d199be61c712ea14a619d",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 박원호(System Tool Engineer - AI Hardware)부문.pdf"
+  },
+  {
+    "jd_query": "PCIe Memory Controllers ARM Architecture",
+    "candidate_name": "이진호",
+    "candidate_neo4j_id": "a54a208a1b6c8b575e269cd5a73473549ec2fbda2bc394fd8f52164ca2aa9435",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 이진호(Firmware Verification Engineer)부문_신입.pdf"
+  },
+  {
+    "jd_query": "PCIe Memory Controllers ARM Architecture",
+    "candidate_name": "정영훈",
+    "candidate_neo4j_id": "63806622add3bfbad36a07ebffc6d1758724e71c6e4890c454051c3a97eacb80",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 정영훈(Firmware Verification Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "Device Driver C/C++ AI Accelerator",
+    "candidate_name": "정예린",
+    "candidate_neo4j_id": "e3c395e824bcf689b865c4a572bfc5dd7b81697d7087c036585dabd09192520a",
+    "label": "positive",
+    "stage": "최종합격",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 정예린(Device Driver Engineer - User-Mode Driver)부문.pdf"
+  },
+  {
+    "jd_query": "PCIe Memory Controllers ARM Architecture",
+    "candidate_name": "정호진",
+    "candidate_neo4j_id": "eb2ea265a8a3068f6d43cf6b12728503f37980de99be62aef4e58b3dbf88f55e",
+    "label": "positive",
+    "stage": "최종합격",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 정호진(Firmware Verification Engineer)부문_신입_병역특례.pdf"
+  },
+  {
+    "jd_query": "React Native JavaScript CSS",
+    "candidate_name": "정유균",
+    "candidate_neo4j_id": "d02c200ab0ad6dceddd16025cb7827852fb8da6f60fa932ee7b1cc01766aff90",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "블루밍그레이스",
+    "raw_filename": "[블루밍그레이스] 정유균(Front-End 개발자)부문.pdf"
+  },
+  {
+    "jd_query": "Collective Communication Algorithms RDMA/RoCE NPU Architecture",
+    "candidate_name": "김지욱",
+    "candidate_neo4j_id": "5a9339cd270768c653c8d2028320dcff9b5796215a60d29724c3ea5834efbef4",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 김지욱(CCL(Collective Communication Library) Lead Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "Financial Modeling Valuation Excel",
+    "candidate_name": "전주영",
+    "candidate_neo4j_id": "6b194d0464c3821e2c5be64bbd499f2a93bd0b36538438b782fb32fbf6883382",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "SK인텔릭스",
+    "raw_filename": "[SK인텔릭스] 전주영(Global 사업개발)부문.docx"
+  },
+  {
+    "jd_query": "Simulation Automation TMS",
+    "candidate_name": "최정환",
+    "candidate_neo4j_id": "7aa19e2e1d4e60a76c90e3e9db4bfbec962191dfc6dd035e6368a44b0eba1d4f",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "롯데하이마트",
+    "raw_filename": "[롯데하이마트] 최정환(SCM 전략팀 팀장)부문.docx"
+  },
+  {
+    "jd_query": "Big Data Machine Learning Platform Architecture",
+    "candidate_name": "김생근",
+    "candidate_neo4j_id": "ccb50bd8d636d09ac12c34e7c1f9c27f00e0dc6e8d4c13c126b0edfd26b705c8",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "SK인텔릭스",
+    "raw_filename": "[SK인텔릭스] 김생근(AI혁신센터장)부문.docx"
+  },
+  {
+    "jd_query": "AI Machine Learning Data Science",
+    "candidate_name": "김민규",
+    "candidate_neo4j_id": "5c1669a8d4d8ef78d80e434963c7a8c89011b77cea1efc648ae4b4f91a1dccc0",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "SK인텔릭스",
+    "raw_filename": "[SK인텔릭스] 김민규(스마트홈 Tech 팀장)부문.docx"
+  },
+  {
+    "jd_query": "Matter Wifi BLE",
+    "candidate_name": "김건우",
+    "candidate_neo4j_id": "92d039e46b219cd02dc8a5ae2ae70969b5a2d09f53263f2116f0d7e8ac20fcbc",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "SK인텔릭스",
+    "raw_filename": "[SK인텔릭스] 김건우(스마트홈 Tech 팀장)부문.docx"
+  },
+  {
+    "jd_query": "Collective Communication Algorithms RDMA/RoCE NPU Architecture",
+    "candidate_name": "신정용",
+    "candidate_neo4j_id": "602125e462b66c89e42af6f10f99d2e2ae5cf7438411fcf0b46b41e5e66c2dce",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 신정용(CCL(Collective Communication Livrary) Lead Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "AI Semiconductor Hardware",
+    "candidate_name": "김영아",
+    "candidate_neo4j_id": "16adf936733533eb38a8027734ed847f6493b91000db426d173f67b66dfc55e6",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 김영아(정부R&D Project Manager)부문.pdf"
+  },
+  {
+    "jd_query": "ARM SVE Neural Network Operations Embedded Linux",
+    "candidate_name": "이주원",
+    "candidate_neo4j_id": "1fbfd018a56a38e0404c84ed4bdcae674b55c53b6f419918401695b913a53c8c",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 이주원(NPU Firmware Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "Visual Design Spatial Design Brand Identity",
+    "candidate_name": "김준호",
+    "candidate_neo4j_id": "09acd522c5e7abfa082a1fd664e40198735432849a34c5cb3e99333b1d1bb025",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "밀도",
+    "raw_filename": "[밀도] 김준호(브랜드총괄)부문.pdf"
+  },
+  {
+    "jd_query": "EPC Solar Energy Power Systems",
+    "candidate_name": "곽동현",
+    "candidate_neo4j_id": "e11f641cc92323dde8aced1ed18fb1f622536cb63dc5bcac98573af0f1b78e5d",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "BEP",
+    "raw_filename": "[BEP] 곽동현(사업관리 총괄)부문.docx"
+  },
+  {
+    "jd_query": "vLLM torch.compile PyTorch",
+    "candidate_name": "김기덕",
+    "candidate_neo4j_id": "7f19d7ddbb4c19e75e4c472a91bd6bbd360bc5d1acb7392518b52db670b870dd",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 김기덕(NPU Runtime Software Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "Power System Analysis Grid Impact Assessment Database Design",
+    "candidate_name": "배문성",
+    "candidate_neo4j_id": "3c6adaa4bf38984f36d30eb252e9e119af090f86fc99f95c9e14c52be6f881e5",
+    "label": "positive",
+    "stage": "최종합격",
+    "company": "BEP",
+    "raw_filename": "[BEP] 배문성(전력계통 담당)부문.docx"
+  },
+  {
+    "jd_query": "React.js Next.js Web3.js",
+    "candidate_name": "박하진",
+    "candidate_neo4j_id": "c0d22b85a128a76b90d19da3e9f8c863640b639b2b32a4f92af284a323668106",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "굿블록",
+    "raw_filename": "[굿블록] 박하진(Fronted Developer)부문.pdf"
+  },
+  {
+    "jd_query": "React.js Next.js Web3.js",
+    "candidate_name": "정민영",
+    "candidate_neo4j_id": "cdec447910517ae4557c9745080a2b82b47143206aef3cdea7b3a6e72a9ee5ee",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "굿블록",
+    "raw_filename": "[굿블록] 정민영(Fronted Developer)부문.pdf"
+  },
+  {
+    "jd_query": "React.js Next.js Web3.js",
+    "candidate_name": "임훈",
+    "candidate_neo4j_id": "fcd99af1cf5fb63993c95b775c26b4150f5492bf3bcb79e1c1f3997ce74a8b12",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "굿블록",
+    "raw_filename": "임훈"
+  },
+  {
+    "jd_query": "LINUX AWS Architecture",
+    "candidate_name": "김남균",
+    "candidate_neo4j_id": "32e22567-1b6f-8132-8e30-cc7d51287721",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "GME",
+    "raw_filename": "[GME] 김남균(Infra Engineer)부문.docx"
+  },
+  {
+    "jd_query": "JD 본문이 제공되지 않아 핵심 기술 스택 또는 스킬 키워드를 추출할 수 없습니다. 채용 공고 본문을 제공해 주시면 분석 후 답변해 드리겠습니다.",
+    "candidate_name": "심현선",
+    "candidate_neo4j_id": "50e6f977356685a99309923ebb01c31a3765b8ccceea9601eb17988caf1a3388",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 심현선(인사팀장)부문.pdf"
+  },
+  {
+    "jd_query": "AI Semiconductor RCMS Research Fund Management",
+    "candidate_name": "여성수",
+    "candidate_neo4j_id": "5c0f23e9fee652eac8e5a26bf23b454a4d8dcae5a88a11f2ae265d9bcf74ce74",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 여성수(정부 R&D 과제 Operations Manager)부문.pdf"
+  },
+  {
+    "jd_query": "AI Semiconductor Hardware",
+    "candidate_name": "황의영",
+    "candidate_neo4j_id": "c6097c845469e80d9d4ce86dcc046a4bf3715f49425ff402f44aaec375db2bfe",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 황의영(AI Accelerator R&D Program Manager)부문.pdf"
+  },
+  {
+    "jd_query": "Spring Fintech MSSQL",
+    "candidate_name": "경성종",
+    "candidate_neo4j_id": "32e22567-1b6f-81b2-a9d9-ebbb36299ab7",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "GME",
+    "raw_filename": "[GME] 경성종(서버개발자)부문.docx"
+  },
+  {
+    "jd_query": "JD 본문이 제공되지 않아 핵심 기술 스택 또는 스킬 키워드를 추출할 수 없습니다. 채용 공고 본문을 제공해 주시면 분석 후 답변해 드리겠습니다.",
+    "candidate_name": "남동득",
+    "candidate_neo4j_id": "038f6224fd1176dc48afae85ad5db92787e58fc19be9fcdbd888e686c0f209eb",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 남동득(인사팀장)부문.pdf"
+  },
+  {
+    "jd_query": "JD 본문이 제공되지 않아 핵심 기술 스택 또는 스킬 키워드를 추출할 수 없습니다. 채용 공고 본문을 제공해 주시면 분석 후 답변해 드리겠습니다.",
+    "candidate_name": "이혁",
+    "candidate_neo4j_id": "136ce9511771a860570b6b5992cbbfbcf79ecd0f4baedbb1755686a9e9417533",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 이혁(인사팀장)부문.pdf"
+  },
+  {
+    "jd_query": "Consolidated Accounting K-IFRS Audit Management",
+    "candidate_name": "신동주",
+    "candidate_neo4j_id": "f5955463fc61312bcc8c77adec8b0c5fcf22ef2869b2a40809f68058b3e704f3",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "NXC",
+    "raw_filename": "[NXC] 신동주(연결회계 담당자)부문.pdf"
+  },
+  {
+    "jd_query": "LINUX AWS Architecture",
+    "candidate_name": "방태현",
+    "candidate_neo4j_id": "7d2f9c0a8ec42c2d070337df332b2598ac5c80fee161f4522a45e65751aca88c",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "GME",
+    "raw_filename": "[GME] 방태현(Infra Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "S&OP Demand Forecasting Data Analytics",
+    "candidate_name": "유정한",
+    "candidate_neo4j_id": "93ace23094bdf0ff2576dd9fba84c73f405ba4cdc69e0351dc51a10817884882",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "라라스윗",
+    "raw_filename": "[라라스윗] 유정한(SCM파트 리드)부문.docx"
+  },
+  {
+    "jd_query": "Financial Modeling M&A Project Financing",
+    "candidate_name": "김수빈",
+    "candidate_neo4j_id": "c0e5162ff3be17e4b854258da1ea29feb7a9707302cfd7d7ce276109df7b9c87",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "BEP",
+    "raw_filename": "[BEP] 김수빈(재무투자금융 임원)부문.pdf"
+  },
+  {
+    "jd_query": "Consolidated Accounting K-IFRS Audit Management",
+    "candidate_name": "김정운",
+    "candidate_neo4j_id": "face2267628100f573870a9430d6820f97be349d5038c657196e6ecb26a37b92",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "NXC",
+    "raw_filename": "[NXC] 김정운(연결회계 담당자)부문.docx"
+  },
+  {
+    "jd_query": "AI Semiconductor RCMS Research Fund Management",
+    "candidate_name": "박재형",
+    "candidate_neo4j_id": "c91ea2803d079ecddc2df6e5d8b7a8a61074182663f4db40544250b33bb3f2b6",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 박재형(Government Project Operations Manager)부문.docx"
+  },
+  {
+    "jd_query": "Chip Bring-up Driver Development Power Performance Analysis",
+    "candidate_name": "박찬준",
+    "candidate_neo4j_id": "e8b1f9fb6aa11c5e06634ec428af44ee477aa56d3964ef8c35b4613104663e68",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 박찬준(DRAM Systems Architect)부문.pdf"
+  },
+  {
+    "jd_query": "Consolidated Accounting K-IFRS Audit Management",
+    "candidate_name": "주찬양",
+    "candidate_neo4j_id": "a70a85d3af9b167c1d5c8e541198f80b3699ab5a7eb988ebd341dd074adf01e8",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "NXC",
+    "raw_filename": "[NXC] 주찬양(연결회계 담당자)부문.docx"
+  },
+  {
+    "jd_query": "Consolidated Accounting K-IFRS Audit Management",
+    "candidate_name": "장태희",
+    "candidate_neo4j_id": "0a9d156b932b40f6a05b3cbef7cd36551c75473701157b269c3af9dd46f1e1cc",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "NXC",
+    "raw_filename": "[NXC] 장태희(연결회계 담당자)부문.docx"
+  },
+  {
+    "jd_query": "Consolidated Accounting K-IFRS Audit Management",
+    "candidate_name": "주찬양",
+    "candidate_neo4j_id": "a70a85d3af9b167c1d5c8e541198f80b3699ab5a7eb988ebd341dd074adf01e8",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "NXC",
+    "raw_filename": "[NXC] 주찬양(연결회계 담당자)부문.docx"
+  },
+  {
+    "jd_query": "Consolidated Accounting K-IFRS Audit Management",
+    "candidate_name": "차성민",
+    "candidate_neo4j_id": "52a6250f4f36ef5835bfedffb0d8ee99c2189d253b352cde6aa7e5888110563b",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "NXC",
+    "raw_filename": "[NXC] 차성민(연결회계 담당자)부문.docx"
+  },
+  {
+    "jd_query": "M&A Private Equity Feasibility Analysis",
+    "candidate_name": "박기홍",
+    "candidate_neo4j_id": "a4b8adf7440147cfb73edcedb549cdf16c0a3222fce07b513c5010165487666b",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "펫닥",
+    "raw_filename": "[펫닥] 박기홍(사업총괄)부문.pdf"
+  },
+  {
+    "jd_query": "Consolidated Accounting K-IFRS Audit Management",
+    "candidate_name": "최미진",
+    "candidate_neo4j_id": "c61da7b091db6df5cac3f9539b1e6f30babbecba2174da65ad5209a279247478",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "NXC",
+    "raw_filename": "[NXC] 최미진(연결회계 담당자)부문.pdf"
+  },
+  {
+    "jd_query": "LINUX AWS Architecture",
+    "candidate_name": "김경석",
+    "candidate_neo4j_id": "a5f383eba52b380404be45b0e5b279271d4014742aba910d0544061cde907693",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "GME",
+    "raw_filename": "[GME] 김경석(Infra Engineer)부문.docx"
+  },
+  {
+    "jd_query": "M&A Private Equity Feasibility Analysis",
+    "candidate_name": "김민우",
+    "candidate_neo4j_id": "8069a890ee95217f5850c291ca1743b0570490254dbe322bdeabde6260f69f3d",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "펫닥",
+    "raw_filename": "[펫닥] 김민우(사업총괄)부문.docx"
+  },
+  {
+    "jd_query": "Fintech JIRA Confluence",
+    "candidate_name": "이다미",
+    "candidate_neo4j_id": "e3a9c87db94f7eb3637447f088d1185afe3c5039639ebea7e36494818b47ebe5",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "GME",
+    "raw_filename": "[GME] 이다미(PM)부문.docx"
+  },
+  {
+    "jd_query": "Financial Modeling M&A Project Financing",
+    "candidate_name": "임준형",
+    "candidate_neo4j_id": "c6c308634e9be3db1a3c914321a0216aa6aa400425cfb6e84c50068ec4fa66d8",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "BEP",
+    "raw_filename": "[BEP] 임준형(재무투자금융 임원)부문.pdf"
+  },
+  {
+    "jd_query": "Financial Modeling M&A Project Financing",
+    "candidate_name": "이재윤",
+    "candidate_neo4j_id": "59b9a1d03948e7fe325934226203198cc152ac157749dcb8fc8a7a547eeb879c",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "BEP",
+    "raw_filename": "[BEP] 이재윤(재무투자금융 임원)부문.docx"
+  },
+  {
+    "jd_query": "Layer 2/3 protocols RoCE Silicon Validation",
+    "candidate_name": "강건규",
+    "candidate_neo4j_id": "05b95a64417f01f1c74e57990cf17808adb88d5e115b99543f388a9a5485d183",
+    "label": "positive",
+    "stage": "최종합격",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 강건규(Ethernet Verification Engineer)부문.doc"
+  },
+  {
+    "jd_query": "AI Semiconductor Hardware",
+    "candidate_name": "윤병진",
+    "candidate_neo4j_id": "eaad3e0e9a2a6d16b9537ce6d8743b39ff9943a943ee5c1ae237bbf16f38c4aa",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 윤병진(AI Acceleratior R&D Program Manager)부문.pdf"
+  },
+  {
+    "jd_query": "AI Accelerators Generative AI Datacenter",
+    "candidate_name": "박현덕",
+    "candidate_neo4j_id": "3e80e35bb393b813aaeccd6932338452cf01b03f547ced2ed5ab24ebe8090ee8",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 박현덕(AI Accelerator Sales Manager)부문.pdf"
+  },
+  {
+    "jd_query": "Layer 2/3 protocols RoCE Silicon Validation",
+    "candidate_name": "송주용",
+    "candidate_neo4j_id": "70935447c6187c328f705bc4e363b9272a0378b1ef23e2bbb001a12ace92faf5",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 송주용(Ethernet Verification Engineer)부문.docx"
+  },
+  {
+    "jd_query": "Layer 2/3 protocols RoCE Silicon Validation",
+    "candidate_name": "박주혁",
+    "candidate_neo4j_id": "e4dceda57373615988de42dad7904729a298318b3c0fce6a24a6e9865afc46fd",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 박주혁(Ethernet Verification Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "vLLM torch.compile PyTorch",
+    "candidate_name": "장봉원",
+    "candidate_neo4j_id": "76aae99c2120567ec246b3890c80e0a6eb128fc312266158cba64631dcb43214",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 장봉원(NPU Runtime Software Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "Spring Fintech MSSQL",
+    "candidate_name": "조재영",
+    "candidate_neo4j_id": "a78b305de669e2894d3e7df14e37b4ce7361cd1774ca341d00fd7ccd417b5b41",
+    "label": "positive",
+    "stage": "최종합격",
+    "company": "GME",
+    "raw_filename": "[GME] 조재영(서버개발자)부문.doc"
+  },
+  {
+    "jd_query": "Spring Fintech MSSQL",
+    "candidate_name": "김정기",
+    "candidate_neo4j_id": "32e22567-1b6f-8101-ab31-c33a53561a96",
+    "label": "positive",
+    "stage": "최종합격",
+    "company": "GME",
+    "raw_filename": "[GME] 김정기(서버개발자)부문.docx"
+  },
+  {
+    "jd_query": "ASRS Smart Factory Semiconductor Logistics Automation",
+    "candidate_name": "곽철훈",
+    "candidate_neo4j_id": "96a1859bfdba14406e9d2b35c32ef16fbe94f396988bfbf06cebcb7006d1bc88",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "에스엠코어",
+    "raw_filename": "[에스엠코어] 곽철훈(Tech본부 본부장)부문.docx"
+  },
+  {
+    "jd_query": "Spring Fintech MSSQL",
+    "candidate_name": "권용수",
+    "candidate_neo4j_id": "32022567-1b6f-81f7-83c4-dee17f8119aa",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "GME",
+    "raw_filename": "[GME] 권용수(서버 개발자)부문.doc"
+  },
+  {
+    "jd_query": "ASRS Smart Factory Semiconductor Logistics Automation",
+    "candidate_name": "박형준",
+    "candidate_neo4j_id": "31f22567-1b6f-81ab-895c-e19b82d8e8af",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "에스엠코어",
+    "raw_filename": "[에스엠코어] 박형준(Tech본부 본부장)부문.docx"
+  },
+  {
+    "jd_query": "ASRS Smart Factory Semiconductor Logistics Automation",
+    "candidate_name": "심동철",
+    "candidate_neo4j_id": "cca3120c5fa0f89ea6c73cb87925ac04c883cbc0520d46133b66adc42b9f3e5c",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "에스엠코어",
+    "raw_filename": "[에스엠코어] 심동철(Tech본부 본부장)부문.docx"
+  },
+  {
+    "jd_query": "ASRS Smart Factory Semiconductor Logistics Automation",
+    "candidate_name": "임태현",
+    "candidate_neo4j_id": "3b40f3b2e199809223da120772cd4cf363628aedad64138ad8de07270311cf53",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "에스엠코어",
+    "raw_filename": "[에스엠코어] 임태현(Tech본부 본부장)부문.docx"
+  },
+  {
+    "jd_query": "AI Accelerators Generative AI Datacenter",
+    "candidate_name": "윤선영",
+    "candidate_neo4j_id": "7c4a0f8b7aa129a7d0834ea3ba56d041fa3fea77e88dde692d08f718b88d7f88",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 윤선영(AI Accelerator Sales Manager)부문.docx"
+  },
+  {
+    "jd_query": "AI Accelerators Generative AI Datacenter",
+    "candidate_name": "안영택",
+    "candidate_neo4j_id": "5ac7eeae8228dfdd574435bfca6e950f15da96ea693d44952b97af22d53d562a",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 안영택(AI Accelerator Sales Manager)부문.pdf"
+  },
+  {
+    "jd_query": "Kubernetes Harbor Docker",
+    "candidate_name": "김영동",
+    "candidate_neo4j_id": "b7d2492718e75b56ac5a74d32f3e8c4f629388b995453e8feae4fa124e39c626",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "우아한형제들",
+    "raw_filename": "[우아한형제들] 김영동(BE개발자)부문.pdf"
+  },
+  {
+    "jd_query": "Kubernetes Harbor Docker",
+    "candidate_name": "박승준",
+    "candidate_neo4j_id": "e0f65985eb44fb56c2973ea1edca340d045f9ffe104967485b518a99603ba217",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "우아한형제들",
+    "raw_filename": "[우아한형제들] 박승준(BE개발자)부문.pdf"
+  },
+  {
+    "jd_query": "Machine Learning Operation Research Optimization",
+    "candidate_name": "송병채",
+    "candidate_neo4j_id": "16e33a4d8d1858306d0be78df66940194450c1500b0fd4143a436385e2d1e8e9",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "우아한형제들",
+    "raw_filename": "[우아한형제들] 송병채(Data Scientist)부문.docx"
+  },
+  {
+    "jd_query": "Machine Learning Operation Research Optimization",
+    "candidate_name": "성시민",
+    "candidate_neo4j_id": "e8a98fafb9badc6dde0fb93e0bd19a7bce798b45ae9ac6320e6cfeccbe83e268",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "우아한형제들",
+    "raw_filename": "[우아한형제들] 성시민(Data Scientist)부문.docx"
+  },
+  {
+    "jd_query": "IoT Data Analytics AI/ML",
+    "candidate_name": "양근식",
+    "candidate_neo4j_id": "7db7beed3bcf6a5a2a3ba566a79b7c1ff0b66537fc840eeb85cc34f7dc16f774",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "보성산업",
+    "raw_filename": "[보성산업] 양근식(스마트시티_자율주행자동차)부문_원본.docx"
+  },
+  {
+    "jd_query": "Blockchain NFT",
+    "candidate_name": "안재용",
+    "candidate_neo4j_id": "32e22567-1b6f-81c5-8f9e-c02433e25876",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "위메이드",
+    "raw_filename": "[위메이드] 안재용(NFT 사업개발_팀장)부문.docx"
+  },
+  {
+    "jd_query": "Sketch Zeplin Prototyping",
+    "candidate_name": "이영도",
+    "candidate_neo4j_id": "07bcb71672f3fd9bc40bc730cb571d621d61b3d69c4d0d1e5bd3354563413116",
+    "label": "positive",
+    "stage": "최종합격",
+    "company": "인플루엔셜",
+    "raw_filename": "[인플루엔셜] 이영도(UIUX 디자이너)부문.pdf"
+  },
+  {
+    "jd_query": "SQL Python Braze",
+    "candidate_name": "김용석",
+    "candidate_neo4j_id": "5c9ea761bba152d6dac391425ffa9e99e7a13caca9a5add040b8ea44f50b1019",
+    "label": "positive",
+    "stage": "면접탈락",
+    "company": "한샘",
+    "raw_filename": "[한샘] 김용석(CRM마케터)부문.docx"
+  }
+]

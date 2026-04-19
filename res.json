@@ -1,0 +1,92 @@
+[
+  {
+    "candidate_id": "신정용",
+    "name_kr": "신정용",
+    "name": "신정용",
+    "score": 1.17
+  },
+  {
+    "candidate_id": "곽철현",
+    "name_kr": "곽철현",
+    "name": "곽철현",
+    "score": 1.08
+  },
+  {
+    "candidate_id": null,
+    "name_kr": null,
+    "name": null,
+    "score": 0.97
+  },
+  {
+    "candidate_id": "최현석",
+    "name_kr": "최현석",
+    "name": "최현석",
+    "score": 0.97
+  },
+  {
+    "candidate_id": "강병우",
+    "name_kr": "강병우",
+    "name": "강병우",
+    "score": 0.97
+  },
+  {
+    "candidate_id": "홍기재",
+    "name_kr": "홍기재",
+    "name": "홍기재",
+    "score": 0.97
+  },
+  {
+    "candidate_id": "이형덕",
+    "name_kr": "이형덕",
+    "name": "이형덕",
+    "score": 0.97
+  },
+  {
+    "candidate_id": "김학주",
+    "name_kr": "김학주",
+    "name": "김학주",
+    "score": 0.83
+  },
+  {
+    "candidate_id": "이석현",
+    "name_kr": "이석현",
+    "name": "이석현",
+    "score": 0.83
+  },
+  {
+    "candidate_id": "장봉원",
+    "name_kr": "장봉원",
+    "name": "장봉원",
+    "score": 0.83
+  },
+  {
+    "candidate_id": "박지민",
+    "name_kr": "박지민",
+    "name": "박지민",
+    "score": 0.83
+  },
+  {
+    "candidate_id": "김성연",
+    "name_kr": "김성연",
+    "name": "김성연",
+    "score": 0.83
+  },
+  {
+    "candidate_id": "고영석",
+    "name_kr": "고영석",
+    "name": "고영석",
+    "score": 0.83
+  },
+  {
+    "candidate_id": "김정수",
+    "name_kr": "김정수",
+    "name": "김정수",
+    "score": 0.66
+  },
+  {
+    "candidate_id": "김은식",
+    "name_kr": "김은식",
+    "name": "김은식",
+    "score": 0.66
+  }
+]

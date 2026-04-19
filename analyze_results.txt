@@ -1,0 +1,22 @@
+
+========================================
+🔍 쿼리: 'Framework Software Engineer' | 타겟: 홍기재
+💡 [Vector Fallback] 'Framework Software Engineer' ➔ 'Backend_Software_Engineering' (유사도: 0.579)
+👉 타겟(홍기재) 실제 등수: 50위 밖으로 밀려남 (또는 예선 탈락)
+🏆 현재 1위: 송찬규(Senior SolutionArchitect) (Score: 0.07)
+💡 1위(송찬규)의 Neo4j 보유 스킬 엣지 (총 0개):
+
+
+========================================
+🔍 쿼리: 'DevOps Platform Engineer' | 타겟: 오원교
+👉 타겟(오원교) 실제 등수: 116위 (Score: 0.64)
+🏆 현재 1위: 윤석훈 (Score: 1.02)
+💡 1위(윤석훈)의 Neo4j 보유 스킬 엣지 (총 10개):
+[BUILT]->DevOps, [MANAGED]->DevOps, [BUILT]->Infrastructure_and_Cloud, [DESIGNED]->Infrastructure_and_Cloud, [ANALYZED]->Infrastructure_and_Cloud, [MANAGED]->Infrastructure_and_Cloud, [GREW]->Infrastructure_and_Cloud, [BUILT]->Kubernetes, [DESIGNED]->Kubernetes, [MANAGED]->Kubernetes
+
+========================================
+🔍 쿼리: 'NPU Library Software Engineer' | 타겟: 전예찬
+👉 타겟(전예찬) 실제 등수: 50위 밖으로 밀려남 (또는 예선 탈락)
+🏆 현재 1위: 김대용 (Score: 0.32)
+💡 1위(김대용)의 Neo4j 보유 스킬 엣지 (총 56893개):
+[BUILT]->AI_Semiconductor_Architecture, [SUPPORTED]->AI_Semiconductor_Architecture, [ANALYZED]->AI_Semiconductor_Architecture, [MANAGED]->AI_Semiconductor_Architecture, [ANALYZED]->AI_Semiconductor_Architecture, [DESIGNED]->AI_Semiconductor_Architecture, [ANALYZED]->AI_Semiconductor_Architecture, [BUILT]->AI_Semiconductor_Architecture, [BUILT]->AI_Semiconductor_Architecture, [DESIGNED]->AI_Semiconductor_Architecture, [MANAGED]->AI_Semiconductor_Architecture, [BUILT]->AI_Semiconductor_Architecture, [ANALYZED]->AI_Semiconductor_Architecture, [BUILT]->AI_Semiconductor_Architecture, [DESIGNED]->AI_Semiconductor_Architecture...

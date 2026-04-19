@@ -1,0 +1,19 @@
+---
+aliases: ["Marketing Operations", "마케팅 오퍼레이션"]
+category: "Domain"
+---
+
+# Marketing_Operations
+
+이 문서는 **[[Marketing_Operations]]** 직무/도메인(스킬/경험)에 대한 온톨로지 정의입니다.
+
+## 의존성 (Depends On / 강력한 필요 요소)
+- 없음
+
+## 일부 포함 / 사용 분야 (Part Of / Used In)
+- [[Marketing_Leadership]]
+
+## 유사 / 연관 궤도 (Related To / Similar)
+- [[Brand_Marketing]]
+- [[Product_Marketing]]
+

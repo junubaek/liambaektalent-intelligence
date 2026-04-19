@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antigravity Intelligence OS v8.5.2 | Graph-Based Talent Ops</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    animation: {
+                        'fade-in': 'fadeIn 0.2s ease-out forwards',
+                        'slide-up': 'slideUp 0.3s cubic-bezier(0, 0, 0.2, 1) forwards',
+                    },
+                    keyframes: {
+                        fadeIn: { 'from': { opacity: '0' }, 'to': { opacity: '1' } },
+                        slideUp: { 'from': { transform: 'translateY(8px)', opacity: '0' }, 'to': { transform: 'translateY(0)', opacity: '1' } },
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #EBEDF0; color: #1A1A1A; overflow: hidden; }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #CBD5E0; border-radius: 10px; }
+        
+        .sector-btn.active {
+            background-color: #000 !important;
+            color: #fff !important;
+            font-weight: 800 !important;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .sector-btn.active .indicator { opacity: 1; }
+
+        .notion-dropdown-item:hover { background-color: #F1F3F5; }
+        
+        .input-minimal {
+            background: #F8F9FA;
+            border: 1px solid #E2E8F0;
+            border-radius: 10px;
+            padding: 10px 14px;
+            font-size: 12px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .input-minimal:focus {
+            border-color: #000;
+            background: #fff;
+            outline: none;
+        }
+
+        .result-card { transition: all 0.2s ease-out; }
+        .result-card.expanded { border-color: #000; box-shadow: 0 20px 40px rgba(0,0,0,0.06); }
+        .result-card:hover { border-color: #000; }
+        
+        .edge-matched { color: #10b981; background: #ecfdf5; border: 1px solid #d1fae5; font-size: 10px; padding: 2px 8px; border-radius: 6px; font-weight: 700; }
+    </style>
+</head>
+<body class="selection:bg-black selection:text-white">
+    <div id="app" class="flex min-h-screen">
+        
+        <!-- --- SIDEBAR --- -->
+        <aside class="w-[240px] bg-white border-r border-[#E2E8F0] flex flex-col fixed h-full z-20 shadow-sm">
+            <div class="p-7 pt-9 flex flex-col h-full">
+                <!-- Logo -->
+                <div class="flex items-center gap-2.5 mb-14 cursor-pointer group" onclick="setView('home')">
+                    <div class="w-7 h-7 bg-black rounded flex items-center justify-center group-hover:scale-105 transition-transform">
+                        <i data-lucide="layers" class="text-white w-4 h-4 stroke-[3]"></i>
+                    </div>
+                    <span class="font-black tracking-tighter text-xl uppercase text-black">Antigravity</span>
+                </div>
+
+                <div class="flex-1 overflow-y-auto -mx-2 px-2 custom-scrollbar">
+                    <div class="flex justify-between items-center mb-6 px-1">
+                        <p class="text-[11px] font-black text-black uppercase tracking-[0.2em]">Repository Sectors</p>
+                        <button onclick="clearSectors()" class="text-[8px] font-black text-indigo-500 hover:underline transition-colors uppercase">Reset</button>
+                    </div>
+                    <div id="sidebar-sector-list" class="flex flex-col gap-1"></div>
+                </div>
+
+                <div class="mt-auto pt-6 border-t border-[#F1F3F5] px-1 space-y-4">
+                    <div class="space-y-1">
+                        <div class="flex justify-between text-[9px] font-black text-slate-400">
+                            <span>SESSION CACHE</span>
+                            <span class="text-emerald-500">ACTIVE</span>
+                        </div>
+                        <div class="h-1 bg-slate-100 rounded-full overflow-hidden">
+                            <div class="w-full h-full bg-emerald-500"></div>
+                        </div>
+                    </div>
+                    <button class="w-full flex items-center gap-2.5 text-[10px] font-black text-[#9CA3AF] hover:text-black transition-all">
+                        <i data-lucide="refresh-cw" class="w-4 h-4"></i> SYNC NOTION
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- --- MAIN CONTENT --- -->
+        <main class="flex-1 ml-[240px] flex flex-col h-screen relative">
+            <header class="h-[64px] border-b border-[#E2E8F0] flex items-center justify-between px-10 bg-white/90 backdrop-blur-xl sticky top-0 z-10">
+                <div class="flex-1 max-w-lg relative group">
+                    <i data-lucide="search" class="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 text-[#CED4DA] group-focus-within:text-black transition-colors"></i>
+                    <input 
+                        type="text" id="header-search"
+                        placeholder="Quick Find (Name, Phone, Email...)"
+                        class="w-full bg-transparent border-none py-2 pl-9 pr-4 text-[12px] focus:ring-0 placeholder:text-[#ADB5BD] outline-none font-bold tracking-tight text-black"
+                    />
+                </div>
+                <div class="flex items-center gap-6">
+                    <div class="hidden sm:flex items-center gap-2.5 px-3.5 py-1 bg-[#F8F9FA] rounded-full border border-[#EEEEEE]">
+                        <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></div>
+                        <span class="text-[9px] font-black tracking-[0.2em] text-[#6B7280] uppercase">v8.5.2 Production</span>
+                    </div>
+                    <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center border border-slate-200 cursor-pointer">
+                        <i data-lucide="user" class="w-4 h-4 text-slate-500"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div id="content-area" class="flex-1 overflow-y-auto px-16 py-12 custom-scrollbar bg-[#F4F6F8]">
+                <!-- VIEW: HOME -->
+                <div id="view-home" class="max-w-5xl mx-auto space-y-10 animate-fade-in">
+                    <div class="flex justify-between items-end">
+                        <div class="space-y-3">
+                            <h1 class="text-5xl font-black tracking-tighter leading-none text-black italic uppercase">Targeted<br />Talent Search.</h1>
+                            <p class="text-[10px] text-[#9CA3AF] font-bold tracking-widest uppercase italic">데이터 정합성 기반 지능형 매칭 엔진</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-[40px] p-12 border border-[#E2E8F0] shadow-sm flex gap-12 min-h-[500px]">
+                        <!-- Left: Hard Filters -->
+                        <div class="w-[280px] flex flex-col gap-10 flex-shrink-0">
+                            <div class="space-y-4 relative">
+                                <p class="text-[10px] font-black text-black uppercase tracking-[0.2em]">Seniority</p>
+                                <button onclick="toggleSeniorityMenu()" id="seniority-trigger" class="w-full flex items-center justify-between px-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl hover:bg-slate-100 transition-all group">
+                                    <span id="selected-seniority-text" class="text-[12px] font-bold text-slate-700 truncate">무관</span>
+                                    <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-hover:text-black transition-colors"></i>
+                                </button>
+                                <div id="seniority-menu" class="hidden absolute top-full left-0 mt-2 w-full bg-white border border-slate-200 rounded-2xl shadow-2xl z-50 p-2 animate-slide-up">
+                                    <div class="space-y-1">
+                                        <button onclick="toggleSeniority('All')" class="notion-dropdown-item w-full text-left px-3.5 py-2.5 text-[11px] font-bold rounded-xl text-slate-600 flex justify-between items-center" id="opt-all">무관 <i data-lucide="check" class="w-3.5 h-3.5 opacity-0"></i></button>
+                                        <button onclick="toggleSeniority('Junior')" class="notion-dropdown-item w-full text-left px-3.5 py-2.5 text-[11px] font-bold rounded-xl text-slate-600 flex justify-between items-center" id="opt-junior">Junior <i data-lucide="check" class="w-3.5 h-3.5 opacity-0"></i></button>
+                                        <button onclick="toggleSeniority('Middle')" class="notion-dropdown-item w-full text-left px-3.5 py-2.5 text-[11px] font-bold rounded-xl text-slate-600 flex justify-between items-center" id="opt-middle">Middle <i data-lucide="check" class="w-3.5 h-3.5 opacity-0"></i></button>
+                                        <button onclick="toggleSeniority('Senior')" class="notion-dropdown-item w-full text-left px-3.5 py-2.5 text-[11px] font-bold rounded-xl text-slate-600 flex justify-between items-center" id="opt-senior">Senior <i data-lucide="check" class="w-3.5 h-3.5 opacity-0"></i></button>
+                                        <button onclick="toggleSeniority('미상')" class="notion-dropdown-item w-full text-left px-3.5 py-2.5 text-[11px] font-bold rounded-xl text-slate-600 flex justify-between items-center" id="opt-unknown">미상 <i data-lucide="check" class="w-3.5 h-3.5 opacity-0"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-3">
+                                <p class="text-[10px] font-black text-black uppercase tracking-[0.2em]">Required Keywords</p>
+                                <input type="text" id="required-keywords" placeholder="예: IPO, 자금조달, M&A" class="w-full input-minimal placeholder:text-[#CED4DA]" />
+                            </div>
+                            <div class="mt-auto">
+                                <button id="run-pipeline-btn" onclick="startAnalyze()" class="group flex items-center justify-center gap-4 bg-black text-white w-full py-5 rounded-3xl text-[11px] font-black tracking-[0.3em] uppercase hover:bg-[#1A1A1A] transition-all active:scale-95 shadow-lg">
+                                    RUN PIPELINE
+                                    <i data-lucide="zap" class="w-4 h-4 group-hover:animate-pulse"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Right: Prompt -->
+                        <div class="flex-1 flex flex-col gap-4 border-l border-slate-100 pl-12">
+                            <p class="text-[10px] font-black text-black uppercase tracking-[0.2em]">Who are you looking for?</p>
+                            <textarea id="search-prompt" placeholder="찾으시는 인재의 핵심 경험이나 배경을 입력해 주세요. (예: 상장(IPO)을 대비해서 자금 운용 및 주관사 대응을 주도해본 리드급 전문가)" class="flex-1 bg-[#FBFBFC] border border-[#E2E8F0] rounded-[40px] p-10 text-[16px] font-medium leading-[1.8] focus:bg-white focus:border-black outline-none transition-all placeholder:text-[#CED4DA] resize-none"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIEW: RESULTS -->
+                <div id="view-results" class="hidden max-w-6xl mx-auto py-4 animate-fade-in space-y-6"></div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const MAIN_SECTORS = ["AI", "DATA", "Finance", "HR", "HW", "MD", "PRODUCT", "STRATEGY", "SW", "디자인", "마케팅", "물류/유통", "반도체", "법무", "보안", "영업", "총무", "기타"];
+        let state = { seniority: ['All'], selectedSectors: [], currentView: 'home', expandedId: null };
+
+        function init() {
+            renderSectors();
+            lucide.createIcons();
+            if (document.getElementById('opt-all')) {
+                updateSeniorityUI();
+            }
+        }
+
+        function renderSectors() {
+            const list = document.getElementById('sidebar-sector-list');
+            if (!list) return;
+            list.innerHTML = MAIN_SECTORS.map(s => `<button onclick="toggleSector('${s}', this)" class="sector-btn text-left text-[12px] font-bold text-[#6B7280] py-2 px-3.5 hover:bg-slate-50 rounded-xl transition-all truncate flex items-center justify-between group">${s}<div class="indicator w-1.5 h-1.5 rounded-full bg-black opacity-0 transition-opacity"></div></button>`).join('');
+        }
+
+        function toggleSector(sector, el) {
+            state.selectedSectors.includes(sector) ? state.selectedSectors = state.selectedSectors.filter(s => s !== sector) : state.selectedSectors.push(sector);
+            el.classList.toggle('active');
+        }
+
+        function clearSectors() {
+            state.selectedSectors = [];
+            document.querySelectorAll('.sector-btn').forEach(btn => btn.classList.remove('active'));
+        }
+
+        function toggleSeniorityMenu() { document.getElementById('seniority-menu').classList.toggle('hidden'); }
+
+        function toggleSeniority(val) {
+            if (val === 'All') { state.seniority = ['All']; } 
+            else {
+                state.seniority = state.seniority.filter(s => s !== 'All');
+                state.seniority.includes(val) ? state.seniority = state.seniority.filter(s => s !== val) : state.seniority.push(val);
+                if (state.seniority.length === 0) state.seniority = ['All'];
+            }
+            updateSeniorityUI();
+        }
+
+        function updateSeniorityUI() {
+            const textEl = document.getElementById('selected-seniority-text');
+            const trigger = document.getElementById('seniority-trigger');
+            if (!textEl || !trigger) return;
+            textEl.innerText = state.seniority.includes('All') ? '무관' : state.seniority.join(', ');
+            ['All', 'Junior', 'Middle', 'Senior'].forEach(key => {
+                const btn = document.getElementById(`opt-${key.toLowerCase()}`);
+                if (!btn) return;
+                const icon = btn.querySelector('i, svg');
+                state.seniority.includes(key) ? (btn.classList.add('bg-indigo-50', 'text-black'), icon && icon.classList.remove('opacity-0')) : (btn.classList.remove('bg-indigo-50', 'text-black'), icon && icon.classList.add('opacity-0'));
+            });
+        }
+
+        function resetAll() {
+            state.seniority = ['All'];
+            state.selectedSectors = [];
+            document.getElementById('required-keywords').value = '';
+            document.getElementById('search-prompt').value = '';
+            document.getElementById('header-search').value = '';
+            clearSectors();
+            updateSeniorityUI();
+        }
+
+        function setView(view) {
+            if (view === 'home') {
+                resetAll();
+            }
+            state.currentView = view;
+            document.getElementById('view-home').classList.toggle('hidden', view !== 'home');
+            document.getElementById('view-results').classList.toggle('hidden', view !== 'results');
+            lucide.createIcons();
+        }
+
+        async function startAnalyze() {
+            const prompt = document.getElementById('search-prompt').value;
+            const requiredKeywordsStr = document.getElementById('required-keywords').value;
+            const reqKw = requiredKeywordsStr.split(',').map(s=>s.trim()).filter(s=>s);
+            
+            const payload = {
+                prompt: prompt,
+                sectors: state.selectedSectors,
+                seniority: state.seniority.includes('All') ? 'All' : state.seniority[0],
+                required: reqKw,
+                preferred: []
+            };
+
+            setView('results');
+            const container = document.getElementById('view-results');
+            container.innerHTML = `<div class="py-40 flex flex-col items-center gap-6"><div class="w-10 h-10 border-4 border-slate-200 border-t-black rounded-full animate-spin"></div><p class="text-[10px] font-black tracking-[0.5em] text-slate-400 uppercase italic">Parsing Pipeline v8.5.2...</p></div>`;
+            
+            try {
+                const response = await fetch('/api/search-v8', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                if(!response.ok) throw new Error('Network response was not ok');
+                const data = await response.json();
+                renderResults(data);
+            } catch (err) {
+                container.innerHTML = `<div class="py-40 flex flex-col items-center gap-6"><p class="text-red-500 font-bold">오류가 발생했습니다: ${err.message}</p></div>`;
+            }
+        }
+
+        function toggleExpand(id) {
+            const el = document.getElementById(`detail-${id}`);
+            const card = document.getElementById(`card-${id}`);
+            const isHidden = el.classList.contains('hidden');
+            document.querySelectorAll('[id^="detail-"]').forEach(d => d.classList.add('hidden'));
+            document.querySelectorAll('.result-card').forEach(c => c.classList.remove('expanded'));
+            if (isHidden) { el.classList.remove('hidden'); card.classList.add('expanded'); }
+        }
+
+        function renderResults(data) {
+            const container = document.getElementById('view-results');
+            const matched = data.matched || [];
+            
+            if (matched.length === 0) {
+                container.innerHTML = `
+                    <div class="flex items-end justify-between border-b border-[#E2E8F0] pb-6 mb-8">
+                        <h2 class="text-2xl font-black uppercase text-black italic tracking-tighter">Candidate Matching Results</h2>
+                        <button onclick="setView('home')" class="text-[10px] font-black text-indigo-600 uppercase tracking-widest hover:underline">New Query</button>
+                    </div>
+                    <div class="py-20 text-center"><p class="text-slate-500 font-bold">조건에 맞는 후보자가 없거나 검색어 분석에 실패했습니다.</p></div>
+                `;
+                return;
+            }
+
+            container.innerHTML = `
+                <div class="flex items-end justify-between border-b border-[#E2E8F0] pb-6 mb-8">
+                    <div class="space-y-1">
+                        <h2 class="text-2xl font-black uppercase text-black italic tracking-tighter">Candidate Matching Results</h2>
+                        <p class="text-[10px] text-[#9CA3AF] font-bold uppercase tracking-[0.2em]">Found ${data.total} relevant graph nodes</p>
+                    </div>
+                    <button onclick="setView('home')" class="text-[10px] font-black text-indigo-600 uppercase tracking-widest hover:underline">New Query</button>
+                </div>
+                <div class="grid gap-5">
+                    ${matched.map((c, i) => {
+                        const id = c.id || `cand-${i}`;
+                        // 이름 처리 로직
+                        let name = c.이름 || 'Unknown';
+                        name = name.replace(/\[.*?\]/, '').trim();
+                        const company = c.current_company || '미상';
+                        const level = c.연차등급 || '확인 요망';
+                        const sectorVal = c.sector || c["Main Sectors"][0] || "미상";
+                        
+                        const matchedEdgesRaw = c.matched_edges || [];
+                        const matchedEdges = matchedEdgesRaw.map(e => e.includes(':') ? e.split(':')[1] : e).filter(Boolean);
+                        const highestEdge = matchedEdges.length > 0 ? matchedEdges[0] : "";
+                        const companyRoleStr = [sectorVal, highestEdge].filter(Boolean).join(' > ');
+                        
+                        const summary = c["Experience Summary"] || '정보 없음';
+                        const phone = c.연락처 || '번호 없음';
+                        const email = c.이메일 || '이메일 없음';
+                        const notion_url = c.notion_url || '#';
+                        const score = c._score || 0;
+                        const mechanics = c._mechanics || '';
+                        
+                        const missingEdges = c.missing_edges || [];
+                        
+                        let missing = missingEdges.map(e => e.includes(':') ? e.split(':')[1] : e).filter(Boolean).join(' | ');
+                        
+                        // Evidence Summary (Dynamic / Static 혼합)
+                        const profileSummaryStr = c.profile_summary || '기본 프로필 요약 생성 대기 중...';
+                        const dynamicFitStr = c.jd_fit_summary || '실시간 JD 적합성 분석 결과가 없습니다.';
+                        
+                        const tags = c["Sub Sectors"] || [];
+                        
+                        const interviewFocusSection = missing ? `
+                                        <div class="space-y-5">
+                                            <div class="flex items-center gap-3">
+                                                <i data-lucide="alert-circle" class="w-4 h-4 text-red-500"></i>
+                                                <p class="text-[10px] font-black text-red-500 uppercase tracking-[0.2em]">Interview Focus (Verification)</p>
+                                            </div>
+                                            <div class="pl-8 border-l-2 border-red-100">
+                                                <p class="text-[14px] font-bold text-slate-600 leading-relaxed italic">
+                                                    "${missing}"
+                                                </p>
+                                            </div>
+                                        </div>
+                        ` : '';
+                        
+                        return `
+                            <div id="card-${id}" class="result-card bg-white border border-[#E2E8F0] rounded-[32px] cursor-pointer overflow-hidden group shadow-sm" onclick="toggleExpand('${id}')">
+                                <div class="p-8 flex items-center justify-between gap-10 h-[100px]">
+                                    <div class="flex items-center gap-6 min-w-[240px]">
+                                        <div class="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-300 group-hover:bg-black group-hover:text-white transition-all transform group-hover:rotate-6">
+                                            <i data-lucide="user" class="w-6 h-6"></i>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <h3 class="text-xl font-black italic">${name} <span class="text-[10px] font-bold uppercase ml-2 ${
+                                                level === 'Junior' ? 'text-blue-500' :
+                                                level === 'Middle' ? 'text-orange-500' :
+                                                level === 'Senior' ? 'text-purple-500' :
+                                                'text-slate-400'
+                                            }">${level}</span></h3>
+                                            <p class="text-[12px] text-black font-semibold tracking-tight my-1">현직장(최종): ${company}</p>
+                                            <p class="text-[10px] font-bold text-indigo-500 uppercase tracking-tight">${companyRoleStr}</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex-1 overflow-hidden">
+                                        <p class="text-[14px] font-medium text-slate-600 truncate italic">"${summary}"</p>
+                                    </div>
+                                    <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-300 group-hover:text-black transition-colors">
+                                        <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                                    </div>
+                                </div>
+
+                                <div id="detail-${id}" class="hidden border-t border-slate-50 bg-[#FBFCFD] p-12 animate-fade-in cursor-default" onclick="event.stopPropagation()">
+                                    <div class="space-y-12">
+                                        <div class="flex justify-between items-start">
+                                            <div class="space-y-4">
+                                                <div class="flex items-center gap-4">
+                                                    <p class="text-[13px] font-black text-slate-800 uppercase tracking-tight">${companyRoleStr}</p>
+                                                    <div class="flex gap-1.5 border-l border-slate-200 pl-4">
+                                                        ${tags.slice(0,5).map(t => `<span class="px-2 py-1 bg-white border border-slate-200 text-[9px] font-black text-slate-400 uppercase rounded-md shadow-sm"># ${t.replace('#','')}</span>`).join('')}
+                                                    </div>
+                                                </div>
+                                                <div class="flex items-center gap-8 text-[11px] font-bold text-slate-400 uppercase tracking-[0.1em]">
+                                                    <span><i data-lucide="phone" class="w-3.5 h-3.5 inline mr-2 text-slate-300"></i> ${phone}</span>
+                                                    <span><i data-lucide="mail" class="w-3.5 h-3.5 inline mr-2 text-slate-300"></i> ${email}</span>
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-col items-end gap-1.5">
+                                                <div class="px-6 py-2 bg-emerald-50 border border-emerald-100 rounded-2xl flex items-center gap-2 mb-1">
+                                                    <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></div>
+                                                    <span class="text-[11px] font-black text-emerald-600 uppercase tracking-widest">Graph Match Perfect</span>
+                                                </div>
+                                                <div class="flex flex-col items-end gap-0.5 pr-2">
+                                                    <span class="text-[10px] font-normal text-black uppercase tracking-tighter">graph match score : ${score}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="space-y-5">
+                                            <div class="flex items-center gap-3">
+                                                <div class="w-5 h-5 bg-black rounded-full flex items-center justify-center">
+                                                    <i data-lucide="zap" class="w-3 h-3 text-white"></i>
+                                                </div>
+                                                <p class="text-[10px] font-black text-black uppercase tracking-[0.2em]">Evidence Summary</p>
+                                            </div>
+                                            <div class="p-10 bg-white border border-slate-100 rounded-[40px] shadow-inner relative overflow-hidden group/box hover:border-black transition-all">
+                                                <div class="flex items-center gap-3 mb-6">
+                                                    <span class="px-3 py-1 text-[10px] font-black uppercase tracking-widest rounded-full ${
+                                                        level === 'Junior' ? 'bg-blue-50 text-blue-600' :
+                                                        level === 'Middle' ? 'bg-orange-50 text-orange-600' :
+                                                        level === 'Senior' ? 'bg-purple-50 text-purple-600' :
+                                                        'bg-slate-100 text-slate-500'
+                                                    }">${level}</span>
+                                                    <span class="text-[13px] font-extrabold text-slate-800">${company}</span>
+                                                </div>
+                                                <div class="space-y-4">
+                                                    <div class="flex gap-3 items-start">
+                                                        <span class="text-[14px] font-black text-indigo-500 shrink-0 mt-0.5">①</span>
+                                                        <p class="text-[14.5px] font-medium text-slate-700 leading-relaxed">${profileSummaryStr}</p>
+                                                    </div>
+                                                    <div class="flex gap-3 items-start pt-4 border-t border-slate-100">
+                                                        <span class="text-[14px] font-black text-emerald-500 shrink-0 mt-0.5">②</span>
+                                                        <p class="text-[14.5px] font-medium text-slate-700 leading-relaxed whitespace-pre-line">${dynamicFitStr}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        ${interviewFocusSection}
+
+                                        <div class="pt-10 border-t border-slate-100 flex items-center justify-between">
+                                            <div class="flex items-center gap-6">
+                                                <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest">Matched Edges</span>
+                                                <div class="flex flex-wrap gap-2">
+                                                    ${matchedEdges.map(m => `<span class="edge-matched">${m}</span>`).join('')}
+                                                </div>
+                                            </div>
+                                            <a href="${notion_url}" target="_blank" class="flex items-center gap-3 px-8 py-4 bg-black text-white rounded-full text-[10px] font-black uppercase tracking-widest hover:scale-105 transition-all shadow-xl shadow-black/10">
+                                                Open CV 원문 <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            `;
+            lucide.createIcons();
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>

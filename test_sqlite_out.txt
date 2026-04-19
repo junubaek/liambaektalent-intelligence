@@ -1,0 +1,13 @@
+SQLite Top 5 Matches for 김대용/김용:
+('32122567-1b6f-8165-8be2-fe4f8c4dfd51', '김대용', 'd387dae3d4a8fdfd902fa14bfaef6aa145d27186b8ce5d281b705ff32e79adde', None)
+('32122567-1b6f-8165-90d7-e6109129e83c', '김대용', 'd6303eeef9077eba4a0325657cc630065b0eca2bc19564e6bc8a0dfe92cb9905', None)
+('32122567-1b6f-8165-91cb-d2d6be195e33', '김대용', 'b40a77467a12a2c3bdd2809ec583270e953971ed59f1d60c96712df9d993abff', None)
+('32122567-1b6f-8165-ad2d-df09050d0d9d', '김대용', '4ef15dec1d8f3932b1dec40d3bf1b436f881321eb2f52403faa60b34a4add506', None)
+('32122567-1b6f-8166-94f7-dea026aecf4e', '김대용', '3832125202c9472447d7096834dd216050a67898eacfb18ab67bdfe42fd46a8c', None)
+
+Top 5 Most Frequent Names in SQLite:
+('김대용', 2614)
+('JY', 78)
+('~$', 27)
+('재무회계', 14)
+('원본', 6)

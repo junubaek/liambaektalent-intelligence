@@ -1,0 +1,176 @@
+━━━━━━━━━━━━━━━━━━━━
+2. Canonical Map에서 총무 관련 매핑 확인
+━━━━━━━━━━━━━━━━━━━━
+'변호사' -> 'Legal_Practice'
+'법무법인' -> 'Legal_Practice'
+'사내변호사' -> 'Legal_Practice'
+'계약 검토' -> 'Legal_Practice'
+'소송' -> 'Legal_Practice'
+'법률 자문' -> 'Legal_Practice'
+'Legal_Practice' -> 'Legal_Practice'
+'조직문화 담당자' -> 'Organizational_Development'
+'조직문화' -> 'Organizational_Development'
+'culture' -> 'Organizational_Development'
+'핵심가치' -> 'Organizational_Development'
+'조직개발' -> 'Organizational_Development'
+'US-GAAP' -> 'Financial_Accounting'
+'법무' -> 'Legal_Compliance'
+'gRPC' -> 'API_Gateway'
+'API통신' -> 'API_Gateway'
+'GraphQL' -> 'API_Gateway'
+'API Gateway' -> 'API_Gateway'
+'GA 데이터 분석' -> 'Conversion_Rate_Optimization'
+'법률 검토' -> 'Corporate_Legal_Counsel'
+'투자 계약 자문' -> 'Corporate_Legal_Counsel'
+'사내 법무 및 규제 대응' -> 'Corporate_Legal_Counsel'
+'Corporate Legal Counsel' -> 'Corporate_Legal_Counsel'
+'Corporate_Legal_Counsel' -> 'Corporate_Legal_Counsel'
+'FPGA' -> 'FPGA'
+'VHDL' -> 'FPGA'
+'RTL설계' -> 'FPGA'
+'게임' -> 'Game'
+'게임아트' -> 'Game_Art'
+'Unity' -> 'Game_Client'
+'Game 클라이언트' -> 'Game_Client'
+'C#' -> 'Game_Client_Development'
+'Unity 3D' -> 'Game_Client_Development'
+'게임 클라이언트' -> 'Game_Client_Development'
+'게임 클라이언트 개발' -> 'Game_Client_Development'
+'Game Client Development' -> 'Game_Client_Development'
+'Game_Client_Development' -> 'Game_Client_Development'
+'유니티 개발 리드' -> 'Game_Client_Engineering'
+'클라이언트 아키텍처' -> 'Game_Client_Engineering'
+'Game Client Engineering' -> 'Game_Client_Engineering'
+'Game_Client_Engineering' -> 'Game_Client_Engineering'
+'게임기획' -> 'Game_Design'
+'안티치트' -> 'Game_Infrastructure_Security'
+'서버 방어' -> 'Game_Infrastructure_Security'
+'취약점 점검' -> 'Game_Infrastructure_Security'
+'게임 인프라 보안' -> 'Game_Infrastructure_Security'
+'Game Infrastructure Security' -> 'Game_Infrastructure_Security'
+'Game_Infrastructure_Security' -> 'Game_Infrastructure_Security'
+'리버싱' -> 'Game_Security_and_Anti_Cheat'
+'게임 클라이언트 방어' -> 'Game_Security_and_Anti_Cheat'
+'게임 보안 및 안티치트' -> 'Game_Security_and_Anti_Cheat'
+'Game Security and Anti Cheat' -> 'Game_Security_and_Anti_Cheat'
+'Game_Security_and_Anti_Cheat' -> 'Game_Security_and_Anti_Cheat'
+'Game 서버' -> 'Game_Server'
+'총무 및 운영 관리' -> 'General_Affairs_Management'
+'General Affairs Management' -> 'General_Affairs_Management'
+'General_Affairs_Management' -> 'General_Affairs_Management'
+'인사총무 총괄' -> 'HR_and_Admin_Management'
+'법률 AI 및 RPA' -> 'Legal_AI_and_RPA'
+'Legal AI and RPA' -> 'Legal_AI_and_RPA'
+'Legal_AI_and_RPA' -> 'Legal_AI_and_RPA'
+'OD' -> 'Organizational_Development'
+'People_Operations' -> 'Organizational_Development'
+'Organizational_Development' -> 'Organizational_Development'
+'Prefill-Decode 분리' -> 'PD_Disaggregation'
+'Legal' -> 'Legal_Practice'
+'PD disaggregation' -> 'PD_Disaggregation'
+'US GAAP' -> 'US_GAAP'
+'K-GAAP' -> 'K_GAAP'
+
+━━━━━━━━━━━━━━━━━━━━
+1. Neo4j General_Affairs 노드 엣지 현황
+━━━━━━━━━━━━━━━━━━━━
+node_name            | candidate_count | edge_count
+--------------------------------------------------
+GA                   | 18              | 20
+인사총무                 | 1               | 1
+
+━━━━━━━━━━━━━━━━━━━━
+3. 총무 경력자 실제 Neo4j 연결 상태 확인
+━━━━━━━━━━━━━━━━━━━━
+
+[박상국]
+  - Organizational_Development (BUILT: 1)
+  - Infrastructure_and_Cloud (BUILT: 1)
+  - 정보보안_Information_Security (BUILT: 1)
+  - Corporate_Strategic_Planning (DESIGNED: 1)
+  - Organizational_Development (DESIGNED: 1)
+  - Business_Model_Planning (DESIGNED: 1)
+  - Infrastructure_and_Cloud (DESIGNED: 1)
+  - Organizational_Development (SUPPORTED: 1)
+  - Recruiting_and_Talent_Acquisition (SUPPORTED: 1)
+  - Corporate_Strategic_Planning (MANAGED: 1)
+  - Organizational_Development (MANAGED: 1)
+  - Contract_Management (MANAGED: 1)
+  - Legal_Compliance (MANAGED: 1)
+  - Financial_Accounting (MANAGED: 1)
+  - SAP (MANAGED: 1)
+  - SCM (MANAGED: 1)
+  - Infrastructure_and_Cloud (MANAGED: 1)
+  - Recruiting_and_Talent_Acquisition (MANAGED: 1)
+  - 정보보안_Information_Security (MANAGED: 1)
+  - Contract_Management (NEGOTIATED: 1)
+  - SCM (NEGOTIATED: 1)
+  - Product_Service_Planning (USED: 1)
+  - Talent_Acquisition (USED: 1)
+  - Performance_and_Compensation (USED: 1)
+  - Information_Security (USED: 1)
+  - Learning_and_Development (USED: 1)
+  - Regulatory_Affairs (USED: 1)
+  - Procurement_Buyer (USED: 1)
+  - Interior_Design (USED: 1)
+  - Compensation_and_Benefits (USED: 1)
+  - 신사업기획 (USED: 1)
+  - Real_Estate_and_Asset_Management (USED: 1)
+  - Business_Operation (USED: 1)
+  - Corporate_Planning (USED: 1)
+  - Chief_Executive_Officer (USED: 1)
+  - IT_and_Infrastructure_Purchasing (USED: 1)
+  - HR_and_Admin_Management (USED: 1)
+
+[이상헌]
+  - Machine_Learning (BUILT: 1)
+  - Infrastructure_and_Cloud (BUILT: 1)
+  - Machine_Learning (DESIGNED: 1)
+  - Data_Analysis (DESIGNED: 1)
+  - Platform_Operations_Planning (DESIGNED: 1)
+  - Corporate_Strategic_Planning (DESIGNED: 1)
+  - Organizational_Development (DESIGNED: 1)
+  - SCM (DESIGNED: 1)
+  - Infrastructure_and_Cloud (DESIGNED: 1)
+  - Data_Analysis (ANALYZED: 1)
+  - Corporate_Strategic_Planning (ANALYZED: 1)
+  - Platform_Operations_Planning (MANAGED: 1)
+  - Corporate_Strategic_Planning (MANAGED: 1)
+  - Organizational_Development (MANAGED: 1)
+  - Legal_Compliance (MANAGED: 1)
+  - SCM (MANAGED: 1)
+  - Corporate_Strategic_Planning (NEGOTIATED: 1)
+
+[정해법]
+  - Product_Service_Planning (DESIGNED: 1)
+  - Corporate_Strategic_Planning (DESIGNED: 1)
+  - Recruiting_and_Talent_Acquisition (DESIGNED: 1)
+  - CGMP (SUPPORTED: 1)
+  - ISO-9001 (SUPPORTED: 1)
+  - ISO-14001 (SUPPORTED: 1)
+  - Financial_Accounting (ANALYZED: 1)
+  - 6 Sigma프로세스 (ANALYZED: 1)
+  - Platform_Operations_Planning (MANAGED: 1)
+  - Organizational_Development (MANAGED: 1)
+  - Financial_Accounting (MANAGED: 1)
+  - SCM (MANAGED: 1)
+  - Procurement_Buyer (MANAGED: 1)
+  - Sales_Core (MANAGED: 1)
+  - R&D (MANAGED: 1)
+  - CTQ 관리 (MANAGED: 1)
+  - 사업개발_BD (NEGOTIATED: 1)
+  - 6 Sigma프로세스 (GREW: 1)
+  - Product_Service_Planning (LAUNCHED: 1)
+  - Employee_Relations (USED: 1)
+  - Management_Accounting (USED: 1)
+  - Performance_and_Compensation (USED: 1)
+  - Global_Sales_and_Marketing (USED: 1)
+  - Learning_and_Development (USED: 1)
+  - Asia_Business_Expansion (USED: 1)
+  - Semiconductor_Engineering (USED: 1)
+  - Japan_Business (USED: 1)
+  - CX_CS (USED: 1)
+  - Mass_Production_Process (USED: 1)
+  - Corporate_Crisis_Management (USED: 1)
+  - Business_Operation (USED: 1)
+  - Chief_Executive_Officer (USED: 1)

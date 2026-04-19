@@ -1,0 +1,38 @@
+[
+  {
+    "jd_query": "Firmware Verification Engineer",
+    "candidate_name": "최재언",
+    "candidate_neo4j_id": "",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "리벨리온",
+    "raw_filename": "[리벨리온] 최재언(Firmware Verification Engineer)부문.pdf"
+  },
+  {
+    "jd_query": "SCM 전략팀 팀장",
+    "candidate_name": "헤딩_박혜린_801108_여_SCM 전략팀 팀장_25",
+    "candidate_neo4j_id": "",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "롯데하이마트",
+    "raw_filename": "헤딩_박혜린_801108_여_SCM 전략팀 팀장_25.7.17.docx"
+  },
+  {
+    "jd_query": "전력계통 담당",
+    "candidate_name": "윤상원",
+    "candidate_neo4j_id": "",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "BEP",
+    "raw_filename": "[BEP] 윤상원(전력계통 담당)부문.docx"
+  },
+  {
+    "jd_query": "UX 디자이너",
+    "candidate_name": "헤딩_김상율_95년_남_UX디자이너_250416",
+    "candidate_neo4j_id": "",
+    "label": "negative",
+    "stage": "서류탈락",
+    "company": "롯데하이마트",
+    "raw_filename": "헤딩_김상율_95년_남_UX디자이너_250416.pdf"
+  }
+]

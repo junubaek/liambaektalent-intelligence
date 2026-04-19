@@ -1,0 +1,6009 @@
+{
+  "Seniority Bucket": {
+    "id": "%3FXhx",
+    "name": "Seniority Bucket",
+    "description": null,
+    "type": "select",
+    "select": {
+      "options": [
+        {
+          "id": "a3f37299-ae95-4d3c-bf6e-dc34a99bb767",
+          "name": "Middle",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "39d83e68-aaf5-4d84-ac5c-7cf192e891be",
+          "name": "Senior",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "161a1649-7e5a-4816-b521-4eaeaa553575",
+          "name": "Junior",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "be172d25-7ed3-4bbc-891b-7c32f93bbc6c",
+          "name": "Unknown",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "5c40af34-743f-4538-a2a9-cccd0f45f512",
+          "name": "N/A",
+          "color": "gray",
+          "description": null
+        }
+      ]
+    }
+  },
+  "Functional Patterns": {
+    "id": "F%5CrW",
+    "name": "Functional Patterns",
+    "description": null,
+    "type": "multi_select",
+    "multi_select": {
+      "options": [
+        {
+          "id": "3fb72d2b-3dc5-4cb3-9876-e2642ca0cc67",
+          "name": "경영 전략 및 기획 업무 총괄",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "faedd6db-757f-4b56-b8e7-207a170b89ef",
+          "name": "캠페인 기획",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "bfd989d0-2e8e-4336-b0e1-74bce79a44da",
+          "name": "마케팅 데이터 분석",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "d8392fb5-8b55-4fac-8706-a4ed09213342",
+          "name": "전략 실행",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "35d5e7a6-0e35-4688-9cc0-224bf117146c",
+          "name": "캠페인 관리",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "9a6db6d0-fa2b-4659-892d-07534b99b263",
+          "name": "경영 전략 및 기획 업무 실행",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "62b2259c-bc02-4375-adef-733633c822f1",
+          "name": "전략 수립",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "172715db-6e67-4983-a908-83a73b708e3c",
+          "name": "Created and operated iOS study curricula",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "564f027d-d213-4a92-9098-2765c5d1e697",
+          "name": "Implemented custom views",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "8357be9a-ad81-417a-91fa-6774cbde827e",
+          "name": "Designed and planned service MVP",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "e0b803ee-7459-45cb-8a64-2dfaa923f991",
+          "name": "Led iOS app development",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "ba4f2d71-4b23-4794-903b-213d506c9d81",
+          "name": "Learned and applied architectures and skills",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "4b9260d4-aa4f-4793-99b1-a8d73ba6c958",
+          "name": "Launched keyword-based diary app",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "58bf80ca-e546-46fe-9f56-7ac4505fb073",
+          "name": "참여 국내 외국인투자법인 설립",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "a30dddfe-5c88-4ff1-8440-2855c66c493d",
+          "name": "작성 지식재산권 침해 행위에 대한 내용증명",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "5d947114-f54d-400d-9afb-01198bac9e16",
+          "name": "확보 분쟁 발생 예측 가능성",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "626611a8-dcb4-48bd-8101-6fab2b4020cb",
+          "name": "작성 혁신금융서비스 수요조사 신청서",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "185e89cd-ac31-43e9-b7cc-6555a86ad22c",
+          "name": "작성 지식재산권 이용 허락/양도 계약서",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "09cbdbf9-8632-4f6c-9158-72e7696bff40",
+          "name": "제공 지분 희석 방지 조항 등 주요 경영사항에 대한 자문",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "462fd739-3665-4c42-98c7-12f734d8c5d3",
+          "name": "담당 투자 및 법인 설립 관련 규제 준수 업무",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "6d966765-77a7-4ca7-b766-42456daa1567",
+          "name": "수행 사모투자전문회사(PEF)의 업무집행조합원(GP) 등록 전 과정",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "3e93d7c8-17bd-4a2f-9e2b-5ac28ee26f10",
+          "name": "처리 각종 인허가 업무",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "cf006171-b5d4-49df-8dc0-486062f7b173",
+          "name": "작성 주식매수선택권 부여  주주간 계약서  구주양수도 계약서",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "f96978db-0eab-40aa-aeee-93fa44518c7b",
+          "name": "검토 메타버스 내 건축물 저작권/상표권 침해 여부",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "66589d86-3f61-4385-b763-494b31c0e344",
+          "name": "요청 침해 중지",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "d4f6160f-a647-4b05-a41d-49a047e21c39",
+          "name": "작성 이용약관 및 비밀유지계약서(NDA)",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "ffcc82e4-e8c1-4d23-8e63-c2afb234d70c",
+          "name": "분석 법적 위험",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "9d00e997-3b1c-429a-ab50-15ab61accc2f",
+          "name": "참여 Term-Sheet부터 본계약까지 전 과정",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "cd083ec4-7cb9-4fc8-824e-7dfc68c7cca2",
+          "name": "작성 개인투자조합 결성을 위한 규약",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "5e521a21-ca97-41c0-b139-9a5e96eb71d6",
+          "name": "제공 기업 운영 전반의 법률 자문",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "7dbec763-72f5-427b-90b1-fa759d9c93f3",
+          "name": "검토 및 관리 이사회 및 주주총회 의사록",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "5e9732a1-f569-467d-8ddb-92fb305b60f6",
+          "name": "작성 개인정보처리방침 및 동의서",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "5d4737be-7a7e-4888-8638-59a89589708e",
+          "name": "대응 한국인터넷진흥원 모니터링",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "578d39d8-cf6f-4265-936b-bec7d06fac78",
+          "name": "기계설계 수행 (Performed mechanical design) MDF 신규 공장 및 환경설비",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "8969b87f-0099-40d1-8add-183340eeb977",
+          "name": "제작 관리 (Managed manufacturing) 플랜트 공사 관련",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "336e09b4-b50d-4233-a118-df4a94adb9bc",
+          "name": "PR 수행 (Performed PR) 플랜트 공사 관련",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "33c92aa3-6083-4d6b-9e46-09ad59a5c60e",
+          "name": "시운전 수행 (Conducted commissioning) 플랜트 공사 관련",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "03cbf6ae-6c98-4ecb-af09-1e5d7883229d",
+          "name": "RFQ 작성 (Prepared RFQ) 플랜트 공사 관련",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "df8a3f32-6953-456c-a0bd-aa24e5bf1c5b",
+          "name": "기계설계 수행 (Performed mechanical design) 남아공 바이오매스 에너지 플랜트 및 선박 탈황설비",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "268d04eb-d124-415d-a762-9cc8fe40fb6c",
+          "name": "기계설계 수행 (Performed mechanical design) 베트남 및 인천공장 환경설비 통합 투자공사",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "5a26f516-3e52-4767-a681-288d8534dd23",
+          "name": "TBE 수행 (Conducted TBE) 플랜트 공사 관련",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "9f5e2100-6ae1-4a42-b5d5-c570e3ee6d89",
+          "name": "공정 설계 (Designed processes)",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "32d6f602-0092-422b-8edc-fea08d9ecc3f",
+          "name": "프로젝트 수행 (Executed projects) 한화에너지 군산 증설공사 및 Yanbu2 PKG1",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "fab1ee80-5258-4b40-8ce9-5a8697c161af",
+          "name": "신사업 프로젝트 리딩 (Led new business projects)",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "a1a1250d-3c5d-452e-9ede-d2ee20659694",
+          "name": "기계설계 담당 (Responsible for mechanical design) Cooling Tower  Pump  FGD PKG 등 플랜트 기자재",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "c0057c23-3ee1-4b49-b43a-86fbfd4a0b93",
+          "name": "사업 관리 (Managed projects) 보일러 EP 공사 및 Saudi Amiral PJT Aux. Boiler",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "2807899f-4757-440d-a610-f4699e6e4642",
+          "name": "설치감독 (Supervised installation) 플랜트 공사 관련",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "7fba72b2-cff0-44dd-8400-6d51616f11ce",
+          "name": "Developed and localized DBS algorithms",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "66e14c77-8189-44d0-84bc-445c3b8e069f",
+          "name": "Designed and implemented 3D fully convolutional networks",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "3eb27826-4d2e-4bc1-87c5-41ec698d985f",
+          "name": "Analyzed CT data",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "b322313f-f8f6-4a5b-8494-91d9b6b99b50",
+          "name": "Designed and implemented image processing algorithms",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "6d22dc90-3116-4589-a527-5a93b11cf712",
+          "name": "Developed software",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "d5be0cf4-87fe-4ac6-9053-b633e3c85fb3",
+          "name": "Implemented and optimized prediction algorithms",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "a6b72226-d54e-4071-aa8b-2d1e92c2dd68",
+          "name": "Developed and applied generative adversarial learning",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "a0abdc60-2cb2-4b35-b273-5553bd8f2ef1",
+          "name": "Developed 3D fully convolutional dense context networks",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "17249ef2-ca5f-4c6b-a644-170441bf8b97",
+          "name": "TPMS 수신기 하드웨어 검토 및 펌웨어 개발",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "f73b4fde-560e-4513-ac1f-5c6e2fc09114",
+          "name": "TV 제품 하드웨어 설계 및 IC Driver 설정",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "ab4dd559-d99d-47f0-9581-6fa4c85e8801",
+          "name": "임베디드 시스템 하드웨어 설계 및 펌웨어 개발",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "26efa928-c47f-49eb-a844-46aedde3e8fe",
+          "name": "회로 및 펌웨어 기술 지원",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "fbb49ced-f64b-4a34-9ae3-0521d505fd84",
+          "name": "Converted development environments",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "333ce757-fa30-481f-85be-ded3eb372687",
+          "name": "Reconstructed server clusters",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "3ee7b750-2c55-4b4e-a3fa-b04bc0fad896",
+          "name": "Managed Kubernetes clusters",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "39f8f7ab-a134-4e86-8f2e-04bb10b60535",
+          "name": "Managed datacenter devices",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "eb40320f-1677-41ca-958c-5952ceae8768",
+          "name": "Established AWS environments",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "0b383d4f-9f01-4b31-909f-337cb9689b08",
+          "name": "Implemented and managed CI/CD pipelines",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "f9dc2e3d-f538-45cb-a049-82dcf7d4576e",
+          "name": "Developed and automated GPU monitoring tool",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "37b19897-5699-4807-94bf-b64fd213bf1a",
+          "name": "Managed SysOps team",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "1bc0ff56-e2f6-4693-9284-df8b86de5880",
+          "name": "Led deployment of NPU servers",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "a28f3cf5-ebb8-4f91-a087-59a4024c2f6c",
+          "name": "Automated installation processes",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "b221e4fa-aaef-482c-9db8-9b5ed1f58276",
+          "name": "작성했습니다 기능성 보고 자료 및 기술 문서",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "f45c5fc2-f9fe-4cc7-bc32-2bf1145b3af3",
+          "name": "수립했습니다 제품 컨셉 및 기능성 원료 전략",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "b376c2bc-e72d-4c42-a4ff-a2b41a6f01a4",
+          "name": "실험 및 조정했습니다 배합 비율  점도  pH  공정 조건",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "083ebd11-43de-4e7e-af2f-4b9e990489bf",
+          "name": "개발했습니다 기초화장품 제품",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "f65bd60d-0304-414a-9038-4b011dd61700",
+          "name": "주도 및 관리했습니다 제품 개발 프로세스",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "b71b478d-5c6e-4d20-81eb-3685a3fbe0f9",
+          "name": "완수하고 지원했습니다 프로젝트 상용화",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "cdba6cc9-bc30-4511-8417-13c3efa644b1",
+          "name": "기여했습니다 마케팅 메시지 구성",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "f93ddae4-19bd-4050-8b32-be4e25573dde",
+          "name": "Designed and implemented server systems for IoT services",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "07dbb06a-9b01-4e1f-aa8c-c295d7aef52a",
+          "name": "Led design and development of AI system",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "c9e90814-53b1-4c8b-8cb6-27e521af077a",
+          "name": "Designed and developed back-end architecture",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "861d5814-5074-4233-8348-d48b16828bb1",
+          "name": "Built and managed crawling engine",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "9d21f713-fe31-4e9b-a012-a69a290705e2",
+          "name": "지원 IP 보호 및 활용",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "7ba3a627-8489-45df-afb8-f2ad5ff7d77d",
+          "name": "출원 상표권 등록 업무",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "d0730a03-0222-48e2-aa4f-7945e23ab0ec",
+          "name": "지원 개인정보보호법 및 특별법 준수",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "5cc136cd-4a78-4239-a22b-bccece97a476",
+          "name": "신고 러시아인의 국내 증권취득",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "0ba62b1a-48fb-4386-a583-ddfa047d6815",
+          "name": "검토 의료정보 익명/가명 처리",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "dfec8e63-aba8-42f5-9c53-5d569ef517fd",
+          "name": "검토 투자계약서",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "9d6e3590-94a8-4738-a19d-3f03dd2fba71",
+          "name": "작성 및 검토 각종 용역  공급  위탁  소프트웨어 최종사용자 계약서",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "a5711d60-3733-459c-be0f-95235f5bdacf",
+          "name": "수행 기업 지배구조 관련 법적 절차",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "81e306ec-e24d-4196-a268-80c4d02dcfd9",
+          "name": "검토 통신판매중개업 신고 필요성",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "128d4809-4ffb-4ae7-a746-4fe11dd1a8e4",
+          "name": "작성 법률실사보고서",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "6b926581-eeec-46c0-a3b8-44fe6f6f72ba",
+          "name": "Test Pattern Update",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "3a4ecb44-9934-4ee7-84e7-d0dce015e058",
+          "name": "General Professional Experience",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "6ce01072-cb1e-4c4d-8ccb-e01bef091c99",
+          "name": "Managed 16 angel investment matching funds totaling approximately 192 billion KRW.",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "4bb4ea1c-1d28-49fc-bb8b-f1c910f416f8",
+          "name": "Executed formation and post-management of global VC funds in collaboration with international organi",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "9a0dfdbd-a701-46c5-9faf-9b2d1f2d3405",
+          "name": "Performed compliance reviews and risk management for Mother-Fund (FoF) investment projects.",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "7212935f-d6bb-4823-b727-0ceda79d5bc4",
+          "name": "엔젤투자매칭펀드 투자심사 및 16개사 투자 집행",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "3d8a2443-dd03-4ded-bb7f-07f1fec1bbd1",
+          "name": "해외 VC 글로벌펀드 결성 및 국제 협력 추진",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "aeba6c09-7460-4cca-9216-06352b537ab9",
+          "name": "투자기업의 후속 투자 유치 지원 및 Value-up",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "c237c09d-ade0-4ac0-9a5f-b863274eabf2",
+          "name": "모태펀드 출자사업 준법성 심사 및 리스크 관리",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "7cba4630-e020-4ba7-b308-60f9cfbad1b1",
+          "name": "ERP_Entry_Process_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "da41fe30-fc83-4c74-b736-8fef64368199",
+          "name": "Export_Document_Cycle",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "a7c3bb1c-2a61-489a-9c3c-b7b4ffbb7766",
+          "name": "Market_Research_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "2eb478c6-93c8-4ea6-811f-f57a6b09be74",
+          "name": "SAP_Setup_Interpretation_Env",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "b9e74ebe-7ad4-4d31-96c5-0a53d4baa19e",
+          "name": "Recruitment_Training_Process_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "8b299c93-bb63-435e-a714-d810815b7652",
+          "name": "Financial_Audit_Interpretation_Env",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "e914b28b-52d5-44f5-9207-f64046cde49e",
+          "name": "Sample_Quality_Verification_Env",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "9f4ec5b3-4ab7-453c-9e91-4b9c29b2eedd",
+          "name": "Blood_Glucose_Meter_FW_Dev_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "5cb5295f-dce6-46da-a5a1-3db3e774dafc",
+          "name": "Automotive_AVN_MCU_FW_Dev_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "bdcd528f-9e36-477c-bfc0-94f1e5ca1a35",
+          "name": "LCD_Inspection_Eq_FW_HW_Dev_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "d9d11a41-eb19-4812-be07-c24b89aebad2",
+          "name": "IH-Invertor_Board_MCU_FW_HW_Dev_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "708add99-2e08-442d-a2e4-78a264797340",
+          "name": "Analog_Digital_Circuit_Design_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "2538e41d-2558-42a2-9fef-565a0fc7d5ca",
+          "name": "MCU_Peripherals_Communication_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "ad8231cd-6551-4487-b194-212ae7e1c37d",
+          "name": "Graphic_User_Interface_FW_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "b9db048e-ea38-4696-a14a-43be796294fa",
+          "name": "Firmware_Development_Env",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "cead12c5-70a7-4ee4-9a45-588d486f3980",
+          "name": "On_Prem_Cloud_Migration_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "c4f19599-cd3f-48cb-896e-c41eedef8a8a",
+          "name": "Data_Pipeline_Dev_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "969799bc-0155-43a4-b9cf-fb2e9fb507a3",
+          "name": "Data_Warehouse_Modeling_Arch_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "792b8642-8712-448b-8f0e-46419a371eb8",
+          "name": "Azure_DW_Platform_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "54fb80b1-8854-461c-a0f7-c1183e5023c9",
+          "name": "Spark_BigData_Processing_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "a8435705-8dd6-476a-b57e-b2bfc858f1ee",
+          "name": "Data_Platform_Troubleshooting_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "d491ba63-73ea-4a82-993d-15c00c283d50",
+          "name": "Azure_Data_Platform_Ops_Env",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "13405baf-e941-46e0-a61d-eebbcf60c7d1",
+          "name": "ETL_ELT_Pipeline_Build_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "1bc95a75-1559-46b9-abb7-0d6a2bf49b00",
+          "name": "MLOps_Arch_Dev_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "645f4576-a517-4913-9a4d-c5cbed36b5ce",
+          "name": "Multi_Cloud_Data_AI_Service_Dev_Env",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "9e11658b-f180-4e9e-8674-5dd002930fdb",
+          "name": "Hybrid_Data_Ingestion_Migration_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "21a1cd53-8303-4bae-8bb4-d102c57ba62c",
+          "name": "Container_Orchestration_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "8e4e8f86-2278-4708-a2f8-dbffdf321598",
+          "name": "Spark_BigData_Arch_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "12902c08-e28d-4233-913e-0121750c1568",
+          "name": "Data_Governance_Metadata_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "ac744b7b-d481-4cdd-8a43-41e47a279b83",
+          "name": "Cloud_Data_Eng_BI_Dev_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "5b1bd1ba-7219-454b-9198-129b41d26a97",
+          "name": "Cloud_Resource_Mgmt_Monitoring_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "bbec0499-af43-46e6-a859-a75afdfba8a9",
+          "name": "SQL_DB_Migration_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "26432df8-4860-42b1-afeb-2fa3edcea7bb",
+          "name": "Power_BI_Dashboard_Dev_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "4813905b-ebe9-44be-8211-ce5afe98fe3a",
+          "name": "Predictive_Analytics_Report_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "9e29535e-24ef-449e-a827-5e67319a1033",
+          "name": "ML_Algorithm_Research_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "c057dfd4-b8b2-446e-8fac-bdccd10a5d0c",
+          "name": "Software_Dev_DBMS_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "a4fdcab6-8900-45f9-89dd-3457bc3adf03",
+          "name": "DevOps_CI_CD_TDD_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "e2c4385d-ed1e-4d60-a4bf-669424f13972",
+          "name": "Full_Stack_Web_Dev_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "c22ff868-3c2f-461b-9362-58cdf44192fb",
+          "name": "Agile_Scrum_Dev_Env",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "f3859834-3c26-461a-afbd-7c8d6bb95b5d",
+          "name": "Git_Version_Control_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "4e5c3e27-c686-43da-9106-adebeebaa511",
+          "name": "Eng_Schedule_Workflow_Mgmt_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "3116cc74-2801-4197-90e4-0a66cc568877",
+          "name": "Project_Status_Budget_Mgmt_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "4542c7a6-8968-45cf-95f7-072cd249c6d1",
+          "name": "Project_Bidding_Acquisition_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "54ec89ba-7288-443a-a850-ee2084c0c661",
+          "name": "Local_Permit_Compliance_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "c5d6f386-2f81-41e7-b706-4adc5d467ed9",
+          "name": "Regulatory_Doc_DB_Improve_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "b6e32e81-5e77-41de-aa63-8d92a81245b3",
+          "name": "Mechanical_Design_Review_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "1ba7e28d-cb69-47f7-ba82-38f54fdf6ad3",
+          "name": "Design_Quality_Workflow_Improve_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "1fee3efa-87c7-4f63-ab96-0fadda07ae80",
+          "name": "Air_Water_Waste_Mgmt_Env",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "76d4ada1-3de3-468e-a3bd-5632c03a4b25",
+          "name": "Environmental_Permit_Process",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "ce82f513-9923-42ea-be9e-60ed4d42bfa8",
+          "name": "Regulatory_Compliance_Process",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "f27ab1df-3272-4c66-a581-915ec5fdadc9",
+          "name": "MSDS_Authoring_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "853cc33b-a595-49f0-be37-a21fed2a66c9",
+          "name": "SAP_EHS_Data_Mgmt_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "43ee1c13-da38-48a8-8ad3-071ff01486ab",
+          "name": "New_Plant_Permit_Process",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "e9474e0c-6a8b-4bcb-81cf-2e7ab0c6c46b",
+          "name": "Offsite_Risk_Assessment_Process",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "54a3d1ae-58aa-4d51-83a1-2c95954fb0f2",
+          "name": "PSM_Mgmt_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "b3017424-ca9e-4bc8-8d27-117034a7f005",
+          "name": "Industrial_Safety_Edu_Mgmt_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "d5e5c152-a744-48a3-aa20-d3296355c801",
+          "name": "Risk_Assessment_Process",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "705fa2af-86de-4275-b26a-6d47257051f2",
+          "name": "Asbestos_Safety_Assessment_Process",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "7ceb9e8b-7c7c-49a0-99ee-d309db95728c",
+          "name": "CAD_Asbestos_Map_Creation_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "5ed811ec-371d-478a-9cfd-df3f469c5444",
+          "name": "Green_Company_ReCertification_Process",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "9cc8135e-6e31-41be-b37b-14e28adc56d5",
+          "name": "Chemical_Legal_Edu_Mgmt_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "46c8f2d5-06d4-4b10-ac8d-82bf38e9d545",
+          "name": "Recycling_ERP_Mgmt_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "0fb6b298-710e-4b67-b764-ceb021845ab0",
+          "name": "Fund_Accounting_Process",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "eff50834-6974-41f3-8445-38b3241c2e13",
+          "name": "Press_Monitoring_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "4b3ad5b8-2618-4804-b1c0-ad5cfbb482f6",
+          "name": "Biz_Mailing_Ops_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "beedfae0-976f-4525-9af6-91feeae8e4ce",
+          "name": "Air_Quality_Measurement_Cycle",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "0208ef1c-44f5-46e8-a894-58ab5296fa6f",
+          "name": "Environmental_Report_Generation_Process",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "a13df5a3-ba8a-4552-ab91-d24484a9dbda",
+          "name": "Environmental_Consulting_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "5ecde7c9-5af6-4a4f-b3bc-56a4e17aa517",
+          "name": "Air_Pollution_Control_Operations_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "0dc3fbe2-2a60-4788-b4b8-97194c70cbd5",
+          "name": "TMS_Monitoring_Process",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "30868e2d-931b-4007-b87c-61488ef57c38",
+          "name": "Air_Emission_Calculation_Process",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "408e7fb0-a0bb-4dd5-8ea8-2dcfc1fc453b",
+          "name": "Waste_Management_System_Env",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "cde70901-06f3-4107-9693-55cabeb36af1",
+          "name": "Soil_Contamination_Prevention_Env",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "4bba5f2b-8b6a-47b6-81bf-bc0fd7c2a337",
+          "name": "Water_Quality_Management_Cycle",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "87d5ac7b-5bbe-457b-8f5c-2d0296d53b82",
+          "name": "Industrial_Safety_Education_Cycle",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "734c390e-7ab4-4c38-8413-58ee11baa140",
+          "name": "Hazardous_Material_Handling_Env",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "87a6c62a-b026-44c3-a7f9-eb539dde9aac",
+          "name": "Chemical_Substance_Survey_Process",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "bb98ac14-7e8b-43b3-beef-015c9b6b19ce",
+          "name": "Fire_Safety_Inspection_Process",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "8f38f7eb-f47d-436c-8dc3-6eb7bdd84cf5",
+          "name": "Fire_Safety_Training_Cycle",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "51a094e8-6db5-48cc-bf72-05534739597f",
+          "name": "ISO14001_Compliance_Process",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "997ccc01-790d-412a-bf63-4e3105b6eca6",
+          "name": "Regulatory_Agency_Communication_Process",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "d9040d5e-9c9f-41d0-b597-dc650f0c4dd7",
+          "name": "Risk_Management_Plan_Process",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "9eadca26-c616-4aa1-b27a-9142dc0ecce3",
+          "name": "ISO9001_Production_Management_Env",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "4839efff-638f-4c09-a977-c5ad3ff4185e",
+          "name": "Raw_Material_Supply_Chain_Process",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "543c9fc1-21e5-45b2-8963-16da03ceb1f2",
+          "name": "Product_Quality_Analysis_Process",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "4ef0e92c-a699-451c-8c85-a5a9abe3e23b",
+          "name": "EHS_Risk_Assessment_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "603b2b13-f30b-411d-a761-3119b4926612",
+          "name": "EHS_Site_Diagnosis_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "803bdd2d-400a-4bd8-b87d-2b15123d0d09",
+          "name": "EHS_Action_Plan_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "c2ef5614-864e-4e94-9572-467c590b9d30",
+          "name": "Env_Infra_Build_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "9aec034f-039c-41b6-adea-d0c7a7344e8c",
+          "name": "Wastewater_Treatment_2400CBM_Operation_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "d8762c57-5113-4dbc-9d9c-b0c19c5954f8",
+          "name": "Air_Pollution_Control_Operation_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "8b56336f-3f10-4531-b23a-41261203c5c5",
+          "name": "30pct_Emission_Std_Compliance_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "fb0768b6-1ffe-48bc-b648-4013ec1b0a75",
+          "name": "Hazardous_Chemical_Facility_Standard_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "9fc6e464-4ad5-4581-b7ef-497940024ed1",
+          "name": "Chemical_Facility_Investment_Process",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "73f2ecfa-2afa-4a55-a61f-10f1dd42328c",
+          "name": "Emergency_Response_Training_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "8158d070-1cf7-4312-8885-67d189d6d753",
+          "name": "External_Customer_Audit_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "3a74eb63-79c5-4d1a-b7be-928df22cd158",
+          "name": "Hazardous_Material_Manager_Appointment_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "e3f1a95a-9248-46ef-bdaa-090458a51cb6",
+          "name": "Risk_Assessment_Implementation_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "19b72b20-dc46-4dc4-a2a6-f20070a33979",
+          "name": "Safety_Work_Permit_Process_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "1d3fcd89-79d8-43e4-9d4e-eb0671dce10a",
+          "name": "Vendor_EHS_Management_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "5456e381-c5d7-4ff8-bdea-da59b8e73c4b",
+          "name": "Regulatory_Agency_Interaction_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "e7c4b164-e104-41df-9e3d-bc74cafee401",
+          "name": "Env_Permit_Admin_Reporting_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "81677654-9e63-404e-aa97-f7144ff0d4b4",
+          "name": "Air_Water_Regulation_Compliance_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "7399f5e3-c621-4c87-a02c-da0a59e4953c",
+          "name": "Non_Discharge_Wastewater_Reporting_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "e98307dd-4e16-484f-bb24-e527a0b70daf",
+          "name": "Pollutant_Analysis_Cycle",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "a439e663-9346-49e7-9028-c2bd7a4b91ee",
+          "name": "Waste_Management_Reporting_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "3a87f1c0-6c93-4fd4-8726-40584973eb14",
+          "name": "Soil_Contamination_Management_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "6be792d4-2d84-4daa-b78d-ed3ff2bef23d",
+          "name": "Env_Facility_Infra_Build_Process",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "52b1196d-bade-490f-bbd7-f33903e6af07",
+          "name": "Biological_Wastewater_Treatment_Maintenance_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "fa7edd74-a210-41ef-83be-e5745ea28593",
+          "name": "Spare_SCR_Build_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "e377c56a-50b8-4d35-99b4-821c5be5190c",
+          "name": "Chemical_Management_ERP_Build_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "ad7053b9-d616-48b8-a2c2-e243b0d55939",
+          "name": "Chemical_Data_Digitization_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "47f6a7cc-0761-4318-8c39-2c07dcd54499",
+          "name": "Offsite_Impact_Assessment_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "7f9dbf4a-62b0-4b6c-bc6d-40a5d956ec3c",
+          "name": "Total_Pollutant_Management_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "216e90e4-fa6b-43cf-a3ff-b6149f1acdc3",
+          "name": "Nox_Monitoring_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "b778f0d8-e5c0-490b-bbdb-bd117a430d01",
+          "name": "Odor_Regulation_Reporting_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "b11e7e83-b83e-485e-b510-ffe9971789da",
+          "name": "EHS_KPI_Development_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "3eb2707f-9a21-4222-a18d-112cde74da7b",
+          "name": "Wastewater_Treatment_2200CBM_Operation_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "7a88b060-505a-4b7a-94f7-13b11ebe35ea",
+          "name": "Ultrapure_Water_System_Operation_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "db73d9f9-7f2b-48b1-96c6-57aab1fe1ba3",
+          "name": "Chemical_Safety_Law_Compliance_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "66424301-5c1f-4115-89db-4aa30fc4e1d9",
+          "name": "Hazardous_Chemical_Permit_Management_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "8653d705-9b75-4596-b72e-9380040f0993",
+          "name": "Chemical_Handler_Training_Plan_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "000e168d-394a-478d-bf42-88998db31f82",
+          "name": "Chemical_Facility_Change_Reporting_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "79a364a0-3e91-43af-8005-5abf594f85c5",
+          "name": "Chemical_Outsourcing_Reporting_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "5781d906-ee8c-46ee-ad3e-b550e8a06a1b",
+          "name": "Chemical_Facility_Audit_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "1ea80117-2b23-4034-bddb-d588f68a9c3d",
+          "name": "ISO_14001_Operation_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "18555e9f-abea-4ccf-91fd-9368abe56649",
+          "name": "Environmental_Law_Monitoring_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "9f27dd08-8aa4-4881-a995-77ce1ffacec3",
+          "name": "환경모니터링_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "a11e2b5a-c1ca-44f2-8b5a-f99c75b668c5",
+          "name": "장비_검교정_의뢰_Process",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "2a4f0895-6b2d-42a2-9ac0-20ee802e56d1",
+          "name": "품질문서_재개정_Cycle",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "2d51b947-2f02-4fe4-b1ae-69d036e76dfc",
+          "name": "정제수_이화학_시험_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "8224ccf6-c2f3-4cdb-b525-e7b46990244d",
+          "name": "제품_품질평가_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "d772a912-5b0b-4f90-bd96-69a631dfa764",
+          "name": "원자재_입고검사_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "8ebb5ed3-5938-4dad-90bd-b13eb441f641",
+          "name": "생산관리_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "4b4606d0-1e0b-43dd-9f0b-e7bb4649b9e8",
+          "name": "원자재_공급_관리_Process",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "bb4fc78e-7d85-4feb-afa6-f062a8944ce1",
+          "name": "공정_Validation_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "e11842f1-bba2-4774-9e94-8a93be72c8ab",
+          "name": "장비_Qualification_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "a305448e-8de5-4975-b63b-7df6899e6d97",
+          "name": "장비_기구_발주_Process",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "43acf347-cc97-4d45-96d5-78c56d23101c",
+          "name": "URS_작성_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "49f5fc27-9160-4f3b-984f-b3838420a1ed",
+          "name": "IQ_OQ_PQ_실시_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "5140b3c6-ff5f-46a0-b474-c719fa8155f9",
+          "name": "생산량_4배_증대_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "3ef99fb7-6388-4142-8095-83fad191dba6",
+          "name": "배치_생산량_확장_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "6181000a-401b-468d-872c-7b7bd6ca5858",
+          "name": "세척_Validation_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "9b21f43f-7b87-4a08-a113-40d687ec8685",
+          "name": "포장_Validation_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "7cb0e6c7-661c-4bbe-9a21-a6e7d86567e6",
+          "name": "멸균_Validation_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "1d84a103-1769-4c40-b50f-7f9783357044",
+          "name": "ISO1345_인증_Process",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "a1ca8719-e552-4db7-affb-1df41d9a2874",
+          "name": "CMDCAS_인증_Process",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "2f9b8e9d-3fac-475d-9880-94ad003c2df0",
+          "name": "KFDA_GMP_인증_Process",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "b5c909bd-cd61-415f-b458-98ae8d2bc72e",
+          "name": "DMR_문서_제개정_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "4ec9b77f-6d13-45a7-940e-b6ba791053a7",
+          "name": "DHF_문서_제개정_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "c9de6b58-6d17-4c8a-9c37-cbf911f36f8c",
+          "name": "제조기록서_문서_제개정_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "0b95ba33-4566-4d16-9a9c-940a332068b4",
+          "name": "Web_Service_Planning_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "8c1e6f68-9b43-424f-a3ed-63277f46e7ff",
+          "name": "UIUX_Planning_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "1aa864bf-2f77-49c9-bf00-a9b963c99445",
+          "name": "Mobile_UIUX_Refinement_Process",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "ea70ee40-d5d8-4de3-8b8b-52e663520aff",
+          "name": "Compliance_Adherence_Process",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "05dac444-17d8-4274-b612-77bed2ac98c7",
+          "name": "Employee_Travel_Mall_Operation_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "10e3397d-e49b-4843-8ff1-2f1a10cdb3b9",
+          "name": "Admin_Menu_Development_Cycle",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "cf2fe2a5-dfe6-488a-a677-c2aa4d9b31a6",
+          "name": "Coupon_Application_Process_Setup",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "d44f5d48-9511-45aa-ae29-e895f3c22462",
+          "name": "Operational_Manual_Creation_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "64d3a441-9469-4245-ab4a-dfc487b42615",
+          "name": "ERP_Planning_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "c649d028-0919-484a-981c-b190ad95b0db",
+          "name": "ERP_UIUX_Refinement_Process",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "89cc538c-01aa-495d-8bb2-92febf16888c",
+          "name": "ERD_Design_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "8453ceb0-a618-4a8e-a6f7-9503231ff2af",
+          "name": "ERP_Module_Planning_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "5a6c7374-a735-4c1a-9655-83b8c0ebe603",
+          "name": "API_Integration_Foundation_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "f95df43c-6260-41a4-aed2-0f3c2d3b4d41",
+          "name": "API_Integration_Process_Management",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "86592c4d-ea69-4f3c-8575-d40674838d8a",
+          "name": "New_Business_MVP_Development_Cycle",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "faeccbf6-a5b6-4630-a545-718599f80385",
+          "name": "Smart_Meeting_System_Planning_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "db6d4a5f-6f1c-49bb-85df-88938089685d",
+          "name": "Mobile_System_Development_QA_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "8674d7ca-d742-4d3c-945e-b64e3f8f8e11",
+          "name": "Tour_Platform_Module_Planning_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "7297f108-6ed3-4183-908a-294f8d78058a",
+          "name": "Mobile_App_Refinement_Process",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "1f45c9de-064f-4207-ad12-bdcce5d4dd55",
+          "name": "Internal_Messenger_Maintenance_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "8fab1f1f-36a1-4e2a-af34-dc8f3a582a95",
+          "name": "Biz_Planning_Report_Creation_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "a5837cf1-954f-4782-8cb6-600a0be2a0d6",
+          "name": "Regional_Product_Planning_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "287d629f-fe89-4b9a-b425-543890fb1054",
+          "name": "ERP_Web_Service_Planning_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "3eae2546-5dde-45b7-bff3-7cc2a553adde",
+          "name": "Incentive_Quote_Process_Setup",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "1bcacf30-f758-4f51-b66e-0433203d17af",
+          "name": "Product_Classification_System_Optimization",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "238df7cc-dff4-47b6-9e3c-ff7a0be88269",
+          "name": "Incentive_Product_Page_Planning_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "591fde89-c711-4e31-87e0-7e28bd622f41",
+          "name": "Quote_Request_Process_Operation_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "f22f5943-7018-4177-946d-674c2c2b5f53",
+          "name": "Marketing_Strategy_Planning_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "a6e9584a-5ee9-46ae-b5ac-ad13d00298e8",
+          "name": "Omni_Channel_Marketing_Planning_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "659616fa-8e4f-4cb4-8bf2-29e8250688f1",
+          "name": "Sales_Strategy_Planning_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "02619851-87dc-4f4a-929c-14efe43789d5",
+          "name": "Market_Research_Env",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "57793502-6018-43ce-aa4d-305dd2e1d5af",
+          "name": "Consumer_Insight_Analysis_Process",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "09bfe0d7-ff60-4c4b-835c-40b45e67ed05",
+          "name": "Online_Shopping_Mall_Sales_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "10eee1a1-0bdd-4913-8ecc-d7b1f6e40ba1",
+          "name": "E_Commerce_Channel_Management_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "fa118629-636e-43e5-a303-ee93d3d51d40",
+          "name": "Shopping_Mall_Marketing_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "7a8ebcdb-a841-48f5-83ae-ae32c7cd9eea",
+          "name": "Product_Lifecycle_Management_Process",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "d85ecc90-286e-42ce-927f-b4e6c46d2666",
+          "name": "Promotion_Planning_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "69477c75-f5a1-4c81-9f1b-cd904a413809",
+          "name": "Display_Ad_Acquisition_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "9b403ee3-0c76-42ab-b229-da9bad1568cb",
+          "name": "Home_Shopping_Channel_Management_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "31098bde-d312-44aa-90a3-30ebfc176ebb",
+          "name": "Home_Shopping_Broadcast_Management_Cycle",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "6e274a3e-48c2-48d3-8ebf-b2e0ac1a7488",
+          "name": "Credit_Card_Sales_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "ce738307-c4cf-4ce3-a53d-7b893a43c83b",
+          "name": "Financial_Partner_Channel_Management_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "976b8fbd-f820-46f9-b5c5-9388ba16ef90",
+          "name": "Travel_Page_Product_Planning_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "8533b301-4e57-446c-a7f8-e44b40d512d7",
+          "name": "Multi_Channel_Marketing_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "5b9373e4-e9a3-47b5-8290-bcb02876e962",
+          "name": "New_Channel_Acquisition_Cycle",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "fc43b099-30a3-4c36-918f-92f84d403e7d",
+          "name": "Channel_Onboarding_Process",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "3a509261-78a8-48df-9fd4-4057aff1fcbc",
+          "name": "Corporate_Incentive_Bidding_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "10ab8326-1ea1-4f09-a4cc-daadc0378a0b",
+          "name": "KEB_Global_Frontier_Program_Management_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "50f2682f-51f1-457c-8bbc-495b5bc6c802",
+          "name": "EHS_Risk_Assessment_Process",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "69d0143b-1aca-4861-9ee0-112bd842154c",
+          "name": "EHS_Improvement_Cycle",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "3adb711d-99a2-4c6b-aba4-2b86b8e339e6",
+          "name": "Vendor_Audit_Env",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "ed6c1f48-6720-460d-8a6b-cfb9e9ef88de",
+          "name": "EHS_Diagnosis_Process",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "b0bfb41f-29f9-4488-a1e0-430e81c88561",
+          "name": "Wastewater_Treatment_Plant_Operation_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "48058fa2-3d1b-4043-bf83-1b0bb8741431",
+          "name": "Air_Pollution_Control_Facility_Operation_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "45186e3c-7980-489d-b6df-b0153c9d2fb9",
+          "name": "Emission_Standard_Compliance_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "f4c89eca-aaa0-4980-865d-62ef7a775b74",
+          "name": "Hazmat_Facility_Standard_Application_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "b581273f-2727-4df9-b1f7-7fe67f7b6a8d",
+          "name": "Hazmat_Investment_Planning_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "1a77c6a5-f0c7-4351-b409-d34af45c88e0",
+          "name": "Emergency_Response_Drill_Execution_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "9cba58ad-e396-4edc-9e7a-31d87e725d9f",
+          "name": "Hazmat_Fire_Scenario_Planning_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "4d8ca8d8-bfa2-46d8-95dc-65b2bd4da970",
+          "name": "External_Client_Audit_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "62bfa691-ed73-49fb-a568-a013c61debf8",
+          "name": "Dangerous_Goods_Manager_Appointment_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "1a72adce-5db9-49fa-87e8-ed4c747a8d26",
+          "name": "Work_Permit_Manual_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "c62e443e-f6ab-47fb-993b-1686d395ba5c",
+          "name": "Vendor_Management_Education_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "92a35e8f-3b9c-4481-b652-0727cd5c15f0",
+          "name": "Regulatory_Permit_Change_Reporting_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "9ef973b6-5eda-4c9a-bfca-5d5a27dc8d5c",
+          "name": "Hazmat_Self_Response_Team_Activity_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "f70fab5e-dcfe-4760-8680-e732a78fde23",
+          "name": "Regulatory_Permit_Reporting_Env",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "24826f90-eed8-4b5d-85cb-e2720b3ca31d",
+          "name": "Wastewater_Non_Discharge_Facility_Reporting_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "28cfafb7-80c3-4929-948e-246d983130e5",
+          "name": "Pollution_Source_Analysis_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "ffbb8cf8-33de-4fe8-b628-6fbfafb85723",
+          "name": "Waste_Management_Compliance_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "a8bc7d7d-40d9-4349-b405-d012b2219c19",
+          "name": "Soil_Pollution_Management_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "53c2e253-3858-4194-8573-0b5053c74c8b",
+          "name": "Environmental_Facility_Infra_Build_Cycle",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "77b7b3fc-7f5a-4fe1-a894-c73e2276492e",
+          "name": "Biological_Wastewater_Treatment_Facility_Investment_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "21f53617-3e1b-44d5-a4a2-89a6a9df4dc4",
+          "name": "Air_Pollution_Control_SCR_Improvement_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "80d1f0ed-5e01-4d38-97ea-36ae7e87796d",
+          "name": "Hazmat_ERP_System_Build_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "2ccc63ea-b27f-4c16-8a99-a6e357ad9551",
+          "name": "Hazmat_Data_Digitization_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "b526e198-d2f0-4bc5-b511-e5fac9835994",
+          "name": "Offsite_Impact_Assessment_Submission_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "31ea0a11-3945-424c-babe-b0d1c19df061",
+          "name": "Total_Pollution_Load_Monitoring_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "dff9acca-99cc-4a63-b078-b2f2649775da",
+          "name": "Performance_Reporting_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "854c7630-635f-4938-9602-3183d5397a0b",
+          "name": "Site_Inspection_Env",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "24945e34-995c-4380-97b0-e8ac7b2be97e",
+          "name": "Pure_Water_Production_Facility_Operation_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "c7b485ba-0f06-4480-9a90-05f445a92e1e",
+          "name": "K-REACH_K-OSHA_Compliance_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "14dcef64-c884-4ba7-ac12-3bb06cc99cb6",
+          "name": "Hazmat_Permit_Change_Reporting_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "e0d68d3a-ebe6-429d-85f9-ce9c9b62ba91",
+          "name": "Hazmat_Facility_Management_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "8fcbf7dd-6c7b-403d-a10d-11e48d4e4547",
+          "name": "Hazmat_Training_Planning_Execution_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "ffb293b6-df01-4c74-9482-3d77ffeda593",
+          "name": "Hazmat_Facility_Modification_Reporting_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "a7cfbaf0-56d0-4ef0-bdea-f08064914c18",
+          "name": "Hazmat_Outsourcing_Reporting_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "807c7ef7-ba65-43e1-8232-be63a54ec662",
+          "name": "Hazmat_Facility_Regular_Inspection_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "2ff613eb-3d43-414b-94f2-11a919388736",
+          "name": "Environmental_Policy_Planning_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "fcb7a8b7-efc0-47f4-90d7-b54ce7edd418",
+          "name": "Environmental_Regulation_Monitoring_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "1a0a41ce-fe27-4251-bd35-337550763019",
+          "name": "Regulatory_Compliance_Cycle",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "04485601-0cdc-48e1-b2a2-36f6fd77d933",
+          "name": "Facility_Safety_Audit_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "cd768c9d-564f-46af-8c6f-9812a127235a",
+          "name": "Hazard_Assessment_Env",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "b31c84ab-42b0-4554-88d6-e4c70926048f",
+          "name": "EHS_Data_Mgmt_Env",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "2acac2af-b783-4d1d-974b-7830c84d2b63",
+          "name": "Environmental_Regulatory_Compliance_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "b48c63a5-b9d2-4148-a115-e4aea9b7f936",
+          "name": "Air_Pollution_Permit_Management_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "b4f15773-a718-4520-8206-453cd1cd3275",
+          "name": "Water_Pollution_Management_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "c52ab9c4-549c-401f-896e-fe3d2107c105",
+          "name": "Soil_Contamination_Assessment_Cycle",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "79b8dde7-ee64-43dd-8523-220c38e3c1d3",
+          "name": "Green_Enterprise_Certification_Process",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "bb75bd99-d66b-4baa-986b-36d79a7d20af",
+          "name": "Environmental_Reporting_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "a22c969e-a02f-4892-925a-6fd38745e221",
+          "name": "Chemical_Legal_Training_Management_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "c00154f4-2781-443b-a5ad-2effa7d1126f",
+          "name": "Off-site_Risk_Assessment_Process",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "89292a96-a146-4761-9792-a263aee8c7b7",
+          "name": "Hazardous_Material_Safety_Training_Management_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "a12fa3b5-8962-4705-8bdf-aed30563502a",
+          "name": "Safety_Equipment_Record_Management_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "0208bac3-5b91-4ab4-870d-b7afd1871e95",
+          "name": "MSDS_Management_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "3cd821d4-43f2-45ca-9f91-7d168ac877dc",
+          "name": "SHE_Audit_Management_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "9c33b050-f169-472a-a150-7686bf70451b",
+          "name": "Hazardous_Chemical_Training_Management_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "5bf772f8-c62b-4b6c-9145-a4e481a29a22",
+          "name": "Chemical_Facility_Self_Inspection_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "c7868c7b-be5c-4162-8d8c-ed3d50469b8f",
+          "name": "Biocidal_Product_Approval_Process",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "d2b8341d-c734-4603-9a3a-794debb1d6d0",
+          "name": "SAP_EHS_Component_Management_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "3167b7dc-1783-4ded-b7dc-477bbe08e98e",
+          "name": "MSDS_Creation_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "34705481-3678-4c4a-8d96-49c93e6926ff",
+          "name": "Chemical_Labeling_Classification_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "57a8d39e-e7ff-45bd-bd08-3076a142296c",
+          "name": "K-REACH_Registration_Process",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "3ab93c3e-1159-439f-88e1-ab54e09779ab",
+          "name": "Pre-notification_Statistical_Survey_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "5b8551e3-6140-4433-a203-a6ba6616d3d2",
+          "name": "Green_Enterprise_Re_certification_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "32cc80fa-585a-4bac-8bd8-418f520ccc89",
+          "name": "SDS_Localization_Project_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "ffd22642-7410-4127-ba2d-7b386ef6176a",
+          "name": "Biocidal_Product_Consortium_Registration_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "36406914-29ad-4c1c-8119-95f247543762",
+          "name": "Regulatory_Compliance_Documentation_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "b9852987-fb34-40d3-9c48-0cb4b7aaf99b",
+          "name": "Industrial_Safety_Training_Management_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "faaeb514-54d1-4906-9dc8-0f0e3b572c7f",
+          "name": "Chemical_Handler_Training_Management_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "a25ce988-66d4-4e42-a39f-1d0921cf8d3b",
+          "name": "Environmental_Facility_Operation_Compliance_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "09b22f70-1525-4d4a-b5b5-1c74d382425e",
+          "name": "Occupational_Health_Safety_Management_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "71130d5b-dc9a-4e01-986d-bcf4a6073eff",
+          "name": "Chemical_Management_Law_Compliance_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "5c96a2b3-b39c-4d8f-aea9-d20e75b240e8",
+          "name": "New_Plant_Permitting_Review_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "26d27206-be0d-4bc6-8f76-ac6a4fb409f6",
+          "name": "Air_Emissions_Management_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "61ba8198-3e91-4206-b1ba-1f8d777ce0c8",
+          "name": "Water_Pollution_Permit_Management_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "9f3a2263-61b0-42ae-884f-114a785dd4f0",
+          "name": "Safety_Plan_Documentation_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "16b2c8fe-6efb-4f50-b09f-79f233a96346",
+          "name": "New_Plant_Permitting_Process",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "e6c2271f-0898-4f70-b1f1-38c11f370dcb",
+          "name": "Environmental_Compliance_Achievement",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "8a169e2e-bef7-4988-92c7-99d31e3e8ade",
+          "name": "Asbestos_Survey_Risk_Assessment_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "b41c28a3-eccd-42aa-9c79-1b3a1abbb286",
+          "name": "Asbestos_Sample_Collection_Coordination_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "5822f491-75a5-411a-95dd-8c5a9d15243e",
+          "name": "Asbestos_Sample_Analysis_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "0cab76ef-7922-49be-94ee-7aefaf384570",
+          "name": "Asbestos_Map_CAD_Documentation_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "cbe41dcb-5273-430b-b0c5-ba2f9d96afdc",
+          "name": "Asbestos_Report_Consulting_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "2b068eec-ef3a-4d35-be76-e8859af4b282",
+          "name": "Asbestos_Safety_Certification_Provision_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "5c99f759-042a-4bf7-bf7c-350f9ac36b16",
+          "name": "Asbestos_Abatement_Project_Management_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "29a644b2-bc7b-43af-ad90-34b9013df78b",
+          "name": "Project_Satisfaction_Improvement_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "1f9e0582-3cd8-4aa4-9c8e-6b20c273abac",
+          "name": "Asbestos_Management_New_Project_Ideation_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "2d2b6ac7-2ea3-4248-ab2d-6ea8d6b274e8",
+          "name": "Environmental_Safety_Diagnosis_Business_Expansion_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "36a00ecd-8db1-47e5-be49-8f5bf8997cd0",
+          "name": "총괄 PM/PL 역할 수행",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "ef1489ff-3425-4249-9224-5a23c83fcb55",
+          "name": "클라우드/컨테이너 기반 시스템 아키텍처 설계 및 구축",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "72d7da5f-54b8-487b-9854-7ba816bcc452",
+          "name": "프레임워크 및 아키텍처 고도화",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "26721828-5e24-411d-aebe-5df7482dac5f",
+          "name": "기술 로드맵 및 솔루션 전략 수립",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "6aad377a-3ed1-4364-b55e-37bbb3b2e44c",
+          "name": "IT 컨설팅 및 기술 교육 제공",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "7c59ef62-a766-45c8-8ad7-1962dfad125d",
+          "name": "품질 관리 및 프로세스 개선 주도",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "50283d50-b1ad-4744-8cac-7d8cbbf18777",
+          "name": "모바일 및 빅데이터 기반 시스템 개발",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "4337eff8-e10f-4106-b2c7-64f672d20aca",
+          "name": "High Power AMP (RF) 시제품 제작 및 양산라인 설계",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "e37042c1-5462-49cc-b1aa-c4cf5dda561e",
+          "name": "국방 제품 TEST/ 디버깅/ 회로 분석 및 회로품 도면 규격화 지원",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "ccb0a9fe-ead3-4b5d-ab9d-b027993a52e1",
+          "name": "불량 유형별 조치사항 모듈화",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "cb534f44-68e7-48bb-b2ff-e61864d10132",
+          "name": "High Power AMP 양산성 향상을 위한 자동화 JIG 제안",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "e3e71c7e-8c97-422a-b236-21201ceb393e",
+          "name": "컨트롤 보드 Artwork 및 ATmega128 C언어 펌웨어 진행",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "1ca64e8a-5eef-4e85-820c-67a5822c1413",
+          "name": "그룹사 인사/ 총무 총괄 팀장 수행",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "8f0e77a1-d0d5-4ec8-b9da-1aefa8ea875b",
+          "name": "인사/ 총무(인사발령/ 충원계획/ 채용/ 교육/ 인사평가/ 승진 등) 전 프로세스 전담",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "3d767000-f67f-43f1-89b5-3bc8d68e6b6d",
+          "name": "수시/ 공개채용 진행",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "c3277305-6e9c-4c65-afff-89dc82298efd",
+          "name": "본사 이전(마곡)에 따른 총무 업무 수행",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "4da974eb-880a-4008-beec-8e3cf37e6608",
+          "name": "직원 연봉 지급 방식을 인사평가 기반 차등 지급 방식으로 변경",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "b7d2c18e-91ae-4add-b4f5-ed3c9a6b3cde",
+          "name": "직책수당을 인센티브 개념으로 인상 적용",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "ba400991-2d56-4419-929c-a8b4624fb377",
+          "name": "경영성과급 지급율 조정 및 기본 연봉 인상 반영",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "ddeb00c9-9dda-4df1-a4ad-243cf8cedc9e",
+          "name": "정년 연장에 따른 직급체계 변경 작업 수행",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "a4b1228a-7c8b-4b94-af97-047070b9d1bf",
+          "name": "Account_Management",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "f2e931e3-8677-4183-9ec8-2c43ad88b341",
+          "name": "Product_Proposal_and_Development_Support",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "41543b4d-a519-46c3-b2de-9e9188c7c6cf",
+          "name": "Design_Win_Execution",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "5a3ff3e4-f3bf-40ce-b55d-d7667332c128",
+          "name": "New_Product_Sales_Promotion",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "3fdc00f6-ab1e-4453-89fd-4a00f18de534",
+          "name": "Turnkey_Business_Execution",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "4734be68-3318-4334-be45-1209c747f7ff",
+          "name": "Large_Enterprise_Contract_Negotiation",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "15f067b3-4794-4903-b2cd-b59e5373898b",
+          "name": "Micro_SD_Card_Supply",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "413cbb46-b70f-4c6b-ba81-15cce77f1d79",
+          "name": "New_Account_Acquisition",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "977cca4b-b321-4c12-a723-fd7634d33c89",
+          "name": "Headquarters_Reporting",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "e7a792c4-ec47-42fe-91c6-09eb66365d01",
+          "name": "End-to-End_Sales_Process_Management",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "3caa34dd-19a3-4614-9f7f-0edfc428d160",
+          "name": "Customer_Satisfaction_Improvement",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "c68c6259-5758-41ea-9ff5-a6e9c9f0a107",
+          "name": "Post-Sales_Management_for_Upsell",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "caff0ad7-fade-4306-b070-50d7eb169912",
+          "name": "Branch_Office_Coordination",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "935b30ba-7232-4b78-86b9-217a1089e6ea",
+          "name": "Monthly_Sales_and_Profit_Reconciliation",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "2e4fd6d0-b48c-46eb-9082-47ef57bd1b98",
+          "name": "New_Sales_Network_Expansion",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "ec0a32a4-a971-4542-a141-41e92b1957f8",
+          "name": "Market_Development_Award_Reception",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "d085ae18-e3f2-4be4-95cd-3423e0f3f932",
+          "name": "New_Product_Development",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "8995028a-0e2f-4604-8ecd-9befd08115f2",
+          "name": "Customer-Centric_Product_Concept_Development",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "eaef6d0e-2987-4cdd-91b5-b4baee63c24a",
+          "name": "Specific_Food_Product_Launch",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "e5008ab3-57d4-4a48-9756-0c9eb7f079ac",
+          "name": "Product_Commercialization",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "6346aa2d-21e6-4893-9caa-bebf0c1c21bd",
+          "name": "Product_Improvement",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "c5577c63-253f-4e5e-ae6e-0aef6a379ab5",
+          "name": "빅데이터 기반의 딥러닝 학습관리시스템 차세대 프로젝트를 PM/PL로서 성공적으로 개발 및 총괄",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "25e8c9ea-45a0-4009-8fc9-daefb5eb643f",
+          "name": "아마존 AWS 클라우드 기반 롯데온라인면세점 프로젝트 기술공통 PM으로 총괄",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "6ac5349f-d6ad-48b1-9231-322870763fd2",
+          "name": "인트라넷/ LMS/LCMS 솔루션 구축 및 전산 연계 프로젝트를 성공적으로 총괄",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "e8f7351d-5b9b-4198-ae01-72d506169576",
+          "name": "자사 Live Framework/ Live Migrater/ Live Tools 고도화 프로젝트 수행",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "6f09b233-80ea-450d-b9f7-9dc080cababd",
+          "name": "자사 의료 프로젝트에 아키텍트로서 기술 지원 및 컨설팅 수행",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "773197af-74ce-4cd7-9072-2a74391a521e",
+          "name": "모바일 지원을 위한 하이브리드 앱 (Phone Gap 응용) 개발 과제 수행",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "68f284dc-6495-419d-a761-b57571f30d8f",
+          "name": "ISO19770/ SAM/ PLM 기반 전사적 기술 지원을 위한 기술연구소 전략과제 수행",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "9697d4e3-130e-403a-b4b1-f034b247d732",
+          "name": "전자정부 프레임워크 2.0 자산화 과제 수행",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "e8a8b981-c01b-4e6e-94bd-3b428e375c18",
+          "name": "자사 CDSS 의료기술 특허 업무 담당",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "51798f4f-c621-4356-88a0-6e2757768e8b",
+          "name": "㈜현대해상 CIS 차세대 프로젝트에 대해 2년 3개월간 컨설팅/ 기술지원 및 교육 수행",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "1068f29e-c100-4515-9b5a-fc18d95b0399",
+          "name": "오픈 소스 프레임워크 기반의 소프트웨어 아키텍처 설계 및 개발/ 디자인 패턴/ UML 모델링 수행",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "d871f969-29e6-4be6-83b2-385b1c4f6052",
+          "name": "한국썬마이크로시스템즈 교육센터에서 20개 이상의 IT 전문 교육 과정 (Java/ J2EE/ XML/ Struts/ EJB/ UML/ Spring/ Android/ Hybrid 앱",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "5c5e0c3b-066c-4985-9e61-e5dddfb7bd74",
+          "name": "SCJA 썬 자격증 문항 검수 위원 및 현대 중공업 교육관리 시스템 문항 출제 위원으로 활동",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "a0442fd7-8e28-488d-ad74-c177dd06ba91",
+          "name": "농협 e-Banking 전자보증 시스템 구축",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "2777f09f-7e32-42ee-a4a4-4e43907bd2ad",
+          "name": "포스데이타 EMS 전자상거래시스템 구축",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "9f83aa5f-1f9b-4be1-b9d7-2820ddbe75f9",
+          "name": "고려대학교 SCORM 기반의 LMS/LCMS 시스템 컨설팅 및 구축",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "43327670-e64a-49a3-b149-232dedd498f0",
+          "name": "User_Reg_Process_Change_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "4545b633-21fd-443e-bae3-df0016d4c731",
+          "name": "Internal_Camera_App_Dev_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "fd953e01-e16d-4b01-bd23-54b41125224d",
+          "name": "Outsourced_Code_Refactoring_Dev_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "a53aa326-afec-4ee5-83d5-a1dd8b610048",
+          "name": "Calendar_Schedule_Mgmt_Dev_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "7e61ce19-9a95-4a23-bfc3-0c93ca7a3b7d",
+          "name": "Legacy_Code_Refactoring_Dev_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "9663efbb-e1bf-4343-a8dd-5a5677d633bd",
+          "name": "Real_Time_Crypto_Comm_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "e2a9a7d3-1e75-434e-9146-844772b02728",
+          "name": "디지털 퍼포먼스 마케팅 캠페인 운영",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "f2d52c03-5cf9-4028-93af-dbba263b5e4e",
+          "name": "광고 소재 / 컨텐츠 기획 및 제작",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "9cbbfec4-b227-439d-af84-2eebe20782ac",
+          "name": "실시간 데이터 분석 및 최적화",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "2bf73b3f-dff4-44e3-a0e5-b824533f9343",
+          "name": "광고주 및 협력사와 커뮤니케이션을 통해 의견 조정 및 협의",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "ed852c1a-89c8-4116-b02c-ba68f4e55dc9",
+          "name": "Seller_Education_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "2d86a8b0-02f7-40f7-bdf8-196a202bac54",
+          "name": "Inventory_Optimization_Process_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "cbf613f2-df91-4fef-be4b-5c87f8e283f6",
+          "name": "Solution_Provision_Cycle",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "4f105423-a2e8-4901-928b-89c388b5e1ca",
+          "name": "Fulfillment_Service_Education_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "70f40e5a-ae84-4298-b1a8-97ffd13ca8b4",
+          "name": "Advertising_Execution_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "b8fb6ef8-2a42-422d-b5c5-97978813b535",
+          "name": "Promotion_Strategy_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "f24d03dc-3bd5-4afc-a277-be2afc6096fa",
+          "name": "Listing_Category_Mgmt_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "edca3a0a-b1fc-4d64-a8eb-95f6a3a74017",
+          "name": "Product_UI_Improvement_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "1686d8a7-4704-41a2-9bd1-05381ba84958",
+          "name": "Buyer_Traffic_Growth_Cycle",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "a386594c-a60f-4da7-83ef-4e8461c2ad61",
+          "name": "Brand_Registration_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "0ed2c110-bd93-483a-8792-fe0ad8e40147",
+          "name": "Promotion_Creation_Training_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "8bd7c7d8-008a-45cb-9260-d81f6b572ed3",
+          "name": "Customized_Seller_Training_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "4939fce9-38aa-45c9-8e84-2b72f8910120",
+          "name": "New_Hire_Training_Env",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "10b5c44b-9911-433a-bf62-da263851e2ba",
+          "name": "Policy_Update_Training_Env",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "de7bad98-e40d-4969-befd-3912678a6c70",
+          "name": "Admin_Interface_Training_Env",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "9d33b108-8da4-45ba-9c0c-82e1ad8773a8",
+          "name": "Training_Material_Dev_Cycle",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "66425c96-24c0-495b-b5a9-f17434910124",
+          "name": "Cross_Border_Ecomm_Mgmt_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "cdcc18c9-cb4a-407e-be86-c0925576c0a0",
+          "name": "New_Shop_Launch_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "9430a960-346b-478e-a60f-617e89760889",
+          "name": "MD_Operation_Cycle",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "4d5536a8-b180-48da-a9ba-3b907c3aa6b5",
+          "name": "Product_Selection_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "2023e3da-c96f-486a-a2a5-9846b9af8b2a",
+          "name": "Fashion_Brand_Sourcing_Env",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "6962dae6-1dfd-4d65-9010-4c089f5740c2",
+          "name": "Content_Creation_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "09c81cd9-e36d-4f16-954c-c17163a69995",
+          "name": "Sales_Growth_Cycle",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "b0e51060-5db2-4741-9eb2-4909bb0ec2ef",
+          "name": "CS_Mgmt_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "2c63cdc5-f159-4606-b4c0-db7584210bc0",
+          "name": "Inventory_Discrepancy_Process_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "9eda7027-b5f5-479f-a682-cb8cf027bba5",
+          "name": "Viral_Marketing_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "29872c54-b00e-4730-9c39-56b634da3e12",
+          "name": "Blog_Content_Creation_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "cb1962cc-7612-4ba2-b421-75e12cdf8bde",
+          "name": "Instagram_Content_Creation_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "83652cfc-3c76-4804-adff-e761fdd9e12a",
+          "name": "Event_Planning_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "6225d164-a664-405b-b842-b18d80fa0374",
+          "name": "Digital_Event_Execution_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "04777ead-7de5-4411-b8dd-35ab707f953f",
+          "name": "Achieved 20/000 concurrent users for game launches",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "412da935-3c17-40d1-bd9c-52a8db37c609",
+          "name": "Increased sales through UI redesigns",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "6b3f1597-b252-41ef-90e0-ad1e0e7fc873",
+          "name": "Reduced 업무시간 단축 through efficient communication",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "f66ad632-139c-4037-bd69-36873bfda8f8",
+          "name": "Established UI identity and design guidelines for various platforms",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "c05c5ff2-7efc-43f2-a772-b1b1fc5a3cfd",
+          "name": "Led web design teams",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "37b911ee-12cd-40b4-8e06-fa7227da7cfd",
+          "name": "Launched a crowdfunding platform with PC/Mobile hybrid UI and web standard publishing",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "323dea8f-0b84-4fa8-99cd-48fabf8ba7a1",
+          "name": "Greater_China_Client_Promotion_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "3318a148-33df-4dde-a1ae-a0fef98208bb",
+          "name": "Monitor_Model_Dev_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "ca858d28-b494-445e-a88c-a34d4418af71",
+          "name": "Advanced_Tech_Dev_Cycle",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "fe61fb97-047a-4980-b803-d3fec26f3550",
+          "name": "Slim_HDR_Prod_Implement_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "332609e6-282e-41e0-8e74-cb2988c1fec8",
+          "name": "Flash_LED_Dev_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "3e4cd367-1895-4046-92bb-721bbae2185a",
+          "name": "CSP_2016_Dev_Prod_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "b16cbec0-6417-4193-b559-1b39498b3c3f",
+          "name": "Reflector_Dev_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "fc79681d-0eca-491b-abf1-843fba18efc6",
+          "name": "Vertical_LED_Chip_Process_Dev_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "0db36331-583b-433a-9cec-0810af7366da",
+          "name": "Light_Extraction_Efficiency_Research_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "1cead872-b7bf-417f-ba20-8a212d89580a",
+          "name": "Plasma_Treatment_Nonalloyed_Ohmic_Contact_Research",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "860b28e7-d796-4662-a359-042b72964519",
+          "name": "Sapphire_Substrate_Recycling_Research",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "67a679c0-6c6d-478b-89cb-4258afe62e6e",
+          "name": "AutoCAD_Tool_Usage_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "5faa63fd-ebac-4747-860d-cf34e72d1ab6",
+          "name": "MATLAB_Tool_Usage_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "487828ab-b7c5-49f9-b2c9-1f28538dddf2",
+          "name": "MS_Office_Excel_Tool_Usage_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "46b5ac15-6a15-44d5-87e9-51e5b8d59508",
+          "name": "Cosmetic_Package_Design_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "ec4fa500-d777-4712-a595-b9d77ef247a6",
+          "name": "Health_Supp_Package_Design_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "8e7a4223-080c-4591-958f-72a299430f2b",
+          "name": "Sub_Material_Mass_Prod_Supervision_Process",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "bc2a4474-1a80-47ec-bb9e-c06bd045894b",
+          "name": "Sub_Material_Quotation_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "aa5d41b9-e78f-44a6-be98-6741808633e5",
+          "name": "Sub_Material_Ordering_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "5d817d50-ca51-4353-b7d4-8037525b53fd",
+          "name": "Schedule_Management_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "d5b114e4-f644-4487-b5ee-19dc2f8a6b33",
+          "name": "Editorial_Design_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "4523f0de-77d0-483a-ac7e-d0397be4bb40",
+          "name": "Web_Design_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "71e63999-14c7-4f3c-9cd7-08138d634fb8",
+          "name": "Social_Product_Launch_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "f53399d5-4a47-471e-b449-7345608bf850",
+          "name": "Container_Carton_Label_Design_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "6abb4e42-7770-42ef-9c6c-5a1841743928",
+          "name": "Paper_Structure_Dev_Process_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "35a1859d-2945-43ae-94df-b054c7e6f3dc",
+          "name": "Product_Photo_Concept_Dev_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "6f65b9e8-584e-4c43-89e8-7eb68e6b2d1a",
+          "name": "Drugstore_Channel_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "1ff0774d-6f74-406a-9381-18ddc7fd1936",
+          "name": "Home_Shopping_Channel_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "ed8fbdb6-1cd7-481c-bf66-8108134135cc",
+          "name": "China_Export_Product_Design_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "6867c4e1-eff5-46f2-9a6f-7505c7c899f8",
+          "name": "Homepage_Sales_Product_Design_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "42d17f13-7246-466f-85f9-ee5cc3808e80",
+          "name": "Social_Sales_Product_Design_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "ef16552a-d397-474e-9e00-3243588ca2f7",
+          "name": "Pharmacy_Channel_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "0be08fc3-0065-46b8-bae2-f6e2d517db18",
+          "name": "Color_Cosmetic_New_Product_Dev_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "f54e7e7d-9156-4991-9d68-02d6e6312f88",
+          "name": "Special_Set_Product_Design_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "8bb8ac31-9e85-4274-8659-a373caa11752",
+          "name": "Adobe_Photoshop_Tool_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "500cb31f-1c7e-4f1d-87ec-8eb07693d096",
+          "name": "Adobe_Illustrator_Tool_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "edd0d05c-73e2-461d-8a44-6e82061d0af6",
+          "name": "Adobe_InDesign_Tool_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "edf37273-2ec6-4ba4-bc20-5be646d4dc33",
+          "name": "Android_App_Feature_Dev_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "5b1ccac9-d041-4d89-9448-a0aa800e1ca1",
+          "name": "Platform_API_Integration_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "9cb56b87-4ee6-4afb-9298-7794c43d652a",
+          "name": "BLE_Comm_Gov_Project_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "5964abc9-703f-43bc-a1cc-ec8f1d4fdc55",
+          "name": "Parking_Service_Platform_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "652e2ae2-76c7-4603-9e74-fe89b124c09e",
+          "name": "Online_Promo_Sales_Mgmt",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "7917d4f6-c3e5-4bdb-9e64-9a85777bc6e4",
+          "name": "E-Commerce_Prod_Ops_Mgmt",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "c9d82cb0-c6c0-4830-8fa4-41b050395130",
+          "name": "Sales_Mkt_Planning_Ops",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "95b61e31-26af-497b-b9c6-cc31cdfaf10a",
+          "name": "Multi_Channel_Vendor_Mgmt",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "ac034c56-78be-4ed4-a590-03f35c14a5ea",
+          "name": "Channel_Sales_Strategy_Dev",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "dc01c95b-f965-445c-baa2-6d25bf880eb3",
+          "name": "Sales_Performance_Analysis",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "f16d1a11-4e0b-40c2-9f86-4c951f1beaaf",
+          "name": "Prod_Exposure_Optimization",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "49510bd6-19d8-4958-9827-3d4aee5fad6c",
+          "name": "New_Product_TimeDeal_Sellout",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "89632b86-6e69-4bc1-9e0c-568488fb12da",
+          "name": "VIP_Brand_Hall_Entry",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "412061a4-ae44-49e8-af23-1e9cb4f19a87",
+          "name": "Holiday_Sales_Growth",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "40e2dd71-1338-421a-bee9-db47c6ccc0f2",
+          "name": "Exclusive_Prod_Contract_Mgmt",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "44fb6e74-4f35-4add-a7d8-0974ebe78885",
+          "name": "DTC_Mall_Sales_Mgmt",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "3c514a6d-3102-4227-bc64-24dd747d4e27",
+          "name": "Loyalty_Customer_Promo_Planning",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "42f85a2a-8344-4a58-88b8-c743eddf17a4",
+          "name": "Online_Sales_Channel_Expansion",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "085378c1-11f7-4ba0-8fc4-dd1fd4e86e9e",
+          "name": "TV_HomeShopping_Support_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "63dbc1df-69d7-415e-ad34-296fef1836e6",
+          "name": "Operation_Rate_Management_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "461bbbff-ca62-4d73-9b91-70ea16b1b927",
+          "name": "Yield_Improvement_Cycle",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "de00b2fb-1d6f-4e8d-a7cd-886d47804436",
+          "name": "Process_Capability_Analysis_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "dc896ca9-89ac-4932-a309-04344bfe87f9",
+          "name": "Equipment_Maintenance_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "ed268675-3396-4d39-a2d9-b3a09ed3359d",
+          "name": "Line_Process_Management_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "56f74b83-10b6-4f97-a4d8-b83584708dc6",
+          "name": "Defect_Root_Cause_Analysis_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "5925b467-f367-4fe5-8a87-3e8884f2e426",
+          "name": "In_Process_Test_Execution_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "9da4ec59-2ab0-41ba-ae65-873bbe5c0668",
+          "name": "Equipment_Troubleshooting_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "7149eae8-5c01-4e9c-adcd-58a4eca65075",
+          "name": "New_Model_Production_Setup_Process",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "537dc4f3-95d6-454a-a1ed-6c8f14dcc90d",
+          "name": "Equipment_Setup_Check_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "e593094c-c3f0-4f5e-a76a-68f909bc9b17",
+          "name": "Tooling_Jig_Fabrication_Review_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "89cd6ed4-362e-497a-b71b-32eae7bde2b1",
+          "name": "Equipment_Program_Optimization_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "fdbcb979-3726-43f5-bc76-2e9e629a19cc",
+          "name": "First_Mass_Production_Setup_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "aa6e6d15-9a85-4662-84bc-9adcf35ea59e",
+          "name": "Process_Optimization_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "c07b04d3-d4c6-4ca3-9234-f10ff2a92428",
+          "name": "Inspection_Process_Optimization_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "cdd1b2c6-afec-4bb6-b3b1-833eb7bdc3de",
+          "name": "Equipment_Tooling_Cost_Nego_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "4352b729-0384-4f9b-9770-9ea1117143f8",
+          "name": "Overseas_Production_Setup_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "920569cf-3459-4b61-b437-44c86df18f76",
+          "name": "Customer_Audit_Response_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "5893daec-2c8e-4ee5-a942-4dab0f459cb2",
+          "name": "Vision_Prog_UI_UX_Dev_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "a3785060-6361-4d9e-87d2-f729959538b5",
+          "name": "Vision_Prog_Func_Impl_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "13dda79d-7dae-4442-8814-f3021fc5e360",
+          "name": "Program_Maint_Improve_Cycle",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "b4ddfcc7-40a2-4e83-8801-eba643e95458",
+          "name": "User_Training_Process",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "91b76409-8429-4836-abd1-cb49270db464",
+          "name": "Industrial_Camera_Control_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "cb3fd16e-8085-42e9-9d57-9ad479f20f8d",
+          "name": "Mobile_TV_Manuf_QA_Process",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "5dac7cb1-1da7-4cf2-ba32-4d7ef9954bd4",
+          "name": "Automation_Prod_Line_Dev_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "6b66854a-a063-4a6c-8c66-f3a708eb5709",
+          "name": "Android_App_Dev_Env",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "8c0c62b5-5742-452e-a187-953a42b7466f",
+          "name": "Play_Store_Publish_Cycle",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "0e0c7cdb-dbb2-4c8f-b56a-18f9716eab13",
+          "name": "JSON_API_Data_Acquisition_Process",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "87d995a1-a7e3-4d09-a09c-23c3e40b8287",
+          "name": "SQLite_DB_Management_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "68960adf-3982-4431-90bb-a4f01d73ba54",
+          "name": "QR_Code_Scan_Gen_Func_Dev",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "44e77a7e-6ac4-4d51-927e-732fde38517f",
+          "name": "Google_Maps_API_Integration_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "bbfb44a3-d80c-46b9-a1a9-a7986f31428d",
+          "name": "Admob_Integration_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "9d591d27-352a-41bb-ab11-ed8ddfc161e8",
+          "name": "Statistical_Alg_Dev_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "2bb9c86f-e681-48c9-8acf-02c080d52009",
+          "name": "Test_Pattern_Update_Process",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "f4d1f990-b773-4009-9701-48175ad60a7b",
+          "name": "Software_Architecture_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "7957289f-e624-4dbb-8e4a-264c87c0be17",
+          "name": "Custom_Views_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "37cc0b0d-35aa-4ecf-88b1-64dc41afc76c",
+          "name": "Keyword_Based_Diary_App_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "374d88bc-01dc-420b-a3fb-182e54b69e43",
+          "name": "iOS_Study_Curricula_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "bf9418ee-2579-47d1-ac28-c0cdd3e92441",
+          "name": "Service_MVP_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "a98fffb0-33fc-41c3-a450-9f9a2fb470a4",
+          "name": "iOS_App_Development_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "c66a0450-bf33-48dc-8ab2-96dd31e3fbe9",
+          "name": "Legal_Risk_Analysis_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "16bb327b-ff1f-42ab-89c4-d0dee7b32b7e",
+          "name": "Corporate_Operations_Legal_Advisory_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "4324453c-3689-4252-9622-213180724746",
+          "name": "Investment_Corporate_Establishment_Regulatory_Compliance_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "1f864f53-30de-4db9-b781-49c07a1e3743",
+          "name": "Term_Sheet_Main_Contract_Process",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "134d67a8-21c8-4682-8769-4e1bbdbef6e7",
+          "name": "Licensing_Permitting_Work_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "246cceb5-8cc4-4ee3-861d-187b54796772",
+          "name": "Private_Investment_Association_Regulation_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "a5b6a4be-bbfa-47bb-bd83-960a4e46a394",
+          "name": "Domestic_Foreign_Investment_Company_Establishment_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "870cd114-71aa-4368-a5ec-d63141ecc8ee",
+          "name": "Terms_of_Use_NDA_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "1c938797-133c-4f07-be32-0a0c1870db45",
+          "name": "Personal_Data_Policy_Consent_Form_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "173b094e-ee06-414c-90b6-2f436a7d27d0",
+          "name": "Legal_Contract_Processing_Process",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "672c2ddc-e2a0-40dd-80c2-63a0fbb6d674",
+          "name": "IP_Infringement_Content_Certification_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "2c822303-6a5a-442a-afb4-8e0ed1e0675f",
+          "name": "PEF_GP_Registration_Process",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "d843a899-e7de-444f-8408-e36821952439",
+          "name": "KISA_Monitoring_Response_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "e15a0fd9-7440-4e19-8e76-f2550a495c1f",
+          "name": "Innovative_Financial_Service_Demand_Survey_Application_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "f3ef6aff-7750-4a4d-b94a-49c2e073c03b",
+          "name": "Board_Shareholder_Meeting_Minutes_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "c9bdeb92-b3b7-450d-80a1-aaaff65230e8",
+          "name": "Metaverse_Architecture_IP_Infringement_Review_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "7d7362cf-be7b-4b5c-abea-92460e09aff5",
+          "name": "Corporate_Legal_Advisory_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "5ea3cdec-8b48-4c9f-85b4-d01759c3c135",
+          "name": "IP_License_Transfer_Agreement_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "c2a55c2c-27bc-47d6-a465-8255b1f83218",
+          "name": "Dispute_Prediction_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "3c6324f7-29b8-4a69-b56d-cb82ff11ffaa",
+          "name": "Infringement_Cessation_Request_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "903bb945-58fc-4bc6-bc07-539fbe5787c3",
+          "name": "Hanwha_Energy_Gunsan_Yanbu2_Project_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "a8ae98f2-f839-4f5a-bb19-eaae86826fd9",
+          "name": "Plant_Construction_Manufacturing_Process",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "2525ffab-20d7-4a94-9ed2-1d0ecd724fbd",
+          "name": "Plant_Equipment_Mechanical_Design_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "d1757930-d43b-4da9-acca-b80e531c6ce6",
+          "name": "Process_Design_Process",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "9c4a8deb-493c-4b6f-9e68-0d4417dd97c3",
+          "name": "Plant_Construction_RFQ_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "9f1c4e3d-5249-4045-811e-4017e58d73c8",
+          "name": "Plant_Construction_PR_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "b4ab23e1-2901-422d-a38e-c740b343abd9",
+          "name": "Biomass_Energy_Plant_Ship_Desulfurization_Mechanical_Design_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "26e338fc-a07d-4cfe-a49c-b7042c2a84db",
+          "name": "Plant_Construction_Commissioning_Process",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "36e48c7c-ebe3-48d7-a0a8-7fbfacfa7b84",
+          "name": "MDF_New_Plant_Environmental_Facilities_Mechanical_Design_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "43d83aff-5a3c-4698-8793-9b3cc980e35e",
+          "name": "New_Business_Project_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "b610fc10-df3f-487d-9711-44856c051eda",
+          "name": "Plant_Construction_TBE_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "9db9f4b7-6329-4e47-ae40-ab17c4b72e4f",
+          "name": "Plant_Construction_Installation_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "963d81d2-30b3-4985-b087-e89b5a362398",
+          "name": "Vietnam_Incheon_Plant_Environmental_Facilities_Mechanical_Design_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "c4a5e740-771e-43db-8030-9706003b1f09",
+          "name": "Boiler_EP_Saudi_Amiral_Project_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "cd1a50da-be7c-4cc7-b920-4802c6d1097f",
+          "name": "Image_Processing_Algorithm_Development_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "18f42f36-6338-4611-b81e-c3a509c10b8f",
+          "name": "Generative_Adversarial_Learning_Development_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "1b8d6759-604c-4b36-817d-e825136082ff",
+          "name": "3D_Convolutional_Network_Development_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "50dbd6f5-5f7b-40b1-abc8-12c655720a41",
+          "name": "Prediction_Algorithm_Development_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "f01ee13c-aad8-4b65-803c-dbc3c8bbc1e6",
+          "name": "3D_Fully_Convolutional_Networks_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "2b4b5ec3-a26c-4894-82ba-b136958734f3",
+          "name": "CT_Data_Analysis_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "06f70fcc-d799-4b8d-8943-1effb46759e7",
+          "name": "DBS_Algorithms_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "5a747022-58da-4b66-8b7c-48dbd7b8bf26",
+          "name": "Software_Development_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "49f1c2fc-57b9-4e21-8811-088b697a85a1",
+          "name": "TPMS_Receiver_Hardware_Firmware_Development_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "031b2c90-55fd-4b25-ba07-dc309a0aa9de",
+          "name": "TV_Hardware_IC_Driver_Development_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "26cca9c8-7ebf-4612-bc8c-3282e8dc8675",
+          "name": "Embedded_System_Hardware_Firmware_Development_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "a9b8bd05-7ac7-4f71-a255-ccc73a5cee51",
+          "name": "Circuit_Firmware_Technical_Support_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "c8bc6ee6-f9ec-4e77-a2a1-01a8fa1b14d3",
+          "name": "CI/CD_Pipeline_Management_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "1aafa0d0-928f-4292-b15e-e0e5c753f8fc",
+          "name": "Kubernetes_Cluster_Management_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "bc6d0ef5-d9f0-4368-a577-3a3c80df97d5",
+          "name": "Installation_Process_Automation_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "bc69fa18-e802-4344-88bc-132bed645a85",
+          "name": "NPU_Server_Deployment_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "38bd1fe6-647f-4f2a-9aad-917663e9f900",
+          "name": "Development_Environment_Transition_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "e9c71bba-b9e9-4826-87a7-bc0007d4b302",
+          "name": "SysOps_Team_Management_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "cea2ad75-4e39-41f4-b31e-b7ab2a458a97",
+          "name": "AWS_Environment_Setup_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "d0634f51-7dd3-42d1-a050-1f2962c751ec",
+          "name": "Datacenter_Device_Management_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "33c317e4-dc45-4edb-a66a-309dfe4c2c9e",
+          "name": "GPU_Monitoring_Tool_Development_Automation_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "8ec3e503-a673-49de-babf-803fcfb0bd5b",
+          "name": "Server_Cluster_Reconstruction_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "cc3e07df-3a8f-4290-b218-7f2ab97d5453",
+          "name": "Product_Development_Process_Management_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "bfc55289-33aa-4d39-8c90-a5501b4827f2",
+          "name": "Project_Commercialization_Support_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "cb1f8e8c-beba-447b-b872-77ebdf67c18f",
+          "name": "Product_Concept_Ingredient_Strategy_Development_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "2c1147b4-23e6-4bf8-a087-87f39cac9283",
+          "name": "Functional_Report_Technical_Document_Writing_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "8de1bbab-edbd-40c2-b997-d00f0e7b3cef",
+          "name": "Marketing_Message_Composition_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "d0ea9084-c724-4019-98f1-8736bf86d78e",
+          "name": "Basic_Cosmetic_Product_Development_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "2a4723f1-7da0-44cd-8588-44ffa44b3dae",
+          "name": "Process_Parameter_Adjustment_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "7691e6ba-33f3-44bd-99cb-5fd04bb1cfa4",
+          "name": "IoT_Service_Server_System_Development_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "46a1661c-4e35-4d44-a7a2-96addd5336b6",
+          "name": "Crawling_Engine_Development_Management_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "4639c9d9-2589-4324-9950-ae0787621227",
+          "name": "Backend_Architecture_Development_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "7beb8b55-2376-4817-b359-520325cc9ef9",
+          "name": "AI_System_Development_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "1b669eda-acf3-44e3-b5ca-f6b4d8a9b584",
+          "name": "Strategy_Execution_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "8032c70e-d82c-4f74-b5e5-411c314c2c80",
+          "name": "Business_Strategy_Planning_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "f94658a3-ccba-4f2a-910e-dc101f91e23b",
+          "name": "IP_Protection_Utilization_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "9ba8b4c7-18ab-44c5-a909-81fd13b253c9",
+          "name": "Campaign_Management_Process",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "6df5d46e-262f-406e-973e-29cb1eebdacb",
+          "name": "Marketing_Data_Analysis_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "fc629912-5a31-4211-8645-0a532414b3d1",
+          "name": "Trademark_Registration_Process",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "e67feff9-8b6e-446e-b94d-95109ca52f0e",
+          "name": "Strategy_Planning_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "0c08adf7-e4f8-4323-91a8-81e1f95e910f",
+          "name": "Campaign_Planning_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "cd926c6d-7f90-4bbd-8bd8-5edbd3eb7445",
+          "name": "Personal_Information_Protection_Compliance_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "6ba49a51-6b72-4051-91cf-1c010731c36f",
+          "name": "Design_Quality_Workflow_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "7510cd54-4d0a-48a5-8f1a-e65f66ae4ae2",
+          "name": "Regulatory_Doc_DB_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "0048e783-923f-4c0f-9087-811e04308c61",
+          "name": "Domestic_Securities_Acquisition_Reporting_Process",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "d14e5d24-c34d-4619-a781-deba67e3803e",
+          "name": "Investment_Contract_Review_Process",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "c2019857-b33a-4b0d-b55b-0cc74712c422",
+          "name": "Medical_Information_Anonymization_Processing_Review_Process",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "c5e08ad5-4609-4fc9-b397-151f32463c8a",
+          "name": "Corporate_Governance_Legal_Procedure_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "0a42373c-1aee-4798-900d-caf5ce573192",
+          "name": "Communication_Sales_Brokerage_Reporting_Review_Process",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "74df92b9-88b8-4466-8d40-632903bb130e",
+          "name": "Legal_Due_Diligence_Report_Drafting_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "69375d86-0f27-4ddc-b99b-7e269efcf4c5",
+          "name": "General_Professional_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "5eb9e448-d6b8-4a37-ba92-818c1af64fd2",
+          "name": "Portfolio_Company_Post_Investment_Management_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "ed8afb51-c962-4192-88a9-05aa41b2a383",
+          "name": "Angel_Investment_Fund_Management_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "ad9c1c79-592e-4d31-ac47-bf27597ce883",
+          "name": "Global_VC_Fund_Formation_Management_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "44f8e9ae-8ea4-44a7-8f5b-2f3d388403cb",
+          "name": "Mother_Fund_FoF_Investment_Compliance_Risk_Management_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "b5b1c8f5-4d47-48e0-81c9-811ca6356ee9",
+          "name": "IH_Invertor_Board_MCU_FW_HW_Dev_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "9f0b65c0-bbb8-44ac-b187-61d1746bb302",
+          "name": "URS_Documentation_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "10771c60-0fd6-4b8d-bfff-335058711dc0",
+          "name": "Production_Capacity_Expansion_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "382c4462-608b-4b6f-982a-a62ebef7ade8",
+          "name": "Equipment_Procurement_Process",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "a898d8ca-1101-41ff-9469-5354d82883c9",
+          "name": "Manufacturing_Record_Document_Revision_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "07ad2ee2-75bf-48c5-a990-73629e09cf6c",
+          "name": "Process_Validation_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "e10dceb3-3d30-4d10-9875-0f08da889932",
+          "name": "Environmental_Infrastructure_Build_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "adc5a7f7-37cc-4450-bc01-e419d40d8108",
+          "name": "PSM_Management_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "64239b9f-ec3a-4b14-8753-45cb77f8cb01",
+          "name": "API_Integration_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "d3b537f4-60a6-477a-a9ed-5ca634037d63",
+          "name": "MSDS_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "c26294c0-2181-46fa-ae4a-c1b148327e05",
+          "name": "SHE_Audit_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "e84a2386-4673-4859-b7a7-0dfeee543f6d",
+          "name": "Occupational_Health_Safety_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "8b78c24b-bee1-4787-9ad0-55e588ff7c36",
+          "name": "Hazardous_Chemical_Training_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "b7349633-c8c7-4d5b-b83e-87461a784e16",
+          "name": "Safety_Equipment_Record_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "1208a001-4731-418b-9572-2f8a4bd0ae23",
+          "name": "K_REACH_Registration_Process",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "a6dd4eb0-42d8-4fde-be46-ca8da82c3bf3",
+          "name": "Water_Pollution_Permit_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "f7fb266f-22e8-41aa-ac89-57a1ccbffb81",
+          "name": "Project_Satisfaction_Analysis_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "6033adb2-cd03-4318-9c02-7b0a83fd4024",
+          "name": "Asbestos_New_Project_Ideation_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "a86761c7-44ed-4f5e-a840-13eca686dac6",
+          "name": "Environmental_Safety_Diagnosis_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "b6917feb-aaf6-47db-bd12-566241f64838",
+          "name": "SAP_EHS_Component_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "473a3d4b-5a0f-43a8-bfb2-ab164f964536",
+          "name": "Pre_notification_Statistical_Survey_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "98537185-25eb-453c-ad66-30f569dc39c3",
+          "name": "Industrial_Safety_Training_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "82c75438-114e-45b5-91bc-e7a086c027ce",
+          "name": "Off_site_Risk_Assessment_Process",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "f285bb3c-9f14-4af4-a32b-64d5d9469c34",
+          "name": "Chemical_Law_Compliance_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "80de1c8e-31bf-4ec4-99ad-29a7615cce2c",
+          "name": "Hazardous_Material_Safety_Training_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "093fef54-929c-4930-bfbb-3fd799e6ecf2",
+          "name": "Asbestos_Abatement_Project_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "4bc0acf1-8ff3-4ca0-9395-e18589b92795",
+          "name": "Environmental_Compliance_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "526d8a79-477c-4e88-942b-0f85330bf16b",
+          "name": "Chemical_Handler_Training_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "0eccda16-3577-4cfc-a230-880fb58e49e9",
+          "name": "Air_Emissions_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "d91a7679-8a2d-43b2-a485-2e04a54630b9",
+          "name": "E_Commerce_Channel_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "fa9c14dd-5fd1-4690-9e4f-9ad48ed93264",
+          "name": "Financial_Partner_Channel_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "52f67ffa-6846-4653-9dad-23a62dbc3da6",
+          "name": "Product_Lifecycle_Process",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "1ad4cffb-1821-4be5-babb-1908b7ee4ad9",
+          "name": "Biz_Planning_Report_Process",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "812b10b7-ddd3-414b-8956-d14999c160c2",
+          "name": "Quality_Document_Revision_Cycle",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "78feb12b-12d1-43b4-8603-042b393ec137",
+          "name": "DMR_Document_Revision_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "643138ba-f947-4579-8ae1-e61db6dff571",
+          "name": "Purified_Water_Physical_Chemical_Test_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "a11fad6b-d1f1-4aa9-881a-84161bc0354d",
+          "name": "Production_Management_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "86bf3adb-54a1-4729-9a33-75ecd19d437f",
+          "name": "Quote_Request_Process_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "2ff4c56e-cd04-48d6-b340-f0e0d4b84937",
+          "name": "EHS_Data_Management_Env",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "497ca860-9df2-4dda-afd0-c8b27c0e5d50",
+          "name": "Raw_Material_Incoming_Inspection_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "87796b08-3ba2-4945-98f9-715175524ddb",
+          "name": "IQ_OQ_PQ_Execution_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "ab7cf5af-5f78-47a2-a4b7-6a2d018ac4c5",
+          "name": "KEB_Global_Frontier_Program_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "f3022b9b-be1d-4844-841d-54cc1a0eb9fa",
+          "name": "Home_Shopping_Broadcast_Cycle",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "b2a50f31-8f55-472b-ae08-a096dc58e742",
+          "name": "Operational_Manual_Process",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "90557175-b4db-4dd0-b8f1-7e6dd235ebff",
+          "name": "API_Integration_Process",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "4544e7cc-f8c9-47a4-bffb-5fd6f48ed677",
+          "name": "Packaging_Validation_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "254527f7-410c-4020-b0b2-6fb840a67efe",
+          "name": "Industrial_Safety_Education_Management_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "c5bade8f-3559-4952-bbb6-fc50e27b5ae4",
+          "name": "Equipment_Qualification_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "bcb4009a-8d38-4950-bb84-3a60719923a8",
+          "name": "SAP_EHS_Data_Management_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "8e1c0728-c5da-44c3-9e96-4f11b042119f",
+          "name": "Environmental_Permit_Administration_Reporting_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "25c6bc61-7740-4ed5-87f9-a1926cf1a391",
+          "name": "Incentive_Quote_Process",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "427ca406-f51a-4703-9cca-853d2dc7e039",
+          "name": "Business_Mailing_Operations_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "fe4bb468-b603-481e-bd36-c11e343df740",
+          "name": "Environmental_Monitoring_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "7993e1a8-a13b-4bd4-bc88-61800c3d6816",
+          "name": "Raw_Material_Supply_Management_Process",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "8dfeed45-5364-4f86-aa15-715b7f1ff618",
+          "name": "Equipment_Calibration_Request_Process",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "eda7129c-5cd9-4065-b040-81a80c253556",
+          "name": "Recycling_ERP_Management_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "101a48fc-b8ce-4c01-ba4c-c50216d92b39",
+          "name": "Product_Classification_System_Process",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "ee11cd5d-627d-4b33-a691-4d5288616a69",
+          "name": "Product_Quality_Evaluation_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "d86d5986-4a02-4cfe-a622-e0d22c8c8ebc",
+          "name": "Coupon_Application_Process",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "280d48ab-66e5-4662-8a12-485eced9f23f",
+          "name": "ISO_1345_Certification_Process",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "83507fdb-d31f-49c6-800e-d9d4eee77181",
+          "name": "K_REACH_K_OSHA_Compliance_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "a864016c-594a-4a01-bce1-a130a68f15df",
+          "name": "Chemical_Legal_Education_Management_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "040611f9-7632-4256-a3a3-6490ae0a5997",
+          "name": "Mobile_Application_Refinement_Process",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "40751b89-2745-454b-9048-38d25c6c0869",
+          "name": "Environmental_Facility_Infrastructure_Build_Process",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "8a11cb5c-1cd3-448f-beb5-1f318fd5e269",
+          "name": "Wastewater_Treatment_Operation_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "59317cc2-94f8-4604-aef4-da397ba86cb2",
+          "name": "Batch_Production_Capacity_Expansion_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "8187ef06-50c3-472c-9c27-3652d032102a",
+          "name": "KFDA_GMP_Certification_Process",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "0b73e081-de88-4367-b34d-761ad380aa02",
+          "name": "Cross_Border_E_commerce_Management_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "bc95973e-1ca2-4ead-a004-eafd70c1cc76",
+          "name": "Inventory_Optimization_Process",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "31eabecf-49e3-46c2-83f8-88ed526fb1ce",
+          "name": "Customer_Service_Management_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "1ae1319e-5a21-4865-9298-1381524f471f",
+          "name": "Inventory_Discrepancy_Process",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "02c556f5-a721-475e-92e2-98d0bc0500d1",
+          "name": "Listing_Category_Management_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "10f1cdf4-1af0-4680-822c-e4bc1cee1345",
+          "name": "Training_Material_Development_Cycle",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "19a61fc2-6b9e-47c0-975a-a5d3d84a8335",
+          "name": "Merchandising_Operation_Cycle",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "1d2885d9-fffd-41a5-bf2e-29d2e052a3b6",
+          "name": "Parking_Service_Platform_Env",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "4f077afc-63c0-4db3-a84e-47401d6f20f5",
+          "name": "BLE_Communication_Government_Project_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "9069602a-e8dd-4513-bf25-0e8e5c1fd9c6",
+          "name": "Android_App_Feature_Development_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "fab12cbf-b8d7-4539-b995-f5d828f61206",
+          "name": "Turnkey_Business_Process",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "ef7e377c-2ae6-45f6-8138-74d370040fbe",
+          "name": "Customer_Centric_Product_Concept_Development_Process",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "83f96093-7691-4627-b007-a0aa285dca54",
+          "name": "Market_Development_Process",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "fd992ecd-8a56-4dc3-90e3-e033aeb8971b",
+          "name": "Product_Development_Process",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "eaba0998-0e3f-4f93-b995-8da68bc53795",
+          "name": "Product_Improvement_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "c4cb4c3b-1b3d-4349-aab1-8ace34333a5c",
+          "name": "Branch_Office_Coordination_Process",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "dbcbcada-79d0-4a1b-b1d8-23bdf696cb85",
+          "name": "Sales_Network_Expansion_Process",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "5d75d1a6-4f67-481b-8cac-ea1090176348",
+          "name": "Product_Launch_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "21e291a6-81ee-4431-b9d0-76e0ffd82541",
+          "name": "Post_Sales_Upsell_Process",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "6d84e9ae-23f5-49df-bfab-2c3943009798",
+          "name": "Monthly_Sales_Profit_Reconciliation_Process",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "95bd1bfa-6c2d-4f67-8fcc-6a6b5d637def",
+          "name": "Product_Proposal_and_Development_Support_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "7e7d8b61-ee56-4dcc-a841-232ac969f59a",
+          "name": "Account_Management_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "6f1d9c3f-dd9d-4078-8503-c803ad900641",
+          "name": "New_Product_Sales_Promotion_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "a5db3f02-2388-4926-90e3-ec8f91e8cd8c",
+          "name": "Customer_Satisfaction_Process",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "fd986476-cfdd-4c05-8974-232c1c635ea4",
+          "name": "Headquarters_Reporting_Process",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "a0f8822a-2348-44f8-9329-3068539779cc",
+          "name": "Product_Commercialization_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "e4c31d0a-bb42-4ca0-8029-517fab218f20",
+          "name": "Micro_SD_Card_Supply_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "20685365-7bd6-41d0-af40-78fc871b2fe5",
+          "name": "Large_Enterprise_Contract_Negotiation_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "d362e1b6-30f6-4a99-aa7c-7d91edcb1e11",
+          "name": "New_Account_Acquisition_Process",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "64e74cee-f8ef-4b7e-9ed5-2f488d1e2f5e",
+          "name": "End_to_End_Sales_Process",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "f63d05f4-947d-48e4-a0e9-1e4b1b11f2a8",
+          "name": "Design_Win_Process",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "26031e47-93c2-41c1-b9be-4bb035914eb8",
+          "name": "Game_Launch_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "9bb2c55d-0195-487a-9f76-c9641239be6e",
+          "name": "Platform_UI_Identity_Design_Guidelines_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "8557286a-ade5-43af-9d90-bf355f81c98b",
+          "name": "UI_Redesign_Process",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "1e95363c-1acf-41dc-a4ad-68a6f2dc10a8",
+          "name": "Communication_Process",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "32e22753-2f4a-4b38-b328-1cbfcd98da2f",
+          "name": "Web_Design_Team_Env",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "d39d7ca0-82b9-42da-9f29-a5f315406627",
+          "name": "Crowdfunding_Platform_PC_Mobile_Hybrid_UI_Web_Standard_Publishing_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "5b36e54c-e1d7-4af9-8676-332fb59fde1a",
+          "name": "Management_Performance_Bonus_Payment_Rate_Adjustment_and_Base_Salary_Increase_Process",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "6d344932-17b7-41f0-aea6-8f949e8dac8b",
+          "name": "HR_Full_Cycle_Process_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "d4d8dec2-dde6-48b6-8593-6232d6db80d8",
+          "name": "Performance_Based_Compensation_System_Implementation_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "a347a38a-da85-4aa5-aecd-ce568bdd02d5",
+          "name": "Position_Allowance_Incentive_System_Implementation_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "d86aaaa1-b672-4876-a056-1c92bc9b3fa6",
+          "name": "Rolling_Open_Recruitment_Process_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "43abe3e3-3fbc-4cfe-b0eb-74e2a62c8ade",
+          "name": "Retirement_Age_Extension_Job_Rank_System_Change_Process",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "4a8e24e3-123a-4fa9-b846-5dffaae6b0f2",
+          "name": "HQ_Relocation_General_Affairs_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "4da0a7c5-b7ad-4fe5-8c02-c51dba97c53c",
+          "name": "HR_General_Affairs_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "13fdea7b-afd9-41c3-b08b-aa7cfc78bc0f",
+          "name": "Advertiser_Partner_Communication_Coordination_Negotiation_Process",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "7d521df1-8490-4b03-a66d-0f9995a95405",
+          "name": "Digital_Performance_Marketing_Campaign_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "1fd11299-cac1-4281-9e10-84a60463dbe4",
+          "name": "Real_Time_Data_Analysis_Optimization_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "53f24840-95b3-4d42-b450-d67a83416ce1",
+          "name": "Advertising_Material_Content_Planning_Production_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "16cdb653-5010-4906-956b-c0705185d065",
+          "name": "Equipment_Tooling_Cost_Negotiation_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "5069717c-99ee-48ff-906b-d055940dfd4a",
+          "name": "Operation_Rate_Process",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "3cb9d39f-3bad-46f9-9dea-a07755f4746b",
+          "name": "Line_Process_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "e83f0ef3-357b-4ecc-8114-425445c87154",
+          "name": "Real_Time_Crypto_Communication_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "037a3016-eddf-4f80-ad9d-857a8bbc4a60",
+          "name": "High_Power_AMP_RF_Prototype_Manufacturing_Mass_Production_Line_Design_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "4969172e-6bfc-44c3-9c77-46de05203a86",
+          "name": "Defect_Type_Action_Item_Modularization_Exp",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "0fad324b-450e-4dc1-8e72-e42244f56e43",
+          "name": "Control_Board_Artwork_ATmega128_C_Language_Firmware_Development_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "499b4f89-db00-4ac6-8a90-b3ba23c9905c",
+          "name": "Defense_Product_Test_Debugging_Circuit_Analysis_Circuit_Drawing_Standardization_Support_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "a959ba72-7587-40d6-9b97-a02d1d1a3853",
+          "name": "High_Power_AMP_Mass_Production_Automation_JIG_Proposal_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "e905954a-1d10-4768-b430-147fc090a341",
+          "name": "Open_Source_Framework_Based_Software_Architecture_Design_and_Development/Design_Pattern/UML_Modeling",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "3da6c194-6ac2-4b5e-ade5-97ec8fe926ad",
+          "name": "Korea_University_SCORM_Based_LMS/LCMS_System_Consulting_and_Construction_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "9cd05ac7-1916-448d-b567-4d92a6e7118a",
+          "name": "E_Government_Framework_Asset_Project_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "f32cb535-6154-4cc6-9b82-d89732b076d2",
+          "name": "Mobile_Hybrid_App_Development_Phone_Gap_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "7d75d66d-0f75-46fe-8da4-068585854679",
+          "name": "ISO19770_SAM_PLM_Enterprise_Technical_Support_Project_Env",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "89269c7c-cfe4-4fda-a0b5-7160e4cad250",
+          "name": "CDSS_Medical_Technology_Patent_Work_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "0f45ede2-a4b3-4473-8597-6d642a5e043d",
+          "name": "IT_Professional_Training_Program_Env",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "76168144-5d81-48ee-bf7b-14e106f72dc8",
+          "name": "POSDATA_EMS_E_Commerce_System_Construction_Process",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "0e853f8e-8480-4faf-a1e5-154c6839b309",
+          "name": "Hyundai_Marine_CIS_Next_Generation_Project_Consulting/Technical_Support_and_Education_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "f9b6f44a-b6e3-470f-8c3a-9734768623d9",
+          "name": "Intranet_LMS_LCMS_Solution_Build_Integration_Project_Env",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "1fe4b1f5-4166-4845-8cc2-9debcd1f2625",
+          "name": "Nonghyup_E_Banking_Electronic_Guarantee_System_Construction_Process",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "c3545ed4-f98a-4d7a-acd4-0753b98c57dc",
+          "name": "Live_Framework_Migrater_Tools_Enhancement_Project_Env",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "c47ea695-3829-4411-9b59-4fc963e27cac",
+          "name": "SCJA_Sun_Certification_Item_Review_Committee_and_Hyundai_Heavy_Industries_Education_Management_Syste",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "125362c5-a62a-4d0a-b647-1b1e192caa9a",
+          "name": "Medical_Project_Technical_Support_Consulting_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "efd1cf63-ec02-461a-862c-73afb0cf51ef",
+          "name": "AWS_Cloud_Based_Project_Env",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "6fcfc9d6-3930-438c-b4f1-ef3f745ccbe2",
+          "name": "Big_Data_Deep_Learning_LMS_Project_Env",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "837d3687-1c5a-4b95-b63a-dc0ceeae8a8c",
+          "name": "DHF_Document_Revision_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "b970e1db-c6c8-4c12-a319-a13f6bd4e45d",
+          "name": "Sterilization_Validation_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "15bc5452-dc87-4857-94b4-46d551dff6b0",
+          "name": "CMDCAS_Certification_Process",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "2515ffcc-ae65-419d-8035-b77236f4d2fd",
+          "name": "Washing_Validation_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "7e0e7c26-1b4d-4f9f-b0e3-982566efe377",
+          "name": "Sapphire_Substrate_Recycling_Research_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "e0aaad1f-0204-4460-934d-56599d314512",
+          "name": "Slim_HDR_Product_Implementation_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "c2de9b00-13b6-4eb3-afee-2cf73fcb2026",
+          "name": "Flash_LED_Development_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "95b5de3e-c596-4f83-89d6-e41c9381f382",
+          "name": "Reflector_Development_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "aa7be59c-951d-49fe-8830-61d6ee33a2a1",
+          "name": "Monitor_Model_Development_Exp",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "21fe063c-f090-4610-b136-50e190a6806b",
+          "name": "Advanced_Technology_Development_Cycle",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "340e3e3a-0078-4cb4-9074-1c8c7fd491f4",
+          "name": "CSP_Development_Product_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "a466aa07-1cb6-458e-84cf-e37d570e5e91",
+          "name": "Plasma_Treatment_Nonalloyed_Ohmic_Contact_Research_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "355dc7f8-f76f-44cc-aa4f-8ed4954724f2",
+          "name": "Vertical_LED_Chip_Process_Development_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "dd85cacd-4cd7-4c9b-b6d9-4d5cf0e81741",
+          "name": "New_Product_TimeDeal_Sales_Process",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "911d38e4-15dc-489a-8a3d-4427c9856478",
+          "name": "Channel_Sales_Strategy_Development_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "4d728ebd-dae7-4914-ae97-047c3ed2b0f4",
+          "name": "Sales_Performance_Analysis_Exp",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "c9495be7-d48f-4514-80c5-f60d4fd7c71a",
+          "name": "Multi_Channel_Vendor_Process",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "aacca72f-0b05-412a-947d-d595f8a5967c",
+          "name": "Online_Sales_Channel_Expansion_Process",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "4c6d405c-a561-4618-a413-62f27a7f0e2f",
+          "name": "Loyalty_Customer_Promotion_Planning_Process",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "c29894dc-9e4a-41ee-966d-a37cf4c46b5c",
+          "name": "Sales_Marketing_Planning_Operation_Process",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "12499324-4190-45c2-a696-19085fd0d664",
+          "name": "Holiday_Sales_Process",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "c86ef412-f09d-44df-857c-2a7f659d7ae7",
+          "name": "Exclusive_Product_Contract_Process",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "d50da5ca-5b28-4eca-ad47-a7bd913fbfa8",
+          "name": "Product_Exposure_Optimization_Process",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "28ad8252-d47d-439f-8129-c7e23fffb322",
+          "name": "DTC_Mall_Sales_Process",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "17717994-862e-4e71-b7f1-07b30d0765fe",
+          "name": "E_Commerce_Product_Operation_Process",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "a730c6e7-767d-4991-bb7b-343ef4fb83dc",
+          "name": "VIP_Brand_Hall_Entry_Process",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "c5ae3019-fde9-45a3-a0ac-c755e702d67e",
+          "name": "Online_Promotion_Sales_Process",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "fbc0dceb-c2d4-48e5-861e-a5558ce693e8",
+          "name": "Drugstore_Channel_Env",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "a153ec11-c93f-43bf-a6de-748872d6f7df",
+          "name": "Product_Photo_Concept_Development_Exp",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "78237a46-b986-43e3-8980-bcdc9475031c",
+          "name": "Adobe_Illustrator_Tool_Usage_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "becf2e75-2cc5-4b02-90ae-4d70738e25a1",
+          "name": "Adobe_Photoshop_Tool_Usage_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "907c1d76-b008-4728-8ccb-f6cc318d180f",
+          "name": "Color_Cosmetic_New_Product_Development_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "fa4f9316-269e-429c-a003-829ccd6001bd",
+          "name": "Adobe_InDesign_Tool_Usage_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "d77d7423-2c65-4c82-81cf-6d83d320af0b",
+          "name": "Sub_Material_Mass_Production_Process",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "94f5ec53-f3f5-4919-b5eb-7a3336e202a7",
+          "name": "Home_Shopping_Channel_Env",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "a5e8ec5e-b78c-44f0-bb7f-694c00653c87",
+          "name": "Health_Supplement_Package_Design_Exp",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "2df81699-f8bf-4388-b1ff-f85d67e764ed",
+          "name": "Paper_Structure_Development_Process",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "1bbaa4da-583a-454f-ace4-751be43dcb2f",
+          "name": "Pharmacy_Channel_Env",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "f7153bdf-8eed-484f-8803-e8e1c57f8cf6",
+          "name": "Vision_Program_Function_Implementation_Exp",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "cd76aa21-86a7-466c-9728-a51481f224c2",
+          "name": "Automation_Production_Line_Development_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "ebcc436e-e58e-4f77-9ec5-a1529c550ce5",
+          "name": "Statistical_Algorithm_Development_Exp",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "56c15299-2477-41bd-8dc0-63486293c549",
+          "name": "SQLite_Database_Administration_Exp",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "3cd45a5a-c4cb-4e40-b09a-34ff7eee3124",
+          "name": "Android_App_Development_Env",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "7a00b266-64bd-48df-8bed-e2b50130ca6d",
+          "name": "Mobile_TV_Manufacturing_Quality_Assurance_Process",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "bae87852-8f29-4cc7-8781-14e24ca386c1",
+          "name": "Vision_Program_UI_UX_Development_Exp",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "724f2e20-9f27-43d3-8b8c-525d6d0fa639",
+          "name": "QR_Code_Scan_Generation_Function_Development_Exp",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "022367b5-9057-4121-b53c-fb92095a20ae",
+          "name": "Program_Maintenance_Cycle",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "81700fbc-0c61-48d7-b0b4-efef678e34f7",
+          "name": "No_Data_Processed",
+          "color": "gray",
+          "description": null
+        }
+      ]
+    }
+  },
+  "AI Last Optimized": {
+    "id": "JgX~",
+    "name": "AI Last Optimized",
+    "description": null,
+    "type": "date",
+    "date": {}
+  },
+  "Data Quality": {
+    "id": "VV%5BS",
+    "name": "Data Quality",
+    "description": null,
+    "type": "select",
+    "select": {
+      "options": [
+        {
+          "id": "71980ac8-da59-4606-9f5b-30592ad52a9b",
+          "name": "Low",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "e8585898-e17a-4c44-b6d3-ddc48d3093c1",
+          "name": "Invalid",
+          "color": "default",
+          "description": null
+        }
+      ]
+    }
+  },
+  "Sub Sectors": {
+    "id": "%5CTAE",
+    "name": "Sub Sectors",
+    "description": null,
+    "type": "multi_select",
+    "multi_select": {
+      "options": [
+        {
+          "id": "27dca20d-f252-4e0c-8418-3fa2cb0f22bd",
+          "name": "B2B영업",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "92382605-eace-49b2-b24f-3d6f2ea32bcc",
+          "name": "BE(서버)",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "6bc942b9-c1a7-4b6b-9c47-f3f87266c1fe",
+          "name": "Business Operation(프로세스 효율화)",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "283b5834-75cc-472c-b655-c64c2b3d8a39",
+          "name": "DBA(DBMS 운영; 성능 최적화; 보안)",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "76bd710d-11ee-4320-af65-8041184340c4",
+          "name": "DevOps_SRE",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "39dbe9bc-ac2b-4ee8-afe2-34e3807af857",
+          "name": "FAE_CE",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "d884803e-500b-4756-ae77-2d4f42ffae69",
+          "name": "FE(웹)",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "4221c364-6c9c-4c25-9bf2-f65e22d85c97",
+          "name": "FP&A(경영분석)",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "20a0d5c9-b5d2-4849-b40c-8592cb018793",
+          "name": "FW(컨트롤러)",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "b9783d1b-75c6-4e3f-a83e-2a1447875369",
+          "name": "HW(SoC; RTL)",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "3f5a3be0-fe07-4a59-8e92-ce023ea71c51",
+          "name": "IR",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "dba7ec28-41a4-493f-98e3-a67f1305b18a",
+          "name": "M&A",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "81a58d0d-195a-4e4c-ae75-cd53b8c2c5d4",
+          "name": "Mobile(iOS; Android)",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "63dd2c4b-01a1-4168-979e-e1a7de4361c0",
+          "name": "Product Owner(PO)",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "e7c8bbed-baf9-4b28-aac4-c305e4dcdbc9",
+          "name": "Project Manager(PM)",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "174426dd-9bf0-4dbc-af3b-73512f4afe96",
+          "name": "SCM(수요예측/공급망)",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "400b7503-3c4f-4430-899f-6f77929ee7ec",
+          "name": "SW(하단 드라이버)",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "d1f2f996-be29-41cc-95f7-9824f965a7b8",
+          "name": "TPM",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "3eaf9f67-c7f4-42e1-a547-a94c8fcea364",
+          "name": "UIUX",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "42c58d63-c1e9-4b7c-a55e-76196c52ebbb",
+          "name": "개인정보보호(CPO; 규제 대응)",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "f995ecd0-5260-4f8d-8070-7dbb3edbe2ef",
+          "name": "공정(Yield/FAB)",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "29e5f6e5-85a7-4b62-9154-b71d551d2e2e",
+          "name": "교육(L&D)",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "671f86e9-92b2-4f99-b7f4-f638886f6a9e",
+          "name": "구매",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "152f4722-3e42-40e2-9324-349f4d170f2f",
+          "name": "그로스",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "28b0ad51-834c-40c2-9778-db653ddeb461",
+          "name": "급여(Payroll)",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "0492a6bf-6ac6-4a69-b92a-9e2d95e42d77",
+          "name": "기구설계",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "c4c19c32-6b51-4d69-8a79-e1a1686af2cf",
+          "name": "기술영업(Pre-sales)",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "606f0e93-0c2f-465f-a0fa-2bb7531aebe9",
+          "name": "기타",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "9d02e0af-8e26-4c82-b7e6-4b6c76767da1",
+          "name": "기획(AI Governance; DT; AT; AX 전략 설계)",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "000bffb8-77be-4f65-a109-29b93febd29c",
+          "name": "내부통제_감사",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "8f8c4672-243b-4f36-a095-71f52ce1b3a4",
+          "name": "노무(ER)",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "34d472c2-6247-42db-a151-5167b783b4be",
+          "name": "데이터분석가",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "9d3313c6-57c5-43c3-921c-33b6a44702fe",
+          "name": "데이터사이언티스트",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "3f1b6de6-d854-4c77-ac9a-6d4f3bcf533b",
+          "name": "데이터엔지니어",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "ab374016-37b3-4e13-a63f-935329dc83b0",
+          "name": "디자인 기획 및 시스템 구축",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "487b3fd9-0e3d-4107-853e-020663ede742",
+          "name": "로보틱스",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "0191d5f1-4c2d-4d3e-852e-5701ea1257c8",
+          "name": "리서쳐(모델링)",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "090dfc4a-b106-4bf3-b548-6868cf0bf373",
+          "name": "마케팅기획",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "84d88735-5a16-46bc-ab83-d8fdea45d030",
+          "name": "물류기획 및 프로세스 최적화",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "cf70bff9-947e-48f5-abba-2a30447835a8",
+          "name": "변호사",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "8f0371de-4926-4b82-87b2-1490b2b85f1f",
+          "name": "복리후생 운영",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "30dcda90-b18a-4e35-ba66-b117691624cd",
+          "name": "브랜드",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "e294d0b7-4c6a-4bd6-9495-393c9810f683",
+          "name": "상품기획(Selection)",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "1433c8cc-031c-4eee-81a6-c9499c010fb2",
+          "name": "서비스기획(화면설계)",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "92e6b442-8a78-451c-99b0-982e97edd211",
+          "name": "세무",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "707c4510-363a-40c0-8d4e-33737a2dc70a",
+          "name": "소싱MD(해외 직소싱/원가)",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "8af8a2fd-5e7b-42ed-96a0-4a7872a2eede",
+          "name": "신사업 발굴 및 런칭",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "b0781498-5c5e-4586-a3c4-cb31ddd2135e",
+          "name": "언론홍보(PR)",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "c28c2c61-a351-4f9d-8077-e4fc158bda07",
+          "name": "엔지니어(Serving/MLOps)",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "82c887ff-7fed-4457-9ce6-bba6f1e49862",
+          "name": "영업MD(채널 매출 관리)",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "e63ebb19-24bd-4279-bb67-e8760e2792a1",
+          "name": "영업기획",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "cb458334-e7be-40ee-b31d-3f6770392c34",
+          "name": "영업지원",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "a7e37073-e27a-4c33-beae-e0c5626d1cd1",
+          "name": "웹",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "dcdfcdcc-7d94-4035-9c0f-c34efc4559ab",
+          "name": "유통망 관리",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "05e62398-b873-4b6d-8923-15c294902ad8",
+          "name": "인사기획",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "36460a7e-a83e-4367-81b5-6215d335689a",
+          "name": "인프라_Cloud",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "33c94f51-4e9c-4819-9380-764adbd41831",
+          "name": "일반법무",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "b445fcb4-0484-4b95-b6da-b0effd77635f",
+          "name": "임베디드",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "7a50ba63-de1a-409e-a170-bb5a7a476c02",
+          "name": "자금",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "250cd71d-1ed4-4a4e-b21d-b31b95f48cea",
+          "name": "자동화(PLC)",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "a180395e-3f29-4721-92e1-83cffdaf09d7",
+          "name": "자산관리(부동산; 법인자산; IT 비품 구매 및 관리)",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "38a67e72-9c64-43ac-bf7b-c9baeed8889a",
+          "name": "재무회계",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "69ba4b3c-7333-4a90-896c-5bc96b9bca94",
+          "name": "전략_경영기획",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "ea7166ff-cfc9-488a-9aaf-2635da8e2106",
+          "name": "정보보안(인프라/인증)",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "bb68ec5b-cb07-4789-95b4-bd8032c32a48",
+          "name": "제품",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "26bfc5bc-ffd4-40c2-b672-a3e16f0f172d",
+          "name": "지적재산권(IP)",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "fd9c04f9-8828-4a8f-8b07-d49d0c26aae9",
+          "name": "채용(TA)",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "2398c9e6-a716-4e47-965d-dde57fb64700",
+          "name": "컴플라이언스",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "b50c5161-7643-4825-8667-382e33524c76",
+          "name": "콘텐츠(인플루언서 협업/제휴 포함)",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "0cc1c65f-5da0-42bb-86ff-108b8644cf52",
+          "name": "퍼포먼스",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "d0220d0b-0d66-4d44-8507-119823c39ba7",
+          "name": "평가보상(C&B)",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "3d1cc78d-d38e-4ec5-8a66-4f3dc27842c2",
+          "name": "해외영업",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "cd283218-8c3d-4cb7-aea4-6631c6ce3388",
+          "name": "회계사(CPA)",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "ea66e808-fc71-4477-9dda-a28441b102dc",
+          "name": "회로설계(PCB)",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "8a31e0c7-a23b-4be1-8acd-7ee9c144c1bd",
+          "name": "투자담당자(Investment/VC/PE)",
+          "color": "pink",
+          "description": null
+        }
+      ]
+    }
+  },
+  "Gap Analysis": {
+    "id": "%5D%5Bcc",
+    "name": "Gap Analysis",
+    "description": null,
+    "type": "rich_text",
+    "rich_text": {}
+  },
+  "AI_Generated": {
+    "id": "%60tzw",
+    "name": "AI_Generated",
+    "description": null,
+    "type": "checkbox",
+    "checkbox": {}
+  },
+  "Experience Summary": {
+    "id": "dSe%7C",
+    "name": "Experience Summary",
+    "description": null,
+    "type": "rich_text",
+    "rich_text": {}
+  },
+  "Main Sectors": {
+    "id": "g%7D%3D%7C",
+    "name": "Main Sectors",
+    "description": null,
+    "type": "multi_select",
+    "multi_select": {
+      "options": [
+        {
+          "id": "e9159160-c988-406e-8994-2e46abb0f556",
+          "name": "AI (Artificial Intelligence)",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "9903f51b-ae1c-440e-ba4f-62683130e54a",
+          "name": "DATA (데이터)",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "f0b04e11-36f5-48f8-9772-f5feee8e054e",
+          "name": "Finance (재무/회계)",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "ec9157a3-f2e1-4188-8f11-0d06aa028608",
+          "name": "HR (Human Resources)",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "d5680abc-a492-4ce9-ba49-cc1e256cb428",
+          "name": "HW (Hardware)",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "e3e5c757-8680-4fe3-a31c-3b45c7d9b147",
+          "name": "MD (Commerce)",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "5f81f96f-abbc-485f-8d41-02902642de46",
+          "name": "PRODUCT (제품 기획)",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "cab0e302-8849-4d5f-94c5-718283005bf8",
+          "name": "STRATEGY (전략)",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "46da5d6f-4d6d-460c-b415-7405e92e3f84",
+          "name": "SW (Software)",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "9497984f-6e4c-4e2e-8c04-bd2d68076a26",
+          "name": "기타",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "85b881f6-9042-4c30-827d-e64da21e9c63",
+          "name": "디자인 (Design)",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "f5339ce7-2c60-40f2-9bb6-bac7e90d154b",
+          "name": "마케팅 (Marketing)",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "88fc6495-0272-4493-967a-174c9d77aa54",
+          "name": "물류/유통 (Logistics & SCM)",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "e80d2bd7-8c28-43fd-880f-b2496d212a8f",
+          "name": "반도체 (Semiconductor)",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "618da2ce-5782-428d-aade-61826bdff20c",
+          "name": "법무 (Legal)",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "58f81a4e-12b8-43ef-bc8d-3479a7c946e3",
+          "name": "보안 (Security)",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "8f8fe680-e730-42f1-86f1-593832ee18a5",
+          "name": "영업 (Sales)",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "607b9335-04d6-4894-95be-fedd9b01638f",
+          "name": "총무 (General Affairs)",
+          "color": "default",
+          "description": null
+        }
+      ]
+    }
+  },
+  "구글드라이브 링크": {
+    "id": "rvOr",
+    "name": "구글드라이브 링크",
+    "description": null,
+    "type": "url",
+    "url": {}
+  },
+  "Role Cluster": {
+    "id": "yrEk",
+    "name": "Role Cluster",
+    "description": null,
+    "type": "select",
+    "select": {
+      "options": [
+        {
+          "id": "f91833d2-94d0-468f-858b-84de4f892dd7",
+          "name": "기타",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "a256e4fb-84b6-49c1-bd62-1484d0636845",
+          "name": "HR",
+          "color": "red",
+          "description": null
+        },
+        {
+          "id": "b6b24d2a-a60e-407e-8082-992b12a526e5",
+          "name": "SW",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "14ba180b-502b-431a-afb7-81fa41c200ab",
+          "name": "디자인",
+          "color": "gray",
+          "description": null
+        },
+        {
+          "id": "b9203571-14eb-4a7c-8848-8ea462fd6f15",
+          "name": "AI",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "714ac908-f349-4e6e-91dd-0882a94eb4ca",
+          "name": "마케팅",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "eaf82b82-8ed7-4aef-881f-f4f18a70e9b8",
+          "name": "영업",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "51a526b6-5347-47a8-bb4b-dad557dc7cce",
+          "name": "Finance",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "7114c31f-16bd-4025-a9a6-cdaee0f16dec",
+          "name": "DATA",
+          "color": "default",
+          "description": null
+        },
+        {
+          "id": "923fec10-3305-4c79-b3dc-e113c28bd104",
+          "name": "HW",
+          "color": "brown",
+          "description": null
+        },
+        {
+          "id": "7c63a292-ae11-4a45-a3db-b57313fbb413",
+          "name": "MD",
+          "color": "green",
+          "description": null
+        },
+        {
+          "id": "25714779-b590-4ca2-8d06-10fcc7ca5d59",
+          "name": "STRATEGY",
+          "color": "yellow",
+          "description": null
+        },
+        {
+          "id": "bc6c8546-3bb4-4d6d-ba7f-1cc7c61a84c2",
+          "name": "총무",
+          "color": "pink",
+          "description": null
+        },
+        {
+          "id": "422b63d7-5932-428c-9e4f-17a1ea7abbe4",
+          "name": "PRODUCT",
+          "color": "purple",
+          "description": null
+        },
+        {
+          "id": "b100eb62-0c82-4a04-a45d-eba54dc86bc2",
+          "name": "물류/유통",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "c3e33782-94f0-46da-be83-9e3b436c2ed7",
+          "name": "법무",
+          "color": "blue",
+          "description": null
+        },
+        {
+          "id": "954e3ddf-8a72-4158-b1d1-50a922e9762a",
+          "name": "보안",
+          "color": "orange",
+          "description": null
+        },
+        {
+          "id": "262ee3da-67ea-49d9-914e-f18323478425",
+          "name": "반도체",
+          "color": "pink",
+          "description": null
+        }
+      ]
+    }
+  },
+  "Context Tags": {
+    "id": "%7BtO%7D",
+    "name": "Context Tags",
+    "description": null,
+    "type": "rich_text",
+    "rich_text": {}
+  },
+  "이름": {
+    "id": "title",
+    "name": "이름",
+    "description": null,
+    "type": "title",
+    "title": {}
+  }
+}

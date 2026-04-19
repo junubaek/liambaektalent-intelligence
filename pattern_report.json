@@ -1,0 +1,428 @@
+{
+  "actions": {
+    "MANAGED": 6064,
+    "BUILT": 4378,
+    "DESIGNED": 4206,
+    "ANALYZED": 2921,
+    "SUPPORTED": 2133,
+    "ANALYZE": 29,
+    "ANALYXED": 1,
+    "RECRUITING_AND_TALENT_ACQUISITION": 1
+  },
+  "top_50_skills": [
+    {
+      "skill": "Corporate_Strategic_Planning",
+      "count": 1747
+    },
+    {
+      "skill": "Service_Planning",
+      "count": 1688
+    },
+    {
+      "skill": "Financial_Accounting",
+      "count": 1301
+    },
+    {
+      "skill": "Product_Manager",
+      "count": 1238
+    },
+    {
+      "skill": "Organizational_Development",
+      "count": 1099
+    },
+    {
+      "skill": "Data_Analysis",
+      "count": 1068
+    },
+    {
+      "skill": "Backend",
+      "count": 1055
+    },
+    {
+      "skill": "사업개발_BD",
+      "count": 1052
+    },
+    {
+      "skill": "퍼포먼스마케팅",
+      "count": 870
+    },
+    {
+      "skill": "물류_Logistics",
+      "count": 839
+    },
+    {
+      "skill": "Infrastructure_and_Cloud",
+      "count": 823
+    },
+    {
+      "skill": "보안_Security",
+      "count": 573
+    },
+    {
+      "skill": "B2B영업",
+      "count": 540
+    },
+    {
+      "skill": "Legal_Compliance",
+      "count": 540
+    },
+    {
+      "skill": "Frontend",
+      "count": 532
+    },
+    {
+      "skill": "Data_Engineering",
+      "count": 475
+    },
+    {
+      "skill": "DevOps",
+      "count": 409
+    },
+    {
+      "skill": "Recruiting_and_Talent_Acquisition",
+      "count": 401
+    },
+    {
+      "skill": "FinTech",
+      "count": 392
+    },
+    {
+      "skill": "Machine_Learning",
+      "count": 367
+    },
+    {
+      "skill": "Payment_and_Settlement_System",
+      "count": 318
+    },
+    {
+      "skill": "Treasury_Management",
+      "count": 316
+    },
+    {
+      "skill": "Corporate_Funding",
+      "count": 251
+    },
+    {
+      "skill": "Data_Pipeline_Construction",
+      "count": 241
+    },
+    {
+      "skill": "Contract_Management",
+      "count": 215
+    },
+    {
+      "skill": "Backend_Java",
+      "count": 187
+    },
+    {
+      "skill": "Natural_Language_Processing",
+      "count": 156
+    },
+    {
+      "skill": "Deep_Learning",
+      "count": 139
+    },
+    {
+      "skill": "컴퓨터비전_CV",
+      "count": 117
+    },
+    {
+      "skill": "IPO_Preparation_and_Execution",
+      "count": 102
+    },
+    {
+      "skill": "MLOps",
+      "count": 96
+    },
+    {
+      "skill": "Kubernetes",
+      "count": 96
+    },
+    {
+      "skill": "Backend_Python",
+      "count": 85
+    },
+    {
+      "skill": "Corporate_Legal_Counsel",
+      "count": 80
+    },
+    {
+      "skill": "추천시스템",
+      "count": 67
+    },
+    {
+      "skill": "Intellectual_Property",
+      "count": 51
+    },
+    {
+      "skill": "Backend_Node",
+      "count": 49
+    },
+    {
+      "skill": "FX_Dealing",
+      "count": 49
+    },
+    {
+      "skill": "Litigation",
+      "count": 42
+    },
+    {
+      "skill": "Backend_Go",
+      "count": 14
+    },
+    {
+      "skill": "재무회계",
+      "count": 10
+    },
+    {
+      "skill": "전략_경영기획",
+      "count": 8
+    },
+    {
+      "skill": "퍼포포먼스마케팅",
+      "count": 4
+    },
+    {
+      "skill": "事業開発_BD",
+      "count": 3
+    },
+    {
+      "skill": "Backend_PHP",
+      "count": 2
+    },
+    {
+      "skill": "Risk_Management",
+      "count": 2
+    },
+    {
+      "skill": " 물류_Logistics",
+      "count": 2
+    },
+    {
+      "skill": "Project_Manager",
+      "count": 2
+    },
+    {
+      "skill": "User_Interface_in_Game",
+      "count": 2
+    },
+    {
+      "skill": "BX_Design",
+      "count": 2
+    }
+  ],
+  "bottom_50_skills": [
+    {
+      "skill": "Strategic_Partnership",
+      "count": 0
+    },
+    {
+      "skill": "Security_Certification",
+      "count": 0
+    },
+    {
+      "skill": "Embedded_Linux",
+      "count": 0
+    },
+    {
+      "skill": "Big_Data_Processing",
+      "count": 0
+    },
+    {
+      "skill": "Digital_Campaign_Planning",
+      "count": 0
+    },
+    {
+      "skill": "GPGPU",
+      "count": 0
+    },
+    {
+      "skill": "Financial_Data_Analysis_and_System_Design",
+      "count": 0
+    },
+    {
+      "skill": "DBA",
+      "count": 0
+    },
+    {
+      "skill": "Mergers_and_Acquisitions",
+      "count": 0
+    },
+    {
+      "skill": "Offensive_Security_and_Vulnerability",
+      "count": 0
+    },
+    {
+      "skill": "Marketing_Platform_System",
+      "count": 0
+    },
+    {
+      "skill": "Corporate_Disclosure",
+      "count": 0
+    },
+    {
+      "skill": "IaC",
+      "count": 0
+    },
+    {
+      "skill": "Deep_Learning_for_Healthcare",
+      "count": 0
+    },
+    {
+      "skill": "SRE_Core",
+      "count": 0
+    },
+    {
+      "skill": "인프라_Cloud",
+      "count": 0
+    },
+    {
+      "skill": "TPM_Project_Management",
+      "count": 0
+    },
+    {
+      "skill": "Firmware_and_Embedded_Systems",
+      "count": 0
+    },
+    {
+      "skill": "MoE",
+      "count": 0
+    },
+    {
+      "skill": "홍보_PR",
+      "count": 0
+    },
+    {
+      "skill": "신사업기획",
+      "count": 0
+    },
+    {
+      "skill": "General_Affairs_Management",
+      "count": 0
+    },
+    {
+      "skill": "Machine_Learning_for_Business",
+      "count": 0
+    },
+    {
+      "skill": "서비스_기획",
+      "count": 0
+    },
+    {
+      "skill": "Hardware_Design",
+      "count": 0
+    },
+    {
+      "skill": "M&A_Advisory",
+      "count": 0
+    },
+    {
+      "skill": "Brand_Experience_Design",
+      "count": 0
+    },
+    {
+      "skill": "ElasticSearch",
+      "count": 0
+    },
+    {
+      "skill": "EPC_Project_Management",
+      "count": 0
+    },
+    {
+      "skill": "데이터_엔지니어링",
+      "count": 0
+    },
+    {
+      "skill": "예산관리",
+      "count": 0
+    },
+    {
+      "skill": "데이터_분석",
+      "count": 0
+    },
+    {
+      "skill": "Computer_Vision",
+      "count": 0
+    },
+    {
+      "skill": "Security",
+      "count": 0
+    },
+    {
+      "skill": "ISO26262",
+      "count": 0
+    },
+    {
+      "skill": "Blockchain",
+      "count": 0
+    },
+    {
+      "skill": "인프ra_Cloud",
+      "count": 0
+    },
+    {
+      "skill": "인사_교육_노무",
+      "count": 0
+    },
+    {
+      "skill": "FW_컨트롤러",
+      "count": 0
+    },
+    {
+      "skill": "자율주행",
+      "count": 0
+    },
+    {
+      "skill": "AI_systems",
+      "count": 0
+    },
+    {
+      "skill": "FPGA",
+      "count": 0
+    },
+    {
+      "skill": "SQL",
+      "count": 0
+    },
+    {
+      "skill": "API_Gateway",
+      "count": 0
+    },
+    {
+      "skill": "자금_Treasury",
+      "count": 0
+    },
+    {
+      "skill": "WebRTC_Streaming",
+      "count": 0
+    },
+    {
+      "skill": "Backend_Kotlin",
+      "count": 0
+    },
+    {
+      "skill": "SUPPORTED",
+      "count": 0
+    },
+    {
+      "skill": "Business_Development (BD)",
+      "count": 0
+    },
+    {
+      "skill": "투자_M&A",
+      "count": 0
+    }
+  ],
+  "zero_edge_candidates": [
+    "[DL이앤씨] 김민수(장치설계)부문",
+    "[에스엠코어] 강은태(Tech본부_본부장)부문",
+    "강희중(프레스 금형설계／제작)부문_원본",
+    "고여찬(지문모듈제조기술)부문_원본",
+    "김양섭(설비기획)부문_원본"
+  ],
+  "metrics": {
+    "avg_edges_per_candidate": 9.114549653579674,
+    "total_candidates": 2165,
+    "total_edges": 19733
+  }
+}

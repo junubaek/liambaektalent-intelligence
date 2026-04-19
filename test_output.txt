@@ -1,0 +1,6 @@
+
+=== 3. COO 찾아줘 ===
+Name: [리벨리온] 이범기 | Score: 0.42
+Mechanics: [+] Matched: BUILT:Chief_Operating_Officer<br>[-] Missing: MANAGED:Chief_Operating_Officer
+Candidate Edges: []
+------------------------------

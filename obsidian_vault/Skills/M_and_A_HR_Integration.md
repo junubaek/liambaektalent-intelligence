@@ -1,0 +1,19 @@
+---
+aliases: ["M and A HR Integration", "M_and_A_HR_Integration", "인수합병 인사 통합"]
+category: "Domain"
+---
+
+# M_and_A_HR_Integration
+
+이 문서는 **[[M_and_A_HR_Integration]]** 직무/도메인(스킬/경험)에 대한 온톨로지 정의입니다.
+
+## 의존성 (Depends On / 강력한 필요 요소)
+- 없음
+
+## 일부 포함 / 사용 분야 (Part Of / Used In)
+- [[Human_Resources_Management]]
+
+## 유사 / 연관 궤도 (Related To / Similar)
+- [[Organizational_Restructuring]]
+- [[PMI]]
+

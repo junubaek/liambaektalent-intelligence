@@ -1,0 +1,118 @@
+🚀 V8.6.3 순수 엔진 NDCG@10 실시간 평가 시작 (총 55건)...
+
+[1/55] ❌ 윤현진        | Missed    | Query: SAP SQL DB Design
+[2/55] ✅ 이민찬        | Rank 2  | Query: RTL Design SoC Integration DFT
+[3/55] ❌ 남연우        | Missed    | Query: IPO IR AI
+[4/55] ❌ 김대중        | Missed    | Query: Treasury CMS FX Risk Management
+[5/55] ✅ 이범기        | Rank 5  | Query: Treasury CMS FX Risk Management
+[6/55] ✅ 홍기재        | Rank 2  | Query: PyTorch vLLM KV-cache management
+[7/55] ❌ 이수진        | Missed    | Query: Ethernet Layer 2/3 Protocols RoCE RDMA Silicon Validation
+[8/55] ❌ 유준상        | Missed    | Query: Kubernetes Terraform LangGraph
+[9/55] ❌ 김동우        | Missed    | Query: Collective Communication Algorithms C/C++ RDMA/RoCE
+[10/55] ❌ 김완희        | Missed    | Query: SAP SQL DB Design
+[11/55] ❌ 김영인        | Missed    | Query: C/C++ Linux Kernel Drivers Computer Architecture
+[12/55] ❌ 오원교        | Missed    | Query: Kubernetes Terraform LangGraph
+[13/55] ❌ 전형준        | Missed    | Query: vLLM torch.compile PyTorch
+[14/55] ✅ 김학주        | Rank 6  | Query: PyTorch vLLM KV-cache management
+[15/55] ❌ 전예찬        | Missed    | Query: Neural Network Operations Parallel Programming C++
+[16/55] ❌ 정윤오        | Missed    | Query: Kubernetes Go Kubeflow
+[17/55] ✅ 박지민        | Rank 8  | Query: PyTorch vLLM KV-cache management
+[18/55] ❌ 최호진        | Missed    | Query: Kubernetes OpenStack Terraform
+[19/55] ❌ 박우람        | Missed    | Query: SAP SQL DB Design
+[20/55] ❌ 김상엽        | Missed    | Query: SAP SQL DB Design
+[21/55] ❌ 이원철        | Missed    | Query: C/C++ Linux Kernel Drivers Computer Architecture
+[22/55] ❌ 문태경        | Missed    | Query: Layer 2/3 protocols RoCE Silicon Validation
+[23/55] ❌ 임동진        | Missed    | Query: ISMS-P Vulnerability Assessment Risk Assessment
+[24/55] ❌ 박종모        | Missed    | Query: ERP Inventory Optimization KPI Analysis
+[25/55] ❌ 오승택        | Missed    | Query: PCIe Memory Controllers ARM Architecture
+[26/55] ❌ 이진호        | Missed    | Query: PCIe Memory Controllers ARM Architecture
+[27/55] ❌ 정예린        | Missed    | Query: Device Driver C/C++ AI Accelerator
+[28/55] ❌ 정호진        | Missed    | Query: PCIe Memory Controllers ARM Architecture
+[29/55] ❌ 김영아        | Missed    | Query: AI Semiconductor Hardware
+[30/55] ❌ 배문성        | Missed    | Query: Power System Analysis Grid Impact Assessment Database Design
+[31/55] ✅ 임훈         | Rank 3  | Query: React.js Next.js Web3.js
+[32/55] ❌ 여성수        | Missed    | Query: AI Semiconductor RCMS Research Fund Management
+[33/55] ❌ 신동주        | Missed    | Query: Consolidated Accounting K-IFRS Audit Management
+[34/55] ✅ 방태현        | Rank 3  | Query: LINUX AWS Architecture
+[35/55] ❌ 박찬준        | Missed    | Query: Chip Bring-up Driver Development Power Performance Analysis
+[36/55] ❌ 박기홍        | Missed    | Query: M&A Private Equity Feasibility Analysis
+[37/55] ❌ 김민우        | Missed    | Query: M&A Private Equity Feasibility Analysis
+[38/55] ❌ 이다미        | Missed    | Query: Fintech JIRA Confluence
+[39/55] ❌ 강건규        | Missed    | Query: Layer 2/3 protocols RoCE Silicon Validation
+[40/55] ❌ 윤병진        | Missed    | Query: AI Semiconductor Hardware
+[41/55] ❌ 송주용        | Missed    | Query: Layer 2/3 protocols RoCE Silicon Validation
+[42/55] ✅ 장봉원        | Rank 4  | Query: vLLM torch.compile PyTorch
+[43/55] ❌ 조재영        | Missed    | Query: Spring Fintech MSSQL
+[44/55] ❌ 김정기        | Missed    | Query: Spring Fintech MSSQL
+[45/55] ❌ 곽철훈        | Missed    | Query: ASRS Smart Factory Semiconductor Logistics Automation
+[46/55] ❌ 권용수        | Missed    | Query: Spring Fintech MSSQL
+[47/55] ❌ 안영택        | Missed    | Query: AI Accelerators Generative AI Datacenter
+[48/55] ❌ 김영동        | Missed    | Query: Kubernetes Harbor Docker
+[49/55] ❌ 박승준        | Missed    | Query: Kubernetes Harbor Docker
+[50/55] ❌ 송병채        | Missed    | Query: Machine Learning Operation Research Optimization
+[51/55] ❌ 성시민        | Missed    | Query: Machine Learning Operation Research Optimization
+[52/55] ❌ 양근식        | Missed    | Query: IoT Data Analytics AI/ML
+[53/55] ❌ 안재용        | Missed    | Query: Blockchain NFT
+[54/55] ✅ 이영도        | Rank 3  | Query: Sketch Zeplin Prototyping
+[55/55] ❌ 김용석        | Missed    | Query: SQL Python Braze
+
+==================================================
+🏆 실시간 엔진 NDCG 평가 결과 보고 (포장 없음)
+==================================================
+1. 평균 NDCG@10     : 0.0773
+2. Top-10 히트 건수 : 9 / 55
+
+3. 히트된 후보자 목록 (9명)
+    김학주, 박지민, 방태현, 이민찬, 이범기, 이영도, 임훈, 장봉원, 홍기재
+
+4. 미발견 케이스 목록 (46명)
+   [기술직 미발견] (25명)
+    - 권용수 (Spring Fintech MSSQL)
+    - 김동우 (Collective Communication Algorithms C/C++ RDMA/RoCE)
+    - 김상엽 (SAP SQL DB Design)
+    - 김영아 (AI Semiconductor Hardware)
+    - 김영인 (C/C++ Linux Kernel Drivers Computer Architecture)
+    - 김완희 (SAP SQL DB Design)
+    - 김용석 (SQL Python Braze)
+    - 김정기 (Spring Fintech MSSQL)
+    - 남연우 (IPO IR AI)
+    - 박우람 (SAP SQL DB Design)
+    - 배문성 (Power System Analysis Grid Impact Assessment Database Design)
+    - 성시민 (Machine Learning Operation Research Optimization)
+    - 송병채 (Machine Learning Operation Research Optimization)
+    - 안영택 (AI Accelerators Generative AI Datacenter)
+    - 안재용 (Blockchain NFT)
+    - 양근식 (IoT Data Analytics AI/ML)
+    - 여성수 (AI Semiconductor RCMS Research Fund Management)
+    - 윤병진 (AI Semiconductor Hardware)
+    - 윤현진 (SAP SQL DB Design)
+    - 이원철 (C/C++ Linux Kernel Drivers Computer Architecture)
+    - 전예찬 (Neural Network Operations Parallel Programming C++)
+    - 전형준 (vLLM torch.compile PyTorch)
+    - 정예린 (Device Driver C/C++ AI Accelerator)
+    - 정윤오 (Kubernetes Go Kubeflow)
+    - 조재영 (Spring Fintech MSSQL)
+
+   [비기술직 미발견] (21명)
+    - 강건규 (Layer 2/3 protocols RoCE Silicon Validation)
+    - 곽철훈 (ASRS Smart Factory Semiconductor Logistics Automation)
+    - 김대중 (Treasury CMS FX Risk Management)
+    - 김민우 (M&A Private Equity Feasibility Analysis)
+    - 김영동 (Kubernetes Harbor Docker)
+    - 문태경 (Layer 2/3 protocols RoCE Silicon Validation)
+    - 박기홍 (M&A Private Equity Feasibility Analysis)
+    - 박승준 (Kubernetes Harbor Docker)
+    - 박종모 (ERP Inventory Optimization KPI Analysis)
+    - 박찬준 (Chip Bring-up Driver Development Power Performance Analysis)
+    - 송주용 (Layer 2/3 protocols RoCE Silicon Validation)
+    - 신동주 (Consolidated Accounting K-IFRS Audit Management)
+    - 오승택 (PCIe Memory Controllers ARM Architecture)
+    - 오원교 (Kubernetes Terraform LangGraph)
+    - 유준상 (Kubernetes Terraform LangGraph)
+    - 이다미 (Fintech JIRA Confluence)
+    - 이수진 (Ethernet Layer 2/3 Protocols RoCE RDMA Silicon Validation)
+    - 이진호 (PCIe Memory Controllers ARM Architecture)
+    - 임동진 (ISMS-P Vulnerability Assessment Risk Assessment)
+    - 정호진 (PCIe Memory Controllers ARM Architecture)
+    - 최호진 (Kubernetes OpenStack Terraform)
+==================================================

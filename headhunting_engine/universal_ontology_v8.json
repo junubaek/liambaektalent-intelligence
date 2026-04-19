@@ -1,0 +1,117 @@
+{
+    "sectors": {
+        "영업": {
+            "sub_domains": [
+                "해외영업",
+                "B2B영업",
+                "기술영업",
+                "Pre-sales",
+                "영업지원",
+                "영업기획"
+            ],
+            "patterns": [
+                "Enterprise_Sales",
+                "Technical_Sales",
+                "Pipeline_Mgmt"
+            ]
+        },
+        "마케팅": {
+            "sub_domains": [
+                "퍼포먼스",
+                "그로스",
+                "브랜드",
+                "콘텐츠",
+                "PR"
+            ],
+            "patterns": [
+                "Growth_Hacking",
+                "Performance_Marketing",
+                "Brand_Identity"
+            ]
+        },
+        "HR": {
+            "sub_domains": [
+                "채용",
+                "평가보상",
+                "급여",
+                "노무",
+                "인사기획",
+                "교육"
+            ],
+            "patterns": [
+                "Talent_Acquisition",
+                "Compensation_Design",
+                "HR_Ops"
+            ]
+        },
+        "Finance": {
+            "sub_domains": [
+                "재무회계",
+                "자금",
+                "세무",
+                "IR",
+                "M&A",
+                "FP&A"
+            ],
+            "patterns": [
+                "Financial_Modeling",
+                "MA_Due_Diligence",
+                "Compliance"
+            ]
+        },
+        "STRATEGY": {
+            "sub_domains": [
+                "전략_경영기획",
+                "Business Operation",
+                "신사업 발굴"
+            ],
+            "patterns": [
+                "Market_Analysis",
+                "New_Biz_Launch",
+                "Process_Efficiency"
+            ]
+        },
+        "반도체": {
+            "sub_domains": [
+                "SoC",
+                "RTL",
+                "하단 드라이버",
+                "FW",
+                "공정"
+            ],
+            "patterns": [
+                "Chip_Verification",
+                "Yield_Optimization",
+                "ASIC_Design"
+            ]
+        },
+        "AI": {
+            "sub_domains": [
+                "엔지니어",
+                "MLOps",
+                "리서쳐",
+                "모델링",
+                "기획"
+            ],
+            "patterns": [
+                "LLM_Serving",
+                "Model_Training",
+                "AI_Governance"
+            ]
+        },
+        "SW": {
+            "sub_domains": [
+                "BE",
+                "FE",
+                "DevOps_SRE",
+                "인프라_Cloud",
+                "Mobile"
+            ],
+            "patterns": [
+                "MSA_Design",
+                "CI_CD_Pipeline",
+                "Scalability_Handling"
+            ]
+        }
+    }
+}

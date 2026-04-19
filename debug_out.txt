@@ -1,0 +1,23 @@
+{
+  "SCM": "Supply_Chain_Management",
+  "물류": "물류_Logistics",
+  "물류자동화": "Factory_Automation_System",
+  "공장/물류 자동화 설비": "Factory_Automation_System",
+  "물류 로봇": "Factory_and_Logistics_Automation",
+  "공장 및 물류 자동화": "Factory_and_Logistics_Automation",
+  "S&F 분석": "Global_Supply_Chain_Management",
+  "가용재고 관리": "Global_Supply_Chain_Management",
+  "포워딩 업체 관리": "Global_Supply_Chain_Management",
+  "글로벌 공급망 관리": "Global_Supply_Chain_Management",
+  "Global Supply Chain Management": "Global_Supply_Chain_Management",
+  "Global_Supply_Chain_Management": "Global_Supply_Chain_Management",
+  "물류 및 재고 최적화": "Logistics_and_Inventory_Optimization",
+  "생산/물류 라인 설계": "Production_Line_Design",
+  "공급망관리": "SCM",
+  "SCM(수요예측/공급망)": "SCM",
+  "SCM / 공급망 관리": "Supply_Chain_Management",
+  "Supply Chain Management": "Supply_Chain_Management",
+  "Supply_Chain_Management": "Supply_Chain_Management",
+  "물류/유통 (Logistics & SCM)": "물류_Logistics",
+  "물류기획 및 프로세스 최적화": "물류기획"
+}

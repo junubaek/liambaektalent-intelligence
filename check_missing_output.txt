@@ -1,0 +1,49 @@
+Edges for 오원교: 6 total
+  [DESIGNED] -> Infrastructure_and_Cloud
+  [SUPPORTED] -> GPU
+  [MANAGED] -> Infrastructure_and_Cloud
+  [MANAGED] -> DevOps
+  [MANAGED] -> NPU
+  [MANAGED] -> GPU
+----------------------------------------
+Edges for 유준상: 6 total
+  [BUILT] -> MLOps
+  [BUILT] -> DevOps
+  [BUILT] -> Kubernetes
+  [BUILT] -> RDMA
+  [DESIGNED] -> Kubernetes
+  [DESIGNED] -> InfiniBand
+----------------------------------------
+Edges for 정윤오: 19 total
+  [BUILT] -> Infrastructure_and_Cloud
+  [BUILT] -> DevOps
+  [BUILT] -> Lustre
+  [BUILT] -> InfiniBand
+  [BUILT] -> RoCE
+  [BUILT] -> GPU
+  [BUILT] -> Network
+  [BUILT] -> VAST
+  [DESIGNED] -> Infrastructure_and_Cloud
+  [DESIGNED] -> InfiniBand
+  [DESIGNED] -> RoCE
+  [DESIGNED] -> GPU
+  [DESIGNED] -> Network
+  [MANAGED] -> Infrastructure_and_Cloud
+  [MANAGED] -> DevOps
+  [MANAGED] -> Kubernetes
+  [MANAGED] -> GPU
+  [MANAGED] -> Network
+  [MANAGED] -> AMD_GPU
+----------------------------------------
+
+[Search Top-10 for 'Kubernetes Terraform LangGraph']
+Rank 1: 고승수 (Score: 0.98)
+Rank 2: 김지우 (Score: 0.98)
+Rank 3: 박영민 (Score: 0.98)
+Rank 4: 김수희 (Score: 0.87)
+Rank 5: None (Score: 0.83)
+Rank 6: 강병우 (Score: 0.73)
+Rank 7: 윤석훈 (Score: 0.6)
+Rank 8: 최서원 (Score: 0.58)
+Rank 9: 경력기술 (Score: 0.56)
+Rank 10: 강정한 (Score: 0.56)
