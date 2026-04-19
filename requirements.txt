@@ -18,3 +18,4 @@ networkx
 pyyaml
 openai
 scikit-learn
+SQLAlchemy
