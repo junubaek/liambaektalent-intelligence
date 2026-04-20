@@ -588,7 +588,11 @@ def parse_jd_to_json(jd_text: str) -> Dict:
 
             try:
 
-                driver = GraphDatabase.driver('bolt://127.0.0.1:7687', auth=('neo4j', 'toss1234'))
+                import os
+                n_uri = os.environ.get('NEO4J_URI', 'bolt://127.0.0.1:7687')
+                n_user = os.environ.get('NEO4J_USERNAME', 'neo4j')
+                n_pw = os.environ.get('NEO4J_PASSWORD', 'toss1234')
+                driver = GraphDatabase.driver(n_uri, auth=(n_user, n_pw))
 
                 with driver.session() as s:
 
@@ -1136,7 +1140,11 @@ def prefilter_candidates(jd_text: str, num_candidates: int = 300, extracted_cond
     
     from neo4j import GraphDatabase
     try:
-        driver = GraphDatabase.driver("bolt://127.0.0.1:7687", auth=("neo4j", "toss1234"))
+        import os
+        n_uri = os.environ.get('NEO4J_URI', 'bolt://127.0.0.1:7687')
+        n_user = os.environ.get('NEO4J_USERNAME', 'neo4j')
+        n_pw = os.environ.get('NEO4J_PASSWORD', 'toss1234')
+        driver = GraphDatabase.driver(n_uri, auth=(n_user, n_pw))
         with driver.session() as session:
             # 1. 초경량 1-Hop 탐색 쿼리 (0.01초 보장)
             cypher_query = """
@@ -1276,7 +1284,11 @@ def api_search_v8(prompt: str, session_id: str = None, **kwargs) -> dict:
     vector_results = []
     id_to_name = {}
     
-    driver = GraphDatabase.driver("bolt://127.0.0.1:7687", auth=("neo4j", "toss1234"))
+    import os
+    n_uri = os.environ.get('NEO4J_URI', 'bolt://127.0.0.1:7687')
+    n_user = os.environ.get('NEO4J_USERNAME', 'neo4j')
+    n_pw = os.environ.get('NEO4J_PASSWORD', 'toss1234')
+    driver = GraphDatabase.driver(n_uri, auth=(n_user, n_pw))
     try:
         with driver.session() as session:
             q_vec = """

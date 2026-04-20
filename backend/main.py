@@ -638,7 +638,11 @@ async def parse_career(req: ParseCareerRequest):
             try:
                 secrets = json.load(open(os.path.join(ROOT_DIR, "secrets.json"), encoding='utf-8'))
                 neo4j_pwd = secrets.get('NEO4J_PASSWORD', 'toss1234')
-                driver = GraphDatabase.driver('bolt://localhost:7687', auth=('neo4j', neo4j_pwd))
+                import os
+                n_uri = os.environ.get('NEO4J_URI', 'bolt://127.0.0.1:7687')
+                n_user = os.environ.get('NEO4J_USERNAME', 'neo4j')
+                n_pw = os.environ.get('NEO4J_PASSWORD', neo4j_pwd)
+                driver = GraphDatabase.driver(n_uri, auth=(n_user, n_pw))
                 with driver.session() as session:
                     career_str = json.dumps(careers, ensure_ascii=False)
                     query = "MATCH (c:Candidate {id: $id}) SET c.parsed_career_json = $data"
