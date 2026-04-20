@@ -1,4 +1,4 @@
-﻿import networkx as nx
+import networkx as nx
 
 class SkillGraphEngine:
     def __init__(self, use_v7=False):
@@ -20,7 +20,7 @@ class SkillGraphEngine:
                 self.v7_mapping[str(k)] = v
             for n in self.graph.nodes:
                 self.v7_mapping[n] = n
-            print(f"✅ V7 Graph Engine Loaded Natively: {self.graph.number_of_nodes()} Nodes")
+            print(f"[OK] V7 Graph Engine Loaded Natively: {self.graph.number_of_nodes()} Nodes")
 
     def build_graph(self, parsed_nodes):
         """
@@ -82,7 +82,7 @@ class SkillGraphEngine:
             
         nx.set_node_attributes(self.graph, log_mass, 'mass')
         
-        print(f"✅ Graph Engine Loaded: {self.graph.number_of_nodes()} Nodes, {self.graph.number_of_edges()} Edges")
+        print(f"[OK] Graph Engine Loaded: {self.graph.number_of_nodes()} Nodes, {self.graph.number_of_edges()} Edges")
 
     def get_adjacent_skills(self, skill_id, max_distance=2):
         """

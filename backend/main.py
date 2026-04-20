@@ -452,13 +452,52 @@ def api_search_v6(req: SearchRequestV5):
 @app.post("/api/search-v8")
 def api_search_v8_endpoint(req: SearchRequestV5):
     try:
-        return api_search_v8(
-            prompt=req.prompt,
-            sectors=req.sectors,
-            seniority=req.seniority,
-            required=req.required,
-            preferred=req.preferred,
-        )
+        from jd_compiler import api_search_v9, get_candidates_from_cache
+        v9_results = api_search_v9(prompt=req.prompt)
+        
+        # Hydrate for V10 React UI compatibility
+        cand_list = get_candidates_from_cache()
+        cache_map = {str(c.get('id', '')): c for c in cand_list}
+        cache_map_name = {str(c.get('name_kr', '')).strip(): c for c in cand_list if c.get('name_kr')}
+        
+        hydrated_results = []
+        for r in (v9_results or []):
+            cid = str(r.get("hash", ""))
+            name = str(r.get("name", "")).strip()
+            c_info = cache_map.get(cid) or cache_map_name.get(name) or {}
+            sectors = c_info.get("main_sectors", [])
+            
+            payload = {
+                'id': cid,
+                'candidate_id': cid,
+                'name_kr': name,
+                '이름': name,
+                'current_company': r.get("best_company", "미상"),
+                '연차등급': c_info.get("seniority", "확인 요망"),
+                'sector': sectors[0] if sectors else "미분류",
+                'Sub Sectors': sectors,
+                'matched_edges': r.get("matched_edges", []),
+                'Experience Summary': r.get("explain_reason", "정보 없음"),
+                'profile_summary': r.get("explain_reason", "정보 없음"),
+                'phone': c_info.get("phone", "번호 없음"),
+                'email': c_info.get("email", "이메일 없음"),
+                'birth_year': c_info.get("birth_year", "생년 미상"),
+                'notion_url': c_info.get("notion_url", "#"),
+                'google_drive_url': c_info.get("google_drive_url", None),
+                'careers': c_info.get("parsed_career_json") or c_info.get("careers", []),
+                'education': c_info.get("education_json", []),
+                'total_years': c_info.get("total_years", 0.0),
+                'education_json': c_info.get("education_json", []),
+                'ws_score': r.get("score", 0.0),
+                '_score': r.get("score", 0.0),
+                'score': r.get("score", 0.0) * 100, 
+                'graph_score': r.get("graph_score", 0.0),
+                'vector_score': r.get("vector_score", 0.0),
+                'total_edges': r.get("total_edges", 0)
+            }
+            hydrated_results.append(payload)
+            
+        return {"matched": hydrated_results, "total": len(hydrated_results)}
     except Exception as e:
         logger.error(f"v8 Search error: {e}")
         raise HTTPException(status_code=500, detail=str(e))

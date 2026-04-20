@@ -1511,9 +1511,13 @@ def calculate_recency_multiplier(end_date_str):
 def api_search_v9(prompt: str, session_id: str = None) -> list:
     import math
     import time
+    import os
     from connectors.openai_api import OpenAIClient
     from neo4j import GraphDatabase
-    driver = GraphDatabase.driver("bolt://127.0.0.1:7687", auth=("neo4j", "toss1234"))
+    n_uri = os.environ.get("NEO4J_URI", "bolt://127.0.0.1:7687")
+    n_usr = os.environ.get("NEO4J_USER", "neo4j")
+    n_pwd = os.environ.get("NEO4J_PASSWORD", "toss1234")
+    driver = GraphDatabase.driver(n_uri, auth=(n_usr, n_pwd))
     
     st = time.time()
     logger.info(f"\n\n[V9.0 Chunk-Level API Search] Payload: {prompt}")

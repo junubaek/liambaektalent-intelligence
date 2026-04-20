@@ -1,9 +1,9 @@
-﻿import os
+import os
 import json
 import pdfplumber
 import google.generativeai as genai
 
-GEMINI_API_KEY = "AIzaSyCnMTVMuQ2673Br1o31h5JpSpxK_bIpYkE"
+GEMINI_API_KEY = "INSERT_YOUR_NEW_GEMINI_API_KEY_HERE"
 genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel("gemini-pro")
 

@@ -194,6 +194,7 @@ SYNONYM_GROUPS = [
     ["mlops", "serving", "엔지니어(Serving/MLOps)"],
     ["fp&a", "재무기획", "재무 기획", "financial planning", "FP&A(경영분석)", "경영분석"],
     ["재무", "finance", "파이낸스", "재무회계"],
+    ["자금", "treasury", "자금 담당자", "자금관리", "자금운용"],
     ["회계", "accounting", "cpa", "회계사(CPA)"],
     ["ir", "investor relations", "IR"],
     ["m&a", "merger", "acquisition", "인수합병", "M&A"],
@@ -290,7 +291,7 @@ SHORT_ACRONYMS = {
 }
 
 SEARCH_PROPS = [
-    ("이름",                "title"),
+    ("파일명",                "title"),
     ("Main Sectors",        "multi_select"),
     ("Sub Sectors",         "multi_select"),
     ("Functional Patterns", "rich_text"),
@@ -724,6 +725,12 @@ def search_candidates(
     required_groups  = [expand_query(kw) for kw in required]
     preferred_groups = [expand_query(kw) for kw in preferred]
     pattern_groups   = [expand_query(kw) for kw in parsed.get("pattern_keywords", [])]
+
+    # V5 Native Fallback: If Gemini failed and we have a prompt, tokenize it natively
+    if prompt.strip() and not pattern_groups and not required_groups:
+        fallback_tokens = [t for t in prompt.strip().split() if len(t) >= 2]
+        pattern_groups.extend([expand_query(tok) for tok in fallback_tokens])
+
 
     all_terms = (
         [t for g in required_groups  for t in g] +
