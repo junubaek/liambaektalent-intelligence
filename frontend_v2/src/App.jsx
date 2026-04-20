@@ -322,6 +322,7 @@ export default function AntigravityMain() {
             <div className="flex items-center gap-6 text-xs font-bold text-gray-400 mb-12">
                 <span className="flex items-center gap-1.5"><Phone className="w-3.5 h-3.5" /> {candidate.phone || candidate['전화번호'] || 'N/A'}</span>
                 <span className="flex items-center gap-1.5"><Mail className="w-3.5 h-3.5" /> {candidate.email || candidate['이메일'] || 'N/A'}</span>
+                <span className="flex items-center gap-1.5"><User className="w-3.5 h-3.5" /> {(candidate.birth_year && String(candidate.birth_year).trim() !== '' && !String(candidate.birth_year).includes('미상') && !String(candidate.birth_year).includes('생년')) ? `${candidate.birth_year}년생` : '미상'}</span>
             </div>
         
             <div className="mb-6 flex items-center gap-2 text-black">
