@@ -313,8 +313,8 @@ export default function AntigravityMain() {
                 <div className="flex-1 pl-6 border-l border-gray-100 text-right flex flex-col justify-start">
                     <h5 className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-3">NODESCORE</h5>
                     <div className="flex flex-col justify-end items-end gap-2 text-right">
-                        {candidate.graph_score !== undefined && <div className="text-[28px] leading-none font-black text-indigo-500">G: {candidate.graph_score.toFixed(2)} <span className="text-[12px] font-black text-gray-300">/ 만점</span></div>}
-                        {candidate.vector_score !== undefined && <div className="text-[28px] leading-none font-black text-blue-500 ml-1">V: {candidate.vector_score.toFixed(2)} <span className="text-[12px] font-black text-gray-300">/ 만점</span></div>}
+                        {candidate.graph_score !== undefined && <div className="text-[28px] leading-none font-black text-indigo-500">G: {candidate.graph_score.toFixed(2)} <span className="text-[12px] font-black text-gray-300">/ 10.0</span></div>}
+                        {candidate.vector_score !== undefined && <div className="text-[28px] leading-none font-black text-blue-500 ml-1">V: {candidate.vector_score.toFixed(2)} <span className="text-[12px] font-black text-gray-300">/ 1.00</span></div>}
                     </div>
                 </div>
             </div>
