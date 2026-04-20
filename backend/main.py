@@ -162,7 +162,7 @@ class CandidateFeedback(BaseModel):
 class SearchRequestV5(BaseModel):
     prompt: str = ""
     sectors: List[str] = []
-    seniority: str = "All"
+    seniority: List[str] = ["All"]
     required: List[str] = []
     preferred: List[str] = []
 
@@ -453,13 +453,26 @@ def api_search_v6(req: SearchRequestV5):
 def api_search_v8_endpoint(req: SearchRequestV5):
     try:
         from jd_compiler import api_search_v8
-        return api_search_v8(
+        res = api_search_v8(
             prompt=req.prompt,
             sectors=req.sectors,
             seniority=req.seniority,
             required=req.required,
             preferred=req.preferred,
         )
+        
+        # Apply seniority filter
+        req_sens = [s.upper() for s in req.seniority]
+        if req_sens and "무관" not in req_sens and "ALL" not in req_sens:
+            filtered = []
+            for m in res.get("matched", []):
+                val = m.get("연차등급", "확인 요망").upper()
+                if val in req_sens:
+                    filtered.append(m)
+            res["matched"] = filtered
+            res["total"] = len(filtered)
+            
+        return res
     except Exception as e:
         logger.error(f"v8 Search error: {e}")
         raise HTTPException(status_code=500, detail=str(e))

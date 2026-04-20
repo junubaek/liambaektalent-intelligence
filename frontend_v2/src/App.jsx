@@ -220,7 +220,7 @@ export default function AntigravityMain() {
       const reqKw = requiredKeywords.split(',').map(s=>s.trim()).filter(s=>s);
       
       const payload = {
-        prompt: finalQuery, sectors: [], seniority: seniority.join(','),
+        prompt: finalQuery, sectors: [], seniority: seniority,
         required: reqKw, preferred: [], weights: settings
       };
 
