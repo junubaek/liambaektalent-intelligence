@@ -452,8 +452,8 @@ def api_search_v6(req: SearchRequestV5):
 @app.post("/api/search-v8")
 def api_search_v8_endpoint(req: SearchRequestV5):
     try:
-        from jd_compiler import api_search_v9, get_candidates_from_cache
-        v9_results = api_search_v9(prompt=req.prompt)
+        from jd_compiler import api_search_v8, get_candidates_from_cache
+        v9_results = api_search_v8(prompt=req.prompt)
         
         # Hydrate for V10 React UI compatibility
         cand_list = get_candidates_from_cache()
