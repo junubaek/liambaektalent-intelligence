@@ -1527,7 +1527,7 @@ def api_search_v9(prompt: str, session_id: str = None) -> list:
     from connectors.openai_api import OpenAIClient
     from neo4j import GraphDatabase
     n_uri = os.environ.get("NEO4J_URI", "bolt://127.0.0.1:7687")
-    n_usr = os.environ.get("NEO4J_USER", "neo4j")
+    n_usr = os.environ.get("NEO4J_USERNAME", "neo4j")
     n_pwd = os.environ.get("NEO4J_PASSWORD", "toss1234")
     driver = GraphDatabase.driver(n_uri, auth=(n_usr, n_pwd))
     
