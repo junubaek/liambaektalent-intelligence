@@ -445,17 +445,31 @@ def quick_search(q: str, limit: int = 20):
     rows = cur.fetchall()
     conn.close()
     
+    import sys
+    sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+    from jd_compiler import get_candidates_from_cache
+    
+    all_cands = get_candidates_from_cache()
+    cand_dict = {str(c.get('id')): c for c in all_cands}
+    
     matched = []
     for r in rows:
+        cid = str(r["id"])
+        c = cand_dict.get(cid, {})
+        
         matched.append({
-            "id": r["id"],
-            "name_kr": r["name_kr"] or "이름 미상",
-            "current_company": r["current_company"] or "미상",
-            "sector": r["sector"] or "미분류",
-            "profile_summary": r["profile_summary"] or "",
-            "google_drive_url": r["google_drive_url"] or "",
-            "total_years": r["total_years"] or 0,
-            "seniority": r["seniority"] or "미상",
+            "id": cid,
+            "이름": r["name_kr"] or c.get("name_kr") or c.get("name") or "이름 미상",
+            "current_company": c.get("current_company") or r["current_company"] or "미상",
+            "sector": (c.get("main_sectors", ["미분류"])[0] if c.get("main_sectors") else None) or r["sector"] or "미분류",
+            "profile_summary": c.get("profile_summary") or r["profile_summary"] or "",
+            "google_drive_url": c.get("google_drive_url") or r["google_drive_url"] or "",
+            "total_years": c.get("total_years") or r["total_years"] or 0.0,
+            "연차등급": c.get("seniority") or r["seniority"] or "확인 전",
+            "careers": c.get("parsed_career_json") or c.get("careers", []),
+            "education": c.get("education_json", []),
+            "전화번호": c.get("phone", "번호 없음"),
+            "이메일": c.get("email", ""),
             "is_keyword_match": True,
             "match_score": r["match_score"]
         })
