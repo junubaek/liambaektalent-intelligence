@@ -23,6 +23,7 @@ export default function AntigravityMain() {
   
   const [hasSearched, setHasSearched] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isKeywordSearch, setIsKeywordSearch] = useState(false);
   
   const [candidates, setCandidates] = useState([]);
   const [totalCandidatesCount, setTotalCandidatesCount] = useState(0);
@@ -205,7 +206,31 @@ export default function AntigravityMain() {
     }
   };
 
+  const executeQuickSearch = async (keyword) => {
+    if (!keyword.trim() || !token) return;
+    setHasSearched(true);
+    setIsLoading(true);
+    setIsKeywordSearch(true);
+    setSearchPage(1);
+    
+    try {
+      const res = await fetch(
+        `/api/quick-search?q=${encodeURIComponent(keyword)}&limit=20`,
+        { headers }
+      );
+      const data = await res.json();
+      setCandidates(data.matched || []);
+      setTotalCandidatesCount(data.total || 0);
+      setSearchQuery(keyword);
+    } catch(e) {
+      setCandidates([]);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   const executeSearch = async (queryParam) => {
+    setIsKeywordSearch(false);
     const isEvent = queryParam && typeof queryParam === 'object';
     const finalQuery = (isEvent || !queryParam) ? searchQuery : queryParam;
     
@@ -246,6 +271,7 @@ export default function AntigravityMain() {
     setHasSearched(false);
     setSearchQuery('');
     setCandidates([]);
+    setIsKeywordSearch(false);
   };
 
   const toggleExpand = async (id) => {
@@ -433,13 +459,19 @@ export default function AntigravityMain() {
             <div className="flex-1 px-4"><p className="text-[13px] font-bold italic text-gray-400 leading-relaxed line-clamp-2 pr-6">"{summary}"</p></div>
             
             <div className="flex items-center gap-5 flex-shrink-0 mr-2">
-              <div className="text-right hidden lg:block mr-2">
-                {candidate.graph_score !== undefined && <div className="text-[11px] font-black tracking-widest text-[#111]">G: <span className="text-indigo-500">{candidate.graph_score.toFixed(2)}</span></div>}
-                {candidate.vector_score !== undefined && <div className="text-[11px] font-black tracking-widest text-[#111] mt-[3px]">V: <span className="text-blue-500">{candidate.vector_score.toFixed(2)}</span></div>}
-                <div className="text-[9px] font-bold text-gray-500 tracking-widest mt-1.5 flex justify-end gap-2">
-                  <span>⬡ {candidate.matched_edges ? candidate.matched_edges.length : 0} nodes</span>
+              {candidate.is_keyword_match ? (
+                <div className="text-[10px] font-black text-emerald-600 bg-emerald-50 px-2 py-1 rounded-lg border border-emerald-200">
+                  KEYWORD
                 </div>
-              </div>
+              ) : (
+                <div className="text-right hidden lg:block mr-2">
+                  {candidate.graph_score !== undefined && <div className="text-[11px] font-black tracking-widest text-[#111]">G: <span className="text-indigo-500">{candidate.graph_score.toFixed(2)}</span></div>}
+                  {candidate.vector_score !== undefined && <div className="text-[11px] font-black tracking-widest text-[#111] mt-[3px]">V: <span className="text-blue-500">{candidate.vector_score.toFixed(2)}</span></div>}
+                  <div className="text-[9px] font-bold text-gray-500 tracking-widest mt-1.5 flex justify-end gap-2">
+                    <span>⬡ {candidate.matched_edges ? candidate.matched_edges.length : 0} nodes</span>
+                  </div>
+                </div>
+              )}
               <button onClick={(e) => toggleBookmark(String(candidate.id), e)} className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors border ${isBookmarked ? 'bg-black border-black text-white hover:bg-gray-800' : 'bg-transparent border-gray-200 text-gray-400 hover:border-gray-400 hover:text-black hover:bg-gray-50'}`}>
                 <Bookmark className={`w-4 h-4 ${isBookmarked ? 'fill-current' : ''}`} />
               </button>
@@ -737,11 +769,11 @@ export default function AntigravityMain() {
       <main className="flex-1 flex flex-col h-full overflow-hidden relative">
         <header className="h-20 bg-white border-b border-gray-200 flex items-center justify-between px-10 flex-shrink-0 z-10 shadow-sm relative">
           <div className="flex items-center gap-3 w-1/2 text-gray-400">
-            <Search className="w-5 h-5" />
+            <Search className="w-5 h-5 cursor-pointer hover:text-gray-600" onClick={() => { if(quickFindQuery.trim() !== '') executeQuickSearch(quickFindQuery); }} />
             <input 
               type="text" placeholder="Quick Find (Name, Phone, Email...)" 
               value={quickFindQuery} onChange={(e) => setQuickFindQuery(e.target.value)}
-              onKeyDown={(e) => { if(e.key === 'Enter' && quickFindQuery.trim() !== '') executeSearch(quickFindQuery); }}
+              onKeyDown={(e) => { if(e.key === 'Enter' && quickFindQuery.trim() !== '') executeQuickSearch(quickFindQuery); }}
               className="bg-transparent border-none outline-none w-full text-sm font-bold text-gray-800 placeholder-gray-400 focus:ring-0"
               disabled={!token}
             />
@@ -832,7 +864,15 @@ export default function AntigravityMain() {
               <div className="flex justify-between items-end mb-10 pb-6 border-b border-gray-200">
                 <div>
                   <h2 className="text-[3rem] font-black italic tracking-tighter uppercase text-black leading-none mb-2">Talent<br />Intelligence.</h2>
-                  <p className="text-sm font-bold text-gray-500">Gravity scoring system activated.</p>
+                  {isKeywordSearch ? (
+                    <p className="text-sm font-bold text-emerald-600">
+                      '{searchQuery}' 키워드 검색 결과
+                    </p>
+                  ) : (
+                    <p className="text-sm font-bold text-gray-500">
+                      Gravity scoring system activated.
+                    </p>
+                  )}
                 </div>
                 <div className="text-right">
                   <p className="text-[10px] font-black tracking-widest text-gray-400 uppercase mb-1">Total Found</p>

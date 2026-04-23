@@ -403,6 +403,65 @@ def delete_admin_user(delete_user_id: str, current_user: dict = Depends(get_curr
 async def health_check():
     return {"status": "healthy", "version": "4.0.0"}
 
+@app.get("/api/quick-search")
+def quick_search(q: str, limit: int = 20):
+    if not q or len(q.strip()) < 1:
+        return {"matched": [], "total": 0, "query": q}
+    
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
+    cur = conn.cursor()
+    
+    search = f"%{q.strip()}%"
+    cur.execute("""
+        SELECT id, name_kr, current_company,
+               sector, profile_summary,
+               google_drive_url, birth_year,
+               total_years,
+               CASE
+                 WHEN total_years >= 10 THEN 'SENIOR'
+                 WHEN total_years >= 5 THEN 'MIDDLE'
+                 ELSE 'JUNIOR'
+               END as seniority,
+               (
+                 (CASE WHEN name_kr LIKE ? THEN 10 ELSE 0 END) +
+                 (CASE WHEN current_company LIKE ? THEN 5 ELSE 0 END) +
+                 (LENGTH(raw_text) - LENGTH(REPLACE(LOWER(raw_text), LOWER(?), ''))) 
+                 / CASE WHEN LENGTH(?) > 0 THEN LENGTH(?) ELSE 1 END
+               ) as match_score
+        FROM candidates
+        WHERE is_duplicate=0
+          AND (
+            name_kr LIKE ?
+            OR current_company LIKE ?
+            OR raw_text LIKE ?
+            OR sector LIKE ?
+          )
+        ORDER BY match_score DESC
+        LIMIT ?
+    """, [search, search, q.strip(), q.strip(), q.strip(),
+          search, search, search, search, limit])
+    
+    rows = cur.fetchall()
+    conn.close()
+    
+    matched = []
+    for r in rows:
+        matched.append({
+            "id": r["id"],
+            "name_kr": r["name_kr"] or "이름 미상",
+            "current_company": r["current_company"] or "미상",
+            "sector": r["sector"] or "미분류",
+            "profile_summary": r["profile_summary"] or "",
+            "google_drive_url": r["google_drive_url"] or "",
+            "total_years": r["total_years"] or 0,
+            "seniority": r["seniority"] or "미상",
+            "is_keyword_match": True,
+            "match_score": r["match_score"]
+        })
+    
+    return {"matched": matched, "total": len(matched), "query": q}
+
 @app.post("/api/analyze-jd")
 def analyze_jd(data: JDInput):
     try:
