@@ -4818,3 +4818,81 @@ SKILL_CATEGORIES = {
     "Energy": ["Power_Grid_Engineering", "BESS", "ESS", "Solar_Energy", "Renewable_Energy", "VPP", "Battery_Technology", "Offshore_Wind"],
     "Operations": ["SCM", "Logistics_and_Supply_Chain", "Procurement_Buyer", "ERP", "Manufacturing"]
 }
+
+# Runtime updates to UNIFIED_GRAVITY_FIELD
+if 'Tax_Accounting' not in UNIFIED_GRAVITY_FIELD:
+    UNIFIED_GRAVITY_FIELD['Tax_Accounting'] = {}
+UNIFIED_GRAVITY_FIELD['Tax_Accounting']['core_attracts'] = {'Tax_Advisory_and_Compliance': 0.9, 'Transfer_Pricing': 0.8, 'Financial_Accounting': 0.5}
+UNIFIED_GRAVITY_FIELD['Tax_Accounting']['repels'] = {'Treasury_Management': -0.3, 'IPO_Management': -0.2, 'IR_Management': -0.2}
+if 'IR_Management' not in UNIFIED_GRAVITY_FIELD:
+    UNIFIED_GRAVITY_FIELD['IR_Management'] = {}
+UNIFIED_GRAVITY_FIELD['IR_Management']['core_attracts'] = {'IPO_Preparation_and_Execution': 0.9, 'Investor_Relations': 0.9, 'Corporate_Disclosure': 0.8}
+UNIFIED_GRAVITY_FIELD['IR_Management']['repels'] = {'Tax_Accounting': -0.3, 'Treasury_Management': -0.2}
+if 'Talent_Acquisition' not in UNIFIED_GRAVITY_FIELD:
+    UNIFIED_GRAVITY_FIELD['Talent_Acquisition'] = {}
+UNIFIED_GRAVITY_FIELD['Talent_Acquisition']['core_attracts'] = {'Recruiting_and_Talent_Acquisition': 0.9, 'ATS': 0.7, 'Corporate_Culture_Branding': 0.5}
+UNIFIED_GRAVITY_FIELD['Talent_Acquisition']['repels'] = {'Payroll_Management': -0.3, 'Labor_Law_Compliance': -0.2}
+if 'Employee_Relations' not in UNIFIED_GRAVITY_FIELD:
+    UNIFIED_GRAVITY_FIELD['Employee_Relations'] = {}
+UNIFIED_GRAVITY_FIELD['Employee_Relations']['core_attracts'] = {'Labor_Law_Compliance': 0.9, '취업규칙': 0.8, '노동청 대응': 0.7}
+UNIFIED_GRAVITY_FIELD['Employee_Relations']['repels'] = {'Talent_Acquisition': -0.2, 'Organizational_Development': -0.2}
+if 'Compensation_and_Benefits' not in UNIFIED_GRAVITY_FIELD:
+    UNIFIED_GRAVITY_FIELD['Compensation_and_Benefits'] = {}
+UNIFIED_GRAVITY_FIELD['Compensation_and_Benefits']['core_attracts'] = {'Payroll_Management': 0.9, 'Performance_and_Compensation_System': 0.8, 'Financial_Accounting': 0.4}
+UNIFIED_GRAVITY_FIELD['Compensation_and_Benefits']['repels'] = {'Talent_Acquisition': -0.2, 'Employee_Relations': -0.2}
+if 'Organizational_Development' not in UNIFIED_GRAVITY_FIELD:
+    UNIFIED_GRAVITY_FIELD['Organizational_Development'] = {}
+UNIFIED_GRAVITY_FIELD['Organizational_Development']['core_attracts'] = {'Corporate_Culture_Branding': 0.8, 'Learning_and_Development': 0.8, 'HR_Strategic_Planning': 0.7}
+UNIFIED_GRAVITY_FIELD['Organizational_Development']['repels'] = {'Payroll_Management': -0.3, 'Labor_Law_Compliance': -0.2}
+if 'HRBP' not in UNIFIED_GRAVITY_FIELD:
+    UNIFIED_GRAVITY_FIELD['HRBP'] = {}
+UNIFIED_GRAVITY_FIELD['HRBP']['core_attracts'] = {'HR_Strategic_Planning': 0.9, 'Organizational_Development': 0.8, 'Talent_Acquisition': 0.6}
+UNIFIED_GRAVITY_FIELD['HRBP']['repels'] = {'Payroll_Management': -0.3, 'Labor_Law_Compliance': -0.2}
+if 'Brand_Management' not in UNIFIED_GRAVITY_FIELD:
+    UNIFIED_GRAVITY_FIELD['Brand_Management'] = {}
+UNIFIED_GRAVITY_FIELD['Brand_Management']['core_attracts'] = {'Brand_Identity_and_Experience': 0.9, 'Corporate_Public_Relations': 0.8, 'Global_Brand_Campaign': 0.7}
+UNIFIED_GRAVITY_FIELD['Brand_Management']['repels'] = {'Performance_Marketing': -0.3, 'CRM_Marketing': -0.2}
+if 'Content_Marketing' not in UNIFIED_GRAVITY_FIELD:
+    UNIFIED_GRAVITY_FIELD['Content_Marketing'] = {}
+UNIFIED_GRAVITY_FIELD['Content_Marketing']['core_attracts'] = {'Brand_Communication': 0.8, 'Content_Marketing_Strategy': 0.8, 'Influencer_and_Sponsorship_Marketing': 0.6}
+UNIFIED_GRAVITY_FIELD['Content_Marketing']['repels'] = {'Performance_Marketing': -0.2, 'CRM_Marketing': -0.2}
+if 'CRM_Marketing' not in UNIFIED_GRAVITY_FIELD:
+    UNIFIED_GRAVITY_FIELD['CRM_Marketing'] = {}
+UNIFIED_GRAVITY_FIELD['CRM_Marketing']['core_attracts'] = {'Data_Engineering': 0.7, 'Growth_Marketing': 0.8, 'Data_Analysis': 0.7}
+UNIFIED_GRAVITY_FIELD['CRM_Marketing']['repels'] = {'Brand_Management': -0.2, 'Content_Marketing': -0.2}
+if 'Corporate_Public_Relations' not in UNIFIED_GRAVITY_FIELD:
+    UNIFIED_GRAVITY_FIELD['Corporate_Public_Relations'] = {}
+UNIFIED_GRAVITY_FIELD['Corporate_Public_Relations']['core_attracts'] = {'Corporate_Crisis_Management': 0.8, 'Financial_Communication': 0.7, 'Brand_Communication': 0.7}
+UNIFIED_GRAVITY_FIELD['Corporate_Public_Relations']['repels'] = {'Performance_Marketing': -0.3, 'CRM_Marketing': -0.2}
+if 'Data_Engineering' not in UNIFIED_GRAVITY_FIELD:
+    UNIFIED_GRAVITY_FIELD['Data_Engineering'] = {}
+UNIFIED_GRAVITY_FIELD['Data_Engineering']['core_attracts'] = {'Data_Pipeline_Construction': 0.9, 'Big_Data_Processing': 0.8, 'Data_Warehouse_Architecture': 0.8}
+UNIFIED_GRAVITY_FIELD['Data_Engineering']['repels'] = {'Backend_Engineering': -0.1, 'MLOps': -0.1}
+if 'Machine_Learning' not in UNIFIED_GRAVITY_FIELD:
+    UNIFIED_GRAVITY_FIELD['Machine_Learning'] = {}
+UNIFIED_GRAVITY_FIELD['Machine_Learning']['core_attracts'] = {'Deep_Learning': 0.9, 'MLOps': 0.8, 'Data_Science': 0.8}
+UNIFIED_GRAVITY_FIELD['Machine_Learning']['repels'] = {'Backend_Engineering': -0.2, 'DevOps': -0.1}
+if 'Frontend_Development' not in UNIFIED_GRAVITY_FIELD:
+    UNIFIED_GRAVITY_FIELD['Frontend_Development'] = {}
+UNIFIED_GRAVITY_FIELD['Frontend_Development']['core_attracts'] = {'UX_UI_Design': 0.7, 'Frontend_Architecture': 0.8, 'Modern_Frontend_Architecture': 0.7}
+UNIFIED_GRAVITY_FIELD['Frontend_Development']['repels'] = {'Backend_Engineering': -0.2, 'DevOps': -0.2}
+if 'Corporate_Strategic_Planning' not in UNIFIED_GRAVITY_FIELD:
+    UNIFIED_GRAVITY_FIELD['Corporate_Strategic_Planning'] = {}
+UNIFIED_GRAVITY_FIELD['Corporate_Strategic_Planning']['core_attracts'] = {'Corporate_Strategy': 0.9, 'Financial_Planning_and_Analysis': 0.7, 'M_and_A_Strategy': 0.7}
+UNIFIED_GRAVITY_FIELD['Corporate_Strategic_Planning']['repels'] = {'Financial_Accounting': -0.2, 'General_Affairs': -0.3}
+if 'B2B영업' not in UNIFIED_GRAVITY_FIELD:
+    UNIFIED_GRAVITY_FIELD['B2B영업'] = {}
+UNIFIED_GRAVITY_FIELD['B2B영업']['core_attracts'] = {'Global_Sales_and_Marketing': 0.8, '영업기획': 0.8, 'Technical_Sales': 0.6}
+UNIFIED_GRAVITY_FIELD['B2B영업']['repels'] = {'B2C영업': -0.1, 'Content_Marketing': -0.2}
+if 'Supply_Chain_Management' not in UNIFIED_GRAVITY_FIELD:
+    UNIFIED_GRAVITY_FIELD['Supply_Chain_Management'] = {}
+UNIFIED_GRAVITY_FIELD['Supply_Chain_Management']['core_attracts'] = {'Procurement_and_Sourcing': 0.8, 'Logistics_and_Inventory_Optimization': 0.8, 'Demand_Forecasting': 0.7}
+UNIFIED_GRAVITY_FIELD['Supply_Chain_Management']['repels'] = {'Corporate_Strategic_Planning': -0.2, 'Financial_Planning_and_Analysis': -0.2}
+if 'Legal_Practice' not in UNIFIED_GRAVITY_FIELD:
+    UNIFIED_GRAVITY_FIELD['Legal_Practice'] = {}
+UNIFIED_GRAVITY_FIELD['Legal_Practice']['core_attracts'] = {'Corporate_Legal_Counsel': 0.9, 'Patent_Management': 0.7, 'Financial_Compliance': 0.5}
+UNIFIED_GRAVITY_FIELD['Legal_Practice']['repels'] = {'Tax_Accounting': -0.3, 'Financial_Accounting': -0.2}
+if 'Compliance' not in UNIFIED_GRAVITY_FIELD:
+    UNIFIED_GRAVITY_FIELD['Compliance'] = {}
+UNIFIED_GRAVITY_FIELD['Compliance']['core_attracts'] = {'Financial_Compliance': 0.9, 'Anti_Money_Laundering': 0.8, 'Data_Privacy_and_Compliance': 0.7}
+UNIFIED_GRAVITY_FIELD['Compliance']['repels'] = {'Legal_Practice': -0.1, 'Financial_Accounting': -0.2}
