@@ -1,4 +1,4 @@
-from ontology_graph import UNIFIED_GRAVITY_FIELD
+from ontology_graph import UNIFIED_GRAVITY_FIELD, SENIOR_EXPANDED_SYNERGY
 
 import os
 
@@ -144,6 +144,55 @@ EXECUTIVE_NODES = {
 
 }
 
+
+
+
+REPEL_MULTIPLIER = {
+    "JUNIOR":  1.0,   # 풀 척력 — 직무 경계 엄격
+    "MIDDLE":  0.5,   # 중간 — 약간의 유연성
+    "SENIOR":  0.15,  # 거의 무력화 — 폭넓은 경험 인정
+    "All":     0.7,   # 기본값
+}
+
+def get_effective_gravity(node, seniority):
+    field = UNIFIED_GRAVITY_FIELD.get(node, {}).copy()
+    
+    # SENIOR일 때 시너지 노드 확장
+    if seniority == "SENIOR":
+        expanded = SENIOR_EXPANDED_SYNERGY.get(node, [])
+        extra = {n: 0.4 for n in expanded}  # 확장 시너지 가중치 0.4
+        existing = field.get("synergy_attracts", {})
+        field["synergy_attracts"] = {**existing, **extra}
+    
+    return field
+
+def calc_gravity_score(candidate_nodes, query_nodes, seniority="All"):
+    
+    repel_mult = REPEL_MULTIPLIER.get(seniority, 0.7)
+    
+    score = 0
+    for node in query_nodes:
+        field = get_effective_gravity(node, seniority)
+        
+        # 핵력 — seniority 무관하게 풀 적용
+        core = field.get("core_attracts", {})
+        for cnode, weight in core.items():
+            if cnode in candidate_nodes:
+                score += weight * 2.0  # core 가산
+        
+        # 시너지
+        synergy = field.get("synergy_attracts", {})
+        for snode, weight in synergy.items():
+            if snode in candidate_nodes:
+                score += weight
+        
+        # 척력 — seniority에 따라 감쇠
+        repels = field.get("repels", {})
+        for rnode, weight in repels.items():
+            if rnode in candidate_nodes:
+                score += weight * repel_mult  # 음수 × 배수
+    
+    return score
 
 
 def calculate_gravity_fusion_score(candidate_edges, conds, is_category_search=False):

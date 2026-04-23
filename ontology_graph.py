@@ -4896,3 +4896,81 @@ if 'Compliance' not in UNIFIED_GRAVITY_FIELD:
     UNIFIED_GRAVITY_FIELD['Compliance'] = {}
 UNIFIED_GRAVITY_FIELD['Compliance']['core_attracts'] = {'Financial_Compliance': 0.9, 'Anti_Money_Laundering': 0.8, 'Data_Privacy_and_Compliance': 0.7}
 UNIFIED_GRAVITY_FIELD['Compliance']['repels'] = {'Legal_Practice': -0.1, 'Financial_Accounting': -0.2}
+
+SENIOR_EXPANDED_SYNERGY = {
+
+    # Finance ?€?¥ê¸‰ ???¸ì ‘ Finance ?„ì²´ ?œë„ˆì§€
+    "Tax_Accounting": [
+        "Financial_Accounting", "Management_Accounting",
+        "Financial_Planning_and_Analysis", "Internal_Control",
+        "ERP", "Financial_Audit"
+    ],
+    "Treasury_Management": [
+        "Financial_Planning_and_Analysis", "IR_Management",
+        "Corporate_Funding", "Valuation_Modeling",
+        "Financial_Accounting", "IPO_Preparation_and_Execution"
+    ],
+    "Financial_Planning_and_Analysis": [
+        "Treasury_Management", "IR_Management",
+        "Corporate_Strategic_Planning", "M_and_A_Strategy",
+        "Valuation_Modeling", "Management_Accounting"
+    ],
+    "IR_Management": [
+        "Treasury_Management", "Financial_Planning_and_Analysis",
+        "Corporate_Strategic_Planning", "IPO_Preparation_and_Execution",
+        "Investor_Relations", "Corporate_Disclosure"
+    ],
+
+    # HR ?€?¥ê¸‰
+    "HR_Strategic_Planning": [
+        "Talent_Acquisition", "Compensation_and_Benefits",
+        "Employee_Relations", "Organizational_Development",
+        "HRBP", "Labor_Law_Compliance", "Payroll_Management"
+    ],
+    "Talent_Acquisition": [
+        "HR_Strategic_Planning", "Organizational_Development",
+        "Compensation_and_Benefits", "Corporate_Culture_Branding"
+    ],
+    "Organizational_Development": [
+        "HR_Strategic_Planning", "HRBP",
+        "Talent_Acquisition", "Learning_and_Development",
+        "Corporate_Culture_Branding"
+    ],
+
+    # Marketing ?€?¥ê¸‰
+    "Performance_Marketing": [
+        "Brand_Management", "CRM_Marketing",
+        "Content_Marketing", "Growth_Marketing",
+        "Digital_Marketing", "Data_Analysis"
+    ],
+    "Brand_Management": [
+        "Performance_Marketing", "Content_Marketing",
+        "Corporate_Public_Relations", "CRM_Marketing",
+        "IMC_Strategy", "Global_Brand_Campaign"
+    ],
+    "Corporate_Public_Relations": [
+        "Brand_Management", "Corporate_Crisis_Management",
+        "Performance_Marketing", "Content_Marketing"
+    ],
+
+    # Tech ?€?¥ê¸‰
+    "Backend_Engineering": [
+        "DevOps", "Data_Engineering", "Frontend_Development",
+        "MSA_Architecture", "System_Architecture"
+    ],
+    "DevOps": [
+        "Backend_Engineering", "Data_Engineering",
+        "Information_Security", "MLOps"
+    ],
+    "Machine_Learning": [
+        "Data_Engineering", "Backend_Engineering",
+        "MLOps", "Data_Science", "AI_Engineering"
+    ],
+
+    # Strategy ?€?¥ê¸‰
+    "Corporate_Strategic_Planning": [
+        "Financial_Planning_and_Analysis", "M_and_A_Strategy",
+        "New_Business_Development", "Corporate_Governance",
+        "Management_Consulting", "IR_Management"
+    ],
+}
