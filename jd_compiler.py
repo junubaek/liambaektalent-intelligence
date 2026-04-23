@@ -455,18 +455,15 @@ def get_history_bonus_scores(jd_text: str, top_k: int = 50) -> Dict[str, Dict]:
 
 
 def parse_jd_to_json(jd_text: str) -> Dict:
-
     """
-
     자연어 JD를 입력받아, 필수/우대 구조의 화학식 JSON 및 최소 연차 정보를 반환합니다.
-
     """
-
     global GLOBAL_GEMINI_CALL_COUNT
-
     import re
-
     
+    # 1000자 초과 시 핵심만 남기고 단축 (토큰 및 속도 절감)
+    if len(jd_text) > 1000:
+        jd_text = jd_text[:1000]
 
     # [Native] 1. 연차 추출 정규식
 

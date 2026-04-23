@@ -17,6 +17,27 @@ from pydantic import BaseModel
 import asyncio
 from typing import Dict
 
+import hashlib
+from functools import lru_cache
+
+# 서버 시작 시 JD 캐시 딕셔너리 초기화
+jd_cache = {}
+
+# 서버 시작 시 1회 메모리 로드
+_CANDIDATES_CACHE = None
+
+def get_candidates_cache():
+    global _CANDIDATES_CACHE
+    if _CANDIDATES_CACHE is None:
+        cache_path = os.path.join(ROOT_DIR, 'candidates_cache_jd.json')
+        try:
+            with open(cache_path, 'r', encoding='utf-8') as f:
+                _CANDIDATES_CACHE = json.load(f)
+            print(f"[CACHE LOADED] {len(_CANDIDATES_CACHE)}명")
+        except:
+            _CANDIDATES_CACHE = []
+    return _CANDIDATES_CACHE
+
 # Add root directory to sys.path for importing existing modules
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT_DIR)
@@ -525,6 +546,16 @@ def api_search_v6(req: SearchRequestV5):
 @app.post("/api/search-v8")
 def api_search_v8_endpoint(req: SearchRequestV5):
     try:
+        # 캐시 키 생성 (쿼리 + seniority 해시)
+        cache_key = hashlib.md5(
+            f"{req.prompt}_{req.seniority}_{sorted(req.required)}".encode()
+        ).hexdigest()
+        
+        # 캐시 히트
+        if cache_key in jd_cache:
+            print(f"[CACHE HIT] {req.prompt[:30]}")
+            return jd_cache[cache_key]
+            
         from jd_compiler import api_search_v8
         res = api_search_v8(
             prompt=req.prompt,
@@ -545,6 +576,13 @@ def api_search_v8_endpoint(req: SearchRequestV5):
             res["matched"] = filtered
             res["total"] = len(filtered)
             
+        # 결과 캐시 저장 (최대 200개)
+        if len(jd_cache) >= 200:
+            oldest = next(iter(jd_cache))
+            del jd_cache[oldest]
+            
+        jd_cache[cache_key] = res
+        print(f"[CACHE MISS] {req.prompt[:30]}")
         return res
     except Exception as e:
         logger.error(f"v8 Search error: {e}")
@@ -557,13 +595,8 @@ async def parse_career(req: ParseCareerRequest):
     
     lock = get_parse_lock(candidate_id)
     async with lock:
+        cands = get_candidates_cache()
         cache_path = os.path.join(ROOT_DIR, "candidates_cache_jd.json")
-        cands = []
-        try:
-            with open(cache_path, 'r', encoding='utf-8') as f:
-                cands = json.load(f)
-        except Exception:
-            pass
             
         cand_cache = next((c for c in cands if c.get("id") == candidate_id), None)
         if cand_cache and "parsed_career_json" in cand_cache:
