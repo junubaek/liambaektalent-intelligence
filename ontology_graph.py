@@ -4974,3 +4974,270 @@ SENIOR_EXPANDED_SYNERGY = {
         "Management_Consulting", "IR_Management"
     ],
 }
+
+# Gravity Field V2 - 취약 노드 대규모 보강
+UNIFIED_GRAVITY_FIELD.update({
+    # ── AI/ML 세부 직군 ──
+    "LLM_Engineering": {
+        "core_attracts": {
+            "Natural_Language_Processing":0.9,
+            "Deep_Learning":0.8,
+            "MLOps":0.7
+        },
+        "repels": {
+            "Backend_Engineering":-0.2,
+            "DevOps":-0.2,
+            "Frontend_Development":-0.3
+        }
+    },
+    "MLOps": {
+        "core_attracts": {
+            "Machine_Learning":0.9,
+            "DevOps":0.8,
+            "Data_Engineering":0.7
+        },
+        "repels": {
+            "Frontend_Development":-0.3,
+            "Brand_Management":-0.4,
+            "UX_UI_Design":-0.3
+        }
+    },
+    "AI_Engineering": {
+        "core_attracts": {
+            "Machine_Learning":0.9,
+            "Deep_Learning":0.8,
+            "LLM_Engineering":0.7
+        },
+        "repels": {
+            "Frontend_Development":-0.3,
+            "Brand_Management":-0.4,
+            "UX_UI_Design":-0.3
+        }
+    },
+
+    # ── 인프라/클라우드 ──
+    "Infrastructure_and_Cloud": {
+        "core_attracts": {
+            "Kubernetes":0.9,
+            "IaC":0.8,
+            "DevOps":0.9
+        },
+        "repels": {
+            "Frontend_Development":-0.3,
+            "Brand_Management":-0.4,
+            "UX_UI_Design":-0.3,
+            "Content_Marketing":-0.4
+        }
+    },
+    "Kubernetes": {
+        "core_attracts": {
+            "Infrastructure_and_Cloud":0.9,
+            "DevOps":0.9,
+            "IaC":0.7
+        },
+        "repels": {
+            "Frontend_Development":-0.3,
+            "Brand_Management":-0.5,
+            "Tax_Accounting":-0.5
+        }
+    },
+    "IaC": {
+        "core_attracts": {
+            "DevOps":0.9,
+            "Infrastructure_and_Cloud":0.8,
+            "Kubernetes":0.7
+        },
+        "repels": {
+            "Brand_Management":-0.5,
+            "Content_Marketing":-0.4,
+            "Tax_Accounting":-0.5
+        }
+    },
+
+    # ── 반도체/하드웨어 ──
+    "RTL_Design": {
+        "core_attracts": {
+            "SoC":0.9,
+            "FPGA":0.8,
+            "Semiconductor_Engineering":0.8
+        },
+        "repels": {
+            "Backend_Engineering":-0.4,
+            "Frontend_Development":-0.5,
+            "Brand_Management":-0.5,
+            "Data_Engineering":-0.3
+        }
+    },
+    "SoC": {
+        "core_attracts": {
+            "RTL_Design":0.9,
+            "NPU":0.8,
+            "Semiconductor_Engineering":0.8
+        },
+        "repels": {
+            "Backend_Engineering":-0.3,
+            "Frontend_Development":-0.5,
+            "Brand_Management":-0.5,
+            "Data_Engineering":-0.3
+        }
+    },
+    "NPU": {
+        "core_attracts": {
+            "SoC":0.9,
+            "RTL_Design":0.8,
+            "AI_Semiconductor_Architecture":0.9
+        },
+        "repels": {
+            "Backend_Engineering":-0.3,
+            "Frontend_Development":-0.5,
+            "Brand_Management":-0.5
+        }
+    },
+    "Embedded_Linux": {
+        "core_attracts": {
+            "Sys_Software":0.9,
+            "Firmware":0.8,
+            "Embedded_System_and_Compiler_Optimization":0.7
+        },
+        "repels": {
+            "Frontend_Development":-0.4,
+            "Brand_Management":-0.5,
+            "Data_Engineering":-0.2
+        }
+    },
+    "Firmware": {
+        "core_attracts": {
+            "Embedded_Linux":0.8,
+            "Sys_Software":0.9,
+            "Embedded_System_and_Compiler_Optimization":0.7
+        },
+        "repels": {
+            "Backend_Engineering":-0.2,
+            "Frontend_Development":-0.4,
+            "Brand_Management":-0.5,
+            "Data_Engineering":-0.3
+        }
+    },
+
+    # ── ERP 직군 명확화 ──
+    "ERP_System_Implementation": {
+        "core_attracts": {
+            "ERP_Process_Innovation":0.9,
+            "Management_Accounting":0.7,
+            "Financial_Accounting":0.6
+        },
+        "repels": {
+            "Frontend_Development":-0.3,
+            "Brand_Management":-0.4,
+            "Talent_Acquisition":-0.2
+        }
+    },
+    "ERP_Process_Innovation": {
+        "core_attracts": {
+            "ERP_System_Implementation":0.9,
+            "Management_Accounting":0.7,
+            "Corporate_Strategic_Planning":0.6
+        },
+        "repels": {
+            "Frontend_Development":-0.3,
+            "Brand_Management":-0.4,
+            "DevOps":-0.2
+        }
+    },
+
+    # ── 재무회계 명확화 ──
+    "Financial_Accounting": {
+        "core_attracts": {
+            "Management_Accounting":0.8,
+            "Financial_Audit":0.7,
+            "Internal_Control":0.7
+        },
+        "repels": {
+            "Backend_Engineering":-0.4,
+            "DevOps":-0.5,
+            "Frontend_Development":-0.5,
+            "Brand_Management":-0.4,
+            "Content_Marketing":-0.4
+        }
+    },
+    "Management_Accounting": {
+        "core_attracts": {
+            "Financial_Accounting":0.8,
+            "Financial_Planning_and_Analysis":0.8,
+            "Corporate_Strategic_Planning":0.6
+        },
+        "repels": {
+            "Backend_Engineering":-0.4,
+            "DevOps":-0.5,
+            "Frontend_Development":-0.5,
+            "Brand_Management":-0.4
+        }
+    },
+
+    # ── 하드웨어/임베디드 경계 강화 ──
+    "Semiconductor_Engineering": {
+        "core_attracts": {
+            "RTL_Design":0.8,
+            "SoC":0.8,
+            "Semiconductor_Process":0.7
+        },
+        "repels": {
+            "Backend_Engineering":-0.4,
+            "Frontend_Development":-0.5,
+            "Brand_Management":-0.5,
+            "Data_Engineering":-0.3,
+            "Performance_Marketing":-0.5
+        }
+    },
+    "Sys_Software": {
+        "core_attracts": {
+            "Embedded_Linux":0.9,
+            "Firmware":0.8,
+            "Embedded_System_and_Compiler_Optimization":0.7
+        },
+        "repels": {
+            "Brand_Management":-0.5,
+            "Frontend_Development":-0.3,
+            "Content_Marketing":-0.5,
+            "Tax_Accounting":-0.5
+        }
+    },
+    "High_Performance_Computing": {
+        "core_attracts": {
+            "GPGPU":0.9,
+            "Infrastructure_and_Cloud":0.7,
+            "AI_Model_and_Distributed_Training":0.8
+        },
+        "repels": {
+            "Brand_Management":-0.5,
+            "Frontend_Development":-0.4,
+            "Tax_Accounting":-0.5,
+            "Content_Marketing":-0.5
+        }
+    },
+    "RDMA": {
+        "core_attracts": {
+            "High_Performance_Computing":0.9,
+            "InfiniBand_Network":0.8,
+            "Network_Protocol_Stack":0.7
+        },
+        "repels": {
+            "Brand_Management":-0.5,
+            "Frontend_Development":-0.5,
+            "Tax_Accounting":-0.5,
+            "Content_Marketing":-0.5
+        }
+    },
+    "GPGPU": {
+        "core_attracts": {
+            "High_Performance_Computing":0.9,
+            "AI_Model_and_Distributed_Training":0.8,
+            "NPU":0.7
+        },
+        "repels": {
+            "Brand_Management":-0.5,
+            "Frontend_Development":-0.5,
+            "Tax_Accounting":-0.5
+        }
+    }
+})
