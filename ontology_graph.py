@@ -5424,3 +5424,29 @@ UNIFIED_GRAVITY_FIELD.update({
         }
     }
 })
+
+
+# --- Added for Technical_Sales Mapping ---
+CANONICAL_MAP.update({
+    'IT영업': 'Technical_Sales',
+    'IT 영업': 'Technical_Sales',
+    'cloud 영업': 'Technical_Sales',
+    '솔루션 영업': 'Technical_Sales',
+    '클라우드 영업': 'Technical_Sales',
+    'SaaS 영업': 'Technical_Sales',
+    'B2B IT 영업': 'Technical_Sales'
+})
+
+UNIFIED_GRAVITY_FIELD['Technical_Sales'] = {
+    'core_attracts': {
+        'Infrastructure_and_Cloud': 0.8,
+        'SW_Software': 0.7,
+        'B2B영업': 0.8,
+        'Sales_Core': 0.6
+    },
+    'repels': {
+        'Financial_Accounting': -0.3,
+        'HR_Core': -0.3
+    }
+}
+
