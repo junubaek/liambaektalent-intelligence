@@ -1373,6 +1373,10 @@ def api_search_v8(prompt: str, session_id: str = None, **kwargs) -> dict:
                     id_to_name[cid] = r['name']
                     
                     raw_graph_score = calculate_gravity_fusion_score(cand_edges, conds, is_category_search)
+                    candidate_nodes = [e['skill'] for e in cand_edges] if isinstance(cand_edges, list) else cand_edges
+                    query_nodes = [c['skill'] for c in conds]
+                    seniority = kwargs.get('seniority', 'All')
+                    raw_graph_score += calc_gravity_score(candidate_nodes, query_nodes, seniority)
                     graph_score = math.log(max(raw_graph_score, 0) + 1)
                     
                     if graph_score > 0:
@@ -1433,6 +1437,10 @@ def api_search_v8(prompt: str, session_id: str = None, **kwargs) -> dict:
         v_score = vscore_map.get(cid, 0.0)
         
         raw_g = calculate_gravity_fusion_score(cand_edges, conds, is_category_search)
+        candidate_nodes = [e['skill'] for e in cand_edges] if isinstance(cand_edges, list) else cand_edges
+        query_nodes = [c['skill'] for c in conds]
+        seniority = kwargs.get('seniority', 'All')
+        raw_g += calc_gravity_score(candidate_nodes, query_nodes, seniority)
         g_score = math.log(max(raw_g, 0) + 1)
         
         final_score = (v_score * 0.6) + (g_score * 0.4)
@@ -1530,7 +1538,7 @@ def api_search_v8(prompt: str, session_id: str = None, **kwargs) -> dict:
             
     dedup.sort(key=lambda x: (-x['ws_score'], -x['total_edges']))
     
-    return {'matched': dedup[:10], 'total': len(dedup), "is_category_search": is_category_search}
+    return {'matched': dedup[:100], 'total': len(dedup), "is_category_search": is_category_search}
 
 def normalize_query_with_map(raw_keywords):
     """
