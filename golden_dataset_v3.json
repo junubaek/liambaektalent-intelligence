@@ -8,6 +8,9 @@
     "company": "리벨리온",
     "raw_filename": "[리벨리온] 김정근(NPU Library Software Engineer)부문.docx",
     "relevant_ids": [
+      "31f22567-1b6f-8106-a331-e438f877d966",
+      "31f22567-1b6f-81e9-9eec-c735494cc02f",
+      "31f22567-1b6f-814d-9e7b-cf300cd3447f",
       "32e22567-1b6f-81e7-b76e-ce60c2ccfaa7"
     ]
   },
@@ -32,7 +35,10 @@
     "company": "GME",
     "raw_filename": "[GME] 김남균(Infra Engineer)부문.docx",
     "relevant_ids": [
-      "32e22567-1b6f-8132-8e30-cc7d51287721"
+      "32e22567-1b6f-8132-8e30-cc7d51287721",
+      "31f22567-1b6f-81ce-95b3-c1d79c7062c7",
+      "31f22567-1b6f-8149-b097-cf2ba9c9241e",
+      "31f22567-1b6f-8193-8cb9-d78eb4c59593"
     ]
   },
   {
@@ -44,19 +50,11 @@
     "company": "GME",
     "raw_filename": "[GME] 경성종(서버개발자)부문.docx",
     "relevant_ids": [
-      "32e22567-1b6f-81b2-a9d9-ebbb36299ab7"
-    ]
-  },
-  {
-    "jd_query": "Spring Fintech MSSQL",
-    "candidate_name": "김정기",
-    "candidate_neo4j_id": "32e22567-1b6f-8101-ab31-c33a53561a96",
-    "label": "positive",
-    "stage": "최종합격",
-    "company": "GME",
-    "raw_filename": "[GME] 김정기(서버개발자)부문.docx",
-    "relevant_ids": [
-      "32e22567-1b6f-8101-ab31-c33a53561a96"
+      "32e22567-1b6f-8101-ab31-c33a53561a96",
+      "32122567-1b6f-8189-9433-dcfe8c8f92e5",
+      "32e22567-1b6f-81be-bf41-cf9908031f93",
+      "32e22567-1b6f-81b2-a9d9-ebbb36299ab7",
+      "31f22567-1b6f-817a-a763-f718d9d40fbf"
     ]
   },
   {
@@ -68,7 +66,10 @@
     "company": "에스엠코어",
     "raw_filename": "[에스엠코어] 박형준(Tech본부 본부장)부문.docx",
     "relevant_ids": [
-      "31f22567-1b6f-81ab-895c-e19b82d8e8af"
+      "32e22567-1b6f-81a0-b913-ed0db4db2934",
+      "31f22567-1b6f-81ab-895c-e19b82d8e8af",
+      "32e22567-1b6f-81ab-8c37-e9213547cdbf",
+      "32122567-1b6f-81f5-893c-f1b2da945a12"
     ]
   },
   {
@@ -80,6 +81,9 @@
     "company": "위메이드",
     "raw_filename": "[위메이드] 안재용(NFT 사업개발_팀장)부문.docx",
     "relevant_ids": [
+      "31f22567-1b6f-81f3-bfe6-fb7fd7c9ad61",
+      "31f22567-1b6f-8150-8062-f6862dec66e5",
+      "32022567-1b6f-8121-b3b4-dac79d7ece90",
       "32e22567-1b6f-81c5-8f9e-c02433e25876"
     ]
   },
