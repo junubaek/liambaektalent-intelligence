@@ -246,7 +246,7 @@ export default function AntigravityMain() {
         required: reqKw, preferred: [], weights: settings
       };
 
-      const response = await fetch('/api/search', { method: 'POST', headers, body: JSON.stringify(payload) });
+      const response = await fetch('/api/search-v8', { method: 'POST', headers, body: JSON.stringify(payload) });
       if (!response.ok) throw new Error('API Error');
       const data = await response.json();
       setCandidates(data.matched || []);
@@ -757,20 +757,20 @@ export default function AntigravityMain() {
             <div className="space-y-6">
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <div className="flex justify-between items-end"><label className="text-[10px] font-black tracking-widest text-gray-400 uppercase">Vector</label><span className="text-[11px] font-black text-blue-600">{settings.vector.toFixed(2)}</span></div>
-                  <input type="range" min="0" max="1" step="0.01" value={settings.vector} onChange={(e) => handleWeightChange('vector', e.target.value)} className="w-full h-1 bg-gray-200 rounded-full appearance-none cursor-pointer accent-blue-600"/>
+                  <div className="flex justify-between items-end"><label className="text-[10px] font-black tracking-widest text-gray-400 uppercase">Vector</label><span className="text-[11px] font-black text-blue-600">{(settings.vector || 0).toFixed(2)}</span></div>
+                  <input type="range" min="0" max="1" step="0.01" value={settings.vector || 0} onChange={(e) => handleWeightChange('vector', e.target.value)} className="w-full h-1 bg-gray-200 rounded-full appearance-none cursor-pointer accent-blue-600"/>
                 </div>
                 <div className="space-y-2">
-                  <div className="flex justify-between items-end"><label className="text-[10px] font-black tracking-widest text-gray-400 uppercase">Graph</label><span className="text-[11px] font-black text-purple-600">{settings.graph.toFixed(2)}</span></div>
-                  <input type="range" min="0" max="1" step="0.01" value={settings.graph} onChange={(e) => handleWeightChange('graph', e.target.value)} className="w-full h-1 bg-gray-200 rounded-full appearance-none cursor-pointer accent-purple-600"/>
+                  <div className="flex justify-between items-end"><label className="text-[10px] font-black tracking-widest text-gray-400 uppercase">Graph</label><span className="text-[11px] font-black text-purple-600">{(settings.graph || 0).toFixed(2)}</span></div>
+                  <input type="range" min="0" max="1" step="0.01" value={settings.graph || 0} onChange={(e) => handleWeightChange('graph', e.target.value)} className="w-full h-1 bg-gray-200 rounded-full appearance-none cursor-pointer accent-purple-600"/>
                 </div>
                 <div className="space-y-2">
-                  <div className="flex justify-between items-end"><label className="text-[10px] font-black tracking-widest text-gray-400 uppercase">BM25</label><span className="text-[11px] font-black text-green-600">{settings.bm25.toFixed(2)}</span></div>
-                  <input type="range" min="0" max="1" step="0.01" value={settings.bm25} onChange={(e) => handleWeightChange('bm25', e.target.value)} className="w-full h-1 bg-gray-200 rounded-full appearance-none cursor-pointer accent-green-600"/>
+                  <div className="flex justify-between items-end"><label className="text-[10px] font-black tracking-widest text-gray-400 uppercase">BM25</label><span className="text-[11px] font-black text-green-600">{(settings.bm25 || 0).toFixed(2)}</span></div>
+                  <input type="range" min="0" max="1" step="0.01" value={settings.bm25 || 0} onChange={(e) => handleWeightChange('bm25', e.target.value)} className="w-full h-1 bg-gray-200 rounded-full appearance-none cursor-pointer accent-green-600"/>
                 </div>
                 <div className="space-y-2">
-                  <div className="flex justify-between items-end"><label className="text-[10px] font-black tracking-widest text-gray-400 uppercase">Depth</label><span className="text-[11px] font-black text-orange-600">{settings.depth.toFixed(2)}</span></div>
-                  <input type="range" min="0" max="1" step="0.01" value={settings.depth} onChange={(e) => handleWeightChange('depth', e.target.value)} className="w-full h-1 bg-gray-200 rounded-full appearance-none cursor-pointer accent-orange-600"/>
+                  <div className="flex justify-between items-end"><label className="text-[10px] font-black tracking-widest text-gray-400 uppercase">Depth</label><span className="text-[11px] font-black text-orange-600">{(settings.depth || 0).toFixed(2)}</span></div>
+                  <input type="range" min="0" max="1" step="0.01" value={settings.depth || 0} onChange={(e) => handleWeightChange('depth', e.target.value)} className="w-full h-1 bg-gray-200 rounded-full appearance-none cursor-pointer accent-orange-600"/>
                 </div>
               </div>
               
@@ -778,7 +778,7 @@ export default function AntigravityMain() {
                 <div className="flex justify-between items-center mb-4">
                   <span className="text-[9px] font-black text-gray-400 uppercase">Total Weight</span>
                   <span className={`text-[11px] font-black ${Math.abs((settings.vector + settings.graph + settings.bm25 + settings.depth) - 1.0) < 0.001 ? 'text-gray-900' : 'text-red-500'}`}>
-                    {(settings.vector + settings.graph + settings.bm25 + settings.depth).toFixed(2)}
+                    {((settings.vector || 0) + (settings.graph || 0) + (settings.bm25 || 0) + (settings.depth || 0)).toFixed(2)}
                   </span>
                 </div>
                 <div className="flex justify-between items-center bg-gray-50 p-2 rounded-lg text-[9px] font-bold text-gray-400 uppercase tracking-tighter">
@@ -788,9 +788,8 @@ export default function AntigravityMain() {
               </div>
             </div>
             
-            <div className="mt-8 flex flex-col gap-2">
+            <div className="mt-8">
               <button disabled={isLoading} onClick={executeSearch} className="w-full bg-black hover:bg-gray-800 text-white py-3.5 rounded-xl text-[10px] font-black tracking-widest uppercase transition-colors flex items-center justify-center gap-2">Apply Pipeline <Zap className="w-3.5 h-3.5 fill-current" /></button>
-              <button onClick={resetSettings} className="w-full bg-gray-50 hover:bg-gray-100 text-gray-500 hover:text-black border border-gray-200 py-2.5 rounded-xl text-[9px] font-black tracking-widest uppercase transition-colors flex items-center justify-center gap-1.5"><RotateCcw className="w-3 h-3" /> Reset to V9 Default</button>
             </div>
           </div>
         </div>
