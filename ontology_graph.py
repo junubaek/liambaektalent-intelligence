@@ -1,4 +1,4 @@
-import math
+﻿import math
 import networkx as nx
 
 # ── 1. Canonical Map (Expanded to 100+ Nodes) ────────────────────────────────────────────────────────
@@ -4899,7 +4899,7 @@ UNIFIED_GRAVITY_FIELD['Compliance']['repels'] = {'Legal_Practice': -0.1, 'Financ
 
 SENIOR_EXPANDED_SYNERGY = {
 
-    # Finance ?�?�급 ???�접 Finance ?�체 ?�너지
+    # Finance ?�?�급 ???�접 Finance ?�체 ?�너지
     "Tax_Accounting": [
         "Financial_Accounting", "Management_Accounting",
         "Financial_Planning_and_Analysis", "Internal_Control",
@@ -4921,7 +4921,7 @@ SENIOR_EXPANDED_SYNERGY = {
         "Investor_Relations", "Corporate_Disclosure"
     ],
 
-    # HR ?�?�급
+    # HR ?�?�급
     "HR_Strategic_Planning": [
         "Talent_Acquisition", "Compensation_and_Benefits",
         "Employee_Relations", "Organizational_Development",
@@ -4937,7 +4937,7 @@ SENIOR_EXPANDED_SYNERGY = {
         "Corporate_Culture_Branding"
     ],
 
-    # Marketing ?�?�급
+    # Marketing ?�?�급
     "Performance_Marketing": [
         "Brand_Management", "CRM_Marketing",
         "Content_Marketing", "Growth_Marketing",
@@ -4953,7 +4953,7 @@ SENIOR_EXPANDED_SYNERGY = {
         "Performance_Marketing", "Content_Marketing"
     ],
 
-    # Tech ?�?�급
+    # Tech ?�?�급
     "Backend_Engineering": [
         "DevOps", "Data_Engineering", "Frontend_Development",
         "MSA_Architecture", "System_Architecture"
@@ -4967,7 +4967,7 @@ SENIOR_EXPANDED_SYNERGY = {
         "MLOps", "Data_Science", "AI_Engineering"
     ],
 
-    # Strategy ?�?�급
+    # Strategy ?�?�급
     "Corporate_Strategic_Planning": [
         "Financial_Planning_and_Analysis", "M_and_A_Strategy",
         "New_Business_Development", "Corporate_Governance",
