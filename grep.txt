@@ -1,0 +1,7 @@
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+# Serve index.html dynamically to prevent caching
+from fastapi.responses import FileResponse
+    path = os.path.join(DIST_DIR, "index.html")
+        return FileResponse(path, headers={"Cache-Control": "no-cache, no-store, must-revalidate", "Pragma": "no-cache", "Expires": "0"})
+    app.mount("/", StaticFiles(directory=DIST_DIR), name="frontend_v2_static")

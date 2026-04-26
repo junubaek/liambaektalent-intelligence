@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antigravity Intelligence OS v8.6.0 | Real-time AI Pipeline</title>
+    <title>Antigravity Intelligence OS v9.0 HYBRID | Real-time AI Pipeline</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -91,6 +91,7 @@
                         <button onclick="clearSectors()" class="text-[8px] font-black text-slate-500 hover:underline transition-colors uppercase">Reset</button>
                     </div>
                     <div id="sidebar-sector-list" class="flex flex-col gap-1"></div>
+
                 </div>
 
                 <div class="mt-auto pt-6 border-t border-[#F1F3F5] px-1 space-y-4">
@@ -124,7 +125,7 @@
                 <div class="flex items-center gap-6">
                     <div class="hidden sm:flex items-center gap-2.5 px-3.5 py-1 bg-[#F8F9FA] rounded-full border border-[#EEEEEE]">
                         <div class="w-1.5 h-1.5 rounded-full bg-black"></div>
-                        <span class="text-[9px] font-black tracking-[0.2em] text-[#6B7280] uppercase">v8.6.0 Real-time</span>
+                        <span class="text-[9px] font-black tracking-[0.2em] text-[#6B7280] uppercase">v9.0 HYBRID</span>
                     </div>
                     <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center border border-slate-200 cursor-pointer">
                         <i data-lucide="user" class="w-4 h-4 text-slate-500"></i>
@@ -165,16 +166,66 @@
                                 <p class="text-[10px] font-black text-black uppercase tracking-[0.2em]">Required Keywords</p>
                                 <input type="text" id="required-keywords" placeholder="예: IPO, 자금조달, M&A" class="w-full input-minimal placeholder:text-[#CED4DA]" />
                             </div>
+                            
+                            <!-- Fusion Controls -->
+                            <div class="space-y-6 pt-4 border-t border-slate-50">
+                                <div class="flex justify-between items-center">
+                                    <p class="text-[10px] font-black text-black uppercase tracking-[0.2em]">Fusion Controls</p>
+                                    <button onclick="resetWeights()" class="text-[8px] font-black text-slate-500 hover:underline transition-colors uppercase">Reset</button>
+                                </div>
+                                <div class="space-y-5">
+                                    <div class="space-y-2">
+                                        <div class="flex justify-between text-[10px] font-bold text-slate-600 uppercase">
+                                            <span>Vector</span>
+                                            <span id="val-vector" class="text-blue-600">0.60</span>
+                                        </div>
+                                        <input type="range" id="weight-vector" min="0" max="1" step="0.01" value="0.60" oninput="handleWeightInput()" class="w-full accent-black h-1 bg-slate-100 rounded-lg appearance-none cursor-pointer">
+                                    </div>
+                                    <div class="space-y-2">
+                                        <div class="flex justify-between text-[10px] font-bold text-slate-600 uppercase">
+                                            <span>Graph</span>
+                                            <span id="val-graph" class="text-purple-600">0.28</span>
+                                        </div>
+                                        <input type="range" id="weight-graph" min="0" max="1" step="0.01" value="0.28" oninput="handleWeightInput()" class="w-full accent-black h-1 bg-slate-100 rounded-lg appearance-none cursor-pointer">
+                                    </div>
+                                    <div class="space-y-2">
+                                        <div class="flex justify-between text-[10px] font-bold text-slate-600 uppercase">
+                                            <span>BM25</span>
+                                            <span id="val-bm25" class="text-green-600">0.05</span>
+                                        </div>
+                                        <input type="range" id="weight-bm25" min="0" max="1" step="0.01" value="0.05" oninput="handleWeightInput()" class="w-full accent-black h-1 bg-slate-100 rounded-lg appearance-none cursor-pointer">
+                                    </div>
+                                    <div class="space-y-2">
+                                        <div class="flex justify-between text-[10px] font-bold text-slate-600 uppercase">
+                                            <span>Depth</span>
+                                            <span id="val-depth" class="text-orange-600">0.07</span>
+                                        </div>
+                                        <input type="range" id="weight-depth" min="0" max="1" step="0.01" value="0.07" oninput="handleWeightInput()" class="w-full accent-black h-1 bg-slate-100 rounded-lg appearance-none cursor-pointer">
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-[9px] font-black text-slate-400 uppercase tracking-tighter">Total: <span id="val-total">1.00</span></span>
+                                    <div class="flex items-center gap-3 text-[9px] font-black text-slate-300">
+                                        <span class="hover:text-black cursor-help" title="Synergy Multiplier">X1.4 SYNERGY</span>
+                                        <span class="hover:text-black cursor-help" title="Depth Multiplier">X1.3 DEPTH</span>
+                                    </div>
+                                </div>
+                            </div>
                             <!-- Data Quality Filter -->
                             <div class="flex items-center gap-2 mt-2">
                                 <input type="checkbox" id="filter-complete" class="w-3.5 h-3.5 rounded border-slate-300 text-black focus:ring-black">
                                 <label for="filter-complete" class="text-[11px] font-bold text-slate-600">☑️ 정보 완전한 후보자만 보기</label>
                             </div>
                             <div class="mt-auto">
-                                <button id="run-pipeline-btn" onclick="startAnalyze()" class="group flex items-center justify-center gap-4 bg-black text-white w-full py-5 rounded-3xl text-[11px] font-black tracking-[0.3em] uppercase hover:bg-[#1A1A1A] transition-all active:scale-95 shadow-lg">
-                                    RUN PIPELINE
-                                    <i data-lucide="zap" class="w-4 h-4 group-hover:animate-pulse"></i>
-                                </button>
+                                <div class="flex gap-4">
+                                    <button id="run-pipeline-btn" onclick="startAnalyze()" class="flex-1 group flex items-center justify-center gap-4 bg-black text-white py-5 rounded-3xl text-[11px] font-black tracking-[0.3em] uppercase hover:bg-[#1A1A1A] transition-all active:scale-95 shadow-lg">
+                                        APPLY PIPELINE
+                                        <i data-lucide="zap" class="w-4 h-4 group-hover:animate-pulse"></i>
+                                    </button>
+                                    <button onclick="resetAll()" class="w-14 bg-slate-50 border border-slate-200 rounded-3xl flex items-center justify-center hover:bg-slate-100 transition-all text-slate-400 hover:text-black" title="Reset All Filters">
+                                        <i data-lucide="rotate-ccw" class="w-5 h-5"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
@@ -199,7 +250,14 @@
         };
 
         const MAIN_SECTORS = ["AI", "DATA", "Finance", "HR", "HW", "MD", "PRODUCT", "STRATEGY", "SW", "디자인", "마케팅", "물류/유통", "반도체", "법무", "보안", "영업", "총무", "기타"];
-        let state = { seniority: ['All'], selectedSectors: [], currentView: 'home', candidates: [] };
+        const DEFAULT_WEIGHTS = { vector: 0.60, graph: 0.28, bm25: 0.05, depth: 0.07 };
+        let state = { 
+            seniority: ['All'], 
+            selectedSectors: [], 
+            currentView: 'home', 
+            candidates: [],
+            weights: { ...DEFAULT_WEIGHTS }
+        };
 
         function init() {
             renderSectors();
@@ -306,6 +364,33 @@
             });
         }
 
+        function handleWeightInput() {
+            const v = parseFloat(document.getElementById('weight-vector').value);
+            const g = parseFloat(document.getElementById('weight-graph').value);
+            const b = parseFloat(document.getElementById('weight-bm25').value);
+            const d = parseFloat(document.getElementById('weight-depth').value);
+            
+            state.weights = { vector: v, graph: g, bm25: b, depth: d };
+            
+            document.getElementById('val-vector').innerText = v.toFixed(2);
+            document.getElementById('val-graph').innerText = g.toFixed(2);
+            document.getElementById('val-bm25').innerText = b.toFixed(2);
+            document.getElementById('val-depth').innerText = d.toFixed(2);
+            
+            const total = v + g + b + d;
+            document.getElementById('val-total').innerText = total.toFixed(2);
+            document.getElementById('val-total').style.color = Math.abs(total - 1) < 0.001 ? '#94a3b8' : '#ef4444';
+        }
+
+        function resetWeights() {
+            state.weights = { ...DEFAULT_WEIGHTS };
+            document.getElementById('weight-vector').value = state.weights.vector;
+            document.getElementById('weight-graph').value = state.weights.graph;
+            document.getElementById('weight-bm25').value = state.weights.bm25;
+            document.getElementById('weight-depth').value = state.weights.depth;
+            handleWeightInput();
+        }
+
         function resetAll() {
             state.seniority = ['All'];
             state.selectedSectors = [];
@@ -314,6 +399,7 @@
             document.getElementById('header-search').value = '';
             clearSectors();
             updateSeniorityUI();
+            resetWeights();
         }
 
         function setView(view) {
@@ -336,7 +422,7 @@
                 sectors: state.selectedSectors,
                 seniority: state.seniority.includes('All') ? 'All' : state.seniority[0],
                 required: reqKw,
-                preferred: []
+                weights: state.weights
             };
 
             setView('results');
@@ -462,19 +548,30 @@
                                 <div id="detail-${id}" class="${isExpandedHTML} border-t border-slate-50 bg-[#FBFCFD] p-12 animate-fade-in cursor-default" onclick="event.stopPropagation()">
                                     <div class="space-y-12">
                                         <div class="space-y-4 pb-10 border-b border-slate-100">
-                                            <div class="grid grid-cols-10 gap-4 text-[11px] font-black uppercase tracking-tighter items-center">
-                                                <div class="col-span-4 flex flex-col gap-1.5 pl-2">
-                                                    <span class="text-slate-400 text-[9px]">Matched Nodes</span>
-                                                    <span class="text-slate-800 leading-snug" style="font-size: 0.85rem; font-weight: 700; word-break: break-all; margin-bottom: 4px; display: block;">Top Skills: ${(c.top_skills || []).join(', ')}</span>
-                                                    <span class="text-slate-800 leading-snug" style="font-size: 0.85rem; font-weight: 700; word-break: break-all; color: #4b5563;">Top Actions: ${(c.top_actions || []).join(', ')}</span>
+                                            <div class="flex justify-between items-start">
+                                                <div class="flex flex-col gap-1.5 pl-2">
+                                                    <span class="text-slate-400 text-[9px] uppercase font-black tracking-widest">Matched Evidence</span>
+                                                    <span class="text-slate-800 leading-snug" style="font-size: 0.85rem; font-weight: 700; word-break: break-all; margin-bottom: 2px; display: block;">Top Skills: ${(c.top_skills || []).join(', ')}</span>
+                                                    <span class="text-slate-500 leading-snug" style="font-size: 0.75rem; font-weight: 600; word-break: break-all;">Actions: ${(c.top_actions || []).join(', ')}</span>
                                                 </div>
-                                                <div class="col-span-3 flex flex-col gap-1.5 border-l border-slate-100 pl-6">
-                                                    <span class="text-slate-400 text-[9px]">Graph Score</span>
-                                                    <span class="text-indigo-600 text-[1.1rem] font-black">${c.graph_score || 0} <span class="text-xs text-slate-400">/ ${c.max_graph_score || 0}</span></span>
-                                                </div>
-                                                <div class="col-span-3 flex flex-col gap-1.5 border-l border-slate-100 pl-6">
-                                                    <span class="text-slate-400 text-[9px]">Vector Score</span>
-                                                    <span class="text-blue-600 text-[1.1rem] font-black">${c.vector_score || 0} <span class="text-xs text-slate-400">/ ${c.max_vector_score || 0}</span></span>
+                                                
+                                                <div class="flex flex-col items-end gap-1 text-right pr-2">
+                                                    <div class="flex items-center gap-2 mb-1">
+                                                        <span class="text-[10px] font-black text-slate-400 uppercase">Final</span>
+                                                        <span class="text-indigo-600 text-[1.2rem] font-black leading-none">${(c.final_score || 0).toFixed(2)}</span>
+                                                    </div>
+                                                    <div class="text-[10px] font-bold text-slate-600 flex gap-3 uppercase">
+                                                        <span>G: <span class="text-purple-600 font-black">${(c.g_score || 0).toFixed(2)}</span></span>
+                                                        <span>V: <span class="text-blue-600 font-black">${(c.v_score || 0).toFixed(2)}</span></span>
+                                                    </div>
+                                                    <div class="text-[9px] font-bold text-slate-400 flex gap-3 uppercase">
+                                                        <span>B: <span class="text-green-600">${(c.bm_score || 0).toFixed(2)}</span></span>
+                                                        <span>D: <span class="text-orange-600 underline decoration-dotted" title="Action Intensity + Achievement Density">${(c.depth_score || 0).toFixed(2)}</span></span>
+                                                    </div>
+                                                    <div class="flex items-center gap-1.5 mt-1">
+                                                        <div class="w-1 h-1 rounded-full bg-slate-300"></div>
+                                                        <span class="text-[9px] font-black text-slate-400 uppercase tracking-tighter">${(c.matched_skills || []).length} nodes matched</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="flex items-center gap-10 text-[11px] font-bold text-slate-400 uppercase tracking-[0.1em] pt-4">

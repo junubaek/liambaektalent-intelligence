@@ -166,6 +166,7 @@ class AddUserRequest(BaseModel):
 
 
 app = FastAPI(title="Antigravity Pipeline v4.0 API")
+DIST_DIR = os.path.join(ROOT_DIR, 'frontend_v2', 'dist')
 
 # Initialize modules (Matcher uses secrets.json from ROOT_DIR)
 matcher = MatcherV4_2(secrets_path=os.path.join(ROOT_DIR, "secrets.json"))
@@ -186,6 +187,8 @@ class SearchRequestV5(BaseModel):
     seniority: List[str] = ["All"]
     required: List[str] = []
     preferred: List[str] = []
+    weights: Optional[Dict[str, float]] = None
+    session_id: Optional[str] = None
 
 class ParseCareerRequest(BaseModel):
     candidate_id: str
@@ -200,7 +203,7 @@ def get_parse_lock(candidate_id: str) -> asyncio.Lock:
 
 from backend.search_engine_v5 import search_candidates as search_candidates_v5
 from backend.search_engine_v6 import search_candidates_v6
-from jd_compiler import api_search_v8
+from jd_compiler import api_search_v9
 
 
 
@@ -394,7 +397,7 @@ def add_admin_user(req: AddUserRequest, current_user: dict = Depends(get_current
     
     salt = bcrypt.gensalt()
     pw_hash = bcrypt.hashpw(req.password.encode('utf-8'), salt).decode('utf-8')
-    default_settings = json.dumps({"wv": 0.6, "wg": 0.4, "synergy": 1.4, "depth": 1.3})
+    default_settings = json.dumps({"wv": 0.6, "wg": 0.28, "bm25": 0.05, "depth": 0.07, "synergy": 1.4})
     
     cursor.execute(
         "INSERT INTO users (id, name, role, password_hash, is_admin, settings_json) VALUES (?, ?, ?, ?, 0, ?)",
@@ -556,13 +559,13 @@ def api_search_v8_endpoint(req: SearchRequestV5):
             print(f"[CACHE HIT] {req.prompt[:30]}")
             return jd_cache[cache_key]
             
-        from jd_compiler import api_search_v8
-        res = api_search_v8(
-            prompt=req.prompt,
-            sectors=req.sectors,
+        from jd_compiler import api_search_v9
+        weights = getattr(req, "weights", None)
+        res = api_search_v9(
+            req.prompt, 
+            session_id=req.session_id,
             seniority=req.seniority,
-            required=req.required,
-            preferred=req.preferred,
+            weights=weights
         )
         
         # Apply seniority filter

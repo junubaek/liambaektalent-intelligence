@@ -41,7 +41,10 @@ with open(r"C:\Users\cazam\Downloads\이력서자동분석검색시스템\secret
 # Clients
 genai.configure(api_key=secrets["GEMINI_API_KEY"])
 model = genai.GenerativeModel("gemini-2.5-flash")
-driver = GraphDatabase.driver("neo4j://127.0.0.1:7687", auth=("neo4j", "toss1234"))
+n_uri = secrets.get("NEO4J_URI", "neo4j://127.0.0.1:7687")
+n_user = secrets.get("NEO4J_USERNAME", "neo4j")
+n_pw = secrets.get("NEO4J_PASSWORD", "toss1234")
+driver = GraphDatabase.driver(n_uri, auth=(n_user, n_pw))
 
 gdrive = GDriveConnector()
 folder_id = secrets.get("GOOGLE_DRIVE_FOLDER_ID")

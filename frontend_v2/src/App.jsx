@@ -5,7 +5,7 @@ export default function AntigravityMain() {
   const [token, setToken] = useState(localStorage.getItem('token') || '');
   const [currentUserData, setCurrentUserData] = useState(null);
   
-  const [settings, setSettings] = useState({ wv: 0.6, wg: 0.4, synergy: 1.4, depth: 1.3 });
+  const [settings, setSettings] = useState({ vector: 0.60, graph: 0.28, bm25: 0.05, depth: 0.07, synergy: 1.4 });
   const [userBookmarks, setUserBookmarks] = useState([]);
   const [userHistory, setUserHistory] = useState([]);
   const [historyPage, setHistoryPage] = useState(1);
@@ -75,7 +75,7 @@ export default function AntigravityMain() {
       if (res.ok) {
         const data = await res.json();
         setCurrentUserData(data);
-        setSettings(data.settings || { wv: 0.6, wg: 0.4, synergy: 1.4, depth: 1.3 });
+        setSettings(data.settings || { vector: 0.60, graph: 0.28, bm25: 0.05, depth: 0.07, synergy: 1.4 });
         setIsModalOpen(false);
       } else {
         handleLogout();
@@ -149,11 +149,7 @@ export default function AntigravityMain() {
     setIsUserMenuOpen(false);
   };
 
-  const handleWvChange = (e) => {
-    const newWv = parseFloat(e.target.value);
-    setSettings(prev => ({ ...prev, wv: newWv, wg: parseFloat((1 - newWv).toFixed(2)) }));
-  };
-  const handleSettingChange = (key, value) => {
+  const handleWeightChange = (key, value) => {
     setSettings(prev => ({ ...prev, [key]: parseFloat(value) }));
   };
 
@@ -170,10 +166,11 @@ export default function AntigravityMain() {
   };
   
   const resetSettings = () => {
-      setSettings({ wv: 0.6, wg: 0.4, synergy: 1.4, depth: 1.3 });
+      const defaults = { vector: 0.60, graph: 0.28, bm25: 0.05, depth: 0.07, synergy: 1.4 };
+      setSettings(defaults);
       if (token) {
         fetch('/api/auth/settings', {
-          method: 'PUT', headers, body: JSON.stringify({ wv: 0.6, wg: 0.4, synergy: 1.4, depth: 1.3 })
+          method: 'PUT', headers, body: JSON.stringify(defaults)
         });
       }
   };
@@ -249,7 +246,7 @@ export default function AntigravityMain() {
         required: reqKw, preferred: [], weights: settings
       };
 
-      const response = await fetch('/api/search-v8', { method: 'POST', headers, body: JSON.stringify(payload) });
+      const response = await fetch('/api/search', { method: 'POST', headers, body: JSON.stringify(payload) });
       if (!response.ok) throw new Error('API Error');
       const data = await response.json();
       setCandidates(data.matched || []);
@@ -338,9 +335,19 @@ export default function AntigravityMain() {
                 </div>
                 <div className="flex-1 pl-6 border-l border-gray-100 text-right flex flex-col justify-start">
                     <h5 className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-3">NODESCORE</h5>
-                    <div className="flex flex-col justify-end items-end gap-2 text-right">
-                        {candidate.graph_score !== undefined && <div className="text-[28px] leading-none font-black text-indigo-500">G: {candidate.graph_score.toFixed(2)} <span className="text-[12px] font-black text-gray-300">/ 10.0</span></div>}
-                        {candidate.vector_score !== undefined && <div className="text-[28px] leading-none font-black text-blue-500 ml-1">V: {candidate.vector_score.toFixed(2)} <span className="text-[12px] font-black text-gray-300">/ 1.00</span></div>}
+                    <div className="flex flex-col justify-end items-end gap-1 text-right">
+                        <div className="flex items-center gap-2 mb-1">
+                            <span className="text-[10px] font-black text-gray-400 uppercase">Final</span>
+                            <span className="text-indigo-600 text-[1.4rem] font-black leading-none">{(candidate.final_score || 0).toFixed(2)}</span>
+                        </div>
+                        <div className="text-[10px] font-bold text-gray-600 flex gap-3 uppercase justify-end">
+                            <span>G: <span className="text-purple-600 font-black">{(candidate.g_score || 0).toFixed(2)}</span></span>
+                            <span>V: <span className="text-blue-600 font-black">{(candidate.v_score || 0).toFixed(2)}</span></span>
+                        </div>
+                        <div className="text-[9px] font-bold text-gray-400 flex gap-3 uppercase justify-end">
+                            <span>B: <span className="text-green-600">{(candidate.bm_score || 0).toFixed(2)}</span></span>
+                            <span>D: <span className="text-orange-600 underline decoration-dotted" title="Action Intensity + Achievement Density">{(candidate.depth_score || 0).toFixed(2)}</span></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -465,10 +472,17 @@ export default function AntigravityMain() {
                 </div>
               ) : (
                 <div className="text-right hidden lg:block mr-2">
-                  {candidate.graph_score !== undefined && <div className="text-[11px] font-black tracking-widest text-[#111]">G: <span className="text-indigo-500">{candidate.graph_score.toFixed(2)}</span></div>}
-                  {candidate.vector_score !== undefined && <div className="text-[11px] font-black tracking-widest text-[#111] mt-[3px]">V: <span className="text-blue-500">{candidate.vector_score.toFixed(2)}</span></div>}
-                  <div className="text-[9px] font-bold text-gray-500 tracking-widest mt-1.5 flex justify-end gap-2">
-                    <span>⬡ {candidate.matched_edges ? candidate.matched_edges.length : 0} nodes</span>
+                  <div className="flex items-center justify-end gap-2 mb-1">
+                    <span className="text-[9px] font-black text-gray-400 uppercase">Final</span>
+                    <span className="text-[16px] font-black text-indigo-600 leading-none">{(candidate.final_score || 0).toFixed(2)}</span>
+                  </div>
+                  <div className="text-[9px] font-bold text-gray-500 tracking-tighter flex justify-end gap-2 uppercase">
+                    <span>V: <span className="text-blue-500">{(candidate.v_score || 0).toFixed(2)}</span></span>
+                    <span>G: <span className="text-purple-500">{(candidate.g_score || 0).toFixed(2)}</span></span>
+                  </div>
+                  <div className="text-[8px] font-bold text-gray-400 tracking-tighter flex justify-end gap-2 uppercase mt-0.5 opacity-60">
+                    <span>B: {(candidate.bm_score || 0).toFixed(2)}</span>
+                    <span>D: {(candidate.depth_score || 0).toFixed(2)}</span>
                   </div>
                 </div>
               )}
@@ -628,21 +642,21 @@ export default function AntigravityMain() {
                       </button>
                   </div>
                   
-                  <div className="space-y-6">
+                  <div className="space-y-4">
                       <div className="flex justify-between items-center bg-gray-50 p-4 rounded-xl border border-gray-100">
                           <span className="text-[10px] font-black text-gray-500 uppercase tracking-wider">Vector</span>
-                          <input type="number" step="0.1" value={settings.wv} onChange={handleWvChange} className="w-16 bg-transparent text-right font-black text-black outline-none border-b border-gray-300" />
+                          <input type="number" step="0.01" value={settings.vector} onChange={(e) => handleWeightChange('vector', e.target.value)} className="w-16 bg-transparent text-right font-black text-black outline-none border-b border-gray-300" />
                       </div>
                       <div className="flex justify-between items-center bg-gray-50 p-4 rounded-xl border border-gray-100">
                           <span className="text-[10px] font-black text-gray-500 uppercase tracking-wider">Graph</span>
-                          <input type="number" step="0.1" value={settings.wg} disabled className="w-16 bg-transparent text-right font-black text-black outline-none border-b border-transparent" />
+                          <input type="number" step="0.01" value={settings.graph} onChange={(e) => handleWeightChange('graph', e.target.value)} className="w-16 bg-transparent text-right font-black text-black outline-none border-b border-gray-300" />
                       </div>
                       <div className="flex justify-between items-center bg-gray-50 p-4 rounded-xl border border-gray-100">
-                          <span className="text-[10px] font-black text-gray-500 uppercase tracking-wider">Depth / Syn</span>
+                          <span className="text-[10px] font-black text-gray-500 uppercase tracking-wider">BM25 / Depth</span>
                           <div className="flex items-center gap-2">
-                               <input type="number" step="0.1" value={settings.depth} onChange={(e) => handleSettingChange('depth', e.target.value)} className="w-12 bg-transparent text-right font-black text-black outline-none border-b border-gray-300" />
+                               <input type="number" step="0.01" value={settings.bm25} onChange={(e) => handleWeightChange('bm25', e.target.value)} className="w-12 bg-transparent text-right font-black text-black outline-none border-b border-gray-300" />
                                <span>/</span>
-                               <input type="number" step="0.1" value={settings.synergy} onChange={(e) => handleSettingChange('synergy', e.target.value)} className="w-12 bg-transparent text-right font-black text-black outline-none border-b border-gray-300" />
+                               <input type="number" step="0.01" value={settings.depth} onChange={(e) => handleWeightChange('depth', e.target.value)} className="w-12 bg-transparent text-right font-black text-black outline-none border-b border-gray-300" />
                           </div>
                       </div>
                   </div>
@@ -740,27 +754,43 @@ export default function AntigravityMain() {
             <div className="mb-6 flex items-center gap-2"><SlidersHorizontal className="w-5 h-5 text-black" /><h2 className="text-sm font-black uppercase tracking-widest text-black">Fusion Controls</h2></div>
             <p className="text-xs text-gray-800 font-black mb-8 leading-relaxed">{currentUserData ? `${currentUserData.name}님의 검색 가중치 설정입니다.` : ""}</p>
 
-            <div className="space-y-10">
-              <div>
-                <label className="block text-[13px] font-black tracking-widest text-black uppercase mb-4">Vector vs Graph</label>
-                <input type="range" min="0" max="1" step="0.05" value={settings.wv} onChange={handleWvChange} className="w-full h-1 bg-gray-300 rounded-full appearance-none cursor-pointer accent-black mb-3"/>
-                <div className="flex justify-between">
-                  <div className="flex flex-col"><span className="text-[10px] font-bold text-gray-500 uppercase">Vector</span><span className="text-sm font-black text-black">{settings.wv.toFixed(2)}</span></div>
-                  <div className="flex flex-col text-right"><span className="text-[10px] font-bold text-gray-500 uppercase">Graph</span><span className="text-sm font-black text-black">{settings.wg.toFixed(2)}</span></div>
+            <div className="space-y-6">
+              <div className="space-y-4">
+                <div className="space-y-2">
+                  <div className="flex justify-between items-end"><label className="text-[10px] font-black tracking-widest text-gray-400 uppercase">Vector</label><span className="text-[11px] font-black text-blue-600">{settings.vector.toFixed(2)}</span></div>
+                  <input type="range" min="0" max="1" step="0.01" value={settings.vector} onChange={(e) => handleWeightChange('vector', e.target.value)} className="w-full h-1 bg-gray-200 rounded-full appearance-none cursor-pointer accent-blue-600"/>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex justify-between items-end"><label className="text-[10px] font-black tracking-widest text-gray-400 uppercase">Graph</label><span className="text-[11px] font-black text-purple-600">{settings.graph.toFixed(2)}</span></div>
+                  <input type="range" min="0" max="1" step="0.01" value={settings.graph} onChange={(e) => handleWeightChange('graph', e.target.value)} className="w-full h-1 bg-gray-200 rounded-full appearance-none cursor-pointer accent-purple-600"/>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex justify-between items-end"><label className="text-[10px] font-black tracking-widest text-gray-400 uppercase">BM25</label><span className="text-[11px] font-black text-green-600">{settings.bm25.toFixed(2)}</span></div>
+                  <input type="range" min="0" max="1" step="0.01" value={settings.bm25} onChange={(e) => handleWeightChange('bm25', e.target.value)} className="w-full h-1 bg-gray-200 rounded-full appearance-none cursor-pointer accent-green-600"/>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex justify-between items-end"><label className="text-[10px] font-black tracking-widest text-gray-400 uppercase">Depth</label><span className="text-[11px] font-black text-orange-600">{settings.depth.toFixed(2)}</span></div>
+                  <input type="range" min="0" max="1" step="0.01" value={settings.depth} onChange={(e) => handleWeightChange('depth', e.target.value)} className="w-full h-1 bg-gray-200 rounded-full appearance-none cursor-pointer accent-orange-600"/>
                 </div>
               </div>
-              <div>
-                <div className="flex justify-between items-end mb-4"><label className="text-[13px] font-black tracking-widest text-black uppercase">Depth</label><span className="text-xs font-black text-black">x {settings.depth.toFixed(1)}</span></div>
-                <input type="range" min="1.0" max="2.0" step="0.1" value={settings.depth} onChange={(e) => handleSettingChange('depth', e.target.value)} className="w-full h-1 bg-gray-300 rounded-full appearance-none cursor-pointer accent-black"/>
-              </div>
-              <div>
-                <div className="flex justify-between items-end mb-4"><label className="text-[13px] font-black tracking-widest text-black uppercase">Synergy</label><span className="text-xs font-black text-black">x {settings.synergy.toFixed(1)}</span></div>
-                <input type="range" min="1.0" max="2.0" step="0.1" value={settings.synergy} onChange={(e) => handleSettingChange('synergy', e.target.value)} className="w-full h-1 bg-gray-300 rounded-full appearance-none cursor-pointer accent-black"/>
+              
+              <div className="pt-4 border-t border-gray-100">
+                <div className="flex justify-between items-center mb-4">
+                  <span className="text-[9px] font-black text-gray-400 uppercase">Total Weight</span>
+                  <span className={`text-[11px] font-black ${Math.abs((settings.vector + settings.graph + settings.bm25 + settings.depth) - 1.0) < 0.001 ? 'text-gray-900' : 'text-red-500'}`}>
+                    {(settings.vector + settings.graph + settings.bm25 + settings.depth).toFixed(2)}
+                  </span>
+                </div>
+                <div className="flex justify-between items-center bg-gray-50 p-2 rounded-lg text-[9px] font-bold text-gray-400 uppercase tracking-tighter">
+                  <span>x1.4 Synergy</span>
+                  <span>x1.3 Depth</span>
+                </div>
               </div>
             </div>
             
-            <div className="mt-8">
+            <div className="mt-8 flex flex-col gap-2">
               <button disabled={isLoading} onClick={executeSearch} className="w-full bg-black hover:bg-gray-800 text-white py-3.5 rounded-xl text-[10px] font-black tracking-widest uppercase transition-colors flex items-center justify-center gap-2">Apply Pipeline <Zap className="w-3.5 h-3.5 fill-current" /></button>
+              <button onClick={resetSettings} className="w-full bg-gray-50 hover:bg-gray-100 text-gray-500 hover:text-black border border-gray-200 py-2.5 rounded-xl text-[9px] font-black tracking-widest uppercase transition-colors flex items-center justify-center gap-1.5"><RotateCcw className="w-3 h-3" /> Reset to V9 Default</button>
             </div>
           </div>
         </div>
@@ -780,7 +810,7 @@ export default function AntigravityMain() {
           </div>
 
           <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2 bg-gray-50 border border-gray-200 px-3 py-1.5 rounded-full"><div className="w-2 h-2 bg-black rounded-full animate-pulse"></div><span className="text-[9px] font-black tracking-widest text-gray-600">V8.6.0 REAL-TIME</span></div>
+            <div className="flex items-center gap-2 bg-gray-50 border border-gray-200 px-3 py-1.5 rounded-full"><div className="w-2 h-2 bg-black rounded-full animate-pulse"></div><span className="text-[9px] font-black tracking-widest text-gray-600">V9.0 HYBRID</span></div>
             
             <div className="relative">
               <button onClick={() => setIsUserMenuOpen(!isUserMenuOpen)} className={`w-10 h-10 border rounded-full flex items-center justify-center transition-all shadow-sm ${token ? 'bg-black border-black text-white' : 'bg-white border-gray-200 text-gray-600 hover:border-black hover:text-black'}`}><User className="w-4 h-4" /></button>

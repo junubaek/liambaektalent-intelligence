@@ -1,0 +1,1 @@
+name: 김효민, company: 당근마켓, years: 5.9, seniority: Middle

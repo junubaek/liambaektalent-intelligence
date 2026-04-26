@@ -1,0 +1,44 @@
+ID: 32022567-1b6f-81cf-af18-cbdada2eecf0
+Name_KR: 경력기술
+Email: 
+Phone: 
+Google Drive URL: https://drive.google.com/file/d/11eT2aLCbdEVJzNAUC-Xmnf2M13lDO0AO/view?usp=drivesdk
+Current Company: None
+
+RAW TEXT SNIPPET:
+📄
+경력기술서
+UPRISE, Inc. (2021.10 ~ 재직 중)
+헤이비트 DevOps Lead
+Bottlerocket OS 기반 8+ AWS EKS 클러스터 구축 및 관리 / 20+ 클러스터 애드
+온 배포 및 관리 / Hub-and-spoke 클러스터 구축
+Terraform, Pulumi 모노레포 관리 및 운영 (20+ 모듈)
+Grafana Loki 기반 Centralized logging infra 구성 및 운영
+Argo CD 기반 GitOps 배포 파이프라인 관리
+Tailscale 기반 VPN 구성 (150+ 디바이스)
+ConsoleMe 기반 AWS Multi-account IAM 관리
+Keybase, SealedSecret, 1Password Operator 기반 시크릿 매니지먼트
+Kakao Enterprise (2020.6 ~ 2021.4)
+카카오워크 Backend Engineer
+화상회의 서비스 초기 개발 및 출시
+화상회의 백엔드 개발 (Node.js)
+화상회의 인증, 화상회의와 카카오워크 유저 정보 동기화, 룸 내 인터렉션(마이
+크, 카메라, 화면 공유 등)
+서버 아키텍처, 네트워크 아키텍처 설계
+쿠버네티스 클러스터 관리, 워크로드 및 애플리케이션 배포
+로깅, 모니터링 및 장애 대응
+RemoteMonster (2019.7 ~ 2020.6)
+WebRTC 클라우드 솔루션 Backend Engineer
+시그널링 서버 (Node.js), 미디어 서버 (Janus Gateway)
+Chromium을 이용한 사내 WebRTC 서비스 E2E 테스트 자동화
+경력기술서 1
+장애 대응, 서비스 품질 지표 측정을 위한 모니터링 & 로깅 파이프라인 구축 (Kafka,
+EFK Stack)
+인스턴스 프로비저닝 절차 자동화와 규칙 마련을 통한 사내 인프라스트럭처 일반화
+(AWS)
+기존 레거시 코드 및 인프라에 클라우드 네이티브 패턴 적용 및 문화 전파 (Docker, The
+Twelve-Factor App)
+Bluewhale Foundation (2018. 7 ~ 2019.
+
+Careers:
+[{"company": "UPRISE, Inc.", "title": "DevOps Lead", "start_date": "2021-10", "end_date": "재직 중"}, {"company": "Kakao Enterprise", "title": "Backend Engineer", "start_date": "2020-06", "end_date": "2021-04"}, {"company": "RemoteMonster", "title": "Backend Engineer", "start_date": "2019-07", "end_date": "2020-06"}, {"company": "Bluewhale Foundation", "title": "Backend Engineer", "start_date": "2018-07", "end_date": "2019-07"}]

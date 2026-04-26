@@ -5549,3 +5549,72 @@ if "Technical_Sales" in UNIFIED_GRAVITY_FIELD:
         "Global_Sales_and_Marketing": 0.6,
     }
 
+
+UNIFIED_GRAVITY_FIELD.update({
+    "Data_Science": {
+        "core_attracts": {
+            "Machine_Learning": 0.9,
+            "Deep_Learning": 0.7,
+            "Data_Analysis": 0.7,
+        },
+        "repels": {"Data_Engineering": -0.15}
+    },
+    "Data_Engineering": {
+        "core_attracts": {
+            "Data_Pipeline_Construction": 0.9,
+            "Big_Data_Processing": 0.8,
+            "Data_Warehouse_Architecture": 0.8,
+        },
+        "repels": {"Data_Science": -0.15}
+    },
+})
+
+UNIFIED_GRAVITY_FIELD.update({
+    "Android_Development": {
+        "core_attracts": {"Mobile_Application_Development": 0.9},
+        "repels": {"Frontend_Development": -0.1}
+    },
+    "Mobile_Application_Development": {
+        "core_attracts": {"Android_Development": 0.8},
+    },
+    "iOS_Development": {
+        "core_attracts": {"Mobile_Application_Development": 0.9},
+        "repels": {"Android_Development": -0.1}
+    },
+})
+
+UNIFIED_GRAVITY_FIELD.update({
+    "Product_Manager": {
+        "core_attracts": {
+            "Product_Service_Planning": 0.9,
+            "Agile_Methodology": 0.8,
+            "Business_Model_Planning": 0.7,
+            "UX_UI_Design": 0.5,
+        },
+        "repels": {
+            "Tax_Accounting": -0.3,
+            "Financial_Accounting": -0.2,
+        }
+    },
+})
+
+CANONICAL_MAP.update({
+    "반도체 설계": "RTL_Design",
+    "반도체설계": "RTL_Design",
+    "아날로그 회로": "Circuit_Design",
+    "아날로그회로": "Circuit_Design",
+    "회로설계": "Circuit_Design",
+    "칩설계": "SoC",
+    "시스템반도체": "SoC",
+    "메모리반도체": "Semiconductor_Engineering",
+    "공정기술": "Semiconductor_Process",
+    "소자공학": "Semiconductor_Engineering",
+    "검증엔지니어": "Verification_Engineer",
+    "DV엔지니어": "Verification_Engineer",
+    "수율관리": "Yield_Engineering",
+    "품질관리": "Quality_Management",
+    "QA": "Quality_Management",
+    "QC": "Quality_Management",
+    "FAB": "Semiconductor_Process",
+    "양산기술": "Manufacturing_Process",
+})

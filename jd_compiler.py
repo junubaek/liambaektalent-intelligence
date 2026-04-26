@@ -1,4 +1,5 @@
 from ontology_graph import UNIFIED_GRAVITY_FIELD, SENIOR_EXPANDED_SYNERGY
+import sqlite3
 
 import os
 
@@ -165,6 +166,30 @@ def get_effective_gravity(node, seniority):
         field["synergy_attracts"] = {**existing, **extra}
     
     return field
+
+def calc_achievement_density(raw_text):
+    if not raw_text:
+        return 0.0
+    import re
+    # [Core] 실무 수치 패턴 (1.0 가중치)
+    core_patterns = [
+        r'\d+%', r'\d+억', r'\d+만', r'\d+명', r'\d+개', r'\d+년'
+    ]
+    # [Tech] 기술 깊이 신호 (0.5 가중치)
+    tech_patterns = [
+        r'특허', r'논문', r'제1저자', r'SCI', r'수상', r'\d+건'
+    ]
+    
+    core_count = sum(len(re.findall(p, raw_text)) for p in core_patterns)
+    tech_count = sum(len(re.findall(p, raw_text)) for p in tech_patterns)
+    
+    # 가중 합산
+    weighted_count = core_count + (tech_count * 0.5)
+    
+    # 텍스트 1000자당 밀도
+    density = weighted_count / (max(len(raw_text), 1) / 1000)
+    # 0~1 정규화 (5개/1000자 = 만점 기준)
+    return min(density / 5.0, 1.0)
 
 def calc_gravity_score(candidate_nodes, query_nodes, seniority="All"):
     
@@ -1079,8 +1104,40 @@ def get_pinecone_scores(query_text: str, top_k: int = 200) -> dict:
 
         logger.error(f"[Pinecone API Error] {e}")
 
+def get_bm25_top(query_text, top_k=100):
+    """
+    BM25 인덱스에서 검색하여 {candidate_id: score} 딕셔너리 반환
+    """
+    import os, pickle, re
+    index_path = 'bm25_index.pkl'
+    if not os.path.exists(index_path):
         return {}
-
+    
+    with open(index_path, 'rb') as f:
+        data = pickle.load(f)
+        bm25 = data['bm25']
+        ids = data['ids']
+    
+    def tokenize(text):
+        tokens = re.findall(r'[가-힣]{2,}|[a-zA-Z]{2,}|\d+', text or '')
+        return [t.lower() for t in tokens]
+    
+    tokenized_query = tokenize(query_text)
+    scores = bm25.get_scores(tokenized_query)
+    
+    # 0.0 ~ 1.0 정규화 (상위 점수 기준)
+    max_s = max(scores) if len(scores) > 0 and max(scores) > 0 else 1.0
+    
+    # Top K 추출
+    import numpy as np
+    top_indices = np.argsort(scores)[::-1][:top_k]
+    
+    res = {}
+    for idx in top_indices:
+        s = scores[idx]
+        if s > 0:
+            res[str(ids[idx])] = s / max_s
+    return res
 
 
 def deduplicate_conditions(conds: List[Dict]) -> List[Dict]:
@@ -1574,134 +1631,253 @@ def calculate_recency_multiplier(end_date_str):
         pass
     return 1.0
 
-def api_search_v9(prompt: str, session_id: str = None) -> list:
-    import math
-    import time
-    import os
-    from connectors.openai_api import OpenAIClient
+
+
+def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', weights: dict = None) -> dict:
+    """
+    [Hybrid Search v9]
+    Tower 1: Vector (Neo4j)
+    Tower 2: Graph (Neo4j)
+    Tower 3: BM25 (Local)
+    Tower 4: Depth (Action + Achievement)
+    """
+    import json, time, math
+    
+    # 0. Set Weights
+    if weights is None:
+        weights = {
+            'vector': 0.60,
+            'graph': 0.28,
+            'bm25': 0.05,
+            'depth': 0.07
+        }
+    
+    w_v = weights.get('vector', 0.60)
+    w_g = weights.get('graph', 0.28)
+    w_b = weights.get('bm25', 0.05)
+    w_d = weights.get('depth', 0.07)
+
+    from openai import OpenAI
     from neo4j import GraphDatabase
-    n_uri = os.environ.get("NEO4J_URI", "bolt://127.0.0.1:7687")
-    n_usr = os.environ.get("NEO4J_USERNAME", "neo4j")
-    n_pwd = os.environ.get("NEO4J_PASSWORD", "toss1234")
-    driver = GraphDatabase.driver(n_uri, auth=(n_usr, n_pwd))
     
     st = time.time()
-    logger.info(f"\n\n[V9.0 Chunk-Level API Search] Payload: {prompt}")
+    logger.info(f"\n\n[V9 Hybrid Search] Payload: {prompt} / Session: {session_id}")
     
-    openai = OpenAIClient(secret_data.get("OPENAI_API_KEY", ""))
-    system_prompt = "주어진 사용자의 직무/스킬 요구사항을 분석하여 1536차원 벡터 검색에 유리하게 연관 스킬 키워드들로 확장된 영어 명사 위주의 검색 쿼리로 변환해."
-    expanded_query_text = openai.get_chat_completion(system_prompt, prompt)
-    if not expanded_query_text: expanded_query_text = prompt
+    # 0. Load Cache Maps
+    from jd_compiler import get_candidates_from_cache
+    cand_list = get_candidates_from_cache()
+    cache_map = {str(c.get('id', '')): c for c in cand_list}
     
-    query_vector = openai.embed_content(expanded_query_text)
-    if not query_vector:
-        logger.error("[V9.0] Embedding generation failed.")
-        return []
-        
-    import re
-    raw_keywords = set(re.findall(r'[a-zA-Z0-9가-힣]+', prompt))
-    canonical_targets = normalize_query_with_map(list(raw_keywords))
-
-    with driver.session() as session:
-        # STAGE 1: Vector Search across Experience Chunks
-        vector_query = """
-        CALL db.index.vector.queryNodes('chunk_embeddings', 150, $query_vector)
-        YIELD node AS chunk, score AS vector_score
-        MATCH (c:Candidate)-[:HAS_EXPERIENCE]->(chunk)
-        RETURN c.id AS candidate_id, c.name_kr AS name, chunk.id AS chunk_id, 
-               chunk.company_name AS company_name, chunk.end_date AS end_date, vector_score
-        """
-        stage1_results = session.run(vector_query, query_vector=query_vector).data()
-
-        if not stage1_results:
-            return []
-
-        chunk_ids = [res['chunk_id'] for res in stage1_results]
-
-        # STAGE 2: Graph Scoring per Chunk
-        graph_query = """
-        MATCH (chunk:Experience_Chunk)-[r]->(s:Skill)
-        WHERE chunk.id IN $chunk_ids AND s.name IN $canonical_targets
-        RETURN chunk.id AS chunk_id, collect({skill: s.name, action: type(r)}) AS edges, 
-               COUNT { (chunk)-[]->() } AS total_edges
-        """
-        stage2_results = session.run(graph_query, chunk_ids=chunk_ids, canonical_targets=canonical_targets).data()
-
-    # Organize Graph results mapped to chunks
-    graph_map = {res['chunk_id']: res for res in stage2_results}
-
-    # Group by Candidate, keeping the "Best Match Chunk"
-    candidates_best_chunk = {}
-
-    for v_res in stage1_results:
-        cid = v_res['candidate_id']
-        chk_id = v_res['chunk_id']
-        company = v_res.get('company_name', 'Unknown')
-        end_date = v_res.get('end_date', '')
-        v_score = v_res['vector_score']
-        
-        g_res = graph_map.get(chk_id, {})
-        edges = g_res.get('edges', [])
-        total_edges = g_res.get('total_edges', 0)
-        
-        raw_graph_score = sum(ACTION_WEIGHTS.get(edge['action'], 1.0) for edge in edges)
-        final_graph_score = math.log(max(raw_graph_score, 0) + 1)
-        
-        # Calculate Final Chunk Score
-        recency_mult = calculate_recency_multiplier(end_date)
-        
-        # User Formula: Final_Chunk_Score = (Graph_Action_Weight * 0.6) + (Vector_Score * 0.3) + (Edge_Bonus)
-        # Using final_graph_score for Graph_Action_Weight
-        edge_bonus = min(total_edges * 0.01, 1.0) # Bonus capping
-        final_chunk_score = ((final_graph_score * 0.6) + (v_score * 0.3) + edge_bonus) * recency_mult
-        
-        chunk_obj = {
-            "chunk_id": chk_id,
-            "company": company,
-            "end_date": end_date,
-            "recency_mult": recency_mult,
-            "graph_score": final_graph_score,
-            "vector_score": v_score,
-            "final_score": final_chunk_score,
-            "matched_edges": [e['skill'] for e in edges],
-            "total_edges": total_edges
+    # 1. Parse & Expand Query
+    extracted = parse_jd_to_json(prompt)
+    conds = extracted.get("conditions", [])
+    
+    # Map abbreviations
+    def map_abbreviations_to_conds(query_str, conditions_list):
+        expansion_map = {
+            "IPO": ["Investor_Relations", "IPO_Preparation"],
+            "IR": ["Investor_Relations"],
+            "DFT": ["Design_for_Testability"],
+            "RTL": ["RTL_Design"],
+            "SoC": ["System_on_Chip"],
+            "SAP": ["SAP_ERP"],
+            "BI": ["Business_Intelligence"],
+            "Tableau": ["Tableau"],
+            "DevOps": ["DevOps", "CI_CD"],
+            "SaaS": ["SaaS"],
+            "Kotlin": ["Kotlin", "Android_Development"],
+            "ASRS": ["Warehouse_Automation"]
         }
+        import re
+        for abbr, expansions in expansion_map.items():
+            if re.search(r'\b' + re.escape(abbr) + r'\b', query_str, re.IGNORECASE):
+                for exp in expansions:
+                    if not any(c.get('skill') == exp for c in conditions_list):
+                        conditions_list.append({"action": "MANAGED", "skill": exp, "is_mandatory": False, "source": "abbreviation_map"})
+        return conditions_list
 
-        # Update candidate if this chunk is better
-        if cid not in candidates_best_chunk:
-            candidates_best_chunk[cid] = {"id": cid, "name": v_res['name'], "best_chunk": chunk_obj}
-        elif final_chunk_score > candidates_best_chunk[cid]["best_chunk"]["final_score"]:
-            candidates_best_chunk[cid]["best_chunk"] = chunk_obj
-
-    # Sort Candidates by their Best Chunk's Final Score
-    sorted_results = sorted(
-        candidates_best_chunk.values(),
-        key=lambda x: (x["best_chunk"]["final_score"], x["best_chunk"]["vector_score"]),
-        reverse=True
-    )
+    conds = map_abbreviations_to_conds(prompt, conds)
+    is_category_search = extracted.get("is_category_search", False)
+    conds = deduplicate_conditions(conds)
+    conds = apply_downgrade_map(conds)
+    conds = inject_node_affinity(conds)
     
-    # Format to traditional API response
-    final_output = []
-    for cand in sorted_results[:10]:
-        best = cand["best_chunk"]
+    # 2. Tower 1: Vector Search (Neo4j - V8 logic)
+    import os
+    n_uri = os.environ.get('NEO4J_URI', 'bolt://127.0.0.1:7687')
+    n_user = os.environ.get('NEO4J_USERNAME', 'neo4j')
+    n_pw = os.environ.get('NEO4J_PASSWORD', 'toss1234')
+    driver = GraphDatabase.driver(n_uri, auth=(n_user, n_pw))
+    
+    with open("secrets.json", "r", encoding="utf-8") as f:
+        secrets = json.load(f)
+    client = OpenAI(api_key=secrets.get("OPENAI_API_KEY"))
+    emb_res = client.embeddings.create(input=[prompt], model="text-embedding-3-small")
+    query_vector = emb_res.data[0].embedding
+
+    v_scores = {}
+    id_to_name = {}
+    try:
+        with driver.session() as session:
+            res_v = session.run("""
+                CALL db.index.vector.queryNodes('candidate_embedding', 100, $queryVector)
+                YIELD node AS c, score
+                RETURN c.id AS id, coalesce(c.name_kr, c.name) AS name, score
+            """, queryVector=query_vector)
+            for r in res_v:
+                cid = str(r["id"])
+                v_scores[cid] = r["score"]
+                id_to_name[cid] = r["name"]
+    except Exception as e:
+        logger.error(f"[V9] Vector Error: {e}")
+
+    # 3. Tower 2: Graph Candidates (Skill Match)
+    g_matched_ids = []
+    target_skills = list(set([c.get("skill") for c in conds if c.get("skill")]))
+    if target_skills:
+        try:
+            with driver.session() as session:
+                res_g = session.run("""
+                    MATCH (c:Candidate)-[r]->(s:Skill)
+                    WHERE s.name IN $target_skills AND type(r) <> 'USED_AS_TEMP' 
+                      AND (c.is_duplicate IS NULL OR c.is_duplicate = 0)
+                    RETURN DISTINCT coalesce(c.id, c.name_kr) AS id, coalesce(c.name_kr, c.name) AS name
+                """, target_skills=target_skills)
+                for r in res_g:
+                    cid = str(r["id"])
+                    g_matched_ids.append(cid)
+                    id_to_name[cid] = r["name"]
+        except Exception as e:
+            logger.error(f"[V9] Graph Match Error: {e}")
+
+    # 4. Tower 3: BM25 Candidates
+    bm_scores = get_bm25_top(prompt, top_k=200)
+
+    # 5. Combined Pool Selection
+    # V8 used Top 75/50, V9 uses Top 100/100/50 for broader hybrid coverage
+    vector_ids = list(v_scores.keys())
+    # Note: we don't have scores for g_matched_ids yet, so we just take all for now 
+    # but in V8 it was limited to 50. Let's take all if they are within a reasonable count.
+    graph_ids = g_matched_ids[:100] 
+    bm25_ids = sorted(bm_scores.keys(), key=lambda k: bm_scores[k], reverse=True)[:50]
+    
+    combined_ids = list(set(vector_ids) | set(graph_ids) | set(bm25_ids))
+    if not combined_ids:
+        if 'driver' in locals(): driver.close()
+        return {'matched': [], 'total': 0, "is_category_search": is_category_search}
+
+    # 6. Hydrate Edges and Metadata (Crucial for V8/V9 precision)
+    edges_map = {}
+    raw_text_map = {}
+    try:
+        with driver.session() as session:
+            res_e = session.run("""
+                MATCH (c:Candidate)-[r]->(s:Skill)
+                WHERE (c.id IN $ids OR c.name_kr IN $ids) AND type(r) <> 'USED_AS_TEMP'
+                RETURN coalesce(c.id, c.name_kr) AS id, collect(DISTINCT {skill: s.name, action: type(r)}) AS skills
+            """, ids=combined_ids)
+            edges_map = {str(r["id"]): r["skills"] for r in res_e}
+    except Exception as e:
+        logger.error(f"[V9] Edge hydration error: {e}")
+    finally:
+        if 'driver' in locals(): driver.close()
+
+    # Fetch raw_text from SQLite for Achievement Density (Tower 4)
+    conn = sqlite3.connect('candidates.db')
+    placeholders = ','.join(['?'] * len(combined_ids))
+    try:
+        rows_t = conn.execute(f"SELECT id, raw_text FROM candidates WHERE id IN ({placeholders})", combined_ids).fetchall()
+        raw_text_map = {str(r[0]): r[1] for r in rows_t}
+    finally:
+        conn.close()
+
+    # Calculate accurate Graph (G) and Depth (D) score for every candidate in the pool
+    final_g_scores = {}
+    final_d_scores = {}
+    
+    ACTION_WEIGHT_MAP = {
+        'MANAGED': 1.0, 'BUILT': 0.9, 'DESIGNED': 0.8, 'LAUNCHED': 0.7,
+        'GREW': 0.7, 'ANALYZED': 0.5, 'NEGOTIATED': 0.5, 'SUPPORTED': 0.2
+    }
+    
+    for cid in combined_ids:
+        cand_edges = edges_map.get(cid, [])
+        # Tower 2: Graph (Existing V8 logic)
+        raw_g = calculate_gravity_fusion_score(cand_edges, conds, is_category_search)
+        candidate_nodes = [e['skill'] for e in cand_edges]
+        query_nodes = [c['skill'] for c in conds]
+        raw_g += calc_gravity_score(candidate_nodes, query_nodes, seniority)
+        final_g_scores[cid] = math.log(max(raw_g, 0) + 1)
         
-        # UX Explainability String
-        explain = f"[{best['company']}]에서 최근 역량 인정 ({best['end_date']} 종료). "
-        if best["recency_mult"] > 1.0: explain += "(최신경력 부스팅 적용🚀)"
-        elif best["recency_mult"] < 1.0: explain += "(과거경력 패널티⬇️)"
+        # Tower 4: Depth Score
+        # [Signal 1] Action intensity on matched skills
+        matched_action_score = sum(
+            ACTION_WEIGHT_MAP.get(edge['action'], 0.3)
+            for edge in cand_edges
+            if edge['skill'] in target_skills
+        ) / max(len(target_skills), 1)
+        depth_action = min(matched_action_score, 1.0)
         
-        final_output.append({
-            "name": cand["name"],
-            "hash": cand["id"],
-            "score": best["final_score"],
-            "best_company": best["company"],
-            "explain_reason": explain,
-            "graph_score": best["graph_score"],
-            "vector_score": best["vector_score"],
-            "matched_edges": best["matched_edges"],
-            "total_edges": best["total_edges"],
-            "raw_text": "",
-            "summary": "V9.0 Chunk-level Evaluated."
+        # [Signal 2] Achievement Density (raw_text numbers)
+        achievement_density = calc_achievement_density(raw_text_map.get(cid, ""))
+        
+        final_d_scores[cid] = (depth_action * 0.6) + (achievement_density * 0.4)
+
+    # 7. Hybrid Fusion
+    final_candidates = []
+    for cid in combined_ids:
+        norm_v = v_scores.get(cid, 0.0) / max_v
+        norm_g = final_g_scores.get(cid, 0.0) / max_g
+        norm_b = bm_scores.get(cid, 0.0) / max_b
+        depth_score = final_d_scores.get(cid, 0.0)
+        
+        # Dynamic Fusion v9 (4-Tower)
+        final_score = (norm_v * w_v) + (norm_g * w_g) + (norm_b * w_b) + (depth_score * w_d)
+        
+        name = id_to_name.get(cid, cache_map.get(cid, {}).get('name_kr', cid))
+        final_candidates.append({
+            'id': cid,
+            'candidate_id': cid,
+            'name_kr': name,
+            'score': final_score,
+            'v_score': v,
+            'g_score': g,
+            'bm_score': b,
+            'depth_score': d
         })
+    
+    final_candidates.sort(key=lambda x: x['score'], reverse=True)
+    top_matched = final_candidates[:50]
+
+    matched_candidates = []
+    for c in top_matched:
+        cid = c['id']
+        name = c['name_kr']
+        c_info = cache_map.get(cid) or cache_map.get(name) or {}
         
-    return final_output
+        cand_edges = edges_map.get(cid, [])
+        matched_str_list = [f"{e['action']}:{e['skill']}" for e in cand_edges]
+        
+        candidate_obj = {
+            'id': cid,
+            'name_kr': name,
+            'final_score': round(c['score'], 4),
+            'v_score': round(c['v_score'], 4),
+            'g_score': round(c['g_score'], 4),
+            'bm_score': round(c['bm_score'], 4),
+            'depth_score': round(c['depth_score'], 4),
+            'matched_skills': matched_str_list,
+            'sector': c_info.get('sector', ''),
+            'current_company': c_info.get('current_company', ''),
+            'total_years': c_info.get('total_years', 0),
+            'profile_summary': c_info.get('profile_summary', '')
+        }
+        matched_candidates.append(candidate_obj)
+
+    logger.info(f"[V9 Hybrid Search] Completed. Top result: {matched_candidates[0]['name_kr'] if matched_candidates else 'None'}")
+    
+    return {
+        'matched': matched_candidates,
+        'total': len(final_candidates),
+        'is_category_search': is_category_search
+    }

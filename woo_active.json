@@ -1,0 +1,73 @@
+{
+  "id": "32e22567-1b6f-8153-b866-c9af67643875",
+  "name_kr": "우형일",
+  "email": "woohi31@gmail.com",
+  "phone": null,
+  "raw_text": "연락처 Hyung-il Woo\nwoohi31@gmail.com\nSOC Architect\nwww.linkedin.com/in/hyung-il-\n대한민국 경기도\nwoo-020aa7235 (LinkedIn)\n간단프로필\n대표 보유기술\nSOC Architecture\nHW Architecture Apr 2025 ~ Present | Cache Coherent Interconnect Architecture and\nPower-On-Self-Test Design (SOC IP Dev.)\n- Designed debug architecture and features to enhance system\nobservability and silicon debug efficiency\n- Led post-silicon debugging and issue resolution for Cache\nCoherent Interconnect\nJul 2023 ~ Mar 2025 | SoC Architect (Automotive Systems)\n- Designed DFD (Design-for-Debug) and IST (In-System Test)\narchitectures for IVI and Neural Network systems\n- Developed IPC and Safety Island architectures\n- Researched next-generation chiplet-based automotive SoC\narchitectures\n- Defined system architecture and specifications for HPC automotive\nSoCs\n- Authored and reviewed ISO 26262 Safety HAS documentation\nOct 2016 ~ Jun 2023 | Automotive SoC Architect (Foundry Design\nService)\n- Led SoC architecture and full-chip RTL design for AD/ADAS-\ntargeted automotive SoCs\n- Developed IST, POST, and DFD architectures\n- Managed silicon validation, yield analysis, and post-silicon\ndebugging\n- Collaborated with global clients on specifications and design\nrequirements\nFeb 2012 ~ Sep 2016 | SoC DFD Architect, Subsystem Designer\n(Mobile AP Dev.)\n- Developed embedded scan dump (Scan2DRAM) architecture\n- Designed DFD architecture and IPs\n- Designed camera and ISP subsystems for mobile APs\n- Developed memory interface and system bus architectures for\nwearable APs\nPage 1 of 4\n경력\n삼성전자\n14년 2개월\nPrincipal Engineer\n2025년 4월 - Present (1년)\nCache Coherent Interconnect Design and Debug Architect\n- Designed debug architecture and features for Cache Coherent Interconnect\nto improve system observability and debugging efficiency.\n- Led post-silicon debugging efforts to identify and resolve silicon-level issues,\nensuring design reliability and performance.\nPrincipal Engineer\n2024년 3월 - 2025년 3월 (1년 1개월)\nSoC Architect with Automotive Systems, AP Advanced Technology\n- Led architecture design efforts for Design-for-Debug (DFD) and In-System\nTest (IST) across IVI and Neural Network (NN) systems.\n- Designed IPC and Safety Island (SFI) architectures to enhance system safety\nand communication.\n- Contributed as an author and served as the final reviewer of Safety HAS\ndocuments for Samsung’s inaugural ISO 26262 certification program.\nStaff Engineer\n2023년 7월 - 2024년 2월 (8개월)\nSoC Architect with Automotive Systems, AP Advanced Technology\n- Developed architecture for Design-for-Debug (DFD) and In-System Test (IST)\nfocused on both IVI and Neural Network (NN) systems.\n- Designed IPC and Safety Island (SFI) architectures.\n- Conducted research and architectural design for next-generation chiplet\nautomotive platforms.\n- Converted high-level product requirements into architecture and design\nspecifications for HPC (High Performance Computing) Automotive SoC as an\nactive team member.\nStaff Engineer\n2018년 3월 - 2023년 6월 (5년 4개월)\nASIC SoC Architecture & Fullchip (RTL) Design, Foundry Design Service\n- Designed SoC architecture and fullchip RTL implementation for Automotive\nSoC targeting AD/ADAS applications.\nPage 2 of 4\n- Architected In-System-Test (IST) and POST as safety features for\nAutomotive SoC targeting AD/ADAS applications.\n- Managed top-level SoC integration and collaborated cross-functionally with\nglobal tier-1 clients on spec hand-off and design requirement discussions.\n- Acted as design lead, collaborating cross-functionally with multiple teams to\ndrive project development and deliverables.\n- Led Design-for-Debug (DFD) architecture design across multiple projects to\nenhance debugging capability and efficiency.\n- Led silicon validation, yield analysis, and silicon debugging activities to\nensure production quality and reliability.\nSenior Engineer\n2016년 10월 - 2018년 2월 (1년 5개월)\nSOC Fullchip Design and DFD Architecture, Foundry Design Service\n- Designed fullchip RTL for advanced automotive SoCs targeting AD/ADAS\napplications.\n- Architected Power-On-Self-Test (POST) as a safety feature to meet\nautomotive functional safety standards.\n- Provided silicon debugging support for automotive SoCs, facilitating efficient\nresolution of post-silicon validation issues.\n- Developed debug architecture and IP solutions for ASIC customers.\nSenior Engineer\n2015년 8월 - 2016년 9월 (1년 2개월)\nSOC DFD Architecture and IP Design\n- Developed Design-for-Debug (DFD) architecture for multiple mobile AP\nprojects\n- Led implementation of debug features and collaborated with multi-disciplinary\nteams to integrate DFD solutions\n- Pioneered the development and architecture of embedded scandump\ntechnology(Scan2DRAM), leveraging scan chains to capture internal register\nstates for comprehensive and efficient silicon debugging.\nSenior Engineer\n2015년 3월 - 2015년 7월 (5개월)\nSOC Design Engineer\n- Designed memory interface and system bus architectures for wearable AP.\nEngineer\n2012년 2월 - 2015년 2월 (3년 1개월)\nSOC Design Engineer\nPage 3 of 4\n- Performed sub-system design for camera and ISP blocks across multiple\nmobile AP projects.\n- Supported specification decisions and architectural analysis to ensure\noptimal integration and performance within SoCs.\n학력\nYonsei University 연세대학교\nMaster's degree, Electrical and Electronic Engineering · (2020년 3월 - 2022년\n2월)\n중앙대학교\nBachelor's degree, Electrical and Electronics Engineering · (2006년 3월 - 2012\n년 2월)\nPage 4 of 4",
+  "document_hash": "8e3a8dea5c45bb57ce41218d6315293260bae9f6d38733f034637d8f04432502",
+  "is_parsed": 1,
+  "is_neo4j_synced": 1,
+  "is_pinecone_synced": 1,
+  "last_error": null,
+  "created_at": "2026-04-05 16:13:32.866290",
+  "updated_at": "2026-04-18 09:53:12.010923",
+  "birth_year": null,
+  "education_json": "[{\"school\": \"Yonsei University\", \"major\": \"Electrical and Electronic Engineering\", \"degree\": \"Master's degree\", \"graduation_year\": \"2022\"}, {\"school\": \"중앙대학교\", \"major\": \"Electrical and Electronics Engineering\", \"degree\": \"Bachelor's degree\", \"graduation_year\": \"2012\"}]",
+  "careers_json": [
+    {
+      "company": "삼성전자",
+      "title": "Principal Engineer",
+      "start_date": "2025-04",
+      "end_date": "현재"
+    },
+    {
+      "company": "삼성전자",
+      "title": "Principal Engineer",
+      "start_date": "2024-03",
+      "end_date": "2025-03"
+    },
+    {
+      "company": "삼성전자",
+      "title": "Staff Engineer",
+      "start_date": "2023-07",
+      "end_date": "2024-02"
+    },
+    {
+      "company": "삼성전자",
+      "title": "Staff Engineer",
+      "start_date": "2018-03",
+      "end_date": "2023-06"
+    },
+    {
+      "company": "삼성전자",
+      "title": "Senior Engineer",
+      "start_date": "2016-10",
+      "end_date": "2018-02"
+    },
+    {
+      "company": "삼성전자",
+      "title": "Senior Engineer",
+      "start_date": "2015-08",
+      "end_date": "2016-09"
+    },
+    {
+      "company": "삼성전자",
+      "title": "Senior Engineer",
+      "start_date": "2015-03",
+      "end_date": "2015-07"
+    },
+    {
+      "company": "삼성전자",
+      "title": "Engineer",
+      "start_date": "2012-02",
+      "end_date": "2015-02"
+    }
+  ],
+  "is_duplicate": 0,
+  "duplicate_of": null,
+  "google_drive_url": "https://drive.google.com/file/d/1tou1OomGH1e_txieZa3xv-K9-V7KMxbZ/view?usp=drivesdk",
+  "total_years": null,
+  "sector": null,
+  "profile_summary": null,
+  "current_company": null
+}
