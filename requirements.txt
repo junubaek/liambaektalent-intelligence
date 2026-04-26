@@ -19,3 +19,5 @@ pyyaml
 openai
 scikit-learn
 SQLAlchemy
+
+rank-bm25
