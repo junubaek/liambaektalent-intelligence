@@ -1798,7 +1798,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     try:
         query = f"""
             SELECT id, name_kr, raw_text, sector, current_company, total_years, 
-                   profile_summary, careers_json, education_json, email, phone, birth_year
+                   profile_summary, careers_json, education_json, email, phone, birth_year, google_drive_url
             FROM candidates 
             WHERE id IN ({placeholders})
         """
@@ -1834,7 +1834,8 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
                 'education': education,
                 'email': r[9] or '',
                 'phone': r[10] or '',
-                'birth_year': r[11] or ''
+                'birth_year': r[11] or '',
+                'google_drive_url': r[12] or ''
             }
     finally:
         conn.close()
@@ -1934,7 +1935,9 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
             'education': c_info.get('education', []),
             'email': c_info.get('email', ''),
             'phone': c_info.get('phone', ''),
-            'birth_year': c_info.get('birth_year', '')
+            'birth_year': c_info.get('birth_year', ''),
+            'google_drive_url': c_info.get('google_drive_url', ''),
+            'seniority': 'SENIOR' if (c_info.get('total_years') or 0) >= 10 else ('MIDDLE' if (c_info.get('total_years') or 0) >= 5 else 'JUNIOR')
         }
         matched_candidates.append(candidate_obj)
 

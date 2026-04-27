@@ -442,7 +442,8 @@ export default function AntigravityMain() {
 
   const renderCandidateCard = (candidate, isModalExpanded = false) => {
     const isBookmarked = userBookmarks.map(String).includes(String(candidate.id));
-    const name = (candidate.이름 || candidate.name || 'Unknown').replace(/\[.*?\]/, '').trim();
+    let name = (candidate.이름 || candidate.name || candidate.name_kr || 'Unknown').replace(/\[.*?\]/, '').trim();
+    if (name.toLowerCase() === 'unknown') name = `CANDIDATE_${candidate.id.substring(0, 5)}`;
     const currentCompany = candidate.current_company || candidate.current || '미상';
     const sector = candidate.sector || '미분류';
     const titleSeniority = candidate.연차등급 || candidate.seniority || '미상';
@@ -491,6 +492,18 @@ export default function AntigravityMain() {
                     <span>D: {(candidate.depth_score || 0).toFixed(2)}</span>
                   </div>
                 </div>
+              )}
+              {candidate.google_drive_url && (
+                <a 
+                  href={candidate.google_drive_url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  onClick={(e) => e.stopPropagation()}
+                  className="w-10 h-10 rounded-full bg-black flex items-center justify-center text-white hover:bg-gray-800 transition-colors shadow-sm"
+                  title="Open CV"
+                >
+                  <Database className="w-4 h-4" />
+                </a>
               )}
               <button onClick={(e) => toggleBookmark(String(candidate.id), e)} className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors border ${isBookmarked ? 'bg-black border-black text-white hover:bg-gray-800' : 'bg-transparent border-gray-200 text-gray-400 hover:border-gray-400 hover:text-black hover:bg-gray-50'}`}>
                 <Bookmark className={`w-4 h-4 ${isBookmarked ? 'fill-current' : ''}`} />
