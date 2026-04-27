@@ -1791,18 +1791,51 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     finally:
         if 'driver' in locals(): driver.close()
 
-    # Fetch raw_text from SQLite for Achievement Density (Tower 4)
+    # Fetch full metadata from SQLite (Crucial because cache JSON might be missing on Railway)
+    db_metadata_map = {}
     conn = sqlite3.connect(os.environ.get('DB_PATH', 'candidates.db'))
     placeholders = ','.join(['?'] * len(combined_ids))
     try:
-        rows_t = conn.execute(f"SELECT id, name_kr, raw_text FROM candidates WHERE id IN ({placeholders})", combined_ids).fetchall()
+        query = f"""
+            SELECT id, name_kr, raw_text, sector, current_company, total_years, 
+                   profile_summary, careers_json, education_json, email, phone, birth_year
+            FROM candidates 
+            WHERE id IN ({placeholders})
+        """
+        rows_t = conn.execute(query, combined_ids).fetchall()
         for r in rows_t:
             cid = str(r[0])
             name_val = r[1]
             raw_text_val = r[2]
+            
             raw_text_map[cid] = raw_text_val
             if cid not in id_to_name and name_val:
                 id_to_name[cid] = name_val
+            
+            # Map SQLite fields to the format expected by the frontend
+            import json
+            try:
+                careers = json.loads(r[7]) if r[7] else []
+            except:
+                careers = []
+            try:
+                education = json.loads(r[8]) if r[8] else []
+            except:
+                education = []
+
+            db_metadata_map[cid] = {
+                'id': cid,
+                'name_kr': name_val,
+                'sector': r[3] or '미분류',
+                'current_company': r[4] or '미상',
+                'total_years': r[5] or 0,
+                'profile_summary': r[6] or '',
+                'careers': careers,
+                'education': education,
+                'email': r[9] or '',
+                'phone': r[10] or '',
+                'birth_year': r[11] or ''
+            }
     finally:
         conn.close()
 
@@ -1873,10 +1906,14 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     for c in top_matched:
         cid = c['id']
         name = c['name_kr']
-        c_info = cache_map.get(cid) or cache_map.get(name) or {}
+        
+        # Use DB metadata first, fallback to cache_map
+        c_info = db_metadata_map.get(cid) or cache_map.get(cid) or cache_map.get(name) or {}
         
         cand_edges = edges_map.get(cid, [])
-        matched_str_list = [f"{e['action']}:{e['skill']}" for e in cand_edges]
+        # V9: Map edges/skills to format UI expects (MATCHEDGE)
+        matched_edges = [e['skill'] for e in cand_edges]
+        matched_actions = list(set([e['action'] for e in cand_edges]))
         
         candidate_obj = {
             'id': cid,
@@ -1887,11 +1924,17 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
             'g_score': round(c['g_score'], 4),
             'bm_score': round(c['bm_score'], 4),
             'depth_score': round(c['depth_score'], 4),
-            'matched_skills': matched_str_list,
-            'sector': c_info.get('sector', ''),
-            'current_company': c_info.get('current_company', ''),
+            'matched_edges': matched_edges,
+            'matched_actions': matched_actions,
+            'sector': c_info.get('sector', '미분류'),
+            'current_company': c_info.get('current_company', '미상'),
             'total_years': c_info.get('total_years', 0),
-            'profile_summary': c_info.get('profile_summary', '')
+            'profile_summary': c_info.get('profile_summary', ''),
+            'careers': c_info.get('careers', []),
+            'education': c_info.get('education', []),
+            'email': c_info.get('email', ''),
+            'phone': c_info.get('phone', ''),
+            'birth_year': c_info.get('birth_year', '')
         }
         matched_candidates.append(candidate_obj)
 
