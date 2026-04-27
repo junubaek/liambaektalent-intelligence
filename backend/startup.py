@@ -74,15 +74,17 @@ def ensure_indexes():
 
 
 if __name__ == '__main__':
-    # [TEMP] 강제 재다운로드 로직
+    # [CONFIG] 환경변수에 따른 강제 재다운로드 로직
     import os
+    force_redownload = os.environ.get('FORCE_DB_REDOWNLOAD', 'false').lower() == 'true'
     db_path = os.environ.get('DB_PATH', '/data/candidates.db')
-    if os.path.exists(db_path):
+
+    if force_redownload and os.path.exists(db_path):
         try:
             os.remove(db_path)
-            print("기존 DB 삭제 완료. 재다운로드 시작...")
+            print("FORCE_DB_REDOWNLOAD: 기존 DB 삭제 완료")
         except Exception as e:
-            print(f"기존 DB 삭제 실패: {e}")
+            print(f"FORCE_DB_REDOWNLOAD: 기존 DB 삭제 실패: {e}")
 
     ensure_db()
     ensure_indexes()
