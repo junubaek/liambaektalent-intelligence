@@ -5,7 +5,7 @@ export default function AntigravityMain() {
   const [token, setToken] = useState(localStorage.getItem('token') || '');
   const [currentUserData, setCurrentUserData] = useState(null);
   
-  const [settings, setSettings] = useState({ vector: 0.60, graph: 0.28, bm25: 0.05, depth: 0.07, synergy: 1.4 });
+  const [settings, setSettings] = useState({ vector: 0.6, graph: 0.28, bm25: 0.05, depth: 0.07, synergy: 1.4 });
   const [userBookmarks, setUserBookmarks] = useState([]);
   const [userHistory, setUserHistory] = useState([]);
   const [historyPage, setHistoryPage] = useState(1);
@@ -75,11 +75,11 @@ export default function AntigravityMain() {
         if (res.ok) {
           const data = await res.json();
           setCurrentUserData(data);
-          let loadedSettings = data.settings || { vector: 0.60, graph: 0.28, bm25: 0.05, depth: 0.07, synergy: 1.4 };
+          let loadedSettings = data.settings || { vector: 0.6, graph: 0.28, bm25: 0.05, depth: 0.07, synergy: 1.4 };
           // If weights are too low (migration issue or old schema), force default
           const totalW = (loadedSettings.vector || 0) + (loadedSettings.graph || 0) + (loadedSettings.bm25 || 0) + (loadedSettings.depth || 0);
           if (totalW < 0.1) {
-            loadedSettings = { vector: 0.60, graph: 0.28, bm25: 0.05, depth: 0.07, synergy: 1.4 };
+            loadedSettings = { vector: 0.6, graph: 0.28, bm25: 0.05, depth: 0.07, synergy: 1.4 };
           }
           setSettings(loadedSettings);
           setIsModalOpen(false);
@@ -172,7 +172,7 @@ export default function AntigravityMain() {
   };
   
   const resetSettings = () => {
-      const defaults = { vector: 0.60, graph: 0.28, bm25: 0.05, depth: 0.07, synergy: 1.4 };
+      const defaults = { vector: 0.6, graph: 0.28, bm25: 0.05, depth: 0.07, synergy: 1.4 };
       setSettings(defaults);
       if (token) {
         fetch('/api/auth/settings', {
@@ -756,7 +756,19 @@ export default function AntigravityMain() {
           </div>
           
           <div className="flex-1 overflow-y-auto px-6 pt-8 pb-4 custom-scrollbar">
-            <div className="mb-6 flex items-center gap-2"><SlidersHorizontal className="w-5 h-5 text-black" /><h2 className="text-sm font-black uppercase tracking-widest text-black">Fusion Controls</h2></div>
+            <div className="mb-6 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <SlidersHorizontal className="w-5 h-5 text-black" />
+                <h2 className="text-sm font-black uppercase tracking-widest text-black">Fusion Controls</h2>
+              </div>
+              <button 
+                onClick={resetSettings} 
+                className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center hover:bg-black group transition-all" 
+                title="Reset to Defaults"
+              >
+                <RotateCcw className="w-4 h-4 text-gray-400 group-hover:text-white transition-colors" />
+              </button>
+            </div>
             <p className="text-xs text-gray-800 font-black mb-8 leading-relaxed">{currentUserData ? `${currentUserData.name}님의 검색 가중치 설정입니다.` : ""}</p>
 
             <div className="space-y-6">
