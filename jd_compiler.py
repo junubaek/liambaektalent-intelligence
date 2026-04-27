@@ -1280,7 +1280,7 @@ def prefilter_candidates(jd_text: str, num_candidates: int = 300, extracted_cond
             
         import sqlite3
         try:
-            conn = sqlite3.connect('candidates.db')
+            conn = sqlite3.connect(os.environ.get('DB_PATH', 'candidates.db'))
             c = conn.cursor()
             
             # AND 검색
@@ -1783,7 +1783,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         if 'driver' in locals(): driver.close()
 
     # Fetch raw_text from SQLite for Achievement Density (Tower 4)
-    conn = sqlite3.connect('candidates.db')
+    conn = sqlite3.connect(os.environ.get('DB_PATH', 'candidates.db'))
     placeholders = ','.join(['?'] * len(combined_ids))
     try:
         rows_t = conn.execute(f"SELECT id, raw_text FROM candidates WHERE id IN ({placeholders})", combined_ids).fetchall()
