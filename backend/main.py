@@ -3,8 +3,9 @@ import sys
 
 # --- [DB Auto-Downloader] ---
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
-from backend.startup import ensure_db
-ensure_db()
+from backend import startup
+startup.ensure_db()
+startup.ensure_indexes()
 # ----------------------------
 
 import json

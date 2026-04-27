@@ -72,12 +72,18 @@ export default function AntigravityMain() {
   const fetchUser = async () => {
     try {
       const res = await fetch('/api/auth/me', { headers });
-      if (res.ok) {
-        const data = await res.json();
-        setCurrentUserData(data);
-        setSettings(data.settings || { vector: 0.60, graph: 0.28, bm25: 0.05, depth: 0.07, synergy: 1.4 });
-        setIsModalOpen(false);
-      } else {
+        if (res.ok) {
+          const data = await res.json();
+          setCurrentUserData(data);
+          let loadedSettings = data.settings || { vector: 0.60, graph: 0.28, bm25: 0.05, depth: 0.07, synergy: 1.4 };
+          // If weights are too low (migration issue or old schema), force default
+          const totalW = (loadedSettings.vector || 0) + (loadedSettings.graph || 0) + (loadedSettings.bm25 || 0) + (loadedSettings.depth || 0);
+          if (totalW < 0.1) {
+            loadedSettings = { vector: 0.60, graph: 0.28, bm25: 0.05, depth: 0.07, synergy: 1.4 };
+          }
+          setSettings(loadedSettings);
+          setIsModalOpen(false);
+        } else {
         handleLogout();
       }
     } catch { handleLogout(); }
@@ -806,6 +812,22 @@ export default function AntigravityMain() {
               disabled={!token}
             />
           </div>
+
+          {hasSearched && (
+            <div className="flex-1 max-w-xl mx-8 animate-fade-in">
+              <div className="bg-gray-50 border border-gray-200 rounded-2xl flex items-center px-4 py-2">
+                <Search className="w-4 h-4 text-gray-400 mr-2" />
+                <input 
+                  type="text" 
+                  placeholder="새로운 조건으로 검색..." 
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onKeyDown={(e) => { if(e.key === 'Enter') executeSearch(); }}
+                  className="bg-transparent border-none outline-none w-full text-sm font-bold text-gray-800 placeholder-gray-400 focus:ring-0"
+                />
+              </div>
+            </div>
+          )}
 
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2 bg-gray-50 border border-gray-200 px-3 py-1.5 rounded-full"><div className="w-2 h-2 bg-black rounded-full animate-pulse"></div><span className="text-[9px] font-black tracking-widest text-gray-600">V9.0 HYBRID</span></div>

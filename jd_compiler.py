@@ -1750,7 +1750,6 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
                 res_g = session.run("""
                     MATCH (c:Candidate)-[r]->(s:Skill)
                     WHERE s.name IN $target_skills AND type(r) <> 'USED_AS_TEMP' 
-                      AND (c.is_duplicate IS NULL OR c.is_duplicate = 0)
                     RETURN DISTINCT coalesce(c.id, c.name_kr) AS id, coalesce(c.name_kr, c.name) AS name
                 """, target_skills=target_skills)
                 for r in res_g:
@@ -1840,9 +1839,9 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     
     final_candidates = []
     for cid in combined_ids:
-        norm_v = v_scores.get(cid, 0.0) / max_v
-        norm_g = final_g_scores.get(cid, 0.0) / max_g
-        norm_b = bm_scores.get(cid, 0.0) / max_b
+        norm_v = (v_scores.get(cid, 0.0) / max_v) if max_v > 0 else 0.0
+        norm_g = (final_g_scores.get(cid, 0.0) / max_g) if max_g > 0 else 0.0
+        norm_b = (bm_scores.get(cid, 0.0) / max_b) if max_b > 0 else 0.0
         depth_score = final_d_scores.get(cid, 0.0)
         
         # Dynamic Fusion v9 (4-Tower)
