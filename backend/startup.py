@@ -2,7 +2,17 @@ import os
 import urllib.request
 
 def ensure_db():
+    import os
     db_path = os.environ.get('DB_PATH', 'candidates.db')
+    
+    # FORCE_DB_REDOWNLOAD 체크 (함수 최상단)
+    force_redownload = os.environ.get('FORCE_DB_REDOWNLOAD', 'false').lower() == 'true'
+    if force_redownload and os.path.exists(db_path):
+        try:
+            os.remove(db_path)
+            print("FORCE_DB_REDOWNLOAD: 기존 DB 삭제 완료. 재다운로드 시작...")
+        except Exception as e:
+            print(f"FORCE_DB_REDOWNLOAD 삭제 실패: {e}")
     
     # Check if DB exists and has the 'candidates' table with data
     if os.path.exists(db_path) and os.path.getsize(db_path) > 1000:
@@ -74,18 +84,6 @@ def ensure_indexes():
 
 
 if __name__ == '__main__':
-    # [CONFIG] 환경변수에 따른 강제 재다운로드 로직
-    import os
-    force_redownload = os.environ.get('FORCE_DB_REDOWNLOAD', 'false').lower() == 'true'
-    db_path = os.environ.get('DB_PATH', '/data/candidates.db')
-
-    if force_redownload and os.path.exists(db_path):
-        try:
-            os.remove(db_path)
-            print("FORCE_DB_REDOWNLOAD: 기존 DB 삭제 완료")
-        except Exception as e:
-            print(f"FORCE_DB_REDOWNLOAD: 기존 DB 삭제 실패: {e}")
-
     ensure_db()
     ensure_indexes()
     import uvicorn
