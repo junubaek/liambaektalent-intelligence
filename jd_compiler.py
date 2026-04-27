@@ -1665,6 +1665,14 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     st = time.time()
     logger.info(f"\n\n[V9 Hybrid Search] Payload: {prompt} / Session: {session_id}")
     
+    # [Robustness] Ensure seniority is a string for gravity score dict lookups
+    if isinstance(seniority, list):
+        if not seniority or "무관" in seniority or "All" in seniority or "ALL" in seniority:
+            seniority = "All"
+        else:
+            # Pick the highest/first relevant seniority
+            seniority = seniority[0]
+
     # 0. Load Cache Maps
     from jd_compiler import get_candidates_from_cache
     cand_list = get_candidates_from_cache()
@@ -1842,11 +1850,12 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
             'candidate_id': cid,
             'name_kr': name,
             'score': final_score,
-            'v_score': v,
-            'g_score': g,
-            'bm_score': b,
-            'depth_score': d
+            'v_score': v_scores.get(cid, 0.0),
+            'g_score': final_g_scores.get(cid, 0.0),
+            'bm_score': bm_scores.get(cid, 0.0),
+            'depth_score': depth_score
         })
+
     
     final_candidates.sort(key=lambda x: x['score'], reverse=True)
     top_matched = final_candidates[:50]
