@@ -1834,6 +1834,10 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         final_d_scores[cid] = (depth_action * 0.6) + (achievement_density * 0.4)
 
     # 7. Hybrid Fusion
+    max_v = max(list(v_scores.values()) + [1.0])
+    max_g = max(list(final_g_scores.values()) + [1.0])
+    max_b = max(list(bm_scores.values()) + [1.0])
+    
     final_candidates = []
     for cid in combined_ids:
         norm_v = v_scores.get(cid, 0.0) / max_v
