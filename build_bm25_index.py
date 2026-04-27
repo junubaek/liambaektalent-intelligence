@@ -24,7 +24,7 @@ def get_neo4j_ids():
         driver.close()
 
 def build():
-    db_path = 'candidates.db'
+    db_path = os.environ.get('DB_PATH', 'candidates.db')
     if not os.path.exists(db_path):
         print(f"Error: {db_path} not found.")
         return
