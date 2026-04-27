@@ -1795,8 +1795,14 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     conn = sqlite3.connect(os.environ.get('DB_PATH', 'candidates.db'))
     placeholders = ','.join(['?'] * len(combined_ids))
     try:
-        rows_t = conn.execute(f"SELECT id, raw_text FROM candidates WHERE id IN ({placeholders})", combined_ids).fetchall()
-        raw_text_map = {str(r[0]): r[1] for r in rows_t}
+        rows_t = conn.execute(f"SELECT id, name_kr, raw_text FROM candidates WHERE id IN ({placeholders})", combined_ids).fetchall()
+        for r in rows_t:
+            cid = str(r[0])
+            name_val = r[1]
+            raw_text_val = r[2]
+            raw_text_map[cid] = raw_text_val
+            if cid not in id_to_name and name_val:
+                id_to_name[cid] = name_val
     finally:
         conn.close()
 
@@ -1874,6 +1880,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         
         candidate_obj = {
             'id': cid,
+            'name': name,
             'name_kr': name,
             'final_score': round(c['score'], 4),
             'v_score': round(c['v_score'], 4),
