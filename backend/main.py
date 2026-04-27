@@ -150,8 +150,9 @@ class LoginRequest(BaseModel):
     password: str
 
 class SettingsUpdate(BaseModel):
-    wv: float
-    wg: float
+    vector: float
+    graph: float
+    bm25: float
     depth: float
     synergy: float
 
@@ -397,7 +398,7 @@ def add_admin_user(req: AddUserRequest, current_user: dict = Depends(get_current
     
     salt = bcrypt.gensalt()
     pw_hash = bcrypt.hashpw(req.password.encode('utf-8'), salt).decode('utf-8')
-    default_settings = json.dumps({"wv": 0.6, "wg": 0.28, "bm25": 0.05, "depth": 0.07, "synergy": 1.4})
+    default_settings = json.dumps({"vector": 0.6, "graph": 0.28, "bm25": 0.05, "depth": 0.07, "synergy": 1.4})
     
     cursor.execute(
         "INSERT INTO users (id, name, role, password_hash, is_admin, settings_json) VALUES (?, ?, ?, ?, 0, ?)",

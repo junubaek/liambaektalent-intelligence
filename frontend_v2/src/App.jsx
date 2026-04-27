@@ -668,9 +668,8 @@ export default function AntigravityMain() {
                   <div className="mt-8 p-6 bg-gray-50 rounded-2xl border border-gray-100 space-y-3">
                       <div className="flex items-center gap-2 mb-2"><Info className="w-4 h-4 text-black" /><span className="text-[10px] font-black uppercase tracking-widest text-black">Weights Guide</span></div>
                       <p className="text-[10px] font-bold text-gray-500 leading-relaxed">
-                          <strong className="text-black uppercase tracking-wider">Vector:</strong> 문맥과 뉘앙스 유사성<br/><br/>
-                          <strong className="text-black uppercase tracking-wider">Graph:</strong> 검증된 스킬/BUILT 매칭<br/><br/>
-                          <strong className="text-black uppercase tracking-wider">Depth / Syn:</strong> 기술의 깊이/연관성 가산점
+                          <strong className="text-black uppercase tracking-wider">BM25:</strong> 텍스트 키워드 기반 원문 매칭 점수<br/><br/>
+                          <strong className="text-black uppercase tracking-wider">Depth:</strong> 기술의 깊이(Action) 및 성취(Achievement) 밀도 가산점
                       </p>
                   </div>
               </div>
