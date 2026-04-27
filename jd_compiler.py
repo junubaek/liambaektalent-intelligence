@@ -17,13 +17,15 @@ from openai import OpenAI
 
 
 
-import os
+# Robust path for secrets.json
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+SECRETS_PATH = os.path.join(ROOT_DIR, "secrets.json")
 
 def _get_secret(key):
     val = os.environ.get(key)
     if val: return val
     try:
-        with open("secrets.json", "r", encoding="utf-8") as f:
+        with open(SECRETS_PATH, "r", encoding="utf-8") as f:
             return json.load(f).get(key, "")
     except Exception:
         return ""
@@ -398,10 +400,10 @@ logger = logging.getLogger(__name__)
 GENAI_KEY = os.environ.get("GEMINI_API_KEY")
 if not GENAI_KEY:
     try:
-        with open("secrets.json", "r", encoding="utf-8") as f:
+        with open(SECRETS_PATH, "r", encoding="utf-8") as f:
             GENAI_KEY = json.load(f).get("GEMINI_API_KEY", "PLEASE_SET_KEY")
     except Exception as e:
-        logger.warning("secrets.json not found or invalid format.")
+        logger.warning(f"{SECRETS_PATH} not found or invalid format.")
         GENAI_KEY = "PLEASE_SET_KEY"
 
 
@@ -1374,7 +1376,7 @@ def api_search_v8(prompt: str, session_id: str = None, **kwargs) -> dict:
     conds = apply_downgrade_map(conds)
     conds = inject_node_affinity(conds)
     
-    with open("secrets.json", "r", encoding="utf-8") as f:
+    with open(SECRETS_PATH, "r", encoding="utf-8") as f:
         secrets = json.load(f)
     api_key = secrets.get("OPENAI_API_KEY") or secrets.get("openai_api_key")
     
@@ -1709,7 +1711,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     n_pw = os.environ.get('NEO4J_PASSWORD', 'toss1234')
     driver = GraphDatabase.driver(n_uri, auth=(n_user, n_pw))
     
-    with open("secrets.json", "r", encoding="utf-8") as f:
+    with open(SECRETS_PATH, "r", encoding="utf-8") as f:
         secrets = json.load(f)
     client = OpenAI(api_key=secrets.get("OPENAI_API_KEY"))
     emb_res = client.embeddings.create(input=[prompt], model="text-embedding-3-small")
