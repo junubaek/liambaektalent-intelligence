@@ -246,7 +246,7 @@ export default function AntigravityMain() {
         required: reqKw, preferred: [], weights: settings
       };
 
-      const response = await fetch('/api/search-v8', { method: 'POST', headers, body: JSON.stringify(payload) });
+      const response = await fetch('/api/search', { method: 'POST', headers, body: JSON.stringify(payload) });
       if (!response.ok) throw new Error('API Error');
       const data = await response.json();
       setCandidates(data.matched || []);

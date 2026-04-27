@@ -511,13 +511,10 @@ def analyze_jd(data: JDInput):
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/api/search")
-def search_candidates(data: JDInput):
-    try:
-        results = matcher.run_pipeline(data.jd_text)
-        return results
-    except Exception as e:
-        logger.error(f"Search error: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+def search_candidates_v9_alias(req: SearchRequestV5):
+    # This is an alias for /api/search-v8 to support the simplified frontend URL
+    return api_search_v8_endpoint(req)
+
 
 @app.post("/api/search-v5")
 def api_search_v5(req: SearchRequestV5):
