@@ -58,6 +58,12 @@ def ensure_db():
     except Exception as e:
         print(f"DB 다운로드 실패: {e}")
 
+    try:
+        from backend.check_railway_db import check_db
+        check_db()
+    except Exception as e:
+        print("Could not run check_railway_db:", e)
+
 def ensure_indexes():
     """Ensure BM25 and Ontology Vector indexes exist."""
     import os
@@ -85,12 +91,5 @@ def ensure_indexes():
 
 if __name__ == '__main__':
     ensure_db()
-    
-    try:
-        from check_railway_db import check_db
-        check_db()
-    except Exception as e:
-        print("Could not run check_railway_db:", e)
-        
     ensure_indexes()
     import uvicorn

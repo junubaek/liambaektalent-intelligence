@@ -6,6 +6,12 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 from backend import startup
 startup.ensure_db()
 startup.ensure_indexes()
+
+try:
+    from backend.check_railway_db import check_db
+    check_db()
+except Exception as e:
+    print("Could not run check_railway_db from main.py:", e)
 # ----------------------------
 
 import json
