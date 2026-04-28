@@ -75,13 +75,31 @@ export default function AntigravityMain() {
         if (res.ok) {
           const data = await res.json();
           setCurrentUserData(data);
-          let loadedSettings = data.settings || { vector: 0.6, graph: 0.28, bm25: 0.05, depth: 0.07, synergy: 1.4 };
-          // If weights are too low (migration issue or old schema), force default
-          const totalW = (loadedSettings.vector || 0) + (loadedSettings.graph || 0) + (loadedSettings.bm25 || 0) + (loadedSettings.depth || 0);
-          if (totalW < 0.1) {
-            loadedSettings = { vector: 0.6, graph: 0.28, bm25: 0.05, depth: 0.07, synergy: 1.4 };
+          let loadedSettings = data.settings;
+          if (typeof loadedSettings === 'string') {
+              try { loadedSettings = JSON.parse(loadedSettings); } catch(e) { loadedSettings = {}; }
           }
-          setSettings(loadedSettings);
+          if (!loadedSettings || typeof loadedSettings !== 'object') {
+              loadedSettings = {};
+          }
+          
+          const v = parseFloat(loadedSettings.vector);
+          const g = parseFloat(loadedSettings.graph);
+          const b = parseFloat(loadedSettings.bm25);
+          const d = parseFloat(loadedSettings.depth);
+          
+          const safeV = isNaN(v) ? 0 : v;
+          const safeG = isNaN(g) ? 0 : g;
+          const safeB = isNaN(b) ? 0 : b;
+          const safeD = isNaN(d) ? 0 : d;
+          
+          const totalW = safeV + safeG + safeB + safeD;
+          
+          if (totalW < 0.1) {
+            setSettings({ vector: 0.6, graph: 0.28, bm25: 0.05, depth: 0.07, synergy: 1.4 });
+          } else {
+            setSettings({ vector: safeV, graph: safeG, bm25: safeB, depth: safeD, synergy: 1.4 });
+          }
           setIsModalOpen(false);
         } else {
         handleLogout();
