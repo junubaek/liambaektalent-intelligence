@@ -1,7 +1,12 @@
 import os
 import urllib.request
+import sys
+
+# 로그 즉시 출력
+sys.stdout.reconfigure(line_buffering=True)
 
 def ensure_db():
+    print("=== ensure_db() 시작 ===", flush=True)
     import os
     db_path = os.environ.get('DB_PATH', 'candidates.db')
     
