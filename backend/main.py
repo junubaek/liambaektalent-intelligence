@@ -795,6 +795,35 @@ def build_reverse_index(groups: list) -> dict:
 # 전역 선언 (앱 시작 시 1회 빌드, 이후 API로 리로드 가능)
 REVERSE_INDEX = build_reverse_index(SYNONYM_GROUPS)
 
+@app.get("/admin/check-cache")
+async def check_cache():
+    import json, os
+    result = {}
+    
+    # JSON 캐시 확인
+    cache_file = 'candidates_cache_jd.json'
+    if os.path.exists(cache_file):
+        d = json.load(open(cache_file, encoding='utf-8'))
+        cand_count = sum(1 for c in d if str(c.get('name_kr','')).startswith('CANDIDATE_'))
+        result['json_cache_total'] = len(d)
+        result['json_cache_candidate_pattern'] = cand_count
+        result['json_cache_sample'] = [c.get('name_kr') for c in d if str(c.get('name_kr','')).startswith('CANDIDATE_')][:3]
+    else:
+        result['json_cache'] = 'NOT FOUND'
+    
+    # SQLite 확인
+    import sqlite3
+    db = os.environ.get('DB_PATH', '/data/candidates.db')
+    conn = sqlite3.connect(db)
+    cur = conn.cursor()
+    cur.execute("SELECT COUNT(*) FROM candidates WHERE name_kr LIKE 'CANDIDATE_%'")
+    result['sqlite_candidate_pattern'] = cur.fetchone()[0]
+    cur.execute("SELECT COUNT(*) FROM candidates")
+    result['sqlite_total'] = cur.fetchone()[0]
+    conn.close()
+    
+    return result
+
 @app.get("/api/debug-patterns")
 def debug_patterns():
     from connectors.notion_api import HeadhunterDB
