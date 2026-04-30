@@ -69,6 +69,13 @@ def ensure_db():
     except Exception as e:
         print("Could not run check_railway_db:", e)
 
+    # DB 재다운로드 시 JSON 캐시도 초기화
+    if force_redownload:
+        cache_file = 'candidates_cache_jd.json'
+        if os.path.exists(cache_file):
+            os.remove(cache_file)
+            print("JSON 캐시 삭제 완료: candidates_cache_jd.json")
+
 def ensure_indexes():
     """Ensure BM25 and Ontology Vector indexes exist."""
     import os
