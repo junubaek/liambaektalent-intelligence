@@ -820,6 +820,17 @@ async def check_cache():
     result['sqlite_candidate_pattern'] = cur.fetchone()[0]
     cur.execute("SELECT COUNT(*) FROM candidates")
     result['sqlite_total'] = cur.fetchone()[0]
+    
+    # CANDIDATE_ 후보자 직접 DB에서 샘플 조회
+    cur.execute("SELECT id, name_kr, current_company FROM candidates WHERE name_kr LIKE 'CANDIDATE_%' LIMIT 5")
+    rows = cur.fetchall()
+    result['sqlite_candidate_samples'] = [{'id': r[0][:8], 'name': r[1], 'company': r[2]} for r in rows]
+
+    # b2c99 ID로 직접 조회
+    cur.execute("SELECT id, name_kr FROM candidates WHERE id LIKE '%b2c99%'")
+    rows2 = cur.fetchall()
+    result['b2c99_lookup'] = [{'id': r[0], 'name': r[1]} for r in rows2]
+    
     conn.close()
     
     return result
