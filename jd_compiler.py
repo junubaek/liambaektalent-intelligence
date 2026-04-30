@@ -1649,10 +1649,18 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     unknown_ratio = 1.0 - (registered_count / max(len(prompt_words), 1))
 
     # 동적 가중치 계산
-    w_d_dynamic = round(0.02 + (unknown_ratio * 0.10), 3)  # 0.02 ~ 0.12
-    w_b_dynamic = round(0.03 + (unknown_ratio * 0.04), 3)  # 0.03 ~ 0.07
-    w_v_dynamic = round(0.68 - (unknown_ratio * 0.08), 3)  # 0.60 ~ 0.68
-    w_g_dynamic = round(1.0 - w_v_dynamic - w_b_dynamic - w_d_dynamic, 3)
+    if unknown_ratio < 0.3:
+        # 실험 3 최적값 적용 (키워드 매칭이 원활한 경우)
+        w_v_dynamic = 0.60
+        w_g_dynamic = 0.35
+        w_b_dynamic = 0.03
+        w_d_dynamic = 0.02
+    else:
+        # 키워드 미등록 비중이 높은 경우 (벡터 비중 상향)
+        w_d_dynamic = round(0.02 + (unknown_ratio * 0.10), 3)  # 0.02 ~ 0.12
+        w_b_dynamic = round(0.03 + (unknown_ratio * 0.04), 3)  # 0.03 ~ 0.07
+        w_v_dynamic = round(0.68 - (unknown_ratio * 0.08), 3)  # 0.60 ~ 0.68
+        w_g_dynamic = round(1.0 - w_v_dynamic - w_b_dynamic - w_d_dynamic, 3)
 
     # weights 파라미터로 외부 주입 시 우선 적용
     w_v = weights.get('vector', w_v_dynamic) if weights else w_v_dynamic
