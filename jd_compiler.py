@@ -1,11 +1,5 @@
 from ontology_graph import UNIFIED_GRAVITY_FIELD, SENIOR_EXPANDED_SYNERGY
-import sqlite3
-
-import os
-
-import json
-
-import uuid
+import sqlite3, os, json, uuid, re
 
 from openai import OpenAI
 
@@ -1645,19 +1639,28 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     """
     import json, time, math
     
-    # 0. Set Weights
-    if weights is None:
-        weights = {
-            'vector': 0.60,
-            'graph': 0.28,
-            'bm25': 0.05,
-            'depth': 0.07
-        }
-    
-    w_v = weights.get('vector', 0.60)
-    w_g = weights.get('graph', 0.28)
-    w_b = weights.get('bm25', 0.05)
-    w_d = weights.get('depth', 0.07)
+    # 0. Set Weights (Dynamic)
+    from ontology_graph import CANONICAL_MAP
+    prompt_lower = prompt.lower()
+    prompt_words = re.findall(r'[a-zA-Z가-힣]{2,}', prompt_lower)
+
+    registered_count = sum(1 for w in prompt_words 
+                           if any(w in k.lower() for k in CANONICAL_MAP.keys()))
+    unknown_ratio = 1.0 - (registered_count / max(len(prompt_words), 1))
+
+    # 동적 가중치 계산
+    w_d_dynamic = round(0.02 + (unknown_ratio * 0.10), 3)  # 0.02 ~ 0.12
+    w_b_dynamic = round(0.03 + (unknown_ratio * 0.04), 3)  # 0.03 ~ 0.07
+    w_v_dynamic = round(0.68 - (unknown_ratio * 0.08), 3)  # 0.60 ~ 0.68
+    w_g_dynamic = round(1.0 - w_v_dynamic - w_b_dynamic - w_d_dynamic, 3)
+
+    # weights 파라미터로 외부 주입 시 우선 적용
+    w_v = weights.get('vector', w_v_dynamic) if weights else w_v_dynamic
+    w_g = weights.get('graph', w_g_dynamic) if weights else w_g_dynamic
+    w_b = weights.get('bm25', w_b_dynamic) if weights else w_b_dynamic
+    w_d = weights.get('depth', w_d_dynamic) if weights else w_d_dynamic
+
+    logger.info(f'[Dynamic Weights] unknown_ratio={unknown_ratio:.2f} | V={w_v} G={w_g} B={w_b} D={w_d}')
 
     from openai import OpenAI
     from neo4j import GraphDatabase
@@ -1809,7 +1812,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
             raw_text_val = r[2]
             
             raw_text_map[cid] = raw_text_val
-            if cid not in id_to_name and name_val:
+            if (cid not in id_to_name or not id_to_name.get(cid)) and name_val:
                 id_to_name[cid] = name_val
             
             # Map SQLite fields to the format expected by the frontend
