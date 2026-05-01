@@ -21,3 +21,4 @@ scikit-learn
 SQLAlchemy
 
 rank-bm25
+python-dotenv
