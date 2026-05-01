@@ -1,0 +1,350 @@
+﻿[Q1] Neural Network Operations Parallel Programming C++
+1. ?뺤삁由?| ?쇱꽦?꾩옄 | SW | 31f22567-1b6f-8106-a331-e438f877d966
+2. 諛뺤썝??| HP Printing Korea | SW | 31f22567-1b6f-81e9-9eec-c735494cc02f
+3. 理쒗삎愿?| NVIDIA | Infrastructure_and_Cloud | 31f22567-1b6f-81f5-b804-f348325a811f
+4. ?좎젙??| ?쇱꽦?꾩옄 | Semiconductor | 31f22567-1b6f-814d-9e7b-cf300cd3447f
+5. ?쒖긽??| Rebellions | SW | 32e22567-1b6f-8194-85ac-c2d6a1fc37ba
+
+[Q2] OEM ExportCompliance MarketResearch
+1. ?щ???| ?쒖젙?앺뭹 | Operations | 32122567-1b6f-8107-b5c2-cf8bc1f8c89b
+2. 議곕Ц??| ?쒖꽌?몃컲?꾩껜 | Semiconductor | 32122567-1b6f-81b3-88d7-e19b320d20e7
+3. ?댄븰二?| 誘몄긽 | Operations | 31f22567-1b6f-811b-889e-dfbd3025e6db
+4. ?덈챸??| HYUNDAI UBIS Co., Ltd. | Operations | 32122567-1b6f-8153-afd7-d280aebc13b4
+5. ?댁갹??| 誘몄긽 | Strategy | 32122567-1b6f-813b-947a-c5965a1cb2e0
+
+[Q3] LINUX AWS Architecture
+1. ?ㅼ꽍??| HYBE-IM | SW | 31f22567-1b6f-8149-b097-cf2ba9c9241e
+2. ?ㅼ쁺??| PYLER | SW | 31f22567-1b6f-8193-8cb9-d78eb4c59593
+3. 源?⑤? | ?밴렐留덉폆 | SW | 33522567-1b6f-81a3-ac63-e62ab98e6793
+4. 源?⑸쭔 | 濡?뜲?뺣낫?듭떊 | SW | 32022567-1b6f-8151-91b9-ff8c411bf3a1
+5. ?좎꽭吏?| ?쇱씤寃뚯엫利?| SW | 32022567-1b6f-8110-99af-f7fbf4855dc3
+
+[Q4] Spring Fintech MSSQL
+1. 源?꾪씗 | 誘몄긽 | Finance | 31f22567-1b6f-817a-a763-f718d9d40fbf
+2. 源?명샇 | ???⑥벐 | FinTech | 32122567-1b6f-8189-9433-dcfe8c8f92e5
+3. ?닿린以 | ?덉쭊?뚭퀎踰뺤씤 | SW | 31f22567-1b6f-81b3-b231-cc1c4f6b3550
+4. 理쒓꼍??| SK?붾젅肄?二? | 誘몃텇瑜?| 33522567-1b6f-817e-a77b-ffc7e1b8d5d4
+5. ?ㅽ쁽吏?| YG PLUS | SW | 32f22567-1b6f-8118-90e0-eafff24e143f
+
+[Q5] ASRS Smart Factory Semiconductor Logistics Automation
+1. 怨쎌쿋??| Cowell (以묎뎅) | Operations | 31f22567-1b6f-81aa-9c3d-d2a9b94d9b26
+2. ?뺤???| Lam Research Manufacturing Korea LLC | Semiconductor | 31f22567-1b6f-8140-80f8-e758151166fa
+3. ?뺤쭊??| 硫붾뱶?몃줈?됱퐫由ъ븘 | Operations | 32022567-1b6f-81b3-8f01-ff0cb21c6665
+4. ?좎썒??| LG?꾩옄 | Operations | 31f22567-1b6f-818b-8dd7-f09a7fb8aafd
+5. 源寃쎈룞 | 肄붿쎇愿묓븰?꾩옄 | Semiconductor | 32022567-1b6f-814e-8f8b-ce56c2a60d91
+
+[Q6] Blockchain NFT
+1. ?뺤갹??| jpegs.fun | SW | 31f22567-1b6f-81f3-bfe6-fb7fd7c9ad61
+2. ?뺣???| MilkyWay | SW | 31f22567-1b6f-8150-8062-f6862dec66e5
+3. 諛뺥븯吏?| ?좊땲紐⑥뭅寃뚯엫利?| SW | 31f22567-1b6f-81b4-b3ab-ed7c6d8db537
+4. ?대룞以 | DKL Partners 踰뺣쪧?щТ??| Legal | 32022567-1b6f-817f-a97d-f60a0fddb788
+5. ?댁쭊??| ?쒗???| SW | 32022567-1b6f-8121-b3b4-dac79d7ece90
+
+[Q7] CFO IPO IR ?먭툑議곕떖 ?몃Т ?щТ珥앷큵
+1. ?덉듅誘?| ?꾪봽由ъ뭅TV | Finance | 31f22567-1b6f-8137-9961-fef20d3eeae6
+2. 源?곸썝 | ??XXX | Finance | 31f22567-1b6f-8108-9739-fe07884e2967
+3. 沅뚰슚??| 踰좎뒪?湲濡쒕쾶??| Finance | 32e22567-1b6f-8118-9c0a-cf1db09422c7
+4. ?뺤쥌??| 荑좏뙜(二? | Finance | 31f22567-1b6f-8146-90a5-e95f0b8994af
+5. 理쒓꼍誘?| ?쇱꽦利앷텒 | Finance | 32022567-1b6f-81a7-acd3-faaab9e484a4
+
+[Q8] AI Accelerators Generative AI Datacenter GPU cluster
+1. ?ㅽ씗??| GraphAI | SW | 32e22567-1b6f-81ae-982f-c477beb1cc82
+2. 媛뺤쭊援?| Moreh | FinTech | 31f22567-1b6f-81d3-bd70-eb0ffdd0021a
+3. 源?뺤닔 | (二?LG AI?곌뎄??| SW | 33522567-1b6f-81bb-83a2-ef99ae586714
+4. 怨쎈룄??| 而ㅻ땲肄붾━???? | FinTech | 31f22567-1b6f-81e5-9d67-c913d168aa32
+5. 瑜섏꽦??| ?꾨?移대뱶 | FinTech | 31f22567-1b6f-819f-a98d-cd4770717dc6
+
+[Q9] Kubernetes Terraform LangGraph DevOps pipeline
+1. ?ㅼ쁺??| PYLER | SW | 31f22567-1b6f-8193-8cb9-d78eb4c59593
+2. ?ㅼ꽍??| HYBE-IM | SW | 31f22567-1b6f-8149-b097-cf2ba9c9241e
+3. ?댁젙??| UPRISE, Inc. | SW | 32022567-1b6f-81cf-af18-cbdada2eecf0
+4. 諛뺤듅以 | Kakao Enterprise | SW | 31f22567-1b6f-8161-959d-eb7dcc04e431
+5. ?대룄??| KT DS | SW | 31f22567-1b6f-8167-98d4-dfdfc04fb00d
+
+[Q10] Collective Communication RDMA RoCE InfiniBand
+1. 理쒗삎愿?| NVIDIA | Infrastructure_and_Cloud | 31f22567-1b6f-81f5-b804-f348325a811f
+2. ?뺤쑄??| Moreh | SW | 31f22567-1b6f-81c0-9371-e103edfb91c9
+3. ?ㅼ쁺??| PYLER | SW | 31f22567-1b6f-8193-8cb9-d78eb4c59593
+4. 源吏??| Mangoboost | Semiconductor | 31f22567-1b6f-8118-a7d1-c9f668028aa9
+5. 源?쒓꼍 | SK Telecom | SW | 32e22567-1b6f-81f4-814f-d8f48c10722a
+
+[Q11] ERP Excel Labor Law HR payroll
+1. 瑜섎옒誘?| 由щ뱶?묒떆鍮꾩뀡?ㅼ퐫由ъ븘 ?좏븳?뚯궗 | Finance | 32022567-1b6f-8186-90ba-cbd192344e78
+2. 議고삙由?| ?쒓뎅?붽???| HR | 32122567-1b6f-8139-947b-c27b218e904e
+3. ?꾩긽嫄?| ?ㅼ럡 | HR | 31f22567-1b6f-81c5-95df-e5763b035640
+4. ?덉듅誘?| ?꾪봽由ъ뭅TV | Finance | 31f22567-1b6f-8137-9961-fef20d3eeae6
+5. 源?쒗삎 | 誘몄긽 | Financial_Accounting | 32022567-1b6f-8196-b5de-ef936a5c5e66
+
+[Q12] Financial Modeling Valuation DCF LBO
+1. 沅뚰슚??| 踰좎뒪?湲濡쒕쾶??| Finance | 32e22567-1b6f-8118-9c0a-cf1db09422c7
+2. ?꾪깭??| 誘몄긽 | Finance | 32122567-1b6f-811a-b6a9-d71c40793d32
+3. 理쒓킅??| ?쇱젙?뚭퀎踰뺤씤 | Finance | 32022567-1b6f-8187-a7ee-c2c0dd56bc1f
+4. 臾몄닚??| Samsung Securities Co., Ltd. | Finance | 31f22567-1b6f-8170-98a6-c55acb82e6d7
+5. 理쒓꼍援?| ?꾨?紐⑤퉬??| Strategy | 31f22567-1b6f-8120-a331-e7a648f9a263
+
+[Q13] Chip Bring-up Driver Development embedded
+1. ?댁썝泥?| ?쇱꽦?꾩옄 | Infrastructure_and_Cloud | 31f22567-1b6f-8105-9536-f0c8e925dcae
+2. ?대?李?| ?쇱꽦?꾩옄 ?ㅽ듃?뚰겕 ?ъ뾽遺 | SW | 32f22567-1b6f-8126-93de-d5e3d889ff67
+3. 媛뺢굔洹?| SONATUS Software Korea | SW | 32022567-1b6f-812a-ac39-dd91d6183f2b
+4. 理쒖썝湲?| ?ㅽ듃?쇰뱶鍮꾩졏 ?쒖슱 | Semiconductor | 31f22567-1b6f-8152-a595-cd6009b06a1c
+5. ?고삎??| ?쇱꽦?꾩옄 | SW | 32e22567-1b6f-8153-b866-c9af67643875
+
+[Q14] ARM SVE Neural Network Operations embedded
+1. 源?뺤닔 | (二?LG AI?곌뎄??| SW | 33522567-1b6f-81bb-83a2-ef99ae586714
+2. 議곕쭔??| 誘몄긽 | SW | 32e22567-1b6f-81e2-bc6c-cac360cca73d
+3. ?먯쭊愿?| ?쒖씪 ?묓???| SW | 32122567-1b6f-81a8-bddb-e87da07697e6
+4. 諛뺤썝??| HP Printing Korea | SW | 31f22567-1b6f-81e9-9eec-c735494cc02f
+5. ?ㅼ슦??| Balancehero Korea | SW | 31f22567-1b6f-8118-9539-cf6e7ddeda31
+
+[Q15] React TypeScript Next.js frontend performance
+1. ?ㅼ썝醫?| (二?援용떏 | SW | 33522567-1b6f-812b-aa21-e73e44c9ee95
+2. ?뺤갹??| jpegs.fun | SW | 31f22567-1b6f-81f3-bfe6-fb7fd7c9ad61
+3. ?뺤쑀洹?| TWO AI | SW | 31f22567-1b6f-81c3-857e-dd38c3a7a6ad
+4. 源?쇱떇 | Viva Republica | SW | 32022567-1b6f-8143-a13b-e5df7ecb90f9
+5. 怨좎듅??| 誘몄긽 | Finance | 32022567-1b6f-8123-a9a4-eaa5116ac821
+
+[Q16] CMO ?먮뒗 留덉??낅낯遺??釉뚮옖???꾨왂 ?붿??몃쭏耳??
+1. 理쒖씤泥?| 而ㅻ땲肄붾━???? | Strategy | 31f22567-1b6f-817e-9a3e-c85f4875df6a
+2. ?댁닔吏?| SSG?룹뺨 | Marketing | 31f22567-1b6f-8180-9af1-c0bf1ea1947a
+3. ?닿꼍以 | 移대툕猷?| Marketing | 31f22567-1b6f-812b-a1e1-e8fac1c25af3
+4. ?좎궗??| NP Inc. | Marketing | 33522567-1b6f-8176-a295-cc6c4147639b
+5. 怨좊???| ?쒗떚紐?| Marketing | 32022567-1b6f-8106-8231-f5a2b144d899
+
+[Q17] CTO ?ㅽ??몄뾽 湲곗닠珥앷큵 ?꾪궎?띿쿂
+1. 媛뺥삎援?| HANDHUG | SW | 33522567-1b6f-8180-a575-c73b46492e47
+2. ?꾧컯吏?| ?쒕씪?대툕?좊━ | FinTech | 32122567-1b6f-8172-b7c3-cadb9471b291
+3. 理쒖옱??| 吏?뷀꽣?꾨씪?댁쫰 | SW | 31f22567-1b6f-8144-a6a7-d4b1bba89ef0
+4. ?뺤갹??| jpegs.fun | SW | 31f22567-1b6f-81f3-bfe6-fb7fd7c9ad61
+5. ?댁쭊??| ?쒗???| SW | 32022567-1b6f-8121-b3b4-dac79d7ece90
+
+[Q18] VP Engineering ?붿??덉뼱留?議곗쭅 鍮뚮뵫
+1. 諛뺤???| 濡?뜲嫄댁꽕 | Operations | 31f22567-1b6f-81cb-b764-ce2b87c67ec9
+2. 源?몄쨷 | 猷⑦듃?쒖씠??| Operations | 32122567-1b6f-8100-a652-fa3423efaea8
+3. ?뺣챸吏?| 二??몃챸?뚰겕 | Operations | 32122567-1b6f-8160-921b-e993235e8859
+4. 諛깆듅??| (二? ?섏씠?먯뼱肄붾━??| Operations | 32122567-1b6f-81fa-8661-ee3ec9d2919e
+5. ?щ뱷??| (二? ?숈뼇援ъ“?덉쟾湲곗닠 | Operations | 32122567-1b6f-81f3-babb-f3a315212f5b
+
+[Q19] Product Manager B2B SaaS 湲고쉷
+1. 議곗?踰?| ?쒗?吏?| SW | 32e22567-1b6f-8107-baca-c9833d059d40
+2. ?좎꽑??| ?쒖씠猷⑤떎 | Marketing | 32122567-1b6f-81a0-87cd-ec840f72efac
+3. 源誘쇱쭊 | Toss | Finance | 32022567-1b6f-81f3-8593-d0cbda732824
+4. 源蹂묓솚 | 誘몄긽 | SW | 32022567-1b6f-8184-8671-c912dc71ccf2
+5. 源???| Kakao | Strategy | 31f22567-1b6f-8117-9b41-dcdc30c6815b
+
+[Q20] Head of Sales ?뷀꽣?꾨씪?댁쫰 ?곸뾽 珥앷큵
+1. ?닿꼍洹?| ?꾩궗?꾨툝濡쒖씠 肄붾━???쇳솕?뺣? ??| Marketing | 32122567-1b6f-810b-aba5-ee6e8e46f847
+2. 瑜섏옱??| (二??몄씠?꾩씤?곕궡?붾꼸 | Marketing | 32022567-1b6f-811e-9267-ffbc873014d6
+3. 源誘쇱슦 | ?쒕え?ㅽ듃 | Strategy | 32022567-1b6f-817b-a377-e12aa79bfce2
+4. 議곗?踰?| ?쒗?吏?| SW | 32e22567-1b6f-8107-baca-c9833d059d40
+5. ?댁???| 硫붽?議담닚 | Strategy | 32022567-1b6f-8152-a9e1-e000253a5119
+
+[Q21] ?곗씠???ъ씠?명떚?ㅽ듃 ML 紐⑤뜽留?異붿쿇?쒖뒪??
+1. ?대룞??| ?쒕줈?댄듃而⑥꽕??| SW | 32122567-1b6f-81a9-b1b4-fe6c3783210e
+2. ?ㅼ슦??| Balancehero Korea | SW | 31f22567-1b6f-8118-9539-cf6e7ddeda31
+3. ?닿린以 | ?덉쭊?뚭퀎踰뺤씤 | SW | 31f22567-1b6f-81b3-b231-cc1c4f6b3550
+4. 瑜섏꽦??| ?꾨?移대뱶 | FinTech | 31f22567-1b6f-819f-a98d-cd4770717dc6
+5. 源?뺤닔 | (二?LG AI?곌뎄??| SW | 33522567-1b6f-81bb-83a2-ef99ae586714
+
+[Q22] 蹂댁븞 ?꾨Ц媛 CISO ?뺣낫蹂댁븞 而댄뵆?쇱씠?몄뒪
+1. 議곕???| ICTK Holdings | SW | 32022567-1b6f-81f4-9ab4-ea584cd89b16
+2. ?댁닔??| 誘몄긽 | SW | 32122567-1b6f-815c-ad9d-d781a2b9f063
+3. 諛뺤쁺誘?| ?섏뭅 | SW | 31f22567-1b6f-81ce-95b3-c1d79c7062c7
+4. ?ㅼ닔??| 移댁뭅?ㅺ쾶?꾩쫰 | SW | 33522567-1b6f-81d3-9c2c-daa472159f19
+5. ?ㅼ꽍??| HYBE-IM | SW | 31f22567-1b6f-8149-b097-cf2ba9c9241e
+
+[Q23] 踰뺣Т???M&A 怨꾩빟 寃???ㅽ??몄뾽
+1. ?κ굔 | 踰뺣Т踰뺤씤 誘몄뀡 | Legal | 33522567-1b6f-8139-a628-d785dfbbd3e9
+2. ?댁쿋??| ?쒗룷?ㅼ퐫 | Corporate_Strategic_Planning | 32122567-1b6f-819a-9473-d1ec8020e1cb
+3. ?μ쭊??| JBPASS | Legal | 32122567-1b6f-8147-ac5f-e34b724f5e82
+4. ?꾪깭??| 誘몄긽 | Finance | 32122567-1b6f-811a-b6a9-d71c40793d32
+5. ?뺤닚吏 | ?쒖슱諛붿씠?ㅼ떆??| Legal | 32e22567-1b6f-8162-991d-c6930493a169
+
+[Q24] IR ?대떦???ъ옄??愿怨?怨듭떆 ?먭툑議곕떖
+1. ?덉듅誘?| ?꾪봽由ъ뭅TV | Finance | 31f22567-1b6f-8137-9961-fef20d3eeae6
+2. 沅뚰슚??| 踰좎뒪?湲濡쒕쾶??| Finance | 32e22567-1b6f-8118-9c0a-cf1db09422c7
+3. 理쒖젙??| ?쏞J?쇱씠釉뚯떆??| Finance | 32022567-1b6f-81d7-ad45-f14d603cdf43
+4. 理쒓꼍誘?| ?쇱꽦利앷텒 | Finance | 32022567-1b6f-81a7-acd3-faaab9e484a4
+5. 議고삎吏?| ?꾨?EP | Finance | 32022567-1b6f-8120-8367-d197c7fc4cbd
+
+[Q25] 援щℓ???SCM 湲濡쒕쾶 ?뚯떛 ?묒긽
+1. ?뺤쭊??| 硫붾뱶?몃줈?됱퐫由ъ븘 | Operations | 32022567-1b6f-81b3-8f01-ff0cb21c6665
+2. ?좎썒??| LG?꾩옄 | Operations | 31f22567-1b6f-818b-8dd7-f09a7fb8aafd
+3. ?먮떎??| ?꾨뵒?ㅼ뒪肄붾━??| Operations | 31f22567-1b6f-81ec-aa3c-f1a606d11227
+4. ?앹듅??| GS Aromatics | Operations | 32122567-1b6f-8116-abe5-de96d5f9e1b6
+5. ?쒖쿋援?| 硫붽?議?| SW | 32122567-1b6f-8103-8e6b-dcac90c2de6b
+
+[Q26] ?ъ뒪耳???붿????ъ뒪 ?섎즺湲곌린 洹쒖젣
+1. 源?뱁긽 | IMGT | Healthcare | 31f22567-1b6f-8182-ae83-dae34048f835
+2. ?ㅽ삙??| VUNO (酉곕끂) | Healthcare | 32f22567-1b6f-8134-b668-d6f42989ea47
+3. ?뺥슚吏?| ?먯퐫臾몃룄 | Healthcare | 32122567-1b6f-81f5-8e24-eb4e1c3f8f4b
+4. ?좎꽑??| ?쒖씠猷⑤떎 | Marketing | 32122567-1b6f-81a0-87cd-ec840f72efac
+5. ?좎닔??| ?먮툕?됱뒪 | SW | 32122567-1b6f-8194-b407-ea8258727e38
+
+[Q27] 寃뚯엫 媛쒕컻 Unity Unreal 紐⑤컮?쇨쾶??
+1. 源?ㅼ젙 | 鍮꾨늻???뷀꽣?뚯씤癒쇳듃 (?≪뒪移댁씠) | SW | 32e22567-1b6f-8137-98c6-d0a3d5221c32
+2. ?꾩쁺??| ?뚮젅?댁썚??| SW | 32022567-1b6f-816f-a6f5-f1ef4d949b99
+3. 沅뚮???| Gazet Factory | SW | 31f22567-1b6f-812f-9d7a-fea6f9af9efb
+4. ?⑹뿬? | ?띿뾽?ㅻ쭏?명뀒??| SW | 32122567-1b6f-8199-8320-d5ddba54b296
+5. 源吏꾩썝 | 二쇱떇?뚯궗 湲댄듃 | SW | 32122567-1b6f-81f9-9171-d78172fa8ba7
+
+[Q28] ?먯쑉二쇳뻾 紐⑤퉴由ы떚 ?쇱꽌?⑥쟾 SLAM
+1. ?ы깭??| KT ?듯빀湲곗닠??| SW | 31f22567-1b6f-81cc-bd56-e5da668a4654
+2. ?ㅼ갹??| 誘몄긽 | Engineering | 32122567-1b6f-81a2-b1ef-ee90d126e2c2
+3. 源寃쏀몴 | (二?而⑦듃濡ㅼ썚??| SW | 31f22567-1b6f-8114-9de3-d5ab9d1970ee
+4. ?댁갔??| ?꾨?紐⑤퉬??二? | SW | 31f22567-1b6f-81dd-8c83-e497b470e45c
+5. 源?뺤닔 | (二?LG AI?곌뎄??| SW | 33522567-1b6f-81bb-83a2-ef99ae586714
+
+[Q29] ??뚰겕 寃곗젣 PG 湲덉쑖 API
+1. 源?명샇 | ???⑥벐 | FinTech | 32122567-1b6f-8189-9433-dcfe8c8f92e5
+2. 源?꾪씗 | 誘몄긽 | Finance | 31f22567-1b6f-817a-a763-f718d9d40fbf
+3. ?댁쭊??| ?쒗???| SW | 32022567-1b6f-8121-b3b4-dac79d7ece90
+4. ?④꼍??| FIME ?쒓뎅吏??| Finance | 32e22567-1b6f-8128-8007-cccacaf3f608
+5. ?댁슜吏?| 誘몄긽 | 誘몃텇瑜?| 32022567-1b6f-81fc-82b5-f4e3e16f289e
+
+[Q30] ?댁빱癒몄뒪 ?뚮옯??洹몃줈???쇳룷癒쇱뒪留덉???
+1. ?댁닔吏?| SSG?룹뺨 | Marketing | 31f22567-1b6f-8180-9af1-c0bf1ea1947a
+2. 源?뚮? | FLO | Marketing | 31f22567-1b6f-8133-abcb-dfc130bca8cd
+3. ?꾩? | 釉뚮옖??| Marketing | 31f22567-1b6f-8173-883b-db9caea82ed6
+4. ?꾩갹??| (二??대컲?붿??몃쭏耳??| Marketing | 31f22567-1b6f-8144-9d28-eb5cf4fdfa0b
+5. 二쇱쁺??| (二??먯뒪?곗쑀?덊???| Marketing | 31f22567-1b6f-814c-bd83-d113acd7c4ef
+
+[Q31] ?뷀꽣?뚯씤癒쇳듃 肄섑뀗痢?IP ?쇱씠?좎떛
+1. ?꾩듅??| ?명뀛由щ퉭??| Machine_Learning | 32122567-1b6f-81c1-9eb8-e27aa257d8d8
+2. ?뺤갹??| jpegs.fun | SW | 31f22567-1b6f-81f3-bfe6-fb7fd7c9ad61
+3. 沅뚯꽦? | ?덊럹由?| Marketing | 32122567-1b6f-816b-84cd-fe43da77b549
+4. ?좎닔??| ?먮툕?됱뒪 | SW | 32122567-1b6f-8194-b407-ea8258727e38
+5. 媛뺤꽑援?| ?쒖씠?뚰겕?쒖뒪??| SW | 32022567-1b6f-81fc-809c-f43c2be4415a
+
+[Q32] 諛붿씠???쒖빟 ?꾩긽 洹쒖젣 RA
+1. 源以??| ?섎━?꾨윴?곗뼱 | Healthcare | 32122567-1b6f-8150-b816-cfd008570631
+2. ?대튆??| ?쒕떎由쇰컮?댁삤??| Healthcare | 32122567-1b6f-81ab-b8e2-d7c89fdfbee8
+3. ?댁젣湲?| ?꾨?罹먰뵾??| Finance | 32122567-1b6f-81b3-985b-de92987ded64
+4. 媛먯궗??| 媛먯궗??| Legal | 33522567-1b6f-8130-8bc3-dafc17a0c873
+5. ?뺥슚吏?| ?먯퐫臾몃룄 | Healthcare | 32122567-1b6f-81f5-8e24-eb4e1c3f8f4b
+
+[Q33] 諛섎룄泥??λ퉬 怨듭젙 Etch CVD
+1. ?⑹쓽??| SHUTEK | Semiconductor | 31f22567-1b6f-811e-991a-ce3fab391b95
+2. 源?뱁븳 | ?꾨━???諛섎룄泥?| Semiconductor | 32e22567-1b6f-81b3-9982-e77acb552fe3
+3. ?쒕낫??| Samsung Electronics | Semiconductor | 32e22567-1b6f-81a0-b913-ed0db4db2934
+4. ?댄븳吏?| 肄붿떆?ㅽ뀒??| Semiconductor | 32122567-1b6f-8106-b378-ecfbb8d2deba
+5. ?몃룞??| 誘몄긽 | Semiconductor | 32022567-1b6f-81f9-b0f6-c1829c5ca0dd
+
+[Q34] 臾쇰쪟 SCM ??꾨㉫???쇱뒪?몃쭏??
+1. 諛뺤쥌紐?| ?뚯쫰肄뷀띁由ъ뿉??| Operations | 31f22567-1b6f-81d2-acbd-de521026baf3
+2. ?⑤???| COUPANG | Operations | 32e22567-1b6f-8190-b000-c21f0bcabbca
+3. ?뺤쭊??| 硫붾뱶?몃줈?됱퐫由ъ븘 | Operations | 32022567-1b6f-81b3-8f01-ff0cb21c6665
+4. ?좎젙??| 荑좏뙜??꾨㉫?몄꽌鍮꾩뒪 | Operations | 31f22567-1b6f-8152-93ca-ca5ab3080016
+5. ?댁＜??| THE BODY SHOP | Operations | 32122567-1b6f-81cc-ba30-e9de5212fca8
+
+[Q35] ?먮꼫吏 ESG ?꾩냼以묐┰ ?좎옱?앹뿉?덉?
+1. ?댄깭寃?| LG?뷀븰 | Strategy | 32122567-1b6f-81fd-8c08-e488e2a4abbe
+2. ?댄깭寃?| LG?뷀븰 | 誘몃텇瑜?| 32122567-1b6f-81fd-8c08-e488e2a4abbe
+3. ?꾩???| ?쇱꽦?붿??덉뼱留?| Strategy | 33522567-1b6f-81e1-814f-eab077715729
+4. 諛곕Ц??| ?쒓뎅?꾨젰怨듭궗 | SW | 31f22567-1b6f-816c-ac76-f6ac6c31c2db
+5. ?깆떆誘?| ?쒓뎅?꾨젰怨듭궗 | SW | 31f22567-1b6f-812a-a43d-c12e500c07ac
+
+[Q36] ?멸뎅怨?湲곗뾽 寃쏀뿕 湲濡쒕쾶 而ㅻ??덉??댁뀡 ?곸뼱
+1. ?댁옱??| Alchera | SW | 31f22567-1b6f-810b-a451-e600291021c8
+2. 源二쇳삙 | SK利앷텒(二? | Finance | 33522567-1b6f-8185-8904-de6ce593d411
+3. ?덉쑀吏?| ?덊띁罹?| Operations | 32022567-1b6f-8159-9850-e4a8063e4adb
+4. 議곗옱??| (二?而댄닾?ㅽ??⑹뒪 | Marketing | 33522567-1b6f-81b7-8cfa-ef01f7c17664
+5. ?댁쁺??| 誘몄긽 | Finance | 32e22567-1b6f-81a3-8891-c822c76ea374
+
+[Q37] ?ㅽ??몄뾽 珥덇린 硫ㅻ쾭 0to1 ?쒗뭹 鍮뚮뵫
+1. ?묒쑀吏?| 誘몄긽 | Marketing | 32022567-1b6f-8192-b47a-e6785f769667
+2. ?덉옱??| 媛쒖씤 ?ъ뾽 | FinTech | 32e22567-1b6f-81c5-8f9e-c02433e25876
+3. 理쒖???| (二??ㅼ삤?⑹빻踰꾩쟾??| SW | 33522567-1b6f-8174-a2f8-e8e551951123
+4. 源??| ?좊땲?⑦닾?먰뙆?몃꼫??| SW | 33522567-1b6f-8136-ac7f-d3f00c72b1a0
+5. 諛뺥깭??| ?ъ뒪肄붽린?좏닾??二? | Finance | 33522567-1b6f-813d-9c4d-f48dea64c4be
+
+[Q38] ?湲곗뾽 異쒖떊 ?좎궗???щ궡踰ㅼ쿂
+1. 源?깅큺 | LG?뷀븰 | Finance | 32022567-1b6f-8139-b3fc-ef8330fc9287
+2. 沅뚰슚??| 踰좎뒪?湲濡쒕쾶??| Finance | 32e22567-1b6f-8118-9c0a-cf1db09422c7
+3. ?닿컯??| World City | Finance | 32122567-1b6f-8151-be5e-c7cee84fefd4
+4. ?쒖???| ?쒕줈?댄듃 ?덉쭊 ?뚭퀎踰뺤씤 | Finance | 32022567-1b6f-8144-b825-f7f0a2f1b8b2
+5. ?묒???| Bain&company | Finance | 32122567-1b6f-8199-bebf-e811bdf9b4ed
+
+[Q39] 而⑥꽕??異쒖떊 ?꾨왂 湲고쉷 ?ъ뾽媛쒕컻
+1. ?덇퇏 | ?쒖슦由щ꼫??| Corporate Strategic Planning | 32122567-1b6f-81dd-a39b-d40d3745f1ec
+2. 諛뺢린??| ?쒕같而?| Strategy | 32022567-1b6f-81a4-abf1-d67c2b4b3853
+3. 源???| Kakao | Strategy | 31f22567-1b6f-8117-9b41-dcdc30c6815b
+4. 臾몄젣??| ?덊뵆?ъ뒪 | Retail | 32122567-1b6f-818d-8007-e455595d2c12
+5. ?덉???| 誘몄긽 | Semiconductor | 32122567-1b6f-81ea-8f81-ffb6a7e36cfa
+
+[Q40] VC ?ъ옄???ъ궗???ы듃?대━??愿由?
+1. ?대퀝??| 援먮낫?앸챸 | Finance | 32022567-1b6f-81a0-9730-fe327c8ae3fd
+2. ?꾩닔??| ?쒓뎅踰ㅼ쿂?ъ옄 | Finance | 33522567-1b6f-81d8-b33b-e8895d4a2d83
+3. ?꾪븯??| ?쒓뎅踰ㅼ쿂?ъ옄 | Finance | 33522567-1b6f-81c0-8347-e0a774372a3b
+4. 諛뺤꽦??| ?쒗솕?ъ옄利앷텒 | Finance | 33522567-1b6f-8170-a5ae-c9926cc43027
+5. 諛뺥깭??| ?ъ뒪肄붽린?좏닾??二? | Finance | 33522567-1b6f-813d-9c4d-f48dea64c4be
+
+[Q41] ?댁쇅 洹쇰Т 寃쏀뿕 湲濡쒕쾶 ?ъ뾽 ?뺤옣
+1. 諛곗???| ?쎌쭊?듭긽 | Operations | 32e22567-1b6f-812f-b3f8-cd1fe05981d1
+2. ?댁쑄寃?| EY而⑥꽕??| Finance | 33522567-1b6f-8125-b2c2-d4cd70bc8a9c
+3. 源二쇳삙 | SK利앷텒(二? | Finance | 33522567-1b6f-8185-8904-de6ce593d411
+4. ?꾩썙??| (二??꾩썙??| Operations | UUID_NOT_FOUND
+5. ?뺤씪??| ?곕┝?먰봽?좎? | Operations | 32122567-1b6f-81e4-bff1-cfe5615a924f
+
+[Q42] 移댁뭅???좎뒪 ?ㅼ씠踰?異쒖떊 ?꾨줈?뺥듃
+1. 誘쇨???| (二?移댁뭅?ㅼ뿏?고봽?쇱씠利?| SW | 33522567-1b6f-8180-b5dd-dda60825bed1
+2. 源?댁슜 | 誘몄긽 | Marketing | 32022567-1b6f-812f-aa8e-f93541c1da9f
+3. ?곗슜湲?| ?곗폆紐ъ뒪??| 誘몃텇瑜?| 32022567-1b6f-818b-80ab-c2c64b803a89
+4. 議곕???| 移댁뭅?ㅽ럹??| SW | 33522567-1b6f-8169-8ffb-efdb23a06969
+5. ?댁옱援?| 誘몄긽 | SW | 31f22567-1b6f-81cc-8c42-f1a3a95a349a
+
+[Q43] ?쇱꽦?꾩옄 SK?섏씠?됱뒪 諛섎룄泥?異쒖떊
+1. ?ㅼ쿇??| Micron Technology | Semiconductor | 32122567-1b6f-8177-912a-ce0ffb0c7b5a
+2. ?⑹쓽??| SHUTEK | Semiconductor | 31f22567-1b6f-811e-991a-ce3fab391b95
+3. ?щ룞泥?| 猷⑥펲?뚰겕??ъ???| Semiconductor | 31f22567-1b6f-8138-ae6d-dc103815896e
+4. ?고삎??| ?쇱꽦?꾩옄 | SW | 32e22567-1b6f-8153-b866-c9af67643875
+5. 媛뺤쥌??| Samsung Electronics | Semiconductor | 31f22567-1b6f-8121-a08f-d8610b5e1294
+
+[Q44] ?쒕━利뉰 C ?ㅽ??몄뾽 ?щТ CFO 寃쏀뿕
+1. 源?곸썝 | ??XXX | Finance | 31f22567-1b6f-8108-9739-fe07884e2967
+2. ?뺤쥌??| 荑좏뙜(二? | Finance | 31f22567-1b6f-8146-90a5-e95f0b8994af
+3. ?꾨룞??| ?꾩슦?붿퐫由ъ븘 | Finance | 32122567-1b6f-8198-8e68-dcbf897d36df
+4. 源醫낅? | (二??먯벐?몃뱶 | Finance | 32022567-1b6f-8179-b577-c24626dae484
+5. ?덉듅誘?| ?꾪봽由ъ뭅TV | Finance | 31f22567-1b6f-8137-9961-fef20d3eeae6
+
+[Q45] ?湲곗뾽?먯꽌 ?ㅽ??몄뾽?쇰줈 ?댁쭅 CX 怨좉컼寃쏀뿕
+1. ?ъ긽??| ?쒖뿉?댁튂?붿뿉?ㅽ뙆?뚰뀓 | Operations | 32122567-1b6f-81ca-90a2-cbfcfe31884b
+2. ?쒖긽??| ?쒖퐫?ㅻえ??| Semiconductor | 32122567-1b6f-8102-9067-c08e6310b09f
+3. ?ㅻ룞??| ?쒕??고뀒??| Operations | 32122567-1b6f-8110-8c17-c231bb84b857
+4. ?쒕룞??| ?쒕굹臾닿? | SW | 32122567-1b6f-8177-879a-da78f7bab3c6
+5. ?대났??| ?쒖삱??| Operations | 32022567-1b6f-8116-a6e4-e2718a5f3c9c
+
+[Q46] ?댁쇅 MBA 異쒖떊 ?꾨왂 而⑥꽕??寃쏀뿕
+1. 源?뺤? | Glendale | Strategy | 31f22567-1b6f-81c4-87f2-f222dee56903
+2. 源二쇳븯 | ?쇱꽦?꾩옄 | Corporate_Strategic_Planning | 32122567-1b6f-819b-9b1f-e222967e967a
+3. 諛깆씤??| (二?怨좎쐞??| Finance | 32022567-1b6f-81bc-a402-f1ec14ca234a
+4. 源?섎퉰 | BAIN & COMPANY | Strategy | 31f22567-1b6f-818d-9b7a-ef3ad7947e4a
+5. ?덇퇏 | ?쒖슦由щ꼫??| Corporate Strategic Planning | 32122567-1b6f-81dd-a39b-d40d3745f1ec
+
+[Q47] 媛쒕컻??異쒖떊 PM 湲곗닠 ?댄빐 ?꾨줈?뺥듃
+1. ?대떎誘?| 耳?댄떚?꾩씠?먯뒪 KTIS | SW | 31f22567-1b6f-81f1-8804-fe95bfb04da6
+2. 吏꾩젙??| ?뱀젨 | SW | 33522567-1b6f-81e6-bbfa-c9618ebe8620
+3. 議곗???| LG ?좏뵆?ъ뒪 | SW | 33522567-1b6f-814c-84e1-dc2a7379eada
+4. 議곕???| 移댁뭅?ㅽ럹??| SW | 33522567-1b6f-8169-8ffb-efdb23a06969
+5. ?좎???| (二??쒕━踰꾩뒪 | SW | 33522567-1b6f-8137-a7ee-ffeaaa9387ca
+
+[Q48] 留덉????먮룞??CRM Salesforce HubSpot
+1. ?댁닔吏?| SSG?룹뺨 | Marketing | 31f22567-1b6f-8180-9af1-c0bf1ea1947a
+2. 沅뚰쁺誘?| ?쒖??대콉??| Finance | 31f22567-1b6f-818a-899c-efe32a001436
+3. ?댁슜踰?| 洹몃┰?⑹뒪 | Finance | 31f22567-1b6f-81bd-b663-c26e50af0e21
+4. 二쇱쁺??| (二??먯뒪?곗쑀?덊???| Marketing | 31f22567-1b6f-814c-bd83-d113acd7c4ef
+5. 源?뚮? | FLO | Marketing | 31f22567-1b6f-8133-abcb-dfc130bca8cd
+
+[Q49] 由ы뀒???댁빱癒몄뒪 MD 諛붿엵 ?곹뭹湲고쉷
+1. ?쒓뎄醫?| GS由ы뀒??| Marketing | 33522567-1b6f-8109-838f-fe5c5f87e15f
+2. ?띿???| GS由ы뀒??| Marketing | 32122567-1b6f-81f8-a203-c1e1aa12bd5d
+3. 媛뺤듅怨?| ?쒕낫遺?꾩씠?ㅼ뿉??| Strategy | 32022567-1b6f-81a0-9e2f-d7cfd2b0e90b
+4. 源?몃┛ | 誘몄긽 | Marketing | 31f22567-1b6f-818d-af90-cb88429c8818
+5. 誘쇨꼍??| ?곕が | Marketing | 33522567-1b6f-81c0-a6f9-c8da42723682
+
+[Q50] HR Tech 梨꾩슜 ?쒖뒪??ATS ?⑤낫??
+1. ?쒖꽭由?| 而ㅻ땲肄붾━???? | HR | 33522567-1b6f-819d-8dd0-e3330ea20325
+2. ?⑤룞??| 踰덇컻?ν꽣 | HR | 31f22567-1b6f-8187-b18c-ce071441ecb5
+3. 源吏??| Balaan | HR | 31f22567-1b6f-8152-a79d-f08312a48d33
+4. 臾몄젙??| ?쒖쑀?덈툕 | HR | 32022567-1b6f-81a0-8f30-d2da6aa24e3d
+5. ?먰깭??| ?쒖씤?붾━?덊뀒?щ?濡쒖???| HR | 31f22567-1b6f-81d9-bf49-d4fd2c69af3e
+

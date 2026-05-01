@@ -65,7 +65,7 @@ def build_vector_map(output_pkl_path: str):
     with open(output_pkl_path, 'wb') as f:
         pickle.dump(vector_map, f)
         
-    print(f"✅ 온톨로지 벡터 지도가 성공적으로 저장되었습니다: {output_pkl_path}")
+    print(f"Ontology vector map successfully saved: {output_pkl_path}")
 
 if __name__ == "__main__":
     build_vector_map("ontology_vectors.pkl")

@@ -1,0 +1,350 @@
+[Q1] Neural Network Operations Parallel Programming C++
+1. 정예린 | 삼성전자 | SW | 31f22567-1b6f-8106-a331-e438f877d966
+2. 박원호 | HP Printing Korea | SW | 31f22567-1b6f-81e9-9eec-c735494cc02f
+3. 최형광 | NVIDIA | Infrastructure_and_Cloud | 31f22567-1b6f-81f5-b804-f348325a811f
+4. 신정용 | 삼성전자 | Semiconductor | 31f22567-1b6f-814d-9e7b-cf300cd3447f
+5. 한상현 | Rebellions | SW | 32e22567-1b6f-8194-85ac-c2d6a1fc37ba
+
+[Q2] OEM ExportCompliance MarketResearch
+1. 여미수 | ㈜정식품 | Operations | 32122567-1b6f-8107-b5c2-cf8bc1f8c89b
+2. 조문호 | ㈜서울반도체 | Semiconductor | 32122567-1b6f-81b3-88d7-e19b320d20e7
+3. 이학주 | 미상 | Operations | 31f22567-1b6f-811b-889e-dfbd3025e6db
+4. 허명회 | HYUNDAI UBIS Co., Ltd. | Operations | 32122567-1b6f-8153-afd7-d280aebc13b4
+5. 이창용 | 미상 | Strategy | 32122567-1b6f-813b-947a-c5965a1cb2e0
+
+[Q3] LINUX AWS Architecture
+1. 윤석훈 | HYBE-IM | SW | 31f22567-1b6f-8149-b097-cf2ba9c9241e
+2. 윤영필 | PYLER | SW | 31f22567-1b6f-8193-8cb9-d78eb4c59593
+3. 김효민 | 당근마켓 | SW | 33522567-1b6f-81a3-ac63-e62ab98e6793
+4. 김용만 | 롯데정보통신 | SW | 32022567-1b6f-8151-91b9-ff8c411bf3a1
+5. 유세진 | 라인게임즈 | SW | 32022567-1b6f-8110-99af-f7fbf4855dc3
+
+[Q4] Spring Fintech MSSQL
+1. 김완희 | 미상 | Finance | 31f22567-1b6f-817a-a763-f718d9d40fbf
+2. 김인호 | ㈜ 패쓰 | FinTech | 32122567-1b6f-8189-9433-dcfe8c8f92e5
+3. 이기준 | 안진회계법인 | SW | 31f22567-1b6f-81b3-b231-cc1c4f6b3550
+4. 최경석 | SK텔레콤(주) | 미분류 | 33522567-1b6f-817e-a77b-ffc7e1b8d5d4
+5. 윤현진 | YG PLUS | SW | 32f22567-1b6f-8118-90e0-eafff24e143f
+
+[Q5] ASRS Smart Factory Semiconductor Logistics Automation
+1. 곽철훈 | Cowell (중국) | Operations | 31f22567-1b6f-81aa-9c3d-d2a9b94d9b26
+2. 정지연 | Lam Research Manufacturing Korea LLC | Semiconductor | 31f22567-1b6f-8140-80f8-e758151166fa
+3. 정진우 | 메드트로닉코리아 | Operations | 32022567-1b6f-81b3-8f01-ff0cb21c6665
+4. 신웅섭 | LG전자 | Operations | 31f22567-1b6f-818b-8dd7-f09a7fb8aafd
+5. 김경동 | 코웰광학전자 | Semiconductor | 32022567-1b6f-814e-8f8b-ce56c2a60d91
+
+[Q6] Blockchain NFT
+1. 정창희 | jpegs.fun | SW | 31f22567-1b6f-81f3-bfe6-fb7fd7c9ad61
+2. 정민영 | MilkyWay | SW | 31f22567-1b6f-8150-8062-f6862dec66e5
+3. 박하진 | 애니모카게임즈 | SW | 31f22567-1b6f-81b4-b3ab-ed7c6d8db537
+4. 이동준 | DKL Partners 법률사무소 | Legal | 32022567-1b6f-817f-a97d-f60a0fddb788
+5. 이진수 | ㈜핀다 | SW | 32022567-1b6f-8121-b3b4-dac79d7ece90
+
+[Q7] CFO IPO IR 자금조달 세무 재무총괄
+1. 안승민 | 아프리카TV | Finance | 31f22567-1b6f-8137-9961-fef20d3eeae6
+2. 김상원 | ㈜ XXX | Finance | 31f22567-1b6f-8108-9739-fe07884e2967
+3. 권효상 | 베스핀글로벌㈜ | Finance | 32e22567-1b6f-8118-9c0a-cf1db09422c7
+4. 정종우 | 쿠팡(주) | Finance | 31f22567-1b6f-8146-90a5-e95f0b8994af
+5. 최경민 | 삼성증권 | Finance | 32022567-1b6f-81a7-acd3-faaab9e484a4
+
+[Q8] AI Accelerators Generative AI Datacenter GPU cluster
+1. 윤희영 | GraphAI | SW | 32e22567-1b6f-81ae-982f-c477beb1cc82
+2. 강진구 | Moreh | FinTech | 31f22567-1b6f-81d3-bd70-eb0ffdd0021a
+3. 김정수 | (주)LG AI연구원 | SW | 33522567-1b6f-81bb-83a2-ef99ae586714
+4. 곽도연 | 커니코리아(유) | FinTech | 31f22567-1b6f-81e5-9d67-c913d168aa32
+5. 류성한 | 현대카드 | FinTech | 31f22567-1b6f-819f-a98d-cd4770717dc6
+
+[Q9] Kubernetes Terraform LangGraph DevOps pipeline
+1. 윤영필 | PYLER | SW | 31f22567-1b6f-8193-8cb9-d78eb4c59593
+2. 윤석훈 | HYBE-IM | SW | 31f22567-1b6f-8149-b097-cf2ba9c9241e
+3. 이정윤 | UPRISE, Inc. | SW | 32022567-1b6f-81cf-af18-cbdada2eecf0
+4. 박승준 | Kakao Enterprise | SW | 31f22567-1b6f-8161-959d-eb7dcc04e431
+5. 이도현 | KT DS | SW | 31f22567-1b6f-8167-98d4-dfdfc04fb00d
+
+[Q10] Collective Communication RDMA RoCE InfiniBand
+1. 최형광 | NVIDIA | Infrastructure_and_Cloud | 31f22567-1b6f-81f5-b804-f348325a811f
+2. 정윤오 | Moreh | SW | 31f22567-1b6f-81c0-9371-e103edfb91c9
+3. 윤영필 | PYLER | SW | 31f22567-1b6f-8193-8cb9-d78eb4c59593
+4. 김지호 | Mangoboost | Semiconductor | 31f22567-1b6f-8118-a7d1-c9f668028aa9
+5. 김태경 | SK Telecom | SW | 32e22567-1b6f-81f4-814f-d8f48c10722a
+
+[Q11] ERP Excel Labor Law HR payroll
+1. 류래민 | 리드엑시비션스코리아 유한회사 | Finance | 32022567-1b6f-8186-90ba-cbd192344e78
+2. 조혜림 | 한국솔가㈜ | HR | 32122567-1b6f-8139-947b-c27b218e904e
+3. 전상건 | 오쎄 | HR | 31f22567-1b6f-81c5-95df-e5763b035640
+4. 안승민 | 아프리카TV | Finance | 31f22567-1b6f-8137-9961-fef20d3eeae6
+5. 김태형 | 미상 | Financial_Accounting | 32022567-1b6f-8196-b5de-ef936a5c5e66
+
+[Q12] Financial Modeling Valuation DCF LBO
+1. 권효상 | 베스핀글로벌㈜ | Finance | 32e22567-1b6f-8118-9c0a-cf1db09422c7
+2. 엄태영 | 미상 | Finance | 32122567-1b6f-811a-b6a9-d71c40793d32
+3. 최광호 | 삼정회계법인 | Finance | 32022567-1b6f-8187-a7ee-c2c0dd56bc1f
+4. 문순홍 | Samsung Securities Co., Ltd. | Finance | 31f22567-1b6f-8170-98a6-c55acb82e6d7
+5. 최경국 | 현대모비스 | Strategy | 31f22567-1b6f-8120-a331-e7a648f9a263
+
+[Q13] Chip Bring-up Driver Development embedded
+1. 이원철 | 삼성전자 | Infrastructure_and_Cloud | 31f22567-1b6f-8105-9536-f0c8e925dcae
+2. 이민찬 | 삼성전자 네트워크 사업부 | SW | 32f22567-1b6f-8126-93de-d5e3d889ff67
+3. 강건규 | SONATUS Software Korea | SW | 32022567-1b6f-812a-ac39-dd91d6183f2b
+4. 최원기 | 스트라드비젼 서울 | Semiconductor | 31f22567-1b6f-8152-a595-cd6009b06a1c
+5. 우형일 | 삼성전자 | SW | 32e22567-1b6f-8153-b866-c9af67643875
+
+[Q14] ARM SVE Neural Network Operations embedded
+1. 김정수 | (주)LG AI연구원 | SW | 33522567-1b6f-81bb-83a2-ef99ae586714
+2. 조만재 | 미상 | SW | 32e22567-1b6f-81e2-bc6c-cac360cca73d
+3. 손진광 | 제일 펑타이 | SW | 32122567-1b6f-81a8-bddb-e87da07697e6
+4. 박원호 | HP Printing Korea | SW | 31f22567-1b6f-81e9-9eec-c735494cc02f
+5. 설우식 | Balancehero Korea | SW | 31f22567-1b6f-8118-9539-cf6e7ddeda31
+
+[Q15] React TypeScript Next.js frontend performance
+1. 오원종 | (주)굿닥 | SW | 33522567-1b6f-812b-aa21-e73e44c9ee95
+2. 정창희 | jpegs.fun | SW | 31f22567-1b6f-81f3-bfe6-fb7fd7c9ad61
+3. 정유균 | TWO AI | SW | 31f22567-1b6f-81c3-857e-dd38c3a7a6ad
+4. 김일식 | Viva Republica | SW | 32022567-1b6f-8143-a13b-e5df7ecb90f9
+5. 고승훈 | 미상 | Finance | 32022567-1b6f-8123-a9a4-eaa5116ac821
+
+[Q16] CMO 또는 마케팅본부장 브랜드 전략 디지털마케팅
+1. 최인철 | 커니코리아(유) | Strategy | 31f22567-1b6f-817e-9a3e-c85f4875df6a
+2. 이수진 | SSG닷컴 | Marketing | 31f22567-1b6f-8180-9af1-c0bf1ea1947a
+3. 이경준 | 카브루 | Marketing | 31f22567-1b6f-812b-a1e1-e8fac1c25af3
+4. 유사라 | NP Inc. | Marketing | 33522567-1b6f-8176-a295-cc6c4147639b
+5. 고대웅 | ㈜티몬 | Marketing | 32022567-1b6f-8106-8231-f5a2b144d899
+
+[Q17] CTO 스타트업 기술총괄 아키텍처
+1. 강형구 | HANDHUG | SW | 33522567-1b6f-8180-a575-c73b46492e47
+2. 임강진 | ㈜라이브토리 | FinTech | 32122567-1b6f-8172-b7c3-cadb9471b291
+3. 최재필 | 지엔터프라이즈 | SW | 31f22567-1b6f-8144-a6a7-d4b1bba89ef0
+4. 정창희 | jpegs.fun | SW | 31f22567-1b6f-81f3-bfe6-fb7fd7c9ad61
+5. 이진수 | ㈜핀다 | SW | 32022567-1b6f-8121-b3b4-dac79d7ece90
+
+[Q18] VP Engineering 엔지니어링 조직 빌딩
+1. 박준희 | 롯데건설 | Operations | 31f22567-1b6f-81cb-b764-ce2b87c67ec9
+2. 김인중 | 루트제이드 | Operations | 32122567-1b6f-8100-a652-fa3423efaea8
+3. 정명진 | 주)세명테크 | Operations | 32122567-1b6f-8160-921b-e993235e8859
+4. 백승우 | (주) 하이에어코리아 | Operations | 32122567-1b6f-81fa-8661-ee3ec9d2919e
+5. 여득현 | (주) 동양구조안전기술 | Operations | 32122567-1b6f-81f3-babb-f3a315212f5b
+
+[Q19] Product Manager B2B SaaS 기획
+1. 조준범 | ㈜펀진 | SW | 32e22567-1b6f-8107-baca-c9833d059d40
+2. 유선욱 | ㈜이루다 | Marketing | 32122567-1b6f-81a0-87cd-ec840f72efac
+3. 김민진 | Toss | Finance | 32022567-1b6f-81f3-8593-d0cbda732824
+4. 김병환 | 미상 | SW | 32022567-1b6f-8184-8671-c912dc71ccf2
+5. 김은혜 | Kakao | Strategy | 31f22567-1b6f-8117-9b41-dcdc30c6815b
+
+[Q20] Head of Sales 엔터프라이즈 영업 총괄
+1. 이경근 | 아사아블로이 코리아 삼화정밀 ㈜ | Marketing | 32122567-1b6f-810b-aba5-ee6e8e46f847
+2. 류재영 | (주)세이프인터내셔널 | Marketing | 32022567-1b6f-811e-9267-ffbc873014d6
+3. 김민우 | ㈜모스트 | Strategy | 32022567-1b6f-817b-a377-e12aa79bfce2
+4. 조준범 | ㈜펀진 | SW | 32e22567-1b6f-8107-baca-c9833d059d40
+5. 이지혜 | 메가존㈜ | Strategy | 32022567-1b6f-8152-a9e1-e000253a5119
+
+[Q21] 데이터 사이언티스트 ML 모델링 추천시스템
+1. 이동훈 | 딜로이트컨설팅 | SW | 32122567-1b6f-81a9-b1b4-fe6c3783210e
+2. 설우식 | Balancehero Korea | SW | 31f22567-1b6f-8118-9539-cf6e7ddeda31
+3. 이기준 | 안진회계법인 | SW | 31f22567-1b6f-81b3-b231-cc1c4f6b3550
+4. 류성한 | 현대카드 | FinTech | 31f22567-1b6f-819f-a98d-cd4770717dc6
+5. 김정수 | (주)LG AI연구원 | SW | 33522567-1b6f-81bb-83a2-ef99ae586714
+
+[Q22] 보안 전문가 CISO 정보보안 컴플라이언스
+1. 조민재 | ICTK Holdings | SW | 32022567-1b6f-81f4-9ab4-ea584cd89b16
+2. 이수호 | 미상 | SW | 32122567-1b6f-815c-ad9d-d781a2b9f063
+3. 박영민 | 쏘카 | SW | 31f22567-1b6f-81ce-95b3-c1d79c7062c7
+4. 오수영 | 카카오게임즈 | SW | 33522567-1b6f-81d3-9c2c-daa472159f19
+5. 윤석훈 | HYBE-IM | SW | 31f22567-1b6f-8149-b097-cf2ba9c9241e
+
+[Q23] 법무팀장 M&A 계약 검토 스타트업
+1. 장건 | 법무법인 미션 | Legal | 33522567-1b6f-8139-a628-d785dfbbd3e9
+2. 이철희 | ㈜포스코 | Corporate_Strategic_Planning | 32122567-1b6f-819a-9473-d1ec8020e1cb
+3. 장진성 | JBPASS | Legal | 32122567-1b6f-8147-ac5f-e34b724f5e82
+4. 엄태영 | 미상 | Finance | 32122567-1b6f-811a-b6a9-d71c40793d32
+5. 정순지 | 서울바이오시스 | Legal | 32e22567-1b6f-8162-991d-c6930493a169
+
+[Q24] IR 담당자 투자자 관계 공시 자금조달
+1. 안승민 | 아프리카TV | Finance | 31f22567-1b6f-8137-9961-fef20d3eeae6
+2. 권효상 | 베스핀글로벌㈜ | Finance | 32e22567-1b6f-8118-9c0a-cf1db09422c7
+3. 최정수 | ㈜CJ라이브시티 | Finance | 32022567-1b6f-81d7-ad45-f14d603cdf43
+4. 최경민 | 삼성증권 | Finance | 32022567-1b6f-81a7-acd3-faaab9e484a4
+5. 조형진 | 현대EP | Finance | 32022567-1b6f-8120-8367-d197c7fc4cbd
+
+[Q25] 구매팀장 SCM 글로벌 소싱 협상
+1. 정진우 | 메드트로닉코리아 | Operations | 32022567-1b6f-81b3-8f01-ff0cb21c6665
+2. 신웅섭 | LG전자 | Operations | 31f22567-1b6f-818b-8dd7-f09a7fb8aafd
+3. 원다연 | 아디다스코리아 | Operations | 31f22567-1b6f-81ec-aa3c-f1a606d11227
+4. 석승환 | GS Aromatics | Operations | 32122567-1b6f-8116-abe5-de96d5f9e1b6
+5. 서철교 | 메가존 | SW | 32122567-1b6f-8103-8e6b-dcac90c2de6b
+
+[Q26] 헬스케어 디지털 헬스 의료기기 규제
+1. 김승탁 | IMGT | Healthcare | 31f22567-1b6f-8182-ae83-dae34048f835
+2. 윤혜연 | VUNO (뷰노) | Healthcare | 32f22567-1b6f-8134-b668-d6f42989ea47
+3. 정효진 | 에코문도 | Healthcare | 32122567-1b6f-81f5-8e24-eb4e1c3f8f4b
+4. 유선욱 | ㈜이루다 | Marketing | 32122567-1b6f-81a0-87cd-ec840f72efac
+5. 신수용 | 큐브렉스 | SW | 32122567-1b6f-8194-b407-ea8258727e38
+
+[Q27] 게임 개발 Unity Unreal 모바일게임
+1. 김윤정 | 비누스 엔터테인먼트 (팡스카이) | SW | 32e22567-1b6f-8137-98c6-d0a3d5221c32
+2. 임영택 | 플레이웍스 | SW | 32022567-1b6f-816f-a6f5-f1ef4d949b99
+3. 권대화 | Gazet Factory | SW | 31f22567-1b6f-812f-9d7a-fea6f9af9efb
+4. 황여은 | 농업스마트테크 | SW | 32122567-1b6f-8199-8320-d5ddba54b296
+5. 김진원 | 주식회사 긴트 | SW | 32122567-1b6f-81f9-9171-d78172fa8ba7
+
+[Q28] 자율주행 모빌리티 센서퓨전 SLAM
+1. 여태운 | KT 융합기술원 | SW | 31f22567-1b6f-81cc-bd56-e5da668a4654
+2. 오창수 | 미상 | Engineering | 32122567-1b6f-81a2-b1ef-ee90d126e2c2
+3. 김경표 | (주)컨트롤웍스 | SW | 31f22567-1b6f-8114-9de3-d5ab9d1970ee
+4. 이찬재 | 현대모비스(주) | SW | 31f22567-1b6f-81dd-8c83-e497b470e45c
+5. 김정수 | (주)LG AI연구원 | SW | 33522567-1b6f-81bb-83a2-ef99ae586714
+
+[Q29] 핀테크 결제 PG 금융 API
+1. 김인호 | ㈜ 패쓰 | FinTech | 32122567-1b6f-8189-9433-dcfe8c8f92e5
+2. 김완희 | 미상 | Finance | 31f22567-1b6f-817a-a763-f718d9d40fbf
+3. 이진수 | ㈜핀다 | SW | 32022567-1b6f-8121-b3b4-dac79d7ece90
+4. 남경인 | FIME 한국지사 | Finance | 32e22567-1b6f-8128-8007-cccacaf3f608
+5. 이용진 | 미상 | 미분류 | 32022567-1b6f-81fc-82b5-f4e3e16f289e
+
+[Q30] 이커머스 플랫폼 그로스 퍼포먼스마케팅
+1. 이수진 | SSG닷컴 | Marketing | 31f22567-1b6f-8180-9af1-c0bf1ea1947a
+2. 김소미 | FLO | Marketing | 31f22567-1b6f-8133-abcb-dfc130bca8cd
+3. 전은 | 브랜디 | Marketing | 31f22567-1b6f-8173-883b-db9caea82ed6
+4. 전창현 | (주)어반디지털마케팅 | Marketing | 31f22567-1b6f-8144-9d28-eb5cf4fdfa0b
+5. 주영희 | (주)에스티유니타스 | Marketing | 31f22567-1b6f-814c-bd83-d113acd7c4ef
+
+[Q31] 엔터테인먼트 콘텐츠 IP 라이선싱
+1. 엄승태 | 인텔리빅스 | Machine_Learning | 32122567-1b6f-81c1-9eb8-e27aa257d8d8
+2. 정창희 | jpegs.fun | SW | 31f22567-1b6f-81f3-bfe6-fb7fd7c9ad61
+3. 권성은 | 레페리 | Marketing | 32122567-1b6f-816b-84cd-fe43da77b549
+4. 신수용 | 큐브렉스 | SW | 32122567-1b6f-8194-b407-ea8258727e38
+5. 강선구 | ㈜이테크시스템 | SW | 32022567-1b6f-81fc-809c-f43c2be4415a
+
+[Q32] 바이오 제약 임상 규제 RA
+1. 김준환 | 엘리프런티어 | Healthcare | 32122567-1b6f-8150-b816-cfd008570631
+2. 이빛나 | ㈜다림바이오텍 | Healthcare | 32122567-1b6f-81ab-b8e2-d7c89fdfbee8
+3. 이제기 | 현대캐피탈 | Finance | 32122567-1b6f-81b3-985b-de92987ded64
+4. 감사원 | 감사원 | Legal | 33522567-1b6f-8130-8bc3-dafc17a0c873
+5. 정효진 | 에코문도 | Healthcare | 32122567-1b6f-81f5-8e24-eb4e1c3f8f4b
+
+[Q33] 반도체 장비 공정 Etch CVD
+1. 황의영 | SHUTEK | Semiconductor | 31f22567-1b6f-811e-991a-ce3fab391b95
+2. 김승한 | 퀄리타스 반도체 | Semiconductor | 32e22567-1b6f-81b3-9982-e77acb552fe3
+3. 서보옥 | Samsung Electronics | Semiconductor | 32e22567-1b6f-81a0-b913-ed0db4db2934
+4. 이한진 | 코시스테크 | Semiconductor | 32122567-1b6f-8106-b378-ecfbb8d2deba
+5. 노동수 | 미상 | Semiconductor | 32022567-1b6f-81f9-b0f6-c1829c5ca0dd
+
+[Q34] 물류 SCM 풀필먼트 라스트마일
+1. 박종모 | 워즈코퍼리에션 | Operations | 31f22567-1b6f-81d2-acbd-de521026baf3
+2. 남대희 | COUPANG | Operations | 32e22567-1b6f-8190-b000-c21f0bcabbca
+3. 정진우 | 메드트로닉코리아 | Operations | 32022567-1b6f-81b3-8f01-ff0cb21c6665
+4. 유정한 | 쿠팡풀필먼트서비스 | Operations | 31f22567-1b6f-8152-93ca-ca5ab3080016
+5. 이주연 | THE BODY SHOP | Operations | 32122567-1b6f-81cc-ba30-e9de5212fca8
+
+[Q35] 에너지 ESG 탄소중립 신재생에너지
+1. 이태경 | LG화학 | Strategy | 32122567-1b6f-81fd-8c08-e488e2a4abbe
+2. 이태경 | LG화학 | 미분류 | 32122567-1b6f-81fd-8c08-e488e2a4abbe
+3. 임지희 | 삼성엔지니어링 | Strategy | 33522567-1b6f-81e1-814f-eab077715729
+4. 배문성 | 한국전력공사 | SW | 31f22567-1b6f-816c-ac76-f6ac6c31c2db
+5. 성시민 | 한국전력공사 | SW | 31f22567-1b6f-812a-a43d-c12e500c07ac
+
+[Q36] 외국계 기업 경험 글로벌 커뮤니케이션 영어
+1. 이재영 | Alchera | SW | 31f22567-1b6f-810b-a451-e600291021c8
+2. 김주혜 | SK증권(주) | Finance | 33522567-1b6f-8185-8904-de6ce593d411
+3. 허유진 | 슈퍼캣 | Operations | 32022567-1b6f-8159-9850-e4a8063e4adb
+4. 조재한 | (주)컴투스홀딩스 | Marketing | 33522567-1b6f-81b7-8cfa-ef01f7c17664
+5. 이영도 | 미상 | Finance | 32e22567-1b6f-81a3-8891-c822c76ea374
+
+[Q37] 스타트업 초기 멤버 0to1 제품 빌딩
+1. 양유진 | 미상 | Marketing | 32022567-1b6f-8192-b47a-e6785f769667
+2. 안재용 | 개인 사업 | FinTech | 32e22567-1b6f-81c5-8f9e-c02433e25876
+3. 최지혜 | (주)네오랩컨버전스 | SW | 33522567-1b6f-8174-a2f8-e8e551951123
+4. 김활 | 유니온투자파트너스 | SW | 33522567-1b6f-8136-ac7f-d3f00c72b1a0
+5. 박태홍 | 포스코기술투자(주) | Finance | 33522567-1b6f-813d-9c4d-f48dea64c4be
+
+[Q38] 대기업 출신 신사업 사내벤처
+1. 김성봉 | LG화학 | Finance | 32022567-1b6f-8139-b3fc-ef8330fc9287
+2. 권효상 | 베스핀글로벌㈜ | Finance | 32e22567-1b6f-8118-9c0a-cf1db09422c7
+3. 이강현 | World City | Finance | 32122567-1b6f-8151-be5e-c7cee84fefd4
+4. 한지혜 | 딜로이트 안진 회계법인 | Finance | 32022567-1b6f-8144-b825-f7f0a2f1b8b2
+5. 양지현 | Bain&company | Finance | 32122567-1b6f-8199-bebf-e811bdf9b4ed
+
+[Q39] 컨설팅 출신 전략 기획 사업개발
+1. 허균 | ㈜우리너스 | Corporate Strategic Planning | 32122567-1b6f-81dd-a39b-d40d3745f1ec
+2. 박기홍 | ㈜배컴 | Strategy | 32022567-1b6f-81a4-abf1-d67c2b4b3853
+3. 김은혜 | Kakao | Strategy | 31f22567-1b6f-8117-9b41-dcdc30c6815b
+4. 문제성 | 홈플러스 | Retail | 32122567-1b6f-818d-8007-e455595d2c12
+5. 안지훈 | 미상 | Semiconductor | 32122567-1b6f-81ea-8f81-ffb6a7e36cfa
+
+[Q40] VC 투자사 심사역 포트폴리오 관리
+1. 이병훈 | 교보생명 | Finance | 32022567-1b6f-81a0-9730-fe327c8ae3fd
+2. 전수형 | 한국벤처투자 | Finance | 33522567-1b6f-81d8-b33b-e8895d4a2d83
+3. 전하연 | 한국벤처투자 | Finance | 33522567-1b6f-81c0-8347-e0a774372a3b
+4. 박성우 | 한화투자증권 | Finance | 33522567-1b6f-8170-a5ae-c9926cc43027
+5. 박태홍 | 포스코기술투자(주) | Finance | 33522567-1b6f-813d-9c4d-f48dea64c4be
+
+[Q41] 해외 근무 경험 글로벌 사업 확장
+1. 배지현 | 약진통상 | Operations | 32e22567-1b6f-812f-b3f8-cd1fe05981d1
+2. 이윤경 | EY컨설팅 | Finance | 33522567-1b6f-8125-b2c2-d4cd70bc8a9c
+3. 김주혜 | SK증권(주) | Finance | 33522567-1b6f-8185-8904-de6ce593d411
+4. 아워홈 | (주)아워홈 | Operations | 33522567-1b6f-8188-a785-fe14b8ec80a2
+5. 정일영 | 우림에프엠지 | Operations | 32122567-1b6f-81e4-bff1-cfe5615a924f
+
+[Q42] 카카오 토스 네이버 출신 프로덕트
+1. 민가혜 | (주)카카오엔터프라이즈 | SW | 33522567-1b6f-8180-b5dd-dda60825bed1
+2. 김운용 | 미상 | Marketing | 32022567-1b6f-812f-aa8e-f93541c1da9f
+3. 우용기 | 티켓몬스터 | 미분류 | 32022567-1b6f-818b-80ab-c2c64b803a89
+4. 조민형 | 카카오페이 | SW | 33522567-1b6f-8169-8ffb-efdb23a06969
+5. 이재구 | 미상 | SW | 31f22567-1b6f-81cc-8c42-f1a3a95a349a
+
+[Q43] 삼성전자 SK하이닉스 반도체 출신
+1. 윤천용 | Micron Technology | Semiconductor | 32122567-1b6f-8177-912a-ce0ffb0c7b5a
+2. 황의영 | SHUTEK | Semiconductor | 31f22567-1b6f-811e-991a-ce3fab391b95
+3. 심동철 | 루켄테크놀러지스 | Semiconductor | 31f22567-1b6f-8138-ae6d-dc103815896e
+4. 우형일 | 삼성전자 | SW | 32e22567-1b6f-8153-b866-c9af67643875
+5. 강종훈 | Samsung Electronics | Semiconductor | 31f22567-1b6f-8121-a08f-d8610b5e1294
+
+[Q44] 시리즈B C 스타트업 재무 CFO 경험
+1. 김상원 | ㈜ XXX | Finance | 31f22567-1b6f-8108-9739-fe07884e2967
+2. 정종우 | 쿠팡(주) | Finance | 31f22567-1b6f-8146-90a5-e95f0b8994af
+3. 임동수 | 아우디코리아 | Finance | 32122567-1b6f-8198-8e68-dcbf897d36df
+4. 김종민 | (주)에쓰푸드 | Finance | 32022567-1b6f-8179-b577-c24626dae484
+5. 안승민 | 아프리카TV | Finance | 31f22567-1b6f-8137-9961-fef20d3eeae6
+
+[Q45] 대기업에서 스타트업으로 이직 CX 고객경험
+1. 심상수 | ㈜에이치엔에스파워텍 | Operations | 32122567-1b6f-81ca-90a2-cbfcfe31884b
+2. 한상하 | ㈜코스모텍 | Semiconductor | 32122567-1b6f-8102-9067-c08e6310b09f
+3. 설동석 | ㈜대산테크 | Operations | 32122567-1b6f-8110-8c17-c231bb84b857
+4. 서동욱 | ㈜나무가 | SW | 32122567-1b6f-8177-879a-da78f7bab3c6
+5. 이복희 | ㈜올트 | Operations | 32022567-1b6f-8116-a6e4-e2718a5f3c9c
+
+[Q46] 해외 MBA 출신 전략 컨설팅 경험
+1. 김형은 | Glendale | Strategy | 31f22567-1b6f-81c4-87f2-f222dee56903
+2. 김주하 | 삼성전자 | Corporate_Strategic_Planning | 32122567-1b6f-819b-9b1f-e222967e967a
+3. 백인호 | (주)고위드 | Finance | 32022567-1b6f-81bc-a402-f1ec14ca234a
+4. 김수빈 | BAIN & COMPANY | Strategy | 31f22567-1b6f-818d-9b7a-ef3ad7947e4a
+5. 허균 | ㈜우리너스 | Corporate Strategic Planning | 32122567-1b6f-81dd-a39b-d40d3745f1ec
+
+[Q47] 개발자 출신 PM 기술 이해 프로덕트
+1. 이다미 | 케이티아이에스 KTIS | SW | 31f22567-1b6f-81f1-8804-fe95bfb04da6
+2. 진정우 | 웹젠 | SW | 33522567-1b6f-81e6-bbfa-c9618ebe8620
+3. 조은혜 | LG 유플러스 | SW | 33522567-1b6f-814c-84e1-dc2a7379eada
+4. 조민형 | 카카오페이 | SW | 33522567-1b6f-8169-8ffb-efdb23a06969
+5. 신지혜 | (주)딜리버스 | SW | 33522567-1b6f-8137-a7ee-ffeaaa9387ca
+
+[Q48] 마케팅 자동화 CRM Salesforce HubSpot
+1. 이수진 | SSG닷컴 | Marketing | 31f22567-1b6f-8180-9af1-c0bf1ea1947a
+2. 권혁민 | ㈜케이뱅크 | Finance | 31f22567-1b6f-818a-899c-efe32a001436
+3. 이용범 | 그립랩스 | Finance | 31f22567-1b6f-81bd-b663-c26e50af0e21
+4. 주영희 | (주)에스티유니타스 | Marketing | 31f22567-1b6f-814c-bd83-d113acd7c4ef
+5. 김소미 | FLO | Marketing | 31f22567-1b6f-8133-abcb-dfc130bca8cd
+
+[Q49] 리테일 이커머스 MD 바잉 상품기획
+1. 한구종 | GS리테일 | Marketing | 33522567-1b6f-8109-838f-fe5c5f87e15f
+2. 홍지희 | GS리테일 | Marketing | 32122567-1b6f-81f8-a203-c1e1aa12bd5d
+3. 강승곤 | ㈜보부아이앤에프 | Strategy | 32022567-1b6f-81a0-9e2f-d7cfd2b0e90b
+4. 김세린 | 미상 | Marketing | 31f22567-1b6f-818d-af90-cb88429c8818
+5. 민경우 | 티몬 | Marketing | 33522567-1b6f-81c0-a6f9-c8da42723682
+
+[Q50] HR Tech 채용 시스템 ATS 온보딩
+1. 서세리 | 커니코리아(유) | HR | 33522567-1b6f-819d-8dd0-e3330ea20325
+2. 남동득 | 번개장터 | HR | 31f22567-1b6f-8187-b18c-ce071441ecb5
+3. 김지후 | Balaan | HR | 31f22567-1b6f-8152-a79d-f08312a48d33
+4. 문정현 | ㈜유니브 | HR | 32022567-1b6f-81a0-8f30-d2da6aa24e3d
+5. 원태연 | ㈜인텔리안테크놀로지스 | HR | 31f22567-1b6f-81d9-bf49-d4fd2c69af3e
+

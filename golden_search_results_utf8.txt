@@ -1,0 +1,284 @@
+﻿python : INFO:jd_compiler:[Dynamic Weights] unknown_ratio=0.00 | V=0.68 G=0.27 B=0.03 D=0.02
+위치 줄:1 문자:1
++ python run_sample_searches.py > golden_search_results.txt 2>&1; Get-C ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (INFO:jd_compile...7 B=0.03 D=0.02:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+INFO:jd_compiler:
+
+[V9 Hybrid Search] Payload: Neural Network Operations Parallel Programming C++ / Session: None
+INFO:jd_compiler:[Native Map Hit] Extracted 8 conditions without Gemini. Min years: 0
+INFO:jd_compiler:[Affinity Injected] 10개 조건 자동 추가: ['GPGPU', 'AI_Model_and_Distributed_Training', 'Infrastructure_and_C
+loud', 'Sys_Software', '자연어처리_NLP', 'Computer_Vision', 'Recommendation_System', '인프라_Cloud', 'Embedded_Linux', 'Firmwar
+e']
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:jd_compiler:[V9 Hybrid Search] Completed. Top result: 정예린
+INFO:jd_compiler:[Dynamic Weights] unknown_ratio=1.00 | V=0.6 G=0.21 B=0.07 D=0.12
+INFO:jd_compiler:
+
+[V9 Hybrid Search] Payload: OEM ExportCompliance MarketResearch / Session: None
+INFO:jd_compiler:[Native Map Hit] Extracted 3 conditions without Gemini. Min years: 0
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:jd_compiler:[V9 Hybrid Search] Completed. Top result: 여미수
+INFO:jd_compiler:[Dynamic Weights] unknown_ratio=0.00 | V=0.68 G=0.27 B=0.03 D=0.02
+INFO:jd_compiler:
+
+[V9 Hybrid Search] Payload: LINUX AWS Architecture / Session: None
+INFO:jd_compiler:[Native Map Hit] Extracted 4 conditions without Gemini. Min years: 0
+INFO:jd_compiler:[Affinity Injected] 3개 조건 자동 추가: ['Kubernetes', 'IaC', 'DevOps']
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:jd_compiler:[V9 Hybrid Search] Completed. Top result: 윤석훈
+INFO:jd_compiler:[Dynamic Weights] unknown_ratio=0.00 | V=0.68 G=0.27 B=0.03 D=0.02
+INFO:jd_compiler:
+
+[V9 Hybrid Search] Payload: Spring Fintech MSSQL / Session: None
+INFO:jd_compiler:[Native Map Hit] Extracted 5 conditions without Gemini. Min years: 0
+INFO:jd_compiler:[Affinity Injected] 6개 조건 자동 추가: ['Payment_and_Settlement_System', 'Backend_Engineering', 'Financial_A
+ccounting', 'Backend_Architecture', 'MSA_Architecture', 'Data_Engineering']
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:jd_compiler:[V9 Hybrid Search] Completed. Top result: 김완희
+INFO:jd_compiler:[Dynamic Weights] unknown_ratio=0.00 | V=0.68 G=0.27 B=0.03 D=0.02
+INFO:jd_compiler:
+
+[V9 Hybrid Search] Payload: ASRS Smart Factory Semiconductor Logistics Automation / Session: None
+INFO:jd_compiler:[Native Map Hit] Extracted 7 conditions without Gemini. Min years: 0
+INFO:jd_compiler:[Affinity Injected] 8개 조건 자동 추가: ['RTL_Design', 'SoC', 'Semiconductor_Process', 'Factory_and_Logistics
+_Automation', 'Process_Engineering', 'Logistics_Planning', 'Data_Analysis', 'Robotics_and_Equipment_Control']
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:jd_compiler:[V9 Hybrid Search] Completed. Top result: 곽철훈
+INFO:jd_compiler:[Dynamic Weights] unknown_ratio=0.00 | V=0.68 G=0.27 B=0.03 D=0.02
+INFO:jd_compiler:
+
+[V9 Hybrid Search] Payload: Blockchain NFT / Session: None
+INFO:jd_compiler:[Native Map Hit] Extracted 2 conditions without Gemini. Min years: 0
+INFO:jd_compiler:[Affinity Injected] 3개 조건 자동 추가: ['FinTech', 'Backend_Engineering', 'New_Business_Development']
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:jd_compiler:[V9 Hybrid Search] Completed. Top result: 정창희
+INFO:jd_compiler:[Dynamic Weights] unknown_ratio=0.40 | V=0.648 G=0.246 B=0.046 D=0.06
+INFO:jd_compiler:
+
+[V9 Hybrid Search] Payload: CFO 또는 재무본부장급. IPO, IR, 자금조달, 세무까지 전반적인 재무 총괄 / Session: None
+INFO:jd_compiler:[Native Map Hit] Extracted 6 conditions without Gemini. Min years: 0
+INFO:jd_compiler:[Affinity Injected] 20개 조건 자동 추가: ['Finance_Leadership', 'IR_Management', 'Executive_Leadership', 'Cor
+porate_Finance_Strategy', 'Global_IR_Management', 'Corporate_Funding', 'FX_Dealing', 'Cash_Flow_Model', 'Valuation_Mode
+ling', 'Financial_Accounting', 'Corporate_Finance', 'Cash_Flow_Analysis', 'Corporate_Bond_Issuance', 'Cash_Flow_Forecas
+ting', 'Liquidity_Management', 'Corporate_Valuation', 'Corporate_Strategy', 'NDR', 'Analyst_Meeting', 'Corporate_Disclo
+sure']
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:jd_compiler:[V9 Hybrid Search] Completed. Top result: 안승민
+INFO:jd_compiler:[Dynamic Weights] unknown_ratio=0.29 | V=0.657 G=0.253 B=0.041 D=0.049
+INFO:jd_compiler:
+
+[V9 Hybrid Search] Payload: AI Accelerators Generative AI Datacenter GPU cluster / Session: None
+INFO:jd_compiler:[Native Map Hit] Extracted 6 conditions without Gemini. Min years: 0
+INFO:jd_compiler:[Affinity Injected] 2개 조건 자동 추가: ['Machine_Learning', 'Deep_Learning']
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:jd_compiler:[V9 Hybrid Search] Completed. Top result: 윤희영
+INFO:jd_compiler:[Dynamic Weights] unknown_ratio=0.00 | V=0.68 G=0.27 B=0.03 D=0.02
+INFO:jd_compiler:
+
+[V9 Hybrid Search] Payload: Kubernetes Terraform LangGraph DevOps pipeline / Session: None
+INFO:jd_compiler:[Native Map Hit] Extracted 5 conditions without Gemini. Min years: 0
+INFO:jd_compiler:[Affinity Injected] 7개 조건 자동 추가: ['Infrastructure_and_Cloud', 'IaC', 'MSA_Architecture', 'Monitoring_S
+ystem', 'CI_CD_Pipeline', 'Infrastructure_Engineering', 'Kubernetes_Operation']
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:jd_compiler:[V9 Hybrid Search] Completed. Top result: 윤영필
+INFO:jd_compiler:[Dynamic Weights] unknown_ratio=0.00 | V=0.68 G=0.27 B=0.03 D=0.02
+INFO:jd_compiler:
+
+[V9 Hybrid Search] Payload: Collective Communication C/C++ RDMA RoCE InfiniBand / Session: None
+INFO:jd_compiler:[Native Map Hit] Extracted 6 conditions without Gemini. Min years: 0
+INFO:jd_compiler:[Affinity Injected] 8개 조건 자동 추가: ['Data_Center_Network', 'Embedded_Linux', 'Sys_Software', 'Firmware',
+ 'GPGPU', 'AI_Model_and_Distributed_Training', 'Infrastructure_and_Cloud', 'Network_Protocol_Stack']
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:jd_compiler:[V9 Hybrid Search] Completed. Top result: 최형광
+INFO:jd_compiler:[Dynamic Weights] unknown_ratio=0.17 | V=0.667 G=0.259 B=0.037 D=0.037
+INFO:jd_compiler:
+
+[V9 Hybrid Search] Payload: ERP Excel Labor Law HR payroll / Session: None
+INFO:jd_compiler:[Native Map Hit] Extracted 7 conditions without Gemini. Min years: 0
+INFO:jd_compiler:[Affinity Injected] 3개 조건 자동 추가: ['Payroll_Management', 'Performance_and_Compensation_System', 'Financ
+ial_Accounting']
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:jd_compiler:[V9 Hybrid Search] Completed. Top result: 류래민
+INFO:jd_compiler:[Dynamic Weights] unknown_ratio=0.17 | V=0.667 G=0.259 B=0.037 D=0.037
+INFO:jd_compiler:
+
+[V9 Hybrid Search] Payload: Financial Modeling Valuation Excel DCF LBO / Session: None
+INFO:jd_compiler:[Native Map Hit] Extracted 8 conditions without Gemini. Min years: 0
+INFO:jd_compiler:[Affinity Injected] 8개 조건 자동 추가: ['Corporate_Strategy', 'Financial_Modeling', 'Business_Valuation', 'F
+inancial_Accounting', 'FP&A', 'Mergers_and_Acquisitions', 'Corporate_Finance', 'DCF_Modeling']
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:jd_compiler:[V9 Hybrid Search] Completed. Top result: 엄태영
+INFO:jd_compiler:[Dynamic Weights] unknown_ratio=0.00 | V=0.68 G=0.27 B=0.03 D=0.02
+INFO:jd_compiler:
+
+[V9 Hybrid Search] Payload: Chip Bring-up Driver Development embedded / Session: None
+INFO:jd_compiler:[Native Map Hit] Extracted 4 conditions without Gemini. Min years: 0
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:jd_compiler:[V9 Hybrid Search] Completed. Top result: 이원철
+INFO:jd_compiler:[Dynamic Weights] unknown_ratio=0.00 | V=0.68 G=0.27 B=0.03 D=0.02
+INFO:jd_compiler:
+
+[V9 Hybrid Search] Payload: ARM SVE Neural Network Operations embedded / Session: None
+INFO:jd_compiler:[Native Map Hit] Extracted 7 conditions without Gemini. Min years: 0
+INFO:jd_compiler:[Affinity Injected] 4개 조건 자동 추가: ['자연어처리_NLP', 'Computer_Vision', 'Recommendation_System', '인프라_Cloud'
+]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:jd_compiler:[V9 Hybrid Search] Completed. Top result: 김정수
+=== API Search V9 (Top 5 Results for 14 Queries) ===
+
+[1] Query: Neural Network Operations Parallel Programming C++
+--------------------------------------------------------------------------------
+?쒖쐞   | UUID(8)  | ?ㅻ챸         | ?꾩쭅??                 | ?뱁꽣
+--------------------------------------------------------------------------------
+1    | 31f22567 | ?뺤삁由?       | ?쇱꽦?꾩옄                 | SW
+2    | 31f22567 | 諛뺤썝??       | HP Printing Korea    | SW
+3    | 31f22567 | 理쒗삎愿?       | NVIDIA               | Infrastructure_and_C
+4    | 31f22567 | ?좎젙??       | ?쇱꽦?꾩옄                 | Semiconductor
+5    | 32e22567 | ?쒖긽??       | Rebellions           | SW
+--------------------------------------------------------------------------------
+
+[2] Query: OEM ExportCompliance MarketResearch
+--------------------------------------------------------------------------------
+?쒖쐞   | UUID(8)  | ?ㅻ챸         | ?꾩쭅??                 | ?뱁꽣
+--------------------------------------------------------------------------------
+1    | 32122567 | ?щ???       | ?쒖젙?앺뭹                 | Operations
+2    | 32122567 | 議곕Ц??       | ?쒖꽌?몃컲?꾩껜               | Semiconductor
+3    | 31f22567 | ?댄븰二?       | 誘몄긽                   | Operations
+4    | 32122567 | ?덈챸??       | HYUNDAI UBIS Co., Lt | Operations
+5    | 32122567 | ?댁갹??       | 誘몄긽                   | Strategy
+--------------------------------------------------------------------------------
+
+[3] Query: LINUX AWS Architecture
+--------------------------------------------------------------------------------
+?쒖쐞   | UUID(8)  | ?ㅻ챸         | ?꾩쭅??                 | ?뱁꽣
+--------------------------------------------------------------------------------
+1    | 31f22567 | ?ㅼ꽍??       | HYBE-IM              | SW
+2    | 31f22567 | ?ㅼ쁺??       | PYLER                | SW
+3    | 32022567 | 源?⑸쭔        | 濡?뜲?뺣낫?듭떊               | SW
+4    | 33522567 | 源?⑤?        | ?밴렐留덉폆                 | SW
+5    | 32022567 | ?좎꽭吏?       | ?쇱씤寃뚯엫利?               | SW
+--------------------------------------------------------------------------------
+
+[4] Query: Spring Fintech MSSQL
+--------------------------------------------------------------------------------
+?쒖쐞   | UUID(8)  | ?ㅻ챸         | ?꾩쭅??                 | ?뱁꽣
+--------------------------------------------------------------------------------
+1    | 31f22567 | 源?꾪씗        | 誘몄긽                   | Finance
+2    | 31f22567 | ?닿린以        | ?덉쭊?뚭퀎踰뺤씤               | SW
+3    | 32122567 | 源?명샇        | ???⑥벐                 | FinTech
+4    | 32122567 | 理쒓꼍??       | SK?붾젅肄?二?             | 誘몃텇瑜?
+5    | 32e22567 | ?댁슦愿        | ABC?붾（??              | SW
+--------------------------------------------------------------------------------
+
+[5] Query: ASRS Smart Factory Semiconductor Logistics Automation
+--------------------------------------------------------------------------------
+?쒖쐞   | UUID(8)  | ?ㅻ챸         | ?꾩쭅??                 | ?뱁꽣
+--------------------------------------------------------------------------------
+1    | 31f22567 | 怨쎌쿋??       | Cowell (以묎뎅)          | Operations
+2    | 31f22567 | ?뺤???       | Lam Research Manufac | Semiconductor
+3    | 32022567 | ?뺤쭊??       | 硫붾뱶?몃줈?됱퐫由ъ븘             | Operations
+4    | 31f22567 | ?좎썒??       | LG?꾩옄                 | Operations
+5    | 32022567 | 源寃쎈룞        | 肄붿쎇愿묓븰?꾩옄               | Semiconductor
+--------------------------------------------------------------------------------
+
+[6] Query: Blockchain NFT
+--------------------------------------------------------------------------------
+?쒖쐞   | UUID(8)  | ?ㅻ챸         | ?꾩쭅??                 | ?뱁꽣
+--------------------------------------------------------------------------------
+1    | 31f22567 | ?뺤갹??       | jpegs.fun            | SW
+2    | 31f22567 | ?뺣???       | MilkyWay             | SW
+3    | 32022567 | ?대룞以        | DKL Partners 踰뺣쪧?щТ??  | Legal
+4    | 31f22567 | 諛뺥븯吏?       | ?좊땲紐⑥뭅寃뚯엫利?             | SW
+5    | 32022567 | ?댁쭊??       | ?쒗???                 | SW
+--------------------------------------------------------------------------------
+
+[7] Query: CFO ?먮뒗 ?щТ蹂몃??κ툒. IPO, IR, ?먭툑議곕떖, ?몃Т源뚯? ?꾨컲?곸씤 ?щТ 珥앷큵
+--------------------------------------------------------------------------------
+?쒖쐞   | UUID(8)  | ?ㅻ챸         | ?꾩쭅??                 | ?뱁꽣
+--------------------------------------------------------------------------------
+1    | 31f22567 | ?덉듅誘?       | ?꾪봽由ъ뭅TV               | Finance
+2    | 31f22567 | 源?곸썝        | ??XXX                | Finance
+3    | 32e22567 | 沅뚰슚??       | 踰좎뒪?湲濡쒕쾶??             | Finance
+4    | 31f22567 | ?뺤쥌??       | 荑좏뙜(二?                | Finance
+5    | 32022567 | ?댁꽦??       | (二??쇱븻?먯뒪??            | Semiconductor
+--------------------------------------------------------------------------------
+
+[8] Query: AI Accelerators Generative AI Datacenter GPU cluster
+--------------------------------------------------------------------------------
+?쒖쐞   | UUID(8)  | ?ㅻ챸         | ?꾩쭅??                 | ?뱁꽣
+--------------------------------------------------------------------------------
+1    | 32e22567 | ?ㅽ씗??       | GraphAI              | SW
+2    | 31f22567 | 媛뺤쭊援?       | Moreh                | FinTech
+3    | 33522567 | 源?뺤닔        | (二?LG AI?곌뎄??         | SW
+4    | 31f22567 | 怨쎈룄??       | 而ㅻ땲肄붾━????             | FinTech
+5    | 31f22567 | 瑜섏꽦??       | ?꾨?移대뱶                 | FinTech
+--------------------------------------------------------------------------------
+
+[9] Query: Kubernetes Terraform LangGraph DevOps pipeline
+--------------------------------------------------------------------------------
+?쒖쐞   | UUID(8)  | ?ㅻ챸         | ?꾩쭅??                 | ?뱁꽣
+--------------------------------------------------------------------------------
+1    | 31f22567 | ?ㅼ쁺??       | PYLER                | SW
+2    | 31f22567 | ?ㅼ꽍??       | HYBE-IM              | SW
+3    | 32022567 | ?댁젙??       | UPRISE, Inc.         | SW
+4    | 31f22567 | 諛뺤듅以        | Kakao Enterprise     | SW
+5    | 31f22567 | 諛뺤꽦以        | Kakao Enterprise     | 誘몃텇瑜?
+--------------------------------------------------------------------------------
+
+[10] Query: Collective Communication C/C++ RDMA RoCE InfiniBand
+--------------------------------------------------------------------------------
+?쒖쐞   | UUID(8)  | ?ㅻ챸         | ?꾩쭅??                 | ?뱁꽣
+--------------------------------------------------------------------------------
+1    | 31f22567 | 理쒗삎愿?       | NVIDIA               | Infrastructure_and_C
+2    | 31f22567 | 源吏??       | Mangoboost           | Semiconductor
+3    | 31f22567 | ?뺤쑄??       | Moreh                | SW
+4    | 31f22567 | 臾명깭寃?       | Sonatus              | SW
+5    | 31f22567 | ?ㅼ쁺??       | PYLER                | SW
+--------------------------------------------------------------------------------
+
+[11] Query: ERP Excel Labor Law HR payroll
+--------------------------------------------------------------------------------
+?쒖쐞   | UUID(8)  | ?ㅻ챸         | ?꾩쭅??                 | ?뱁꽣
+--------------------------------------------------------------------------------
+1    | 32022567 | 瑜섎옒誘?       | 由щ뱶?묒떆鍮꾩뀡?ㅼ퐫由ъ븘 ?좏븳?뚯궗      | Finance
+2    | 32122567 | 議고삙由?       | ?쒓뎅?붽???               | HR
+3    | 31f22567 | ?꾩긽嫄?       | ?ㅼ럡                   | HR
+4    | 32022567 | 源?곸닔        | 誘몄긽                   | SW
+5    | 32022567 | 源蹂대?        | ?쒖씠?좏떚?ㅼ뿉??             | Finance
+--------------------------------------------------------------------------------
+
+[12] Query: Financial Modeling Valuation Excel DCF LBO
+--------------------------------------------------------------------------------
+?쒖쐞   | UUID(8)  | ?ㅻ챸         | ?꾩쭅??                 | ?뱁꽣
+--------------------------------------------------------------------------------
+1    | 32122567 | ?꾪깭??       | 誘몄긽                   | Finance
+2    | 32e22567 | 沅뚰슚??       | 踰좎뒪?湲濡쒕쾶??             | Finance
+3    | 31f22567 | 臾몄닚??       | Samsung Securities C | Finance
+4    | 31f22567 | 理쒓꼍援?       | ?꾨?紐⑤퉬??               | Strategy
+5    | 32022567 | 理쒓킅??       | ?쇱젙?뚭퀎踰뺤씤               | Finance
+--------------------------------------------------------------------------------
+
+[13] Query: Chip Bring-up Driver Development embedded
+--------------------------------------------------------------------------------
+?쒖쐞   | UUID(8)  | ?ㅻ챸         | ?꾩쭅??                 | ?뱁꽣
+--------------------------------------------------------------------------------
+1    | 31f22567 | ?댁썝泥?       | ?쇱꽦?꾩옄                 | Infrastructure_and_C
+2    | 32f22567 | ?대?李?       | ?쇱꽦?꾩옄 ?ㅽ듃?뚰겕 ?ъ뾽遺        | SW
+3    | 32022567 | 媛뺢굔洹?       | SONATUS Software Kor | SW
+4    | 31f22567 | 理쒖썝湲?       | ?ㅽ듃?쇰뱶鍮꾩졏 ?쒖슱            | Semiconductor
+5    | 32e22567 | ?고삎??       | ?쇱꽦?꾩옄                 | SW
+--------------------------------------------------------------------------------
+
+[14] Query: ARM SVE Neural Network Operations embedded
+--------------------------------------------------------------------------------
+?쒖쐞   | UUID(8)  | ?ㅻ챸         | ?꾩쭅??                 | ?뱁꽣
+--------------------------------------------------------------------------------
+1    | 33522567 | 源?뺤닔        | (二?LG AI?곌뎄??         | SW
+2    | 32e22567 | 議곕쭔??       | 誘몄긽                   | SW
+3    | 32122567 | ?먯쭊愿?       | ?쒖씪 ?묓???              | SW
+4    | 31f22567 | 諛뺤썝??       | HP Printing Korea    | SW
+5    | 31f22567 | ?ㅼ슦??       | Balancehero Korea    | SW
+--------------------------------------------------------------------------------

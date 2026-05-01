@@ -113,10 +113,10 @@ def repair_candidates(limit=50):
     
     print(f"[*] Starting parallel repair for {len(rows)} candidates...")
     
-    with ThreadPoolExecutor(max_workers=5) as executor:
+    with ThreadPoolExecutor(max_workers=10) as executor:
         executor.map(lambda r: repair_single_candidate(r, None), rows)
     
     print("[*] Batch Repair complete.")
 
 if __name__ == "__main__":
-    repair_candidates(50)
+    repair_candidates(1500)
