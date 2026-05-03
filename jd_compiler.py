@@ -569,38 +569,35 @@ def parse_jd_to_json(jd_text: str) -> Dict:
 
     
 
-    # 가장 긴 단어부터 매칭(부분충돌 방지)
 
+    # 가장 긴 단어부터 매칭(부분충돌 방지)
     sorted_keys = sorted(CANONICAL_MAP.keys(), key=len, reverse=True)
+    canonical_values = sorted(list(set(CANONICAL_MAP.values())), key=len, reverse=True)
 
     for k in sorted_keys:
-
         k_lower = k.lower()
-
         if k_lower in lower_jd:
-
-            # 영문 단어인 경우 (예: PO) 부분문자열 오진 방지 (예: IPO에서 PO 매칭 방지)
-
             if re.search(r'[a-z]', k_lower):
-
-                pattern = r'(?<![a-z])' + re.escape(k_lower) + r'(?![a-z])'
-
+                pattern = r'(?<![a-z0-9])' + re.escape(k_lower) + r'(?![a-z0-9])'
                 if not re.search(pattern, lower_jd):
-
                     continue
-
-                    
-
             v = CANONICAL_MAP[k]
-
             if v not in seen_nodes:
-
                 seen_nodes.add(v)
-
                 matched_nodes.append((v, k_lower))
 
-                if len(matched_nodes) >= 4:
-
+    # [Patch] Value(노드명) 직접 매칭 추가 (v7 대응)
+    for val in canonical_values:
+        val_lower = val.lower()
+        for p in [val_lower, val_lower.replace('_', ' ')]:
+            if p in lower_jd:
+                if re.search(r'[a-z]', p):
+                    p_regex = r'(?<![a-z0-9])' + re.escape(p) + r'(?![a-z0-9])'
+                    if not re.search(p_regex, lower_jd):
+                        continue
+                if val not in seen_nodes:
+                    seen_nodes.add(val)
+                    matched_nodes.append((val, p))
                     break
 
                     

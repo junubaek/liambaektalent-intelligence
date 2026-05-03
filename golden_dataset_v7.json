@@ -1,174 +1,174 @@
 [
   {
-    "query": "Supply Chain Management Lead",
+    "query": "SCM Clinical_Research Semiconductor_Engineering",
     "relevant_ids": [
       "4372aa93-d449-45e2-acd8-a46af504b8a1"
     ],
-    "candidate_names": [
+    "relevant_names": [
       "이신형"
     ]
   },
   {
-    "query": "General Affairs Manager",
+    "query": "Product_Service_Planning Problem_Solving General_Affairs",
     "relevant_ids": [
       "89dc2c4e-bce1-47b0-ab48-1e13a7acdabd"
     ],
-    "candidate_names": [
+    "relevant_names": [
       "이상헌"
     ]
   },
   {
-    "query": "PR & Communication Manager",
+    "query": "Public_Relations Corporate_Strategic_Planning Brand_Management",
     "relevant_ids": [
       "69c34de3-000e-443e-b438-4f1cafb5e1db"
     ],
-    "candidate_names": [
+    "relevant_names": [
       "배유정"
     ]
   },
   {
-    "query": "Treasury Manager",
+    "query": "Treasury_Management Corporate_Funding Financial_Accounting",
     "relevant_ids": [
       "9c18543d-280a-40aa-b691-645aec12e931"
     ],
-    "candidate_names": [
+    "relevant_names": [
       "김대중"
     ]
   },
   {
-    "query": "Framework Software Engineer",
+    "query": "Big_Data_Processing Data_Analysis LLM_Engineering",
     "relevant_ids": [
       "34ca8c72-c956-48fb-842c-9bdd05113a3e"
     ],
-    "candidate_names": [
+    "relevant_names": [
       "홍기재"
     ]
   },
   {
-    "query": "Financial Systems Manager",
+    "query": "Backend_Java Infrastructure_and_Cloud Quality_Management",
     "relevant_ids": [
       "dab52052-69af-4584-8f7f-28155f75831e"
     ],
-    "candidate_names": [
+    "relevant_names": [
       "김완희"
     ]
   },
   {
-    "query": "System Software Architect",
+    "query": "Infrastructure_and_Cloud Data_Visualization Data_Analysis",
     "relevant_ids": [
       "04a827ba-635f-4926-bfee-4f5c994acde5"
     ],
-    "candidate_names": [
+    "relevant_names": [
       "김영인"
     ]
   },
   {
-    "query": "DevOps & Platform Engineer",
+    "query": "Infrastructure_and_Cloud Kubernetes Automotive_Software",
     "relevant_ids": [
       "0724db06-6275-4856-b21d-fac1c251cec7"
     ],
-    "candidate_names": [
+    "relevant_names": [
       "오원교"
     ]
   },
   {
-    "query": "AI Cloud Engineer",
+    "query": "Infrastructure_and_Cloud Clinical_Research Asia_Business_Expansion",
     "relevant_ids": [
       "b706e740-54f7-4d61-989a-75b0abc45886"
     ],
-    "candidate_names": [
+    "relevant_names": [
       "정윤오"
     ]
   },
   {
-    "query": "Device Driver Engineer - User-Mode Driver",
+    "query": "Sys_Software C_CPP Firmware",
     "relevant_ids": [
       "977c13bb-708b-4109-b37d-0c044221bc45"
     ],
-    "candidate_names": [
+    "relevant_names": [
       "정예린"
     ]
   },
   {
-    "query": "Firmware Verification Engineer",
+    "query": "Machine_Learning LLM_Engineering AI_Semiconductor_Architecture",
     "relevant_ids": [
       "fbd645c8-fb2f-46aa-8417-a7be7fab4cff"
     ],
-    "candidate_names": [
+    "relevant_names": [
       "정호진"
     ]
   },
   {
-    "query": "전력계통 담당",
+    "query": "Power_Grid_Engineering VPP HVDC",
     "relevant_ids": [
       "31f22567-1b6f-816c-ac76-f6ac6c31c2db"
     ],
-    "candidate_names": [
+    "relevant_names": [
       "배문성"
     ]
   },
   {
-    "query": "Ethernet Verification Engineer",
+    "query": "ISO26262 Firmware Automotive_Software",
     "relevant_ids": [
       "8c16dc8b-3137-4aa5-95b2-55638140a4e1"
     ],
-    "candidate_names": [
+    "relevant_names": [
       "강건규"
     ]
   },
   {
-    "query": "서버 개발자",
+    "query": "Data_Core",
     "relevant_ids": [
       "32022567-1b6f-8152-9c8d-c4f8079c01b8",
       "32e22567-1b6f-8101-ab31-c33a53561a96"
     ],
-    "candidate_names": [
+    "relevant_names": [
       "조재영",
       "김정기"
     ]
   },
   {
-    "query": "Cloud Backend Engineer (MLOps)",
+    "query": "Infrastructure_and_Cloud Kubernetes IaC",
     "relevant_ids": [
       "e542f3a6-b2a7-4d57-8ff8-42928d297f95"
     ],
-    "candidate_names": [
+    "relevant_names": [
       "강동현"
     ]
   },
   {
-    "query": "Data Scientist/ML Engineer",
+    "query": "Infrastructure_and_Cloud Corporate_Strategic_Planning Battery_Technology",
     "relevant_ids": [
       "c1351abe-4809-483d-97b6-291718d2ce1d"
     ],
-    "candidate_names": [
+    "relevant_names": [
       "김정수"
     ]
   },
   {
-    "query": "UIUX 디자이너",
+    "query": "UX_UI_Design Marketing_Planning Event_Management",
     "relevant_ids": [
       "8e4b53e0-5f55-41d7-a311-c43d9727c516"
     ],
-    "candidate_names": [
+    "relevant_names": [
       "이영도"
     ]
   },
   {
-    "query": "Enterprise Sales Manager",
+    "query": "Content_Marketing B2B_Sales Market_Analysis",
     "relevant_ids": [
       "c3d4ee55-266a-44f6-8e66-fb7486be38a8"
     ],
-    "candidate_names": [
+    "relevant_names": [
       "최우성"
     ]
   },
   {
-    "query": "Partner Alliance Manager",
+    "query": "Content_Marketing B2B_Sales Market_Analysis",
     "relevant_ids": [
       "c3d4ee55-266a-44f6-8e66-fb7486be38a8"
     ],
-    "candidate_names": [
+    "relevant_names": [
       "최우성"
     ]
   }

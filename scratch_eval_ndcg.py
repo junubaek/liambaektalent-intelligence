@@ -30,21 +30,27 @@ def calculate_ndcg():
         if not rel and item.get('candidate_neo4j_id'):
             rel = [item.get('candidate_neo4j_id')]
             
+
         if q not in query_targets:
             query_targets[q] = {
                 'relevant': set(),
+                'relevant_names': set(),
                 'seniority': item.get('seniority', 'All')
             }
         for rid in rel:
             query_targets[q]['relevant'].add(str(rid).lower())
+        for rname in item.get('relevant_names', []):
+            query_targets[q]['relevant_names'].add(rname)
 
     scores = []
     print(f"=== NDCG Evaluation Start (API: api_search_v9, Dataset: {dataset_path}) ===")
     print(f"Total Queries: {len(query_targets)}")
     print("-" * 50)
 
+
     for q, info in query_targets.items():
         relevant_ids = info['relevant']
+        relevant_names = [n.lower() for n in info.get('relevant_names', [])]
         if not relevant_ids:
             continue
             
@@ -57,11 +63,21 @@ def calculate_ndcg():
         hits = 0
         for i, cand in enumerate(matched[:10]):
             cid = str(cand.get('id', '')).lower()
+            cand_name = str(cand.get('name_kr', '')).lower()
+            
             is_hit = False
+            # 1. ID matching
             for rid in relevant_ids:
                 if rid in cid or cid in rid:
                     is_hit = True
                     break
+            
+            # 2. Name matching (Backup for duplicates)
+            if not is_hit and relevant_names:
+                for rname in relevant_names:
+                    if rname and rname == cand_name:
+                        is_hit = True
+                        break
             
             if is_hit:
                 dcg += 1.0 / math.log2(i + 2)

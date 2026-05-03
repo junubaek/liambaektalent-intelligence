@@ -106,11 +106,12 @@ def build_golden_dataset():
                 relevant_ids.append(name_to_id[name])
                 found_names.append(name)
         
+
         if relevant_ids:
             dataset.append({
                 "query": pos_name,
                 "relevant_ids": relevant_ids,
-                "candidate_names": found_names # 디버깅용
+                "relevant_names": found_names
             })
             print(f"  - [{pos_name}] Queries: {len(relevant_ids)} candidates matched.")
 
