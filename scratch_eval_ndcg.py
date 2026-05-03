@@ -57,7 +57,6 @@ def calculate_ndcg():
         hits = 0
         for i, cand in enumerate(matched[:10]):
             cid = str(cand.get('id', '')).lower()
-            # Partial match for robustness (handles UUID vs short ID)
             is_hit = False
             for rid in relevant_ids:
                 if rid in cid or cid in rid:
@@ -74,11 +73,7 @@ def calculate_ndcg():
         score = dcg / idcg if idcg > 0 else 0.0
         scores.append(score)
         
-        print(f"Query: {q[:50]}...")
-        print(f"  Target: {len(relevant_ids)} candidates")
-        print(f"  Hits@10: {hits} candidates")
-        print(f"  NDCG@10: {score:.4f}")
-        print()
+        print(f'{score:.2f} | hits:{hits}/{len(relevant_ids)} | {q[:45]}')
 
     if not scores:
         print("No scores calculated.")

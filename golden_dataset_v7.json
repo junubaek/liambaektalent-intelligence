@@ -1,0 +1,26 @@
+[
+    {
+        "query": "Kubernetes 기반의 MLOps 플랫폼을 구축하고, Kafka를 활용해 대규모 데이터 파이프라인을 설계한 경험",
+        "jd_query": "Kubernetes 기반의 MLOps 플랫폼을 구축하고, Kafka를 활용해 대규모 데이터 파이프라인을 설계한 경험",
+        "target_nodes": ["MLOps", "Kubernetes", "Kafka", "Data_Pipeline_Construction", "Big_Data_Processing", "Backend_Python", "C++"],
+        "relevant_ids": ["32022567-1b6f-81f4-84bc-dbc8d27a4842"],
+        "category": "Deep Tech / MLOps",
+        "expected_name": "김영인"
+    },
+    {
+        "query": "경영전략을 수립하고 자금 운용(Treasury) 및 외환 관리를 총괄하며, ERP 시스템을 구축해본 재무 전문가",
+        "jd_query": "경영전략을 수립하고 자금 운용(Treasury) 및 외환 관리를 총괄하며, ERP 시스템을 구축해본 재무 전문가",
+        "target_nodes": ["Corporate_Strategic_Planning", "Treasury_Management", "FX_Dealing", "ERP", "Financial_Accounting", "Corporate_Funding"],
+        "relevant_ids": ["32e22567-1b6f-81c3-a567-fa97777d7f53"],
+        "category": "Finance / Strategy",
+        "expected_name": "김대중"
+    },
+    {
+        "query": "Python 기반의 데이터 엔지니어링 및 백엔드 개발, SAP 시스템 연동과 정보보안 체계를 구축해본 경험",
+        "jd_query": "Python 기반의 데이터 엔지니어링 및 백엔드 개발, SAP 시스템 연동과 정보보안 체계를 구축해본 경험",
+        "target_nodes": ["Data_Engineering", "Backend", "Python", "SAP", "Information_Security", "Data_Pipeline_Construction", "Infrastructure_and_Cloud"],
+        "relevant_ids": ["31f22567-1b6f-817a-a763-f718d9d40fbf"],
+        "category": "Data Engineering / IT",
+        "expected_name": "김완희"
+    }
+]

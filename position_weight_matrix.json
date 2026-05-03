@@ -1,0 +1,28 @@
+{
+    "Deep Tech / MLOps": {
+        "MLOps": 1.0,
+        "Kubernetes": 1.0,
+        "Kafka": 1.0,
+        "Data_Pipeline_Construction": 1.0,
+        "Big_Data_Processing": 1.0,
+        "Backend_Python": 1.0,
+        "C++": 1.0
+    },
+    "Finance / Strategy": {
+        "Corporate_Strategic_Planning": 1.0,
+        "Treasury_Management": 1.0,
+        "FX_Dealing": 1.0,
+        "ERP": 1.0,
+        "Financial_Accounting": 1.0,
+        "Corporate_Funding": 1.0
+    },
+    "Data Engineering / IT": {
+        "Data_Engineering": 1.0,
+        "Backend": 1.0,
+        "Python": 1.0,
+        "SAP": 1.0,
+        "Information_Security": 1.0,
+        "Data_Pipeline_Construction": 1.0,
+        "Infrastructure_and_Cloud": 1.0
+    }
+}

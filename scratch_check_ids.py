@@ -1,17 +1,22 @@
+import json, sys, os
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, ROOT_DIR)
+from jd_compiler import api_search_v9
 
-import os
-from neo4j import GraphDatabase
+sys.stdout.reconfigure(encoding='utf-8')
 
-n_uri = os.environ.get('NEO4J_URI', 'bolt://127.0.0.1:7687')
-n_user = os.environ.get('NEO4J_USERNAME', 'neo4j')
-n_pw = os.environ.get('NEO4J_PASSWORD', 'toss1234')
+r = api_search_v9('LINUX AWS Architecture')
+matched = r.get('matched', [])
 
-driver = GraphDatabase.driver(n_uri, auth=(n_user, n_pw))
-try:
-    with driver.session() as session:
-        ids = ['31f22567-1b6f-81f3-bfe6-fb7fd7c9ad61', '31f22567-1b6f-8150-8062-f6862dec66e5', '32022567-1b6f-8121-b3b4-dac79d7ece90', '32e22567-1b6f-81c5-8f9e-c02433e25876']
-        res = session.run('MATCH (c:Candidate) WHERE c.id IN $ids RETURN c.id as id, c.embedding IS NOT NULL as has_emb', ids=ids)
-        for r in res:
-            print(f"ID: {r['id']}, Has Embedding: {r['has_emb']}")
-finally:
-    driver.close()
+# 골든셋 정답 ID
+target_ids = [
+    '31f22567-1b6f-8193-8cb9-d78eb4c59593',
+    '33522567-1b6f-81a3-ac63-e62ab98e6793'
+]
+
+print('Top 10 IDs:')
+for i, c in enumerate(matched[:10]):
+    cid = str(c.get('id', ''))
+    name = c.get('name_kr', '')
+    hit = any(t.lower() in cid.lower() or cid.lower() in t.lower() for t in target_ids)
+    print(f'{i+1}. {name} | {cid[:40]} | hit:{hit}')

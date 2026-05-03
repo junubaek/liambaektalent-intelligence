@@ -656,9 +656,9 @@ def parse_jd_to_json(jd_text: str) -> Dict:
             try:
 
                 import os
-                n_uri = os.environ.get('NEO4J_URI', 'bolt://127.0.0.1:7687')
-                n_user = os.environ.get('NEO4J_USERNAME', 'neo4j')
-                n_pw = os.environ.get('NEO4J_PASSWORD', 'toss1234')
+                n_uri = _get_secret('NEO4J_URI')
+                n_user = _get_secret('NEO4J_USERNAME')
+                n_pw = _get_secret('NEO4J_PASSWORD')
                 driver = GraphDatabase.driver(n_uri, auth=(n_user, n_pw))
 
                 with driver.session() as s:
@@ -1240,9 +1240,9 @@ def prefilter_candidates(jd_text: str, num_candidates: int = 300, extracted_cond
     from neo4j import GraphDatabase
     try:
         import os
-        n_uri = os.environ.get('NEO4J_URI', 'bolt://127.0.0.1:7687')
-        n_user = os.environ.get('NEO4J_USERNAME', 'neo4j')
-        n_pw = os.environ.get('NEO4J_PASSWORD', 'toss1234')
+        n_uri = _get_secret('NEO4J_URI')
+        n_user = _get_secret('NEO4J_USERNAME')
+        n_pw = _get_secret('NEO4J_PASSWORD')
         driver = GraphDatabase.driver(n_uri, auth=(n_user, n_pw))
         with driver.session() as session:
             # 1. 초경량 1-Hop 탐색 쿼리 (0.01초 보장)
@@ -1384,9 +1384,9 @@ def api_search_v8(prompt: str, session_id: str = None, **kwargs) -> dict:
     id_to_name = {}
     
     import os
-    n_uri = os.environ.get('NEO4J_URI', 'bolt://127.0.0.1:7687')
-    n_user = os.environ.get('NEO4J_USERNAME', 'neo4j')
-    n_pw = os.environ.get('NEO4J_PASSWORD', 'toss1234')
+    n_uri = _get_secret('NEO4J_URI')
+    n_user = _get_secret('NEO4J_USERNAME')
+    n_pw = _get_secret('NEO4J_PASSWORD')
     driver = GraphDatabase.driver(n_uri, auth=(n_user, n_pw))
     try:
         with driver.session() as session:
@@ -1593,6 +1593,23 @@ def api_search_v8(prompt: str, session_id: str = None, **kwargs) -> dict:
     
     return {'matched': dedup[:100], 'total': len(dedup), "is_category_search": is_category_search}
 
+def calculate_coverage_score(candidate_skills, target_skills):
+    """
+    [v10 Core] 후보자의 스킬과 타겟 스킬을 비교하여 정합성 점수(Coverage) 산출
+    """
+    if not target_skills:
+        return 1.0, [], []
+    
+    cand_set = set(candidate_skills)
+    target_set = set(target_skills)
+    
+    matched = cand_set.intersection(target_set)
+    missing = target_set - cand_set
+    
+    score = len(matched) / len(target_set)
+    return score, list(matched), list(missing)
+
+
 def normalize_query_with_map(raw_keywords):
     """
     [어휘 불일치 해결 1단계] 사용자 입력(A)을 시스템 표준 노드(A')로 강제 변환
@@ -1725,9 +1742,9 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     
     # 2. Tower 1: Vector Search (Neo4j - V8 logic)
     import os
-    n_uri = os.environ.get('NEO4J_URI', 'bolt://127.0.0.1:7687')
-    n_user = os.environ.get('NEO4J_USERNAME', 'neo4j')
-    n_pw = os.environ.get('NEO4J_PASSWORD', 'toss1234')
+    n_uri = _get_secret('NEO4J_URI')
+    n_user = _get_secret('NEO4J_USERNAME')
+    n_pw = _get_secret('NEO4J_PASSWORD')
     driver = GraphDatabase.driver(n_uri, auth=(n_user, n_pw))
     
     with open(SECRETS_PATH, "r", encoding="utf-8") as f:
@@ -1959,3 +1976,153 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         'total': len(final_candidates),
         'is_category_search': is_category_search
     }
+
+# =================================================================
+# 🧬 [v10.4 Bayesian Expert Edition] Domain-Specific Adaptive Engine
+# =================================================================
+
+class DomainSubsetExtractor:
+    def __init__(self, anchors_path='domain_anchors.json'):
+        self.anchors = []
+        if os.path.exists(anchors_path):
+            with open(anchors_path, 'r', encoding='utf-8') as f:
+                self.anchors = json.load(f)
+        logging.info(f"[DomainSubset] Loaded {len(self.anchors)} anchors.")
+
+    def get_local_likelihood(self, query_embedding, top_n=5):
+        """
+        Finds the most similar golden samples and extracts domain-specific skill importance.
+        """
+        if not self.anchors: return {}
+        
+        # Calculate cosine similarity
+        similarities = []
+        q_vec = np.array(query_embedding)
+        for anchor in self.anchors:
+            a_vec = np.array(anchor["embedding"])
+            sim = np.dot(q_vec, a_vec) / (np.linalg.norm(q_vec) * np.linalg.norm(a_vec))
+            similarities.append((sim, anchor))
+            
+        # Sort by similarity
+        similarities.sort(key=lambda x: x[0], reverse=True)
+        subset = similarities[:top_n]
+        
+        # Aggregate local importance
+        local_counts = {}
+        for sim, anchor in subset:
+            nodes = anchor.get("target_nodes", [])
+            for node in nodes:
+                # Similarity weighted count
+                local_counts[node] = local_counts.get(node, 0) + sim
+                
+        # Normalize local weights (0.0 ~ 1.0)
+        max_v = max(local_counts.values()) if local_counts else 1.0
+        return {k: v/max_v for k, v in local_counts.items()}
+
+domain_extractor = DomainSubsetExtractor()
+
+class BayesianAdaptiveScorerV2:
+    def __init__(self, global_likelihood_path='global_skill_likelihood.json'):
+        self.global_importance = {}
+        if os.path.exists(global_likelihood_path):
+            with open(global_likelihood_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                self.global_importance = data.get("skill_importance", {})
+
+    def get_expert_weights(self, target_skills, local_likelihood, alpha=0.3):
+        """
+        Bayesian Synthesis: Prior (Global) * Likelihood (Domain)
+        """
+        weights = {}
+        for skill in target_skills:
+            # 1. Global Prior (Background Noise)
+            p_global = self.global_importance.get(skill, 0.5)
+            
+            # 2. Local Likelihood (Domain Expert Signal)
+            p_local = local_likelihood.get(skill, 0.5)
+            
+            # 3. Combined Bayesian Weight
+            # Give more weight to Domain (1-alpha)
+            combined = (alpha * p_global) + ((1 - alpha) * p_local)
+            weights[skill] = max(0.3, round(float(combined), 4))
+            
+        return weights
+
+expert_scorer = BayesianAdaptiveScorerV2()
+
+def calc_achievement_density_v9(raw_text):
+    if not raw_text: return 0.0
+    core_patterns = [r'\d+%', r'\d+억', r'\d+만', r'\d+명', r'\d+개', r'\d+년']
+    tech_patterns = [r'특허', r'논문', r'제1저자', r'SCI', r'수상', r'\d+건']
+    core_count = sum(len(re.findall(p, raw_text)) for p in core_patterns)
+    tech_count = sum(len(re.findall(p, raw_text)) for p in tech_patterns)
+    weighted_count = core_count + (tech_count * 0.5)
+    density = weighted_count / (max(len(raw_text), 1) / 1000)
+    return min(density / 5.0, 1.0)
+
+def get_bm25_top_v9(query_text, top_k=100):
+    import pickle
+    index_path = 'bm25_index.pkl'
+    if not os.path.exists(index_path): return {}
+    with open(index_path, 'rb') as f:
+        data = pickle.load(f)
+        bm25 = data['bm25']
+        ids = data['ids']
+    def tokenize(text):
+        tokens = re.findall(r'[가-힣]{2,}|[a-zA-Z]{2,}|\d+', text or '')
+        return [t.lower() for t in tokens]
+    tokenized_query = tokenize(query_text)
+    scores = bm25.get_scores(tokenized_query)
+    max_s = max(scores) if len(scores) > 0 and max(scores) > 0 else 1.0
+    import numpy as np
+    top_indices = np.argsort(scores)[::-1][:top_k]
+    res = {}
+    for idx in top_indices:
+        s = scores[idx]
+        if s > 0: res[str(ids[idx])] = s / max_s
+    return res
+
+def get_effective_gravity_v9(node, seniority="All"):
+    field = UNIFIED_GRAVITY_FIELD.get(node, {})
+    if seniority == "SENIOR" and node in SENIOR_EXPANDED_SYNERGY:
+        field = field.copy()
+        field["synergy_attracts"] = {**field.get("synergy_attracts", {}), **SENIOR_EXPANDED_SYNERGY[node]}
+    return field
+
+def calc_gravity_score_v9(candidate_nodes, query_nodes, seniority="All"):
+    REPEL_MULTIPLIER = {"SENIOR": 0.5, "MIDDLE": 0.7, "JUNIOR": 0.9, "All": 0.7}
+    repel_mult = REPEL_MULTIPLIER.get(seniority, 0.7)
+    score = 0
+    for node in query_nodes:
+        field = get_effective_gravity_v9(node, seniority)
+        core = field.get("core_attracts", {})
+        for cnode, weight in core.items():
+            if cnode in candidate_nodes: score += weight * 2.0
+        synergy = field.get("synergy_attracts", {})
+        for snode, weight in synergy.items():
+            if snode in candidate_nodes: score += weight
+        repels = field.get("repels", {})
+        for rnode, weight in repels.items():
+            if rnode in candidate_nodes: score += weight * repel_mult
+    return score
+
+def map_abbreviations_v9(query_str, conditions_list):
+    expansion_map = {
+        "IPO": ["Investor_Relations", "IPO_Preparation"],
+        "IR": ["Investor_Relations"], "DFT": ["Design_for_Testability"],
+        "RTL": ["RTL_Design"], "SoC": ["System_on_Chip"], "SAP": ["SAP_ERP"],
+        "BI": ["Business_Intelligence"], "Tableau": ["Tableau"],
+        "DevOps": ["DevOps", "CI_CD"], "SaaS": ["SaaS"],
+        "Kotlin": ["Kotlin", "Android_Development"], "ASRS": ["Warehouse_Automation"]
+    }
+    # Ensure conditions_list is a list of dicts
+    if not isinstance(conditions_list, list): return []
+    
+    for abbr, expansions in expansion_map.items():
+        if re.search(r'\b' + re.escape(abbr) + r'\b', query_str, re.IGNORECASE):
+            for exp in expansions:
+                # Add check: c must be dict
+                if not any(isinstance(c, dict) and c.get('skill') == exp for c in conditions_list):
+                    conditions_list.append({"action": "MANAGED", "skill": exp, "is_mandatory": False, "source": "abbr_map"})
+    return conditions_list
+

@@ -1,0 +1,376 @@
+{
+    "김영인": {
+        "id": "31f22567-1b6f-814b-a3d5-db5c0e51ac2f",
+        "skills": []
+    },
+    "김대중": {
+        "id": "32e22567-1b6f-81c3-a567-fa97777d7f53",
+        "skills": [
+            {
+                "skill": "Corporate_Strategic_Planning",
+                "action": "BUILT"
+            },
+            {
+                "skill": "Treasury_Management",
+                "action": "BUILT"
+            },
+            {
+                "skill": "Legal_Compliance",
+                "action": "BUILT"
+            },
+            {
+                "skill": "Corporate_Funding",
+                "action": "BUILT"
+            },
+            {
+                "skill": "SCM",
+                "action": "BUILT"
+            },
+            {
+                "skill": "ERP",
+                "action": "BUILT"
+            },
+            {
+                "skill": "Corporate_Strategic_Planning",
+                "action": "DESIGNED"
+            },
+            {
+                "skill": "FX_Dealing",
+                "action": "DESIGNED"
+            },
+            {
+                "skill": "Legal_Compliance",
+                "action": "SUPPORTED"
+            },
+            {
+                "skill": "Corporate_Strategic_Planning",
+                "action": "MANAGED"
+            },
+            {
+                "skill": "Treasury_Management",
+                "action": "MANAGED"
+            },
+            {
+                "skill": "Legal_Compliance",
+                "action": "MANAGED"
+            },
+            {
+                "skill": "Financial_Accounting",
+                "action": "MANAGED"
+            },
+            {
+                "skill": "FX_Dealing",
+                "action": "MANAGED"
+            },
+            {
+                "skill": "Treasury_Management",
+                "action": "NEGOTIATED"
+            },
+            {
+                "skill": "AWS",
+                "action": "NEGOTIATED"
+            },
+            {
+                "skill": "Apple",
+                "action": "NEGOTIATED"
+            },
+            {
+                "skill": "Nvidia",
+                "action": "NEGOTIATED"
+            },
+            {
+                "skill": "Intel",
+                "action": "NEGOTIATED"
+            },
+            {
+                "skill": "Product_Service_Planning",
+                "action": "USED"
+            },
+            {
+                "skill": "Financial_Audit",
+                "action": "USED"
+            },
+            {
+                "skill": "Asia_Business_Expansion",
+                "action": "USED"
+            },
+            {
+                "skill": "Japan_Business",
+                "action": "USED"
+            },
+            {
+                "skill": "Credit_Analysis",
+                "action": "USED"
+            },
+            {
+                "skill": "Compliance",
+                "action": "USED"
+            },
+            {
+                "skill": "Monitoring_System",
+                "action": "USED"
+            },
+            {
+                "skill": "Internal_Control",
+                "action": "USED"
+            },
+            {
+                "skill": "AutonomousDriving",
+                "action": "USED"
+            },
+            {
+                "skill": "Business_Operation",
+                "action": "USED"
+            },
+            {
+                "skill": "Tax_Advisory_and_Compliance",
+                "action": "USED"
+            },
+            {
+                "skill": "SW_Software",
+                "action": "USED"
+            },
+            {
+                "skill": "SEC_Filing",
+                "action": "USED"
+            },
+            {
+                "skill": "Chief_Technology_Officer",
+                "action": "USED"
+            }
+        ]
+    },
+    "김완희": {
+        "id": "31f22567-1b6f-817a-a763-f718d9d40fbf",
+        "skills": [
+            {
+                "skill": "Data_Engineering",
+                "action": "BUILT"
+            },
+            {
+                "skill": "Data_Analysis",
+                "action": "BUILT"
+            },
+            {
+                "skill": "Backend",
+                "action": "BUILT"
+            },
+            {
+                "skill": "Legal_Compliance",
+                "action": "BUILT"
+            },
+            {
+                "skill": "Financial_Accounting",
+                "action": "BUILT"
+            },
+            {
+                "skill": "Data_Pipeline_Construction",
+                "action": "BUILT"
+            },
+            {
+                "skill": "Python",
+                "action": "BUILT"
+            },
+            {
+                "skill": "Oracle",
+                "action": "BUILT"
+            },
+            {
+                "skill": "n8n",
+                "action": "BUILT"
+            },
+            {
+                "skill": "Infrastructure_and_Cloud",
+                "action": "BUILT"
+            },
+            {
+                "skill": "Payment_and_Settlement_System",
+                "action": "BUILT"
+            },
+            {
+                "skill": "Information_Security",
+                "action": "BUILT"
+            },
+            {
+                "skill": "SAP CO",
+                "action": "BUILT"
+            },
+            {
+                "skill": "AI_Core",
+                "action": "BUILT"
+            },
+            {
+                "skill": "MessageQueue",
+                "action": "BUILT"
+            },
+            {
+                "skill": "ChatGPT",
+                "action": "BUILT"
+            },
+            {
+                "skill": "Platform_Operations_Planning",
+                "action": "DESIGNED"
+            },
+            {
+                "skill": "Backend",
+                "action": "DESIGNED"
+            },
+            {
+                "skill": "Product_Service_Planning",
+                "action": "DESIGNED"
+            },
+            {
+                "skill": "Financial_Accounting",
+                "action": "DESIGNED"
+            },
+            {
+                "skill": "Data_Pipeline_Construction",
+                "action": "DESIGNED"
+            },
+            {
+                "skill": "Payment_and_Settlement_System",
+                "action": "DESIGNED"
+            },
+            {
+                "skill": "Information_Security",
+                "action": "DESIGNED"
+            },
+            {
+                "skill": "Backend",
+                "action": "ANALYZED"
+            },
+            {
+                "skill": "Product_Manager",
+                "action": "MANAGED"
+            },
+            {
+                "skill": "Financial_Accounting",
+                "action": "MANAGED"
+            },
+            {
+                "skill": "SAP",
+                "action": "MANAGED"
+            },
+            {
+                "skill": "Platform_Operations_Planning",
+                "action": "GREW"
+            },
+            {
+                "skill": "Product_Service_Planning",
+                "action": "GREW"
+            },
+            {
+                "skill": "Corporate_Strategic_Planning",
+                "action": "GREW"
+            },
+            {
+                "skill": "Financial_Accounting",
+                "action": "GREW"
+            },
+            {
+                "skill": "Treasury_Management",
+                "action": "USED"
+            },
+            {
+                "skill": "Management_Accounting",
+                "action": "USED"
+            },
+            {
+                "skill": "Privacy_Protection",
+                "action": "USED"
+            },
+            {
+                "skill": "SQL",
+                "action": "USED"
+            },
+            {
+                "skill": "Spring",
+                "action": "USED"
+            },
+            {
+                "skill": "Vue.js",
+                "action": "USED"
+            },
+            {
+                "skill": "Java",
+                "action": "USED"
+            },
+            {
+                "skill": "Next.js",
+                "action": "USED"
+            },
+            {
+                "skill": "Information_Security",
+                "action": "USED"
+            },
+            {
+                "skill": "Learning_and_Development",
+                "action": "USED"
+            },
+            {
+                "skill": "Medical_Device",
+                "action": "USED"
+            },
+            {
+                "skill": "Financial_Regulation",
+                "action": "USED"
+            },
+            {
+                "skill": "Data_Core",
+                "action": "USED"
+            },
+            {
+                "skill": "Mobile",
+                "action": "USED"
+            },
+            {
+                "skill": "UIUX_Design",
+                "action": "USED"
+            },
+            {
+                "skill": "Consolidated_Accounting",
+                "action": "USED"
+            },
+            {
+                "skill": "Internal_Control",
+                "action": "USED"
+            },
+            {
+                "skill": "Business_Operation",
+                "action": "USED"
+            },
+            {
+                "skill": "Design",
+                "action": "USED"
+            },
+            {
+                "skill": "IT_Audit_and_Compliance",
+                "action": "USED"
+            },
+            {
+                "skill": "Performance_Optimization",
+                "action": "USED"
+            },
+            {
+                "skill": "Game",
+                "action": "USED"
+            },
+            {
+                "skill": "Corporate_Strategy",
+                "action": "USED"
+            },
+            {
+                "skill": "Mobile_Payment_Service",
+                "action": "USED"
+            },
+            {
+                "skill": "New_Business_Development",
+                "action": "USED"
+            },
+            {
+                "skill": "Backend",
+                "action": "RESOLVED"
+            }
+        ]
+    }
+}
