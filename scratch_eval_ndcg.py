@@ -13,7 +13,7 @@ sys.path.insert(0, ROOT_DIR)
 from jd_compiler import api_search_v9
 
 def calculate_ndcg():
-    dataset_path = 'golden_dataset_v6.json'
+    dataset_path = 'golden_dataset_v7.json'
     if not os.path.exists(dataset_path):
         print(f"Error: {dataset_path} not found.")
         return

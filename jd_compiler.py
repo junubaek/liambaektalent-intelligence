@@ -1826,7 +1826,8 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     try:
         query = f"""
             SELECT id, name_kr, raw_text, sector, current_company, total_years, 
-                   profile_summary, careers_json, education_json, email, phone, birth_year, google_drive_url
+                   profile_summary, careers_json, education_json, email, phone, birth_year, google_drive_url,
+                   program_signal, program_stage
             FROM candidates 
             WHERE id IN ({placeholders})
         """
@@ -1863,7 +1864,9 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
                 'email': r[9] or '',
                 'phone': r[10] or '',
                 'birth_year': r[11] or '',
-                'google_drive_url': r[12] or ''
+                'google_drive_url': r[12] or '',
+                'program_signal': r[13] or 0.0,
+                'program_stage': r[14] or None
             }
     finally:
         conn.close()
@@ -1912,8 +1915,11 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         norm_b = (bm_scores.get(cid, 0.0) / max_b) if max_b > 0 else 0.0
         depth_score = final_d_scores.get(cid, 0.0)
         
-        # Dynamic Fusion v9 (4-Tower)
-        final_score = (norm_v * w_v) + (norm_g * w_g) + (norm_b * w_b) + (depth_score * w_d)
+        # Dynamic Fusion v9 (4-Tower + PROGRAM Boost)
+        prog_signal = float(db_metadata_map.get(cid, {}).get('program_signal', 0.0))
+        program_boost = prog_signal * 0.05  # Max +0.05 for '최종합격'
+        
+        final_score = (norm_v * w_v) + (norm_g * w_g) + (norm_b * w_b) + (depth_score * w_d) + program_boost
         
         name = id_to_name.get(cid, cache_map.get(cid, {}).get('name_kr', cid))
         final_candidates.append({
@@ -1965,6 +1971,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
             'phone': c_info.get('phone', ''),
             'birth_year': c_info.get('birth_year', ''),
             'google_drive_url': c_info.get('google_drive_url', ''),
+            'program_stage': c_info.get('program_stage', None),
             'seniority': 'SENIOR' if (c_info.get('total_years') or 0) >= 10 else ('MIDDLE' if (c_info.get('total_years') or 0) >= 5 else 'JUNIOR')
         }
         matched_candidates.append(candidate_obj)
