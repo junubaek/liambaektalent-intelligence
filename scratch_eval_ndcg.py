@@ -13,7 +13,7 @@ sys.path.insert(0, ROOT_DIR)
 from jd_compiler import api_search_v9
 
 def calculate_ndcg():
-    dataset_path = 'golden_dataset_v7.json'
+    dataset_path = 'golden_dataset_v7_updated.json'
     if not os.path.exists(dataset_path):
         print(f"Error: {dataset_path} not found.")
         return
@@ -90,6 +90,21 @@ def calculate_ndcg():
         scores.append(score)
         
         print(f'{score:.2f} | hits:{hits}/{len(relevant_ids)} | {q[:45]}')
+        # Detailed Top 10 results
+        for i, cand in enumerate(matched[:10]):
+            cid = str(cand.get('id', '')).lower()
+            cand_name = str(cand.get('name_kr', '')).lower()
+            
+            is_hit = False
+            for rid in relevant_ids:
+                if rid in cid or cid in rid: is_hit = True; break
+            if not is_hit and relevant_names:
+                for rname in relevant_names:
+                    if rname and rname == cand_name: is_hit = True; break
+            
+            marker = " [HIT]" if is_hit else ""
+            print(f'  {i+1}. {cand.get("name_kr", "Unknown")} ({cid[:8]}){marker}')
+        print("-" * 30)
 
     if not scores:
         print("No scores calculated.")

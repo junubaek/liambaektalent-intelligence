@@ -11,7 +11,7 @@
   {
     "query": "Administrative_Support Facility_Management Operations_Management",
     "relevant_ids": [
-      "89dc2c4e-bce1-47b0-ab48-1e13a7acdabd"
+      "898ea4e0-77d4-46d5-bf4d-c2d5b4a04741"
     ],
     "relevant_names": [
       "이상헌"
@@ -38,7 +38,7 @@
   {
     "query": "C_Plus_Plus CUDA GPU_Driver Deep_Learning",
     "relevant_ids": [
-      "34ca8c72-c956-48fb-842c-9bdd05113a3e"
+      "31f22567-1b6f-81a8-83ff-de0b34037f5f"
     ],
     "relevant_names": [
       "홍기재"
@@ -47,7 +47,7 @@
   {
     "query": "ERP Corporate_Finance Service_Planning Product_Manager",
     "relevant_ids": [
-      "dab52052-69af-4584-8f7f-28155f75831e"
+      "31f22567-1b6f-817a-a763-f718d9d40fbf"
     ],
     "relevant_names": [
       "김완희"
@@ -56,7 +56,7 @@
   {
     "query": "Machine_Learning Deep_Learning CUDA Python",
     "relevant_ids": [
-      "04a827ba-635f-4926-bfee-4f5c994acde5"
+      "8c24ab94-ce20-4e73-b2bf-a9c05a4ab7e0"
     ],
     "relevant_names": [
       "김영인"
@@ -110,7 +110,7 @@
   {
     "query": "Firmware_Development Embedded_Software Verification_Engineer",
     "relevant_ids": [
-      "8c16dc8b-3137-4aa5-95b2-55638140a4e1"
+      "32022567-1b6f-812a-ac39-dd91d6183f2b"
     ],
     "relevant_names": [
       "강건규"
@@ -148,7 +148,7 @@
   {
     "query": "UX_UI_Design Figma UX_Research Product_Design",
     "relevant_ids": [
-      "8e4b53e0-5f55-41d7-a311-c43d9727c516"
+      "32e22567-1b6f-81a3-8891-c822c76ea374"
     ],
     "relevant_names": [
       "이영도"

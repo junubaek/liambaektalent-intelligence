@@ -1,4 +1,4 @@
-﻿import math
+import math
 import networkx as nx
 
 # ── 1. Canonical Map (Expanded to 100+ Nodes) ────────────────────────────────────────────────────────
@@ -5278,10 +5278,10 @@ CANONICAL_MAP.update({
     "Smart Contract": "Blockchain_Ecosystem",
     "Solidity": "Blockchain_Ecosystem",
     "Ethereum": "Blockchain_Ecosystem",
-    "Linux": "Infrastructure_and_Cloud",
-    "리눅스": "Infrastructure_and_Cloud",
-    "Ubuntu": "Infrastructure_and_Cloud",
-    "CentOS": "Infrastructure_and_Cloud",
+    "Linux": "Sys_Software",
+    "리눅스": "Sys_Software",
+    "Ubuntu": "Sys_Software",
+    "CentOS": "Sys_Software",
     "RDMA": "High_Performance_Computing",
     "RoCE": "High_Performance_Computing",
     "InfiniBand": "InfiniBand_Network",
