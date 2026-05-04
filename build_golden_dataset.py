@@ -21,9 +21,14 @@ headers = {
 DB_PATH = 'candidates.db'
 PROJECT_DB_ID = '1ef4807f-4b58-4fec-ab66-5c2e593b1ca4'
 PROGRAM_DB_ID = '756285ea-c39e-4315-8530-8e4154488d03'
-OUTPUT_FILE = 'golden_dataset_v7.json'
+OUTPUT_FILE = 'golden_dataset_v8.json'
 
-GOOD_STAGES = {'최종합격', '2차면접', '1차면접', '서류전형'}
+GOOD_STAGES = {
+    '최종합격': 1.0,
+    '2차면접': 0.8,
+    '1차면접': 0.6,
+    '서류전형': 0.3,
+}
 
 def fetch_all(db_id):
     url = f'https://api.notion.com/v1/databases/{db_id}/query'
@@ -67,25 +72,26 @@ def build_golden_dataset():
         if not name or not stage or not proj_rel:
             continue
         
-        # 유효한 단계인지 확인
-        if stage not in GOOD_STAGES:
+        # 유효한 단계인지 확인 + 점수 할당
+        rel_score = GOOD_STAGES.get(stage, 0)
+        if rel_score == 0:
             continue
 
         for proj in proj_rel:
             pid = proj.get('id', '')
             if pid in pid_to_name:
                 pos_name = pid_to_name[pid]
-                position_candidates[pos_name].append(name)
+                position_candidates[pos_name].append((name, rel_score))
 
     # 3. Match Candidate Names to SQLite UUIDs
     print("Matching names to SQLite IDs...")
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
     
-    # 한번에 모든 후보자 매핑 정보 가져오기
     all_names = set()
-    for names in position_candidates.values():
-        all_names.update(names)
+    for items in position_candidates.values():
+        for name, _ in items:
+            all_names.add(name)
     
     name_to_id = {}
     if all_names:
@@ -97,23 +103,29 @@ def build_golden_dataset():
 
     # 4. Build Final Dataset
     dataset = []
-    print("\nFinal Golden Dataset v7 Summary:")
-    for pos_name, candidate_names in position_candidates.items():
+    print("\nFinal Golden Dataset v8 Summary:")
+    for pos_name, candidates in position_candidates.items():
         relevant_ids = []
         found_names = []
-        for name in set(candidate_names): # 중복 제거
+        relevance_scores = {} # id -> score
+
+        for name, score in candidates:
             if name in name_to_id:
-                relevant_ids.append(name_to_id[name])
-                found_names.append(name)
-        
+                cid = name_to_id[name]
+                if cid not in relevant_ids:
+                    relevant_ids.append(cid)
+                    found_names.append(name)
+                # 동일 후보자가 여러 번 나오면 가장 높은 점수 유지
+                relevance_scores[cid] = max(relevance_scores.get(cid, 0), score)
 
         if relevant_ids:
             dataset.append({
                 "query": pos_name,
                 "relevant_ids": relevant_ids,
-                "relevant_names": found_names
+                "relevant_names": found_names,
+                "relevance_scores": relevance_scores
             })
-            print(f"  - [{pos_name}] Queries: {len(relevant_ids)} candidates matched.")
+            print(f"  - [{pos_name}] {len(relevant_ids)} candidates.")
 
     # 5. Save
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:

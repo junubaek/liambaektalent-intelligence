@@ -8,80 +8,50 @@ from ontology_graph import CANONICAL_MAP
 CANONICAL_LOWER = {k.lower(): v for k, v in CANONICAL_MAP.items() if len(k) > 2}
 
 def build_emb_text(row):
+    import json, math, os
     name = row['name_kr'] or ''
     sector = row['sector'] or ''
     summary = row['profile_summary'] or ''
     raw = row['raw_text'] or ''
 
-    # 약어 풀네임 병기 (임베딩 품질 향상)
+    # node_idf.json 로드 (캐시)
+    if not hasattr(build_emb_text, '_idf'):
+        idf_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'node_idf.json')
+        build_emb_text._idf = json.load(open(idf_path, encoding='utf-8')) if os.path.exists(idf_path) else {}
+
+    # 약어 풀네임
     ABBR_EXPAND = {
         'HBM': 'HBM(High Bandwidth Memory)',
         'CXL': 'CXL(Compute Express Link)',
-        'RAG': 'RAG(Retrieval Augmented Generation)',
         'LLM': 'LLM(Large Language Model)',
         'IPO': 'IPO(기업공개)',
         'M&A': 'M&A(인수합병)',
-        'RTL': 'RTL(Register Transfer Level)',
-        'DFT': 'DFT(Design for Testability)',
         'SoC': 'SoC(System on Chip)',
-        'vLLM': 'vLLM(LLM 추론 최적화)',
         'MLOps': 'MLOps(머신러닝 운영)',
-        'DevOps': 'DevOps(개발운영통합)',
-        'ESG': 'ESG(환경사회지배구조)',
-        'ERP': 'ERP(전사적자원관리)',
-        'SCM': 'SCM(공급망관리)',
-        'ASRS': 'ASRS(자동창고시스템)',
-        'MBO': 'MBO(경영자인수)',
-        'DCF': 'DCF(현금흐름할인)',
-        'LBO': 'LBO(차입매수)',
+        'DCF': 'DCF(현금흐름할인법)',
         'RDMA': 'RDMA(원격직접메모리접근)',
     }
-
-    # 원문에 약어 풀네임 병기
     expanded_raw = raw
-    for abbr, fullname in ABBR_EXPAND.items():
-        expanded_raw = expanded_raw.replace(abbr, fullname)
+    for abbr, full in ABBR_EXPAND.items():
+        expanded_raw = expanded_raw.replace(abbr, full)
 
-    # Canonical Map → 도메인 카테고리 힌트만 (Graph와 중복 최소화)
-    DOMAIN_HINT_MAP = {
-        'rtl': 'SEMICONDUCTOR_HW', 'verilog': 'SEMICONDUCTOR_HW',
-        'fpga': 'SEMICONDUCTOR_HW', 'asic': 'SEMICONDUCTOR_HW',
-        'hbm': 'SEMICONDUCTOR_HW', 'npu': 'SEMICONDUCTOR_HW',
-        'pytorch': 'AI_ML', 'tensorflow': 'AI_ML',
-        'llm': 'AI_ML', 'transformer': 'AI_ML',
-        'rag': 'AI_ML', 'diffusion': 'AI_ML',
-        'kubernetes': 'DEVOPS_CLOUD', 'docker': 'DEVOPS_CLOUD',
-        'terraform': 'DEVOPS_CLOUD', 'aws': 'DEVOPS_CLOUD',
-        'treasury': 'FINANCE_OP', '자금': 'FINANCE_OP',
-        'ipo': 'FINANCE_DEAL', 'valuation': 'FINANCE_DEAL',
-        'kafka': 'DATA_INFRA', 'spark': 'DATA_INFRA',
-        'scm': 'SUPPLY_CHAIN', '물류': 'SUPPLY_CHAIN',
-        'blockchain': 'WEB3', 'nft': 'WEB3',
-    }
+    # 이 후보자의 노드 추출 + IDF 점수
     raw_lower = raw.lower()
-    domain_hints = set()
-    for kw, domain in DOMAIN_HINT_MAP.items():
-        if kw in raw_lower:
-            domain_hints.add(domain)
+    node_scores = {}
+    for src, tgt in CANONICAL_LOWER.items():
+        if src in raw_lower:
+            node_scores[tgt] = build_emb_text._idf.get(tgt, 0)
 
-    # 기존 Keywords 블록 유지 (하위 호환성)
-    kw_set = set()
-    for src_lower, tgt in CANONICAL_LOWER.items():
-        if src_lower in raw_lower:
-            kw_set.add(tgt)
-    kw_block = '[Keywords: ' + ' '.join(list(kw_set)[:30]) + ']'
+    # IDF 상위 5개 (변별력 높은 노드 앞에 배치)
+    top5 = sorted(node_scores, key=lambda x: -node_scores[x])[:5]
+    top5_block = ' '.join(top5) if top5 else ''
 
-    # 도메인 힌트 블록
-    domain_block = '[Domain: ' + ' '.join(sorted(domain_hints)) + ']' if domain_hints else ''
-
-    # 자연어 형태 유지 + 약어 풀네임 + 원문 800자
     parts = [f'{name} {sector}']
+    if top5_block:
+        parts.append(top5_block)
     if summary:
         parts.append(summary)
-    parts.append(expanded_raw[:800])
-    if domain_block:
-        parts.append(domain_block)
-    parts.append(kw_block)
+    parts.append(expanded_raw[:600])
 
     return '\n'.join(parts)
 

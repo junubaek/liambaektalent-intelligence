@@ -1829,42 +1829,56 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
             WHERE id IN ({placeholders})
         """
         rows_t = conn.execute(query, combined_ids).fetchall()
-        for r in rows_t:
-            cid = str(r[0])
-            name_val = r[1]
-            raw_text_val = r[2]
-            
-            raw_text_map[cid] = raw_text_val
-            if (cid not in id_to_name or not id_to_name.get(cid)) and name_val:
-                id_to_name[cid] = name_val
-            
-            # Map SQLite fields to the format expected by the frontend
-            import json
-            try:
-                careers = json.loads(r[7]) if r[7] else []
-            except:
-                careers = []
-            try:
-                education = json.loads(r[8]) if r[8] else []
-            except:
-                education = []
+    except sqlite3.OperationalError as e:
+        if "no such column" in str(e).lower():
+            logger.warning("[V9] program_signal/stage column missing in SQLite. Using fallback 0.0.")
+            query = f"""
+                SELECT id, name_kr, raw_text, sector, current_company, total_years, 
+                       profile_summary, careers_json, education_json, email, phone, birth_year, google_drive_url,
+                       0.0 as program_signal, NULL as program_stage
+                FROM candidates 
+                WHERE id IN ({placeholders})
+            """
+            rows_t = conn.execute(query, combined_ids).fetchall()
+        else:
+            raise e
 
-            db_metadata_map[cid] = {
-                'id': cid,
-                'name_kr': name_val,
-                'sector': r[3] or '미분류',
-                'current_company': r[4] or '미상',
-                'total_years': r[5] or 0,
-                'profile_summary': r[6] or '',
-                'careers': careers,
-                'education': education,
-                'email': r[9] or '',
-                'phone': r[10] or '',
-                'birth_year': r[11] or '',
-                'google_drive_url': r[12] or '',
-                'program_signal': r[13] or 0.0,
-                'program_stage': r[14] or None
-            }
+    for r in rows_t:
+        cid = str(r[0])
+        name_val = r[1]
+        raw_text_val = r[2]
+        
+        raw_text_map[cid] = raw_text_val
+        if (cid not in id_to_name or not id_to_name.get(cid)) and name_val:
+            id_to_name[cid] = name_val
+        
+        # Map SQLite fields to the format expected by the frontend
+        import json
+        try:
+            careers = json.loads(r[7]) if r[7] else []
+        except:
+            careers = []
+        try:
+            education = json.loads(r[8]) if r[8] else []
+        except:
+            education = []
+
+        db_metadata_map[cid] = {
+            'id': cid,
+            'name_kr': name_val,
+            'sector': r[3] or '미분류',
+            'current_company': r[4] or '미상',
+            'total_years': r[5] or 0,
+            'profile_summary': r[6] or '',
+            'careers': careers,
+            'education': education,
+            'email': r[9] or '',
+            'phone': r[10] or '',
+            'birth_year': r[11] or '',
+            'google_drive_url': r[12] or '',
+            'program_signal': r[13] or 0.0,
+            'program_stage': r[14] or None
+        }
     finally:
         conn.close()
 

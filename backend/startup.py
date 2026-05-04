@@ -5,6 +5,11 @@ import sys
 # 로그 즉시 출력
 sys.stdout.reconfigure(line_buffering=True)
 
+# Add root directory to sys.path to allow importing modules from root
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if ROOT_DIR not in sys.path:
+    sys.path.insert(0, ROOT_DIR)
+
 def ensure_db():
     print("=== ensure_db() 시작 ===", flush=True)
     import os

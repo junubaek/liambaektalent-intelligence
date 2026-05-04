@@ -13,7 +13,7 @@ sys.path.insert(0, ROOT_DIR)
 from jd_compiler import api_search_v9
 
 def calculate_ndcg():
-    dataset_path = 'golden_dataset_v7_updated.json'
+    dataset_path = 'golden_dataset_v8.json'
     if not os.path.exists(dataset_path):
         print(f"Error: {dataset_path} not found.")
         return
@@ -26,33 +26,36 @@ def calculate_ndcg():
         q = item.get('query') or item.get('jd_query')
         if not q: continue
         
-        rel = item.get('relevant_ids') or []
-        if not rel and item.get('candidate_neo4j_id'):
-            rel = [item.get('candidate_neo4j_id')]
-            
-
+        rel_ids = item.get('relevant_ids') or []
+        rel_scores = item.get('relevance_scores') or {}
+        
         if q not in query_targets:
             query_targets[q] = {
-                'relevant': set(),
+                'relevant_ids': set(),
+                'relevance_scores': {}, # id -> score
                 'relevant_names': set(),
                 'seniority': item.get('seniority', 'All')
             }
-        for rid in rel:
-            query_targets[q]['relevant'].add(str(rid).lower())
+        
+        for rid in rel_ids:
+            s_rid = str(rid).lower()
+            query_targets[q]['relevant_ids'].add(s_rid)
+            query_targets[q]['relevance_scores'][s_rid] = rel_scores.get(rid, 0.3)
+            
         for rname in item.get('relevant_names', []):
-            query_targets[q]['relevant_names'].add(rname)
+            query_targets[q]['relevant_names'].add(rname.lower())
 
     scores = []
-    print(f"=== NDCG Evaluation Start (API: api_search_v9, Dataset: {dataset_path}) ===")
+    print(f"=== NDCG Evaluation Start (Graded Relevance, Dataset: {dataset_path}) ===")
     print(f"Total Queries: {len(query_targets)}")
     print("-" * 50)
 
-
     for q, info in query_targets.items():
-        relevant_ids = info['relevant']
-        relevant_names = [n.lower() for n in info.get('relevant_names', [])]
-        if not relevant_ids:
-            continue
+        relevant_ids = info['relevant_ids']
+        relevance_scores = info['relevance_scores']
+        relevant_names = info['relevant_names']
+        
+        if not relevant_ids: continue
             
         # Search using v9
         res = api_search_v9(q, seniority=info['seniority'])
@@ -65,44 +68,36 @@ def calculate_ndcg():
             cid = str(cand.get('id', '')).lower()
             cand_name = str(cand.get('name_kr', '')).lower()
             
-            is_hit = False
+            rel = 0.0
             # 1. ID matching
-            for rid in relevant_ids:
-                if rid in cid or cid in rid:
-                    is_hit = True
-                    break
+            if cid in relevance_scores:
+                rel = relevance_scores[cid]
             
-            # 2. Name matching (Backup for duplicates)
-            if not is_hit and relevant_names:
-                for rname in relevant_names:
-                    if rname and rname == cand_name:
-                        is_hit = True
-                        break
+            # 2. Name matching backup
+            if rel == 0.0 and cand_name in relevant_names:
+                # Find the score for this name (heuristic: use max score among relevant IDs if name matches)
+                # But we don't have name->score map easily. Let's assume 0.3 if only name matches.
+                rel = 0.3 
             
-            if is_hit:
-                dcg += 1.0 / math.log2(i + 2)
+            if rel > 0:
+                dcg += rel / math.log2(i + 2)
                 hits += 1
-        
+
         # Calculate IDCG@10
-        idcg = sum(1.0 / math.log2(i + 2) for i in range(min(len(relevant_ids), 10)))
+        # Optimal ranking: all possible relevance scores sorted descending
+        all_rels = sorted(relevance_scores.values(), reverse=True)
+        idcg = sum(all_rels[i] / math.log2(i + 2) for i in range(min(len(all_rels), 10)))
         
         score = dcg / idcg if idcg > 0 else 0.0
         scores.append(score)
         
-        print(f'{score:.2f} | hits:{hits}/{len(relevant_ids)} | {q[:45]}')
-        # Detailed Top 10 results
+        print(f'{score:.4f} | hits:{hits}/{len(relevant_ids)} | {q[:45]}')
         for i, cand in enumerate(matched[:10]):
             cid = str(cand.get('id', '')).lower()
             cand_name = str(cand.get('name_kr', '')).lower()
-            
-            is_hit = False
-            for rid in relevant_ids:
-                if rid in cid or cid in rid: is_hit = True; break
-            if not is_hit and relevant_names:
-                for rname in relevant_names:
-                    if rname and rname == cand_name: is_hit = True; break
-            
-            marker = " [HIT]" if is_hit else ""
+            rel = relevance_scores.get(cid, 0.0)
+            if rel == 0 and cand_name in relevant_names: rel = 0.3
+            marker = f" [HIT:{rel}]" if rel > 0 else ""
             print(f'  {i+1}. {cand.get("name_kr", "Unknown")} ({cid[:8]}){marker}')
         print("-" * 30)
 
@@ -111,13 +106,8 @@ def calculate_ndcg():
         return
 
     avg_ndcg = sum(scores) / len(scores)
-    perfect = sum(1 for s in scores if s >= 0.99)
-    zero = sum(1 for s in scores if s < 0.01)
-
     print("-" * 50)
     print(f"FINAL AVERAGE NDCG@10: {avg_ndcg:.4f}")
-    print(f"Perfect Scores: {perfect} / {len(scores)}")
-    print(f"Zero Scores: {zero} / {len(scores)}")
     print("=" * 50)
 
 if __name__ == "__main__":
