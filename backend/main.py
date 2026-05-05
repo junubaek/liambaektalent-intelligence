@@ -575,6 +575,8 @@ def api_search_v8_endpoint(req: SearchRequestV5):
         
         # Apply seniority filter
         req_sens = [s.upper() for s in req.seniority]
+        raw_count = len(res.get("matched", []))
+        
         if req_sens and "무관" not in req_sens and "ALL" not in req_sens:
             filtered = []
             for m in res.get("matched", []):
@@ -583,6 +585,9 @@ def api_search_v8_endpoint(req: SearchRequestV5):
                     filtered.append(m)
             res["matched"] = filtered
             res["total"] = len(filtered)
+            print(f"[FILTER] Seniority Filter Applied: {req_sens} | {raw_count} -> {len(filtered)}")
+        else:
+            print(f"[FILTER] Seniority Filter Skipped: {req_sens} | Total: {raw_count}")
             
         # 결과 캐시 저장 (최대 200개)
         if len(jd_cache) >= 200:
@@ -590,7 +595,7 @@ def api_search_v8_endpoint(req: SearchRequestV5):
             del jd_cache[oldest]
             
         jd_cache[cache_key] = res
-        print(f"[CACHE MISS] {req.prompt[:30]}")
+        print(f"[CACHE MISS] {req.prompt[:30]} | Final Count: {res.get('total')}")
         return res
     except Exception as e:
         logger.error(f"v8 Search error: {e}")
