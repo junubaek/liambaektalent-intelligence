@@ -574,14 +574,18 @@ def api_search_v8_endpoint(req: SearchRequestV5):
         )
         
         # Apply seniority filter
-        req_sens = [s.upper() for s in req.seniority]
+        req_sens = [s.upper() for s in req.seniority if s]
         raw_count = len(res.get("matched", []))
         
-        if req_sens and "무관" not in req_sens and "ALL" not in req_sens:
+        # Skip filter if "무관", "ALL", or empty list
+        skip_filter = not req_sens or any(x in req_sens for x in ["무관", "ALL"])
+        
+        if not skip_filter:
             filtered = []
             for m in res.get("matched", []):
-                val = (m.get("연차등급") or m.get("seniority") or "확인 요망").upper()
-                if val in req_sens:
+                # 연차등급이 미상이거나, 선택한 필터(JUNIOR, MIDDLE, SENIOR)에 해당하면 포함
+                val = (m.get("연차등급") or "미상").upper()
+                if val in req_sens or val == "미상":
                     filtered.append(m)
             res["matched"] = filtered
             res["total"] = len(filtered)

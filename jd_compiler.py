@@ -151,6 +151,16 @@ REPEL_MULTIPLIER = {
     "All":     0.7,   # 기본값
 }
 
+def get_seniority_label(total_years):
+    if not total_years or total_years == 0:
+        return '미상'
+    elif total_years >= 10:
+        return 'SENIOR'
+    elif total_years >= 5:
+        return 'MIDDLE'
+    else:
+        return 'JUNIOR'
+
 def get_company_boost(company_name, conditions, conn):
     try:
         import json
@@ -1876,20 +1886,21 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
             FROM candidates 
             WHERE id IN ({placeholders})
         """
-        rows_t = conn.execute(query, combined_ids).fetchall()
-    except sqlite3.OperationalError as e:
-        if "no such column" in str(e).lower():
-            logger.warning("[V9] program_signal/stage column missing in SQLite. Using fallback 0.0.")
-            query = f"""
-                SELECT id, name_kr, raw_text, sector, current_company, total_years, 
-                       profile_summary, careers_json, education_json, email, phone, birth_year, google_drive_url,
-                       0.0 as program_signal, NULL as program_stage
-                FROM candidates 
-                WHERE id IN ({placeholders})
-            """
+        try:
             rows_t = conn.execute(query, combined_ids).fetchall()
-        else:
-            raise e
+        except sqlite3.OperationalError as e:
+            if "no such column" in str(e).lower():
+                logger.warning("[V9] program_signal/stage column missing in SQLite. Using fallback 0.0.")
+                query = f"""
+                    SELECT id, name_kr, raw_text, sector, current_company, total_years, 
+                           profile_summary, careers_json, education_json, email, phone, birth_year, google_drive_url,
+                           0.0 as program_signal, NULL as program_stage
+                    FROM candidates 
+                    WHERE id IN ({placeholders})
+                """
+                rows_t = conn.execute(query, combined_ids).fetchall()
+            else:
+                raise e
 
         for r in rows_t:
             cid = str(r[0])
@@ -2040,8 +2051,8 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
             'birth_year': c_info.get('birth_year', ''),
             'google_drive_url': c_info.get('google_drive_url', ''),
             'program_stage': c_info.get('program_stage', None),
-            'seniority': 'SENIOR' if (c_info.get('total_years') or 0) >= 10 else ('MIDDLE' if (c_info.get('total_years') or 0) >= 5 else 'JUNIOR'),
-            '연차등급': 'SENIOR' if (c_info.get('total_years') or 0) >= 10 else ('MIDDLE' if (c_info.get('total_years') or 0) >= 5 else 'JUNIOR')
+            'seniority': get_seniority_label(c_info.get('total_years', 0)),
+            '연차등급': get_seniority_label(c_info.get('total_years', 0))
         }
         matched_candidates.append(candidate_obj)
 
