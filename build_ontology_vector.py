@@ -9,9 +9,25 @@ load_dotenv()
 
 import json
 
-with open("secrets.json", "r", encoding="utf-8") as f:
-    secrets = json.load(f)
-client = OpenAI(api_key=secrets["OPENAI_API_KEY"])
+# Try environment variable first
+api_key = os.environ.get("OPENAI_API_KEY")
+
+if not api_key:
+    # Fallback to secrets.json
+    try:
+        secrets_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "secrets.json")
+        if os.path.exists(secrets_path):
+            with open(secrets_path, "r", encoding="utf-8") as f:
+                secrets = json.load(f)
+                api_key = secrets.get("OPENAI_API_KEY")
+    except Exception as e:
+        print(f"Note: Could not load secrets.json: {e}")
+
+if not api_key:
+    # Final check: maybe load_dotenv provided it
+    api_key = os.getenv("OPENAI_API_KEY")
+
+client = OpenAI(api_key=api_key)
 
 def build_vector_map(output_pkl_path: str):
     print("1. ontology_graph에서 CANONICAL_MAP을 불러옵니다...")
