@@ -2000,6 +2000,9 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         )
         final_score += c_boost
         
+        if cid == 'f5875fc2-99aa-4605-9742-5ec93f4cd51a':
+            logger.info(f"DEBUG [김은형] v_norm:{norm_v:.4f} g_norm:{norm_g:.4f} b_norm:{norm_b:.4f} depth:{depth_score:.4f} boost:{c_boost:.4f} final:{final_score:.4f}")
+
         name = id_to_name.get(cid, cache_map.get(cid, {}).get('name_kr', cid))
         final_candidates.append({
             'id': cid,
@@ -2059,9 +2062,9 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     logger.info(f"[V9 Hybrid Search] Completed. Top result: {matched_candidates[0]['name_kr'] if matched_candidates else 'None'}")
     
     return {
-        'matched': matched_candidates,
-        'total': len(final_candidates),
-        'is_category_search': is_category_search
+        "matched": matched_candidates[:50],
+        "total": len(final_candidates),
+        "is_category_search": is_category_search
     }
 
 # =================================================================
