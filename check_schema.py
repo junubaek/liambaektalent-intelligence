@@ -1,9 +1,12 @@
 import sqlite3
-import sys
 
-sys.stdout.reconfigure(encoding='utf-8')
-con = sqlite3.connect('candidates.db')
-c = con.cursor()
-c.execute("PRAGMA table_info(candidates)")
-for r in c.fetchall():
-    print(r)
+def check_schema():
+    conn = sqlite3.connect('candidates.db')
+    cur = conn.cursor()
+    cur.execute("PRAGMA table_info(candidates)")
+    columns = [row[1] for row in cur.fetchall()]
+    print("Columns:", columns)
+    conn.close()
+
+if __name__ == '__main__':
+    check_schema()

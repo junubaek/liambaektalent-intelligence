@@ -1,0 +1,2440 @@
+=== 중복 후보자 현황 ===
+전체 후보자 수: 3642
+중복 이름 수: 565
+중복 레코드 수 (구버전 포함): 1305
+
+[강건규] 2개 레코드
+  ID: 32022567... | current: SONATUS Software Korea | created: 2026-04-07 12:27:18.078045 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:26.298052 | is_dup: 1
+
+[강경호] 2개 레코드
+  ID: 61b0e4fe... | current: 한패스 | created: 2026-04-18 15:59:36 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 552dc5d2... | current: 데이블 | created: 2026-04-23 15:51:19 | is_dup: 0
+
+[강기태] 2개 레코드
+  ID: 32022567... | current: ㈜도드람푸드 | created: 2026-04-07 12:27:26.314071 | is_dup: 0 <- 구버전 마킹 예정
+  ID: b2ddfa70... | current: 그린랩스 | created: 2026-04-23 15:50:55 | is_dup: 0
+
+[강동현] 2개 레코드
+  ID: 33522567... | current: (주)kt | created: 2026-04-05 16:13:40.127874 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 31f22567... | current: (주) 카카오엔터테인먼트 | created: 2026-04-07 12:27:09.036789 | is_dup: 1
+
+[강보라] 2개 레코드
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:30.272523 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 344676d7... | current: K Car | created: 2026-04-19 01:55:32 | is_dup: 1
+
+[강석현] 2개 레코드
+  ID: 58d6c194... | current: 현대모비스(주) | created: 2026-04-18 17:11:03 | is_dup: 1
+  ID: fb54b664... | current: 삼성전자 | created: 2026-04-18 17:30:44 | is_dup: 1
+
+[강성민] 2개 레코드
+  ID: 32022567... | current: 교보리얼코㈜ | created: 2026-04-07 12:27:20.209967 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 0dc33549... | current: 태양기계 | created: 2026-04-19 01:55:14 | is_dup: 0
+
+[강은태] 3개 레코드
+  ID: 31f22567... | current: LG 화학 | created: 2026-04-07 12:27:11.463160 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:26.032862 | is_dup: 1
+  ID: 7f061e1d... | current: 미상 | created: 2026-04-18 17:27:15 | is_dup: 0
+
+[강철] 2개 레코드
+  ID: 31f22567... | current: KoreaCreditData | created: 2026-04-07 12:27:11.109679 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 61719749... | current: The Apache Software Foundation | created: 2026-04-18 17:31:24 | is_dup: 1
+
+[강해나] 2개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:07.679139 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 8c510537... | current: 아울러컴퍼니 | created: 2026-04-18 17:08:14 | is_dup: 0
+
+[강형구] 2개 레코드
+  ID: 61aa3b86... | current: Bucketplace (오늘의집) | created: 2026-04-23 15:56:37 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 2bc346d4... | current: HANDHUG | created: 2026-04-23 16:02:18 | is_dup: 1
+
+[강환희] 2개 레코드
+  ID: 33522567... | current: 현대제철 | created: 2026-04-05 16:13:43.914341 | is_dup: 0 <- 구버전 마킹 예정
+  ID: ae1ba969... | current: SK telecom | created: 2026-04-18 15:34:41 | is_dup: 1
+
+[개인정보] 2개 레코드
+  ID: 32e22567... | current: 롯데정보통신 | created: 2026-04-05 16:13:31.745033 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:26.079346 | is_dup: 1
+
+[고강준] 2개 레코드
+  ID: 477c3756... | current: Samsung Electronics | created: 2026-04-18 16:40:57 | is_dup: 1
+  ID: 7509aa10... | current: 삼성전자(주) | created: 2026-04-19 01:00:34 | is_dup: 1
+
+[고승연] 2개 레코드
+  ID: 33522567... | current: LG경영연구원 | created: 2026-04-05 16:13:37.914078 | is_dup: 0 <- 구버전 마킹 예정
+  ID: adc7db41... | current: LG경제연구원 | created: 2026-04-18 15:30:33 | is_dup: 1
+
+[고아라] 2개 레코드
+  ID: 32e22567... | current: 메트라이프생명보험 | created: 2026-04-05 16:13:34.983552 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 33c6f87d... | current: (주)써머스플랫폼 | created: 2026-04-19 00:34:52 | is_dup: 0
+
+[고영석] 2개 레코드
+  ID: 31f22567... | current: Amazon Web Services | created: 2026-04-07 12:27:08.625893 | is_dup: 0 <- 구버전 마킹 예정
+  ID: c4d27cb9... | current: Amazon Web Services (Annapurna Lab) | created: 2026-04-18 16:41:15 | is_dup: 1
+
+[고요셉] 2개 레코드
+  ID: 92b3c72b... | current: None | created: 2026-04-12T02:13:46.066296 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 332713ee... | current: 미상 | created: 2026-04-18 16:24:48 | is_dup: 1
+
+[고재민] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:25.296574 | is_dup: 0 <- 구버전 마킹 예정
+  ID: f1b1cec6... | current: HP Printing Korea | created: 2026-04-19 01:56:13 | is_dup: 1
+
+[고현진] 2개 레코드
+  ID: 32e22567... | current:  | created: 2026-04-05 16:13:30.649385 | is_dup: 0 <- 구버전 마킹 예정
+  ID: c8b2fa82... | current: 부라더상사㈜ | created: 2026-04-19 00:34:27 | is_dup: 1
+
+[공윤호] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:32.837518 | is_dup: 0 <- 구버전 마킹 예정
+  ID: c94dae3c... | current: 미상 | created: 2026-04-19 01:56:32 | is_dup: 0
+
+[곽영규] 2개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:43.227128 | is_dup: 0 <- 구버전 마킹 예정
+  ID: e12f3f43... | current: (주)CJ ENM | created: 2026-04-23 15:45:37 | is_dup: 1
+
+[곽진환] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:34.500973 | is_dup: 1
+  ID: c87ce8dd... | current: 한국조선해양 | created: 2026-04-19 01:36:21 | is_dup: 1
+
+[곽훈] 4개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:20.626750 | is_dup: 1
+  ID: 6c471d3e... | current: 일진디스플레이 | created: 2026-04-18 17:28:02 | is_dup: 1
+  ID: ea555067... | current: ㈜엔켐 | created: 2026-04-19 00:24:04 | is_dup: 1
+  ID: e7fd2c42... | current: IBEDEN㈜ | created: 2026-04-19 01:57:03 | is_dup: 0
+
+[권상용] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:21.759118 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 2a5623ef... | current: 로레알코리아 | created: 2026-04-19 01:58:12 | is_dup: 0
+
+[권슬기] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:18.109568 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 3483a2f4... | current: 주식회사케이엘유피 | created: 2026-04-19 00:37:37 | is_dup: 0
+
+[권인향] 2개 레코드
+  ID: 32022567... | current:  | created: 2026-04-07 12:27:18.539086 | is_dup: 1
+  ID: 12568a5e... | current: 나음케어 | created: 2026-04-19 01:33:59 | is_dup: 0
+
+[권정란] 2개 레코드
+  ID: c9bcbfea... | current: 라인플러스(주) | created: 2026-04-19 00:49:37 | is_dup: 1
+  ID: 4fd09561... | current: LINE Corp | created: 2026-04-23 15:48:44 | is_dup: 0
+
+[권혁진] 2개 레코드
+  ID: 32022567... | current: 위너콤(주) | created: 2026-04-07 12:27:24.831079 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 6054c61d... | current: ㈜미누테크 | created: 2026-04-19 01:57:49 | is_dup: 0
+
+[권혁찬] 2개 레코드
+  ID: 5f80de0f... | current: 엑셀로㈜ | created: 2026-04-18 15:23:58 | is_dup: 0 <- 구버전 마킹 예정
+  ID: a5884182... | current: 삼성카드(주) | created: 2026-04-19 01:01:31 | is_dup: 1
+
+[권혜진] 2개 레코드
+  ID: 32e22567... | current: (주)하나투어 | created: 2026-04-05 16:13:34.138340 | is_dup: 1
+  ID: cc829e80... | current: 야놀자 | created: 2026-04-19 01:50:37 | is_dup: 1
+
+[권효상] 2개 레코드
+  ID: 9d1f2bab... | current: 베스핀글로벌㈜ | created: 2026-04-19 00:08:35 | is_dup: 1
+  ID: d655c040... | current: 뉴블라 | created: 2026-04-19 00:17:38 | is_dup: 1
+
+[길연지] 2개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:41.960660 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 6d8ffcfc... | current: LG유플러스 | created: 2026-04-18 15:29:48 | is_dup: 1
+
+[김가영] 2개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:13.281155 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 7f0c4e12... | current: 피엘지(PLZ Co. Ltd.) | created: 2026-04-18 15:33:25 | is_dup: 0
+
+[김강희] 2개 레코드
+  ID: 31f22567... | current:  | created: 2026-04-07 12:27:11.522665 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 7c1d3cad... | current: 컬쳐히어로 | created: 2026-04-18 17:27:24 | is_dup: 1
+
+[김건우] 3개 레코드
+  ID: 31f22567... | current: 직방 | created: 2026-04-07 12:27:13.541843 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:17.432051 | is_dup: 1
+  ID: 8bb90558... | current: Unknown Company C | created: 2026-04-19 01:58:54 | is_dup: 0
+
+[김경민] 3개 레코드
+  ID: 33522567... | current: Samsung | created: 2026-04-05 16:13:42.593609 | is_dup: 1
+  ID: b8fbbb4c... | current: Samsung Electronics | created: 2026-04-18 17:11:28 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 8d068db1... | current: 삼성화재해상보험(주) | created: 2026-04-19 01:01:18 | is_dup: 0
+
+[김광태] 3개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:20.314906 | is_dup: 1
+  ID: d822dcef... | current: ㈜대봉엘에스 | created: 2026-04-18 17:16:10 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 83e5cb43... | current: Hyunjin Co.,Ltd.-Korea | created: 2026-04-19 01:58:40 | is_dup: 0
+
+[김국도] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:31.642623 | is_dup: 0 <- 구버전 마킹 예정
+  ID: ffc6a6f7... | current: 미상 | created: 2026-04-19 01:58:44 | is_dup: 0
+
+[김규민] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:24.430008 | is_dup: 0 <- 구버전 마킹 예정
+  ID: cf4fa7b1... | current: 시그네틱스 | created: 2026-04-19 01:47:41 | is_dup: 1
+
+[김기열] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:21.311498 | is_dup: 1
+  ID: 61e57254... | current: ㈜사조동아원 | created: 2026-04-19 01:59:09 | is_dup: 0
+
+[김기정] 2개 레코드
+  ID: 31f22567... | current: BYN 그룹사 | created: 2026-04-07 12:27:14.158479 | is_dup: 1
+  ID: 21b2e062... | current: 카카오브이엑스 | created: 2026-04-18 17:24:42 | is_dup: 0
+
+[김나경] 2개 레코드
+  ID: 33522567... | current: 스튜디오드래곤(주) | created: 2026-04-05 16:13:40.950549 | is_dup: 0 <- 구버전 마킹 예정
+  ID: f36f12b3... | current: ㈜이연에프엔씨 | created: 2026-04-18 15:44:21 | is_dup: 0
+
+[김나정] 2개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:42.647976 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 70a28fad... | current: TVING Co.,Ltd | created: 2026-04-23 16:05:58 | is_dup: 1
+
+[김남곤] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:26.153377 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 0fe7c128... | current: 다산네트웍솔루션즈 | created: 2026-04-19 00:39:50 | is_dup: 1
+
+[김다미] 2개 레코드
+  ID: 32022567... | current: 라인 | created: 2026-04-07 12:27:16.389037 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 562ac418... | current: 맥슨모터코리아 | created: 2026-04-19 01:59:33 | is_dup: 0
+
+[김다솜] 2개 레코드
+  ID: 9499ed6b... | current: 네이버(주) | created: 2026-04-19 00:45:21 | is_dup: 1
+  ID: c3c76116... | current: 얼터너티브자산운용 | created: 2026-04-19 01:59:25 | is_dup: 1
+
+[김다혜] 2개 레코드
+  ID: 33522567... | current: IT 스타트업 | created: 2026-04-05 16:13:40.182855 | is_dup: 0 <- 구버전 마킹 예정
+  ID: c6ea3733... | current: 여기어때컴퍼니 | created: 2026-04-19 01:10:40 | is_dup: 1
+
+[김단비] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:25.434884 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 886e1093... | current: ㈜아스템즈 | created: 2026-04-19 01:48:03 | is_dup: 1
+
+[김대교] 2개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:15.047230 | is_dup: 1
+  ID: 511e202e... | current: 그린랩스 | created: 2026-04-18 15:41:25 | is_dup: 0
+
+[김대용] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:26.196901 | is_dup: 1
+  ID: 31569bc6... | current: ㈜헬릭스미스 | created: 2026-04-18 17:16:14 | is_dup: 0
+
+[김도형] 2개 레코드
+  ID: e1bc1aa4... | current: Samsung Electronics Co., Ltd | created: 2026-04-18 16:41:53 | is_dup: 1
+  ID: b8a0f95e... | current: 넷마블앤파크 | created: 2026-04-19 01:59:50 | is_dup: 0
+
+[김동균] 2개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:43.857693 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 3b281dba... | current: (주)엔씨소프트 | created: 2026-04-18 15:33:05 | is_dup: 1
+
+[김동민] 2개 레코드
+  ID: 113dd902... | current: Naver | created: 2026-04-18 16:35:03 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 63de607d... | current: 네이버(주) | created: 2026-04-19 00:45:20 | is_dup: 0
+
+[김동우] 5개 레코드
+  ID: 32e22567... | current: Healthcare Solution Start-up | created: 2026-04-05 16:13:30.688698 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:20.532996 | is_dup: 1
+  ID: c69731b2... | current: Mangoboost Inc. | created: 2026-04-18 16:42:09 | is_dup: 1
+  ID: 2af27069... | current: Healthcare Start-up | created: 2026-04-19 01:59:47 | is_dup: 1
+  ID: f5a974a8... | current: 아시아뉴스통신 | created: 2026-04-19 02:00:07 | is_dup: 0
+
+[김동윤] 3개 레코드
+  ID: 32022567... | current: (주)하나투어 | created: 2026-04-07 12:27:20.765897 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:22.763017 | is_dup: 1
+  ID: fbf548cb... | current: ㈜중외정보기술 | created: 2026-04-19 02:00:26 | is_dup: 0
+
+[김동현] 3개 레코드
+  ID: 8f06463b... | current: None | created: 2026-04-12 07:53:00 | is_dup: 1
+  ID: 8a3b7819... | current: AMOREPACIFIC | created: 2026-04-19 01:07:39 | is_dup: 1
+  ID: 12794494... | current: LG전자 | created: 2026-04-19 02:00:25 | is_dup: 0
+
+[김동환] 3개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:17.975938 | is_dup: 0 <- 구버전 마킹 예정
+  ID: bf6667a1... | current: (주) 에타솔라 | created: 2026-04-18 15:44:48 | is_dup: 0 <- 구버전 마킹 예정
+  ID: f0c16093... | current: Coupang | created: 2026-04-19 00:40:43 | is_dup: 0
+
+[김라희] 2개 레코드
+  ID: 32022567... | current: 대성마이맥 | created: 2026-04-07 12:27:18.387649 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 1d939b35... | current: (주)디지털대성 | created: 2026-04-19 02:00:43 | is_dup: 0
+
+[김명종] 2개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:09.300369 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 46a82a80... | current: 코오롱인더스트리(주) FnC 부문 | created: 2026-04-18 17:28:42 | is_dup: 0
+
+[김문규] 2개 레코드
+  ID: 092cbedb... | current: CJ 올리브네트웍스 | created: 2026-04-18 15:18:44 | is_dup: 1
+  ID: ab7f8ce2... | current: 삼호산업(주) | created: 2026-04-19 01:03:21 | is_dup: 1
+
+[김문선] 2개 레코드
+  ID: 831f066e... | current: 맘편한세상 | created: 2026-04-18 16:00:23 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 67f09b54... | current: 대한안전교육협회 | created: 2026-04-18 16:02:16 | is_dup: 0
+
+[김미수] 2개 레코드
+  ID: 2342601b... | current: ㈜스탬프 | created: 2026-04-12T02:15:35.281791 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 1c8a836f... | current: ㈜스탬프 외 | created: 2026-04-19 01:17:10 | is_dup: 1
+
+[김민규] 3개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:10.163933 | is_dup: 1
+  ID: 0f23e009... | current: ㈜ 직방 | created: 2026-04-18 16:13:11 | is_dup: 1
+  ID: 450ef6b1... | current: 직방(Zigbang) | created: 2026-04-18 16:14:26 | is_dup: 1
+
+[김민석] 2개 레코드
+  ID: 32022567... | current: ㈜ 일성 조명 | created: 2026-04-07 12:27:17.168309 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 899fa5b7... | current: 대명지이씨㈜ | created: 2026-04-19 02:30:17 | is_dup: 0
+
+[김민선] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:19.967151 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 7d5cc9f9... | current: LG CNS | created: 2026-04-19 00:40:30 | is_dup: 0
+
+[김민성] 3개 레코드
+  ID: 32022567... | current: GS리테일 H&B사업부 랄라블라 | created: 2026-04-07 12:27:21.496816 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:22.271445 | is_dup: 1
+  ID: 187ad770... | current: 대림통상 | created: 2026-04-19 02:00:51 | is_dup: 0
+
+[김민수] 5개 레코드
+  ID: 31f22567... | current: ㈜웰크론한텍 | created: 2026-04-07 12:27:13.430847 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:22.566537 | is_dup: 1
+  ID: 32022567... | current: 네오위즈 | created: 2026-04-07 12:27:26.063532 | is_dup: 1
+  ID: 02414395... | current: ㈜씨디네트웍스 | created: 2026-04-19 02:00:48 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 72678f83... | current: 원앤원㈜ | created: 2026-04-19 02:01:14 | is_dup: 0
+
+[김민정] 3개 레코드
+  ID: 32022567... | current: (주)퓨처플레이 | created: 2026-04-07 12:27:19.884647 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 12527d05... | current: 엔씨소프트(주) | created: 2026-04-19 00:40:46 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 84ca390b... | current: BTL Logistics | created: 2026-04-19 02:01:10 | is_dup: 0
+
+[김민주] 3개 레코드
+  ID: 32022567... | current:  | created: 2026-04-07 12:27:24.732010 | is_dup: 1
+  ID: 2048598e... | current: (주)이랜드리테일 | created: 2026-04-19 00:49:57 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 988ac8f7... | current: ㈜에이쓰리시큐리티 | created: 2026-04-19 02:15:33 | is_dup: 1
+
+[김민준] 4개 레코드
+  ID: 33522567... | current: (주)넥슨코리아 | created: 2026-04-05 16:13:38.575894 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:19.170581 | is_dup: 1
+  ID: 938098ba... | current: 미상 | created: 2026-04-19 00:40:56 | is_dup: 0 <- 구버전 마킹 예정
+  ID: ef3c2d92... | current: ㈜두솔메디칼 | created: 2026-04-19 02:01:28 | is_dup: 1
+
+[김민지] 4개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:38.182315 | is_dup: 0 <- 구버전 마킹 예정
+  ID: b3543ba8... | current: 로레알 코리아 | created: 2026-04-18 16:11:02 | is_dup: 0 <- 구버전 마킹 예정
+  ID: d2724d63... | current: NAVER WEBTOON Ltd. | created: 2026-04-19 00:45:31 | is_dup: 1
+  ID: 8ff4a3d0... | current: Kangogift | created: 2026-04-19 02:01:39 | is_dup: 0
+
+[김민철] 2개 레코드
+  ID: 31f22567... | current: ㈜STX | created: 2026-04-07 12:27:13.741028 | is_dup: 0 <- 구버전 마킹 예정
+  ID: cdc4d938... | current: Intel Corp. | created: 2026-04-18 16:42:31 | is_dup: 1
+
+[김민호] 2개 레코드
+  ID: 32022567... | current: Plastics Omnium | created: 2026-04-07 12:27:19.853209 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 1d92a1c1... | current: 주식회사 디비아이엔씨(DB Inc.) | created: 2026-04-19 01:17:16 | is_dup: 0
+
+[김병규] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:35.285655 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 1d4113f9... | current: 미상 | created: 2026-04-19 01:52:47 | is_dup: 0
+
+[김보라] 2개 레코드
+  ID: 32022567... | current: E4NET | created: 2026-04-07 12:27:23.712607 | is_dup: 0 <- 구버전 마킹 예정
+  ID: e3f27729... | current: (주)뤼이드 | created: 2026-04-19 00:51:19 | is_dup: 1
+
+[김보람] 3개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:43.151640 | is_dup: 0 <- 구버전 마킹 예정
+  ID: a5c8bde3... | current: kt | created: 2026-04-18 15:28:37 | is_dup: 1
+  ID: 66717a9a... | current: 동원산업 | created: 2026-04-19 00:41:13 | is_dup: 0
+
+[김보성] 3개 레코드
+  ID: 32022567... | current: (주)케이엠더블유 | created: 2026-04-07 12:27:17.269725 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:23.728071 | is_dup: 1
+  ID: ef4e20fd... | current: ㈜SK인포섹 | created: 2026-04-19 02:01:38 | is_dup: 0
+
+[김상준] 2개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:39.427413 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 15b9a648... | current: 넷마블(주) | created: 2026-04-19 00:46:24 | is_dup: 1
+
+[김상현] 2개 레코드
+  ID: 939231f1... | current: 우아한형제들 | created: 2026-04-12T02:13:07.087107 | is_dup: 0 <- 구버전 마킹 예정
+  ID: a006775e... | current: Woowa Brothers Corporation | created: 2026-04-18 15:47:32 | is_dup: 1
+
+[김서영] 2개 레코드
+  ID: faf2e7d1... | current: 클리오 | created: 2026-04-18 17:08:30 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 717a368c... | current: 위메이드 | created: 2026-04-18 17:10:17 | is_dup: 1
+
+[김선정] 2개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:40.515976 | is_dup: 0 <- 구버전 마킹 예정
+  ID: eb961121... | current: 삼정회계법인 | created: 2026-04-19 01:01:53 | is_dup: 1
+
+[김선철] 2개 레코드
+  ID: 32022567... | current: 해태제과식품㈜ | created: 2026-04-07 12:27:19.568202 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32022567... | current: 해태제과 | created: 2026-04-07 12:27:20.241681 | is_dup: 1
+
+[김선희] 2개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:15.079669 | is_dup: 0 <- 구버전 마킹 예정
+  ID: ed17d3f1... | current: ㈜데상트코리아 | created: 2026-04-18 15:38:34 | is_dup: 0
+
+[김성규] 4개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:22.007218 | is_dup: 1
+  ID: bbe77e4f... | current: 미상 | created: 2026-04-19 02:01:45 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 3c733bc3... | current: 주식회사 호텔신라 | created: 2026-04-19 02:02:21 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 61f95bad... | current: (주)이화산업 | created: 2026-04-19 02:19:19 | is_dup: 0
+
+[김성민] 4개 레코드
+  ID: 32022567... | current: cGMP 원료의약품 회사 | created: 2026-04-07 12:27:22.515675 | is_dup: 1
+  ID: b3542771... | current: 피라인모터스 | created: 2026-04-18 17:16:49 | is_dup: 1
+  ID: f9f5df1c... | current: 쎌바이오텍 | created: 2026-04-19 00:41:26 | is_dup: 1
+  ID: 1732cf39... | current: 유한화학 | created: 2026-04-19 02:02:08 | is_dup: 0
+
+[김성우] 2개 레코드
+  ID: b83483f7... | current: EY Korea | created: 2026-04-18 15:50:51 | is_dup: 0 <- 구버전 마킹 예정
+  ID: d360de51... | current: 에스코어 | created: 2026-04-19 00:41:48 | is_dup: 0
+
+[김성준] 2개 레코드
+  ID: e09e58eb... | current: ㈜현진스포텍 | created: 2026-04-19 00:33:22 | is_dup: 0 <- 구버전 마킹 예정
+  ID: eea54d14... | current: 이엠텍 | created: 2026-04-19 02:02:21 | is_dup: 0
+
+[김성환] 2개 레코드
+  ID: 32122567... | current: ㈜아트엠플러스 | created: 2026-04-05 16:13:28.460561 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 31f22567... | current: LG에너지솔루션 | created: 2026-04-07 12:27:14.752063 | is_dup: 1
+
+[김성훈] 3개 레코드
+  ID: 32122567... | current:  | created: 2026-04-05 16:13:25.456191 | is_dup: 1
+  ID: 32122567... | current: ㈜매그넷 | created: 2026-04-07 12:27:27.730744 | is_dup: 0 <- 구버전 마킹 예정
+  ID: c1c7a86f... | current: ㈜하우저 | created: 2026-04-19 02:14:03 | is_dup: 0
+
+[김세린] 2개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:12.365917 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 6fae9744... | current: (주)이공이공 | created: 2026-04-18 16:30:01 | is_dup: 0
+
+[김세영] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:32.273007 | is_dup: 0 <- 구버전 마킹 예정
+  ID: aa1e2d7c... | current: 미상 | created: 2026-04-19 00:41:26 | is_dup: 0
+
+[김세은] 3개 레코드
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:28.753438 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 98f03142... | current: 비아나/콜랩 | created: 2026-04-19 00:10:22 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 700b1aad... | current: 금호타이어 | created: 2026-04-19 02:02:30 | is_dup: 0
+
+[김소희] 3개 레코드
+  ID: 32022567... | current: ㈜아리시스 | created: 2026-04-07 12:27:18.126060 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:23.369610 | is_dup: 1
+  ID: d5c3a650... | current: GE Healthcare | created: 2026-04-19 02:02:58 | is_dup: 0
+
+[김수연] 5개 레코드
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:27.541742 | is_dup: 1
+  ID: f70f1aa6... | current: ㈜핑거 | created: 2026-04-19 00:14:30 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 8f53d2d4... | current: (주)현대리바트 | created: 2026-04-19 00:30:14 | is_dup: 1
+  ID: 4f3e7f35... | current: 부광약품㈜ | created: 2026-04-19 02:02:44 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 3d7cd41c... | current: 엠포스 | created: 2026-04-19 02:02:55 | is_dup: 1
+
+[김수영] 2개 레코드
+  ID: 32022567... | current: 현대리바트 | created: 2026-04-07 12:27:24.180450 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 86da3595... | current: Assembly Global | created: 2026-04-18 15:41:49 | is_dup: 0
+
+[김수환] 2개 레코드
+  ID: 31f22567... | current: TUNiB | created: 2026-04-07 12:27:14.856618 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 67f7f8dd... | current: ㈜현대종합설계건축사사무소 | created: 2026-04-19 02:03:15 | is_dup: 0
+
+[김승민] 5개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:21.944763 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: 씨티크레딧서비스 | created: 2026-04-07 12:27:31.381656 | is_dup: 1
+  ID: 38e491d3... | current: 42dot | created: 2026-04-18 15:39:20 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 829ba555... | current: 페퍼저축은행 | created: 2026-04-19 00:17:14 | is_dup: 1
+  ID: 05292d5e... | current: ㈜LG이노텍 | created: 2026-04-19 02:03:25 | is_dup: 1
+
+[김승현] 2개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:11.065783 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 1d8f0081... | current: ㈜레이머티리얼즈 | created: 2026-04-18 17:16:37 | is_dup: 0
+
+[김신영] 2개 레코드
+  ID: bbc8cd85... | current: 삼성SDS | created: 2026-04-18 17:10:47 | is_dup: 1
+  ID: 0464cd3c... | current: UBS AG | created: 2026-04-19 00:41:53 | is_dup: 1
+
+[김연아] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:25.733089 | is_dup: 0 <- 구버전 마킹 예정
+  ID: aaa8c896... | current: 태영상선 | created: 2026-04-19 02:03:45 | is_dup: 0
+
+[김영민] 2개 레코드
+  ID: 32122567... | current: (주)애드빈티지 | created: 2026-04-05 16:13:27.004232 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 8a8f2be2... | current: None | created: 2026-04-12 07:52:29 | is_dup: 1
+
+[김영인] 2개 레코드
+  ID: 8c24ab94... | current: MangoBoost | created: 2026-04-18 16:43:29 | is_dup: 1
+  ID: 04a827ba... | current: 티맥스클라우드 | created: 2026-04-19 00:42:17 | is_dup: 1
+
+[김영진] 2개 레코드
+  ID: eebefb6e... | current: LG디스플레이(주) | created: 2026-04-18 15:30:51 | is_dup: 1
+  ID: 4a0e34ce... | current: ㈜유진아이티서비스 | created: 2026-04-19 02:03:53 | is_dup: 0
+
+[김예지] 3개 레코드
+  ID: 44be0ed5... | current: Ownist | created: 2026-04-12 07:48:32 | is_dup: 1
+  ID: a2f04258... | current: Rebellions | created: 2026-04-18 16:43:39 | is_dup: 1
+  ID: e59ea911... | current: 로이스 | created: 2026-04-19 00:31:27 | is_dup: 0
+
+[김완희] 2개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:11.794175 | is_dup: 0 <- 구버전 마킹 예정
+  ID: dab52052... | current: 케이비부동산신탁 | created: 2026-04-19 00:12:48 | is_dup: 1
+
+[김요은] 2개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:41.595127 | is_dup: 1
+  ID: 6d769124... | current: 아마존서비시즈코리아(유) | created: 2026-04-19 01:07:25 | is_dup: 1
+
+[김용석] 2개 레코드
+  ID: 3356f286... | current: 포디리플레이코리아(주) | created: 2026-04-18 17:29:22 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 5bf251d8... | current: NS홈쇼핑 | created: 2026-04-19 00:24:29 | is_dup: 0
+
+[김용호] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:32.422451 | is_dup: 0 <- 구버전 마킹 예정
+  ID: a19a03b0... | current: 미상 | created: 2026-04-19 02:03:49 | is_dup: 0
+
+[김운용] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:18.339147 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 2d52823c... | current: 디엠씨 미디어 | created: 2026-04-19 02:04:28 | is_dup: 1
+
+[김유진] 3개 레코드
+  ID: 32122567... | current: ㈜쎌바이오텍 | created: 2026-04-05 16:13:24.448925 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: None | created: 2026-04-05 16:13:29.367385 | is_dup: 1
+  ID: 1bf1b968... | current: 아리온테크놀로지 | created: 2026-04-19 02:04:23 | is_dup: 0
+
+[김은기] 2개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:38.735290 | is_dup: 0 <- 구버전 마킹 예정
+  ID: fee23f5f... | current: (주)KB국민은행 | created: 2026-04-18 15:27:38 | is_dup: 1
+
+[김은선] 2개 레코드
+  ID: 31f22567... | current: 팀스노우볼 | created: 2026-04-07 12:27:12.349552 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:25.374187 | is_dup: 1
+
+[김은영] 3개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:40.061536 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: ㈜아스트로너지쏠라코리아 | created: 2026-04-07 12:27:31.875945 | is_dup: 0 <- 구버전 마킹 예정
+  ID: ed305d78... | current: (주)왓챠 | created: 2026-04-19 01:11:49 | is_dup: 1
+
+[김은정] 2개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:41.193863 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 435fdb75... | current: SK브로드밴드(주) | created: 2026-04-18 15:35:08 | is_dup: 1
+
+[김은총] 2개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:43.944017 | is_dup: 1
+  ID: 7695c566... | current: KDI(한국개발연구원) | created: 2026-04-18 15:27:53 | is_dup: 1
+
+[김은형] 3개 레코드
+  ID: 32122567... | current: None | created: 2026-04-05 16:13:28.564616 | is_dup: 1
+  ID: 31f22567... | current: 삼일회계법인 | created: 2026-04-07 12:27:13.356955 | is_dup: 1
+  ID: f5875fc2... | current: SM ENTERTAINMENT | created: 2026-04-18 16:15:31 | is_dup: 0
+
+[김인섭] 2개 레코드
+  ID: 1cde183b... | current:  | created: 2026-04-12T02:15:03.966339 | is_dup: 0 <- 구버전 마킹 예정
+  ID: b529203a... | current: 프리랜서 | created: 2026-04-19 01:56:15 | is_dup: 1
+
+[김인영] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:30.284033 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 14de7a5d... | current: 미상 | created: 2026-04-19 00:42:26 | is_dup: 0
+
+[김인호] 2개 레코드
+  ID: a38ed0d4... | current: ㈜ 패쓰 | created: 2026-04-18 15:55:57 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 12a69afe... | current: 앰코테크놀로지코리아 | created: 2026-04-19 02:04:30 | is_dup: 0
+
+[김잔디] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:32.143101 | is_dup: 0 <- 구버전 마킹 예정
+  ID: a8f59244... | current: 미상 | created: 2026-04-19 02:04:39 | is_dup: 0
+
+[김재민] 2개 레코드
+  ID: 32122567... | current: 삼성 | created: 2026-04-07 12:27:28.520270 | is_dup: 1
+  ID: fa28f5da... | current: ㈜ 미라콤아이앤씨 | created: 2026-04-19 01:49:56 | is_dup: 1
+
+[김재원] 4개 레코드
+  ID: 32122567... | current: Pfizer Pharmaceutical Korea | created: 2026-04-05 16:13:22.677251 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: None | created: 2026-04-05 16:13:24.382656 | is_dup: 1
+  ID: 002b1508... | current: ㈜북두 엔지니어링 | created: 2026-04-19 02:05:09 | is_dup: 1
+  ID: 189c7ec5... | current: 바른자세운동본부 | created: 2026-04-19 02:05:33 | is_dup: 0
+
+[김재학] 2개 레코드
+  ID: 33522567... | current: 특허법인 써밋 | created: 2026-04-05 16:13:41.882831 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 380eaa80... | current: 서울대학교 | created: 2026-04-19 01:33:11 | is_dup: 1
+
+[김정동] 2개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:41.421131 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 471478e9... | current: M83 VISUAL EFFECTS | created: 2026-04-19 01:15:24 | is_dup: 1
+
+[김정수] 3개 레코드
+  ID: 33522567... | current: (주)LG AI연구원 | created: 2026-04-05 16:13:42.377885 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:20.413448 | is_dup: 1
+  ID: c1351abe... | current: LG전자 | created: 2026-04-19 01:53:00 | is_dup: 0
+
+[김정은] 3개 레코드
+  ID: 32e22567... | current: (주)금강축산유통 | created: 2026-04-05 16:13:32.581951 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:29.510748 | is_dup: 1
+  ID: 56013eae... | current: 스트래티지샐러드 | created: 2026-04-19 00:42:53 | is_dup: 0
+
+[김정훈] 2개 레코드
+  ID: bc16c548... | current: (주)LF | created: 2026-04-19 01:25:16 | is_dup: 1
+  ID: b605d0e6... | current: 주식회사 대화기기 | created: 2026-04-19 02:05:24 | is_dup: 1
+
+[김정희] 3개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:39.710979 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 7b9008c8... | current: 자연물질연구소(DEMAR3) | created: 2026-04-18 16:28:42 | is_dup: 1
+  ID: 87e63672... | current: (주)위메프 | created: 2026-04-23 16:03:48 | is_dup: 1
+
+[김종민] 2개 레코드
+  ID: 32022567... | current: (주)에쓰푸드 | created: 2026-04-07 12:27:21.359783 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 5aa48f9b... | current: ㈜씨젠 | created: 2026-04-19 02:05:33 | is_dup: 0
+
+[김종석] 2개 레코드
+  ID: 32122567... | current: None | created: 2026-04-05 16:13:29.393966 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 7b3a227e... | current: 자영업 | created: 2026-04-19 02:06:28 | is_dup: 0
+
+[김종선] 2개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:09.536210 | is_dup: 0 <- 구버전 마킹 예정
+  ID: f20be6ba... | current: 그린랩스 | created: 2026-04-18 16:15:29 | is_dup: 1
+
+[김종욱] 2개 레코드
+  ID: 9d72bf58... | current: 현대엔지니어링(주) | created: 2026-04-19 00:30:30 | is_dup: 0 <- 구버전 마킹 예정
+  ID: b3685b32... | current: 삼성SDS(주) | created: 2026-04-19 00:59:46 | is_dup: 1
+
+[김종현] 3개 레코드
+  ID: 0d41e731... | current: None | created: 2026-04-12 07:52:09 | is_dup: 1
+  ID: 89fd0c17... | current: MangoBoost | created: 2026-04-18 17:02:47 | is_dup: 0 <- 구버전 마킹 예정
+  ID: d240433e... | current: 삼성전자 | created: 2026-04-19 01:00:57 | is_dup: 1
+
+[김주연] 4개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:41.915242 | is_dup: 1
+  ID: 33522567... | current: 안진회계법인 | created: 2026-04-05 16:13:43.444008 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 68328cf8... | current: kt alpha | created: 2026-04-18 15:29:04 | is_dup: 1
+  ID: 2be8a320... | current: 딜로이트 안진회계법인 | created: 2026-04-19 01:08:52 | is_dup: 1
+
+[김주혜] 2개 레코드
+  ID: 9010b352... | current: CJ파워캐스트(주) | created: 2026-04-18 15:19:18 | is_dup: 1
+  ID: c10babe4... | current: SK증권(주) | created: 2026-04-23 15:46:51 | is_dup: 1
+
+[김준우] 2개 레코드
+  ID: 31f22567... | current: Samsung Electronics | created: 2026-04-07 12:27:11.697893 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 6964def1... | current: 삼성전자 | created: 2026-04-18 16:43:51 | is_dup: 1
+
+[김준철] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:37.045146 | is_dup: 0 <- 구버전 마킹 예정
+  ID: ac6a9562... | current: 미상 | created: 2026-04-18 17:01:57 | is_dup: 0
+
+[김준형] 3개 레코드
+  ID: 94ea8be4... | current: 루닛 | created: 2026-04-18 16:44:46 | is_dup: 1
+  ID: 8d735cb4... | current: SK Hynix | created: 2026-04-18 17:46:45 | is_dup: 1
+  ID: 0f7a665f... | current: Deloitte Consulting | created: 2026-04-19 00:43:07 | is_dup: 1
+
+[김준호] 4개 레코드
+  ID: 3ff64db1... | current: ㈜어반플레이 | created: 2026-04-18 17:05:23 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 19873f9e... | current: (주)아이젠 | created: 2026-04-18 17:07:19 | is_dup: 1
+  ID: 3d49c516... | current: ㈜아키타입컴퍼니 | created: 2026-04-19 00:10:41 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 68d9ebb8... | current: 한양정보기술 | created: 2026-04-19 00:42:57 | is_dup: 1
+
+[김중수] 2개 레코드
+  ID: 32e22567... | current: 우영에쓰디 | created: 2026-04-05 16:13:33.794986 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:28.193267 | is_dup: 1
+
+[김지연] 2개 레코드
+  ID: efc726dd... | current: None | created: 2026-04-12T02:13:11.401535 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 076a957f... | current: ㈜gS리테일 | created: 2026-04-18 15:59:36 | is_dup: 1
+
+[김지영] 3개 레코드
+  ID: 32122567... | current: 디에이트게임즈 | created: 2026-04-05 16:13:22.636594 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:15.266521 | is_dup: 1
+  ID: f4398e36... | current: Hdac Technology | created: 2026-04-18 16:01:07 | is_dup: 1
+
+[김지욱] 2개 레코드
+  ID: 31f22567... | current: Samsung Electronics (Samsung Research) | created: 2026-04-07 12:27:10.622073 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 006f67b3... | current: Samsung Electronics | created: 2026-04-18 16:44:11 | is_dup: 1
+
+[김지원] 4개 레코드
+  ID: 32122567... | current: None | created: 2026-04-05 16:13:26.041393 | is_dup: 1
+  ID: 32122567... | current: ㈜카페베네 | created: 2026-04-07 12:27:31.145335 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 803aa3e3... | current: 코오롱인더스트리㈜ | created: 2026-04-19 02:06:34 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 83312416... | current: [회사명1] | created: 2026-04-19 02:06:44 | is_dup: 0
+
+[김지윤] 2개 레코드
+  ID: 6df51a82... | current: ㈜비알디코리아 | created: 2026-04-18 16:44:26 | is_dup: 1
+  ID: ec4c8425... | current: ㈜GS리테일 | created: 2026-04-18 17:41:18 | is_dup: 0
+
+[김지현] 4개 레코드
+  ID: 32022567... | current: 공팔리터 | created: 2026-04-07 12:27:24.632570 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:31.286645 | is_dup: 1
+  ID: 4d430da3... | current: 스타일쉐어 | created: 2026-04-19 00:43:30 | is_dup: 1
+  ID: 35c5d9ef... | current: ㈜뉴서울호텔 | created: 2026-04-19 02:06:56 | is_dup: 1
+
+[김지혜] 3개 레코드
+  ID: 32e22567... | current: 코웨이 | created: 2026-04-05 16:13:36.838614 | is_dup: 0 <- 구버전 마킹 예정
+  ID: ffb18b37... | current: ㈜트랜드메카 | created: 2026-04-19 00:31:50 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 599221d8... | current: CJ ENM | created: 2026-04-19 02:07:12 | is_dup: 1
+
+[김지후] 2개 레코드
+  ID: a1287cd7... | current: Balaan | created: 2026-04-18 16:37:43 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 4b7adb24... | current: 이즈앤트리 | created: 2026-04-18 17:08:30 | is_dup: 0
+
+[김지훈] 5개 레코드
+  ID: 32122567... | current: None | created: 2026-04-05 16:13:28.033876 | is_dup: 1
+  ID: 3be30996... | current: 현대자동차(주) | created: 2026-04-19 01:38:56 | is_dup: 1
+  ID: ae186517... | current: 앤피디 | created: 2026-04-19 02:07:23 | is_dup: 1
+  ID: 3cf44322... | current: ㈜코리아가스콘트롤스 | created: 2026-04-19 02:07:42 | is_dup: 0 <- 구버전 마킹 예정
+  ID: abc513af... | current: 마쥬텍㈜ | created: 2026-04-19 02:07:47 | is_dup: 0
+
+[김진만] 3개 레코드
+  ID: 32122567... | current: ㈜세스코 | created: 2026-04-07 12:27:27.666326 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:30.208369 | is_dup: 1
+  ID: 9fa6439b... | current: 주식회사 크로노스튜디오 | created: 2026-04-23 15:51:50 | is_dup: 1
+
+[김진영] 2개 레코드
+  ID: 32022567... | current: VUNO Inc. | created: 2026-04-07 12:27:23.147232 | is_dup: 0 <- 구버전 마킹 예정
+  ID: e64aba3c... | current: Surgical Information Sciences, Inc. | created: 2026-04-18 17:09:01 | is_dup: 1
+
+[김진원] 2개 레코드
+  ID: 32122567... | current: 주식회사 긴트 | created: 2026-04-05 16:13:29.862995 | is_dup: 0 <- 구버전 마킹 예정
+  ID: bf034909... | current: 1인 개발 | created: 2026-04-19 02:08:01 | is_dup: 0
+
+[김진호] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:17.030527 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 1c3e3279... | current: CJ올리브영 | created: 2026-04-19 00:25:15 | is_dup: 1
+
+[김창현] 2개 레코드
+  ID: 32122567... | current: IBK투자증권 | created: 2026-04-05 16:13:28.609718 | is_dup: 0 <- 구버전 마킹 예정
+  ID: a74c2243... | current: (주)GS홈쇼핑 | created: 2026-04-18 16:00:02 | is_dup: 1
+
+[김철수] 3개 레코드
+  ID: 32122567... | current: ㈜에프에이 | created: 2026-04-05 16:13:24.031789 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32022567... | current: HMC | created: 2026-04-07 12:27:18.907424 | is_dup: 1
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:29.323149 | is_dup: 1
+
+[김태경] 2개 레코드
+  ID: fbc27466... | current: SK Telecom | created: 2026-04-18 16:09:15 | is_dup: 1
+  ID: fefff620... | current: NAVER CLOUD | created: 2026-04-18 16:32:58 | is_dup: 1
+
+[김태욱] 2개 레코드
+  ID: b9be61d1... | current: (주)스테이션3 | created: 2026-04-18 17:25:27 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 8e4c2397... | current: 미상 | created: 2026-04-19 02:07:55 | is_dup: 0
+
+[김태익] 2개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:09.569237 | is_dup: 0 <- 구버전 마킹 예정
+  ID: c2d2ff7d... | current: 버즈빌 | created: 2026-04-18 17:07:00 | is_dup: 1
+
+[김태인] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:25.068268 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 54b8ebd0... | current: 인탑스 | created: 2026-04-19 00:19:49 | is_dup: 0
+
+[김태헌] 2개 레코드
+  ID: 7fee87cd... | current: 롯데쇼핑(주) | created: 2026-04-19 00:50:35 | is_dup: 1
+  ID: 4879a4f6... | current: 쿠팡(주) | created: 2026-04-19 01:31:14 | is_dup: 1
+
+[김태훈] 2개 레코드
+  ID: 2ef39c0d... | current: 세이코어(주) | created: 2026-04-18 16:19:34 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 5a49ba17... | current: CUPIA (전자통관국제협력재단) | created: 2026-04-18 16:20:16 | is_dup: 0
+
+[김하영] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:34.913884 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 61e7a76b... | current: 미상 | created: 2026-04-19 02:07:58 | is_dup: 0
+
+[김학준] 2개 레코드
+  ID: 32e22567... | current: ㈜워프비전 | created: 2026-04-05 16:13:33.374744 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 31f22567... | current: 삼성전자 | created: 2026-04-07 12:27:12.483773 | is_dup: 1
+
+[김한나] 2개 레코드
+  ID: 32e22567... | current:  | created: 2026-04-05 16:13:35.838588 | is_dup: 0 <- 구버전 마킹 예정
+  ID: e3bf2bbf... | current: (주)티오엠 | created: 2026-04-18 16:28:33 | is_dup: 0
+
+[김한미루] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:33.137599 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 33a305d8... | current: 미상 | created: 2026-04-19 02:08:15 | is_dup: 0
+
+[김현우] 7개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:09.620168 | is_dup: 1
+  ID: 47ad382d... | current: 인디드라이브 | created: 2026-04-12 07:51:45 | is_dup: 1
+  ID: 102bec2d... | current: ㈜오스템임플란트 | created: 2026-04-18 17:41:34 | is_dup: 0 <- 구버전 마킹 예정
+  ID: f9e5ffda... | current: 넷마블 | created: 2026-04-19 00:04:48 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 5d31dfee... | current: 한국벤처투자 | created: 2026-04-19 00:23:42 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 912f2106... | current: 패스트파이브 | created: 2026-04-19 00:43:47 | is_dup: 1
+  ID: e6e97bb1... | current: ㈜대원 산업 | created: 2026-04-19 02:08:36 | is_dup: 0
+
+[김현재] 2개 레코드
+  ID: 32e22567... | current: ㈜시루정보 | created: 2026-04-05 16:13:32.017030 | is_dup: 0 <- 구버전 마킹 예정
+  ID: d3713b3d... | current: Kb국민카드 | created: 2026-04-19 02:08:56 | is_dup: 1
+
+[김현정] 3개 레코드
+  ID: 31f22567... | current:  | created: 2026-04-07 12:27:08.159151 | is_dup: 1
+  ID: e262bbeb... | current: (주)유비쿼스 | created: 2026-04-18 15:24:58 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 2765b3d2... | current: ㈜티몬 | created: 2026-04-19 00:31:55 | is_dup: 0
+
+[김현준] 4개 레코드
+  ID: 33522567... | current: 제일기획 | created: 2026-04-05 16:13:41.294302 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 8150ed05... | current: 제일기획 / Cheil Worldwide | created: 2026-04-19 01:24:16 | is_dup: 1
+  ID: 360b1867... | current: 위즈네트 | created: 2026-04-19 02:08:55 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 47ec8d31... | current: 사단법인 한국음악저작권협회 | created: 2026-04-19 02:09:11 | is_dup: 0
+
+[김현진] 2개 레코드
+  ID: 21526490... | current: 천재교육 | created: 2026-04-19 00:43:55 | is_dup: 1
+  ID: 49b6ec14... | current: (주)두산 | created: 2026-04-19 00:48:39 | is_dup: 1
+
+[김현태] 2개 레코드
+  ID: 64820791... | current: None | created: 2026-04-12T02:15:35.025329 | is_dup: 1
+  ID: 22b9dfb7... | current: 콘센트릭스서비스코리아 | created: 2026-04-19 02:20:58 | is_dup: 1
+
+[김형준] 2개 레코드
+  ID: 31f22567... | current:  | created: 2026-04-07 12:27:15.449849 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 0a48b0ae... | current: 그랑몬스터 | created: 2026-04-18 16:39:14 | is_dup: 0
+
+[김혜린] 2개 레코드
+  ID: 0f1062c2... | current: 맥킨지 | created: 2026-04-12 07:49:55 | is_dup: 1
+  ID: 8d7c105e... | current: (주)kt cs | created: 2026-04-18 15:28:09 | is_dup: 1
+
+[김혜미] 2개 레코드
+  ID: 9cd32c5d... | current: (주)윙잇 | created: 2026-04-19 00:32:40 | is_dup: 1
+  ID: 67cb328a... | current: Honeywell Korea | created: 2026-04-19 02:09:24 | is_dup: 0
+
+[김혜진] 3개 레코드
+  ID: 32e22567... | current: 한솔섬유 | created: 2026-04-05 16:13:30.738897 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current:  | created: 2026-04-07 12:27:29.125255 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 46dbb45c... | current: 주식회사 한샘 | created: 2026-04-19 02:20:13 | is_dup: 0
+
+[김호령] 2개 레코드
+  ID: 32e22567... | current: 알피니언메디칼시스템 | created: 2026-04-05 16:13:34.998513 | is_dup: 0 <- 구버전 마킹 예정
+  ID: ae7253a4... | current: 일진그룹 알피니언메디칼시스템 | created: 2026-04-19 02:09:30 | is_dup: 0
+
+[김활] 2개 레코드
+  ID: 33522567... | current: 유니온투자파트너스 | created: 2026-04-05 16:13:39.136559 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 0465086d... | current: (주)브리즈인베스트먼트 | created: 2026-04-19 00:58:53 | is_dup: 1
+
+[김활란] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:25.748051 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 2530ee71... | current: Allison+Partners Korea | created: 2026-04-19 00:43:59 | is_dup: 0
+
+[김효진] 5개 레코드
+  ID: 32e22567... | current: 주)온페이스/바이오빌 | created: 2026-04-05 16:13:34.758706 | is_dup: 1
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:23.943623 | is_dup: 1
+  ID: ab730616... | current: 이길여 암당뇨 연구원 | created: 2026-04-19 00:44:18 | is_dup: 1
+  ID: 1d8b9438... | current: ABLY | created: 2026-04-19 01:09:49 | is_dup: 1
+  ID: a48ed1c0... | current: 온페이스/바이오빌 | created: 2026-04-19 02:09:41 | is_dup: 1
+
+[김희경] 2개 레코드
+  ID: dc420457... | current: (주)트리플 | created: 2026-04-19 01:33:02 | is_dup: 1
+  ID: 3b9dacf1... | current: 스마일게이트 | created: 2026-04-23 15:56:02 | is_dup: 0
+
+[김희원] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:25.145883 | is_dup: 0 <- 구버전 마킹 예정
+  ID: d57e80c4... | current: ㈜기가레인 | created: 2026-04-19 00:44:13 | is_dup: 0
+
+[김희진] 2개 레코드
+  ID: 9f820c39... | current: 현대홈쇼핑 | created: 2026-04-18 16:23:49 | is_dup: 1
+  ID: 4f85c802... | current: LG유플러스 | created: 2026-04-19 01:16:43 | is_dup: 0
+
+[김희태] 3개 레코드
+  ID: 32022567... | current: SFA반도체 | created: 2026-04-07 12:27:20.780140 | is_dup: 1
+  ID: 5bfaad8e... | current: (주)이앤디일렉트릭 | created: 2026-04-19 00:44:25 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 7c5fed60... | current: (재)넷마블문화재단 | created: 2026-04-19 00:46:29 | is_dup: 1
+
+[남연우] 2개 레코드
+  ID: 32f22567... | current: ㈜티몬 | created: 2026-04-05 16:13:37.653627 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 563b70e3... | current: 프리랜서 | created: 2026-04-18 16:45:48 | is_dup: 1
+
+[남예영] 2개 레코드
+  ID: 33522567... | current: (주)넵튠 | created: 2026-04-05 16:13:41.510369 | is_dup: 0 <- 구버전 마킹 예정
+  ID: e4b4464b... | current: APR | created: 2026-04-19 00:46:15 | is_dup: 1
+
+[노나희] 2개 레코드
+  ID: 32022567... | current: (주)아우딘퓨쳐스 | created: 2026-04-07 12:27:17.750993 | is_dup: 0 <- 구버전 마킹 예정
+  ID: e9077b1b... | current: ㈜아미코스메틱 | created: 2026-04-19 02:10:01 | is_dup: 1
+
+[노은영] 2개 레코드
+  ID: 33522567... | current: 데브시스터즈(주) | created: 2026-04-05 16:13:44.093768 | is_dup: 0 <- 구버전 마킹 예정
+  ID: a96e909e... | current: (주)KCC | created: 2026-04-19 00:47:54 | is_dup: 1
+
+[노지수] 2개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:38.133687 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 57b90ad2... | current: (주)신세계 | created: 2026-04-19 01:06:52 | is_dup: 1
+
+[노혜진] 2개 레코드
+  ID: 19a63fb6... | current: (주)그린랩스 | created: 2026-04-19 00:37:53 | is_dup: 1
+  ID: f647a688... | current: ㈜직방 | created: 2026-04-19 00:47:12 | is_dup: 1
+
+[류여훈] 2개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:07.830147 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 55b8a8f4... | current: ㈜테크랩스 | created: 2026-04-18 17:24:49 | is_dup: 0
+
+[류지선] 3개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:26.737939 | is_dup: 1
+  ID: 51087276... | current: 대웅제약 | created: 2026-04-18 17:15:35 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 4ff2fe4d... | current: OCI | created: 2026-04-19 02:10:11 | is_dup: 0
+
+[류현수] 3개 레코드
+  ID: 31f22567... | current:  | created: 2026-04-07 12:27:12.218499 | is_dup: 0 <- 구버전 마킹 예정
+  ID: cbb5f3ad... | current: GS리테일 | created: 2026-04-18 15:59:38 | is_dup: 1
+  ID: 3f1cc6bb... | current: GS SHOP | created: 2026-04-18 17:34:15 | is_dup: 1
+
+[맹미호] 2개 레코드
+  ID: 31f22567... | current: 앤씰 | created: 2026-04-07 12:27:09.652632 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 6691fda5... | current: ANSSil | created: 2026-04-18 17:06:04 | is_dup: 0
+
+[명정석] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:26.360557 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 93c5705a... | current: 대한에프에이시스템 | created: 2026-04-19 00:33:44 | is_dup: 0
+
+[문영득] 2개 레코드
+  ID: 32022567... | current:  | created: 2026-04-07 12:27:23.632931 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 44490529... | current: ㈜까사나인 | created: 2026-04-19 01:11:34 | is_dup: 0
+
+[문한진] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:34.150988 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 843ad4b7... | current: 미상 | created: 2026-04-19 02:10:24 | is_dup: 0
+
+[문혜원] 2개 레코드
+  ID: 32022567... | current: 머니S | created: 2026-04-07 12:27:21.131080 | is_dup: 0 <- 구버전 마킹 예정
+  ID: c2429941... | current: 한국경제 머니 | created: 2026-04-19 00:54:07 | is_dup: 0
+
+[문희민] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:36.651132 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 6daed878... | current: ㈜레존텍 | created: 2026-04-19 00:54:00 | is_dup: 1
+
+[미상] 6개 레코드
+  ID: 32122567... | current: ㈜한샘 | created: 2026-04-05 16:13:25.943744 | is_dup: 1
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:10.898674 | is_dup: 1
+  ID: 32022567... | current: 롯데건설 | created: 2026-04-07 12:27:16.933035 | is_dup: 1
+  ID: 32022567... | current: Kakao | created: 2026-04-07 12:27:21.293135 | is_dup: 1
+  ID: 32022567... | current: 한전KDN | created: 2026-04-07 12:27:24.782155 | is_dup: 1
+  ID: 32022567... | current: 롯데하이마트 | created: 2026-04-07 12:27:25.986633 | is_dup: 1
+
+[민경우] 2개 레코드
+  ID: 33522567... | current: 티몬 | created: 2026-04-05 16:13:42.566107 | is_dup: 0 <- 구버전 마킹 예정
+  ID: f005acde... | current: (주)띵굴 | created: 2026-04-23 16:06:00 | is_dup: 1
+
+[민경운] 2개 레코드
+  ID: 55a58087... | current: 두나무(주) | created: 2026-04-18 16:35:08 | is_dup: 1
+  ID: e1bd6a49... | current: (주)카카오페이 | created: 2026-04-18 17:34:41 | is_dup: 1
+
+[민동준] 2개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:09.052217 | is_dup: 0 <- 구버전 마킹 예정
+  ID: a89f983e... | current: FreeD Group | created: 2026-04-18 16:37:23 | is_dup: 0
+
+[민지현] 2개 레코드
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:30.451632 | is_dup: 1
+  ID: 88ba61c2... | current: SE금융자문(주) | created: 2026-04-19 02:10:39 | is_dup: 0
+
+[박강민] 2개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:37.959810 | is_dup: 0 <- 구버전 마킹 예정
+  ID: d859b4f2... | current: 민앤지 | created: 2026-04-19 00:34:04 | is_dup: 1
+
+[박경규] 2개 레코드
+  ID: 6f5bf0ea... | current: 카카오스타일 | created: 2026-04-19 01:27:57 | is_dup: 1
+  ID: 8c1a2349... | current: 신한DS | created: 2026-04-19 02:10:45 | is_dup: 1
+
+[박관우] 2개 레코드
+  ID: 32122567... | current: HHI/KSOE | created: 2026-04-07 12:27:29.354685 | is_dup: 0 <- 구버전 마킹 예정
+  ID: c0183925... | current: 한국조선해양 | created: 2026-04-19 02:11:19 | is_dup: 0
+
+[박규량] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:35.084347 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 127ea815... | current: 미상 | created: 2026-04-19 02:10:53 | is_dup: 0
+
+[박기홍] 2개 레코드
+  ID: 32022567... | current: ㈜배컴 | created: 2026-04-07 12:27:23.386559 | is_dup: 0 <- 구버전 마킹 예정
+  ID: d224e9fa... | current: ㈜배컴 (배움의 커뮤니케이션) | created: 2026-04-19 00:18:23 | is_dup: 1
+
+[박다희] 2개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:44.050088 | is_dup: 0 <- 구버전 마킹 예정
+  ID: d22e0fa4... | current: (주)JYP엔터테인먼트 | created: 2026-04-18 15:24:49 | is_dup: 1
+
+[박두현] 2개 레코드
+  ID: 33522567... | current: 오션아웃컴즈 | created: 2026-04-05 16:13:39.895599 | is_dup: 0 <- 구버전 마킹 예정
+  ID: d112dd94... | current: 세계자연기금 | created: 2026-04-19 01:04:12 | is_dup: 1
+
+[박배근] 2개 레코드
+  ID: 32022567... | current:  | created: 2026-04-07 12:27:24.043168 | is_dup: 0 <- 구버전 마킹 예정
+  ID: f9171403... | current: 더시그니처컴퍼니 | created: 2026-04-19 01:21:41 | is_dup: 0
+
+[박상준] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:31.348754 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 5fa8815f... | current: 미상 | created: 2026-04-19 02:10:59 | is_dup: 0
+
+[박성민] 2개 레코드
+  ID: b5027e01... | current: MUSINSA 무신사 | created: 2026-04-12 07:50:02 | is_dup: 1
+  ID: 7f5c78a6... | current: 삼성전자(주) | created: 2026-04-19 01:01:12 | is_dup: 1
+
+[박성준] 2개 레코드
+  ID: 7e849a19... | current: Kakao Enterprise | created: 2026-04-18 17:34:45 | is_dup: 1
+  ID: 460b1946... | current: (주) CJ푸드빌 | created: 2026-04-19 02:11:19 | is_dup: 0
+
+[박성호] 2개 레코드
+  ID: d7601dfe... | current: 한국발전기술 | created: 2026-04-18 15:43:24 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 73419bd6... | current: 롯데쇼핑(주) | created: 2026-04-19 00:50:28 | is_dup: 0
+
+[박성희] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:33.935902 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 2d7247ee... | current: 호반건설 | created: 2026-04-19 00:54:35 | is_dup: 0
+
+[박소현] 2개 레코드
+  ID: 5b2264d8... | current: (주)CJ ENM 오쇼핑부문 M서비스기획팀 | created: 2026-04-12T02:13:12.093353 | is_dup: 0 <- 구버전 마킹 예정
+  ID: ad77d6a1... | current: (주)CJ ENM 오쇼핑부문 | created: 2026-04-18 16:03:21 | is_dup: 1
+
+[박수재] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:36.221696 | is_dup: 0 <- 구버전 마킹 예정
+  ID: b33f0895... | current: 미상 | created: 2026-04-19 02:11:13 | is_dup: 0
+
+[박수현] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:17.612737 | is_dup: 0 <- 구버전 마킹 예정
+  ID: c944b8f0... | current: ㈜보고플레이 | created: 2026-04-19 00:55:04 | is_dup: 0
+
+[박슬희] 2개 레코드
+  ID: 31f22567... | current: 우아한형제들 | created: 2026-04-07 12:27:14.249881 | is_dup: 0 <- 구버전 마킹 예정
+  ID: cf88abd0... | current: 롯데마트 | created: 2026-04-18 17:35:14 | is_dup: 0
+
+[박승수] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:33.122077 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 07b8074b... | current: 미상 | created: 2026-04-19 02:11:29 | is_dup: 0
+
+[박승택] 2개 레코드
+  ID: 33522567... | current: st labs | created: 2026-04-05 16:13:39.967176 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 173ab4f8... | current: (주)콜게이트 | created: 2026-04-19 01:31:12 | is_dup: 1
+
+[박승호] 2개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:39.194602 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 8f06cc59... | current: (주)스마일게이트메가포트 | created: 2026-04-19 01:05:00 | is_dup: 1
+
+[박영준] 2개 레코드
+  ID: 32122567... | current: CJ ENM | created: 2026-04-07 12:27:27.427744 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:31.936205 | is_dup: 1
+
+[박윤재] 2개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:42.693814 | is_dup: 1
+  ID: 1e67d8a2... | current: (주)위메프 | created: 2026-04-19 01:13:26 | is_dup: 1
+
+[박재영] 2개 레코드
+  ID: a72eb7a8... | current: ㈜웅진씽크빅 | created: 2026-04-19 00:26:46 | is_dup: 0 <- 구버전 마킹 예정
+  ID: dcd3b7eb... | current: 위메프 | created: 2026-04-19 00:55:25 | is_dup: 1
+
+[박재현] 2개 레코드
+  ID: f906a645... | current: 지누스 | created: 2026-04-19 00:27:08 | is_dup: 0 <- 구버전 마킹 예정
+  ID: d1e12d15... | current: ㈜부쉬매뉴팩처링코리아 | created: 2026-04-23 15:55:00 | is_dup: 0
+
+[박정민] 2개 레코드
+  ID: 5766108b... | current: (주)그린카 | created: 2026-04-18 16:10:00 | is_dup: 1
+  ID: 8ca83b70... | current: 29CM | created: 2026-04-23 15:48:14 | is_dup: 0
+
+[박정현] 2개 레코드
+  ID: 33522567... | current: (주)SSG닷컴 | created: 2026-04-05 16:13:41.465678 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 7200508e... | current: 쿠팡(주) | created: 2026-04-19 01:31:36 | is_dup: 1
+
+[박종국] 2개 레코드
+  ID: 32022567... | current:  | created: 2026-04-07 12:27:26.991214 | is_dup: 1
+  ID: 8c45c608... | current: 주)금강엔터프라이즈 | created: 2026-04-19 00:34:51 | is_dup: 0
+
+[박주령] 2개 레코드
+  ID: 31f22567... | current: 삼성전자 주식회사 메모리사업부 | created: 2026-04-07 12:27:10.112876 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 72d168f0... | current: 삼성전자 | created: 2026-04-18 17:01:08 | is_dup: 0
+
+[박주희] 2개 레코드
+  ID: 33522567... | current: 효성에프엠에스 | created: 2026-04-05 16:13:41.774450 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 397d2303... | current: 엔라이튼(주) | created: 2026-04-19 01:10:15 | is_dup: 1
+
+[박준범] 2개 레코드
+  ID: 0ea5e924... | current: (주)크래프트테크놀로지스 | created: 2026-04-19 01:32:16 | is_dup: 1
+  ID: 230b97f2... | current: 유센로지스틱스코리아㈜ | created: 2026-04-19 02:11:52 | is_dup: 1
+
+[박준영] 6개 레코드
+  ID: 31f22567... | current: ㈜페코텍 | created: 2026-04-07 12:27:15.315324 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:27.974979 | is_dup: 1
+  ID: bcbceeb2... | current: ㈜옴니케어 | created: 2026-04-19 00:14:18 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 05aac31c... | current: 해비치호텔앤드리조트 주식회사 | created: 2026-04-19 02:12:27 | is_dup: 0 <- 구버전 마킹 예정
+  ID: b359dbc8... | current: CUSTOMMIND Inc | created: 2026-04-19 02:13:07 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 72ab5c8f... | current: ㈜ SmartOSC | created: 2026-04-23 15:49:57 | is_dup: 0
+
+[박준호] 2개 레코드
+  ID: 19543973... | current: (주)쏘카 | created: 2026-04-18 17:23:49 | is_dup: 1
+  ID: 64c5a473... | current: 티에스라인 | created: 2026-04-19 02:12:20 | is_dup: 0
+
+[박준홍] 2개 레코드
+  ID: 32022567... | current:  | created: 2026-04-07 12:27:16.631337 | is_dup: 1
+  ID: 9a595fdf... | current: 피플앤드테크놀러지 | created: 2026-04-19 01:08:14 | is_dup: 0
+
+[박지민] 2개 레코드
+  ID: 32122567... | current: 에너지경제연구원 | created: 2026-04-05 16:13:30.218950 | is_dup: 0 <- 구버전 마킹 예정
+  ID: ff8e7634... | current: Moreh | created: 2026-04-18 16:47:21 | is_dup: 1
+
+[박지운] 2개 레코드
+  ID: 1a0227bb... | current: Kakao | created: 2026-04-18 16:31:06 | is_dup: 1
+  ID: 61bce273... | current: (주)카카오 | created: 2026-04-19 01:26:22 | is_dup: 1
+
+[박지훈] 4개 레코드
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:32.020094 | is_dup: 1
+  ID: 8bfbbe55... | current: 신세계까사미아 | created: 2026-04-18 16:26:08 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 7cc37a28... | current: 참피온 | created: 2026-04-19 02:12:47 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 14d244d7... | current: ㈜코오롱머티리얼 | created: 2026-04-19 02:13:06 | is_dup: 0
+
+[박지희] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:18.478076 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 0173170b... | current: 티르티르 | created: 2026-04-19 00:55:29 | is_dup: 0
+
+[박진배] 2개 레코드
+  ID: 33522567... | current: 엔도아이 | created: 2026-04-05 16:13:44.258765 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 5f39a89c... | current: IMAI | created: 2026-04-19 01:10:09 | is_dup: 1
+
+[박진아] 2개 레코드
+  ID: 32e22567... | current: 에이디브이코리아㈜ | created: 2026-04-05 16:13:34.569360 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 63f6ad3b... | current: EC21 | created: 2026-04-19 02:13:16 | is_dup: 0
+
+[박진주] 3개 레코드
+  ID: 32122567... | current: 동국제약㈜ | created: 2026-04-05 16:13:28.019961 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:12.839496 | is_dup: 1
+  ID: 0b174f9d... | current: 리버스랩 | created: 2026-04-18 17:23:02 | is_dup: 0
+
+[박찬우] 2개 레코드
+  ID: 9e6dcf92... | current:  | created: 2026-04-12T02:12:56.724901 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 363e70ab... | current: Handys, Startup | created: 2026-04-18 15:41:31 | is_dup: 1
+
+[박창현] 2개 레코드
+  ID: 32022567... | current:  | created: 2026-04-07 12:27:26.265089 | is_dup: 1
+  ID: 1b74223d... | current: 월급쟁이부자들㈜ | created: 2026-04-19 00:52:21 | is_dup: 0
+
+[박태준] 2개 레코드
+  ID: 201a5c78... | current: CJ프레시웨이(주) | created: 2026-04-18 15:20:12 | is_dup: 1
+  ID: 0a0c5a80... | current: ㈜CJ프레시원동서울 | created: 2026-04-19 02:13:42 | is_dup: 1
+
+[박하선] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:35.659078 | is_dup: 0 <- 구버전 마킹 예정
+  ID: ebe8f980... | current: 미상 | created: 2026-04-19 02:13:28 | is_dup: 0
+
+[박하은] 2개 레코드
+  ID: 33522567... | current: 라이나생명보험 | created: 2026-04-05 16:13:41.235552 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 638a8ccb... | current: 쿠팡(주) | created: 2026-04-19 00:49:14 | is_dup: 1
+
+[박현규] 3개 레코드
+  ID: 32122567... | current: NHN Cloud | created: 2026-04-05 16:13:29.925590 | is_dup: 0 <- 구버전 마킹 예정
+  ID: cf822061... | current: 프리랜서 | created: 2026-04-18 16:47:36 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 854b772c... | current: ㈜원포올디앤씨 | created: 2026-04-19 02:13:46 | is_dup: 0
+
+[박현덕] 2개 레코드
+  ID: 31f22567... | current: 삼성 반도체 | created: 2026-04-07 12:27:13.093942 | is_dup: 0 <- 구버전 마킹 예정
+  ID: a7edd8ef... | current: Samsung Semiconductor | created: 2026-04-18 16:47:41 | is_dup: 1
+
+[박효선] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:23.261989 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 870e7880... | current: 차봇모빌리티 | created: 2026-04-19 00:55:41 | is_dup: 0
+
+[방성국] 2개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:42.921641 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 20ed1826... | current: (주)카카오M | created: 2026-04-19 01:28:51 | is_dup: 1
+
+[방주용] 2개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:37.839696 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 1292808e... | current: 삼일회계법인 | created: 2026-04-23 16:02:40 | is_dup: 1
+
+[방태현] 2개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:13.142790 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32a8b79b... | current: 비투지게임즈 | created: 2026-04-18 15:51:16 | is_dup: 1
+
+[배광훈] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:25.675283 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 74d40fad... | current: ㈜위펀 | created: 2026-04-19 01:50:54 | is_dup: 0
+
+[배만호] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:34.868020 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 6c503a7d... | current: 미상 | created: 2026-04-19 02:13:45 | is_dup: 0
+
+[배성준] 2개 레코드
+  ID: 32122567... | current: Yogurtland Int’l | created: 2026-04-07 12:27:30.963029 | is_dup: 0 <- 구버전 마킹 예정
+  ID: fab10599... | current: 새롬정보시스템 | created: 2026-04-19 00:57:59 | is_dup: 0
+
+[배정석] 2개 레코드
+  ID: 33522567... | current: 국내 대기업 | created: 2026-04-05 16:13:39.400186 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 530e31e5... | current: 롯데케미칼(주) | created: 2026-04-19 00:51:16 | is_dup: 0
+
+[배지현] 2개 레코드
+  ID: 32e22567... | current: 약진통상 | created: 2026-04-05 16:13:31.823941 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 7170cecc... | current: 미상 | created: 2026-04-19 02:13:54 | is_dup: 0
+
+[백다혜] 2개 레코드
+  ID: 32122567... | current:  | created: 2026-04-07 12:27:28.315049 | is_dup: 0 <- 구버전 마킹 예정
+  ID: a4472f45... | current: IBK연금보험 | created: 2026-04-19 02:17:45 | is_dup: 1
+
+[백민종] 2개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:43.685827 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 535fa3b5... | current: 현대건설 | created: 2026-04-19 01:37:43 | is_dup: 1
+
+[백민지] 2개 레코드
+  ID: 32022567... | current: 프리랜서 | created: 2026-04-07 12:27:20.113595 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 1ce104a7... | current: (주)VIU CREATIVES | created: 2026-04-19 00:56:08 | is_dup: 1
+
+[백수진] 3개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:37.300778 | is_dup: 1
+  ID: 33522567... | current: Smilegate Holdings, Inc. | created: 2026-04-05 16:13:40.783171 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 9535144b... | current: 미상 | created: 2026-04-19 00:55:58 | is_dup: 0
+
+[백혜림] 2개 레코드
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:31.599014 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 06df6c9f... | current: ㈜엠포스 | created: 2026-04-12T02:15:24.570222 | is_dup: 1
+
+[변주성] 3개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:17.773557 | is_dup: 1
+  ID: 6fead5b7... | current: MoG Consulting | created: 2026-04-18 15:32:22 | is_dup: 1
+  ID: 663ebbb8... | current: 리브컨설팅 | created: 2026-04-19 00:57:59 | is_dup: 1
+
+[변창호] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:17.819451 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 47238f2f... | current: 리커버리 | created: 2026-04-19 00:57:50 | is_dup: 0
+
+[빙봉빙봉] 2개 레코드
+  ID: 33522567... | current: 삼성화재해상보험(주) | created: 2026-04-05 16:13:43.175431 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 1aca97f0... | current:  | created: 2026-04-12T02:15:03.417545 | is_dup: 0
+
+[서동완] 2개 레코드
+  ID: 32e22567... | current: 네오플 | created: 2026-04-05 16:13:31.704902 | is_dup: 1
+  ID: 822acffc... | current: 앤서스랩코리아 | created: 2026-04-19 01:09:01 | is_dup: 1
+
+[서동혁] 2개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:43.987022 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 6d1d1618... | current: (주)마사플래닛 | created: 2026-04-19 00:51:54 | is_dup: 1
+
+[서상욱] 2개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:39.108224 | is_dup: 0 <- 구버전 마킹 예정
+  ID: a2e62164... | current: 법률사무소 이목 | created: 2026-04-19 01:17:13 | is_dup: 1
+
+[서예지] 2개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:13.843099 | is_dup: 0 <- 구버전 마킹 예정
+  ID: ba2c4d92... | current: 피앤이시스템즈 | created: 2026-04-18 17:25:13 | is_dup: 0
+
+[서지민] 2개 레코드
+  ID: be0b1903... | current: 브랜디 | created: 2026-04-19 01:33:50 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 05e7b6c7... | current: (주)핏펫 | created: 2026-04-23 16:06:44 | is_dup: 1
+
+[성병관] 2개 레코드
+  ID: 33522567... | current: 넥슨코리아 | created: 2026-04-05 16:13:38.019030 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 992303f0... | current: NEXON | created: 2026-04-19 00:45:48 | is_dup: 1
+
+[성사무엘] 2개 레코드
+  ID: 32022567... | current:  | created: 2026-04-07 12:27:20.164082 | is_dup: 0 <- 구버전 마킹 예정
+  ID: c384e47a... | current: Samil PricewaterhouseCoopers | created: 2026-04-19 01:03:49 | is_dup: 1
+
+[성장현] 2개 레코드
+  ID: 90142173... | current: NAVER Corp. | created: 2026-04-18 16:21:58 | is_dup: 1
+  ID: 76773431... | current: NAVER | created: 2026-04-19 00:45:48 | is_dup: 1
+
+[소민식] 2개 레코드
+  ID: 32022567... | current: Coupang | created: 2026-04-07 12:27:16.338170 | is_dup: 0 <- 구버전 마킹 예정
+  ID: a11854d8... | current: 쿠팡 | created: 2026-04-19 01:04:25 | is_dup: 1
+
+[손민정] 2개 레코드
+  ID: 32022567... | current:  | created: 2026-04-07 12:27:23.928374 | is_dup: 1
+  ID: 9f1c353e... | current: (주)쁘띠엘린 | created: 2026-04-19 01:06:26 | is_dup: 0
+
+[손태희] 2개 레코드
+  ID: 01bba075... | current: 미상 | created: 2026-04-18 16:35:46 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 1b9ca9ed... | current: UPRISE, Inc. | created: 2026-04-18 16:35:56 | is_dup: 0
+
+[손하운] 2개 레코드
+  ID: 32122567... | current:  | created: 2026-04-05 16:13:27.084842 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 9701b1ea... | current: Deloitte Consulting – Strategy - Mergers & Acquisitions | created: 2026-04-19 01:05:05 | is_dup: 0
+
+[송경석] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:31.928335 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 8b8d60cc... | current: 미상 | created: 2026-04-19 02:16:59 | is_dup: 0
+
+[송노겸] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:35.272384 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 8cb4de10... | current: 미상 | created: 2026-04-19 02:17:09 | is_dup: 0
+
+[송수열] 2개 레코드
+  ID: 33522567... | current: 콘티넨탈오토모티브시스템 | created: 2026-04-05 16:13:39.769134 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 1468dfaa... | current: 콘티넨탈오토모티브코리아(주) | created: 2026-04-19 01:30:44 | is_dup: 1
+
+[송승현] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:30.482345 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 27c3870a... | current: 미상 | created: 2026-04-19 01:04:34 | is_dup: 0
+
+[송준호] 2개 레코드
+  ID: d9e26856... | current: 알서포트㈜ | created: 2026-04-19 00:38:03 | is_dup: 0 <- 구버전 마킹 예정
+  ID: b90d1807... | current: 넷트루컨설팅그룹 | created: 2026-04-19 01:46:23 | is_dup: 0
+
+[송지은] 3개 레코드
+  ID: 4fe5128a... | current: None | created: 2026-04-12T02:14:42.738808 | is_dup: 0 <- 구버전 마킹 예정
+  ID: d92da922... | current: LG Electronics | created: 2026-04-18 16:04:46 | is_dup: 0 <- 구버전 마킹 예정
+  ID: fa3c496f... | current: 아시아나IDT | created: 2026-04-19 00:11:36 | is_dup: 1
+
+[신권철] 2개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:44.322144 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 8ffb31e4... | current: 플렉스(주) | created: 2026-04-23 16:06:16 | is_dup: 1
+
+[신동열] 2개 레코드
+  ID: 32022567... | current:  | created: 2026-04-07 12:27:23.231011 | is_dup: 0 <- 구버전 마킹 예정
+  ID: c2e32b1a... | current: ㈜대상 | created: 2026-04-12T02:15:07.222937 | is_dup: 1
+
+[신동호] 3개 레코드
+  ID: 32122567... | current: 앰코 테크놀리지 코리아 | created: 2026-04-05 16:13:24.488633 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: None | created: 2026-04-05 16:13:24.605967 | is_dup: 1
+  ID: a174743e... | current: 아로마티카 | created: 2026-04-19 02:18:18 | is_dup: 0
+
+[신동환] 2개 레코드
+  ID: 33522567... | current: 삼정KPMG | created: 2026-04-05 16:13:43.844028 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 296de3fa... | current: NH투자증권 | created: 2026-04-18 15:33:08 | is_dup: 1
+
+[신승환] 2개 레코드
+  ID: 32e22567... | current: (주)힙합퍼 | created: 2026-04-05 16:13:37.581727 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:39.796407 | is_dup: 1
+
+[신장용] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:24.076781 | is_dup: 0 <- 구버전 마킹 예정
+  ID: e8e3a8f3... | current: 티맵모빌리티 | created: 2026-04-19 00:17:00 | is_dup: 1
+
+[신지웅] 2개 레코드
+  ID: 32122567... | current:  | created: 2026-04-07 12:27:32.417413 | is_dup: 0 <- 구버전 마킹 예정
+  ID: b798e1e8... | current: ㈜에스엔유프리시젼 | created: 2026-04-19 02:29:05 | is_dup: 1
+
+[신홍선] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:20.708390 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 399d595f... | current: 콘센트릭스서비스코리아 | created: 2026-04-19 01:07:45 | is_dup: 0
+
+[심상우] 2개 레코드
+  ID: 31f22567... | current: ㈜서우MS | created: 2026-04-07 12:27:07.692943 | is_dup: 0 <- 구버전 마킹 예정
+  ID: e38021c1... | current: ㈜서우MS(Smartfarm) | created: 2026-04-19 00:04:18 | is_dup: 1
+
+[심초아] 2개 레코드
+  ID: 31f22567... | current:  | created: 2026-04-07 12:27:09.350171 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 52caeda6... | current: 미상 | created: 2026-04-18 16:48:21 | is_dup: 0
+
+[심현선] 2개 레코드
+  ID: b6503423... | current: Lunit | created: 2026-04-18 16:48:41 | is_dup: 1
+  ID: f8060daf... | current: 루닛 | created: 2026-04-18 16:48:59 | is_dup: 1
+
+[안수현] 2개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:39.504964 | is_dup: 0 <- 구버전 마킹 예정
+  ID: fbd73ea7... | current: ㈜교원 | created: 2026-04-18 17:07:23 | is_dup: 1
+
+[안승민] 2개 레코드
+  ID: 31f22567... | current: 아프리카TV | created: 2026-04-07 12:27:09.764197 | is_dup: 0 <- 구버전 마킹 예정
+  ID: df658503... | current: ㈜스테이다다 | created: 2026-04-18 17:26:04 | is_dup: 0
+
+[안예은] 2개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:14.053081 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 45c4857b... | current: 자란다 | created: 2026-04-18 17:25:27 | is_dup: 0
+
+[안용운] 2개 레코드
+  ID: 5c2cf16c... | current: WEMADE | created: 2026-04-12 07:51:39 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 24c6fc62... | current: 엔카닷컴 | created: 2026-04-19 01:08:22 | is_dup: 1
+
+[안용현] 2개 레코드
+  ID: 32122567... | current: 한양증권㈜ | created: 2026-04-05 16:13:24.059785 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:28.005719 | is_dup: 1
+
+[안유리] 2개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:09.687334 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 79d1edd5... | current: 카카오페이 | created: 2026-04-18 16:49:26 | is_dup: 1
+
+[안은정] 2개 레코드
+  ID: 32e22567... | current: KB데이터시스템 | created: 2026-04-05 16:13:37.103866 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 293bd18e... | current: 브이티더블유 | created: 2026-04-19 01:08:45 | is_dup: 0
+
+[안이경] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:19.804080 | is_dup: 0 <- 구버전 마킹 예정
+  ID: a330c3a6... | current: (주)우아한형제들 | created: 2026-04-19 01:08:39 | is_dup: 1
+
+[안인수] 2개 레코드
+  ID: 90f40153... | current: None | created: 2026-04-12T02:14:09.158214 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 670c0fb4... | current: ㈜올위메이크이즈 | created: 2026-04-18 16:29:31 | is_dup: 1
+
+[안지훈] 2개 레코드
+  ID: 32122567... | current:  | created: 2026-04-05 16:13:29.165851 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 58a05a3a... | current: ㈜창신T&S | created: 2026-04-19 02:18:54 | is_dup: 0
+
+[양민철] 2개 레코드
+  ID: 31f22567... | current: 삼성전자 | created: 2026-04-07 12:27:12.191686 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 767f5579... | current: 삼성전자 메모리 사업부 | created: 2026-04-18 16:49:30 | is_dup: 0
+
+[양영환] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:35.979966 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 9144818f... | current: 미상 | created: 2026-04-19 02:18:36 | is_dup: 0
+
+[양원희] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:21.600643 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 4725ef2d... | current: 평안엘앤씨 | created: 2026-04-19 01:09:25 | is_dup: 0
+
+[양이내] 2개 레코드
+  ID: 32e22567... | current: 금호리조트 | created: 2026-04-05 16:13:31.629059 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:29.111296 | is_dup: 1
+
+[엄태우] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:31.513752 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 5174fc69... | current: 미상 | created: 2026-04-19 02:18:50 | is_dup: 0
+
+[여미수] 2개 레코드
+  ID: 32122567... | current: ㈜정식품 | created: 2026-04-07 12:27:27.463501 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:32.467821 | is_dup: 1
+
+[여성수] 2개 레코드
+  ID: 31f22567... | current: 디메타 | created: 2026-04-07 12:27:12.649325 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 7a1569cf... | current: 주식회사 플럭시티 | created: 2026-04-18 16:49:37 | is_dup: 1
+
+[여정수] 3개 레코드
+  ID: 31f22567... | current:  | created: 2026-04-07 12:27:12.697804 | is_dup: 0 <- 구버전 마킹 예정
+  ID: e26dce75... | current: 미상 | created: 2026-04-18 16:31:43 | is_dup: 1
+  ID: ba05f869... | current: 카카오엔터프라이즈 | created: 2026-04-19 01:28:49 | is_dup: 1
+
+[오광선] 2개 레코드
+  ID: 32022567... | current: 네패스 | created: 2026-04-07 12:27:20.865583 | is_dup: 0 <- 구버전 마킹 예정
+  ID: b4f7cfaa... | current: Nepes | created: 2026-04-19 00:23:03 | is_dup: 0
+
+[오세규] 3개 레코드
+  ID: 0e51c45d... | current: KSV eSports International, Ltd. (d/b/a Gen.G esports) | created: 2026-04-19 00:09:14 | is_dup: 1
+  ID: 64592c18... | current: 케이에스브이서비시스 (젠지이스포츠) | created: 2026-04-19 00:09:30 | is_dup: 1
+  ID: 8d00b842... | current: KSV eSports International, Ltd. | created: 2026-04-19 00:09:31 | is_dup: 1
+
+[오수진] 2개 레코드
+  ID: 9e8e3a62... | current: 두산에너빌리티㈜ | created: 2026-04-18 16:50:09 | is_dup: 1
+  ID: 9ab70d3c... | current: CJ CGV(주) | created: 2026-04-19 00:35:29 | is_dup: 0
+
+[오원교] 2개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:07.525900 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 0724db06... | current: Moreh | created: 2026-04-18 16:50:15 | is_dup: 1
+
+[왕자현] 2개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:43.124129 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 0fc555f8... | current: 롯데케미칼 | created: 2026-04-19 00:51:30 | is_dup: 1
+
+[왕학진] 2개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:42.708437 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 7af1cf11... | current: (주)데브캣 | created: 2026-04-19 00:49:26 | is_dup: 1
+
+[우민제] 3개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:38.720941 | is_dup: 1
+  ID: d6263f3c... | current: 타라유통㈜ | created: 2026-04-18 17:20:09 | is_dup: 1
+  ID: deeae342... | current: 김앤장법률사무소 | created: 2026-04-19 00:42:14 | is_dup: 1
+
+[우병준] 2개 레코드
+  ID: 33522567... | current: 이랜드리테일 이랜드몰 | created: 2026-04-05 16:13:39.385108 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 42e4518d... | current: SK스토아 | created: 2026-04-23 15:47:03 | is_dup: 1
+
+[우수정] 2개 레코드
+  ID: 229c6335... | current: (주)세컨신드롬 | created: 2026-04-19 01:32:56 | is_dup: 1
+  ID: dad9673e... | current: 테라핀테크 | created: 2026-04-19 02:20:56 | is_dup: 0
+
+[우용기] 2개 레코드
+  ID: 32022567... | current: 티켓몬스터 | created: 2026-04-07 12:27:22.116328 | is_dup: 1
+  ID: 224f797d... | current: ㈜렌트팜 | created: 2026-04-19 00:47:24 | is_dup: 0
+
+[유경민] 4개 레코드
+  ID: 32022567... | current: 하나금융투자 | created: 2026-04-07 12:27:24.368023 | is_dup: 1
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:32.318162 | is_dup: 1
+  ID: 7e509166... | current: ㈜한국씨티은행 | created: 2026-04-19 02:21:56 | is_dup: 0 <- 구버전 마킹 예정
+  ID: db51f505... | current: SIMPAC | created: 2026-04-19 02:22:05 | is_dup: 0
+
+[유동준] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:16.373076 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 772fc137... | current: ㈜부창지티씨 | created: 2026-04-19 01:13:59 | is_dup: 1
+
+[유사라] 2개 레코드
+  ID: 33522567... | current: NP Inc. | created: 2026-04-05 16:13:40.542854 | is_dup: 0 <- 구버전 마킹 예정
+  ID: e97307c7... | current: (주)제일기획 | created: 2026-04-19 01:24:57 | is_dup: 1
+
+[유성환] 2개 레코드
+  ID: 32122567... | current: None | created: 2026-04-05 16:13:26.321632 | is_dup: 0 <- 구버전 마킹 예정
+  ID: d6e66954... | current: ㈜발렌타인 | created: 2026-04-19 02:22:13 | is_dup: 0
+
+[유수현] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:36.638303 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 82d98626... | current: 미상 | created: 2026-04-19 02:22:10 | is_dup: 0
+
+[유예솔] 2개 레코드
+  ID: 32022567... | current:  | created: 2026-04-07 12:27:23.533286 | is_dup: 1
+  ID: a81cd7a3... | current: 한국후지제록스 | created: 2026-04-19 00:58:21 | is_dup: 0
+
+[유지승] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:20.612324 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 59afcf4e... | current: 아이디에스앤트러스트 | created: 2026-04-12T02:12:54.533240 | is_dup: 1
+
+[유홍열] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:36.031038 | is_dup: 0 <- 구버전 마킹 예정
+  ID: f06f96a2... | current: 미상 | created: 2026-04-19 02:22:22 | is_dup: 0
+
+[유희선] 2개 레코드
+  ID: 32022567... | current: 세무회계법인 | created: 2026-04-07 12:27:21.821480 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 9384546a... | current: ㈜밴플러스 | created: 2026-04-19 01:14:22 | is_dup: 0
+
+[윤민혜] 2개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:44.335716 | is_dup: 1
+  ID: 23e291d6... | current: (주)엔씨소프트 | created: 2026-04-19 01:10:14 | is_dup: 1
+
+[윤성필] 2개 레코드
+  ID: 4d22e561... | current: 신한벤처투자 | created: 2026-04-19 01:07:12 | is_dup: 1
+  ID: 7746a803... | current: ㈜두남쎄미트로닉스 | created: 2026-04-19 02:22:38 | is_dup: 0
+
+[윤여주] 2개 레코드
+  ID: 32022567... | current:  | created: 2026-04-07 12:27:23.425159 | is_dup: 1
+  ID: 477b42ad... | current: ㈜리바이 | created: 2026-04-12T02:15:43.977164 | is_dup: 0
+
+[윤정민] 2개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:40.035395 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 003aac23... | current: 쿠팡(주) | created: 2026-04-19 01:31:26 | is_dup: 1
+
+[윤지윤] 2개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:39.625467 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 127e2ce0... | current: (주)크래프톤 | created: 2026-04-19 01:32:10 | is_dup: 1
+
+[윤창환] 2개 레코드
+  ID: 33522567... | current: 브랜드베이커리 | created: 2026-04-05 16:13:42.666036 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 2cc03271... | current: 롯데쇼핑(주) | created: 2026-04-19 00:50:28 | is_dup: 1
+
+[윤혜정] 2개 레코드
+  ID: 33522567... | current: 인터파크 | created: 2026-04-05 16:13:39.697063 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 9a02e5ed... | current: (주)그래디언트 | created: 2026-04-19 01:21:23 | is_dup: 1
+
+[은유리] 2개 레코드
+  ID: 32e22567... | current: 지니킴 JINNTKIM | created: 2026-04-05 16:13:35.422691 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 03a05f26... | current: 지니킴 | created: 2026-04-19 01:14:42 | is_dup: 1
+
+[이가영] 2개 레코드
+  ID: 05df9e2d... | current: KPR | created: 2026-04-18 17:00:34 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 16484c64... | current: (주)브레이브모바일 | created: 2026-04-19 00:11:03 | is_dup: 1
+
+[이건주] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:18.355132 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 3e0bb9ca... | current: ㈜루덴스크리에이티브 | created: 2026-04-19 01:14:51 | is_dup: 0
+
+[이광희] 2개 레코드
+  ID: 32122567... | current: FORESTING HQ PTE. LTD. | created: 2026-04-07 12:27:27.912743 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:31.303557 | is_dup: 1
+
+[이규원] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:16.949675 | is_dup: 0 <- 구버전 마킹 예정
+  ID: dc5a7c8d... | current: 대방건설㈜ | created: 2026-04-19 01:15:10 | is_dup: 0
+
+[이나경] 2개 레코드
+  ID: 30fe7aec... | current: CJ올리브네트웍스 | created: 2026-04-18 15:19:03 | is_dup: 1
+  ID: d9480d52... | current: ㈜아이디룩 | created: 2026-04-19 02:22:54 | is_dup: 0
+
+[이돈건] 3개 레코드
+  ID: 31f22567... | current: 엔씨소프트 | created: 2026-04-07 12:27:12.132348 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 31f22567... | current: NCSOFT 자회사 | created: 2026-04-07 12:27:13.784765 | is_dup: 1
+  ID: 4f6f0f76... | current: NCSOFT | created: 2026-04-18 17:38:00 | is_dup: 1
+
+[이동규] 2개 레코드
+  ID: 32122567... | current: 엔피씨주식회사 | created: 2026-04-05 16:13:22.979902 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:32.203297 | is_dup: 1
+
+[이동준] 2개 레코드
+  ID: 32022567... | current: DKL Partners 법률사무소 | created: 2026-04-07 12:27:21.650680 | is_dup: 0 <- 구버전 마킹 예정
+  ID: b7fc58e2... | current: 한국열린사이버대학교 | created: 2026-04-19 00:29:41 | is_dup: 1
+
+[이동찬] 2개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:42.680308 | is_dup: 1
+  ID: d59b52c9... | current: (주)CJ ENM | created: 2026-04-18 15:18:23 | is_dup: 1
+
+[이동훈] 4개 레코드
+  ID: 32122567... | current: None | created: 2026-04-05 16:13:27.494487 | is_dup: 1
+  ID: bc716a0b... | current: 딜로이트컨설팅 | created: 2026-04-18 17:38:13 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 3905de3a... | current: 에이스침대 | created: 2026-04-19 02:23:08 | is_dup: 0 <- 구버전 마킹 예정
+  ID: eef9111d... | current: ㈜한컴MDS | created: 2026-04-19 02:23:24 | is_dup: 0
+
+[이민규] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:35.245298 | is_dup: 0 <- 구버전 마킹 예정
+  ID: ab7e6a0b... | current: 미상 | created: 2026-04-19 02:23:21 | is_dup: 0
+
+[이민영] 2개 레코드
+  ID: 2617eed0... | current: GS칼텍스(주) | created: 2026-04-18 15:21:57 | is_dup: 1
+  ID: f68c8639... | current: SK Hynix | created: 2026-04-18 16:52:01 | is_dup: 1
+
+[이민지] 2개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:38.780741 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 6004cf18... | current: (주)네오위즈랩 | created: 2026-04-19 00:45:22 | is_dup: 1
+
+[이민호] 2개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:39.724834 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 1f08c1e1... | current: 현대트랜시스(주) | created: 2026-04-19 01:39:38 | is_dup: 1
+
+[이범순] 2개 레코드
+  ID: 32122567... | current: HOMEPLUS | created: 2026-04-05 16:13:24.422026 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: None | created: 2026-04-05 16:13:29.095421 | is_dup: 1
+
+[이보은] 2개 레코드
+  ID: 32022567... | current:  | created: 2026-04-07 12:27:16.854595 | is_dup: 1
+  ID: 26210f3d... | current: (주)에이치엘사이언스 | created: 2026-04-19 00:45:03 | is_dup: 0
+
+[이봄] 2개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:39.599563 | is_dup: 0 <- 구버전 마킹 예정
+  ID: cd224bcf... | current: (주)세라젬 | created: 2026-04-19 01:03:58 | is_dup: 1
+
+[이상민] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:31.731125 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 126c20ae... | current: 미상 | created: 2026-04-19 02:23:41 | is_dup: 0
+
+[이상우] 2개 레코드
+  ID: 32022567... | current:  | created: 2026-04-07 12:27:17.118386 | is_dup: 1
+  ID: 6de0e885... | current: 곰앤컴퍼니 | created: 2026-04-19 00:38:17 | is_dup: 0
+
+[이상원] 3개 레코드
+  ID: 32122567... | current: 코리아써키트 | created: 2026-04-05 16:13:23.834950 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: 삼성 무선사 | created: 2026-04-05 16:13:27.851495 | is_dup: 1
+  ID: 9a55c3a5... | current: 더원공인중개사사무소 | created: 2026-04-19 02:24:04 | is_dup: 0
+
+[이상헌] 5개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:11.762763 | is_dup: 1
+  ID: 898ea4e0... | current: ㈜ 티이솔루션 | created: 2026-04-18 17:21:01 | is_dup: 0 <- 구버전 마킹 예정
+  ID: db752f0f... | current: Grepp | created: 2026-04-19 00:15:53 | is_dup: 0 <- 구버전 마킹 예정
+  ID: ba6d2583... | current: 극지연구소 KOPRI | created: 2026-04-19 01:17:34 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 55726c4a... | current: 생물자원센터 KCTC | created: 2026-04-19 01:17:41 | is_dup: 0
+
+[이새은] 3개 레코드
+  ID: 32022567... | current: 에스에스지닷컴 | created: 2026-04-07 12:27:18.812113 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:27.633218 | is_dup: 1
+  ID: 690553ae... | current: 레진엔터테인먼트 | created: 2026-04-19 01:53:54 | is_dup: 1
+
+[이석제] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:32.910635 | is_dup: 0 <- 구버전 마킹 예정
+  ID: dd8044a0... | current: 미상 | created: 2026-04-19 02:23:44 | is_dup: 0
+
+[이석화] 2개 레코드
+  ID: 31f22567... | current:  | created: 2026-04-07 12:27:15.883689 | is_dup: 1
+  ID: 8fc2b984... | current: （주）브레인커머스 | created: 2026-04-18 16:20:34 | is_dup: 0
+
+[이선화] 2개 레코드
+  ID: 5ae8fb30... | current:  | created: 2026-04-12T02:14:23.961983 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 3c9b035e... | current: 아이브코리아 | created: 2026-04-18 17:24:17 | is_dup: 1
+
+[이세은] 2개 레코드
+  ID: 32122567... | current: ㈜포스코엔투비 | created: 2026-04-07 12:27:32.084665 | is_dup: 0 <- 구버전 마킹 예정
+  ID: a19cd96a... | current: None | created: 2026-04-12 07:53:30 | is_dup: 1
+
+[이소연] 3개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:38.082411 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 31f22567... | current: 삼정회계법인 | created: 2026-04-07 12:27:10.665641 | is_dup: 1
+  ID: 0b9aff0c... | current: Hyper Connect | created: 2026-04-18 16:53:22 | is_dup: 1
+
+[이소영] 2개 레코드
+  ID: 736a1e75... | current: LG Electronics | created: 2026-04-12 07:48:17 | is_dup: 1
+  ID: ecbe9fa5... | current: (주)LG CNS | created: 2026-04-18 16:39:35 | is_dup: 1
+
+[이수범] 2개 레코드
+  ID: 17918ff6... | current:  | created: 2026-04-12T02:13:11.336264 | is_dup: 0 <- 구버전 마킹 예정
+  ID: cc1e09b9... | current: EY | created: 2026-04-18 15:50:09 | is_dup: 1
+
+[이수연] 4개 레코드
+  ID: 116de77f... | current: (주)커뮤니케이션앤컬처 | created: 2026-04-19 00:25:09 | is_dup: 1
+  ID: 8a9f65b6... | current: ㈜파리크라상 | created: 2026-04-19 02:24:12 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 48d84d02... | current: 샘표식품 주식회사 | created: 2026-04-19 02:24:13 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 1fa21725... | current: ㈜골프존카운티 | created: 2026-04-19 02:24:28 | is_dup: 0
+
+[이수영] 2개 레코드
+  ID: 117d38c6... | current: None | created: 2026-04-12T02:15:07.177707 | is_dup: 0 <- 구버전 마킹 예정
+  ID: dc9e9646... | current: 제이슨그룹 | created: 2026-04-19 00:39:06 | is_dup: 1
+
+[이수정] 2개 레코드
+  ID: 73ec2210... | current: None | created: 2026-04-12T02:13:12.195924 | is_dup: 0 <- 구버전 마킹 예정
+  ID: f77c07a1... | current: 이베이코리아 | created: 2026-04-18 16:04:03 | is_dup: 1
+
+[이수진] 3개 레코드
+  ID: 31f22567... | current: SSG닷컴 | created: 2026-04-07 12:27:11.997270 | is_dup: 0 <- 구버전 마킹 예정
+  ID: ae1ac997... | current: 삼성전자 네트워크사업부 | created: 2026-04-18 16:53:18 | is_dup: 1
+  ID: 4c87c85b... | current: 오티디코퍼레이션 | created: 2026-04-19 02:24:37 | is_dup: 0
+
+[이수현] 2개 레코드
+  ID: 32122567... | current: None | created: 2026-04-05 16:13:25.431172 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 0563db19... | current: ㈜한샘 | created: 2026-04-19 02:23:25 | is_dup: 0
+
+[이수호] 2개 레코드
+  ID: 32122567... | current:  | created: 2026-04-07 12:27:32.135300 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 9c6ecca5... | current: 한국IBM | created: 2026-04-19 02:31:40 | is_dup: 1
+
+[이승복] 2개 레코드
+  ID: 96e7347f... | current: (주)오늘식탁 | created: 2026-04-19 01:32:06 | is_dup: 1
+  ID: 3efe8407... | current: 쿠팡 | created: 2026-04-19 01:48:50 | is_dup: 1
+
+[이승재] 3개 레코드
+  ID: f749d59e... | current: ㈜ 지원그룹 | created: 2026-04-18 15:58:45 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 51844988... | current: CJ올리브영 | created: 2026-04-19 00:27:19 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 7c724031... | current: 블루칩씨앤에스 | created: 2026-04-19 02:24:51 | is_dup: 0
+
+[이승호] 3개 레코드
+  ID: 32e22567... | current:  | created: 2026-04-05 16:13:34.178039 | is_dup: 0 <- 구버전 마킹 예정
+  ID: f4ccce71... | current: 삼성전자 | created: 2026-04-18 17:13:18 | is_dup: 1
+  ID: 6ea1324a... | current: (주)카카오엔터프라이즈 | created: 2026-04-19 01:29:08 | is_dup: 0
+
+[이승환] 3개 레코드
+  ID: 31f22567... | current: 부동산 조각투자 플랫폼 | created: 2026-04-07 12:27:10.032382 | is_dup: 1
+  ID: d52fdb8c... | current: 주식회사 펀블 | created: 2026-04-18 17:26:24 | is_dup: 1
+  ID: 32b40688... | current: 넷마블(주) | created: 2026-04-19 00:46:15 | is_dup: 1
+
+[이아름] 3개 레코드
+  ID: b1395402... | current: (주)LG유플러스 | created: 2026-04-18 15:29:34 | is_dup: 1
+  ID: 38bdfea0... | current: 한국IBM(주) | created: 2026-04-18 16:01:43 | is_dup: 1
+  ID: 4adbea3a... | current: IBM | created: 2026-04-18 17:38:49 | is_dup: 0
+
+[이영도] 2개 레코드
+  ID: 32e22567... | current:  | created: 2026-04-05 16:13:34.942501 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 8e4b53e0... | current: 소셜인베스팅랩 | created: 2026-04-18 17:45:29 | is_dup: 1
+
+[이영재] 2개 레코드
+  ID: 32e22567... | current: Samsung Electronics | created: 2026-04-05 16:13:35.097960 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 7bb2086f... | current: 삼성전자 | created: 2026-04-18 17:13:30 | is_dup: 1
+
+[이영진] 2개 레코드
+  ID: 31f22567... | current: LG화학 | created: 2026-04-07 12:27:12.749053 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 49215a6c... | current: 동문건설 | created: 2026-04-19 01:17:47 | is_dup: 0
+
+[이영한] 2개 레코드
+  ID: 32022567... | current: DENTONS LEE., PS. | created: 2026-04-07 12:27:24.846658 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 5c1dd4d2... | current: BAE, KIM & LEE., LLC. | created: 2026-04-19 00:30:00 | is_dup: 1
+
+[이예지] 3개 레코드
+  ID: 31f22567... | current:  | created: 2026-04-07 12:27:09.637801 | is_dup: 1
+  ID: 28ea8bed... | current: 펫프렌즈 | created: 2026-04-18 16:33:53 | is_dup: 1
+  ID: 7f331e0c... | current: ㈜서중물류 | created: 2026-04-19 02:24:54 | is_dup: 1
+
+[이요한] 4개 레코드
+  ID: 8c2120e7... | current: 코아시아 | created: 2026-04-12T02:12:33.070792 | is_dup: 1
+  ID: 25eb6fbe... | current: 코스닥시장본부 | created: 2026-04-18 15:20:22 | is_dup: 1
+  ID: 5c2f54e4... | current: (주)멋쟁이사자처럼 | created: 2026-04-19 00:49:16 | is_dup: 1
+  ID: 20181d8c... | current: Linewalks | created: 2026-04-19 01:18:01 | is_dup: 1
+
+[이용준] 2개 레코드
+  ID: 31f22567... | current: KAIST | created: 2026-04-07 12:27:12.162689 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 65bd6fc7... | current: Citigroup | created: 2026-04-19 01:18:08 | is_dup: 1
+
+[이용진] 3개 레코드
+  ID: 32022567... | current:  | created: 2026-04-07 12:27:26.870386 | is_dup: 1
+  ID: e396bcdd... | current: 엠투커뮤니티 | created: 2026-04-19 00:56:12 | is_dup: 0 <- 구버전 마킹 예정
+  ID: a7318593... | current: 주식회사 파파모빌리티 | created: 2026-04-19 01:18:22 | is_dup: 1
+
+[이용화] 3개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:11.421895 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 55b85ecd... | current: 29CM | created: 2026-04-18 15:39:17 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 9f629db8... | current: Fanding | created: 2026-04-18 15:50:34 | is_dup: 0
+
+[이욱] 2개 레코드
+  ID: 32122567... | current: ㈜디지트론 | created: 2026-04-05 16:13:25.553366 | is_dup: 0 <- 구버전 마킹 예정
+  ID: be567f14... | current: 네이처글루텍 | created: 2026-04-19 02:25:21 | is_dup: 0
+
+[이유진] 4개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:15.232611 | is_dup: 1
+  ID: e1bdf436... | current: 주식회사 푸드나무 | created: 2026-04-18 15:43:56 | is_dup: 1
+  ID: fd855201... | current: 미상 | created: 2026-04-19 01:18:26 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 3c4d257f... | current: (주)카카오스타일 | created: 2026-04-19 01:28:12 | is_dup: 1
+
+[이윤경] 5개 레코드
+  ID: 32122567... | current: None | created: 2026-04-05 16:13:28.770518 | is_dup: 1
+  ID: 33522567... | current: EY컨설팅 | created: 2026-04-05 16:13:38.706868 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 972fad46... | current: 삼정KPMG컨설팅 | created: 2026-04-19 01:37:02 | is_dup: 1
+  ID: cdb8ed79... | current: 프리랜서 | created: 2026-04-19 02:25:25 | is_dup: 1
+  ID: 5da9134f... | current: 나이키코리아 | created: 2026-04-19 02:25:30 | is_dup: 0
+
+[이은봉] 2개 레코드
+  ID: 32e22567... | current:  | created: 2026-04-05 16:13:37.327776 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 6b27512c... | current: Uniqconn | created: 2026-04-18 16:17:31 | is_dup: 1
+
+[이은솔] 2개 레코드
+  ID: ba5c72d0... | current: 롯데쇼핑 e커머스 사업본부 | created: 2026-04-12T02:13:20.587730 | is_dup: 0 <- 구버전 마킹 예정
+  ID: f1f7d5ad... | current: (주) 롯데쇼핑 e커머스 사업본부 홈쇼핑팀 | created: 2026-04-18 16:12:20 | is_dup: 1
+
+[이은수] 3개 레코드
+  ID: 32122567... | current: ㈜고향식품 | created: 2026-04-05 16:13:29.068514 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:26.531991 | is_dup: 1
+  ID: 3d9e7cf4... | current: 연성정밀화학 | created: 2026-04-19 02:25:48 | is_dup: 0
+
+[이은지] 8개 레코드
+  ID: 32122567... | current: PT. Multi One Plus | created: 2026-04-05 16:13:23.320175 | is_dup: 1
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:24.091742 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 79c4f9b0... | current: Birdview (Hwahae App.) | created: 2026-04-18 15:20:54 | is_dup: 0 <- 구버전 마킹 예정
+  ID: c380f313... | current: 블랭크코퍼레이션 | created: 2026-04-18 16:27:20 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 602cecdd... | current: 동원홈푸드 | created: 2026-04-18 17:42:57 | is_dup: 0 <- 구버전 마킹 예정
+  ID: b486372b... | current: 동아출판 | created: 2026-04-19 01:15:42 | is_dup: 1
+  ID: 1b777211... | current: 한샘 | created: 2026-04-19 01:19:19 | is_dup: 1
+  ID: 8511d84c... | current: 쥴릭파마코리아 | created: 2026-04-19 02:25:59 | is_dup: 0
+
+[이의종] 3개 레코드
+  ID: 32022567... | current: ㈜ 뉴트리션코트 | created: 2026-04-07 12:27:24.798613 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:27.151480 | is_dup: 1
+  ID: 602ef805... | current: ㈜캘리스코 | created: 2026-04-19 01:19:02 | is_dup: 1
+
+[이자연] 2개 레코드
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:31.906590 | is_dup: 1
+  ID: 888133ff... | current: 한덕화학 | created: 2026-04-19 02:25:57 | is_dup: 0
+
+[이장훈] 2개 레코드
+  ID: 32122567... | current: ㈜게임빌 | created: 2026-04-05 16:13:23.745297 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:30.716656 | is_dup: 1
+
+[이재구] 2개 레코드
+  ID: 31f22567... | current:  | created: 2026-04-07 12:27:14.329821 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 116ffe59... | current: B팩토리 | created: 2026-04-18 17:46:20 | is_dup: 1
+
+[이재규] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:18.697696 | is_dup: 0 <- 구버전 마킹 예정
+  ID: f432f03c... | current: 법무법인(유한) 태평양 | created: 2026-04-19 00:30:06 | is_dup: 1
+
+[이재영] 2개 레코드
+  ID: 31f22567... | current: Alchera | created: 2026-04-07 12:27:07.912011 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 7d1ea159... | current: Hyundai Mobis | created: 2026-04-18 17:03:36 | is_dup: 0
+
+[이재용] 2개 레코드
+  ID: 32122567... | current: 동원그룹 동원엔터프라이즈 | created: 2026-04-05 16:13:24.516099 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 069551c6... | current: Wisebirds | created: 2026-04-12 07:51:13 | is_dup: 1
+
+[이재하] 2개 레코드
+  ID: 9a9f1e38... | current: 래티스 | created: 2026-04-12 07:49:34 | is_dup: 1
+  ID: 7f1005a9... | current: 포스트보이저 | created: 2026-04-19 01:35:14 | is_dup: 1
+
+[이재희] 3개 레코드
+  ID: 32122567... | current: 마이크로필터 | created: 2026-04-05 16:13:24.502217 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:30.354242 | is_dup: 1
+  ID: 2083462e... | current: ㈜조비 | created: 2026-04-19 02:26:15 | is_dup: 0
+
+[이정균] 2개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:38.275560 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 37c8f2ac... | current: 법무법인(유)율촌 | created: 2026-04-23 16:03:59 | is_dup: 1
+
+[이정기] 2개 레코드
+  ID: 32022567... | current: 굿스플로 | created: 2026-04-07 12:27:18.844907 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 6211f991... | current: 힙합퍼 | created: 2026-04-19 00:31:02 | is_dup: 1
+
+[이정민] 5개 레코드
+  ID: 31f22567... | current: (주)레몬헬스케어 | created: 2026-04-07 12:27:15.140932 | is_dup: 0 <- 구버전 마킹 예정
+  ID: c987b8cc... | current: ㈜보이지 | created: 2026-04-18 15:54:32 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 150f8fc0... | current: SK실트론(주) | created: 2026-04-18 16:12:39 | is_dup: 1
+  ID: 2689885c... | current: 현대제철 멕시코법인 | created: 2026-04-19 01:18:51 | is_dup: 1
+  ID: f89971a6... | current: 미상 | created: 2026-04-19 02:26:10 | is_dup: 0
+
+[이정우] 4개 레코드
+  ID: 31f22567... | current:  | created: 2026-04-07 12:27:09.903185 | is_dup: 1
+  ID: f8e915d1... | current: 디셈버앤컴퍼니(핀트) | created: 2026-04-18 16:34:00 | is_dup: 1
+  ID: 653ce7e6... | current: 씨제이올리브네트웍스㈜ | created: 2026-04-19 00:15:28 | is_dup: 0 <- 구버전 마킹 예정
+  ID: f0728481... | current: LG이노텍 | created: 2026-04-19 02:26:32 | is_dup: 1
+
+[이정윤] 3개 레코드
+  ID: 32022567... | current: UPRISE, Inc. | created: 2026-04-07 12:27:25.082231 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 995c7bcc... | current: 애드웹커뮤니케이션 | created: 2026-04-19 01:15:57 | is_dup: 1
+  ID: 9ff24129... | current: 미상 | created: 2026-04-19 02:26:25 | is_dup: 0
+
+[이정한] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:33.196771 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 40ec5314... | current: 네이버(주) | created: 2026-04-18 16:30:42 | is_dup: 1
+
+[이정호] 3개 레코드
+  ID: 32022567... | current: 교원크리에이티브 | created: 2026-04-07 12:27:16.404573 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:17.959382 | is_dup: 1
+  ID: 325d7f5d... | current: 미상 | created: 2026-04-19 01:19:27 | is_dup: 1
+
+[이정환] 3개 레코드
+  ID: 32e22567... | current: ㈜대일이노텍 | created: 2026-04-05 16:13:31.694029 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 519a4199... | current: 쿠팡(주) | created: 2026-04-19 00:05:15 | is_dup: 1
+  ID: b9297dec... | current: 미상 | created: 2026-04-19 01:19:28 | is_dup: 0
+
+[이종화] 2개 레코드
+  ID: 627d155e... | current: Afrofood | created: 2026-04-18 15:39:37 | is_dup: 0 <- 구버전 마킹 예정
+  ID: f05b1ff9... | current: Lambda256 | created: 2026-04-23 16:01:41 | is_dup: 1
+
+[이주성] 2개 레코드
+  ID: 32022567... | current:  | created: 2026-04-07 12:27:16.682767 | is_dup: 0 <- 구버전 마킹 예정
+  ID: e832bafc... | current: 엔씨소프트 | created: 2026-04-19 01:19:56 | is_dup: 1
+
+[이주연] 3개 레코드
+  ID: 32122567... | current: THE BODY SHOP | created: 2026-04-05 16:13:27.731882 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: None | created: 2026-04-05 16:13:29.881310 | is_dup: 1
+  ID: 3d552f1f... | current: 프렉스 | created: 2026-04-19 02:26:52 | is_dup: 0
+
+[이주영] 3개 레코드
+  ID: 31f22567... | current: SK(주) | created: 2026-04-07 12:27:09.171325 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 269b9d8c... | current: 서현회계법인 | created: 2026-04-19 01:02:52 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 59392913... | current: 신한아이타스 | created: 2026-04-19 02:26:37 | is_dup: 0
+
+[이주원] 6개 레코드
+  ID: 31f22567... | current:  | created: 2026-04-07 12:27:12.784727 | is_dup: 1
+  ID: 32022567... | current: 메가존클라우드 | created: 2026-04-07 12:27:20.081843 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: 메가존 | created: 2026-04-07 12:27:27.959632 | is_dup: 1
+  ID: 084cf8c4... | current: 삼성전자(주) | created: 2026-04-18 16:54:07 | is_dup: 1
+  ID: d589ff49... | current: (주)블랭크코퍼레이션 | created: 2026-04-19 00:59:11 | is_dup: 0 <- 구버전 마킹 예정
+  ID: e7ba4527... | current: 샘표식품 주식회사 | created: 2026-04-19 02:26:56 | is_dup: 0
+
+[이주형] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:34.709728 | is_dup: 0 <- 구버전 마킹 예정
+  ID: ace84781... | current: 세동 | created: 2026-04-19 01:56:51 | is_dup: 1
+
+[이준호] 3개 레코드
+  ID: 32122567... | current: ㈜엠즈씨드(폴바셋) | created: 2026-04-05 16:13:23.719585 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 16f92588... | current: 모레 | created: 2026-04-18 16:54:20 | is_dup: 1
+  ID: 44980c95... | current: 비씨월드제약 | created: 2026-04-19 01:20:07 | is_dup: 1
+
+[이준화] 2개 레코드
+  ID: 31f22567... | current: BMW 코리아 | created: 2026-04-07 12:27:09.519662 | is_dup: 0 <- 구버전 마킹 예정
+  ID: c28e4cd1... | current: Sun Gallery | created: 2026-04-18 17:40:12 | is_dup: 0
+
+[이지현] 4개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:40.334325 | is_dup: 0 <- 구버전 마킹 예정
+  ID: bf42e259... | current: NVIDIA | created: 2026-04-18 16:07:53 | is_dup: 1
+  ID: a8887e6a... | current: (주)리앤한 | created: 2026-04-19 00:51:32 | is_dup: 1
+  ID: 2640b016... | current: blank Corporation | created: 2026-04-19 01:20:23 | is_dup: 1
+
+[이지훈] 3개 레코드
+  ID: a5ccc1be... | current: All Round Doctors | created: 2026-04-18 15:39:54 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 1ba1e143... | current: 만도 | created: 2026-04-18 17:02:34 | is_dup: 1
+  ID: 569bc8b7... | current: ㈜이카운트 | created: 2026-04-19 02:27:20 | is_dup: 0
+
+[이진봉] 2개 레코드
+  ID: 31f22567... | current: Tourmaline Oil Corp. | created: 2026-04-07 12:27:07.798604 | is_dup: 1
+  ID: 8f326872... | current: 제니스앤컴퍼니 | created: 2026-04-18 17:39:53 | is_dup: 0
+
+[이진섭] 2개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:38.893746 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 80ee43bb... | current: LG이노텍(주) | created: 2026-04-23 15:46:18 | is_dup: 1
+
+[이진숙] 2개 레코드
+  ID: 32e22567... | current: (주) 고고밴코리아 | created: 2026-04-05 16:13:32.823778 | is_dup: 0 <- 구버전 마킹 예정
+  ID: f1a650fc... | current: Korea University | created: 2026-04-19 01:20:27 | is_dup: 1
+
+[이진원] 2개 레코드
+  ID: 8033a80b... | current: Babitalk | created: 2026-04-12 07:50:08 | is_dup: 1
+  ID: c5394306... | current: 삼성전자(주) | created: 2026-04-19 01:00:39 | is_dup: 1
+
+[이진주] 2개 레코드
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:30.403445 | is_dup: 0 <- 구버전 마킹 예정
+  ID: c67453f1... | current: 경성문화사 | created: 2026-04-19 02:27:20 | is_dup: 1
+
+[이진혁] 2개 레코드
+  ID: 15b51fe7... | current:  | created: 2026-04-12T02:13:11.953209 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 93bdc4e2... | current: Kearney Korea LLC | created: 2026-04-18 16:02:03 | is_dup: 1
+
+[이진호] 2개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:11.917682 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 19ee4fad... | current: 미상 | created: 2026-04-18 16:54:32 | is_dup: 1
+
+[이태검] 2개 레코드
+  ID: 31f22567... | current:  | created: 2026-04-07 12:27:14.585916 | is_dup: 1
+  ID: 3dc75a09... | current: 상상인증권 | created: 2026-04-18 16:20:43 | is_dup: 0
+
+[이태경] 2개 레코드
+  ID: 87cc51b4... | current: CYBERLOGITEC | created: 2026-04-19 02:27:30 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 785e7629... | current: (주)LG화학 | created: 2026-04-23 15:46:35 | is_dup: 1
+
+[이학주] 2개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:08.435596 | is_dup: 0 <- 구버전 마킹 예정
+  ID: c3de36ce... | current: ㈜바이오플렉스 | created: 2026-04-18 17:21:17 | is_dup: 0
+
+[이현석] 4개 레코드
+  ID: 32122567... | current: 효성첨단소재㈜ | created: 2026-04-07 12:27:27.556382 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:31.044766 | is_dup: 1
+  ID: 2f610dce... | current: (주)그레이고 | created: 2026-04-19 01:20:50 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 66730a9e... | current: 대방건설주식회사 | created: 2026-04-19 02:28:00 | is_dup: 0
+
+[이현수] 2개 레코드
+  ID: 32e22567... | current: 인텔리안테크놀로지스 | created: 2026-04-05 16:13:34.235494 | is_dup: 1
+  ID: c9de900e... | current: 두산에너빌리티 | created: 2026-04-18 16:15:52 | is_dup: 1
+
+[이현우] 6개 레코드
+  ID: 32122567... | current: None | created: 2026-04-05 16:13:22.706765 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32e22567... | current: KH바텍 | created: 2026-04-05 16:13:34.045178 | is_dup: 1
+  ID: 8d6db4d1... | current: dHolicCommerce | created: 2026-04-19 00:07:52 | is_dup: 1
+  ID: 8d445665... | current: 협진커넥터 | created: 2026-04-19 02:28:00 | is_dup: 0 <- 구버전 마킹 예정
+  ID: eabab926... | current: 메리츠증권 | created: 2026-04-19 02:28:21 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 11f5e47b... | current: ㈜코스틸 | created: 2026-04-19 02:28:30 | is_dup: 0
+
+[이현재] 2개 레코드
+  ID: 8eebb1d4... | current: 가비아 | created: 2026-04-12T02:14:37.046056 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 16263b03... | current: 가비아(gabia) | created: 2026-04-19 00:07:33 | is_dup: 1
+
+[이형덕] 2개 레코드
+  ID: 31f22567... | current: SK hynix | created: 2026-04-07 12:27:16.057604 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 70bb1859... | current: Samsung Electronics | created: 2026-04-18 16:15:19 | is_dup: 0
+
+[이혜영] 2개 레코드
+  ID: ae405f4e... | current: ㈜더블유컨셉코리아 | created: 2026-04-19 00:25:20 | is_dup: 1
+  ID: 9cb53e78... | current: ㈜버드뷰 | created: 2026-04-19 00:28:27 | is_dup: 0
+
+[이호석] 2개 레코드
+  ID: cf6f1c20... | current: meliz | created: 2026-04-18 16:39:05 | is_dup: 1
+  ID: 4e58aac1... | current: 롯데정보통신(주) | created: 2026-04-19 00:51:02 | is_dup: 0
+
+[이효성] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:21.228920 | is_dup: 0 <- 구버전 마킹 예정
+  ID: c4a44f2f... | current: 대방건설㈜ | created: 2026-04-19 01:21:01 | is_dup: 0
+
+[임승환] 2개 레코드
+  ID: 32122567... | current: 전자부품연구원 | created: 2026-04-05 16:13:23.086787 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: None | created: 2026-04-05 16:13:29.026534 | is_dup: 1
+
+[임재현] 2개 레코드
+  ID: 07d757af... | current:  | created: 2026-04-12T02:12:53.734186 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 066ac042... | current: 웨딩북 | created: 2026-04-18 15:33:56 | is_dup: 1
+
+[임지은] 2개 레코드
+  ID: 32e22567... | current: Roche Diagnostics Korea | created: 2026-04-05 16:13:34.123537 | is_dup: 0 <- 구버전 마킹 예정
+  ID: a202538a... | current: 로슈 | created: 2026-04-18 16:39:25 | is_dup: 1
+
+[임훈] 2개 레코드
+  ID: 31f22567... | current: Aergo | created: 2026-04-07 12:27:08.177038 | is_dup: 0 <- 구버전 마킹 예정
+  ID: eed716d5... | current: Blocko | created: 2026-04-18 16:19:50 | is_dup: 1
+
+[장성민] 2개 레코드
+  ID: 32122567... | current: (주) 희성소재 | created: 2026-04-05 16:13:26.182110 | is_dup: 0 <- 구버전 마킹 예정
+  ID: c49ce32d... | current: 삼성엔지니어링㈜ | created: 2026-04-19 02:29:24 | is_dup: 0
+
+[장수빈] 2개 레코드
+  ID: 4708dd37... | current: 헬로스 | created: 2026-04-19 01:52:34 | is_dup: 1
+  ID: b67f2c64... | current: 미상 | created: 2026-04-19 01:54:18 | is_dup: 0
+
+[장수영] 2개 레코드
+  ID: 32122567... | current: 델피콤 | created: 2026-04-05 16:13:27.803345 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 87cc32dc... | current: (주)뷰티허브코리아 | created: 2026-04-19 02:29:38 | is_dup: 0
+
+[장윤희] 2개 레코드
+  ID: 31f22567... | current: Mantra on View Hotel | created: 2026-04-07 12:27:07.583947 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 6648efea... | current: Mantra on View Hotel (Accor) | created: 2026-04-18 17:43:10 | is_dup: 1
+
+[장주호] 2개 레코드
+  ID: 32e22567... | current: ㈜크레디트라인 | created: 2026-04-05 16:13:37.596865 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 5c1e57ee... | current: 와이즈케어 | created: 2026-04-19 01:03:23 | is_dup: 1
+
+[장준영] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:32.059334 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 71a2faf7... | current: 금융결제원 | created: 2026-04-18 16:37:00 | is_dup: 0
+
+[장태순] 2개 레코드
+  ID: 46904bb6... | current: 라이엔캐쳐스 | created: 2026-04-18 16:07:38 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 34c31b12... | current: 라이앤캐처스(Rye&Catchers) | created: 2026-04-18 17:29:45 | is_dup: 1
+
+[장한별] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:32.624233 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 11898cfd... | current: 미상 | created: 2026-04-19 01:21:36 | is_dup: 0
+
+[장한수] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:36.558002 | is_dup: 0 <- 구버전 마킹 예정
+  ID: ad5162e1... | current: 미상 | created: 2026-04-19 00:36:47 | is_dup: 0
+
+[장현준] 2개 레코드
+  ID: 32122567... | current: 인우코퍼레이션 | created: 2026-04-05 16:13:23.757266 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 2498407c... | current: 진성메카시스템 | created: 2026-04-19 02:29:31 | is_dup: 0
+
+[전경하] 2개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:40.994308 | is_dup: 0 <- 구버전 마킹 예정
+  ID: a8cfea32... | current: CJ제일제당(주) | created: 2026-04-18 15:18:57 | is_dup: 1
+
+[전승민] 2개 레코드
+  ID: 32122567... | current: 비테스코테크놀로지스코리아 | created: 2026-04-05 16:13:27.018244 | is_dup: 1
+  ID: 0b73bf84... | current: 현대모비스(주) | created: 2026-04-19 01:37:47 | is_dup: 0
+
+[전유완] 2개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:14.483899 | is_dup: 0 <- 구버전 마킹 예정
+  ID: abe35d13... | current: 제이엘케이 | created: 2026-04-18 17:21:40 | is_dup: 0
+
+[전재문] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:24.715016 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 50ccfa32... | current: 부릉 (메쉬코리아) | created: 2026-04-19 00:18:29 | is_dup: 0
+
+[전정하] 2개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:40.596310 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 43bb392b... | current: (주)네오위즈 | created: 2026-04-19 00:45:06 | is_dup: 1
+
+[전진수] 2개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:11.903050 | is_dup: 0 <- 구버전 마킹 예정
+  ID: dd20ad1f... | current: 개인 활동 | created: 2026-04-19 00:04:51 | is_dup: 0
+
+[전효준] 2개 레코드
+  ID: 32e22567... | current: 네이버클라우드 | created: 2026-04-05 16:13:31.398699 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 76abf5a2... | current: 네이버클라우드(NAVER Cloud) | created: 2026-04-18 16:33:17 | is_dup: 0
+
+[정노을] 2개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:44.107247 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 59c0669d... | current: (주)리앤한 | created: 2026-04-19 00:59:17 | is_dup: 1
+
+[정동일] 2개 레코드
+  ID: b9696214... | current: LG Display | created: 2026-04-18 15:30:57 | is_dup: 1
+  ID: bfc3446e... | current: Bluebird | created: 2026-04-18 15:42:27 | is_dup: 0
+
+[정민영] 2개 레코드
+  ID: 31f22567... | current: MilkyWay | created: 2026-04-07 12:27:10.651280 | is_dup: 0 <- 구버전 마킹 예정
+  ID: a241ebd0... | current: Rakuten Inc. | created: 2026-04-18 16:19:57 | is_dup: 1
+
+[정민희] 2개 레코드
+  ID: c94cba22... | current: 법무법인(유한)태평양 | created: 2026-04-19 00:30:03 | is_dup: 1
+  ID: fbb264fe... | current: 법무법인(유)태평양 | created: 2026-04-19 00:57:05 | is_dup: 1
+
+[정보민] 3개 레코드
+  ID: 32122567... | current: None | created: 2026-04-05 16:13:24.746527 | is_dup: 1
+  ID: 33522567... | current: SK(주) | created: 2026-04-05 16:13:41.091925 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 551c5808... | current: SK 주식회사 C&C | created: 2026-04-19 02:31:29 | is_dup: 1
+
+[정선영] 2개 레코드
+  ID: 32122567... | current: 삼성전자 무선사업부 | created: 2026-04-05 16:13:28.198240 | is_dup: 1
+  ID: fddb3d77... | current: 미라콤아이앤씨 | created: 2026-04-19 01:50:18 | is_dup: 1
+
+[정수현] 2개 레코드
+  ID: 27487f20... | current: 더현대 서울 | created: 2026-04-19 00:47:41 | is_dup: 1
+  ID: 73b9ac43... | current: 그린클라우딩스 | created: 2026-04-19 01:22:55 | is_dup: 0
+
+[정승진] 2개 레코드
+  ID: 32022567... | current: Seoul Semiconductor Europe GmbH | created: 2026-04-07 12:27:19.214609 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 79c0f977... | current: Korea Trade Investment Promotion Agency KOTRA | created: 2026-04-19 01:22:56 | is_dup: 1
+
+[정영훈] 3개 레코드
+  ID: 31f22567... | current: 우아한형제들 | created: 2026-04-07 12:27:13.079119 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 0b8231dd... | current: 현대로템 | created: 2026-04-18 16:55:56 | is_dup: 1
+  ID: c07e58f6... | current: 우아한형제들(배달의민족) | created: 2026-04-19 00:09:54 | is_dup: 1
+
+[정유진] 3개 레코드
+  ID: 6c2b460d... | current: GC녹십자의료재단 | created: 2026-04-18 16:08:31 | is_dup: 0 <- 구버전 마킹 예정
+  ID: b41101f1... | current: Coupang | created: 2026-04-19 00:05:38 | is_dup: 1
+  ID: eb925188... | current: ㈜YNK미디어-한세그룹 | created: 2026-04-19 02:31:54 | is_dup: 0
+
+[정윤재] 2개 레코드
+  ID: 32022567... | current: ㈜삼원가든(SG다인힐) | created: 2026-04-07 12:27:20.347540 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 2c388bc6... | current: 유젠 | created: 2026-04-19 02:32:14 | is_dup: 1
+
+[정윤정] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:20.898230 | is_dup: 0 <- 구버전 마킹 예정
+  ID: f85800ba... | current: ㈜어센틱금융그룹 | created: 2026-04-19 00:16:41 | is_dup: 0
+
+[정일석] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:33.241463 | is_dup: 0 <- 구버전 마킹 예정
+  ID: d160410e... | current: 미상 | created: 2026-04-19 02:32:07 | is_dup: 0
+
+[정주현] 2개 레코드
+  ID: 31f22567... | current: (주)넥스트플레이어 | created: 2026-04-07 12:27:12.467691 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 69a9c7a8... | current: (주)한샘 | created: 2026-04-19 00:25:40 | is_dup: 1
+
+[정준수] 3개 레코드
+  ID: 32122567... | current: 크로넥스㈜ | created: 2026-04-05 16:13:28.322018 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32022567... | current: 신도리코 | created: 2026-04-07 12:27:21.411048 | is_dup: 1
+  ID: ad9b992c... | current: 신도리코(신도테크노) | created: 2026-04-19 01:23:52 | is_dup: 1
+
+[정준영] 3개 레코드
+  ID: 32e22567... | current: ㈜코바스 | created: 2026-04-05 16:13:36.935363 | is_dup: 1
+  ID: a4559f77... | current: A.T Kearney | created: 2026-04-19 00:13:53 | is_dup: 1
+  ID: e60b1316... | current: ㈜씨에스피코리아 | created: 2026-04-19 02:32:26 | is_dup: 0
+
+[정지은] 2개 레코드
+  ID: c867ea0e... | current: HYBE | created: 2026-04-18 15:24:30 | is_dup: 1
+  ID: 564bbc14... | current: 펄어비스 | created: 2026-04-18 16:32:12 | is_dup: 1
+
+[정진만] 2개 레코드
+  ID: c29ef8bc... | current: None | created: 2026-04-12T02:15:28.713308 | is_dup: 0 <- 구버전 마킹 예정
+  ID: fb52ffe0... | current: 엔오비즈 | created: 2026-04-19 02:15:59 | is_dup: 1
+
+[정진우] 2개 레코드
+  ID: 32022567... | current: 메드트로닉코리아 | created: 2026-04-07 12:27:24.015268 | is_dup: 0 <- 구버전 마킹 예정
+  ID: a733f33f... | current: 주식회사 아이스크리에이티브 | created: 2026-04-18 16:17:54 | is_dup: 0
+
+[정진현] 2개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:39.050754 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 1f1c4723... | current: 안진회계법인 | created: 2026-04-23 16:03:17 | is_dup: 1
+
+[정한아] 3개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:18.282247 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 2c6aba15... | current: 게이즈 / 셀라랩 | created: 2026-04-12T02:15:40.743500 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 60e5ef95... | current: 게이즈 | created: 2026-04-19 01:23:52 | is_dup: 1
+
+[정현정] 2개 레코드
+  ID: 32022567... | current: N,E,W (Next Entertainment World) | created: 2026-04-07 12:27:25.582061 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 7341bce1... | current: Next Entertainment World | created: 2026-04-19 01:23:48 | is_dup: 1
+
+[정호진] 3개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:08.735557 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 49ecac53... | current: 에스비아이코스머니 | created: 2026-04-18 15:57:00 | is_dup: 0 <- 구버전 마킹 예정
+  ID: fbd645c8... | current: 고영테크놀로지 | created: 2026-04-18 16:57:24 | is_dup: 0
+
+[정효원] 2개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:13.696735 | is_dup: 0 <- 구버전 마킹 예정
+  ID: ebe8991f... | current: SFA반도체㈜ | created: 2026-04-18 15:39:08 | is_dup: 0
+
+[조난영] 2개 레코드
+  ID: 31f22567... | current: 엠큐그룹 | created: 2026-04-07 12:27:14.950374 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 52aafc99... | current: 엠큐그룹(엠큐네트웍스㈜, 엠큐로지스틱스㈜, 엠큐디벨롭먼트홀딩스 주식회사) | created: 2026-04-18 17:07:52 | is_dup: 1
+
+[조만재] 2개 레코드
+  ID: 32e22567... | current:  | created: 2026-04-05 16:13:36.767499 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 357a127d... | current: 삼성전자 | created: 2026-04-18 17:13:52 | is_dup: 1
+
+[조명훈] 2개 레코드
+  ID: 32122567... | current: 남양유업 | created: 2026-04-05 16:13:27.525034 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: None | created: 2026-04-05 16:13:29.056490 | is_dup: 1
+
+[조문호] 3개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:20.793870 | is_dup: 1
+  ID: 3ac8c6ff... | current: ㈜서울반도체 | created: 2026-04-19 00:23:16 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 50350d9d... | current: 효원시스템 | created: 2026-04-19 02:32:43 | is_dup: 0
+
+[조성문] 2개 레코드
+  ID: 07e474a7... | current: 티엘케미칼 | created: 2026-04-19 01:33:46 | is_dup: 1
+  ID: 7f8a6336... | current: ㈜대림산업 | created: 2026-04-19 02:32:55 | is_dup: 1
+
+[조영승] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:31.769365 | is_dup: 0 <- 구버전 마킹 예정
+  ID: afb03a23... | current: 미상 | created: 2026-04-19 02:32:59 | is_dup: 0
+
+[조재현] 3개 레코드
+  ID: 32e22567... | current: 태화기업 창원공장 | created: 2026-04-05 16:13:32.327224 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:30.831657 | is_dup: 1
+  ID: 86cad964... | current: 미상 | created: 2026-04-19 02:33:13 | is_dup: 0
+
+[조진구] 2개 레코드
+  ID: 31f22567... | current: 넥스쳐 | created: 2026-04-07 12:27:11.142511 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 9b596100... | current: 넥스쳐 (구 파티게임즈) | created: 2026-04-18 17:05:20 | is_dup: 1
+
+[조하준] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:34.250011 | is_dup: 0 <- 구버전 마킹 예정
+  ID: fdf7dedd... | current: 미상 | created: 2026-04-19 02:33:10 | is_dup: 0
+
+[조한길] 2개 레코드
+  ID: 32122567... | current:  | created: 2026-04-05 16:13:23.649983 | is_dup: 0 <- 구버전 마킹 예정
+  ID: e8972e06... | current: ㈜세명테크 | created: 2026-04-19 02:20:05 | is_dup: 1
+
+[조현주] 2개 레코드
+  ID: 32022567... | current: 위메프 | created: 2026-04-07 12:27:23.774444 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 4c46ba7e... | current: 롯데e커머스 | created: 2026-04-19 01:40:35 | is_dup: 0
+
+[조형준] 2개 레코드
+  ID: 32122567... | current: 잉크테크 | created: 2026-04-05 16:13:27.541103 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 60433ef8... | current: Unilever Korea | created: 2026-04-18 16:38:54 | is_dup: 1
+
+[주기홍] 2개 레코드
+  ID: 32e22567... | current: 중앙회계법인 | created: 2026-04-05 16:13:36.279738 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 48c6e904... | current: 회계법인 길인 | created: 2026-04-19 02:33:21 | is_dup: 0
+
+[주민선] 2개 레코드
+  ID: 32022567... | current: LINE | created: 2026-04-07 12:27:18.967645 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 7c620fc5... | current: 컴파트너스 | created: 2026-04-19 00:21:07 | is_dup: 0
+
+[주수연] 2개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:07.928402 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 8651628d... | current: CGV | created: 2026-04-18 15:45:59 | is_dup: 1
+
+[주현] 2개 레코드
+  ID: 32022567... | current: Asia Innovations Group/업라이브 | created: 2026-04-07 12:27:23.565845 | is_dup: 1
+  ID: 6c8729f8... | current: ㈜모두투어네트워크 | created: 2026-04-19 01:25:14 | is_dup: 0
+
+[지경애] 2개 레코드
+  ID: 32022567... | current:  | created: 2026-04-07 12:27:21.681088 | is_dup: 1
+  ID: e669ce10... | current: 메트로폴리탄(주) | created: 2026-04-19 01:56:35 | is_dup: 0
+
+[지수현] 2개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:42.348303 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 60e5b0d1... | current: (주)우리카드 | created: 2026-04-19 01:12:06 | is_dup: 1
+
+[진민정] 2개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:40.139787 | is_dup: 0 <- 구버전 마킹 예정
+  ID: ad59ac5c... | current: 카카오 | created: 2026-04-23 16:03:05 | is_dup: 1
+
+[진은지] 2개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:43.768757 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 5bb0f633... | current: (주)LG유플러스 | created: 2026-04-18 15:30:17 | is_dup: 1
+
+[차승규] 2개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:38.465611 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 37700d04... | current: 삼정KPMG컨설팅 | created: 2026-04-19 01:02:13 | is_dup: 1
+
+[최경석] 2개 레코드
+  ID: 6c1cd6ad... | current: LG전자 | created: 2026-04-19 02:33:52 | is_dup: 0 <- 구버전 마킹 예정
+  ID: e1c3233d... | current: SK텔레콤(주) | created: 2026-04-23 15:47:31 | is_dup: 1
+
+[최병권] 2개 레코드
+  ID: 72f03103... | current: 삼성전자 | created: 2026-04-18 17:14:19 | is_dup: 1
+  ID: ed9ecfc2... | current: SK하이닉스 | created: 2026-04-19 02:34:01 | is_dup: 1
+
+[최서원] 2개 레코드
+  ID: 8e1fa75f... | current: AWS | created: 2026-04-18 15:34:24 | is_dup: 0 <- 구버전 마킹 예정
+  ID: e5a3011a... | current: Consulting Firm | created: 2026-04-18 16:35:28 | is_dup: 1
+
+[최승훈] 2개 레코드
+  ID: 32122567... | current: 매드업 | created: 2026-04-07 12:27:30.682784 | is_dup: 0 <- 구버전 마킹 예정
+  ID: cf32dace... | current: ㈜남영비비안 | created: 2026-04-19 02:34:35 | is_dup: 0
+
+[최영환] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:26.498079 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 2894ff7f... | current: 잇츠한불 | created: 2026-04-19 01:26:10 | is_dup: 0
+
+[최용훈] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:20.131188 | is_dup: 0 <- 구버전 마킹 예정
+  ID: c4f6dd4c... | current: 시그네틱스 | created: 2026-04-19 00:22:55 | is_dup: 1
+
+[최우승] 2개 레코드
+  ID: 31f22567... | current: 쌍용자동차(주) | created: 2026-04-07 12:27:12.619136 | is_dup: 0 <- 구버전 마킹 예정
+  ID: ce22a127... | current: ㈜한화/기계 | created: 2026-04-18 17:41:03 | is_dup: 1
+
+[최원기] 2개 레코드
+  ID: 31f22567... | current: 스트라드비젼 서울 | created: 2026-04-07 12:27:10.714104 | is_dup: 0 <- 구버전 마킹 예정
+  ID: e4926c8a... | current: 스트라드비젼 | created: 2026-04-18 16:59:05 | is_dup: 1
+
+[최유진] 2개 레코드
+  ID: e3b79b81... | current: 스마일게이트 홀딩스 | created: 2026-04-19 01:05:19 | is_dup: 1
+  ID: 1c49fa1d... | current: (주)시간아 | created: 2026-04-19 01:46:29 | is_dup: 1
+
+[최윤식] 2개 레코드
+  ID: 32122567... | current: ㈜이디야커피 | created: 2026-04-05 16:13:27.705158 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 3c8348af... | current: None | created: 2026-04-12 07:53:25 | is_dup: 1
+
+[최윤화] 2개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:13.108357 | is_dup: 0 <- 구버전 마킹 예정
+  ID: f2d7367d... | current: IMS 모빌리티 | created: 2026-04-18 17:25:42 | is_dup: 0
+
+[최인준] 2개 레코드
+  ID: 17ebbaf2... | current: None | created: 2026-04-12 07:52:09 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 3d486978... | current: C-SITE / PT.WOOSHIN | created: 2026-04-19 01:45:30 | is_dup: 0
+
+[최재원] 2개 레코드
+  ID: 32122567... | current: ㈜NHN벅스 | created: 2026-04-05 16:13:30.166209 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 585e6b13... | current: 한성기업 | created: 2026-04-19 02:34:26 | is_dup: 0
+
+[최정우] 2개 레코드
+  ID: 32122567... | current: 메타비스타 | created: 2026-04-05 16:13:27.638817 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 1f6d6e1b... | current: 줌인터넷(주) | created: 2026-04-18 17:46:01 | is_dup: 1
+
+[최정은] 3개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:43.240699 | is_dup: 1
+  ID: b2666325... | current: (주)엔씨소프트 | created: 2026-04-19 01:10:24 | is_dup: 1
+  ID: 2602960f... | current: 네오펙트 | created: 2026-04-19 02:34:28 | is_dup: 0
+
+[최종욱] 3개 레코드
+  ID: 32122567... | current: None | created: 2026-04-05 16:13:23.159708 | is_dup: 1
+  ID: 4b4303ce... | current: (주)경신홀딩스 | created: 2026-04-19 00:32:54 | is_dup: 1
+  ID: 6a0474cc... | current: ㈜볼빅 | created: 2026-04-19 02:35:00 | is_dup: 1
+
+[최진호] 3개 레코드
+  ID: 32122567... | current: None | created: 2026-04-05 16:13:27.478198 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: 삼성전기 | created: 2026-04-05 16:13:29.009995 | is_dup: 1
+  ID: 259f2489... | current: 한국몰렉스 | created: 2026-04-19 02:35:03 | is_dup: 0
+
+[최하빈] 4개 레코드
+  ID: 31f22567... | current: NH투자(주) | created: 2026-04-07 12:27:07.598936 | is_dup: 1
+  ID: 32022567... | current:  | created: 2026-04-07 12:27:22.345303 | is_dup: 1
+  ID: e01194f0... | current: 무신사 | created: 2026-04-19 00:58:31 | is_dup: 1
+  ID: 719fc0fa... | current: 야놀자 | created: 2026-04-19 01:09:26 | is_dup: 1
+
+[최현승] 2개 레코드
+  ID: 32e22567... | current: MangoBoost inc. | created: 2026-04-05 16:13:36.751849 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 6703f832... | current: MangoBoost | created: 2026-04-18 17:03:06 | is_dup: 1
+
+[최현철] 2개 레코드
+  ID: 32122567... | current: None | created: 2026-04-05 16:13:28.674573 | is_dup: 0 <- 구버전 마킹 예정
+  ID: b330f761... | current: ㈜대한제당 | created: 2026-04-19 02:35:01 | is_dup: 1
+
+[최희진] 3개 레코드
+  ID: 33522567... | current: None | created: 2026-04-05 16:13:38.632180 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 49aae349... | current: (주)위대한상상 | created: 2026-04-19 01:13:00 | is_dup: 1
+  ID: a352fe66... | current: 한영회계법인 | created: 2026-04-19 01:36:46 | is_dup: 1
+
+[하경력] 2개 레코드
+  ID: 33522567... | current: NH투자(주) | created: 2026-04-05 16:13:41.899598 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 6b4ff8a9... | current: 나무증권 | created: 2026-04-18 17:44:39 | is_dup: 1
+
+[하상훈] 2개 레코드
+  ID: 32122567... | current: 팜스코 | created: 2026-04-07 12:27:29.708034 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:30.419241 | is_dup: 1
+
+[하석민] 2개 레코드
+  ID: dfeb50fc... | current: None | created: 2026-04-12T02:14:48.274060 | is_dup: 0 <- 구버전 마킹 예정
+  ID: c537bdc8... | current: 한양대학교 Computer Vision Lab | created: 2026-04-19 00:12:01 | is_dup: 1
+
+[하정근] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:19.868774 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 2182061f... | current: ㈜야놀자 | created: 2026-04-19 01:35:38 | is_dup: 0
+
+[하진선] 2개 레코드
+  ID: 31f22567... | current:  | created: 2026-04-07 12:27:11.664734 | is_dup: 1
+  ID: c87a2e5e... | current: 신미글로벌 | created: 2026-04-18 16:38:31 | is_dup: 0
+
+[한명규] 2개 레코드
+  ID: 1fcacf69... | current: (주)휴이노 | created: 2026-04-19 00:30:54 | is_dup: 1
+  ID: fe38a4ae... | current: (유)한국캘러웨이골프 | created: 2026-04-19 02:35:27 | is_dup: 0
+
+[한소리] 2개 레코드
+  ID: 32022567... | current: 주식회사 레드로버 | created: 2026-04-07 12:27:16.563927 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 89016fb4... | current: Karrot | created: 2026-04-23 15:51:01 | is_dup: 0
+
+[한아름] 2개 레코드
+  ID: 32122567... | current: ㈜SPC삼립 | created: 2026-04-05 16:13:26.539027 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 924e6301... | current: Ubivelox mobile | created: 2026-04-19 01:36:32 | is_dup: 0
+
+[한원식] 2개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:41.760267 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 0c07f1bc... | current: 콘텐츠웨이브 | created: 2026-04-19 01:12:39 | is_dup: 1
+
+[한정수] 2개 레코드
+  ID: 32122567... | current: None | created: 2026-04-07 12:27:31.732906 | is_dup: 0 <- 구버전 마킹 예정
+  ID: b82444f6... | current: 키스톤마케팅컴퍼니 | created: 2026-04-19 02:35:28 | is_dup: 0
+
+[한종우] 3개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:18.373005 | is_dup: 1
+  ID: acf27a8d... | current: LG유플러스 | created: 2026-04-18 16:06:49 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 78a1b2ec... | current: 엘지유플러스 | created: 2026-04-19 01:48:18 | is_dup: 1
+
+[한지훈] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:34.601118 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 0281b0e6... | current: 미상 | created: 2026-04-19 00:37:04 | is_dup: 0
+
+[한현민] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:32.169469 | is_dup: 0 <- 구버전 마킹 예정
+  ID: ca9d2d3f... | current: ㈜현대그린푸드 | created: 2026-04-19 01:37:12 | is_dup: 1
+
+[허남표] 2개 레코드
+  ID: 33522567... | current: KB데이타시스템 | created: 2026-04-05 16:13:39.739589 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 6147421e... | current: KB국민은행 | created: 2026-04-18 15:27:56 | is_dup: 1
+
+[허대원] 2개 레코드
+  ID: 31f22567... | current: None | created: 2026-04-07 12:27:15.932106 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 01140d41... | current: 토니모리 | created: 2026-04-18 17:22:18 | is_dup: 1
+
+[허란] 2개 레코드
+  ID: 33522567... | current: 두산퓨얼셀(주) | created: 2026-04-05 16:13:42.266620 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 1aa032a1... | current: 두산 | created: 2026-04-19 00:48:39 | is_dup: 1
+
+[허성우] 2개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:40.420981 | is_dup: 1
+  ID: c85c62b1... | current: KIM & CHANG | created: 2026-04-19 00:41:51 | is_dup: 1
+
+[허수영] 2개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:39.980813 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 7b595cf5... | current: (주)CJ ENM | created: 2026-04-23 15:45:47 | is_dup: 1
+
+[허유리] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:35.028061 | is_dup: 0 <- 구버전 마킹 예정
+  ID: cd5bbb28... | current: 미상 | created: 2026-04-19 02:35:45 | is_dup: 0
+
+[허유진] 2개 레코드
+  ID: a1de28c1... | current: (주)슈퍼캣 | created: 2026-04-19 01:30:12 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 27f295b9... | current: Ernst and Young, Han Young Accounting Firm | created: 2026-04-19 01:37:33 | is_dup: 1
+
+[현석준] 2개 레코드
+  ID: 32e22567... | current: None | created: 2026-04-05 16:13:36.906609 | is_dup: 0 <- 구버전 마킹 예정
+  ID: bcc7fdf5... | current: 미상 | created: 2026-04-19 02:35:55 | is_dup: 0
+
+[현종민] 2개 레코드
+  ID: 03c61a85... | current: GS건설(주) | created: 2026-04-18 15:21:14 | is_dup: 1
+  ID: 03486d5c... | current: GS Engineering & Construction | created: 2026-04-18 16:07:08 | is_dup: 0
+
+[홍기재] 2개 레코드
+  ID: 31f22567... | current: POSTECH | created: 2026-04-07 12:27:13.250287 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 34ca8c72... | current: Ceres Technologies | created: 2026-04-18 16:59:21 | is_dup: 1
+
+[홍원균] 2개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:44.365758 | is_dup: 1
+  ID: d621f638... | current: (주)kt | created: 2026-04-18 15:28:52 | is_dup: 1
+
+[홍전일] 2개 레코드
+  ID: 32022567... | current: 뷰노 | created: 2026-04-07 12:27:17.417779 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:25.113559 | is_dup: 1
+
+[홍정화] 2개 레코드
+  ID: 31f22567... | current: Lezhin | created: 2026-04-07 12:27:08.364276 | is_dup: 1
+  ID: 32022567... | current: 레진엔터테인먼트 | created: 2026-04-07 12:27:25.039733 | is_dup: 1
+
+[홍주영] 2개 레코드
+  ID: 32022567... | current:  | created: 2026-04-07 12:27:20.881849 | is_dup: 1
+  ID: 6581caaa... | current: ㈜보고펫 | created: 2026-04-19 01:34:53 | is_dup: 0
+
+[홍현종] 2개 레코드
+  ID: 32022567... | current:  | created: 2026-04-07 12:27:23.079258 | is_dup: 0 <- 구버전 마킹 예정
+  ID: cc47683b... | current: CJ | created: 2026-04-19 01:40:23 | is_dup: 1
+
+[황수진] 2개 레코드
+  ID: 33522567... | current: (주)카카오페이 | created: 2026-04-05 16:13:38.937150 | is_dup: 0 <- 구버전 마킹 예정
+  ID: e9c65d68... | current: 삼성SDS(주) | created: 2026-04-19 01:29:28 | is_dup: 1
+
+[황순범] 2개 레코드
+  ID: 31f22567... | current: 우버 코리아 | created: 2026-04-07 12:27:08.769541 | is_dup: 0 <- 구버전 마킹 예정
+  ID: f3afde38... | current: 우버코리아테크놀로지(유) | created: 2026-04-18 17:30:43 | is_dup: 1
+
+[황우성] 2개 레코드
+  ID: 609fd0df... | current: 현진제업(주) | created: 2026-04-19 02:19:18 | is_dup: 1
+  ID: 0b3a4310... | current: 미상 | created: 2026-04-19 02:36:18 | is_dup: 0
+
+[황윤희] 2개 레코드
+  ID: 32e22567... | current: MySmartHouse | created: 2026-04-05 16:13:32.315267 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 4bf9d8d7... | current: ㈜마이스마트하우스 | created: 2026-04-18 16:34:52 | is_dup: 0
+
+[황재우] 2개 레코드
+  ID: 33522567... | current:  | created: 2026-04-05 16:13:43.929310 | is_dup: 0 <- 구버전 마킹 예정
+  ID: bd36dc3c... | current: (주)스포카 | created: 2026-04-19 01:06:13 | is_dup: 1
+
+[황종은] 2개 레코드
+  ID: 32022567... | current: ㈜발렌타인 | created: 2026-04-07 12:27:17.303222 | is_dup: 0 <- 구버전 마킹 예정
+  ID: 1c7afd72... | current: KOTRA Chicago 무역관 | created: 2026-04-19 00:50:17 | is_dup: 0
+
+[황한훈] 2개 레코드
+  ID: 32022567... | current: None | created: 2026-04-07 12:27:18.506366 | is_dup: 0 <- 구버전 마킹 예정
+  ID: b060d503... | current: ㈜스마트스코어/㈜맥케이슨 | created: 2026-04-19 01:52:11 | is_dup: 0
+
