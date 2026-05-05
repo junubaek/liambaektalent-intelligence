@@ -151,6 +151,51 @@ REPEL_MULTIPLIER = {
     "All":     0.7,   # 기본값
 }
 
+def get_company_boost(company_name, conditions, conn):
+    try:
+        import json
+        # 회사명 정규화 (간단 버전)
+        normalized = company_name.strip() if company_name else ''
+        for suffix in ['(주)', '㈜', '(유)', '주식회사']:
+            normalized = normalized.replace(suffix, '').strip()
+        
+        cur = conn.cursor()
+        cur.execute('''
+            SELECT scale, sector, inferred_skills, traffic_scale, major_events
+            FROM company_intelligence
+            WHERE normalized_name = ?
+            OR company_name = ?
+        ''', (normalized, company_name))
+        row = cur.fetchone()
+        if not row:
+            return 0.0
+        
+        scale, sector, skills_json, traffic, events_json = row
+        skills = json.loads(skills_json or '{}')
+        
+        boost = 0.0
+        skill_names = [c.get('skill','') for c in conditions]
+        
+        # 대용량 트래픽 관련 검색 + 대규모 트래픽 회사
+        traffic_nodes = {'Back-end_Development', 'Kubernetes', 'DevOps', 
+                        'Distributed_Systems', 'Cloud_Infrastructure', 'MSA'}
+        if traffic in ('대규모', '초대규모') and traffic_nodes & set(skill_names):
+            boost += 0.03
+        
+        # 금융 관련 검색 + 금융/컨설팅 회사
+        finance_nodes = {'Treasury_Management', 'Corporate_Finance', 
+                        'Financial_Management', 'M_and_A', 'Valuation'}
+        if sector in ('금융', '컨설팅') and finance_nodes & set(skill_names):
+            boost += 0.03
+        
+        # 글로벌 대기업 보너스
+        if scale == '글로벌대기업':
+            boost += 0.01
+        
+        return min(boost, 0.05)
+    except:
+        return 0.0
+
 def get_effective_gravity(node, seniority):
     field = UNIFIED_GRAVITY_FIELD.get(node, {}).copy()
     
@@ -1934,6 +1979,15 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         program_boost = prog_signal * 0.05  # Max +0.05 for '최종합격'
         
         final_score = (norm_v * w_v) + (norm_g * w_g) + (norm_b * w_b) + (depth_score * w_d) + program_boost
+        
+        # [Signal 4] Company Intelligence Boost
+        row_dict = db_metadata_map.get(cid, {})
+        c_boost = get_company_boost(
+            row_dict.get('current_company', ''),
+            conds,
+            conn
+        )
+        final_score += c_boost
         
         name = id_to_name.get(cid, cache_map.get(cid, {}).get('name_kr', cid))
         final_candidates.append({
