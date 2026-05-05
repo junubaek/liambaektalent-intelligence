@@ -59,8 +59,36 @@ def ensure_db():
         os.makedirs(os.path.dirname(db_path), exist_ok=True)
     
     try:
-        import urllib.request
-        urllib.request.urlretrieve(url, db_path)
+        import requests
+        import urllib.parse
+        
+        parsed = urllib.parse.urlparse(url)
+        params = urllib.parse.parse_qs(parsed.query)
+        file_id = params.get('id', [None])[0]
+        
+        if not file_id:
+            # Fallback to direct urlretrieve if no ID can be parsed
+            import urllib.request
+            urllib.request.urlretrieve(url, db_path)
+        else:
+            base_url = "https://drive.google.com/uc?export=download"
+            session = requests.Session()
+            response = session.get(base_url, params={"id": file_id}, stream=True)
+            
+            token = None
+            for key, value in response.cookies.items():
+                if key.startswith("download_warning"):
+                    token = value
+                    break
+            
+            if token:
+                response = session.get(base_url, params={"id": file_id, "confirm": token}, stream=True)
+            
+            with open(db_path, "wb") as f:
+                for chunk in response.iter_content(32768):
+                    if chunk:
+                        f.write(chunk)
+
         print(f"DB 다운로드 완료: {os.path.getsize(db_path)//1024//1024}MB")
         # DB가 새로 다운로드되면 인덱스도 재구성해야 함
         if os.path.exists('bm25_index.pkl'): os.remove('bm25_index.pkl')
