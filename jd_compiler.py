@@ -1691,12 +1691,15 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     logger.info(f"\n\n[V9 Hybrid Search] Payload: {prompt} / Session: {session_id}")
     
     # [Robustness] Ensure seniority is a string for gravity score dict lookups
-    if isinstance(seniority, list):
+    if not seniority or seniority == '무관' or seniority == 'All':
+        seniority = "All"
+    elif isinstance(seniority, list):
         if not seniority or "무관" in seniority or "All" in seniority or "ALL" in seniority:
             seniority = "All"
         else:
-            # Pick the highest/first relevant seniority
-            seniority = seniority[0]
+            seniority = str(seniority[0]).upper()
+    else:
+        seniority = str(seniority).upper()
 
     # 0. Load Cache Maps
     from jd_compiler import get_candidates_from_cache
@@ -1983,7 +1986,8 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
             'birth_year': c_info.get('birth_year', ''),
             'google_drive_url': c_info.get('google_drive_url', ''),
             'program_stage': c_info.get('program_stage', None),
-            'seniority': 'SENIOR' if (c_info.get('total_years') or 0) >= 10 else ('MIDDLE' if (c_info.get('total_years') or 0) >= 5 else 'JUNIOR')
+            'seniority': 'SENIOR' if (c_info.get('total_years') or 0) >= 10 else ('MIDDLE' if (c_info.get('total_years') or 0) >= 5 else 'JUNIOR'),
+            '연차등급': 'SENIOR' if (c_info.get('total_years') or 0) >= 10 else ('MIDDLE' if (c_info.get('total_years') or 0) >= 5 else 'JUNIOR')
         }
         matched_candidates.append(candidate_obj)
 

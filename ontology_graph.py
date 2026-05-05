@@ -4644,6 +4644,23 @@ if __name__ == "__main__":
 
 
 EXPLICIT_GRAVITY_FIELD = {
+    "Chief_Financial_Officer": {
+        "core_attracts": {
+            "Treasury_Management": 0.9,
+            "Financial_Management": 0.8,
+            "Corporate_Finance": 0.8
+        },
+        "synergy_attracts": {
+            "IPO_Preparation": 0.8,
+            "Financial_Planning": 0.7,
+            "Financial_Reporting": 0.7,
+            "Investor_Relations": 0.8
+        },
+        "repels": {
+            "UX_UI_Design": -0.5,
+            "Brand_Management": -0.4
+        }
+    },
 
     "DevOps": {
         "core_attracts": {
@@ -4919,6 +4936,15 @@ SENIOR_EXPANDED_SYNERGY = {
         "Treasury_Management", "Financial_Planning_and_Analysis",
         "Corporate_Strategic_Planning", "IPO_Preparation_and_Execution",
         "Investor_Relations", "Corporate_Disclosure"
+    ],
+    "Chief_Financial_Officer": [
+        "Treasury_Management",
+        "Financial_Management", 
+        "Corporate_Finance",
+        "IPO_Preparation",
+        "Financial_Planning",
+        "Financial_Reporting",
+        "Investor_Relations"
     ],
 
     # HR ?�?�급

@@ -578,7 +578,7 @@ def api_search_v8_endpoint(req: SearchRequestV5):
         if req_sens and "무관" not in req_sens and "ALL" not in req_sens:
             filtered = []
             for m in res.get("matched", []):
-                val = m.get("연차등급", "확인 요망").upper()
+                val = (m.get("연차등급") or m.get("seniority") or "확인 요망").upper()
                 if val in req_sens:
                     filtered.append(m)
             res["matched"] = filtered
