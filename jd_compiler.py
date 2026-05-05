@@ -2002,6 +2002,12 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         
         if cid == 'f5875fc2-99aa-4605-9742-5ec93f4cd51a':
             logger.info(f"DEBUG [김은형] v_norm:{norm_v:.4f} g_norm:{norm_g:.4f} b_norm:{norm_b:.4f} depth:{depth_score:.4f} boost:{c_boost:.4f} final:{final_score:.4f}")
+            logger.info(f"DEBUG [김은형] Raw V-Score: {v_scores.get(cid)} | Max V: {max_v} | In v_scores: {cid in v_scores}")
+            logger.info(f"DEBUG [김은형] v_scores sample: {list(v_scores.keys())[:5]}")
+        
+        # Debug for Rank 1 (based on previous run it was 김종민, but let's just find the max score)
+        if final_score > 0.75:
+            logger.info(f"DEBUG [POTENTIAL RANK 1] {cid} v_norm:{norm_v:.4f} g_norm:{norm_g:.4f} b_norm:{norm_b:.4f} depth:{depth_score:.4f} boost:{c_boost:.4f} final:{final_score:.4f}")
 
         name = id_to_name.get(cid, cache_map.get(cid, {}).get('name_kr', cid))
         final_candidates.append({

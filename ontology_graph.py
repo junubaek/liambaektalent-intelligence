@@ -2979,6 +2979,11 @@ EDGES: list[
     ("Product_Manager", "Product_Core",      "part_of", 1.5),
     ("Product_Owner",   "Product_Manager",    "similar_to", 1.0),
     ("Product_Owner",   "Business_Development",        "related_to", 1.0),
+    # --- Product_Owner 시너지 강화 (2026-05-06) ---
+    ("Product_Owner", "Product_Service_Planning", "related_to", 2.5),
+    ("Product_Owner", "Data_Driven_Decision", "related_to", 1.5),
+    ("Product_Owner", "User_Research", "related_to", 1.3),
+
     ("Product_Manager", "Service_Planning",         "depends_on", 2.0),
     ("Product_Manager", "Frontend",          "related_to", 1.0),
     ("Product_Manager", "Backend",           "related_to", 1.0),
