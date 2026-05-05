@@ -1843,42 +1843,42 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         else:
             raise e
 
-    for r in rows_t:
-        cid = str(r[0])
-        name_val = r[1]
-        raw_text_val = r[2]
-        
-        raw_text_map[cid] = raw_text_val
-        if (cid not in id_to_name or not id_to_name.get(cid)) and name_val:
-            id_to_name[cid] = name_val
-        
-        # Map SQLite fields to the format expected by the frontend
-        import json
-        try:
-            careers = json.loads(r[7]) if r[7] else []
-        except:
-            careers = []
-        try:
-            education = json.loads(r[8]) if r[8] else []
-        except:
-            education = []
+        for r in rows_t:
+            cid = str(r[0])
+            name_val = r[1]
+            raw_text_val = r[2]
+            
+            raw_text_map[cid] = raw_text_val
+            if (cid not in id_to_name or not id_to_name.get(cid)) and name_val:
+                id_to_name[cid] = name_val
+            
+            # Map SQLite fields to the format expected by the frontend
+            import json
+            try:
+                careers = json.loads(r[7]) if r[7] else []
+            except:
+                careers = []
+            try:
+                education = json.loads(r[8]) if r[8] else []
+            except:
+                education = []
 
-        db_metadata_map[cid] = {
-            'id': cid,
-            'name_kr': name_val,
-            'sector': r[3] or '미분류',
-            'current_company': r[4] or '미상',
-            'total_years': r[5] or 0,
-            'profile_summary': r[6] or '',
-            'careers': careers,
-            'education': education,
-            'email': r[9] or '',
-            'phone': r[10] or '',
-            'birth_year': r[11] or '',
-            'google_drive_url': r[12] or '',
-            'program_signal': r[13] or 0.0,
-            'program_stage': r[14] or None
-        }
+            db_metadata_map[cid] = {
+                'id': cid,
+                'name_kr': name_val,
+                'sector': r[3] or '미분류',
+                'current_company': r[4] or '미상',
+                'total_years': r[5] or 0,
+                'profile_summary': r[6] or '',
+                'careers': careers,
+                'education': education,
+                'email': r[9] or '',
+                'phone': r[10] or '',
+                'birth_year': r[11] or '',
+                'google_drive_url': r[12] or '',
+                'program_signal': r[13] or 0.0,
+                'program_stage': r[14] or None
+            }
     finally:
         conn.close()
 
