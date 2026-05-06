@@ -5118,6 +5118,32 @@ EDGES: list[
     # ## 중복 노드 통합
     ("자금_Treasury", "Treasury_Management", "similar_to", 2),
     ("Performance_Marketing", "Digital_Campaign_Management", "related_to", 1),
+
+    # ══════════════════════════════════════════════
+    # PO / PM / 서비스기획 연결 보강 (2026-05-07)
+    # ══════════════════════════════════════════════
+    ("Product_Owner", "Service_Planning", "related_to", 2),
+    ("Product_Owner", "Project_Manager", "related_to", 1.5),
+    ("Product_Owner", "Platform_Product_Owner", "similar_to", 1.8),
+    ("Product_Owner", "Product_Management", "similar_to", 1.8),
+    ("Project_Manager", "Service_Planning", "related_to", 1.8),
+    ("Project_Manager", "Product_Service_Planning", "related_to", 1.5),
+    ("Project_Manager", "Product_Owner", "related_to", 1.5),
+    ("Project_Manager", "Stakeholder_Management", "depends_on", 2),
+    ("Project_Manager", "Requirement_Definition", "depends_on", 1.8),
+    ("Project_Manager", "Data_Driven_Decision", "related_to", 1.3),
+    ("Service_Planning", "Product_Service_Planning", "similar_to", 1.8),
+    ("Service_Planning", "User_Research", "depends_on", 1.8),
+    ("Service_Planning", "Data_Driven_Decision", "related_to", 1.5),
+    ("Service_Planning", "UIUX_Design", "related_to", 1.3),
+    ("Service_Planning", "Platform_Service_Planning", "similar_to", 1.5),
+    ("Product_Core", "Service_Planning", "depends_on", 1.8),
+    ("Product_Core", "Product_Owner", "part_of", 1.5),
+    ("Platform_Service_Planning", "Product_Owner", "related_to", 1.5),
+    ("Platform_Service_Planning", "Service_Planning", "similar_to", 1.5),
+    ("Product_Management", "Product_Owner", "similar_to", 1.8),
+    ("Product_Management", "Service_Planning", "related_to", 1.8),
+    ("Product_Management", "Project_Manager", "related_to", 1.5),
 ]
 
 # ── 3. 그래프 빌드 함수 ──────────────────────────────────────────────────────
