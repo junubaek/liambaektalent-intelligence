@@ -20,7 +20,7 @@ class SkillGraphEngine:
                 self.v7_mapping[str(k)] = v
             for n in self.graph.nodes:
                 self.v7_mapping[n] = n
-            print(f"[OK] V7 Graph Engine Loaded Natively: {self.graph.number_of_nodes()} Nodes")
+            print(f"[OK] V7 Graph Engine Loaded Natively: {self.graph.number_of_nodes()} Nodes, {self.graph.number_of_edges()} Edges")
 
     def build_graph(self, parsed_nodes):
         """

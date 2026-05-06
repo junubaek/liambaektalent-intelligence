@@ -219,13 +219,16 @@ from jd_compiler import api_search_v9
 def login(req: LoginRequest):
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
-    user = conn.cursor().execute("SELECT * FROM users WHERE id = ?", (req.id,)).fetchone()
+    user = conn.cursor().execute("SELECT * FROM users WHERE LOWER(id) = LOWER(?)", (req.id,)).fetchone()
+    print(f"[DEBUG] Login attempt: {req.id}, User found: {bool(user)}")
     if not user:
         conn.close()
         raise HTTPException(status_code=401, detail="Invalid username or password")
     
     # Check password
-    if not bcrypt.checkpw(req.password.encode('utf-8'), user['password_hash'].encode('utf-8')):
+    is_correct = bcrypt.checkpw(req.password.encode('utf-8'), user['password_hash'].encode('utf-8'))
+    print(f"[DEBUG] Password match for {req.id}: {is_correct}")
+    if not is_correct:
         conn.close()
         raise HTTPException(status_code=401, detail="Invalid username or password")
     

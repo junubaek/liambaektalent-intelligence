@@ -22,7 +22,7 @@ def search_json(filepath, target):
     except Exception as e:
         print(f"Error reading {filepath}: {e}")
 
-targets = ['마켓로보', '김광우', '조예원', '남현승', '정소윤']
+targets = ['홍주영', '이재구', '김병환', '이영도', '신권철', '정한아', '김승현', '윤정민', '이정우', 'kakao']
 files = [
     'headhunting_engine/analytics/reparsed_pool_v1.3_elite.json',
     'headhunting_engine/analytics/reparsed_pool_v1.2.json',

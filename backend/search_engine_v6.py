@@ -18,7 +18,7 @@ VAULT_DIR = os.path.join(ROOT_DIR, "obsidian_vault")
 print("[V6] Bootstrapping Memory Alias Graph for fast text-to-node routing...")
 parser = ObsidianParser(VAULT_DIR)
 parsed_nodes = parser.parse_all_nodes()
-graph_engine = SkillGraphEngine()
+graph_engine = SkillGraphEngine(use_v7=True)
 graph_engine.build_graph(parsed_nodes)
 snapper = CandidateSnapper(graph_engine)
 

@@ -7,7 +7,7 @@ import bcrypt
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
-DB_PATH = "candidates.db"
+DB_PATH = os.environ.get("DB_PATH", "candidates.db")
 
 def get_password_hash(password):
     salt = bcrypt.gensalt()
@@ -62,6 +62,9 @@ def init_db():
         INSERT INTO users (id, name, role, password_hash, is_admin, settings_json)
         VALUES (?, ?, ?, ?, ?, ?)
         """, ('liam', 'Liam (Admin)', 'System Administrator', get_password_hash('qorwnsdn87'), 1, default_settings_json))
+    else:
+        logger.info("Updating user: liam password to default")
+        cursor.execute("UPDATE users SET password_hash = ? WHERE id = 'liam'", (get_password_hash('qorwnsdn87'),))
 
     # Add User B
     cursor.execute("SELECT id FROM users WHERE id = 'userB'")

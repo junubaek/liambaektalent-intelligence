@@ -109,6 +109,14 @@ def ensure_db():
             os.remove(cache_file)
             print("JSON 캐시 삭제 완료: candidates_cache_jd.json")
 
+    # Ensure Auth DB is initialized (Users table, default users)
+    try:
+        import init_auth_db
+        print("Auth DB 초기화 확인 중...")
+        init_auth_db.init_db()
+    except Exception as e:
+        print(f"Auth DB 초기화 실패: {e}")
+
 def ensure_indexes():
     """Ensure BM25 and Ontology Vector indexes exist."""
     import os
