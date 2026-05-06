@@ -3569,6 +3569,52 @@ NODE_ALIASES: dict[str, list[str]] = {
         "협업 필터링",
         "행렬 분해"
     ],
+
+    # ══ Collective Communication + Network Systems aliases ══
+    "Collective_Communication": [
+        "CCL",
+        "Collective Communication",
+        "집합 통신",
+        "분산 통신 라이브러리",
+        "NCCL",
+        "RCCL",
+        "AllReduce",
+        "AllGather",
+        "분산 학습 통신",
+        "inter-GPU 통신",
+        "collective comm",
+        "통신 라이브러리",
+        "통신 최적화",
+        "inter-node communication",
+        "노드간 통신",
+        "칩간 통신"
+    ],
+    "Network_Systems_Programming": [
+        "네트워크 시스템 프로그래밍",
+        "NIC 드라이버",
+        "network driver",
+        "고성능 네트워킹",
+        "kernel bypass networking",
+        "DPDK 개발",
+        "패킷 처리",
+        "packet processing",
+        "네트워크 스택",
+        "데이터 플레인",
+        "data plane",
+        "EFA",
+        "InfiniBand",
+        "RoCE",
+        "RDMA 프로그래밍"
+    ],
+    "DPDK": [
+        "DPDK",
+        "Data Plane Development Kit",
+        "dpdk",
+        "PMD",
+        "Poll Mode Driver",
+        "고성능 패킷 처리",
+        "커널 바이패스"
+    ],
 }
 
 # NODE_ALIASES를 CANONICAL_MAP에 자동 병합
@@ -6218,6 +6264,34 @@ EDGES: list[
     ("AI_Model_and_Distributed_Training", "Model_Parallelism", "depends_on", 2),
     ("AI_Model_and_Distributed_Training", "Distributed_Training_Inference", "similar_to", 1.8),
     ("AI_Model_and_Distributed_Training", "MLOps", "related_to", 1.5),
+
+    # ══════════════════════════════════════════════
+    # Collective Communication + Network Systems (2026-05-07)
+    # ══════════════════════════════════════════════
+    ("Collective_Communication", "Distributed_Training_Inference", "depends_on", 2),
+    ("Collective_Communication", "LLM_Engineering", "used_in", 1.8),
+    ("Collective_Communication", "Sys_Software", "part_of", 1.8),
+    ("Collective_Communication", "Compiler", "related_to", 1.5),
+    ("Collective_Communication", "NPU_Software_Stack", "related_to", 1.8),
+    ("Collective_Communication", "GPU_Driver", "related_to", 1.5),
+    ("Collective_Communication", "MLOps", "used_in", 1.3),
+    ("Collective_Communication", "NPU", "used_in", 1.8),
+    ("Collective_Communication", "GPGPU", "used_in", 1.8),
+    ("Collective_Communication", "High_Performance_Computing", "depends_on", 1.8),
+    ("Collective_Communication", "SmartNIC", "related_to", 1.5),
+    ("Collective_Communication", "DPDK", "related_to", 1.3),
+    ("Network_Systems_Programming", "Sys_Software", "part_of", 1.8),
+    ("Network_Systems_Programming", "DPDK", "part_of", 2),
+    ("Network_Systems_Programming", "SmartNIC", "related_to", 1.8),
+    ("Network_Systems_Programming", "Collective_Communication", "related_to", 1.5),
+    ("Network_Systems_Programming", "High_Performance_Computing", "related_to", 1.8),
+    ("Network_Systems_Programming", "Firmware_Engineering", "related_to", 1.3),
+    ("DPDK", "Collective_Communication", "related_to", 1.5),
+    ("DPDK", "Network_Systems_Programming", "part_of", 2),
+    ("DPDK", "High_Performance_Computing", "related_to", 1.5),
+    ("DPDK", "Sys_Software", "related_to", 1.5),
+    ("SPDK", "Network_Systems_Programming", "related_to", 1.5),
+    ("SPDK", "Sys_Software", "related_to", 1.5),
 ]
 
 # ── 3. 그래프 빌드 함수 ──────────────────────────────────────────────────────
