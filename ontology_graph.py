@@ -3624,6 +3624,13 @@ for _node, _aliases in NODE_ALIASES.items():
             CANONICAL_MAP[_alias] = _node
 
 
+# NODE_ALIASES를 CANONICAL_MAP에 자동 병합
+for _node, _aliases in NODE_ALIASES.items():
+    for _alias in _aliases:
+        if _alias not in CANONICAL_MAP:
+            CANONICAL_MAP[_alias] = _node
+
+
 # ── 2. Edge 정의 (Expanded Cross-Domain Logic) ─────────────────────────────────────────────────────────────
 EDGES: list[
 
@@ -6292,6 +6299,60 @@ EDGES: list[
     ("DPDK", "Sys_Software", "related_to", 1.5),
     ("SPDK", "Network_Systems_Programming", "related_to", 1.5),
     ("SPDK", "Sys_Software", "related_to", 1.5),
+
+    # ══════════════════════════════════════════════
+    # 척력/인력 설정 + 블랙홀 완화 (2026-05-07)
+    # similar_to: 매우 유사 형제 (0.5~0.9)
+    # related_to: 다른 성격 형제 (0.2~0.4) — 척력에 가까운 중립
+    # ══════════════════════════════════════════════
+    ("Mergers_and_Acquisitions", "IPO_Preparation_and_Execution", "similar_to", 0.6),
+    ("Corporate_M_and_A_Strategy", "M_and_A_Strategy", "similar_to", 0.8),
+    ("Entertainment_M_and_A_Strategy", "M_and_A_Strategy", "similar_to", 0.6),
+    ("Investor_Relations", "IPO_Preparation_and_Execution", "similar_to", 0.6),
+    ("Investor_Relations", "Corporate_Restructuring_Strategy", "related_to", 0.2),
+    ("Global_Business_Development", "Global_Business_Management", "similar_to", 0.6),
+    ("LLM_Serving", "Distributed_Training_Inference", "related_to", 0.3),
+    ("Model_Serving", "Model_Parallelism", "related_to", 0.3),
+    ("Frontier_AI_Research", "MLOps", "related_to", 0.2),
+    ("Cloud_and_Infrastructure_Security", "Security_Architecture_and_Compliance", "similar_to", 0.5),
+    ("Backend_Platform_Engineering", "Backend_Java", "related_to", 0.8),
+    ("Backend_Platform_Engineering", "Backend_Python", "related_to", 0.8),
+    ("Commerce_Backend_Architecture", "Backend_Java", "related_to", 0.8),
+    ("Enterprise_Web_System_Integration", "Backend_Java", "related_to", 0.8),
+    ("SRE_Core", "Kubernetes", "depends_on", 1.5),
+    ("Cloud_Infrastructure", "CI_CD", "related_to", 1.2),
+    ("M_and_A_Cluster", "Mergers_and_Acquisitions", "part_of", 1.8),
+    ("M_and_A_Cluster", "Corporate_M_and_A_Strategy", "part_of", 1.8),
+    ("M_and_A_Cluster", "M_and_A_Strategy", "part_of", 1.8),
+    ("M_and_A_Cluster", "Entertainment_M_and_A_Strategy", "part_of", 1.5),
+    ("M_and_A_Cluster", "Corporate_Strategy", "part_of", 1.5),
+    ("Investment_Strategy_Cluster", "Strategic_Investment", "part_of", 1.8),
+    ("Investment_Strategy_Cluster", "CVC_Strategy", "part_of", 1.8),
+    ("Investment_Strategy_Cluster", "Venture_Capital_Fundraising", "part_of", 1.5),
+    ("Investment_Strategy_Cluster", "Corporate_Strategy", "part_of", 1.5),
+
+    # ══════════════════════════════════════════════
+    # 척력/인력 설정 + 블랙홀 완화 (2026-05-07)
+    # similar_to: 매우 유사 형제 (0.5~0.9)
+    # related_to: 다른 성격 형제 (0.2~0.4) — 척력에 가까운 중립
+    # ══════════════════════════════════════════════
+
+    # ══════════════════════════════════════════════
+    # Collective Communication + Network Systems (2026-05-07)
+    # ══════════════════════════════════════════════
+
+    # ══════════════════════════════════════════════
+    # 순수 SW AI 연구 노드 연결 보강 (2026-05-07)
+    # 네이버/카카오/라인 등 인터넷기업 AI 연구자 커버
+    # ══════════════════════════════════════════════
+
+    # ══════════════════════════════════════════════
+    # AI+반도체 L1/L2/L5 레이어 엣지 보강 (2026-05-07)
+    # ══════════════════════════════════════════════
+
+    # ══════════════════════════════════════════════
+    # PO / PM / 서비스기획 연결 보강 (2026-05-07)
+    # ══════════════════════════════════════════════
 ]
 
 # ── 3. 그래프 빌드 함수 ──────────────────────────────────────────────────────
