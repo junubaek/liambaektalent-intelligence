@@ -3615,6 +3615,79 @@ NODE_ALIASES: dict[str, list[str]] = {
         "고성능 패킷 처리",
         "커널 바이패스"
     ],
+
+    # ══ 법무/변호사 aliases (2026-05-07) ══
+    "Legal_Core": [
+        "법무",
+        "법률",
+        "법무팀",
+        "법무부서",
+        "legal",
+        "법조",
+        "법률 전문가"
+    ],
+    "Legal_Practice": [
+        "변호사",
+        "법무법인",
+        "사내변호사",
+        "계약 검토",
+        "소송",
+        "법률 자문",
+        "attorney",
+        "lawyer",
+        "counsel",
+        "변호사 자격",
+        "법학",
+        "사법시험",
+        "변호사 출신",
+        "로펌"
+    ],
+    "Legal_Compliance": [
+        "법무",
+        "준법",
+        "컴플라이언스",
+        "Compliance",
+        "규제대응",
+        "법적 리스크",
+        "법무 컴플라이언스",
+        "준법감시",
+        "규정 준수",
+        "법규 준수"
+    ],
+    "Corporate_Legal_Counsel": [
+        "사내 법무",
+        "사내 변호사",
+        "법무팀장",
+        "기업 법무",
+        "법률 검토",
+        "투자 계약 자문",
+        "사내 법무 및 규제 대응",
+        "Corporate Legal",
+        "In-house Counsel",
+        "GC",
+        "General Counsel"
+    ],
+    "Litigation": [
+        "소송",
+        "소송 업무",
+        "민사소송",
+        "형사소송",
+        "분쟁 해결",
+        "중재",
+        "litigation",
+        "소송 대리",
+        "법정 업무"
+    ],
+    "Contract_Review": [
+        "계약 검토",
+        "계약서 검토",
+        "계약 관리",
+        "계약 협상",
+        "NDA 검토",
+        "MOU 검토",
+        "contract review",
+        "계약법"
+    ],
 }
 
 # NODE_ALIASES를 CANONICAL_MAP에 자동 병합
@@ -6330,6 +6403,46 @@ EDGES: list[
     ("Investment_Strategy_Cluster", "CVC_Strategy", "part_of", 1.8),
     ("Investment_Strategy_Cluster", "Venture_Capital_Fundraising", "part_of", 1.5),
     ("Investment_Strategy_Cluster", "Corporate_Strategy", "part_of", 1.5),
+
+    # ══════════════════════════════════════════════
+    # 법무/변호사 온톨로지 보강 (2026-05-07)
+    # Legal_Core 허브 신설 + Legal_Practice 연결 강화
+    # ══════════════════════════════════════════════
+    ("Legal_Core", "Legal_Practice", "part_of", 2),
+    ("Legal_Core", "Legal_Compliance", "part_of", 2),
+    ("Legal_Core", "Corporate_Legal_Counsel", "part_of", 2),
+    ("Legal_Core", "Patent_Management", "part_of", 1.8),
+    ("Legal_Core", "Regulatory_Affairs", "part_of", 1.5),
+    ("Legal_Core", "Compliance_Management", "part_of", 1.8),
+    ("Legal_Core", "Labor_Law_Compliance", "part_of", 1.5),
+    ("Legal_Core", "Financial_Compliance", "related_to", 1.3),
+    ("Legal_Practice", "Legal_Compliance", "similar_to", 0.7),
+    ("Legal_Practice", "Corporate_Legal_Counsel", "similar_to", 0.8),
+    ("Legal_Practice", "Contract_Review", "depends_on", 2),
+    ("Legal_Practice", "Litigation", "depends_on", 2),
+    ("Legal_Practice", "Labor_Law_Compliance", "related_to", 0.4),
+    ("Legal_Practice", "Regulatory_Affairs", "related_to", 0.4),
+    ("Legal_Practice", "Financial_Compliance", "related_to", 0.3),
+    ("Legal_Compliance", "Compliance_Management", "similar_to", 0.8),
+    ("Legal_Compliance", "Corporate_Legal_Counsel", "similar_to", 0.6),
+    ("Legal_Compliance", "Financial_Compliance", "related_to", 0.5),
+    ("Legal_Compliance", "Labor_Law_Compliance", "related_to", 0.5),
+    ("Legal_Compliance", "Data_Privacy_and_Compliance", "related_to", 0.4),
+    ("Legal_Compliance", "Regulatory_Affairs", "related_to", 0.5),
+    ("Corporate_Legal_Counsel", "Legal_Practice", "similar_to", 0.8),
+    ("Corporate_Legal_Counsel", "Compliance_Management", "depends_on", 1.5),
+    ("Corporate_Legal_Counsel", "Mergers_and_Acquisitions", "related_to", 0.5),
+    ("Corporate_Legal_Counsel", "IPO_Preparation_and_Execution", "related_to", 0.4),
+    ("Litigation", "Legal_Practice", "part_of", 2),
+    ("Litigation", "Legal_Core", "part_of", 1.8),
+    ("Contract_Review", "Legal_Practice", "part_of", 2),
+    ("Contract_Review", "Legal_Core", "part_of", 1.5),
+    ("Contract_Review", "Mergers_and_Acquisitions", "used_in", 1.3),
+    ("Patent_Management", "Legal_Core", "part_of", 1.8),
+    ("Patent_Management", "Regulatory_Affairs", "related_to", 0.4),
+    ("Regulatory_Affairs", "Legal_Core", "part_of", 1.5),
+    ("Regulatory_Affairs", "Legal_Compliance", "related_to", 0.5),
+    ("Regulatory_Affairs", "Financial_Compliance", "related_to", 0.4),
 
     # ══════════════════════════════════════════════
     # 척력/인력 설정 + 블랙홀 완화 (2026-05-07)
