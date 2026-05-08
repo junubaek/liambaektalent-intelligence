@@ -1719,16 +1719,16 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
 
     # 동적 가중치 계산
     if unknown_ratio < 0.3:
-        # 실험 3 최적값 적용 (키워드 매칭이 원활한 경우)
+        # [실험 6] 최적 가중치 고정 (Peak: 0.35)
         w_v_dynamic = 0.60
         w_g_dynamic = 0.35
         w_b_dynamic = 0.03
         w_d_dynamic = 0.02
     else:
-        # 키워드 미등록 비중이 높은 경우 (벡터 비중 상향)
-        w_d_dynamic = round(0.02 + (unknown_ratio * 0.10), 3)  # 0.02 ~ 0.12
-        w_b_dynamic = round(0.03 + (unknown_ratio * 0.04), 3)  # 0.03 ~ 0.07
-        w_v_dynamic = round(0.68 - (unknown_ratio * 0.08), 3)  # 0.60 ~ 0.68
+        # 키워드 미등록 비중이 높은 경우
+        w_d_dynamic = round(0.02 + (unknown_ratio * 0.10), 3)
+        w_b_dynamic = round(0.03 + (unknown_ratio * 0.04), 3)
+        w_v_dynamic = round(0.58 - (unknown_ratio * 0.08), 3) # 베이스 하향
         w_g_dynamic = round(1.0 - w_v_dynamic - w_b_dynamic - w_d_dynamic, 3)
 
     # weights 파라미터로 외부 주입 시 우선 적용
@@ -1743,7 +1743,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     from neo4j import GraphDatabase
     
     st = time.time()
-    logger.info(f"\n\n[V9 Hybrid Search] Payload: {prompt} / Session: {session_id}")
+    logger.critical(f"\n\nDEBUG [V9-PROMPT-CHECK] Payload: {prompt} / Session: {session_id}")
     
     # [Robustness] Ensure seniority is a string for gravity score dict lookups
     if not seniority or seniority == '무관' or seniority == 'All':
@@ -1760,8 +1760,10 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     from jd_compiler import get_candidates_from_cache
     cand_list = get_candidates_from_cache()
     cache_map = {str(c.get('id', '')): c for c in cand_list}
+    logger.info(f"DEBUG [V9] Step 0: Cache Loaded ({len(cand_list)} candidates)")
     
     # 1. Parse & Expand Query
+    logger.info(f"DEBUG [V9] Step 1: Parsing query...")
     extracted = parse_jd_to_json(prompt)
     conds = extracted.get("conditions", [])
     
@@ -1827,8 +1829,11 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     # 3. Tower 2: Graph Candidates (Skill Match)
     g_matched_ids = []
     target_skills = list(set([c.get("skill") for c in conds if c.get("skill")]))
+    logger.critical(f"DEBUG [V9] --- START GRAPH TOWER ---")
+    logger.critical(f"DEBUG [V9] Extracted Target Skills: {target_skills}")
     if target_skills:
         try:
+            logger.critical(f"DEBUG [V9] Entering Neo4j Session for Graph Match...")
             with driver.session() as session:
                 res_g = session.run("""
                     MATCH (c:Candidate)-[r]->(s:Skill)
@@ -1837,8 +1842,11 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
                 """, target_skills=target_skills)
                 for r in res_g:
                     cid = str(r["id"])
+                    if cid == 'c3d4ee55-266a-44f6-8e66-fb7486be38a8':
+                        logger.critical(f"DEBUG [V9] FOUND CHOI IN GRAPH MATCH! Name: {r['name']}")
                     g_matched_ids.append(cid)
                     id_to_name[cid] = r["name"]
+                logger.critical(f"DEBUG [V9] Graph Tower Matched {len(g_matched_ids)} IDs. Sample: {g_matched_ids[:5]}")
         except Exception as e:
             logger.error(f"[V9] Graph Match Error: {e}")
 
@@ -2002,8 +2010,10 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         
         if cid == 'f5875fc2-99aa-4605-9742-5ec93f4cd51a':
             logger.info(f"DEBUG [김은형] v_norm:{norm_v:.4f} g_norm:{norm_g:.4f} b_norm:{norm_b:.4f} depth:{depth_score:.4f} boost:{c_boost:.4f} final:{final_score:.4f}")
-            logger.info(f"DEBUG [김은형] Raw V-Score: {v_scores.get(cid)} | Max V: {max_v} | In v_scores: {cid in v_scores}")
-            logger.info(f"DEBUG [김은형] v_scores sample: {list(v_scores.keys())[:5]}")
+        
+        if cid == 'c3d4ee55-266a-44f6-8e66-fb7486be38a8':
+            logger.critical(f"DEBUG [CHOI-SCORE] v_norm:{norm_v:.4f} g_norm:{norm_g:.4f} b_norm:{norm_b:.4f} depth:{depth_score:.4f} boost:{c_boost:.4f} final:{final_score:.4f}")
+            logger.critical(f"DEBUG [CHOI-SCORE] Raw V: {v_scores.get(cid, 0):.4f} | Raw G: {final_g_scores.get(cid, 0):.4f}")
         
         # Debug for Rank 1 (based on previous run it was 김종민, but let's just find the max score)
         if final_score > 0.75:

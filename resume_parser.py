@@ -129,10 +129,57 @@ Your task is to analyze the resume and output a precise, structured JSON of the 
         except Exception as e:
             err_str = str(e)
             if "429" in err_str or "Too Many Requests" in err_str:
-                print(f"❌ Resume Parsing Error: {e}")
+                print(f"Resume Parsing Error: {e}")
                 return {}
                 
-            print(f"❌ Resume Parsing Error: {e}")
+            print(f"Resume Parsing Error: {e}")
+            return {}
+
+    def parse_multimodal(self, file_bytes: bytes, mime_type: str) -> dict:
+        """
+        [v7.0] Next-Gen Multimodal Parser (Gemini 2.0/3.0)
+        """
+        prompt = """
+You are the heart of the AI Talent Intelligence OS (v8.0 Master Spec).
+Analyze the attached resume file and output a precise, structured JSON.
+
+[GATE 1: SENIORITY BUCKET]
+- Junior: 0 ~ 4 years
+- Middle: 5 ~ 9 years
+- Senior: 10+ years
+
+[GATE 2: HIERARCHICAL MASTER SECTORS]
+(Use the exact main/sub sector strings as defined in the spec)
+- Main Sectors: [영업 (Sales), 마케팅 (Marketing), HR (Human Resources), 총무 (General Affairs), Finance (재무/회계), STRATEGY (전략), 디자인 (Design), 법무 (Legal), 물류/유통 (Logistics & SCM), MD (Commerce), PRODUCT (제품 기획), DATA (데이터), SW (Software), HW (Hardware), 반도체 (Semiconductor), AI (Artificial Intelligence), 보안 (Security), 기타]
+
+[HALO-ZERO COMPLIANCE RULE]
+- Choose 'Main Sector' ONLY from the list above.
+
+[SCHEMA]
+{
+  "candidate_profile": {
+    "main_sectors": ["List of Main Sectors"],
+    "sub_sectors": ["List of specific Sub Sectors"],
+    "total_years_experience": float,
+    "seniority_bucket": "Junior | Middle | Senior",
+    "context_tags": ["Tech keywords"],
+    "experience_summary": "Numbered list of functional results",
+    "raw_text_full": "Extract as much text as possible from the file and put it here"
+  },
+  "patterns": [
+    {
+      "verb_object": "Verb + Object",
+      "tools": [],
+      "impact": "Quantified result",
+      "depth": "Owned | Led | Applied | Assisted"
+    }
+  ]
+}
+"""
+        try:
+            return self.client.generate_content_from_file(prompt, file_bytes, mime_type)
+        except Exception as e:
+            print(f"Multimodal Parsing Error: {e}")
             return {}
 
     def calculate_quality_score(self, parsed_data: dict) -> dict:

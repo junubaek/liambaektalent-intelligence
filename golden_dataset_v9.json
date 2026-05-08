@@ -1,0 +1,137 @@
+[
+  {
+    "query": "Supply Chain Management Lead",
+    "relevant_ids": [
+      "4372aa93-d449-45e2-acd8-a46af504b8a1"
+    ],
+    "relevant_names": [
+      "이신형"
+    ],
+    "relevance_scores": {
+      "4372aa93-d449-45e2-acd8-a46af504b8a1": 0.6
+    }
+  },
+  {
+    "query": "PR & Communication Manager",
+    "relevant_ids": [
+      "69c34de3-000e-443e-b438-4f1cafb5e1db"
+    ],
+    "relevant_names": [
+      "배유정"
+    ],
+    "relevance_scores": {
+      "69c34de3-000e-443e-b438-4f1cafb5e1db": 0.3
+    }
+  },
+  {
+    "query": "System Software Architect",
+    "relevant_ids": [
+      "04a827ba-635f-4926-bfee-4f5c994acde5"
+    ],
+    "relevant_names": [
+      "김영인"
+    ],
+    "relevance_scores": {
+      "04a827ba-635f-4926-bfee-4f5c994acde5": 1.0
+    }
+  },
+  {
+    "query": "DevOps & Platform Engineer",
+    "relevant_ids": [
+      "0724db06-6275-4856-b21d-fac1c251cec7"
+    ],
+    "relevant_names": [
+      "오원교"
+    ],
+    "relevance_scores": {
+      "0724db06-6275-4856-b21d-fac1c251cec7": 1.0
+    }
+  },
+  {
+    "query": "전력계통 담당",
+    "relevant_ids": [
+      "31f22567-1b6f-816c-ac76-f6ac6c31c2db"
+    ],
+    "relevant_names": [
+      "배문성"
+    ],
+    "relevance_scores": {
+      "31f22567-1b6f-816c-ac76-f6ac6c31c2db": 1.0
+    }
+  },
+  {
+    "query": "Ethernet Verification Engineer",
+    "relevant_ids": [
+      "32022567-1b6f-81ef-a8f5-e3a0cd6dd030"
+    ],
+    "relevant_names": [
+      "강건규"
+    ],
+    "relevance_scores": {
+      "32022567-1b6f-81ef-a8f5-e3a0cd6dd030": 1.0
+    }
+  },
+  {
+    "query": "서버 개발자",
+    "relevant_ids": [
+      "32022567-1b6f-8152-9c8d-c4f8079c01b8",
+      "32e22567-1b6f-8101-ab31-c33a53561a96"
+    ],
+    "relevant_names": [
+      "조재영",
+      "김정기"
+    ],
+    "relevance_scores": {
+      "32022567-1b6f-8152-9c8d-c4f8079c01b8": 1.0,
+      "32e22567-1b6f-8101-ab31-c33a53561a96": 1.0
+    }
+  },
+  {
+    "query": "Cloud Backend Engineer (MLOps)",
+    "relevant_ids": [
+      "31f22567-1b6f-8128-a1c1-ffd6b9ba6db2"
+    ],
+    "relevant_names": [
+      "강동현"
+    ],
+    "relevance_scores": {
+      "31f22567-1b6f-8128-a1c1-ffd6b9ba6db2": 1.0
+    }
+  },
+  {
+    "query": "UIUX 디자이너",
+    "relevant_ids": [
+      "8e4b53e0-5f55-41d7-a311-c43d9727c516"
+    ],
+    "relevant_names": [
+      "이영도"
+    ],
+    "relevance_scores": {
+      "8e4b53e0-5f55-41d7-a311-c43d9727c516": 1.0
+    }
+  },
+  {
+    "query": "Enterprise Sales Manager",
+    "relevant_ids": [
+      "c3d4ee55-266a-44f6-8e66-fb7486be38a8"
+    ],
+    "relevant_names": [
+      "최우성"
+    ],
+    "relevance_scores": {
+      "c3d4ee55-266a-44f6-8e66-fb7486be38a8": 0.6
+    }
+  },
+  {
+    "query": "Partner Alliance Manager",
+    "relevant_ids": [
+      "c3d4ee55-266a-44f6-8e66-fb7486be38a8"
+    ],
+    "relevant_names": [
+      "최우성"
+    ],
+    "relevance_scores": {
+      "c3d4ee55-266a-44f6-8e66-fb7486be38a8": 0.6
+    }
+  }
+]

@@ -19,7 +19,7 @@ def build_emb_text(row):
         idf_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'node_idf.json')
         build_emb_text._idf = json.load(open(idf_path, encoding='utf-8')) if os.path.exists(idf_path) else {}
 
-    # 약어 풀네임
+    # 약어 풀네임 확장
     ABBR_EXPAND = {
         'HBM': 'HBM(High Bandwidth Memory)',
         'CXL': 'CXL(Compute Express Link)',
@@ -36,22 +36,49 @@ def build_emb_text(row):
         expanded_raw = expanded_raw.replace(abbr, full)
 
     # 이 후보자의 노드 추출 + IDF 점수
-    raw_lower = raw.lower()
+    raw_lower = expanded_raw.lower()
     node_scores = {}
     for src, tgt in CANONICAL_LOWER.items():
         if src in raw_lower:
             node_scores[tgt] = build_emb_text._idf.get(tgt, 0)
 
-    # IDF 상위 5개 (변별력 높은 노드 앞에 배치)
+    # IDF 상위 5개
     top5 = sorted(node_scores, key=lambda x: -node_scores[x])[:5]
     top5_block = ' '.join(top5) if top5 else ''
 
+    # [NEW] Heuristic: Clean raw_text to focus on career/experience
+    lines = expanded_raw.split('\n')
+    cleaned_lines = []
+    noise_keywords = ['대학교', '대학원', '고등학교', '병역', '군필', '육군', '해군', '공군', '생년월일', '거주지', '주소']
+    career_start_keywords = ['경력', '주요 업무', 'Career', 'Experience', '이력사항', 'Work History']
+    
+    career_started = False
+    for line in lines:
+        line_s = line.strip()
+        if not line_s: continue
+        
+        # Check if career section starts
+        if any(kw in line_s for kw in career_start_keywords):
+            career_started = True
+            
+        # Filter noise
+        if any(nk in line_s for nk in noise_keywords):
+            continue
+            
+        # If career started, keep more aggressively
+        cleaned_lines.append(line_s)
+
+    final_raw = '\n'.join(cleaned_lines)
+    
     parts = [f'{name} {sector}']
     if top5_block:
         parts.append(top5_block)
     if summary:
         parts.append(summary)
-    parts.append(expanded_raw[:600])
+        parts.append(summary) # Double weight for summary
+    
+    # Append cleaned raw text (up to 800 chars)
+    parts.append(final_raw[:800])
 
     return '\n'.join(parts)
 

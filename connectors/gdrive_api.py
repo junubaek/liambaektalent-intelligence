@@ -127,6 +127,34 @@ class GDriveConnector:
             print(f"GDrive extraction error: {e}")
             return ""
 
+    def download_file(self, gdrive_url):
+        if not gdrive_url:
+            return None, "", ""
+            
+        import re
+        match = re.search(r'/d/([a-zA-Z0-9_-]+)', gdrive_url)
+        if not match:
+            return None, "", ""
+        file_id = match.group(1)
+        
+        try:
+            file_meta = self.service.files().get(fileId=file_id, fields="name, mimeType").execute()
+            name = file_meta.get('name', 'file')
+            mime_type = file_meta.get('mimeType', '')
+            
+            request = self.service.files().get_media(fileId=file_id)
+            fh = io.BytesIO()
+            downloader = MediaIoBaseDownload(fh, request)
+            done = False
+            while not done:
+                status, done = downloader.next_chunk()
+            
+            fh.seek(0)
+            return fh.read(), mime_type, name
+        except Exception as e:
+            print(f"GDrive download error: {e}")
+            return None, "", ""
+
     def upload_file_to_drive(self, file_path, folder_id, duplicate_check=True):
         if not os.path.exists(file_path):
             print(f"File not found: {file_path}")

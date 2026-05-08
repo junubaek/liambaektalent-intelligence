@@ -3,6 +3,9 @@ import json
 import urllib.request
 import urllib.error
 import time
+import google.generativeai as genai
+import tempfile
+import os
 
 class GeminiClient:
     def __init__(self, api_key):
@@ -39,7 +42,7 @@ class GeminiClient:
         """
         [v6.2] Gemini Chat Completion with JSON output.
         """
-        models_to_try = ["gemini-2.5-flash"]
+        models_to_try = [model, "gemini-2.5-flash", "gemini-1.5-flash"]
         
         for m in models_to_try:
             url = f"https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent?key={self.api_key}"
@@ -73,15 +76,61 @@ class GeminiClient:
             except Exception as e:
                 err_str = str(e)
                 if "429" in err_str or "Too Many Requests" in err_str:
-                    print(f"❌ Gemini Chat Completion Error with {m}: limit reached. Falling back to next model.")
+                    print(f"Gemini Chat Completion Error with {m}: limit reached. Falling back to next model.")
                     # If this is not the last model, we just continue to try the next one (like 2.0-flash)
                     continue
                     
-                print(f"❌ Gemini Chat Completion Error with {m}: {e}")
+                print(f"Gemini Chat Completion Error with {m}: {e}")
                 continue
         
-        print(f"❌ All Gemini Chat Models failed.")
+        print(f"All Gemini Chat Models failed.")
         return {}
+
+    def generate_content_from_file(self, prompt: str, file_bytes: bytes, mime_type: str, model_name: str = "gemini-2.5-flash") -> dict:
+        """
+        [v7.0] Multimodal Analysis (PDF/Docx/Image)
+        """
+        genai.configure(api_key=self.api_key)
+        
+        # Mapping common mime types to Gemini supported types if needed
+        # Gemini supports application/pdf, image/*, text/*, application/x-javascript, etc.
+        # For docx, we might need to be careful.
+        
+        try:
+            model = genai.GenerativeModel(model_name)
+            
+            # Use temporary file to upload
+            with tempfile.NamedTemporaryFile(delete=False, suffix=f".{mime_type.split('/')[-1]}") as tmp:
+                tmp.write(file_bytes)
+                tmp_path = tmp.name
+            
+            try:
+                # Upload to Gemini Files API
+                # Note: For small files < 20MB, we can also use inline data, but Files API is more robust for PDFs
+                uploaded_file = genai.upload_file(path=tmp_path, mime_type=mime_type)
+                
+                # Wait for file to be processed if it's large (though usually fast for resumes)
+                # But for now we just try
+                
+                response = model.generate_content(
+                    [prompt, uploaded_file],
+                    generation_config={"response_mime_type": "application/json"}
+                )
+                
+                text = response.text.strip()
+                if text.startswith('```'):
+                    text = text.split('```')[1]
+                    if text.startswith('json'):
+                        text = text[4:]
+                
+                return json.loads(text.strip())
+            finally:
+                if os.path.exists(tmp_path):
+                    os.remove(tmp_path)
+                    
+        except Exception as e:
+            print(f"Gemini Multimodal Error: {e}")
+            return {}
 
     def embed_content(self, text, task_type="RETRIEVAL_DOCUMENT"):
         # 1. If we already know what works, use it
