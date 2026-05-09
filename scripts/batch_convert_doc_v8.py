@@ -19,7 +19,7 @@ def convert_doc_to_docx():
     
     doc_files = sorted([f for f in os.listdir(SOURCE_DIR) if f.lower().endswith(".doc") and not f.startswith("~$")])
     total = len(doc_files)
-    print(f"🚀 Starting conversion of {total} .doc files...")
+    print(f"Starting conversion of {total} .doc files...")
     
     success = 0
     fail = 0
@@ -54,12 +54,12 @@ def convert_doc_to_docx():
             if success % 50 == 0:
                 print(f"  [Progress] {success}/{total} converted...")
         except Exception as e:
-            print(f"  ❌ Error converting {filename}: {e}")
+            print(f"  Error converting {filename}: {e}")
             fail += 1
             # Add to temporary session blacklist if it hangs? No, just log for now.
             
     word.Quit()
-    print(f"\n✨ Conversion Complete!")
+    print(f"\nConversion Complete!")
     print(f"   - Success: {success}")
     print(f"   - Failed: {fail}")
     print(f"   - Saved to: {TARGET_DIR}")
