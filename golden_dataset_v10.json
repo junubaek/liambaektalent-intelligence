@@ -14,13 +14,37 @@
   {
     "query": "General Affairs Manager",
     "relevant_ids": [
-      "31f22567-1b6f-8179-bd0e-cccc2c72aea9"
+      "db752f0f-0f1a-437c-a09d-43c20442ab7b"
     ],
     "relevant_names": [
       "이상헌"
     ],
     "relevance_scores": {
-      "55726c4a-4601-4ee9-87dc-581d15eda75e": 0.8
+      "db752f0f-0f1a-437c-a09d-43c20442ab7b": 1.0
+    }
+  },
+  {
+    "query": "Overseas Sales Manager",
+    "relevant_ids": [
+      "898ea4e0-77d4-46d5-bf4d-c2d5b4a04741"
+    ],
+    "relevant_names": [
+      "이상헌"
+    ],
+    "relevance_scores": {
+      "898ea4e0-77d4-46d5-bf4d-c2d5b4a04741": 1.0
+    }
+  },
+  {
+    "query": "Bioinformatics Engineer",
+    "relevant_ids": [
+      "55726c4a-4601-4ee9-87dc-581d15eda75e"
+    ],
+    "relevant_names": [
+      "이상헌"
+    ],
+    "relevance_scores": {
+      "55726c4a-4601-4ee9-87dc-581d15eda75e": 1.0
     }
   },
   {
@@ -56,7 +80,7 @@
       "홍기재"
     ],
     "relevance_scores": {
-      "34ca8c72-c956-48fb-842c-9bdd05113a3e": 1.0
+      "31f22567-1b6f-81a8-83ff-de0b34037f5f": 1.0
     }
   },
   {
@@ -68,7 +92,7 @@
       "김완희"
     ],
     "relevance_scores": {
-      "dab52052-69af-4584-8f7f-28155f75831e": 1.0
+      "31f22567-1b6f-817a-a763-f718d9d40fbf": 1.0
     }
   },
   {
@@ -128,7 +152,7 @@
       "정호진"
     ],
     "relevance_scores": {
-      "fbd645c8-fb2f-46aa-8417-a7be7fab4cff": 1.0
+      "49ecac53-06c2-4e24-9138-6b66ef7e4d82": 1.0
     }
   },
   {
@@ -191,7 +215,7 @@
       "김정수"
     ],
     "relevance_scores": {
-      "c1351abe-4809-483d-97b6-291718d2ce1d": 1.0
+      "33522567-1b6f-81bb-83a2-ef99ae586714": 1.0
     }
   },
   {

@@ -1815,7 +1815,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     try:
         with driver.session() as session:
             res_v = session.run("""
-                CALL db.index.vector.queryNodes('candidate_embedding', 100, $queryVector)
+                CALL db.index.vector.queryNodes('candidate_embedding', 200, $queryVector)
                 YIELD node AS c, score
                 RETURN c.id AS id, coalesce(c.name_kr, c.name) AS name, score
             """, queryVector=query_vector)
@@ -1858,8 +1858,8 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     vector_ids = list(v_scores.keys())
     # Note: we don't have scores for g_matched_ids yet, so we just take all for now 
     # but in V8 it was limited to 50. Let's take all if they are within a reasonable count.
-    graph_ids = g_matched_ids[:100] 
-    bm25_ids = sorted(bm_scores.keys(), key=lambda k: bm_scores[k], reverse=True)[:50]
+    graph_ids = g_matched_ids[:300] 
+    bm25_ids = sorted(bm_scores.keys(), key=lambda k: bm_scores[k], reverse=True)[:100]
     
     combined_ids = list(set(vector_ids) | set(graph_ids) | set(bm25_ids))
     if not combined_ids:
