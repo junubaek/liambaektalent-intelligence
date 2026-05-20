@@ -15,8 +15,36 @@ def ensure_db():
     import os
     db_path = os.environ.get('DB_PATH', 'candidates.db')
     
-    # FORCE_DB_REDOWNLOAD 체크 (함수 최상단)
+    db_dir = os.path.dirname(db_path) if os.path.dirname(db_path) else '.'
+    url_version_file = os.path.join(db_dir, 'last_download_url.txt')
+    
+    url = os.environ.get('DB_DOWNLOAD_URL', '')
+    # 구 ID이거나 URL이 비어 있는 경우 새 ID로 강제 오버라이드
+    if '1oQ-Oa0OZJaBFiNin-GdZLOQfQalkOfDY' in url or not url:
+        url = 'https://drive.google.com/uc?export=download&id=1dHOIZg_-EvsUNmvVFycrtNNfcuCbfhyj'
+        print(f"DB_DOWNLOAD_URL 오버라이드 적용: {url}")
+    
+    # FORCE_DB_REDOWNLOAD 체크
     force_redownload = os.environ.get('FORCE_DB_REDOWNLOAD', 'false').lower() == 'true'
+    
+    last_url = ''
+    if os.path.exists(url_version_file):
+        try:
+            with open(url_version_file, 'r', encoding='utf-8') as f:
+                last_url = f.read().strip()
+        except Exception as e:
+            print(f"URL 버전 파일 읽기 실패: {e}")
+
+    # 다운로드할 대상 URL이 기존에 받았던 URL과 다르면 기존 DB 삭제해서 재다운로드 강제
+    if last_url != url:
+        print(f"새로운 DB_DOWNLOAD_URL 감지 ({last_url} -> {url}). 기존 DB가 있을 경우 삭제 처리합니다.")
+        if os.path.exists(db_path):
+            try:
+                os.remove(db_path)
+                print("이전 DB 파일 삭제 완료.")
+            except Exception as e:
+                print(f"이전 DB 파일 삭제 실패: {e}")
+    
     if force_redownload and os.path.exists(db_path):
         try:
             os.remove(db_path)
@@ -49,7 +77,6 @@ def ensure_db():
                 except: pass
                 os.remove(db_path)
     
-    url = os.environ.get('DB_DOWNLOAD_URL', '')
     if not url:
         print("DB_DOWNLOAD_URL 없음. 로컬 DB 사용.")
         return
@@ -88,22 +115,31 @@ def ensure_db():
                 for chunk in response.iter_content(32768):
                     if chunk:
                         f.write(chunk)
-
+ 
         print(f"DB 다운로드 완료: {os.path.getsize(db_path)//1024//1024}MB")
+        
+        # 다운로드 완료 후 버전 정보 파일 기록
+        try:
+            with open(url_version_file, 'w', encoding='utf-8') as f:
+                f.write(url)
+            print(f"URL 버전 파일 갱신 완료: {url}")
+        except Exception as e:
+            print(f"URL 버전 파일 기록 실패: {e}")
+
         # DB가 새로 다운로드되면 인덱스도 재구성해야 함
         if os.path.exists('bm25_index.pkl'): os.remove('bm25_index.pkl')
         if os.path.exists('ontology_vectors.pkl'): os.remove('ontology_vectors.pkl')
     except Exception as e:
         print(f"DB 다운로드 실패: {e}")
-
+ 
     try:
         from backend.check_railway_db import check_db
         check_db()
     except Exception as e:
         print("Could not run check_railway_db:", e)
-
+ 
     # DB 재다운로드 시 JSON 캐시도 초기화
-    if force_redownload:
+    if force_redownload or last_url != url:
         cache_file = 'candidates_cache_jd.json'
         if os.path.exists(cache_file):
             os.remove(cache_file)
