@@ -20,8 +20,8 @@ def ensure_db():
     
     url = os.environ.get('DB_DOWNLOAD_URL', '')
     # 구 ID이거나 URL이 비어 있는 경우 새 ID로 강제 오버라이드
-    if '1oQ-Oa0OZJaBFiNin-GdZLOQfQalkOfDY' in url or not url:
-        url = 'https://drive.google.com/uc?export=download&id=1dHOIZg_-EvsUNmvVFycrtNNfcuCbfhyj'
+    if '1oQ-Oa0OZJaBFiNin-GdZLOQfQalkOfDY' in url or '1dHOIZg_-EvsUNmvVFycrtNNfcuCbfhyj' in url or not url:
+        url = 'https://drive.google.com/uc?export=download&id=1mp12QDiHK0UwO3jEToEoh-MH9oKqar9K'
         print(f"DB_DOWNLOAD_URL 오버라이드 적용: {url}")
     
     # FORCE_DB_REDOWNLOAD 체크
