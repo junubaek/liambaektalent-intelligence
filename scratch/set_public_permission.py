@@ -3,7 +3,7 @@ from connectors.gdrive_api import GDriveConnector
 
 def set_public_permission():
     gdrive = GDriveConnector()
-    file_id = "1rmIjP0-YlfNEG_wre5z9F6QuA1XSfcC8"
+    file_id = "1q2LHW3EF2_IK_5gPjhiUAzGASjvjCQ0E"
     
     print(f"Setting public permission for File ID: {file_id}")
     
