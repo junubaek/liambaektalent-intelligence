@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Search, User, Bookmark, Zap, X, Clock, ChevronDown, ChevronUp, LogOut, SlidersHorizontal, ArrowRight, Save, Info, Settings, Users, Database, ShieldAlert, Activity, Layers, Trash2, RotateCcw, Phone, Mail } from 'lucide-react';
 
-export default function AntigravityMain() {
+export default function MarkdownMain() {
   const [token, setToken] = useState(localStorage.getItem('token') || '');
   const [currentUserData, setCurrentUserData] = useState(null);
   
@@ -781,9 +781,14 @@ export default function AntigravityMain() {
       
       <aside className="w-[17rem] bg-white border-r border-gray-200 flex flex-col justify-between flex-shrink-0 z-10">
         <div className="flex-1 flex flex-col overflow-hidden">
-          <div onClick={goHome} className="h-20 flex items-center px-6 gap-3 border-b border-gray-100 cursor-pointer hover:bg-gray-50 transition-colors flex-shrink-0 group">
-            <div className="w-7 h-7 bg-black rounded flex flex-col items-center justify-center p-1.5 shadow-md shadow-black/20 group-hover:scale-105 transition-transform"><Layers className="w-full h-full text-white" strokeWidth={3} /></div>
-            <span className="font-black text-xl tracking-tighter uppercase">Antigravity</span>
+          <div onClick={goHome} className="h-20 flex items-center px-6 gap-3.5 border-b border-gray-100 cursor-pointer hover:bg-gray-50 transition-colors flex-shrink-0 group">
+            <svg viewBox="0 0 100 60" className="h-7 w-auto text-black transition-transform group-hover:scale-105" fill="currentColor">
+              <rect x="10" y="10" width="12" height="40" rx="1" />
+              <polygon points="22,10 34,22 46,10 58,10 34,34 22,22" />
+              <path d="M46 10 H68 C80 10 88 18 88 30 C88 42 80 50 68 50 H46 Z M58 20 V40 H66 C71 40 74 37 74 30 C74 23 71 20 66 20 Z" />
+            </svg>
+            <div className="h-5 w-[1px] bg-gray-200"></div>
+            <span className="font-black text-lg tracking-wider uppercase text-black">MARKDOWN</span>
           </div>
           
           <div className="flex-1 overflow-y-auto px-6 pt-8 pb-4 custom-scrollbar">
@@ -898,9 +903,19 @@ export default function AntigravityMain() {
         <div className="flex-1 overflow-y-auto p-10 lg:px-16 xl:px-24 bg-[#f7f8fa] custom-scrollbar">
           {!hasSearched && (
             <div className="max-w-5xl mx-auto flex flex-col h-full min-h-[60vh] py-10 animate-fade-in-up">
-              <div className="mb-12">
-                <h2 className="text-6xl font-black italic tracking-tighter text-black uppercase leading-none mb-2 mt-4 inline-block">TARGETED<br/>TALENT SEARCH.</h2>
-                <p className="text-xs font-bold text-gray-400 mt-2">데이터 정합성 기반 지능형 매칭 엔진</p>
+              <div className="mb-14 mt-6">
+                <div className="flex items-center gap-6 mb-5 select-none">
+                  <svg viewBox="0 0 100 60" className="h-16 w-auto text-black" fill="currentColor">
+                    <rect x="10" y="10" width="12" height="40" rx="1.5" />
+                    <polygon points="22,10 34,22 46,10 58,10 34,34 22,22" />
+                    <path d="M46 10 H68 C80 10 88 18 88 30 C88 42 80 50 68 50 H46 Z M58 20 V40 H66 C71 40 74 37 74 30 C74 23 71 20 66 20 Z" />
+                  </svg>
+                  <div className="h-12 w-[1.5px] bg-black"></div>
+                  <span className="font-black text-5xl tracking-widest text-black uppercase leading-none">MARKDOWN</span>
+                </div>
+                <p className="text-sm font-black text-gray-800 tracking-tight leading-relaxed max-w-2xl">
+                  직함을 넘어 역량의 본질을 읽다. 인텔리전스 서치의 새로운 기준, <span className="text-indigo-600 font-extrabold underline decoration-2 decoration-indigo-200">MARKDOWN</span>
+                </p>
               </div>
               
               <div className="bg-white border border-gray-200 rounded-[2rem] shadow-xl p-10 flex flex-col md:flex-row gap-10">
