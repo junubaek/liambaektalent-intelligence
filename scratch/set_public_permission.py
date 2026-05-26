@@ -3,13 +3,25 @@ from connectors.gdrive_api import GDriveConnector
 
 def set_public_permission():
     gdrive = GDriveConnector()
-    file_id = "1q2LHW3EF2_IK_5gPjhiUAzGASjvjCQ0E"
+    # Get the latest file
+    res = gdrive.service.files().list(
+        q="name contains 'candidates_reparsed' and trashed=false",
+        orderBy='createdTime desc',
+        fields='files(id, name, createdTime)',
+        pageSize=1
+    ).execute()
     
-    print(f"Setting public permission for File ID: {file_id}")
+    files = res.get('files', [])
+    if not files:
+        print("No files found.")
+        return
+        
+    f = files[0]
+    print(f"Setting permission for: {f['name']} ({f['id']})")
     
     # Set permission to anyone with link
     gdrive.service.permissions().create(
-        fileId=file_id,
+        fileId=f['id'],
         body={'type': 'anyone', 'role': 'reader'}
     ).execute()
     print('Public permission set successfully.')
