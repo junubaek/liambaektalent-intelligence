@@ -1,40 +1,39 @@
-import json
-import sys
-import os
+import sys, os, json
+sys.stdout.reconfigure(encoding='utf-8')
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, ROOT_DIR)
+os.chdir(ROOT_DIR)
 
-# Ensure project root is in path
-sys.path.insert(0, os.getcwd())
+from neo4j import GraphDatabase
+from openai import OpenAI
 
-from jd_compiler import _get_secret
-from connectors.openai_api import OpenAIClient
-from connectors.pinecone_api import PineconeClient
+target_id = 'db752f0f-0f1a-437c-a09d-43c20442ab7b'
+prompt = "General Affairs Manager"
 
-# Ensure UTF-8 output
-if hasattr(sys.stdout, 'reconfigure'):
-    sys.stdout.reconfigure(encoding='utf-8')
+secrets = json.load(open('secrets.json'))
+client = OpenAI(api_key=secrets['OPENAI_API_KEY'])
+driver = GraphDatabase.driver(secrets['NEO4J_URI'], auth=(secrets['NEO4J_USERNAME'], secrets['NEO4J_PASSWORD']))
 
-o_api = OpenAIClient(_get_secret('OPENAI_API_KEY'))
-p_host = _get_secret('PINECONE_HOST')
-if not p_host.startswith('https'):
-    p_host = f'https://{p_host}'
-p_api = PineconeClient(_get_secret('PINECONE_API_KEY'), p_host)
+# 1. Get query vector
+emb_res = client.embeddings.create(input=[prompt], model="text-embedding-3-small")
+query_vector = emb_res.data[0].embedding
 
-query = 'Enterprise Sales Manager'
-target_id = 'c3d4ee55-266a-44f6-8e66-fb7486be38a8'
-
-print(f"Direct Vector Search for: '{query}'")
-q_vec = o_api.embed_content(query)
-res = p_api.query(q_vec, top_k=1000)
-
-found = False
-if res and 'matches' in res:
-    for i, match in enumerate(res['matches']):
-        if match['id'] == target_id:
-            print(f"Target found at Vector Rank {i+1} with score {match['score']}")
+# 2. Run vector search in Neo4j
+with driver.session() as session:
+    res = session.run("""
+        CALL db.index.vector.queryNodes('candidate_embedding', 300, $queryVector)
+        YIELD node AS c, score
+        RETURN c.id AS id, coalesce(c.name_kr, c.name) AS name, score
+    """, queryVector=query_vector)
+    
+    found = False
+    for i, r in enumerate(res):
+        if r['id'] == target_id:
+            print(f"Found Lee Sang-heon in Vector Tower at rank {i+1} with score {r['score']}")
             found = True
             break
-else:
-    print(f"Pinecone Query failed or returned no matches: {res}")
+    
+    if not found:
+        print("Lee Sang-heon NOT in top 300 vectors.")
 
-if not found:
-    print("Target NOT FOUND in Vector Top 1000.")
+driver.close()
