@@ -4,6 +4,39 @@ import networkx as nx
 # ── 1. Canonical Map (Expanded to 100+ Nodes) ────────────────────────────────────────────────────────
 
 CANONICAL_MAP: dict[str, str] = {
+    # GPU/CPU
+    "GPU": "GPGPU",
+    "gpu": "GPGPU",
+    "Back-end": "Backend",
+    "back-end": "Backend",
+    "Front-end": "Frontend",
+    "front-end": "Frontend",
+
+    # 임베디드/비디오
+    "FOTA": "Firmware",
+    "fota": "Firmware",
+    "HEVC": "Video_Codec",
+    "AVC": "Video_Codec",
+    "H.264": "Video_Codec",
+    "H.265": "Video_Codec",
+    "Porting": "Embedded_Systems",
+    "porting": "Embedded_Systems",
+    "IoT": "Embedded_Systems",
+    "iot": "Embedded_Systems",
+
+    # 협업툴
+    "Jira": "Agile_Scrum",
+    "jira": "Agile_Scrum",
+    "WAS": "Backend",
+    "was": "Backend",
+    "PHP": "Backend",
+    "php": "Backend",
+    "CSS": "Frontend",
+    "css": "Frontend",
+    "React Native": "Mobile_App_Development",
+    "react native": "Mobile_App_Development",
+    "Native": "Mobile_App_Development",
+
     "시장 분석": "Market_Analysis",
     "재고 관리": "Inventory_Management",
     "품질 관리": "Quality_Management",
