@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Search, User, Bookmark, Zap, X, Clock, ChevronDown, ChevronUp, LogOut, SlidersHorizontal, ArrowRight, Save, Info, Settings, Users, Database, ShieldAlert, Activity, Layers, Trash2, RotateCcw, Phone, Mail } from 'lucide-react';
+import logoImg from './assets/logo.png';
 
 export default function MarkdownMain() {
   const [token, setToken] = useState(localStorage.getItem('token') || '');
@@ -781,14 +782,8 @@ export default function MarkdownMain() {
       
       <aside className="w-[17rem] bg-white border-r border-gray-200 flex flex-col justify-between flex-shrink-0 z-10">
         <div className="flex-1 flex flex-col overflow-hidden">
-          <div onClick={goHome} className="h-20 flex items-center px-6 gap-3.5 border-b border-gray-100 cursor-pointer hover:bg-gray-50 transition-colors flex-shrink-0 group">
-            <svg viewBox="0 0 100 60" className="h-7 w-auto text-black transition-transform group-hover:scale-105" fill="currentColor">
-              <rect x="10" y="10" width="12" height="40" rx="1" />
-              <polygon points="22,10 34,22 46,10 58,10 34,34 22,22" />
-              <path d="M46 10 H68 C80 10 88 18 88 30 C88 42 80 50 68 50 H46 Z M58 20 V40 H66 C71 40 74 37 74 30 C74 23 71 20 66 20 Z" />
-            </svg>
-            <div className="h-5 w-[1px] bg-gray-200"></div>
-            <span className="font-black text-lg tracking-wider uppercase text-black">MARKDOWN</span>
+          <div onClick={goHome} className="h-20 flex items-center px-6 border-b border-gray-100 cursor-pointer hover:bg-gray-50 transition-colors flex-shrink-0 group justify-center">
+            <img src={logoImg} alt="Markdown Logo" className="h-9 w-auto object-contain transition-transform group-hover:scale-[1.02]" />
           </div>
           
           <div className="flex-1 overflow-y-auto px-6 pt-8 pb-4 custom-scrollbar">
