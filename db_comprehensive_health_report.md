@@ -27,7 +27,7 @@ Analyzes columns that hold key contact information or metadata. A high missing p
 | `careers_json` | 30명 | 3966명 | 99.25% |
 | `education_json` | 1077명 | 2919명 | 73.05% |
 | `sector` | 158명 | 3838명 | 96.05% |
-| `google_drive_url` | 550명 | 3446명 | 86.24% |
+| `google_drive_url` | 316명 | 3680명 | 92.09% |
 
 
 ## 3. Detailed Analysis of Parsing Failures & Raw Text Anomalies
@@ -45,7 +45,7 @@ These represent candidates where the original text exists, but the LLM parsing p
 
 | Candidate ID | Candidate Name | Raw Text Length (Chars) | Sector | Action Needed |
 | :--- | :--- | :---: | :--- | :--- |
-| `32e22567-1b6f-8127-9c55-c3e95da63767` | 김국도 | 5415 | Biotechnology | Trigger LLM Career Reparse |
+| `32e22567-1b6f-8127-9c55-c3e95da63767` | 김국도 | 10911 | Biotechnology | Trigger LLM Career Reparse |
 | `32e22567-1b6f-81e1-b8fc-c946f1c6f5c4` | 정소윤 | 1928 | B2B영업 | Trigger LLM Career Reparse |
 | `df93e3e8-6736-4324-8cac-d62fff832a86` | 황인선 | 22953 | SW | Trigger LLM Career Reparse |
 | `332713ee-ae78-461a-8560-218774db09c8` | 고요셉 | 1009 | SW | Trigger LLM Career Reparse |

@@ -99,7 +99,7 @@ def main():
             matches.append((f, matched_cand))
             
     # Write to Markdown Artifact
-    arti_path = r"C:\Users\cazam\.gemini\antigravity\brain\40516708-d2c8-4e50-a5f8-ff10183de737\artifacts\reverse_match_analysis.md"
+    arti_path = r"C:\Users\cazam\.gemini\antigravity\brain\8ae60a44-5a39-41d8-86fe-31ae73ec3dbf\reverse_match_analysis.md"
     os.makedirs(os.path.dirname(arti_path), exist_ok=True)
     
     doc = f"# 🔍 미아 파일(Orphan Files) 역추적 매칭 분석\n\n"
