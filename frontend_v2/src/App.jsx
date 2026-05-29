@@ -783,7 +783,7 @@ export default function MarkdownMain() {
       <aside className="w-[17rem] bg-white border-r border-gray-200 flex flex-col justify-between flex-shrink-0 z-10">
         <div className="flex-1 flex flex-col overflow-hidden">
           <div onClick={goHome} className="h-20 flex items-center px-6 border-b border-gray-100 cursor-pointer hover:bg-gray-50 transition-colors flex-shrink-0 group justify-center">
-            <img src={logoImg} alt="Markdown Logo" className="h-9 w-auto object-contain transition-transform group-hover:scale-[1.02]" />
+            <img src={logoImg} alt="Markdown Logo" className="h-16 w-auto object-contain transition-transform group-hover:scale-[1.02]" />
           </div>
           
           <div className="flex-1 overflow-y-auto px-6 pt-8 pb-4 custom-scrollbar">
@@ -900,13 +900,9 @@ export default function MarkdownMain() {
             <div className="max-w-5xl mx-auto flex flex-col h-full min-h-[60vh] py-10 animate-fade-in-up">
               <div className="mb-14 mt-6">
                 <div className="flex items-center gap-6 mb-5 select-none">
-                  <svg viewBox="0 0 100 60" className="h-16 w-auto text-black" fill="currentColor">
-                    <rect x="10" y="10" width="12" height="40" rx="1.5" />
-                    <polygon points="22,10 34,22 46,10 58,10 34,34 22,22" />
-                    <path d="M46 10 H68 C80 10 88 18 88 30 C88 42 80 50 68 50 H46 Z M58 20 V40 H66 C71 40 74 37 74 30 C74 23 71 20 66 20 Z" />
-                  </svg>
-                  <div className="h-12 w-[1.5px] bg-black"></div>
-                  <span className="font-black text-5xl tracking-widest text-black uppercase leading-none">MARKDOWN</span>
+                  <img src={logoImg} alt="Markdown Logo" className="h-28 w-auto object-contain transition-transform hover:scale-[1.02]" />
+                  <div className="h-20 w-[2px] bg-black"></div>
+                  <span className="font-black text-6xl tracking-widest text-black uppercase leading-none">MARKDOWN</span>
                 </div>
                 <p className="text-sm font-black text-gray-800 tracking-tight leading-relaxed max-w-2xl">
                   직함을 넘어 역량의 본질을 읽다. 인텔리전스 서치의 새로운 기준, <span className="text-indigo-600 font-extrabold underline decoration-2 decoration-indigo-200">MARKDOWN</span>
