@@ -1808,7 +1808,6 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     conds = inject_node_affinity(conds)
     
     # 2. Tower 1: Vector Search (Neo4j - V8 logic)
-    import os
     n_uri = _get_secret('NEO4J_URI')
     n_user = _get_secret('NEO4J_USERNAME')
     n_pw = _get_secret('NEO4J_PASSWORD')
