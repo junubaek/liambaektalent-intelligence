@@ -1965,7 +1965,35 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         candidate_nodes = [e['skill'] for e in cand_edges]
         query_nodes = [c['skill'] for c in conds]
         raw_g += calc_gravity_score(candidate_nodes, query_nodes, seniority)
-        final_g_scores[cid] = math.log(max(raw_g, 0) + 1)
+        # -------------------------------------------------------------
+        # [Signal 5] Sector mismatch penalty
+        # -------------------------------------------------------------
+        # 쿼리가 반도체 중력장인데 후보가 순수 SW sector면 G 스코어 감쇠 (40%)
+        # 쿼리가 SW/AI인데 후보가 반도체 sector면 G 스코어 감쇠 (30%)
+        # -------------------------------------------------------------
+        SEMICONDUCTOR_SECTORS = {'Semiconductor_NPU', 'Semiconductor_SoC', 'Semiconductor'}
+        SW_SECTORS = {'SW', 'SW_AI', 'SW_Systems'}
+        
+        # 쿼리에서 도메인 추론 (NPU, SoC, 반도체 키워드가 있으면 반도체 도메인 쿼리로 설정, 그 외는 SW/AI/기타)
+        prompt_lower = prompt.lower()
+        if any(k in prompt_lower for k in ['npu', 'soc', '반도체', 'rtl', 'verilog', 'asic', 'fpga', 'tape-out', '물리설계']):
+            query_domain = 'Semiconductor'
+        elif any(k in prompt_lower for k in ['llm', 'ai', '딥러닝', 'ml', 'pytorch', 'tensorflow', 'systems', 'kernel', '커널', 'firmware', '펌웨어', 'embedded', '임베디드']):
+            query_domain = 'SW'
+        else:
+            query_domain = 'Other'
+            
+        candidate_sector = db_metadata_map.get(cid, {}).get('sector', '미분류')
+        
+        g_val = math.log(max(raw_g, 0) + 1)
+        if query_domain == 'Semiconductor' and candidate_sector in SW_SECTORS:
+            g_val = g_val * 0.6  # 40% 감쇠
+            logger.info(f"[Sector Penalty] Semicon query vs SW candidate {cid} ({candidate_sector}) -> G score scaled to 60%")
+        elif query_domain == 'SW' and candidate_sector in SEMICONDUCTOR_SECTORS:
+            g_val = g_val * 0.7  # 30% 감쇠
+            logger.info(f"[Sector Penalty] SW query vs Semicon candidate {cid} ({candidate_sector}) -> G score scaled to 70%")
+            
+        final_g_scores[cid] = g_val
         
         # Tower 4: Depth Score
         # [Signal 1] Action intensity on matched skills

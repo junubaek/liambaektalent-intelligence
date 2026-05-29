@@ -7299,6 +7299,52 @@ if __name__ == "__main__":
 
 
 EXPLICIT_GRAVITY_FIELD = {
+    "SW_AI": {
+        "core_attracts": {
+            "LLM_Inference": 0.9, "Model_Parallelism": 0.9, "vLLM": 0.9, "MLOps": 0.8,
+            "PyTorch": 0.8, "TensorFlow": 0.8, "Transformer": 0.8, "RLHF": 0.8,
+            "GPU_Driver": 0.8, "GPGPU": 0.8, "Data_Engineering": 0.7, "MoE": 0.8,
+            "PD_Disaggregation": 0.8, "DeepSeek-R1": 0.8, "LLM_Serving": 0.8
+        },
+        "repels": {
+            "Financial_Accounting": -0.3, "B2B_Sales": -0.3, "SCM": -0.3
+        }
+    },
+    "SW_Systems": {
+        "core_attracts": {
+            "Sys_Software": 0.9, "Firmware": 0.9, "Embedded_Systems": 0.9,
+            "ARM_Architecture": 0.8, "Linux_Kernel": 0.8, "RTOS": 0.8,
+            "Device_Driver": 0.8, "BSP": 0.8, "Bootloader": 0.8, "PCIe_Protocol": 0.8
+        },
+        "repels": {
+            "Financial_Accounting": -0.3, "Marketing": -0.3, "HR": -0.3,
+            "NPU_Design": -0.4, "RTL_Design": -0.4, "ASIC": -0.4, "Tape_Out": -0.4
+        }
+    },
+    "Semiconductor_NPU": {
+        "core_attracts": {
+            "NPU_Design": 0.9, "RTL_Design": 0.9, "Verilog": 0.9, "VHDL": 0.9,
+            "DNN_Accelerator": 0.9, "GPGPU": 0.8, "SoC": 0.8, "PPA_Optimization": 0.8,
+            "Chip_Design": 0.8, "Memory_Architecture": 0.8
+        },
+        "repels": {
+            "Backend": -0.3, "Frontend": -0.3, "Marketing": -0.3, "B2B_Sales": -0.3,
+            "Infrastructure_and_Cloud": -0.4, "Media_Service": -0.4, "CDN": -0.4,
+            "Streaming": -0.4, "DevOps": -0.4, "Web_Backend": -0.4
+        }
+    },
+    "Semiconductor_SoC": {
+        "core_attracts": {
+            "SoC": 0.9, "ASIC": 0.9, "FPGA": 0.9, "Physical_Design": 0.9,
+            "RTL_Design": 0.8, "Tape_Out": 0.8, "IP_Design": 0.8,
+            "ARM_Architecture": 0.8, "Memory_Architecture": 0.8, "PCIe_Protocol": 0.8
+        },
+        "repels": {
+            "Backend": -0.3, "Frontend": -0.3, "Marketing": -0.3, "Financial_Accounting": -0.3,
+            "Infrastructure_and_Cloud": -0.4, "Media_Service": -0.4, "CDN": -0.4,
+            "Streaming": -0.4, "DevOps": -0.4, "Web_Backend": -0.4
+        }
+    },
     "Chief_Financial_Officer": {
         "core_attracts": {
             "Treasury_Management": 0.9,
