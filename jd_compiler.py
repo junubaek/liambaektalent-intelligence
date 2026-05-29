@@ -1762,6 +1762,16 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     cache_map = {str(c.get('id', '')): c for c in cand_list}
     logger.info(f"DEBUG [V9] Step 0: Cache Loaded ({len(cand_list)} candidates)")
     
+    # candidate_sector_map은 검색 시작 시 SQLite에서 {candidate_id: sector} 딕셔너리로 미리 로드해줘.
+    db_path = os.environ.get('DB_PATH', 'candidates.db')
+    conn_sec = sqlite3.connect(db_path)
+    try:
+        cur_sec = conn_sec.cursor()
+        cur_sec.execute("SELECT id, sector FROM candidates")
+        candidate_sector_map = {str(r[0]): r[1] for r in cur_sec.fetchall()}
+    finally:
+        conn_sec.close()
+    
     # 1. Parse & Expand Query
     logger.info(f"DEBUG [V9] Step 1: Parsing query...")
     extracted = parse_jd_to_json(prompt)
@@ -1860,6 +1870,54 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     # but in V8 it was limited to 50. Let's take all if they are within a reasonable count.
     graph_ids = g_matched_ids[:300] 
     bm25_ids = sorted(bm_scores.keys(), key=lambda k: bm_scores[k], reverse=True)[:100]
+    
+    # ── Sector pre-filter (풀 진입 단계) ──────────────
+    SEMI_KEYWORDS = ['npu', 'soc', '반도체', 'rtl', 'fpga',
+                     'asic', '팹리스', 'chip', '칩', 'verilog',
+                     'tape-out', 'tape out', 'ppa']
+    AI_KEYWORDS   = ['llm', 'ai ', '인공지능', 'ml ', '머신러닝',
+                     '딥러닝', 'deep learning', 'gpu', 'inference',
+                     '추론', '서빙', 'transformer', 'pytorch', 'mlops']
+    SW_KEYWORDS   = ['백엔드', 'backend', '프론트', 'frontend',
+                     'devops', '인프라', 'infra', 'kubernetes',
+                     'docker', 'msa', '마이크로서비스']
+    EMBEDDED_KEYWORDS = ['드라이버', '커널', 'kernel', 'firmware',
+                         '펌웨어', 'bsp', 'rtos', 'embedded',
+                         '임베디드']
+
+    query_lower = prompt.lower()
+
+    if any(k in query_lower for k in SEMI_KEYWORDS):
+        query_domain = 'semiconductor'
+    elif any(k in query_lower for k in EMBEDDED_KEYWORDS):
+        query_domain = 'embedded'
+    elif any(k in query_lower for k in AI_KEYWORDS):
+        query_domain = 'ai'
+    elif any(k in query_lower for k in SW_KEYWORDS):
+        query_domain = 'sw'
+    else:
+        query_domain = 'general'
+
+    ALLOWED_SECTORS = {
+        'semiconductor': {'Eng_Semi', 'Eng_Embedded', 'Eng_AI', 'Eng_SW'},
+        'embedded':      {'Eng_Embedded', 'Eng_Semi', 'Eng_HW', 'Eng_SW'},
+        'ai':            {'Eng_AI', 'Eng_SW', 'Eng_Data', 'Eng_Semi', 'Eng_Embedded'},
+        'sw':            {'Eng_SW', 'Eng_AI', 'Eng_Data', 'Eng_Embedded'},
+        'general':       None  # 필터 없음
+    }
+
+    allowed = ALLOWED_SECTORS.get(query_domain)
+
+    # Vector/BM25 풀에서 allowed sector 아닌 후보 제거
+    if allowed:
+        def get_primary_sector(cid):
+            sector_str = candidate_sector_map.get(cid, '')
+            return sector_str.split(',')[0].strip() if sector_str else ''
+        
+        vector_ids = [cid for cid in vector_ids 
+                      if get_primary_sector(cid) in allowed]
+        bm25_ids   = [cid for cid in bm25_ids 
+                      if get_primary_sector(cid) in allowed]
     
     combined_ids = list(set(vector_ids) | set(graph_ids) | set(bm25_ids))
     if not combined_ids:
@@ -1965,35 +2023,35 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         candidate_nodes = [e['skill'] for e in cand_edges]
         query_nodes = [c['skill'] for c in conds]
         raw_g += calc_gravity_score(candidate_nodes, query_nodes, seniority)
-        # -------------------------------------------------------------
-        # [Signal 5] Sector mismatch penalty
-        # -------------------------------------------------------------
-        # 쿼리가 반도체 중력장인데 후보가 순수 SW sector면 G 스코어 감쇠 (40%)
-        # 쿼리가 SW/AI인데 후보가 반도체 sector면 G 스코어 감쇠 (30%)
-        # -------------------------------------------------------------
-        SEMICONDUCTOR_SECTORS = {'Semiconductor_NPU', 'Semiconductor_SoC', 'Semiconductor'}
-        SW_SECTORS = {'SW', 'SW_AI', 'SW_Systems'}
-        
-        # 쿼리에서 도메인 추론 (NPU, SoC, 반도체 키워드가 있으면 반도체 도메인 쿼리로 설정, 그 외는 SW/AI/기타)
-        prompt_lower = prompt.lower()
-        if any(k in prompt_lower for k in ['npu', 'soc', '반도체', 'rtl', 'verilog', 'asic', 'fpga', 'tape-out', '물리설계']):
-            query_domain = 'Semiconductor'
-        elif any(k in prompt_lower for k in ['llm', 'ai', '딥러닝', 'ml', 'pytorch', 'tensorflow', 'systems', 'kernel', '커널', 'firmware', '펌웨어', 'embedded', '임베디드']):
-            query_domain = 'SW'
-        else:
-            query_domain = 'Other'
-            
-        candidate_sector = db_metadata_map.get(cid, {}).get('sector', '미분류')
-        
-        g_val = math.log(max(raw_g, 0) + 1)
-        if query_domain == 'Semiconductor' and candidate_sector in SW_SECTORS:
-            g_val = g_val * 0.6  # 40% 감쇠
-            logger.info(f"[Sector Penalty] Semicon query vs SW candidate {cid} ({candidate_sector}) -> G score scaled to 60%")
-        elif query_domain == 'SW' and candidate_sector in SEMICONDUCTOR_SECTORS:
-            g_val = g_val * 0.7  # 30% 감쇠
-            logger.info(f"[Sector Penalty] SW query vs Semicon candidate {cid} ({candidate_sector}) -> G score scaled to 70%")
-            
-        final_g_scores[cid] = g_val
+        # ── Primary sector 기반 G score 패널티 ──────────────
+        def get_primary_sector(cid):
+            sector_str = candidate_sector_map.get(cid, '')
+            return sector_str.split(',')[0].strip() if sector_str else ''
+
+        primary = get_primary_sector(cid)
+        g_score = math.log(max(raw_g, 0) + 1)
+
+        if query_domain == 'semiconductor':
+            if primary == 'Eng_Semi':
+                pass  # 패널티 없음
+            elif primary == 'Eng_Embedded':
+                g_score *= 0.85  # 경미한 감쇠
+            elif primary in ('Eng_AI', 'Eng_SW'):
+                g_score *= 0.65  # 중간 감쇠
+            else:
+                g_score *= 0.4   # 강한 감쇠
+
+        elif query_domain == 'ai':
+            if primary == 'Eng_AI':
+                pass
+            elif primary in ('Eng_SW', 'Eng_Data'):
+                g_score *= 0.9
+            elif primary == 'Eng_Semi':
+                g_score *= 0.8   # 반도체 출신 AI는 경미한 감쇠만
+            else:
+                g_score *= 0.5
+
+        final_g_scores[cid] = g_score
         
         # Tower 4: Depth Score
         # [Signal 1] Action intensity on matched skills
