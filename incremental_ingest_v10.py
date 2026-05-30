@@ -21,6 +21,16 @@ from googleapiclient.http import MediaFileUpload
 from openai import OpenAI
 from connectors.pinecone_api import PineconeClient
 from batch_pinecone_sync import chunk_text
+from ontology_graph import CANONICAL_MAP
+
+def normalize_skill(skill_name: str) -> str:
+    if skill_name in CANONICAL_MAP:
+        return CANONICAL_MAP[skill_name]
+    lower = skill_name.lower()
+    for key, val in CANONICAL_MAP.items():
+        if key.lower() == lower:
+            return val
+    return skill_name
 
 # Locks
 db_lock = threading.Lock()
@@ -288,12 +298,13 @@ def process_file(filepath):
             for edge in parsed.get("neo4j_edges", []):
                 act, skill, conf, ev = edge.get("action", ""), edge.get("skill", ""), float(edge.get("confidence", 0.5)), edge.get("evidence_span", "")
                 if act and skill:
+                    normalized_skill_name = normalize_skill(skill)
                     session.run(f"""
                         MERGE (c:Candidate {{id: $id}})
                         MERGE (s:Skill {{name: $skill}})
                         MERGE (c)-[r:{act}]->(s)
                         SET r.confidence = $conf, r.evidence_span = $ev, r.source = 'v10_ingest'
-                    """, id=c_id, skill=skill, conf=conf, ev=ev)
+                    """, id=c_id, skill=normalized_skill_name, conf=conf, ev=ev)
 
     # 6. Pinecone Embeddings
     with pinecone_lock:
