@@ -1902,6 +1902,9 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
                          '임베디드']
     MARKETING_KEYWORDS = ['마케팅', 'marketing', '광고', '브랜드', 
                           '퍼포먼스', 'CRM', '그로스', 'growth']
+    PO_KEYWORDS = ['product owner', 'po ', 'p.o.', 
+                   '프로덕트 오너', '프로덕트 매니저', 'pm ',
+                   'product manager']
 
     query_lower = prompt.lower()
 
@@ -1913,6 +1916,8 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         query_domain = 'ai'
     elif any(k in query_lower for k in MARKETING_KEYWORDS):
         query_domain = 'marketing'
+    elif any(k in query_lower for k in PO_KEYWORDS):
+        query_domain = 'product'
     elif any(k in query_lower for k in SW_KEYWORDS):
         query_domain = 'sw'
     else:
@@ -1923,6 +1928,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         'embedded':      {'Eng_Embedded', 'Eng_Semi', 'Eng_HW', 'Eng_SW'},
         'ai':            {'Eng_AI', 'Eng_SW', 'Eng_Data', 'Eng_Semi', 'Eng_Embedded'},
         'marketing':     {'Marketing', 'Strategy', 'Product'},
+        'product':       {'Product', 'Strategy', 'Eng_SW', 'Eng_AI'},
         'sw':            {'Eng_SW', 'Eng_AI', 'Eng_Data', 'Eng_Embedded'},
         'general':       None  # 필터 없음
     }
