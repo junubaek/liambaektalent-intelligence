@@ -782,8 +782,8 @@ export default function MarkdownMain() {
       
       <aside className="w-[17rem] bg-white border-r border-gray-200 flex flex-col justify-between flex-shrink-0 z-10">
         <div className="flex-1 flex flex-col overflow-hidden">
-          <div onClick={goHome} className="h-44 flex items-center px-6 border-b border-gray-100 cursor-pointer hover:bg-gray-50 transition-colors flex-shrink-0 group justify-center">
-            <img src={logoImg} alt="Markdown Logo" className="h-40 w-auto object-contain mix-blend-multiply transition-transform group-hover:scale-[1.02]" />
+          <div onClick={goHome} className="h-44 flex items-center px-2 border-b border-gray-100 cursor-pointer hover:bg-gray-50 transition-colors flex-shrink-0 group justify-center overflow-hidden">
+            <img src={logoImg} alt="Markdown Logo" className="h-44 w-full object-contain mix-blend-multiply transition-transform group-hover:scale-[1.04]" />
           </div>
           
           <div className="flex-1 overflow-y-auto px-6 pt-8 pb-4 custom-scrollbar">
@@ -900,7 +900,7 @@ export default function MarkdownMain() {
             <div className="max-w-5xl mx-auto flex flex-col h-full min-h-[60vh] py-10 animate-fade-in-up">
               <div className="mb-14 mt-6">
                 <div className="flex items-center justify-start gap-6 mb-5 select-none">
-                  <img src={logoImg} alt="Markdown Logo" className="h-44 w-auto object-contain mix-blend-multiply bg-[#f7f8fa] transition-transform hover:scale-[1.02]" style={{ mixBlendMode: 'multiply', backgroundColor: '#f7f8fa' }} />
+                  <img src={logoImg} alt="Markdown Logo" className="h-44 w-auto object-contain mix-blend-multiply transition-transform hover:scale-[1.02]" style={{ mixBlendMode: 'multiply' }} />
                 </div>
                 <p className="text-sm font-black text-gray-800 tracking-tight leading-relaxed max-w-2xl">
                   직함을 넘어 역량의 본질을 읽다. 인텔리전스 서치의 새로운 기준, <span className="text-indigo-600 font-extrabold underline decoration-2 decoration-indigo-200">MARKDOWN</span>
