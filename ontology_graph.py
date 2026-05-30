@@ -5,6 +5,17 @@ import networkx as nx
 
 CANONICAL_MAP: dict[str, str] = {
     # NPU Nodes
+    "커널": "Linux_Kernel",
+    "커널 드라이버": "Device_Driver", 
+    "드라이버": "Device_Driver",
+    "드라이버 개발": "Device_Driver",
+    "NPU 드라이버": "NPU_Kernel",
+    "NPU 커널": "NPU_Kernel",
+    "런타임": "NPU_Runtime",
+    "NPU 런타임": "NPU_Runtime",
+    "커널 개발": "Linux_Kernel",
+    "디바이스 드라이버": "Device_Driver",
+
     "NPU Kernel": "NPU_Kernel",
     "NPU software stacks": "NPU_Software_Stack",
 
