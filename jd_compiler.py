@@ -1900,6 +1900,8 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     EMBEDDED_KEYWORDS = ['드라이버', '커널', 'kernel', 'firmware',
                          '펌웨어', 'bsp', 'rtos', 'embedded',
                          '임베디드']
+    MARKETING_KEYWORDS = ['마케팅', 'marketing', '광고', '브랜드', 
+                          '퍼포먼스', 'CRM', '그로스', 'growth']
 
     query_lower = prompt.lower()
 
@@ -1909,6 +1911,8 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         query_domain = 'embedded'
     elif any(k in query_lower for k in AI_KEYWORDS):
         query_domain = 'ai'
+    elif any(k in query_lower for k in MARKETING_KEYWORDS):
+        query_domain = 'marketing'
     elif any(k in query_lower for k in SW_KEYWORDS):
         query_domain = 'sw'
     else:
@@ -1918,6 +1922,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         'semiconductor': {'Eng_Semi', 'Eng_Embedded', 'Eng_AI'},
         'embedded':      {'Eng_Embedded', 'Eng_Semi', 'Eng_HW', 'Eng_SW'},
         'ai':            {'Eng_AI', 'Eng_SW', 'Eng_Data', 'Eng_Semi', 'Eng_Embedded'},
+        'marketing':     {'Marketing', 'Strategy', 'Product'},
         'sw':            {'Eng_SW', 'Eng_AI', 'Eng_Data', 'Eng_Embedded'},
         'general':       None  # 필터 없음
     }
