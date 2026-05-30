@@ -11,9 +11,19 @@ def tokenize_kr(text):
     return [t.lower() for t in tokens]
 
 def get_neo4j_ids():
-    n_uri = os.environ.get('NEO4J_URI', 'bolt://127.0.0.1:7687')
-    n_user = os.environ.get('NEO4J_USERNAME', 'neo4j')
-    n_pw = os.environ.get('NEO4J_PASSWORD', 'toss1234')
+    # Load from secrets.json if available
+    secrets = {}
+    if os.path.exists('secrets.json'):
+        import json
+        try:
+            with open('secrets.json', 'r', encoding='utf-8') as f:
+                secrets = json.load(f)
+        except:
+            pass
+            
+    n_uri = os.environ.get('NEO4J_URI', secrets.get('NEO4J_URI', 'bolt://127.0.0.1:7687'))
+    n_user = os.environ.get('NEO4J_USERNAME', secrets.get('NEO4J_USERNAME', 'neo4j'))
+    n_pw = os.environ.get('NEO4J_PASSWORD', secrets.get('NEO4J_PASSWORD', 'toss1234'))
     
     driver = GraphDatabase.driver(n_uri, auth=(n_user, n_pw))
     try:
