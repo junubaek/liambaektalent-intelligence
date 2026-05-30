@@ -1934,6 +1934,8 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
                       if get_primary_sector(cid) in allowed]
         bm25_ids   = [cid for cid in bm25_ids 
                       if get_primary_sector(cid) in allowed]
+        graph_ids  = [cid for cid in graph_ids 
+                      if get_primary_sector(cid) in allowed]
     
     combined_ids = list(set(vector_ids) | set(graph_ids) | set(bm25_ids))
     if not combined_ids:
