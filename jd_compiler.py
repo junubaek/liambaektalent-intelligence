@@ -1915,7 +1915,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         query_domain = 'general'
 
     ALLOWED_SECTORS = {
-        'semiconductor': {'Eng_Semi', 'Eng_Embedded', 'Eng_AI', 'Eng_SW'},
+        'semiconductor': {'Eng_Semi', 'Eng_Embedded', 'Eng_AI'},
         'embedded':      {'Eng_Embedded', 'Eng_Semi', 'Eng_HW', 'Eng_SW'},
         'ai':            {'Eng_AI', 'Eng_SW', 'Eng_Data', 'Eng_Semi', 'Eng_Embedded'},
         'sw':            {'Eng_SW', 'Eng_AI', 'Eng_Data', 'Eng_Embedded'},
