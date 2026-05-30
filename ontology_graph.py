@@ -4,6 +4,26 @@ import networkx as nx
 # ── 1. Canonical Map (Expanded to 100+ Nodes) ────────────────────────────────────────────────────────
 
 CANONICAL_MAP: dict[str, str] = {
+    # NPU Nodes
+    "NPU kernel": "NPU_Kernel",
+    "NPU 커널": "NPU_Kernel",
+    "npu kernel": "NPU_Kernel",
+    "NPU runtime": "NPU_Runtime",
+    "NPU 런타임": "NPU_Runtime",
+    "npu runtime": "NPU_Runtime",
+    "NPU software stack": "NPU_Software_Stack",
+    "NPU SW stack": "NPU_Software_Stack",
+    "Tensix ISA": "Tenstorrent_ISA",
+    "tenstorrent": "Tenstorrent_ISA",
+    "tt-metal": "Tenstorrent_ISA",
+    "RISC-V Vector": "RISC_V_Vector",
+    "RISC-V VectorISA": "RISC_V_Vector",
+    "rvv": "RISC_V_Vector",
+    "vLLM": "LLM_Serving_Engine",
+    "SGLang": "LLM_Serving_Engine",
+    "TensorRT-LLM": "LLM_Serving_Engine",
+    "llm serving engine": "LLM_Serving_Engine",
+
     # GPU/CPU
     "GPU": "GPGPU",
     "gpu": "GPGPU",
@@ -4230,6 +4250,14 @@ EDGES: list[
     ("Product_Owner", "Product_Manager", "similar_to", 1.0),
     ("Backend_Engineering", "Payment_and_Settlement_System", "related_to", 1.0),
     tuple[str, str, str, float]] = [
+    # NPU edges
+    ("NPU_Kernel", "NPU_Design", "related_to", 2.0),
+    ("NPU_Kernel", "Device_Driver", "related_to", 1.8),
+    ("NPU_Runtime", "NPU_Design", "related_to", 1.8),
+    ("NPU_Runtime", "LLM_Serving_Engine", "related_to", 1.5),
+    ("Tenstorrent_ISA", "NPU_Kernel", "related_to", 2.0),
+    ("RISC_V_Vector", "NPU_Kernel", "related_to", 1.8),
+
     # Marketing
     ("Performance_Marketing", "Data_Engineering", "used_in", 1.5),
     ("Performance_Marketing", "Data_Analysis",   "depends_on", 2.0),
