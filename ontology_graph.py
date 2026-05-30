@@ -5,6 +5,9 @@ import networkx as nx
 
 CANONICAL_MAP: dict[str, str] = {
     # NPU Nodes
+    "NPU Kernel": "NPU_Kernel",
+    "NPU software stacks": "NPU_Software_Stack",
+
     "NPU kernel": "NPU_Kernel",
     "NPU 커널": "NPU_Kernel",
     "npu kernel": "NPU_Kernel",
