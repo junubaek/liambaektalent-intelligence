@@ -37,6 +37,10 @@ CANONICAL_MAP: dict[str, str] = {
     "SGLang": "LLM_Serving_Engine",
     "TensorRT-LLM": "LLM_Serving_Engine",
     "llm serving engine": "LLM_Serving_Engine",
+    "LLM 서빙": "LLM_Serving_Engine",
+    "LLM 서빙 엔진": "LLM_Serving_Engine",
+    "LLM 추론": "LLM_Serving_Engine",
+    "추론 최적화": "LLM_Serving_Engine",
 
     # New NPU/Kernel/Driver Missing Skill Mappings
     "Linux device driver": "Device_Driver",
