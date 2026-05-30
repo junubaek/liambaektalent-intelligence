@@ -1,10 +1,5 @@
-from ontology_graph import UNIFIED_GRAVITY_FIELD
-
-import os
-
-import json
-
-import uuid
+from ontology_graph import UNIFIED_GRAVITY_FIELD, SENIOR_EXPANDED_SYNERGY
+import sqlite3, os, json, uuid, re
 
 from openai import OpenAI
 
@@ -16,13 +11,24 @@ from openai import OpenAI
 
 
 
-# Secret Data for OpenAI/Pinecone
+# Robust path for secrets.json
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+SECRETS_PATH = os.path.join(ROOT_DIR, "secrets.json")
 
-with open("secrets.json", "r") as f:
+def _get_secret(key):
+    val = os.environ.get(key)
+    if val: return val
+    try:
+        with open(SECRETS_PATH, "r", encoding="utf-8") as f:
+            return json.load(f).get(key, "")
+    except Exception:
+        return ""
 
-    secret_data = json.load(f)
-
-
+secret_data = {
+    "OPENAI_API_KEY": _get_secret("OPENAI_API_KEY"),
+    "PINECONE_HOST": _get_secret("PINECONE_HOST"),
+    "PINECONE_API_KEY": _get_secret("PINECONE_API_KEY")
+}
 
 openai_client = OpenAI(api_key=secret_data.get("OPENAI_API_KEY", ""))
 
@@ -83,8 +89,8 @@ from vector_fallback import get_closest_node
 ACTION_WEIGHTS = {
     'BUILT': 2.0,
     'DESIGNED': 1.9,
-    'CLOSED': 1.8,
-    'LED': 1.8,
+    'CLOSED': 1.4,
+    'LED': 1.4,
     'MIGRATED': 1.7,
     'DEPLOYED': 1.6,
     'OPTIMIZED': 1.5,
@@ -137,12 +143,140 @@ EXECUTIVE_NODES = {
 
 
 
+
+REPEL_MULTIPLIER = {
+    "JUNIOR":  1.0,   # 풀 척력 — 직무 경계 엄격
+    "MIDDLE":  0.5,   # 중간 — 약간의 유연성
+    "SENIOR":  0.15,  # 거의 무력화 — 폭넓은 경험 인정
+    "All":     0.7,   # 기본값
+}
+
+def get_seniority_label(total_years):
+    if not total_years or total_years == 0:
+        return '미상'
+    elif total_years >= 10:
+        return 'SENIOR'
+    elif total_years >= 5:
+        return 'MIDDLE'
+    else:
+        return 'JUNIOR'
+
+def get_company_boost(company_name, conditions, conn):
+    try:
+        import json
+        # 회사명 정규화 (간단 버전)
+        normalized = company_name.strip() if company_name else ''
+        for suffix in ['(주)', '㈜', '(유)', '주식회사']:
+            normalized = normalized.replace(suffix, '').strip()
+        
+        cur = conn.cursor()
+        cur.execute('''
+            SELECT scale, sector, inferred_skills, traffic_scale, major_events
+            FROM company_intelligence
+            WHERE normalized_name = ?
+            OR company_name = ?
+        ''', (normalized, company_name))
+        row = cur.fetchone()
+        if not row:
+            return 0.0
+        
+        scale, sector, skills_json, traffic, events_json = row
+        skills = json.loads(skills_json or '{}')
+        
+        boost = 0.0
+        skill_names = [c.get('skill','') for c in conditions]
+        
+        # 대용량 트래픽 관련 검색 + 대규모 트래픽 회사
+        traffic_nodes = {'Back-end_Development', 'Kubernetes', 'DevOps', 
+                        'Distributed_Systems', 'Cloud_Infrastructure', 'MSA'}
+        if traffic in ('대규모', '초대규모') and traffic_nodes & set(skill_names):
+            boost += 0.03
+        
+        # 금융 관련 검색 + 금융/컨설팅 회사
+        finance_nodes = {'Treasury_Management', 'Corporate_Finance', 
+                        'Financial_Management', 'M_and_A', 'Valuation'}
+        if sector in ('금융', '컨설팅') and finance_nodes & set(skill_names):
+            boost += 0.03
+        
+        # 글로벌 대기업 보너스
+        if scale == '글로벌대기업':
+            boost += 0.01
+        
+        return min(boost, 0.05)
+    except:
+        return 0.0
+
+def get_effective_gravity(node, seniority):
+    field = UNIFIED_GRAVITY_FIELD.get(node, {}).copy()
+    
+    # SENIOR일 때 시너지 노드 확장
+    if seniority == "SENIOR":
+        expanded = SENIOR_EXPANDED_SYNERGY.get(node, [])
+        extra = {n: 0.4 for n in expanded}  # 확장 시너지 가중치 0.4
+        existing = field.get("synergy_attracts", {})
+        field["synergy_attracts"] = {**existing, **extra}
+    
+    return field
+
+def calc_achievement_density(raw_text):
+    if not raw_text:
+        return 0.0
+    import re
+    # [Core] 실무 수치 패턴 (1.0 가중치)
+    core_patterns = [
+        r'\d+%', r'\d+억', r'\d+만', r'\d+명', r'\d+개', r'\d+년'
+    ]
+    # [Tech] 기술 깊이 신호 (0.5 가중치)
+    tech_patterns = [
+        r'특허', r'논문', r'제1저자', r'SCI', r'수상', r'\d+건'
+    ]
+    
+    core_count = sum(len(re.findall(p, raw_text)) for p in core_patterns)
+    tech_count = sum(len(re.findall(p, raw_text)) for p in tech_patterns)
+    
+    # 가중 합산
+    weighted_count = core_count + (tech_count * 0.5)
+    
+    # 텍스트 1000자당 밀도
+    density = weighted_count / (max(len(raw_text), 1) / 1000)
+    # 0~1 정규화 (5개/1000자 = 만점 기준)
+    return min(density / 5.0, 1.0)
+
+def calc_gravity_score(candidate_nodes, query_nodes, seniority="All"):
+    
+    repel_mult = REPEL_MULTIPLIER.get(seniority, 0.7)
+    
+    score = 0
+    for node in query_nodes:
+        field = get_effective_gravity(node, seniority)
+        
+        # 핵력 — seniority 무관하게 풀 적용
+        core = field.get("core_attracts", {})
+        for cnode, weight in core.items():
+            if cnode in candidate_nodes:
+                score += weight * 2.0  # core 가산
+        
+        # 시너지
+        synergy = field.get("synergy_attracts", {})
+        for snode, weight in synergy.items():
+            if snode in candidate_nodes:
+                score += weight
+        
+        # 척력 — seniority에 따라 감쇠
+        repels = field.get("repels", {})
+        for rnode, weight in repels.items():
+            if rnode in candidate_nodes:
+                score += weight * repel_mult  # 음수 × 배수
+    
+    return score
+
+
 def calculate_gravity_fusion_score(candidate_edges, conds, is_category_search=False):
     if not conds or not isinstance(candidate_edges, list):
         return 0.0
 
     jd_target_skills = [c.get('skill', '') for c in conds if c.get('skill')]
-    DEPTH_MULTIPLIER = {1: 1.0, 2: 1.3, 3: 1.5, 4: 1.6}
+    DEPTH_MULTIPLIER = {1: 1.0, 2: 1.1, 3: 1.2, 4: 1.3}
 
     matched_skill_actions = {}
     for edge in candidate_edges:
@@ -260,7 +394,7 @@ def inject_node_affinity(conditions: list) -> list:
 
                     "skill": affinity_skill,
 
-                    "weight": weight,
+                    "weight": weight * (1.4 / 1.8), # Synergy Multiplier applied
 
                     "is_mandatory": False,
 
@@ -312,19 +446,14 @@ logger = logging.getLogger(__name__)
 
 # --- 1. Load Secrets and Setup Gemini ---
 
-try:
-
-    with open("secrets.json", "r", encoding="utf-8") as f:
-
-        secrets = json.load(f)
-
-        GENAI_KEY = secrets.get("GEMINI_API_KEY", "")
-
-except Exception as e:
-
-    logger.warning("secrets.json not found or invalid format.")
-
-    GENAI_KEY = "PLEASE_SET_KEY"
+GENAI_KEY = os.environ.get("GEMINI_API_KEY")
+if not GENAI_KEY:
+    try:
+        with open(SECRETS_PATH, "r", encoding="utf-8") as f:
+            GENAI_KEY = json.load(f).get("GEMINI_API_KEY", "PLEASE_SET_KEY")
+    except Exception as e:
+        logger.warning(f"{SECRETS_PATH} not found or invalid format.")
+        GENAI_KEY = "PLEASE_SET_KEY"
 
 
 
@@ -338,9 +467,11 @@ def get_history_bonus_scores(jd_text: str, top_k: int = 50) -> Dict[str, Dict]:
 
     try:
 
-        with open("secrets.json", "r", encoding="utf-8") as f:
-
-            secret_data = json.load(f)
+        secret_data = {
+            "PINECONE_HOST": _get_secret("PINECONE_HOST"),
+            "PINECONE_API_KEY": _get_secret("PINECONE_API_KEY"),
+            "OPENAI_API_KEY": _get_secret("OPENAI_API_KEY")
+        }
 
             
 
@@ -449,18 +580,15 @@ def get_history_bonus_scores(jd_text: str, top_k: int = 50) -> Dict[str, Dict]:
 
 
 def parse_jd_to_json(jd_text: str) -> Dict:
-
     """
-
     자연어 JD를 입력받아, 필수/우대 구조의 화학식 JSON 및 최소 연차 정보를 반환합니다.
-
     """
-
     global GLOBAL_GEMINI_CALL_COUNT
-
     import re
-
     
+    # 1000자 초과 시 핵심만 남기고 단축 (토큰 및 속도 절감)
+    if len(jd_text) > 1000:
+        jd_text = jd_text[:1000]
 
     # [Native] 1. 연차 추출 정규식
 
@@ -496,38 +624,35 @@ def parse_jd_to_json(jd_text: str) -> Dict:
 
     
 
-    # 가장 긴 단어부터 매칭(부분충돌 방지)
 
+    # 가장 긴 단어부터 매칭(부분충돌 방지)
     sorted_keys = sorted(CANONICAL_MAP.keys(), key=len, reverse=True)
+    canonical_values = sorted(list(set(CANONICAL_MAP.values())), key=len, reverse=True)
 
     for k in sorted_keys:
-
         k_lower = k.lower()
-
         if k_lower in lower_jd:
-
-            # 영문 단어인 경우 (예: PO) 부분문자열 오진 방지 (예: IPO에서 PO 매칭 방지)
-
             if re.search(r'[a-z]', k_lower):
-
-                pattern = r'(?<![a-z])' + re.escape(k_lower) + r'(?![a-z])'
-
+                pattern = r'(?<![a-z0-9])' + re.escape(k_lower) + r'(?![a-z0-9])'
                 if not re.search(pattern, lower_jd):
-
                     continue
-
-                    
-
             v = CANONICAL_MAP[k]
-
             if v not in seen_nodes:
-
                 seen_nodes.add(v)
-
                 matched_nodes.append((v, k_lower))
 
-                if len(matched_nodes) >= 4:
-
+    # [Patch] Value(노드명) 직접 매칭 추가 (v7 대응)
+    for val in canonical_values:
+        val_lower = val.lower()
+        for p in [val_lower, val_lower.replace('_', ' ')]:
+            if p in lower_jd:
+                if re.search(r'[a-z]', p):
+                    p_regex = r'(?<![a-z0-9])' + re.escape(p) + r'(?![a-z0-9])'
+                    if not re.search(p_regex, lower_jd):
+                        continue
+                if val not in seen_nodes:
+                    seen_nodes.add(val)
+                    matched_nodes.append((val, p))
                     break
 
                     
@@ -582,7 +707,11 @@ def parse_jd_to_json(jd_text: str) -> Dict:
 
             try:
 
-                driver = GraphDatabase.driver('bolt://127.0.0.1:7687', auth=('neo4j', 'toss1234'))
+                import os
+                n_uri = _get_secret('NEO4J_URI')
+                n_user = _get_secret('NEO4J_USERNAME')
+                n_pw = _get_secret('NEO4J_PASSWORD')
+                driver = GraphDatabase.driver(n_uri, auth=(n_user, n_pw))
 
                 with driver.session() as s:
 
@@ -785,6 +914,7 @@ def get_candidates_from_cache() -> List[Dict]:
         import json, os
 
         json_cache = {}
+        json_cache_by_id = {}
 
         cache_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "candidates_cache_jd.json")
 
@@ -798,6 +928,9 @@ def get_candidates_from_cache() -> List[Dict]:
 
                 for d in old_data:
 
+                    if "id" in d and d["id"]:
+                        json_cache_by_id[str(d["id"])] = d
+                        json_cache_by_id[str(d["id"]).replace("-", "")] = d
                     if "name_kr" in d: json_cache[d["name_kr"]] = d
 
                     elif "name" in d: json_cache[d["name"]] = d
@@ -812,7 +945,13 @@ def get_candidates_from_cache() -> List[Dict]:
 
             cache_ext = c.parsing_cache.parsed_dict if c.parsing_cache else {}
 
-            fb_data = json_cache.get(c.name_kr) or {}
+            fb_data = json_cache_by_id.get(str(c.id)) or json_cache_by_id.get(str(c.id).replace("-", "")) or json_cache.get(c.name_kr) or {}
+            if not fb_data and c.name_kr:
+                c_clean = c.name_kr.replace(" ", "")
+                for k, v in json_cache.items():
+                    if c_clean in k.replace(" ", ""):
+                        fb_data = v
+                        break
 
             
 
@@ -824,11 +963,11 @@ def get_candidates_from_cache() -> List[Dict]:
 
                 
 
-            # 1. DB careers_json 최우선 반영
+            # 1. DB careers_json 최우선 반영 여부 (새로 구운 캐시를 최우선으로)
 
             db_careers = json.loads(c.careers_json) if getattr(c, "careers_json", None) else []
 
-            careers_list = db_careers if db_careers else (cache_ext.get("careers", []) or fb_data.get("parsed_career_json", []))
+            careers_list = fb_data.get("parsed_career_json") or db_careers or cache_ext.get("careers", [])
 
             c_list = careers_list            
 
@@ -897,9 +1036,7 @@ def get_candidates_from_cache() -> List[Dict]:
 
 
             prof_sum = cache_ext.get("profile_summary", "") or fb_data.get("profile_summary", "")
-
-            if not prof_sum or ("연락처" in prof_sum and len(prof_sum) > 100):
-
+            if not prof_sum:
                 prof_sum = ""
 
 
@@ -934,9 +1071,20 @@ def get_candidates_from_cache() -> List[Dict]:
 
                 "birth_year": c.birth_year,
 
-                "education_json": json.loads(c.education_json) if getattr(c, "education_json", None) else []
-
+                "education_json": json.loads(c.education_json) if getattr(c, "education_json", None) else [],
+                "notion_url": fb_data.get("notion_url", "#")
             })
+            
+        # Optional: Load Google Drive Maps if available
+        import os
+        drive_map = {}
+        drive_map_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "drive_links_map.json")
+        if os.path.exists(drive_map_path):
+            with open(drive_map_path, "r", encoding="utf-8") as f:
+                try: drive_map = json.load(f)
+                except: pass
+        for c in candidates:
+            c["google_drive_url"] = drive_map.get(str(c["id"]).replace("-", ""), "")
 
         return candidates
 
@@ -1004,8 +1152,40 @@ def get_pinecone_scores(query_text: str, top_k: int = 200) -> dict:
 
         logger.error(f"[Pinecone API Error] {e}")
 
+def get_bm25_top(query_text, top_k=100):
+    """
+    BM25 인덱스에서 검색하여 {candidate_id: score} 딕셔너리 반환
+    """
+    import os, pickle, re
+    index_path = 'bm25_index.pkl'
+    if not os.path.exists(index_path):
         return {}
-
+    
+    with open(index_path, 'rb') as f:
+        data = pickle.load(f)
+        bm25 = data['bm25']
+        ids = data['ids']
+    
+    def tokenize(text):
+        tokens = re.findall(r'[가-힣]{2,}|[a-zA-Z]{2,}|\d+', text or '')
+        return [t.lower() for t in tokens]
+    
+    tokenized_query = tokenize(query_text)
+    scores = bm25.get_scores(tokenized_query)
+    
+    # 0.0 ~ 1.0 정규화 (상위 점수 기준)
+    max_s = max(scores) if len(scores) > 0 and max(scores) > 0 else 1.0
+    
+    # Top K 추출
+    import numpy as np
+    top_indices = np.argsort(scores)[::-1][:top_k]
+    
+    res = {}
+    for idx in top_indices:
+        s = scores[idx]
+        if s > 0:
+            res[str(ids[idx])] = s / max_s
+    return res
 
 
 def deduplicate_conditions(conds: List[Dict]) -> List[Dict]:
@@ -1111,7 +1291,11 @@ def prefilter_candidates(jd_text: str, num_candidates: int = 300, extracted_cond
     
     from neo4j import GraphDatabase
     try:
-        driver = GraphDatabase.driver("bolt://127.0.0.1:7687", auth=("neo4j", "toss1234"))
+        import os
+        n_uri = _get_secret('NEO4J_URI')
+        n_user = _get_secret('NEO4J_USERNAME')
+        n_pw = _get_secret('NEO4J_PASSWORD')
+        driver = GraphDatabase.driver(n_uri, auth=(n_user, n_pw))
         with driver.session() as session:
             # 1. 초경량 1-Hop 탐색 쿼리 (0.01초 보장)
             cypher_query = """
@@ -1144,7 +1328,7 @@ def prefilter_candidates(jd_text: str, num_candidates: int = 300, extracted_cond
             
         import sqlite3
         try:
-            conn = sqlite3.connect('candidates.db')
+            conn = sqlite3.connect(os.environ.get('DB_PATH', 'candidates.db'))
             c = conn.cursor()
             
             # AND 검색
@@ -1187,97 +1371,296 @@ def prefilter_candidates(jd_text: str, num_candidates: int = 300, extracted_cond
     return top_names
 
 import time
-def api_search_v8(prompt: str, session_id: str = None) -> dict:
+def api_search_v8(prompt: str, session_id: str = None, **kwargs) -> dict:
+    import json
+    import time
+    import math
+    from openai import OpenAI
+    from neo4j import GraphDatabase
+    
     st = time.time()
     logger.info(f"\n\n[V8 API Search] Payload: {prompt} / Session: {session_id}")
     
+    # 1. Fetch Cache Map
+    # Needs to be dynamically imported if inside
+    from jd_compiler import get_candidates_from_cache
+    cand_list = get_candidates_from_cache()
+    # Map by id or name
+    cache_map = {str(c.get('id', '')): c for c in cand_list}
+    cache_map_name = {str(c.get('name_kr', '')).strip(): c for c in cand_list if c.get('name_kr')}
+
     extracted = parse_jd_to_json(prompt)
     conds = extracted.get("conditions", [])
+    def map_abbreviations_to_conds(query_str, conditions_list):
+        expansion_map = {
+            "IPO": ["Investor_Relations", "IPO_Preparation"],
+            "IR": ["Investor_Relations"],
+            "DFT": ["Design_for_Testability"],
+            "RTL": ["RTL_Design"],
+            "SoC": ["System_on_Chip"],
+            "SAP": ["SAP_ERP"],
+            "BI": ["Business_Intelligence"],
+            "Tableau": ["Tableau"],
+            "DevOps": ["DevOps", "CI_CD"],
+            "SaaS": ["SaaS"],
+            "Kotlin": ["Kotlin", "Android_Development"],
+            "ASRS": ["Warehouse_Automation"]
+        }
+        import re
+        for abbr, expansions in expansion_map.items():
+            # Use regex to match abbreviation strictly
+            if re.search(r'\b' + re.escape(abbr) + r'\b', query_str, re.IGNORECASE):
+                for exp in expansions:
+                    # check if already exists
+                    if not any(c.get('skill') == exp for c in conditions_list):
+                        conditions_list.append({"action": "MANAGED", "skill": exp, "is_mandatory": False, "source": "abbreviation_map"})
+        return conditions_list
+
+    conds = map_abbreviations_to_conds(prompt, conds)
     is_category_search = extracted.get("is_category_search", False)
     conds = deduplicate_conditions(conds)
     conds = apply_downgrade_map(conds)
     conds = inject_node_affinity(conds)
     
-    import json
-    with open("secrets.json", "r", encoding="utf-8") as f:
+    with open(SECRETS_PATH, "r", encoding="utf-8") as f:
         secrets = json.load(f)
     api_key = secrets.get("OPENAI_API_KEY") or secrets.get("openai_api_key")
     
-    from openai import OpenAI
     client = OpenAI(api_key=api_key)
-    from neo4j import GraphDatabase
-    import math
     
-    # [Phase 1: Vector Search]
+    # [Phase 1: Vector Search (Tower 1)]
     emb_res = client.embeddings.create(input=[prompt], model="text-embedding-3-small")
     query_vector = emb_res.data[0].embedding
     
-    top_150_vectors = {}
-    top_names = []
+    vector_results = []
+    id_to_name = {}
     
+    import os
+    n_uri = _get_secret('NEO4J_URI')
+    n_user = _get_secret('NEO4J_USERNAME')
+    n_pw = _get_secret('NEO4J_PASSWORD')
+    driver = GraphDatabase.driver(n_uri, auth=(n_user, n_pw))
     try:
-        driver = GraphDatabase.driver("bolt://127.0.0.1:7687", auth=("neo4j", "toss1234"))
         with driver.session() as session:
             q_vec = """
-            CALL db.index.vector.queryNodes('candidate_embedding', 150, $queryVector)
+            CALL db.index.vector.queryNodes('candidate_embedding', 75, $queryVector)
             YIELD node AS c, score
-            RETURN c.name_kr AS name, score
+            RETURN c.id AS id, coalesce(c.name_kr, c.name) AS name, score
             """
             res = session.run(q_vec, queryVector=query_vector)
             for r in res:
-                name = r["name"]
-                if name:
-                    top_150_vectors[name] = r["score"]
-                    top_names.append(name)
+                cid = str(r["id"]) if r["id"] else r["name"]
+                if cid:
+                    vector_results.append({'id': cid, 'name': r['name'], 'score': r['score']})
+                    id_to_name[cid] = r['name']
     except Exception as e:
-        logger.error(f"[V8 API Search] Neo4j Vector error: {e}")
-        return {'matched': []}
+        logger.error(f"[Tower 1] Vector error: {e}")
         
-    if not top_names:
-        return {'matched': []}
-        
-    logger.info(f"[Phase 1] Extracted Top-150 via Neo4j Native Vector Index.")
+    logger.info(f"[Tower 1] Extracted Top-30 via Pinecone.")
 
-    # [Phase 2: Graph Score]
+    # [Phase 2: Graph Score (Tower 2)]
+    target_skills = list(set([c.get("skill") for c in conds if c.get("skill")]))
+    graph_candidates = []
+    
+    if target_skills:
+        try:
+            with driver.session() as session:
+                q = """
+                MATCH (c:Candidate)-[r]->(s:Skill)
+                WHERE s.name IN $target_skills AND type(r) <> 'USED_AS_TEMP' AND c.is_duplicate = 0
+                WITH c, collect(DISTINCT {skill: s.name, action: type(r)}) AS skills
+                RETURN coalesce(c.id, c.name_kr) AS id, coalesce(c.name_kr, c.name) AS name, skills
+                """
+                res = session.run(q, target_skills=target_skills)
+                for r in res:
+                    cid = str(r["id"]) if r["id"] else r["name"]
+                    cand_edges = r["skills"]
+                    id_to_name[cid] = r['name']
+                    
+                    raw_graph_score = calculate_gravity_fusion_score(cand_edges, conds, is_category_search)
+                    candidate_nodes = [e['skill'] for e in cand_edges] if isinstance(cand_edges, list) else cand_edges
+                    query_nodes = [c['skill'] for c in conds]
+                    seniority = kwargs.get('seniority', 'All')
+                    raw_graph_score += calc_gravity_score(candidate_nodes, query_nodes, seniority)
+                    graph_score = math.log(max(raw_graph_score, 0) + 1)
+                    
+                    if graph_score > 0:
+                        graph_candidates.append({
+                            'id': cid,
+                            'name': r['name'],
+                            'graph_score': graph_score,
+                            'cand_edges': cand_edges
+                        })
+                # Sort descending and take Top 30
+                graph_candidates.sort(key=lambda x: x['graph_score'], reverse=True)
+                graph_results = graph_candidates[:50]
+                logger.info(f"[Tower 2] Graph Top-30 Evaluated.")
+        except Exception as e:
+            logger.error(f"[Tower 2] Graph error: {e}")
+            graph_results = []
+    else:
+        graph_results = []
+        logger.info(f"[Tower 2] No target skills to query graph.")
+
+    # [Phase 3: Weighted Sum Fusion (Two-Tower)]
+    combined_ids = list(set([c['id'] for c in vector_results] + [c['id'] for c in graph_results]))
+    
+    if not combined_ids:
+        driver.close()
+        return {'matched': [], 'total': 0, "is_category_search": is_category_search}
+        
     edges_map = {}
     try:
         with driver.session() as session:
-            q = """
+            q_edge = """
             MATCH (c:Candidate)-[r]->(s:Skill)
-            WHERE c.name_kr IN $names AND type(r) <> 'USED_AS_TEMP' 
-            RETURN c.name_kr AS name, collect(DISTINCT {skill: s.name, action: type(r)}) AS skills
+            WHERE (c.id IN $ids OR c.name_kr IN $ids) AND type(r) <> 'USED_AS_TEMP'
+            RETURN coalesce(c.id, c.name_kr) AS id, collect(DISTINCT {skill: s.name, action: type(r)}) AS skills
             """
-            res = session.run(q, names=top_names)
-            edges_map = {r["name"]: r["skills"] for r in res}
+            res_e = session.run(q_edge, ids=combined_ids)
+            edges_map = {str(r["id"]): r["skills"] for r in res_e}
     except Exception as e:
-        logger.error(f"[V8 API Search] Neo4j Graph error: {e}")
+        logger.error(f"Edges fetch error: {e}")
     finally:
         driver.close()
 
+    vscore_map = {c['id']: c['score'] for c in vector_results}
+    gscore_map = {c['id']: c['graph_score'] for c in graph_results}
+    
     final_results = []
+    from collections import Counter
+    import math
     
-    for name in top_names:
-        v_score = top_150_vectors.get(name, 0.0)
-        cand_edges = edges_map.get(name, [])
+    for cid in combined_ids:
+        name = id_to_name.get(cid, cid)
+        c_info = cache_map.get(cid) or cache_map.get(name) or {}
+        sectors = c_info.get("main_sectors", [])
         
-        # Calculate raw graph score
-        raw_graph_score = calculate_gravity_fusion_score(cand_edges, conds, is_category_search)
+        cand_edges = edges_map.get(cid, [])
+        matched_str_list = [f"{e['action']}:{e['skill']}" for e in cand_edges]
         
-        # Log smoothing
-        graph_score = math.log(max(raw_graph_score, 0) + 1)
+        v_score = vscore_map.get(cid, 0.0)
         
-        # [Phase 3: Fusion]
-        if is_category_search:
-            final_score = (graph_score * 0.70) + (v_score * 0.30)
-        else:
-            final_score = (graph_score * 0.85) + (v_score * 0.15)
+        raw_g = calculate_gravity_fusion_score(cand_edges, conds, is_category_search)
+        candidate_nodes = [e['skill'] for e in cand_edges] if isinstance(cand_edges, list) else cand_edges
+        query_nodes = [c['skill'] for c in conds]
+        seniority = kwargs.get('seniority', 'All')
+        raw_g += calc_gravity_score(candidate_nodes, query_nodes, seniority)
+        g_score = math.log(max(raw_g, 0) + 1)
+        
+        final_score = (v_score * 0.6) + (g_score * 0.4)
             
-        final_results.append({'candidate_id': name, 'name_kr': name, 'name': name, 'score': round(final_score, 4), 'total_edges': len(cand_edges)})
+        payload = {
+            'id': cid,
+            'candidate_id': cid,
+            'name_kr': name,
+            '이름': name,
+            'current_company': c_info.get("current_company", "미상"),
+            '연차등급': c_info.get("seniority", "확인 요망"),
+            'sector': sectors[0] if sectors else "미분류",
+            'Sub Sectors': sectors,
+            'matched_edges': matched_str_list,
+            'Experience Summary': c_info.get("summary", "정보 없음"),
+            'profile_summary': c_info.get("profile_summary", ""),
+            'phone': c_info.get("phone", "번호 없음"),
+            'email': c_info.get("email", "이메일 없음"),
+            'birth_year': c_info.get("birth_year", "생년 미상"),
+            'notion_url': c_info.get("notion_url", "#"),
+            'google_drive_url': c_info.get("google_drive_url", None),
+            'careers': c_info.get("parsed_career_json") or c_info.get("careers", []),
+            'education': c_info.get("education_json", []),
+            'total_years': c_info.get("total_years", 0.0),
+            'education_json': c_info.get("education_json", []),
+            'ws_score': final_score,
+            '_score': final_score,
+            'graph_score': round(g_score, 4),
+            'vector_score': round(v_score, 4),
+            'total_edges': len(cand_edges)
+        }
         
-    final_results.sort(key=lambda x: (x['score'], x['total_edges']), reverse=True)
-    logger.info(f"[V8 API Search] Elapsed: {time.time() - st:.3f}s / Total Hits: {len(final_results)}")
+        a_cnt = Counter(e['action'] for e in cand_edges)
+        s_cnt = Counter(e['skill'] for e in cand_edges)
+        payload['top_actions'] = [f"{k}({v})" for k,v in a_cnt.most_common(3)]
+        payload['top_skills'] = [f"{k}({v})" for k,v in s_cnt.most_common(3)]
+        
+        final_results.append(payload)
+
+    if not final_results:
+        return {'matched': [], 'total': 0, "is_category_search": is_category_search}
+
+    max_final = max([r['ws_score'] for r in final_results] + [1.0])
+    max_final = max_final if max_final > 0 else 1.0
     
-    return {'matched': final_results}
+    max_g = max([x['graph_score'] for x in final_results] + [1.0])
+    max_v = max([x['vector_score'] for x in final_results] + [1.0])
+
+    for r in final_results:
+        norm_score = (r['ws_score'] / max_final) * 100
+        r['score'] = round(norm_score, 4)
+        r['_score'] = round(norm_score, 4)
+        r['ws_score'] = round(r['ws_score'], 6)
+        r['max_graph_score'] = round(max_g, 4)
+        r['max_vector_score'] = round(max_v, 4)
+
+    final_results.sort(key=lambda x: (-x['ws_score'], -x['total_edges']))
+    
+    grouped_by_name = {}
+    import re as regex
+    for r in final_results:
+        if '무명' in r['name_kr']:
+            grouped_by_name.setdefault(r['id'], []).append(r)
+            continue
+        pure_name = regex.sub(r'[^가-힣a-zA-Z]', '', r['name_kr'])
+        grouped_by_name.setdefault(pure_name, []).append(r)
+        
+    dedup = []
+    for name_key, candidates_group in grouped_by_name.items():
+        if '무명' in candidates_group[0]['name_kr'] or len(candidates_group) == 1:
+            dedup.append(candidates_group[0])
+            continue
+            
+        person_clusters = []
+        for c in candidates_group:
+            phone = c.get('phone', '').strip().replace('-', '') if c.get('phone') else ''
+            company = c.get('current_company', '').strip() if c.get('current_company') else ''
+            
+            matched_cluster = None
+            for p in person_clusters:
+                p_phone = p[0].get('phone', '').strip().replace('-', '') if p[0].get('phone') else ''
+                p_company = p[0].get('current_company', '').strip() if p[0].get('current_company') else ''
+                
+                if (phone and p_phone and phone == p_phone) or (company and p_company and company == p_company):
+                    matched_cluster = p
+                    break
+            if matched_cluster is not None:
+                matched_cluster.append(c)
+            else:
+                person_clusters.append([c])
+                
+        for cluster in person_clusters:
+            best = max(cluster, key=lambda x: x['ws_score'])
+            dedup.append(best)
+            
+    dedup.sort(key=lambda x: (-x['ws_score'], -x['total_edges']))
+    
+    return {'matched': dedup[:100], 'total': len(dedup), "is_category_search": is_category_search}
+
+def calculate_coverage_score(candidate_skills, target_skills):
+    """
+    [v10 Core] 후보자의 스킬과 타겟 스킬을 비교하여 정합성 점수(Coverage) 산출
+    """
+    if not target_skills:
+        return 1.0, [], []
+    
+    cand_set = set(candidate_skills)
+    target_set = set(target_skills)
+    
+    matched = cand_set.intersection(target_set)
+    missing = target_set - cand_set
+    
+    score = len(matched) / len(target_set)
+    return score, list(matched), list(missing)
+
 
 def normalize_query_with_map(raw_keywords):
     """
@@ -1313,130 +1696,624 @@ def calculate_recency_multiplier(end_date_str):
         pass
     return 1.0
 
-def api_search_v9(prompt: str, session_id: str = None) -> list:
-    import math
-    import time
-    from connectors.openai_api import OpenAIClient
+
+
+def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', weights: dict = None) -> dict:
+    """
+    [Hybrid Search v9]
+    Tower 1: Vector (Neo4j)
+    Tower 2: Graph (Neo4j)
+    Tower 3: BM25 (Local)
+    Tower 4: Depth (Action + Achievement)
+    """
+    import json, time, math
+    
+    # 0. Set Weights (Dynamic)
+    from ontology_graph import CANONICAL_MAP
+    prompt_lower = prompt.lower()
+    prompt_words = re.findall(r'[a-zA-Z가-힣]{2,}', prompt_lower)
+
+    registered_count = sum(1 for w in prompt_words 
+                           if any(w in k.lower() for k in CANONICAL_MAP.keys()))
+    unknown_ratio = 1.0 - (registered_count / max(len(prompt_words), 1))
+
+    # 동적 가중치 계산
+    if unknown_ratio < 0.3:
+        # [실험 6] 최적 가중치 고정 (Peak: 0.35)
+        w_v_dynamic = 0.60
+        w_g_dynamic = 0.35
+        w_b_dynamic = 0.03
+        w_d_dynamic = 0.02
+    else:
+        # 키워드 미등록 비중이 높은 경우
+        w_d_dynamic = round(0.02 + (unknown_ratio * 0.10), 3)
+        w_b_dynamic = round(0.03 + (unknown_ratio * 0.04), 3)
+        w_v_dynamic = round(0.58 - (unknown_ratio * 0.08), 3) # 베이스 하향
+        w_g_dynamic = round(1.0 - w_v_dynamic - w_b_dynamic - w_d_dynamic, 3)
+
+    # weights 파라미터로 외부 주입 시 우선 적용
+    w_v = weights.get('vector', w_v_dynamic) if weights else w_v_dynamic
+    w_g = weights.get('graph', w_g_dynamic) if weights else w_g_dynamic
+    w_b = weights.get('bm25', w_b_dynamic) if weights else w_b_dynamic
+    w_d = weights.get('depth', w_d_dynamic) if weights else w_d_dynamic
+
+    logger.info(f'[Dynamic Weights] unknown_ratio={unknown_ratio:.2f} | V={w_v} G={w_g} B={w_b} D={w_d}')
+
+    from openai import OpenAI
     from neo4j import GraphDatabase
-    driver = GraphDatabase.driver("bolt://127.0.0.1:7687", auth=("neo4j", "toss1234"))
     
     st = time.time()
-    logger.info(f"\n\n[V9.0 Chunk-Level API Search] Payload: {prompt}")
+    logger.critical(f"\n\nDEBUG [V9-PROMPT-CHECK] Payload: {prompt} / Session: {session_id}")
     
-    openai = OpenAIClient(secret_data.get("OPENAI_API_KEY", ""))
-    system_prompt = "주어진 사용자의 직무/스킬 요구사항을 분석하여 1536차원 벡터 검색에 유리하게 연관 스킬 키워드들로 확장된 영어 명사 위주의 검색 쿼리로 변환해."
-    expanded_query_text = openai.get_chat_completion(system_prompt, prompt)
-    if not expanded_query_text: expanded_query_text = prompt
+    # [Robustness] Ensure seniority is a string for gravity score dict lookups
+    if not seniority or seniority == '무관' or seniority == 'All':
+        seniority = "All"
+    elif isinstance(seniority, list):
+        if not seniority or "무관" in seniority or "All" in seniority or "ALL" in seniority:
+            seniority = "All"
+        else:
+            seniority = str(seniority[0]).upper()
+    else:
+        seniority = str(seniority).upper()
+
+    # 0. Load Cache Maps
+    from jd_compiler import get_candidates_from_cache
+    cand_list = get_candidates_from_cache()
+    cache_map = {str(c.get('id', '')): c for c in cand_list}
+    logger.info(f"DEBUG [V9] Step 0: Cache Loaded ({len(cand_list)} candidates)")
     
-    query_vector = openai.embed_content(expanded_query_text)
-    if not query_vector:
-        logger.error("[V9.0] Embedding generation failed.")
-        return []
-        
-    import re
-    raw_keywords = set(re.findall(r'[a-zA-Z0-9가-힣]+', prompt))
-    canonical_targets = normalize_query_with_map(list(raw_keywords))
-
-    with driver.session() as session:
-        # STAGE 1: Vector Search across Experience Chunks
-        vector_query = """
-        CALL db.index.vector.queryNodes('chunk_embeddings', 150, $query_vector)
-        YIELD node AS chunk, score AS vector_score
-        MATCH (c:Candidate)-[:HAS_EXPERIENCE]->(chunk)
-        RETURN c.id AS candidate_id, c.name_kr AS name, chunk.id AS chunk_id, 
-               chunk.company_name AS company_name, chunk.end_date AS end_date, vector_score
-        """
-        stage1_results = session.run(vector_query, query_vector=query_vector).data()
-
-        if not stage1_results:
-            return []
-
-        chunk_ids = [res['chunk_id'] for res in stage1_results]
-
-        # STAGE 2: Graph Scoring per Chunk
-        graph_query = """
-        MATCH (chunk:Experience_Chunk)-[r]->(s:Skill)
-        WHERE chunk.id IN $chunk_ids AND s.name IN $canonical_targets
-        RETURN chunk.id AS chunk_id, collect({skill: s.name, action: type(r)}) AS edges, 
-               COUNT { (chunk)-[]->() } AS total_edges
-        """
-        stage2_results = session.run(graph_query, chunk_ids=chunk_ids, canonical_targets=canonical_targets).data()
-
-    # Organize Graph results mapped to chunks
-    graph_map = {res['chunk_id']: res for res in stage2_results}
-
-    # Group by Candidate, keeping the "Best Match Chunk"
-    candidates_best_chunk = {}
-
-    for v_res in stage1_results:
-        cid = v_res['candidate_id']
-        chk_id = v_res['chunk_id']
-        company = v_res.get('company_name', 'Unknown')
-        end_date = v_res.get('end_date', '')
-        v_score = v_res['vector_score']
-        
-        g_res = graph_map.get(chk_id, {})
-        edges = g_res.get('edges', [])
-        total_edges = g_res.get('total_edges', 0)
-        
-        raw_graph_score = sum(ACTION_WEIGHTS.get(edge['action'], 1.0) for edge in edges)
-        final_graph_score = math.log(max(raw_graph_score, 0) + 1)
-        
-        # Calculate Final Chunk Score
-        recency_mult = calculate_recency_multiplier(end_date)
-        
-        # User Formula: Final_Chunk_Score = (Graph_Action_Weight * 0.6) + (Vector_Score * 0.3) + (Edge_Bonus)
-        # Using final_graph_score for Graph_Action_Weight
-        edge_bonus = min(total_edges * 0.01, 1.0) # Bonus capping
-        final_chunk_score = ((final_graph_score * 0.6) + (v_score * 0.3) + edge_bonus) * recency_mult
-        
-        chunk_obj = {
-            "chunk_id": chk_id,
-            "company": company,
-            "end_date": end_date,
-            "recency_mult": recency_mult,
-            "graph_score": final_graph_score,
-            "vector_score": v_score,
-            "final_score": final_chunk_score,
-            "matched_edges": [e['skill'] for e in edges],
-            "total_edges": total_edges
+    # candidate_sector_map은 검색 시작 시 SQLite에서 {candidate_id: sector} 딕셔너리로 미리 로드해줘.
+    db_path = os.environ.get('DB_PATH', 'candidates.db')
+    conn_sec = sqlite3.connect(db_path)
+    try:
+        cur_sec = conn_sec.cursor()
+        cur_sec.execute("SELECT id, sector FROM candidates")
+        candidate_sector_map = {str(r[0]): r[1] for r in cur_sec.fetchall()}
+    finally:
+        conn_sec.close()
+    
+    # 1. Parse & Expand Query
+    logger.info(f"DEBUG [V9] Step 1: Parsing query...")
+    extracted = parse_jd_to_json(prompt)
+    conds = extracted.get("conditions", [])
+    
+    # Map abbreviations
+    def map_abbreviations_to_conds(query_str, conditions_list):
+        expansion_map = {
+            "IPO": ["Investor_Relations", "IPO_Preparation"],
+            "IR": ["Investor_Relations"],
+            "DFT": ["Design_for_Testability"],
+            "RTL": ["RTL_Design"],
+            "SoC": ["System_on_Chip"],
+            "SAP": ["SAP_ERP"],
+            "BI": ["Business_Intelligence"],
+            "Tableau": ["Tableau"],
+            "DevOps": ["DevOps", "CI_CD"],
+            "SaaS": ["SaaS"],
+            "Kotlin": ["Kotlin", "Android_Development"],
+            "ASRS": ["Warehouse_Automation"]
         }
+        import re
+        for abbr, expansions in expansion_map.items():
+            if re.search(r'\b' + re.escape(abbr) + r'\b', query_str, re.IGNORECASE):
+                for exp in expansions:
+                    if not any(c.get('skill') == exp for c in conditions_list):
+                        conditions_list.append({"action": "MANAGED", "skill": exp, "is_mandatory": False, "source": "abbreviation_map"})
+        return conditions_list
 
-        # Update candidate if this chunk is better
-        if cid not in candidates_best_chunk:
-            candidates_best_chunk[cid] = {"id": cid, "name": v_res['name'], "best_chunk": chunk_obj}
-        elif final_chunk_score > candidates_best_chunk[cid]["best_chunk"]["final_score"]:
-            candidates_best_chunk[cid]["best_chunk"] = chunk_obj
-
-    # Sort Candidates by their Best Chunk's Final Score
-    sorted_results = sorted(
-        candidates_best_chunk.values(),
-        key=lambda x: (x["best_chunk"]["final_score"], x["best_chunk"]["vector_score"]),
-        reverse=True
-    )
+    conds = map_abbreviations_to_conds(prompt, conds)
+    is_category_search = extracted.get("is_category_search", False)
+    conds = deduplicate_conditions(conds)
+    conds = apply_downgrade_map(conds)
+    conds = inject_node_affinity(conds)
     
-    # Format to traditional API response
-    final_output = []
-    for cand in sorted_results[:10]:
-        best = cand["best_chunk"]
+    # 2. Tower 1: Vector Search (Neo4j - V8 logic)
+    n_uri = _get_secret('NEO4J_URI')
+    n_user = _get_secret('NEO4J_USERNAME')
+    n_pw = _get_secret('NEO4J_PASSWORD')
+    driver = GraphDatabase.driver(n_uri, auth=(n_user, n_pw))
+    
+    with open(SECRETS_PATH, "r", encoding="utf-8") as f:
+        secrets = json.load(f)
+    client = OpenAI(api_key=secrets.get("OPENAI_API_KEY"))
+    emb_res = client.embeddings.create(input=[prompt], model="text-embedding-3-small")
+    query_vector = emb_res.data[0].embedding
+
+    v_scores = {}
+    id_to_name = {}
+    try:
+        with driver.session() as session:
+            res_v = session.run("""
+                CALL db.index.vector.queryNodes('candidate_embedding', 200, $queryVector)
+                YIELD node AS c, score
+                RETURN c.id AS id, coalesce(c.name_kr, c.name) AS name, score
+            """, queryVector=query_vector)
+            for r in res_v:
+                cid = str(r["id"])
+                v_scores[cid] = r["score"]
+                id_to_name[cid] = r["name"]
+    except Exception as e:
+        logger.error(f"[V9] Vector Error: {e}")
+
+    # 3. Tower 2: Graph Candidates (Skill Match)
+    g_matched_ids = []
+    target_skills = list(set([c.get("skill") for c in conds if c.get("skill")]))
+    logger.critical(f"DEBUG [V9] --- START GRAPH TOWER ---")
+    logger.critical(f"DEBUG [V9] Extracted Target Skills: {target_skills}")
+    if target_skills:
+        try:
+            logger.critical(f"DEBUG [V9] Entering Neo4j Session for Graph Match...")
+            with driver.session() as session:
+                res_g = session.run("""
+                    MATCH (c:Candidate)-[r]->(s:Skill)
+                    WHERE s.name IN $target_skills AND type(r) <> 'USED_AS_TEMP' 
+                    RETURN DISTINCT coalesce(c.id, c.name_kr) AS id, coalesce(c.name_kr, c.name) AS name
+                """, target_skills=target_skills)
+                for r in res_g:
+                    cid = str(r["id"])
+                    if cid == 'c3d4ee55-266a-44f6-8e66-fb7486be38a8':
+                        logger.critical(f"DEBUG [V9] FOUND CHOI IN GRAPH MATCH! Name: {r['name']}")
+                    g_matched_ids.append(cid)
+                    id_to_name[cid] = r["name"]
+                logger.critical(f"DEBUG [V9] Graph Tower Matched {len(g_matched_ids)} IDs. Sample: {g_matched_ids[:5]}")
+        except Exception as e:
+            logger.error(f"[V9] Graph Match Error: {e}")
+
+    # 4. Tower 3: BM25 Candidates
+    bm_scores = get_bm25_top(prompt, top_k=200)
+
+    # 5. Combined Pool Selection
+    # V8 used Top 75/50, V9 uses Top 100/100/50 for broader hybrid coverage
+    vector_ids = list(v_scores.keys())
+    # Note: we don't have scores for g_matched_ids yet, so we just take all for now 
+    # but in V8 it was limited to 50. Let's take all if they are within a reasonable count.
+    graph_ids = g_matched_ids[:300] 
+    bm25_ids = sorted(bm_scores.keys(), key=lambda k: bm_scores[k], reverse=True)[:100]
+    
+    # ── Sector pre-filter (풀 진입 단계) ──────────────
+    SEMI_KEYWORDS = ['npu', 'soc', '반도체', 'rtl', 'fpga',
+                     'asic', '팹리스', 'chip', '칩', 'verilog',
+                     'tape-out', 'tape out', 'ppa']
+    AI_KEYWORDS   = ['llm', 'ai ', '인공지능', 'ml ', '머신러닝',
+                     '딥러닝', 'deep learning', 'gpu', 'inference',
+                     '추론', '서빙', 'transformer', 'pytorch', 'mlops']
+    SW_KEYWORDS   = ['백엔드', 'backend', '프론트', 'frontend',
+                     'devops', '인프라', 'infra', 'kubernetes',
+                     'docker', 'msa', '마이크로서비스']
+    EMBEDDED_KEYWORDS = ['드라이버', '커널', 'kernel', 'firmware',
+                         '펌웨어', 'bsp', 'rtos', 'embedded',
+                         '임베디드']
+
+    query_lower = prompt.lower()
+
+    if any(k in query_lower for k in SEMI_KEYWORDS):
+        query_domain = 'semiconductor'
+    elif any(k in query_lower for k in EMBEDDED_KEYWORDS):
+        query_domain = 'embedded'
+    elif any(k in query_lower for k in AI_KEYWORDS):
+        query_domain = 'ai'
+    elif any(k in query_lower for k in SW_KEYWORDS):
+        query_domain = 'sw'
+    else:
+        query_domain = 'general'
+
+    ALLOWED_SECTORS = {
+        'semiconductor': {'Eng_Semi', 'Eng_Embedded', 'Eng_AI', 'Eng_SW'},
+        'embedded':      {'Eng_Embedded', 'Eng_Semi', 'Eng_HW', 'Eng_SW'},
+        'ai':            {'Eng_AI', 'Eng_SW', 'Eng_Data', 'Eng_Semi', 'Eng_Embedded'},
+        'sw':            {'Eng_SW', 'Eng_AI', 'Eng_Data', 'Eng_Embedded'},
+        'general':       None  # 필터 없음
+    }
+
+    allowed = ALLOWED_SECTORS.get(query_domain)
+
+    # Vector/BM25 풀에서 allowed sector 아닌 후보 제거
+    if allowed:
+        def get_primary_sector(cid):
+            sector_str = candidate_sector_map.get(cid, '')
+            return sector_str.split(',')[0].strip() if sector_str else ''
         
-        # UX Explainability String
-        explain = f"[{best['company']}]에서 최근 역량 인정 ({best['end_date']} 종료). "
-        if best["recency_mult"] > 1.0: explain += "(최신경력 부스팅 적용🚀)"
-        elif best["recency_mult"] < 1.0: explain += "(과거경력 패널티⬇️)"
+        vector_ids = [cid for cid in vector_ids 
+                      if get_primary_sector(cid) in allowed]
+        bm25_ids   = [cid for cid in bm25_ids 
+                      if get_primary_sector(cid) in allowed]
+    
+    combined_ids = list(set(vector_ids) | set(graph_ids) | set(bm25_ids))
+    if not combined_ids:
+        if 'driver' in locals(): driver.close()
+        return {'matched': [], 'total': 0, "is_category_search": is_category_search}
+
+    # 6. Hydrate Edges and Metadata (Crucial for V8/V9 precision)
+    edges_map = {}
+    raw_text_map = {}
+    try:
+        with driver.session() as session:
+            res_e = session.run("""
+                MATCH (c:Candidate)-[r]->(s:Skill)
+                WHERE (c.id IN $ids OR c.name_kr IN $ids) AND type(r) <> 'USED_AS_TEMP'
+                RETURN coalesce(c.id, c.name_kr) AS id, collect(DISTINCT {skill: s.name, action: type(r)}) AS skills
+            """, ids=combined_ids)
+            edges_map = {str(r["id"]): r["skills"] for r in res_e}
+    except Exception as e:
+        logger.error(f"[V9] Edge hydration error: {e}")
+    finally:
+        if 'driver' in locals(): driver.close()
+
+    # Fetch full metadata from SQLite (Crucial because cache JSON might be missing on Railway)
+    db_metadata_map = {}
+    conn = sqlite3.connect(os.environ.get('DB_PATH', 'candidates.db'))
+    placeholders = ','.join(['?'] * len(combined_ids))
+    try:
+        query = f"""
+            SELECT id, name_kr, raw_text, sector, current_company, total_years, 
+                   profile_summary, careers_json, education_json, email, phone, birth_year, google_drive_url,
+                   program_signal, program_stage
+            FROM candidates 
+            WHERE id IN ({placeholders})
+        """
+        try:
+            rows_t = conn.execute(query, combined_ids).fetchall()
+        except sqlite3.OperationalError as e:
+            if "no such column" in str(e).lower():
+                logger.warning("[V9] program_signal/stage column missing in SQLite. Using fallback 0.0.")
+                query = f"""
+                    SELECT id, name_kr, raw_text, sector, current_company, total_years, 
+                           profile_summary, careers_json, education_json, email, phone, birth_year, google_drive_url,
+                           0.0 as program_signal, NULL as program_stage
+                    FROM candidates 
+                    WHERE id IN ({placeholders})
+                """
+                rows_t = conn.execute(query, combined_ids).fetchall()
+            else:
+                raise e
+
+        for r in rows_t:
+            cid = str(r[0])
+            name_val = r[1]
+            raw_text_val = r[2]
+            
+            raw_text_map[cid] = raw_text_val
+            if (cid not in id_to_name or not id_to_name.get(cid)) and name_val:
+                id_to_name[cid] = name_val
+            
+            # Map SQLite fields to the format expected by the frontend
+            import json
+            try:
+                careers = json.loads(r[7]) if r[7] else []
+            except:
+                careers = []
+            try:
+                education = json.loads(r[8]) if r[8] else []
+            except:
+                education = []
+
+            db_metadata_map[cid] = {
+                'id': cid,
+                'name_kr': name_val,
+                'sector': r[3] or '미분류',
+                'current_company': r[4] or '미상',
+                'total_years': r[5] or 0,
+                'profile_summary': r[6] or '',
+                'careers': careers,
+                'education': education,
+                'email': r[9] or '',
+                'phone': r[10] or '',
+                'birth_year': r[11] or '',
+                'google_drive_url': r[12] or '',
+                'program_signal': r[13] or 0.0,
+                'program_stage': r[14] or None
+            }
+    finally:
+        conn.close()
+
+    # Calculate accurate Graph (G) and Depth (D) score for every candidate in the pool
+    final_g_scores = {}
+    final_d_scores = {}
+    
+    ACTION_WEIGHT_MAP = {
+        'MANAGED': 1.0, 'BUILT': 0.9, 'DESIGNED': 0.8, 'LAUNCHED': 0.7,
+        'GREW': 0.7, 'ANALYZED': 0.5, 'NEGOTIATED': 0.5, 'SUPPORTED': 0.2
+    }
+    
+    for cid in combined_ids:
+        cand_edges = edges_map.get(cid, [])
+        # Tower 2: Graph (Existing V8 logic)
+        raw_g = calculate_gravity_fusion_score(cand_edges, conds, is_category_search)
+        candidate_nodes = [e['skill'] for e in cand_edges]
+        query_nodes = [c['skill'] for c in conds]
+        raw_g += calc_gravity_score(candidate_nodes, query_nodes, seniority)
+        # ── Primary sector 기반 G score 패널티 ──────────────
+        def get_primary_sector(cid):
+            sector_str = candidate_sector_map.get(cid, '')
+            return sector_str.split(',')[0].strip() if sector_str else ''
+
+        primary = get_primary_sector(cid)
+        g_score = math.log(max(raw_g, 0) + 1)
+
+        if query_domain == 'semiconductor':
+            if primary == 'Eng_Semi':
+                pass  # 패널티 없음
+            elif primary == 'Eng_Embedded':
+                g_score *= 0.85  # 경미한 감쇠
+            elif primary in ('Eng_AI', 'Eng_SW'):
+                g_score *= 0.65  # 중간 감쇠
+            else:
+                g_score *= 0.4   # 강한 감쇠
+
+        elif query_domain == 'ai':
+            if primary == 'Eng_AI':
+                pass
+            elif primary in ('Eng_SW', 'Eng_Data'):
+                g_score *= 0.9
+            elif primary == 'Eng_Semi':
+                g_score *= 0.8   # 반도체 출신 AI는 경미한 감쇠만
+            else:
+                g_score *= 0.5
+
+        final_g_scores[cid] = g_score
         
-        final_output.append({
-            "name": cand["name"],
-            "hash": cand["id"],
-            "score": best["final_score"],
-            "best_company": best["company"],
-            "explain_reason": explain,
-            "graph_score": best["graph_score"],
-            "vector_score": best["vector_score"],
-            "matched_edges": best["matched_edges"],
-            "total_edges": best["total_edges"],
-            "raw_text": "",
-            "summary": "V9.0 Chunk-level Evaluated."
+        # Tower 4: Depth Score
+        # [Signal 1] Action intensity on matched skills
+        matched_action_score = sum(
+            ACTION_WEIGHT_MAP.get(edge['action'], 0.3)
+            for edge in cand_edges
+            if edge['skill'] in target_skills
+        ) / max(len(target_skills), 1)
+        depth_action = min(matched_action_score, 1.0)
+        
+        # [Signal 2] Achievement Density (raw_text numbers)
+        achievement_density = calc_achievement_density(raw_text_map.get(cid, ""))
+        
+        final_d_scores[cid] = (depth_action * 0.6) + (achievement_density * 0.4)
+
+    # 7. Hybrid Fusion
+    max_v = max(list(v_scores.values()) + [1.0])
+    max_g = max(list(final_g_scores.values()) + [1.0])
+    max_b = max(list(bm_scores.values()) + [1.0])
+    
+    final_candidates = []
+    for cid in combined_ids:
+        norm_v = (v_scores.get(cid, 0.0) / max_v) if max_v > 0 else 0.0
+        norm_g = (final_g_scores.get(cid, 0.0) / max_g) if max_g > 0 else 0.0
+        norm_b = (bm_scores.get(cid, 0.0) / max_b) if max_b > 0 else 0.0
+        depth_score = final_d_scores.get(cid, 0.0)
+        
+        # Dynamic Fusion v9 (4-Tower + PROGRAM Boost)
+        prog_signal = float(db_metadata_map.get(cid, {}).get('program_signal', 0.0))
+        program_boost = prog_signal * 0.05  # Max +0.05 for '최종합격'
+        
+        final_score = (norm_v * w_v) + (norm_g * w_g) + (norm_b * w_b) + (depth_score * w_d) + program_boost
+        
+        # [Signal 4] Company Intelligence Boost
+        row_dict = db_metadata_map.get(cid, {})
+        c_boost = get_company_boost(
+            row_dict.get('current_company', ''),
+            conds,
+            conn
+        )
+        final_score += c_boost
+        
+        if cid == 'f5875fc2-99aa-4605-9742-5ec93f4cd51a':
+            logger.info(f"DEBUG [김은형] v_norm:{norm_v:.4f} g_norm:{norm_g:.4f} b_norm:{norm_b:.4f} depth:{depth_score:.4f} boost:{c_boost:.4f} final:{final_score:.4f}")
+        
+        if cid == 'c3d4ee55-266a-44f6-8e66-fb7486be38a8':
+            logger.critical(f"DEBUG [CHOI-SCORE] v_norm:{norm_v:.4f} g_norm:{norm_g:.4f} b_norm:{norm_b:.4f} depth:{depth_score:.4f} boost:{c_boost:.4f} final:{final_score:.4f}")
+            logger.critical(f"DEBUG [CHOI-SCORE] Raw V: {v_scores.get(cid, 0):.4f} | Raw G: {final_g_scores.get(cid, 0):.4f}")
+        
+        # Debug for Rank 1 (based on previous run it was 김종민, but let's just find the max score)
+        if final_score > 0.75:
+            logger.info(f"DEBUG [POTENTIAL RANK 1] {cid} v_norm:{norm_v:.4f} g_norm:{norm_g:.4f} b_norm:{norm_b:.4f} depth:{depth_score:.4f} boost:{c_boost:.4f} final:{final_score:.4f}")
+
+        name = id_to_name.get(cid, cache_map.get(cid, {}).get('name_kr', cid))
+        final_candidates.append({
+            'id': cid,
+            'candidate_id': cid,
+            'name_kr': name,
+            'score': final_score,
+            'v_score': v_scores.get(cid, 0.0),
+            'g_score': final_g_scores.get(cid, 0.0),
+            'bm_score': bm_scores.get(cid, 0.0),
+            'depth_score': depth_score
         })
+
+    
+    final_candidates.sort(key=lambda x: x['score'], reverse=True)
+    top_matched = final_candidates[:50]
+
+    matched_candidates = []
+    for c in top_matched:
+        cid = c['id']
+        name = c['name_kr']
         
-    return final_output
+        # Use DB metadata first, fallback to cache_map
+        c_info = db_metadata_map.get(cid) or cache_map.get(cid) or cache_map.get(name) or {}
+        
+        cand_edges = edges_map.get(cid, [])
+        # V9: Map edges/skills to format UI expects (MATCHEDGE)
+        matched_edges = [e['skill'] for e in cand_edges]
+        matched_actions = list(set([e['action'] for e in cand_edges]))
+        
+        candidate_obj = {
+            'id': cid,
+            'name': name,
+            'name_kr': name,
+            'final_score': round(c['score'], 4),
+            'v_score': round(c['v_score'], 4),
+            'g_score': round(c['g_score'], 4),
+            'bm_score': round(c['bm_score'], 4),
+            'depth_score': round(c['depth_score'], 4),
+            'matched_edges': matched_edges,
+            'matched_actions': matched_actions,
+            'sector': c_info.get('sector', '미분류'),
+            'current_company': c_info.get('current_company', '미상'),
+            'total_years': c_info.get('total_years', 0),
+            'profile_summary': c_info.get('profile_summary', ''),
+            'careers': c_info.get('careers', []),
+            'education': c_info.get('education', []),
+            'email': c_info.get('email', ''),
+            'phone': c_info.get('phone', ''),
+            'birth_year': c_info.get('birth_year', ''),
+            'google_drive_url': c_info.get('google_drive_url', ''),
+            'program_stage': c_info.get('program_stage', None),
+            'seniority': get_seniority_label(c_info.get('total_years', 0)),
+            '연차등급': get_seniority_label(c_info.get('total_years', 0))
+        }
+        matched_candidates.append(candidate_obj)
+
+    logger.info(f"[V9 Hybrid Search] Completed. Top result: {matched_candidates[0]['name_kr'] if matched_candidates else 'None'}")
+    
+    return {
+        "matched": matched_candidates[:50],
+        "total": len(final_candidates),
+        "is_category_search": is_category_search
+    }
+
+# =================================================================
+# 🧬 [v10.4 Bayesian Expert Edition] Domain-Specific Adaptive Engine
+# =================================================================
+
+class DomainSubsetExtractor:
+    def __init__(self, anchors_path='domain_anchors.json'):
+        self.anchors = []
+        if os.path.exists(anchors_path):
+            with open(anchors_path, 'r', encoding='utf-8') as f:
+                self.anchors = json.load(f)
+        logging.info(f"[DomainSubset] Loaded {len(self.anchors)} anchors.")
+
+    def get_local_likelihood(self, query_embedding, top_n=5):
+        """
+        Finds the most similar golden samples and extracts domain-specific skill importance.
+        """
+        if not self.anchors: return {}
+        
+        # Calculate cosine similarity
+        similarities = []
+        q_vec = np.array(query_embedding)
+        for anchor in self.anchors:
+            a_vec = np.array(anchor["embedding"])
+            sim = np.dot(q_vec, a_vec) / (np.linalg.norm(q_vec) * np.linalg.norm(a_vec))
+            similarities.append((sim, anchor))
+            
+        # Sort by similarity
+        similarities.sort(key=lambda x: x[0], reverse=True)
+        subset = similarities[:top_n]
+        
+        # Aggregate local importance
+        local_counts = {}
+        for sim, anchor in subset:
+            nodes = anchor.get("target_nodes", [])
+            for node in nodes:
+                # Similarity weighted count
+                local_counts[node] = local_counts.get(node, 0) + sim
+                
+        # Normalize local weights (0.0 ~ 1.0)
+        max_v = max(local_counts.values()) if local_counts else 1.0
+        return {k: v/max_v for k, v in local_counts.items()}
+
+domain_extractor = DomainSubsetExtractor()
+
+class BayesianAdaptiveScorerV2:
+    def __init__(self, global_likelihood_path='global_skill_likelihood.json'):
+        self.global_importance = {}
+        if os.path.exists(global_likelihood_path):
+            with open(global_likelihood_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                self.global_importance = data.get("skill_importance", {})
+
+    def get_expert_weights(self, target_skills, local_likelihood, alpha=0.3):
+        """
+        Bayesian Synthesis: Prior (Global) * Likelihood (Domain)
+        """
+        weights = {}
+        for skill in target_skills:
+            # 1. Global Prior (Background Noise)
+            p_global = self.global_importance.get(skill, 0.5)
+            
+            # 2. Local Likelihood (Domain Expert Signal)
+            p_local = local_likelihood.get(skill, 0.5)
+            
+            # 3. Combined Bayesian Weight
+            # Give more weight to Domain (1-alpha)
+            combined = (alpha * p_global) + ((1 - alpha) * p_local)
+            weights[skill] = max(0.3, round(float(combined), 4))
+            
+        return weights
+
+expert_scorer = BayesianAdaptiveScorerV2()
+
+def calc_achievement_density_v9(raw_text):
+    if not raw_text: return 0.0
+    core_patterns = [r'\d+%', r'\d+억', r'\d+만', r'\d+명', r'\d+개', r'\d+년']
+    tech_patterns = [r'특허', r'논문', r'제1저자', r'SCI', r'수상', r'\d+건']
+    core_count = sum(len(re.findall(p, raw_text)) for p in core_patterns)
+    tech_count = sum(len(re.findall(p, raw_text)) for p in tech_patterns)
+    weighted_count = core_count + (tech_count * 0.5)
+    density = weighted_count / (max(len(raw_text), 1) / 1000)
+    return min(density / 5.0, 1.0)
+
+def get_bm25_top_v9(query_text, top_k=100):
+    import pickle
+    index_path = 'bm25_index.pkl'
+    if not os.path.exists(index_path): return {}
+    with open(index_path, 'rb') as f:
+        data = pickle.load(f)
+        bm25 = data['bm25']
+        ids = data['ids']
+    def tokenize(text):
+        tokens = re.findall(r'[가-힣]{2,}|[a-zA-Z]{2,}|\d+', text or '')
+        return [t.lower() for t in tokens]
+    tokenized_query = tokenize(query_text)
+    scores = bm25.get_scores(tokenized_query)
+    max_s = max(scores) if len(scores) > 0 and max(scores) > 0 else 1.0
+    import numpy as np
+    top_indices = np.argsort(scores)[::-1][:top_k]
+    res = {}
+    for idx in top_indices:
+        s = scores[idx]
+        if s > 0: res[str(ids[idx])] = s / max_s
+    return res
+
+def get_effective_gravity_v9(node, seniority="All"):
+    field = UNIFIED_GRAVITY_FIELD.get(node, {})
+    if seniority == "SENIOR" and node in SENIOR_EXPANDED_SYNERGY:
+        field = field.copy()
+        field["synergy_attracts"] = {**field.get("synergy_attracts", {}), **SENIOR_EXPANDED_SYNERGY[node]}
+    return field
+
+def calc_gravity_score_v9(candidate_nodes, query_nodes, seniority="All"):
+    REPEL_MULTIPLIER = {"SENIOR": 0.5, "MIDDLE": 0.7, "JUNIOR": 0.9, "All": 0.7}
+    repel_mult = REPEL_MULTIPLIER.get(seniority, 0.7)
+    score = 0
+    for node in query_nodes:
+        field = get_effective_gravity_v9(node, seniority)
+        core = field.get("core_attracts", {})
+        for cnode, weight in core.items():
+            if cnode in candidate_nodes: score += weight * 2.0
+        synergy = field.get("synergy_attracts", {})
+        for snode, weight in synergy.items():
+            if snode in candidate_nodes: score += weight
+        repels = field.get("repels", {})
+        for rnode, weight in repels.items():
+            if rnode in candidate_nodes: score += weight * repel_mult
+    return score
+
+def map_abbreviations_v9(query_str, conditions_list):
+    expansion_map = {
+        "IPO": ["Investor_Relations", "IPO_Preparation"],
+        "IR": ["Investor_Relations"], "DFT": ["Design_for_Testability"],
+        "RTL": ["RTL_Design"], "SoC": ["System_on_Chip"], "SAP": ["SAP_ERP"],
+        "BI": ["Business_Intelligence"], "Tableau": ["Tableau"],
+        "DevOps": ["DevOps", "CI_CD"], "SaaS": ["SaaS"],
+        "Kotlin": ["Kotlin", "Android_Development"], "ASRS": ["Warehouse_Automation"]
+    }
+    # Ensure conditions_list is a list of dicts
+    if not isinstance(conditions_list, list): return []
+    
+    for abbr, expansions in expansion_map.items():
+        if re.search(r'\b' + re.escape(abbr) + r'\b', query_str, re.IGNORECASE):
+            for exp in expansions:
+                # Add check: c must be dict
+                if not any(isinstance(c, dict) and c.get('skill') == exp for c in conditions_list):
+                    conditions_list.append({"action": "MANAGED", "skill": exp, "is_mandatory": False, "source": "abbr_map"})
+    return conditions_list
+
