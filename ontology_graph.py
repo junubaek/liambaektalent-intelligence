@@ -38,6 +38,20 @@ CANONICAL_MAP: dict[str, str] = {
     "TensorRT-LLM": "LLM_Serving_Engine",
     "llm serving engine": "LLM_Serving_Engine",
 
+    # New NPU/Kernel/Driver Missing Skill Mappings
+    "Linux device driver": "Device_Driver",
+    "linux device driver": "Device_Driver",
+    "memory allocator": "Memory_Architecture",
+    "execution scheduler": "NPU_Runtime",
+    "host runtime": "NPU_Runtime",
+    "distributed inference systems": "NPU_Runtime",
+    "NVMe": "NVMe_Protocol",
+    "nvme": "NVMe_Protocol",
+    "Cache Coherence": "Memory_Architecture",
+    "cache coherence": "Memory_Architecture",
+    "NUMA architecture": "Memory_Architecture",
+    "operator fusion": "NPU_Software_Stack",
+
     # GPU/CPU
     "GPU": "GPGPU",
     "gpu": "GPGPU",
@@ -7356,7 +7370,11 @@ EXPLICIT_GRAVITY_FIELD = {
         "core_attracts": {
             "Sys_Software": 0.9, "Firmware": 0.9, "Embedded_Systems": 0.9,
             "ARM_Architecture": 0.8, "Linux_Kernel": 0.8, "RTOS": 0.8,
-            "Device_Driver": 0.8, "BSP": 0.8, "Bootloader": 0.8, "PCIe_Protocol": 0.8
+            "Device_Driver": 0.8, "BSP": 0.8, "Bootloader": 0.8, "PCIe_Protocol": 0.8,
+            "NPU_Kernel": 0.9,
+            "NPU_Runtime": 0.8,
+            "NPU_Software_Stack": 0.8,
+            "NPU_Design": 0.9
         },
         "repels": {
             "Financial_Accounting": -0.3, "Marketing": -0.3, "HR": -0.3,
@@ -7365,14 +7383,23 @@ EXPLICIT_GRAVITY_FIELD = {
     },
     "Semiconductor_NPU": {
         "core_attracts": {
-            "NPU_Design": 0.9, "RTL_Design": 0.9, "Verilog": 0.9, "VHDL": 0.9,
-            "DNN_Accelerator": 0.9, "GPGPU": 0.8, "SoC": 0.8, "PPA_Optimization": 0.8,
-            "Chip_Design": 0.8, "Memory_Architecture": 0.8
+            "NPU_Design": 1.0,
+            "NPU_Kernel": 1.0,
+            "NPU_Runtime": 0.9,
+            "NPU_Software_Stack": 0.9,
+            "Device_Driver": 0.8,
+            "Linux_Kernel": 0.8,
+            "DNN_Accelerator": 0.9,
+            "GPGPU": 0.8,
+            "LLM_Serving_Engine": 0.8,
+            "Tenstorrent_ISA": 0.9,
+            "RISC_V_Vector": 0.8
         },
         "repels": {
-            "Backend": -0.3, "Frontend": -0.3, "Marketing": -0.3, "B2B_Sales": -0.3,
-            "Infrastructure_and_Cloud": -0.4, "Media_Service": -0.4, "CDN": -0.4,
-            "Streaming": -0.4, "DevOps": -0.4, "Web_Backend": -0.4
+            "Payment_and_Settlement_System": -0.5,
+            "Financial_Accounting": -0.5,
+            "Marketing": -0.5,
+            "HR": -0.5
         }
     },
     "Semiconductor_SoC": {
