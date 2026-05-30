@@ -1518,7 +1518,24 @@ def api_search_v8(prompt: str, session_id: str = None, **kwargs) -> dict:
             RETURN coalesce(c.id, c.name_kr) AS id, collect(DISTINCT {skill: s.name, action: type(r)}) AS skills
             """
             res_e = session.run(q_edge, ids=combined_ids)
-            edges_map = {str(r["id"]): r["skills"] for r in res_e}
+            def normalize_skill(skill_name: str) -> str:
+                if skill_name in CANONICAL_MAP:
+                    return CANONICAL_MAP[skill_name]
+                lower = skill_name.lower()
+                for key, val in CANONICAL_MAP.items():
+                    if key.lower() == lower:
+                        return val
+                return skill_name
+
+            edges_map = {}
+            for r in res_e:
+                normalized_skills = []
+                for s in r["skills"]:
+                    normalized_skills.append({
+                        "skill": normalize_skill(s["skill"]),
+                        "action": s["action"]
+                    })
+                edges_map[str(r["id"])] = normalized_skills
     except Exception as e:
         logger.error(f"Edges fetch error: {e}")
     finally:
@@ -1933,7 +1950,25 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
                 WHERE (c.id IN $ids OR c.name_kr IN $ids) AND type(r) <> 'USED_AS_TEMP'
                 RETURN coalesce(c.id, c.name_kr) AS id, collect(DISTINCT {skill: s.name, action: type(r)}) AS skills
             """, ids=combined_ids)
-            edges_map = {str(r["id"]): r["skills"] for r in res_e}
+
+            def normalize_skill(skill_name: str) -> str:
+                if skill_name in CANONICAL_MAP:
+                    return CANONICAL_MAP[skill_name]
+                lower = skill_name.lower()
+                for key, val in CANONICAL_MAP.items():
+                    if key.lower() == lower:
+                        return val
+                return skill_name
+
+            edges_map = {}
+            for r in res_e:
+                normalized_skills = []
+                for s in r["skills"]:
+                    normalized_skills.append({
+                        "skill": normalize_skill(s["skill"]),
+                        "action": s["action"]
+                    })
+                edges_map[str(r["id"])] = normalized_skills
     except Exception as e:
         logger.error(f"[V9] Edge hydration error: {e}")
     finally:
