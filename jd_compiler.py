@@ -1908,6 +1908,9 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     HR_KEYWORDS  = ['hr', '채용', '인사', '총무', 'general affairs', '시설관리', '구매관리', '복리후생', '노무']
     DESIGN_KEYWORDS = ['uiux', 'ui/ux', 'ux 디자이너', 'ui 디자이너', 
                        '디자이너', 'product design', 'figma']
+    CTO_KEYWORDS = ['cto', 'chief technology', '기술 임원', '기술총괄']
+    CFO_KEYWORDS = ['cfo', 'chief financial', '재무총괄', '최고재무']
+    KAFKA_KEYWORDS = ['kafka', '카프카', 'message queue', '메시지큐', 'event streaming']
 
     query_lower = prompt.lower()
 
@@ -1927,6 +1930,12 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         query_domain = 'hr'
     elif any(k in query_lower for k in DESIGN_KEYWORDS):
         query_domain = 'design'
+    elif any(k in query_lower for k in CTO_KEYWORDS):
+        query_domain = 'cto'
+    elif any(k in query_lower for k in CFO_KEYWORDS):
+        query_domain = 'cfo'
+    elif any(k in query_lower for k in KAFKA_KEYWORDS):
+        query_domain = 'data_infra'
     else:
         query_domain = 'general'
 
@@ -1939,6 +1948,9 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         'sw':            {'Eng_SW', 'Eng_AI', 'Eng_Data', 'Eng_Embedded'},
         'hr':            {'HR'},
         'design':        {'Product', 'Marketing'},
+        'cto':           {'Eng_SW', 'Eng_AI', 'Product', 'Strategy'},
+        'cfo':           {'Finance', 'Strategy'},
+        'data_infra':    {'Eng_Data', 'Eng_SW', 'Eng_AI'},
         'general':       None  # 필터 없음
     }
 
