@@ -283,12 +283,21 @@ def calculate_gravity_fusion_score(candidate_edges, conds, is_category_search=Fa
         if isinstance(edge, dict):
             skill = edge.get('skill', '')
             action = edge.get('action', 'MANAGED')
+            last_used = edge.get('last_used_year')
         else:
             skill = edge
             action = "MANAGED"
+            last_used = None
             
         if skill in jd_target_skills:
             weight = ACTION_WEIGHTS.get(action, 1.0)
+            if last_used is not None:
+                try:
+                    last_used_val = float(last_used)
+                    decay = max(0.3, 1.0 - 0.15 * (2025 - last_used_val))
+                    weight *= decay
+                except (ValueError, TypeError):
+                    pass
             if skill not in matched_skill_actions:
                 matched_skill_actions[skill] = []
             matched_skill_actions[skill].append(weight)
@@ -1982,7 +1991,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
             res_e = session.run("""
                 MATCH (c:Candidate)-[r]->(s:Skill)
                 WHERE (c.id IN $ids OR c.name_kr IN $ids) AND type(r) <> 'USED_AS_TEMP'
-                RETURN coalesce(c.id, c.name_kr) AS id, collect(DISTINCT {skill: s.name, action: type(r)}) AS skills
+                RETURN coalesce(c.id, c.name_kr) AS id, collect(DISTINCT {skill: s.name, action: type(r), last_used_year: r.last_used_year}) AS skills
             """, ids=combined_ids)
 
             def normalize_skill(skill_name: str) -> str:
@@ -2000,7 +2009,8 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
                 for s in r["skills"]:
                     normalized_skills.append({
                         "skill": normalize_skill(s["skill"]),
-                        "action": s["action"]
+                        "action": s["action"],
+                        "last_used_year": s.get("last_used_year")
                     })
                 edges_map[str(r["id"])] = normalized_skills
     except Exception as e:
