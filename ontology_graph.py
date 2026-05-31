@@ -8289,11 +8289,13 @@ if __name__ == "__main__":
 
 # ============================================================
 # 1. ontology_graph.py 하단에 추가할 코드 (Node Affinity)
-# ============================================================
 
 
 
-EXPLICIT_GRAVITY_FIELD = {
+# -------------------------------------------------------------------------
+# ⚙️ [핵심] UNIFIED_GRAVITY_FIELD 스마트 동적 병합기 (Smart Auto-Generator)
+# -------------------------------------------------------------------------
+UNIFIED_GRAVITY_FIELD = {
     "SW_AI": {
         "core_attracts": {
             "LLM_Inference": 0.9, "Model_Parallelism": 0.9, "vLLM": 0.9, "MLOps": 0.8,
@@ -8485,12 +8487,6 @@ EXPLICIT_GRAVITY_FIELD = {
         }
     }
 }
-
-
-# -------------------------------------------------------------------------
-# ⚙️ [핵심] UNIFIED_GRAVITY_FIELD 스마트 동적 병합기 (Smart Auto-Generator)
-# -------------------------------------------------------------------------
-UNIFIED_GRAVITY_FIELD = EXPLICIT_GRAVITY_FIELD.copy()
 
 # Antigravity의 우려(노이즈 폭발)를 완벽히 해결한 필터링 로직
 for src, tgt, rel, weight in EDGES:

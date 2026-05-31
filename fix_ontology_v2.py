@@ -5,13 +5,13 @@ file_path = 'C:/Users/cazam/Downloads/이력서자동분석검색시스템/ontol
 with open(file_path, 'r', encoding='utf-8') as f:
     text = f.read()
 
-text = re.sub(r'^UNIFIED_GRAVITY_FIELD\s*=\s*\{', 'EXPLICIT_GRAVITY_FIELD = {', text, flags=re.MULTILINE)
+text = re.sub(r'^UNIFIED_GRAVITY_FIELD\s*=\s*\{', 'UNIFIED_GRAVITY_FIELD = {', text, flags=re.MULTILINE)
 
 auto_gen_code = '''
 # -------------------------------------------------------------------------
 # ⚙️ [핵심] UNIFIED_GRAVITY_FIELD 스마트 동적 병합기 (Smart Auto-Generator)
 # -------------------------------------------------------------------------
-UNIFIED_GRAVITY_FIELD = EXPLICIT_GRAVITY_FIELD.copy()
+UNIFIED_GRAVITY_FIELD = UNIFIED_GRAVITY_FIELD.copy()
 
 # Antigravity의 우려(노이즈 폭발)를 완벽히 해결한 필터링 로직
 for src, tgt, rel, weight in EDGES:
@@ -28,7 +28,7 @@ for src, tgt, rel, weight in EDGES:
             UNIFIED_GRAVITY_FIELD[src]["synergy_attracts"][tgt] = weight
 '''
 
-if 'EXPLICIT_GRAVITY_FIELD = {' in text and 'Smart Auto-Generator' not in text:
+if 'UNIFIED_GRAVITY_FIELD = {' in text and 'Smart Auto-Generator' not in text:
     text += '\n' + auto_gen_code
     with open(file_path, 'w', encoding='utf-8') as f:
         f.write(text)
