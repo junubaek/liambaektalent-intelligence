@@ -1724,6 +1724,43 @@ def calculate_recency_multiplier(end_date_str):
 
 
 
+def expand_query_for_embedding(query: str, openai_client) -> str:
+    """쿼리를 이력서 스타일 텍스트로 확장해서 벡터 매칭 품질 향상"""
+    try:
+        resp = openai_client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[{
+                "role": "system",
+                "content": (
+                    "You are a Korean talent search expert. "
+                    "Convert a job search query into a resume-style description "
+                    "that would match ideal candidates. "
+                    "Write in Korean, 150-200 characters, "
+                    "focusing on: current role, key skills, "
+                    "major achievements, and experience level. "
+                    "Do NOT use bullet points. Write as continuous text."
+                )
+            }, {
+                "role": "user",
+                "content": f"검색 쿼리: {query}"
+            }],
+            max_tokens=300,
+            temperature=0.3
+        )
+        return resp.choices[0].message.content.strip()
+    except Exception as e:
+        logger.error(f"Query expansion failed: {e}")
+        return query
+
+def cosine_similarity(v1, v2):
+    if not v1 or not v2: return 0.0
+    import math
+    dot = sum(a*b for a, b in zip(v1, v2))
+    norm1 = math.sqrt(sum(a*a for a in v1))
+    norm2 = math.sqrt(sum(b*b for b in v2))
+    if norm1 == 0 or norm2 == 0: return 0.0
+    return dot / (norm1 * norm2)
+
 def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', weights: dict = None) -> dict:
     """
     [Hybrid Search v9]
@@ -1890,7 +1927,9 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     with open(SECRETS_PATH, "r", encoding="utf-8") as f:
         secrets = json.load(f)
     client = OpenAI(api_key=secrets.get("OPENAI_API_KEY"))
-    emb_res = client.embeddings.create(input=[prompt], model="text-embedding-3-small")
+    expanded_query = expand_query_for_embedding(prompt, client)
+    logger.info(f"[Vector Search] Expanded Query: {expanded_query}")
+    emb_res = client.embeddings.create(input=[expanded_query], model="text-embedding-3-small")
     query_vector = emb_res.data[0].embedding
 
     v_scores = {}
@@ -1900,11 +1939,30 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
             res_v = session.run("""
                 CALL db.index.vector.queryNodes('candidate_embedding', 200, $queryVector)
                 YIELD node AS c, score
-                RETURN c.id AS id, coalesce(c.name_kr, c.name) AS name, score
+                RETURN c.id AS id, coalesce(c.name_kr, c.name) AS name, score, c.embedding AS embedding, c.career_embeddings_json AS career_embeddings_json
             """, queryVector=query_vector)
             for r in res_v:
                 cid = str(r["id"])
-                v_scores[cid] = r["score"]
+                c_emb = r.get("embedding")
+                career_json = r.get("career_embeddings_json")
+                
+                if c_emb:
+                    main_sim = cosine_similarity(query_vector, c_emb)
+                    blended_sim = main_sim
+                    if career_json:
+                        try:
+                            career_embs = json.loads(career_json)
+                            if isinstance(career_embs, list) and career_embs:
+                                career_sims = [cosine_similarity(query_vector, emb) for emb in career_embs if emb]
+                                if career_sims:
+                                    best_career_sim = max(career_sims)
+                                    blended_sim = 0.7 * main_sim + 0.3 * best_career_sim
+                        except Exception as e:
+                            logger.error(f"Error parsing career JSON: {e}")
+                else:
+                    blended_sim = r["score"]
+                    
+                v_scores[cid] = blended_sim
                 id_to_name[cid] = r["name"]
     except Exception as e:
         logger.error(f"[V9] Vector Error: {e}")

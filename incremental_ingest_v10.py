@@ -169,6 +169,56 @@ def extract_fallback_name(filename):
     m = re.search(r'[가-힣]{2,4}', filename.replace("이력서", "").replace("포트폴리오", "").replace("개발자", ""))
     return m.group(0) if m else "미상"
 
+def extract_top_idf_skills(text: str, n: int = 7) -> list:
+    if not text:
+        return []
+    import json
+    try:
+        with open('node_idf.json', 'r', encoding='utf-8') as f:
+            idf_map = json.load(f)
+    except:
+        idf_map = {}
+        
+    text_lower = text.lower()
+    matched_skills = {}
+    
+    for alias, canonical in CANONICAL_MAP.items():
+        if len(alias) > 1 and alias.lower() in text_lower:
+            idf_val = idf_map.get(canonical, 1.5)
+            if canonical not in matched_skills or idf_val > matched_skills[canonical]:
+                matched_skills[canonical] = idf_val
+                
+    for skill_name, idf_val in idf_map.items():
+        skill_clean = skill_name.replace('_', ' ').lower()
+        if len(skill_clean) > 2 and (skill_clean in text_lower or skill_name.lower() in text_lower):
+            if skill_name not in matched_skills or idf_val > matched_skills[skill_name]:
+                matched_skills[skill_name] = idf_val
+                
+    sorted_skills = sorted(matched_skills.items(), key=lambda x: x[1], reverse=True)
+    return [s[0] for s in sorted_skills[:n]]
+
+def build_embedding_text(candidate: dict) -> str:
+    name = candidate.get('name_kr') or candidate.get('name', '')
+    sector = candidate.get('sector', '')
+    company = candidate.get('current_company', '')
+    summary = candidate.get('profile_summary', '')
+    raw = candidate.get('raw_text', '') or ''
+    
+    career_start = 0
+    for trigger in ['경력', 'Experience', 'Work', '주요업무', '이력']:
+        idx = raw.find(trigger)
+        if idx != -1 and idx < len(raw) * 0.4:
+            career_start = idx
+            break
+            
+    career_text = raw[career_start:career_start+1500]
+    
+    top_skills = extract_top_idf_skills(raw, n=7)
+    skills_str = ' '.join(top_skills)
+    
+    parts = [name, sector, company, skills_str, summary, career_text]
+    return ' '.join(p for p in parts if p)
+
 def process_file(filepath):
     filename = os.path.basename(filepath)
     text = extract_text(filepath)
@@ -323,7 +373,15 @@ def process_file(filepath):
     # 6. Pinecone Embeddings
     with pinecone_lock:
         try:
-            chunks = chunk_text(text)
+            cand_dict = {
+                "name_kr": name_kr,
+                "sector": sector,
+                "current_company": current_company,
+                "profile_summary": summary,
+                "raw_text": text
+            }
+            emb_text = build_embedding_text(cand_dict)
+            chunks = chunk_text(emb_text)
             if chunks:
                 response = openai_client.embeddings.create(model="text-embedding-3-small", input=chunks)
                 vectors = []
