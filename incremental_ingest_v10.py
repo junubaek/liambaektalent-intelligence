@@ -256,17 +256,31 @@ def process_file(filepath):
         # Strip phone numbers for comparison
         clean_ext_phone = phone.replace("-","").strip() if phone else ""
         clean_ext_email = email.lower().strip() if email else ""
+        clean_name = name_kr.strip() if name_kr else ""
+        clean_company = current_company.strip() if current_company else ""
         
-        if clean_ext_phone or clean_ext_email:
-            for row in c.execute("SELECT id, email, phone FROM candidates"):
-                d_email = row[1].lower().strip() if row[1] else ""
-                d_phone = row[2].replace("-","").strip() if row[2] else ""
-                
-                if (clean_ext_email and d_email == clean_ext_email) or \
-                   (clean_ext_phone and d_phone == clean_ext_phone):
-                    is_duplicate = 1
-                    print(f"  [Duplicate Found] {name_kr}: Match with existing -> Email: {clean_ext_email}, Phone: {clean_ext_phone}")
-                    break
+        for row in c.execute("SELECT id, email, phone, name_kr, current_company FROM candidates WHERE is_duplicate=0"):
+            d_id = row[0]
+            d_email = row[1].lower().strip() if row[1] else ""
+            d_phone = row[2].replace("-","").strip() if row[2] else ""
+            d_name = row[3].strip() if row[3] else ""
+            d_company = row[4].strip() if row[4] else ""
+            
+            # Same email
+            if clean_ext_email and d_email == clean_ext_email:
+                is_duplicate = 1
+                print(f"  [Duplicate Found] {name_kr}: Match with existing ID {d_id} -> Email: {clean_ext_email}")
+                break
+            # Same phone
+            if clean_ext_phone and d_phone == clean_ext_phone:
+                is_duplicate = 1
+                print(f"  [Duplicate Found] {name_kr}: Match with existing ID {d_id} -> Phone: {clean_ext_phone}")
+                break
+            # Same Name + Same Current Company
+            if clean_name and clean_company and d_name == clean_name and d_company == clean_company:
+                is_duplicate = 1
+                print(f"  [Duplicate Found] {name_kr}: Match with existing ID {d_id} -> Same Name and Company: {clean_name} @ {clean_company}")
+                break
                     
         c_id = str(uuid.uuid4())
         c.execute('''

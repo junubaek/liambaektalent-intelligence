@@ -294,7 +294,7 @@ def calculate_gravity_fusion_score(candidate_edges, conds, is_category_search=Fa
             if last_used is not None:
                 try:
                     last_used_val = float(last_used)
-                    decay = max(0.3, 1.0 - 0.15 * (2025 - last_used_val))
+                    decay = max(0.5, 1.0 - 0.10 * (2025 - last_used_val))
                     weight *= decay
                 except (ValueError, TypeError):
                     pass
@@ -1735,27 +1735,75 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     import json, time, math
     
     # 0. Set Weights (Dynamic)
-    from ontology_graph import CANONICAL_MAP
-    prompt_lower = prompt.lower()
-    prompt_words = re.findall(r'[a-zA-Z가-힣]{2,}', prompt_lower)
+    SEMI_KEYWORDS = ['npu', 'soc', '반도체', 'rtl', 'fpga',
+                     'asic', '팹리스', 'chip', '칩', 'verilog',
+                     'tape-out', 'tape out', 'ppa']
+    AI_KEYWORDS   = ['llm', 'ai ', '인공지능', 'ml ', '머신러닝',
+                     '딥러닝', 'deep learning', 'gpu', 'inference',
+                     '추론', '서빙', 'transformer', 'pytorch', 'mlops']
+    SW_KEYWORDS   = ['백엔드', 'backend', '프론트', 'frontend',
+                     'devops', '인프라', 'infra', 'kubernetes',
+                     'docker', 'msa', '마이크로서비스']
+    EMBEDDED_KEYWORDS = ['드라이버', '커널', 'kernel', 'firmware',
+                         '펌웨어', 'bsp', 'rtos', 'embedded',
+                         '임베디드']
+    MARKETING_KEYWORDS = ['마케팅', 'marketing', '광고', '브랜드', 
+                          '퍼포먼스', 'CRM', '그로스', 'growth']
+    PO_KEYWORDS = ['product owner', 'po ', 'p.o.', 
+                   '프로덕트 오너', '프로덕트 매니저', 'pm ',
+                   'product manager']
+    HR_KEYWORDS  = ['hr', '채용', '인사', '총무', 'general affairs', '시설관리', '구매관리', '복리후생', '노무']
+    DESIGN_KEYWORDS = ['uiux', 'ui/ux', 'ux 디자이너', 'ui 디자이너', 
+                       '디자이너', 'product design', 'figma']
+    CTO_KEYWORDS = ['cto', 'chief technology', '기술 임원', '기술총괄']
+    CFO_KEYWORDS = ['cfo', 'chief financial', '재무총괄', '최고재무']
+    KAFKA_KEYWORDS = ['kafka', '카프카', 'message queue', '메시지큐', 'event streaming']
 
-    registered_count = sum(1 for w in prompt_words 
-                           if any(w in k.lower() for k in CANONICAL_MAP.keys()))
-    unknown_ratio = 1.0 - (registered_count / max(len(prompt_words), 1))
+    query_lower = prompt.lower()
 
-    # 동적 가중치 계산
-    if unknown_ratio < 0.3:
-        # [실험 6] 최적 가중치 고정 (Peak: 0.35)
-        w_v_dynamic = 0.60
-        w_g_dynamic = 0.35
-        w_b_dynamic = 0.03
-        w_d_dynamic = 0.02
+    if any(k in query_lower for k in SEMI_KEYWORDS):
+        query_domain = 'semiconductor'
+    elif any(k in query_lower for k in EMBEDDED_KEYWORDS):
+        query_domain = 'embedded'
+    elif any(k in query_lower for k in AI_KEYWORDS):
+        query_domain = 'ai'
+    elif any(k in query_lower for k in MARKETING_KEYWORDS):
+        query_domain = 'marketing'
+    elif any(k in query_lower for k in PO_KEYWORDS):
+        query_domain = 'product'
+    elif any(k in query_lower for k in SW_KEYWORDS):
+        query_domain = 'sw'
+    elif any(k in query_lower for k in HR_KEYWORDS):
+        query_domain = 'hr'
+    elif any(k in query_lower for k in DESIGN_KEYWORDS):
+        query_domain = 'design'
+    elif any(k in query_lower for k in CTO_KEYWORDS):
+        query_domain = 'cto'
+    elif any(k in query_lower for k in CFO_KEYWORDS) or any(k in query_lower for k in ['finance', '재무', 'fp&a', 'treasury', '회계', 'accounting']):
+        query_domain = 'finance'
+    elif any(k in query_lower for k in KAFKA_KEYWORDS):
+        query_domain = 'data_infra'
     else:
-        # 키워드 미등록 비중이 높은 경우
-        w_d_dynamic = round(0.02 + (unknown_ratio * 0.10), 3)
-        w_b_dynamic = round(0.03 + (unknown_ratio * 0.04), 3)
-        w_v_dynamic = round(0.58 - (unknown_ratio * 0.08), 3) # 베이스 하향
-        w_g_dynamic = round(1.0 - w_v_dynamic - w_b_dynamic - w_d_dynamic, 3)
+        query_domain = 'general'
+
+    DOMAIN_WEIGHTS = {
+        'semiconductor': {'v': 0.50, 'g': 0.38, 'b': 0.05, 'd': 0.07},
+        'ai':            {'v': 0.52, 'g': 0.35, 'b': 0.05, 'd': 0.08},
+        'general':       {'v': 0.65, 'g': 0.20, 'b': 0.08, 'd': 0.07},
+        'finance':       {'v': 0.62, 'g': 0.22, 'b': 0.08, 'd': 0.08},
+        'hr':            {'v': 0.65, 'g': 0.18, 'b': 0.10, 'd': 0.07},
+        'default':       {'v': 0.60, 'g': 0.28, 'b': 0.05, 'd': 0.07},
+    }
+
+    weight_domain = query_domain
+    if query_domain == 'cfo':
+        weight_domain = 'finance'
+
+    selected_weights = DOMAIN_WEIGHTS.get(weight_domain, DOMAIN_WEIGHTS['default'])
+    w_v_dynamic = selected_weights['v']
+    w_g_dynamic = selected_weights['g']
+    w_b_dynamic = selected_weights['b']
+    w_d_dynamic = selected_weights['d']
 
     # weights 파라미터로 외부 주입 시 우선 적용
     w_v = weights.get('vector', w_v_dynamic) if weights else w_v_dynamic
@@ -1763,7 +1811,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     w_b = weights.get('bm25', w_b_dynamic) if weights else w_b_dynamic
     w_d = weights.get('depth', w_d_dynamic) if weights else w_d_dynamic
 
-    logger.info(f'[Dynamic Weights] unknown_ratio={unknown_ratio:.2f} | V={w_v} G={w_g} B={w_b} D={w_d}')
+    logger.info(f'[Dynamic Weights] domain={query_domain} | V={w_v} G={w_g} B={w_b} D={w_d}')
 
     from openai import OpenAI
     from neo4j import GraphDatabase
@@ -1963,7 +2011,22 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         'general':       None  # 필터 없음
     }
 
-    allowed = ALLOWED_SECTORS.get(query_domain)
+    # 복수 도메인 감지
+    detected_domains = []
+    if any(k in query_lower for k in SEMI_KEYWORDS):
+        detected_domains.append('semiconductor')
+    if any(k in query_lower for k in AI_KEYWORDS):
+        detected_domains.append('ai')
+    if any(k in query_lower for k in SW_KEYWORDS):
+        detected_domains.append('sw')
+
+    # 복합 도메인이면 allowed_sectors 합집합
+    if len(detected_domains) > 1:
+        allowed = set()
+        for d in detected_domains:
+            allowed |= ALLOWED_SECTORS.get(d, set())
+    else:
+        allowed = ALLOWED_SECTORS.get(query_domain)
 
     # Vector/BM25 풀에서 allowed sector 아닌 후보 제거
     if allowed:
