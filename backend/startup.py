@@ -21,7 +21,7 @@ def ensure_db():
     url = os.environ.get('DB_DOWNLOAD_URL', '')
     
     # FORCE_DB_REDOWNLOAD 체크
-    force_redownload = True  # Forced redownload on deploy to sync latest Google Drive DB
+    force_redownload = False  # Forced redownload on deploy to sync latest Google Drive DB
     
     last_url = ''
     if os.path.exists(url_version_file):

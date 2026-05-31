@@ -1905,6 +1905,9 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     PO_KEYWORDS = ['product owner', 'po ', 'p.o.', 
                    '프로덕트 오너', '프로덕트 매니저', 'pm ',
                    'product manager']
+    HR_KEYWORDS  = ['hr', '채용', '인사', '총무', 'general affairs', '시설관리', '구매관리', '복리후생', '노무']
+    DESIGN_KEYWORDS = ['uiux', 'ui/ux', 'ux 디자이너', 'ui 디자이너', 
+                       '디자이너', 'product design', 'figma']
 
     query_lower = prompt.lower()
 
@@ -1920,6 +1923,10 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         query_domain = 'product'
     elif any(k in query_lower for k in SW_KEYWORDS):
         query_domain = 'sw'
+    elif any(k in query_lower for k in HR_KEYWORDS):
+        query_domain = 'hr'
+    elif any(k in query_lower for k in DESIGN_KEYWORDS):
+        query_domain = 'design'
     else:
         query_domain = 'general'
 
@@ -1930,6 +1937,8 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         'marketing':     {'Marketing', 'Strategy', 'Product'},
         'product':       {'Product', 'Strategy', 'Eng_SW', 'Eng_AI'},
         'sw':            {'Eng_SW', 'Eng_AI', 'Eng_Data', 'Eng_Embedded'},
+        'hr':            {'HR'},
+        'design':        {'Product', 'Marketing'},
         'general':       None  # 필터 없음
     }
 
