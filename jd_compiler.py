@@ -1952,30 +1952,11 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
             res_v = session.run("""
                 CALL db.index.vector.queryNodes('candidate_embedding', 200, $queryVector)
                 YIELD node AS c, score
-                RETURN c.id AS id, coalesce(c.name_kr, c.name) AS name, score, c.embedding AS embedding, c.career_embeddings_json AS career_embeddings_json
+                RETURN c.id AS id, coalesce(c.name_kr, c.name) AS name, score
             """, queryVector=query_vector)
             for r in res_v:
                 cid = str(r["id"])
-                c_emb = r.get("embedding")
-                career_json = r.get("career_embeddings_json")
-                
-                if c_emb:
-                    main_sim = cosine_similarity(query_vector, c_emb)
-                    blended_sim = main_sim
-                    if career_json:
-                        try:
-                            career_embs = json.loads(career_json)
-                            if isinstance(career_embs, list) and career_embs:
-                                career_sims = [cosine_similarity(query_vector, emb) for emb in career_embs if emb]
-                                if career_sims:
-                                    best_career_sim = max(career_sims)
-                                    blended_sim = 0.80 * main_sim + 0.20 * best_career_sim
-                        except Exception as e:
-                            logger.error(f"Error parsing career JSON: {e}")
-                else:
-                    blended_sim = r["score"]
-                    
-                v_scores[cid] = blended_sim
+                v_scores[cid] = r["score"]
                 id_to_name[cid] = r["name"]
     except Exception as e:
         logger.error(f"[V9] Vector Error: {e}")
