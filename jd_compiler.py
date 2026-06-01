@@ -1752,6 +1752,19 @@ def expand_query_for_embedding(query: str, openai_client) -> str:
         logger.error(f"Query expansion failed: {e}")
         return query
 
+def should_expand_query(query: str) -> bool:
+    specific_keywords = [
+        'npu', 'soc', 'pcie', 'kafka', 'kubernetes', 'cfo', 'cto', 
+        'llm', 'mlops', 'devops', 'rtl', 'fpga', 'nvme', 'cuda',
+        'kafka', 'elasticsearch', 'fpa', 'fp&a', 'm&a', 'ipo'
+    ]
+    query_lower = query.lower()
+    if any(k in query_lower for k in specific_keywords):
+        return False
+    if len(query) >= 30:
+        return False
+    return True
+
 def cosine_similarity(v1, v2):
     if not v1 or not v2: return 0.0
     import math
@@ -1927,9 +1940,9 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     with open(SECRETS_PATH, "r", encoding="utf-8") as f:
         secrets = json.load(f)
     client = OpenAI(api_key=secrets.get("OPENAI_API_KEY"))
-    expanded_query = expand_query_for_embedding(prompt, client)
-    logger.info(f"[Vector Search] Expanded Query: {expanded_query}")
-    emb_res = client.embeddings.create(input=[expanded_query], model="text-embedding-3-small")
+    search_text = prompt
+    logger.info(f"[Vector Search] Kept Raw Query (Query Expansion Disabled): {search_text}")
+    emb_res = client.embeddings.create(input=[search_text], model="text-embedding-3-small")
     query_vector = emb_res.data[0].embedding
 
     v_scores = {}
@@ -1956,7 +1969,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
                                 career_sims = [cosine_similarity(query_vector, emb) for emb in career_embs if emb]
                                 if career_sims:
                                     best_career_sim = max(career_sims)
-                                    blended_sim = 0.7 * main_sim + 0.3 * best_career_sim
+                                    blended_sim = 0.80 * main_sim + 0.20 * best_career_sim
                         except Exception as e:
                             logger.error(f"Error parsing career JSON: {e}")
                 else:
