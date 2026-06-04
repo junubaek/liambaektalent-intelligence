@@ -446,6 +446,76 @@ export default function MarkdownMain() {
                         )}
                     </div>
                 </div>
+
+                {candidate.cei && (
+                  <div className="mt-8 pt-8 border-t border-gray-100">
+                    <div className="flex items-center gap-2 text-black mb-6">
+                      <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center">
+                        <Zap className="w-3 h-3 text-white fill-current" />
+                      </div>
+                      <h4 className="text-lg font-black uppercase tracking-tighter">Experience Quality (CEI)</h4>
+                    </div>
+                    
+                    <div className="bg-[#f7f8fa] border border-gray-200/50 rounded-[2.5rem] p-8">
+                      {/* Tier + Confidence */}
+                      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                        <div className="flex items-center gap-3">
+                          <span className="text-[13px] font-black text-black">Company Tier:</span>
+                          <TierBadge tier={candidate.cei.tier} />
+                        </div>
+                        <div className="flex items-center gap-3 flex-1 max-w-xs">
+                          <div className="flex-1 bg-gray-200 rounded-full h-1.5">
+                            <div
+                              className="bg-indigo-600 h-1.5 rounded-full"
+                              style={{ width: `${candidate.cei.confidence * 100}%` }}
+                            />
+                          </div>
+                          <span className="text-xs font-bold text-gray-500 whitespace-nowrap">
+                            신뢰도 {Math.round(candidate.cei.confidence * 100)}%
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* 4 signals bars */}
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {[
+                          { label: '회사 신호', value: candidate.cei.timing, 
+                            desc: `Tier ${candidate.cei.tier}` },
+                          { label: '기술 희소성', value: candidate.cei.tech_rarity,
+                            desc: candidate.cei.top_skills && candidate.cei.top_skills.length > 0 ? candidate.cei.top_skills.slice(0,2).join(', ') : '해당 없음' },
+                          { label: '재직 안정성', 
+                            value: candidate.cei.avg_tenure / 5,
+                            desc: `평균 ${candidate.cei.avg_tenure ? candidate.cei.avg_tenure.toFixed(1) : 0.0}년` },
+                          { label: '이력서 완성도', value: candidate.cei.completeness,
+                            desc: candidate.cei.has_numbers ? '수치 근거 있음' : '수치 근거 없음' },
+                        ].map(({ label, value, desc }) => (
+                          <div key={label} className="space-y-1.5">
+                            <div className="flex justify-between text-xs font-bold text-gray-700">
+                              <span>{label}</span>
+                              <span className="text-gray-400 text-[11px]">{desc}</span>
+                            </div>
+                            <div className="bg-gray-200 rounded-full h-2">
+                              <div
+                                className={`h-2 rounded-full transition-all ${
+                                  value > 0.7 ? 'bg-emerald-500' :
+                                  value > 0.4 ? 'bg-indigo-500' : 'bg-gray-400'
+                                }`}
+                                style={{ width: `${Math.min(value * 100, 100)}%` }}
+                              />
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Inference warning */}
+                      {candidate.cei.inference_flag && (
+                        <p className="mt-6 text-xs font-bold text-amber-700 bg-amber-50 p-4 rounded-2xl border border-amber-200 leading-relaxed">
+                          ⚠️ 이력서 정보가 부족하여 회사 기반 추론값입니다. 실제 역량 확인을 위한 스크리닝 콜을 권장합니다.
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                )}
                 
                 {candidate.google_drive_url && (
                     <div className="flex justify-end mt-4 pt-4 border-t border-gray-100">
@@ -456,6 +526,20 @@ export default function MarkdownMain() {
                 )}
             </div>
         </div>
+    );
+  };
+
+  const TierBadge = ({ tier }) => {
+    const colors = {
+      'S': 'bg-purple-100 text-purple-800 border border-purple-300',
+      'A': 'bg-blue-100 text-blue-800 border border-blue-300',
+      'B': 'bg-green-100 text-green-800 border border-green-300',
+      'C': 'bg-gray-100 text-gray-600 border border-gray-300',
+    };
+    return (
+      <span className={`text-[10px] font-black px-2 py-0.5 rounded-full ${colors[tier] || colors['C']}`}>
+        {tier}
+      </span>
     );
   };
 
@@ -488,6 +572,26 @@ export default function MarkdownMain() {
               <div className="flex items-center text-[9px] font-black text-gray-400 uppercase tracking-widest leading-none mt-1">
                 <span className="w-[105px]">MAIN SECTOR :</span><span className="text-gray-900 font-black truncate text-[10px]">{sector}</span>
               </div>
+              {candidate.cei && (
+                <div className="flex items-center gap-1.5 mt-1 cursor-default" onClick={e => e.stopPropagation()}>
+                  <TierBadge tier={candidate.cei.tier} />
+                  {candidate.cei.inference_flag && (
+                    <span className="text-[9px] font-black text-amber-600 bg-amber-50 px-1.5 py-0.5 rounded border border-amber-200 leading-none">
+                      추론 기반
+                    </span>
+                  )}
+                  {candidate.cei.trajectory === 'stable' && (
+                    <span className="text-[9px] font-black text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200 leading-none">
+                      장기재직
+                    </span>
+                  )}
+                  {candidate.cei.trajectory === 'frequent' && (
+                    <span className="text-[9px] font-black text-rose-500 bg-rose-50 px-1.5 py-0.5 rounded border border-rose-200 leading-none">
+                      잦은이직
+                    </span>
+                  )}
+                </div>
+              )}
             </div>
             <div className="flex-1 px-4"><p className="text-[13px] font-bold italic text-gray-400 leading-relaxed line-clamp-2 pr-6">"{summary}"</p></div>
             

@@ -575,6 +575,40 @@ def api_search_v8_endpoint(req: SearchRequestV5):
             seniority=req.seniority,
             weights=weights
         )
+
+        # SQLite에서 CEI 데이터 가져와서 각 후보자 결과에 추가
+        conn_cei = sqlite3.connect(DB_PATH)
+        try:
+            cur_cei = conn_cei.cursor()
+            for candidate in res.get("matched", []):
+                cid = candidate.get("id")
+                cur_cei.execute(
+                    "SELECT cei_json FROM candidates WHERE id=?",
+                    (cid,)
+                )
+                cei_row = cur_cei.fetchone()
+                cei_data = None
+                if cei_row and cei_row[0]:
+                    try:
+                        cei_raw = json.loads(cei_row[0])
+                        cei_data = {
+                            "tier": cei_raw.get("company_signal", {}).get("tier", "B"),
+                            "timing": cei_raw.get("company_signal", {}).get("timing", 0.5),
+                            "overall_cei": cei_raw.get("overall_cei", 0.0),
+                            "confidence": cei_raw.get("confidence", 0.0),
+                            "tech_rarity": cei_raw.get("tech_signal", {}).get("skill_rarity", 0.0),
+                            "avg_tenure": cei_raw.get("tenure_signal", {}).get("avg_tenure", 0.0),
+                            "trajectory": cei_raw.get("tenure_signal", {}).get("trajectory", "unknown"),
+                            "has_numbers": cei_raw.get("evidence_signal", {}).get("has_numbers", False),
+                            "completeness": cei_raw.get("evidence_signal", {}).get("completeness", 0.0),
+                            "inference_flag": cei_raw.get("inference_flag", True),
+                            "top_skills": cei_raw.get("tech_signal", {}).get("top_skills", []),
+                        }
+                    except:
+                        pass
+                candidate["cei"] = cei_data
+        finally:
+            conn_cei.close()
         
         # Apply seniority filter
         req_sens = [s.upper() for s in req.seniority if s]
