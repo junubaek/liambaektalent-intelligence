@@ -33,7 +33,7 @@ def get_combo_rarity(skills: list, conn: sqlite3.Connection,
     if not skills:
         return 0.0
     if len(skills) == 1:
-        return node_idf.get(skills[0], 0.5)
+        return min(node_idf.get(skills[0], 0.5), 1.0)
 
     cur = conn.cursor()
     # 스킬 조합 동시 보유자 수 (Neo4j 대신 profile_summary 기반 추정)
@@ -51,9 +51,9 @@ def get_combo_rarity(skills: list, conn: sqlite3.Connection,
 
     total = 3500
     combo_rarity = 1.0 - min(combo_count / total, 1.0)
-    individual_avg = sum(node_idf.get(s, 0.5) for s in skills) / len(skills)
+    individual_avg = sum(min(node_idf.get(s, 0.5), 1.0) for s in skills) / len(skills)
 
-    return round(0.4 * individual_avg + 0.6 * combo_rarity, 3)
+    return min(round(0.4 * individual_avg + 0.6 * combo_rarity, 3), 1.0)
 
 # ── Company Signal (Gemini 웹서치) ────────────────
 COMPANY_CACHE = {}  # 동일 회사 중복 호출 방지
@@ -130,31 +130,79 @@ def get_tenure_signal(careers: list) -> dict:
                 "job_count": 0}
 
     tenures = []
+    actual_jobs_count = 0
     for c in careers:
-        duration = c.get('duration_years') or c.get('duration', 0)
-        if isinstance(duration, str):
-            # "3년 2개월" 파싱
-            years = re.findall(r'(\d+)\s*년', duration)
-            months = re.findall(r'(\d+)\s*개월', duration)
-            y = int(years[0]) if years else 0
-            m = int(months[0]) if months else 0
-            duration = y + m / 12
-        tenures.append(float(duration) if duration else 1.0)
+        if not isinstance(c, dict):
+            continue
+        
+        # company나 start_date가 존재하면 실제 job으로 카운트
+        if 'company' in c or 'start_date' in c:
+            actual_jobs_count += 1
+            
+        duration = None
+        
+        # 1. start_date & end_date 분석
+        start_date = c.get('start_date')
+        end_date = c.get('end_date')
+        
+        def parse_date_to_float(date_str):
+            if not date_str:
+                return None
+            date_str = str(date_str).strip()
+            if date_str in ['재직', '현재', 'present', 'Present', '재직중', '재직 중', '현재까지', '현재 까지']:
+                return 2026.5
+            match = re.match(r'(\d{4})[-\.](\d{1,2})', date_str)
+            if match:
+                return int(match.group(1)) + (int(match.group(2)) - 1) / 12.0
+            match_y = re.match(r'(\d{4})', date_str)
+            if match_y:
+                return float(match_y.group(1))
+            return None
 
-    avg_tenure = sum(tenures) / len(tenures) if tenures else 0
+        start_val = parse_date_to_float(start_date)
+        end_val = parse_date_to_float(end_date)
+        if start_val is not None and end_val is not None:
+            duration = max(end_val - start_val, 0.1)
+        
+        # 2. Fallback: 기존 duration_years / duration 필드 사용
+        if duration is None:
+            dur = c.get('duration_years') or c.get('duration', 0)
+            if isinstance(dur, str):
+                years = re.findall(r'(\d+)\s*년', dur)
+                months = re.findall(r'(\d+)\s*개월', dur)
+                y = int(years[0]) if years else 0
+                m = int(months[0]) if months else 0
+                duration = y + m / 12
+            else:
+                duration = float(dur) if dur else None
+                
+        # 3. Final default
+        if duration is None:
+            if 'company' in c or 'start_date' in c:
+                duration = 1.5
+            else:
+                continue
+                
+        tenures.append(duration)
 
-    # 이직 방향성
-    if avg_tenure >= 3.0:
-        trajectory = "stable"
-    elif avg_tenure >= 1.5:
+    if not tenures:
+        avg_tenure = 1.5
         trajectory = "normal"
     else:
-        trajectory = "frequent"
+        avg_tenure = sum(tenures) / len(tenures)
+        if avg_tenure >= 3.0:
+            trajectory = "stable"
+        elif avg_tenure >= 1.5:
+            trajectory = "normal"
+        else:
+            trajectory = "frequent"
+
+    job_count = actual_jobs_count if actual_jobs_count > 0 else len(careers)
 
     return {
         "avg_tenure": round(avg_tenure, 1),
         "trajectory": trajectory,
-        "job_count": len(careers),
+        "job_count": job_count,
     }
 
 # ── Evidence Signal ───────────────────────────────
