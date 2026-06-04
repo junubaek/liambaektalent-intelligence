@@ -1923,6 +1923,23 @@ def cosine_similarity(v1, v2):
     if norm1 == 0 or norm2 == 0: return 0.0
     return dot / (norm1 * norm2)
 
+def get_best_similarity(query_vec, main_sim, career_embs_json):
+    if not career_embs_json:
+        return main_sim
+    
+    try:
+        career_embs = json.loads(career_embs_json)
+        if not career_embs:
+            return main_sim
+        career_sims = [cosine_similarity(query_vec, e) for e in career_embs]
+        best = max(career_sims)
+        # 커리어 매칭도가 높고 메인 매칭도도 유의미할 때만 블렌딩 적용
+        if best > 0.80 and main_sim > 0.35:
+            return 0.80 * main_sim + 0.20 * best
+        return main_sim
+    except:
+        return main_sim
+
 def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', weights: dict = None) -> dict:
     """
     [Hybrid Search v9]
@@ -2112,11 +2129,14 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
             res_v = session.run("""
                 CALL db.index.vector.queryNodes('candidate_embedding', 200, $queryVector)
                 YIELD node AS c, score
-                RETURN c.id AS id, coalesce(c.name_kr, c.name) AS name, score
+                RETURN c.id AS id, coalesce(c.name_kr, c.name) AS name, score, c.career_embeddings_json AS career_embs_json
             """, queryVector=query_vector)
             for r in res_v:
                 cid = str(r["id"])
-                v_scores[cid] = r["score"]
+                main_sim = r.get("score")
+                career_embs_json = r.get("career_embs_json")
+                blended_score = get_best_similarity(query_vector, main_sim, career_embs_json)
+                v_scores[cid] = blended_score
                 id_to_name[cid] = r["name"]
     except Exception as e:
         logger.error(f"[V9] Vector Error: {e}")
