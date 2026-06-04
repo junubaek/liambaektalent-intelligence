@@ -2,6 +2,20 @@ import React, { useState, useEffect } from 'react';
 import { Search, User, Bookmark, Zap, X, Clock, ChevronDown, ChevronUp, LogOut, SlidersHorizontal, ArrowRight, Save, Info, Settings, Users, Database, ShieldAlert, Activity, Layers, Trash2, RotateCcw, Phone, Mail } from 'lucide-react';
 import logoImg from './assets/logo.png';
 
+const TierBadge = ({ tier }) => {
+  const colors = {
+    'S': 'bg-purple-100 text-purple-800 border border-purple-300',
+    'A': 'bg-blue-100 text-blue-800 border border-blue-300',
+    'B': 'bg-green-100 text-green-800 border border-green-300',
+    'C': 'bg-gray-100 text-gray-600 border border-gray-300',
+  };
+  return (
+    <span className={`text-[10px] font-black px-2 py-0.5 rounded-full ${colors[tier] || colors['C']}`}>
+      {tier}
+    </span>
+  );
+};
+
 export default function MarkdownMain() {
   const [token, setToken] = useState(localStorage.getItem('token') || '');
   const [currentUserData, setCurrentUserData] = useState(null);
@@ -529,19 +543,7 @@ export default function MarkdownMain() {
     );
   };
 
-  const TierBadge = ({ tier }) => {
-    const colors = {
-      'S': 'bg-purple-100 text-purple-800 border border-purple-300',
-      'A': 'bg-blue-100 text-blue-800 border border-blue-300',
-      'B': 'bg-green-100 text-green-800 border border-green-300',
-      'C': 'bg-gray-100 text-gray-600 border border-gray-300',
-    };
-    return (
-      <span className={`text-[10px] font-black px-2 py-0.5 rounded-full ${colors[tier] || colors['C']}`}>
-        {tier}
-      </span>
-    );
-  };
+
 
   const renderCandidateCard = (candidate, isModalExpanded = false) => {
     const isBookmarked = userBookmarks.map(String).includes(String(candidate.id));
