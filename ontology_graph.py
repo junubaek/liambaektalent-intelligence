@@ -1,6 +1,68 @@
 import math
 import networkx as nx
 
+SKILL_BIRTH_YEAR = {
+    # AI/ML
+    "LLM_Serving_Engine":           2022,
+    "LLM":                          2020,
+    "Transformer_Architecture":     2017,
+    "MLOps":                        2019,
+    "Deep_Learning":                2012,
+    "Machine_Learning":             2010,
+    "Reinforcement_Learning":       2015,
+    "Computer_Vision":              2012,
+    "NLP":                          2015,
+    "Model_Compression":            2016,
+    "PIM_and_AI_Memory_Architecture":2020,
+
+    # 반도체/하드웨어
+    "NPU_Kernel":                   2020,
+    "NPU_Runtime":                  2020,
+    "HBM_IO_Design":                2015,
+    "CXL_Interface":                2021,
+    "SoC":                          2005,
+    "FPGA":                         1985,
+    "RTL_Design":                   1985,
+    "PCIe_Verification":            2003,
+
+    # 인프라/클라우드
+    "Kubernetes":                   2014,
+    "Kafka":                        2011,
+    "Service_Mesh":                 2016,
+    "Infrastructure_and_Cloud":     2006,
+    "Data_Pipeline_Construction":   2014,
+    "MLOps":                        2019,
+    "DevOps":                       2009,
+    "Elasticsearch":                2010,
+
+    # 백엔드/개발
+    "MSA":                          2014,
+    "Backend":                      2000,
+    "Agile_Methodology":            2001,
+    "Platform_Operations_Planning": 2015,
+
+    # 프론트엔드
+    "React":                        2013,
+    "Node.js":                      2009,
+
+    # 금융/비즈니스
+    "Corporate_Finance":            1990,
+    "Mergers_and_Acquisitions":     1990,
+    "IPO_Preparation":              1990,
+    "IR_Management":                1995,
+    "Financial_Planning_and_Analysis":1990,
+    "ESG_Reporting":                2018,
+    "DeFi":                         2020,
+
+    # 기타
+    "Python":                       1991,
+    "Java":                         1995,
+    "C++":                          1985,
+    "Rust":                         2010,
+    "Go":                           2009,
+}
+
+
 # ── 1. Canonical Map (Expanded to 100+ Nodes) ────────────────────────────────────────────────────────
 
 CANONICAL_MAP: dict[str, str] = {

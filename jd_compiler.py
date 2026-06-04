@@ -1926,6 +1926,56 @@ def cosine_similarity(v1, v2):
 def get_best_similarity(query_vec, main_sim, career_embs_json):
     return main_sim  # 멀티 벡터 비활성화
 
+def get_cei_boost(candidate_id: str, conn, query_domain: str) -> float:
+    cur = conn.cursor()
+    cur.execute(
+        "SELECT cei_json, cei_confidence FROM candidates WHERE id=?",
+        (candidate_id,))
+    row = cur.fetchone()
+    if not row or not row[0]:
+        return 0.0
+
+    try:
+        cei = json.loads(row[0])
+        confidence = row[1] or 0.0
+        scores = cei.get('scores', {})
+
+        # 도메인별 CEI 가중치
+        DOMAIN_CEI_WEIGHTS = {
+            'semiconductor': {
+                'tech': 0.50, 'company': 0.25,
+                'tenure': 0.15, 'evidence': 0.10},
+            'ai': {
+                'tech': 0.45, 'company': 0.25,
+                'tenure': 0.15, 'evidence': 0.15},
+            'finance': {
+                'company': 0.40, 'tenure': 0.25,
+                'tech': 0.20, 'evidence': 0.15},
+            'executive': {
+                'company': 0.45, 'tenure': 0.30,
+                'evidence': 0.15, 'tech': 0.10},
+            'default': {
+                'company': 0.30, 'tech': 0.30,
+                'tenure': 0.25, 'evidence': 0.15},
+        }
+
+        weights = DOMAIN_CEI_WEIGHTS.get(
+            query_domain,
+            DOMAIN_CEI_WEIGHTS['default'])
+
+        weighted_score = sum(
+            scores.get(k, 0.0) * w
+            for k, w in weights.items()
+        )
+
+        # 신뢰도 반영
+        # 신뢰도 낮으면 부스트도 낮게
+        boost = weighted_score * confidence * 0.005
+        return round(boost, 4)
+
+    except:
+        return 0.0
+
 def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', weights: dict = None) -> dict:
     """
     [Hybrid Search v9]
@@ -2361,7 +2411,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
                 'program_stage': r[14] or None
             }
     finally:
-        conn.close()
+        pass
 
     # Precompute preferred companies boost from raw_text
     company_boost_map = {}
@@ -2469,6 +2519,10 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
             conn
         )
         final_score += c_boost
+
+        # CEI 부스트 추가
+        cei_boost = get_cei_boost(cid, conn, query_domain)
+        final_score += cei_boost
         
         if cid == 'f5875fc2-99aa-4605-9742-5ec93f4cd51a':
             logger.info(f"DEBUG [김은형] v_norm:{norm_v:.4f} g_norm:{norm_g:.4f} b_norm:{norm_b:.4f} depth:{depth_score:.4f} boost:{c_boost:.4f} final:{final_score:.4f}")
@@ -2539,6 +2593,12 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
 
     logger.info(f"[V9 Hybrid Search] Completed. Top result: {matched_candidates[0]['name_kr'] if matched_candidates else 'None'}")
     
+    if 'conn' in locals():
+        try:
+            conn.close()
+        except:
+            pass
+
     return {
         "matched": matched_candidates[:50],
         "total": len(final_candidates),
