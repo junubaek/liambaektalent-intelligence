@@ -6,7 +6,7 @@ from ontology_graph import CANONICAL_MAP, SKILL_BIRTH_YEAR
 # Gemini 초기화
 secrets = json.load(open('secrets.json', encoding='utf-8'))
 genai.configure(api_key=secrets['GEMINI_API_KEY'])
-model = genai.GenerativeModel('gemini-2.0-flash')
+model = genai.GenerativeModel('gemini-2.5-flash')
 
 # ── 스킬 희소성 계산 ──────────────────────────────
 def get_skill_rarity(skill: str, year_used: int, node_idf: dict) -> float:

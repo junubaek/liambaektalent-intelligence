@@ -1,12 +1,11 @@
 import json, sqlite3, time
 from cei_generator import generate_cei
 from datetime import datetime
+from concurrent.futures import ThreadPoolExecutor
 
+# Fetch target records
 conn = sqlite3.connect('candidates.db')
 cur = conn.cursor()
-
-# node_idf 로드
-node_idf = json.load(open('node_idf.json', encoding='utf-8'))
 
 # Specific candidates of interest: 이강원, 김은형, 전형준, 정혜연
 target_names = ['이강원', '김은형', '전형준', '정혜연']
@@ -63,6 +62,8 @@ cols = ['id','name_kr','current_company',
         'sector','raw_text','careers_json','profile_summary']
 batch_candidates = [dict(zip(cols, r)) for r in rows]
 
+conn.close()
+
 # Combine lists and deduplicate by id
 seen_ids = set()
 candidates = []
@@ -73,12 +74,18 @@ for c in specific_candidates + batch_candidates:
 
 print(f'처리 대상: {len(candidates)}명')
 
-success, failed = 0, 0
-for i, cand in enumerate(candidates):
-    try:
-        cei = generate_cei(cand, conn, node_idf)
+# node_idf 로드
+node_idf = json.load(open('node_idf.json', encoding='utf-8'))
 
-        cur.execute("""
+def process_candidate(cand):
+    # Process single candidate using a dedicated connection to avoid locks
+    db_conn = sqlite3.connect('candidates.db', timeout=60.0)
+    try:
+        # Prevent parallel write issues on the same db file by doing read-only or small delays inside if needed
+        cei = generate_cei(cand, db_conn, node_idf)
+        
+        db_cur = db_conn.cursor()
+        db_cur.execute("""
             UPDATE candidates
             SET cei_json = ?,
                 cei_confidence = ?,
@@ -90,18 +97,27 @@ for i, cand in enumerate(candidates):
             datetime.now().isoformat(),
             cand['id']
         ))
-        conn.commit()
-        success += 1
-
-        if success % 50 == 0 or cand['name_kr'] in target_names:
-            print(f'완료: {success}명 / 실패: {failed}명 (최근 처리: {cand.get("name_kr")})')
-
-        time.sleep(0.3)  # Gemini rate limit
-
+        db_conn.commit()
+        return True, cand.get("name_kr")
     except Exception as e:
-        failed += 1
-        print(f'오류 발생 ({cand.get("name_kr")}): {e}')
-        continue
+        return False, f'{cand.get("name_kr")}: {e}'
+    finally:
+        db_conn.close()
 
-conn.close()
+success, failed = 0, 0
+# Use 15 threads for concurrent calling
+with ThreadPoolExecutor(max_workers=15) as executor:
+    futures = [executor.submit(process_candidate, c) for c in candidates]
+    for idx, fut in enumerate(futures):
+        ok, res = fut.result()
+        if ok:
+            success += 1
+        else:
+            failed += 1
+            print(f"오류: {res}")
+            
+        if (idx + 1) % 50 == 0 or idx + 1 == len(candidates):
+            print(f'진행률: {idx + 1}/{len(candidates)} 완료 | 성공: {success}명, 실패: {failed}명')
+        time.sleep(0.02)
+
 print(f'최종: 성공 {success}명, 실패 {failed}명')
