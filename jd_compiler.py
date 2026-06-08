@@ -1078,7 +1078,7 @@ def get_candidates_from_cache() -> List[Dict]:
 
                     
 
-        rows = db.query(Candidate).outerjoin(ParsingCache).all()
+        rows = db.query(Candidate).outerjoin(ParsingCache).filter(Candidate.is_duplicate == 0).all()
 
         candidates = []
 
@@ -2019,6 +2019,8 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         query_domain = 'embedded'
     elif any(k in query_lower for k in AI_KEYWORDS):
         query_domain = 'ai'
+    elif any(k in query_lower for k in CFO_KEYWORDS) or any(k in query_lower for k in ['finance', '재무', 'fp&a', 'treasury', '회계', 'accounting', 'ipo', 'fundraising', 'investor relations', 'ir']):
+        query_domain = 'finance'
     elif any(k in query_lower for k in MARKETING_KEYWORDS):
         query_domain = 'marketing'
     elif any(k in query_lower for k in PO_KEYWORDS):
@@ -2031,8 +2033,6 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         query_domain = 'design'
     elif any(k in query_lower for k in CTO_KEYWORDS):
         query_domain = 'cto'
-    elif any(k in query_lower for k in CFO_KEYWORDS) or any(k in query_lower for k in ['finance', '재무', 'fp&a', 'treasury', '회계', 'accounting']):
-        query_domain = 'finance'
     elif any(k in query_lower for k in KAFKA_KEYWORDS):
         query_domain = 'data_infra'
     else:
@@ -2242,6 +2242,8 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         query_domain = 'embedded'
     elif any(k in query_lower for k in AI_KEYWORDS):
         query_domain = 'ai'
+    elif any(k in query_lower for k in CFO_KEYWORDS) or any(k in query_lower for k in ['finance', '재무', 'fp&a', 'treasury', '회계', 'accounting', 'ipo', 'fundraising', 'investor relations', 'ir']):
+        query_domain = 'cfo'
     elif any(k in query_lower for k in MARKETING_KEYWORDS):
         query_domain = 'marketing'
     elif any(k in query_lower for k in PO_KEYWORDS):
@@ -2254,8 +2256,6 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         query_domain = 'design'
     elif any(k in query_lower for k in CTO_KEYWORDS):
         query_domain = 'cto'
-    elif any(k in query_lower for k in CFO_KEYWORDS):
-        query_domain = 'cfo'
     elif any(k in query_lower for k in KAFKA_KEYWORDS):
         query_domain = 'data_infra'
     else:
@@ -2272,6 +2272,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         'design':        {'Product', 'Marketing'},
         'cto':           {'Eng_SW', 'Eng_AI', 'Product', 'Strategy'},
         'cfo':           {'Finance', 'Strategy'},
+        'finance':       {'Finance', 'Strategy'},
         'data_infra':    {'Eng_Data', 'Eng_SW', 'Eng_AI'},
         'general':       None  # 필터 없음
     }
@@ -2307,6 +2308,18 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
                       if get_primary_sector(cid) in allowed]
     
     combined_ids = list(set(vector_ids) | set(graph_ids) | set(bm25_ids))
+    if combined_ids:
+        conn_dup = sqlite3.connect(os.environ.get('DB_PATH', 'candidates.db'))
+        try:
+            placeholders_dup = ','.join(['?'] * len(combined_ids))
+            cur_dup = conn_dup.cursor()
+            cur_dup.execute(f"SELECT id FROM candidates WHERE id IN ({placeholders_dup}) AND is_duplicate = 0", combined_ids)
+            active_ids = {str(r[0]) for r in cur_dup.fetchall()}
+            combined_ids = [cid for cid in combined_ids if cid in active_ids]
+        except Exception as dup_ex:
+            logger.warning(f"Error filtering duplicates: {dup_ex}")
+        finally:
+            conn_dup.close()
     if not combined_ids:
         if 'driver' in locals(): driver.close()
         return {'matched': [], 'total': 0, "is_category_search": is_category_search}
