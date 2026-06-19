@@ -2004,7 +2004,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     PO_KEYWORDS = ['product owner', 'po ', 'p.o.', 
                    '프로덕트 오너', '프로덕트 매니저', 'pm ',
                    'product manager']
-    HR_KEYWORDS  = ['hr', '채용', '인사', '총무', 'general affairs', '시설관리', '구매관리', '복리후생', '노무']
+    HR_KEYWORDS  = ['채용', '인사', '총무', 'general affairs', '시설관리', '구매관리', '복리후생', '노무']
     DESIGN_KEYWORDS = ['uiux', 'ui/ux', 'ux 디자이너', 'ui 디자이너', 
                        '디자이너', 'product design', 'figma']
     CTO_KEYWORDS = ['cto', 'chief technology', '기술 임원', '기술총괄']
@@ -2019,7 +2019,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         query_domain = 'embedded'
     elif any(k in query_lower for k in AI_KEYWORDS):
         query_domain = 'ai'
-    elif any(k in query_lower for k in CFO_KEYWORDS) or any(k in query_lower for k in ['finance', '재무', 'fp&a', 'treasury', '회계', 'accounting', 'ipo', 'fundraising', 'investor relations', 'ir']):
+    elif any(k in query_lower for k in CFO_KEYWORDS) or any(k in query_lower for k in ['finance', '재무', 'fp&a', 'treasury', '회계', 'accounting', 'ipo', 'fundraising', 'investor relations']) or (' ir ' in ' ' + query_lower + ' '):
         query_domain = 'finance'
     elif any(k in query_lower for k in MARKETING_KEYWORDS):
         query_domain = 'marketing'
@@ -2027,7 +2027,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         query_domain = 'product'
     elif any(k in query_lower for k in SW_KEYWORDS):
         query_domain = 'sw'
-    elif any(k in query_lower for k in HR_KEYWORDS):
+    elif any(k in query_lower for k in HR_KEYWORDS) or (' hr ' in ' ' + query_lower + ' '):
         query_domain = 'hr'
     elif any(k in query_lower for k in DESIGN_KEYWORDS):
         query_domain = 'design'
@@ -2227,7 +2227,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     PO_KEYWORDS = ['product owner', 'po ', 'p.o.', 
                    '프로덕트 오너', '프로덕트 매니저', 'pm ',
                    'product manager']
-    HR_KEYWORDS  = ['hr', '채용', '인사', '총무', 'general affairs', '시설관리', '구매관리', '복리후생', '노무']
+    HR_KEYWORDS  = ['채용', '인사', '총무', 'general affairs', '시설관리', '구매관리', '복리후생', '노무']
     DESIGN_KEYWORDS = ['uiux', 'ui/ux', 'ux 디자이너', 'ui 디자이너', 
                        '디자이너', 'product design', 'figma']
     CTO_KEYWORDS = ['cto', 'chief technology', '기술 임원', '기술총괄']
@@ -2242,7 +2242,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         query_domain = 'embedded'
     elif any(k in query_lower for k in AI_KEYWORDS):
         query_domain = 'ai'
-    elif any(k in query_lower for k in CFO_KEYWORDS) or any(k in query_lower for k in ['finance', '재무', 'fp&a', 'treasury', '회계', 'accounting', 'ipo', 'fundraising', 'investor relations', 'ir']):
+    elif any(k in query_lower for k in CFO_KEYWORDS) or any(k in query_lower for k in ['finance', '재무', 'fp&a', 'treasury', '회계', 'accounting', 'ipo', 'fundraising', 'investor relations']) or (' ir ' in ' ' + query_lower + ' '):
         query_domain = 'cfo'
     elif any(k in query_lower for k in MARKETING_KEYWORDS):
         query_domain = 'marketing'
@@ -2250,7 +2250,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         query_domain = 'product'
     elif any(k in query_lower for k in SW_KEYWORDS):
         query_domain = 'sw'
-    elif any(k in query_lower for k in HR_KEYWORDS):
+    elif any(k in query_lower for k in HR_KEYWORDS) or (' hr ' in ' ' + query_lower + ' '):
         query_domain = 'hr'
     elif any(k in query_lower for k in DESIGN_KEYWORDS):
         query_domain = 'design'
