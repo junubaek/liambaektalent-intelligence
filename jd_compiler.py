@@ -1587,7 +1587,7 @@ def api_search_v8(prompt: str, session_id: str = None, **kwargs) -> dict:
     client = OpenAI(api_key=api_key)
     
     # [Phase 1: Vector Search (Tower 1)]
-    emb_res = client.embeddings.create(input=[prompt.strip()], model="text-embedding-3-small")
+    emb_res = client.embeddings.create(input=[prompt], model="text-embedding-3-small")
     query_vector = emb_res.data[0].embedding
     
     vector_results = []
@@ -2153,7 +2153,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     with open(SECRETS_PATH, "r", encoding="utf-8") as f:
         secrets = json.load(f)
     client = OpenAI(api_key=secrets.get("OPENAI_API_KEY"))
-    search_text = prompt.strip()
+    search_text = prompt
     logger.info(f"[Vector Search] Kept Raw Query (Query Expansion Disabled): {search_text}")
     emb_res = client.embeddings.create(input=[search_text], model="text-embedding-3-small")
     query_vector = emb_res.data[0].embedding
