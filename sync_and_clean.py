@@ -5,7 +5,10 @@ from ontology_graph import CANONICAL_MAP
 
 with open("secrets.json", "r", encoding="utf-8") as f:
     secrets = json.load(f)
-driver = GraphDatabase.driver("neo4j://127.0.0.1:7687", auth=("neo4j", "toss1234"))
+n_uri = secrets.get("NEO4J_URI", "neo4j://127.0.0.1:7687")
+n_user = secrets.get("NEO4J_USERNAME", "neo4j")
+n_pw = secrets.get("NEO4J_PASSWORD", "toss1234")
+driver = GraphDatabase.driver(n_uri, auth=(n_user, n_pw))
 
 def sync_neo4j():
     print("=== 1. Neo4j 프로퍼티 동기화 시작 ===")

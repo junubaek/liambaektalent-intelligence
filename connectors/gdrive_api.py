@@ -24,7 +24,7 @@ class GDriveConnector:
         if not secrets_path or not os.path.exists(secrets_path):
             raise FileNotFoundError(f"Could not find secrets.json. Tried: {secrets_path}")
 
-        with open(secrets_path, "r") as f:
+        with open(secrets_path, "r", encoding='utf-8', errors='ignore') as f:
             self.secrets = json.load(f)
         
         if token_path is None:

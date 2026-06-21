@@ -15,6 +15,8 @@ from neo4j import GraphDatabase
 from tqdm import tqdm
 import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
+# Utility for detecting company type (big company / startup)
+from wide_parse_utils import detect_company_type
 
 from connectors.gdrive_api import GDriveConnector
 from googleapiclient.http import MediaFileUpload
@@ -49,8 +51,9 @@ with open(r"C:\Users\cazam\Downloads\이력서자동분석검색시스템\secret
     secrets = json.load(f)
 
 # Clients
-genai.configure(api_key=secrets["GEMINI_API_KEY"])
-model = genai.GenerativeModel("gemini-2.5-flash")
+# Removed Gemini configuration; using OpenAI GPT for parsing
+# genai.configure(api_key=secrets["GEMINI_API_KEY"])  # Deprecated
+# model = genai.GenerativeModel("gemini-2.5-flash")
 n_uri = secrets.get("NEO4J_URI", "neo4j://127.0.0.1:7687")
 n_user = secrets.get("NEO4J_USERNAME", "neo4j")
 n_pw = secrets.get("NEO4J_PASSWORD", "toss1234")
@@ -60,6 +63,7 @@ gdrive = GDriveConnector()
 folder_id = secrets.get("GOOGLE_DRIVE_FOLDER_ID")
 
 openai_client = OpenAI(api_key=secrets.get("OPENAI_API_KEY", ""))
+GPT_MODEL = "gpt-4o-mini"  # Using GPT-4o-mini for resume parsing
 pc_host = secrets.get("PINECONE_HOST", "").rstrip("/")
 if not pc_host.startswith("https://"): pc_host = f"https://{pc_host}"
 pinecone_client = PineconeClient(secrets.get("PINECONE_API_KEY", ""), pc_host)
@@ -70,7 +74,8 @@ def init_db():
         c = conn.cursor()
         for col, ctype in [("birth_year", "INTEGER"), ("total_years", "REAL"), 
                            ("sector", "TEXT"), ("education_json", "TEXT"), 
-                           ("profile_summary", "TEXT"), ("current_company", "TEXT")]:
+                           ("profile_summary", "TEXT"), ("current_company", "TEXT"),
+                           ("has_big_company", "INTEGER"), ("has_startup", "INTEGER")]:
             try:
                 c.execute(f"ALTER TABLE candidates ADD COLUMN {col} {ctype}")
             except:
@@ -247,7 +252,7 @@ def process_file(filepath):
                 if not db_text: continue
                 # Compare first 400 chars
                 similarity = difflib.SequenceMatcher(None, text[:400], db_text[:400]).ratio()
-                if similarity >= 0.7:
+                if similarity >= 0.5:
                     conn.close()
                     return False, f"기존 파일 스킵 (이름 매칭 & 텍스트 유사도 {int(similarity*100)}%)"
 
@@ -269,20 +274,29 @@ def process_file(filepath):
         except Exception as e:
             print(f"Drive Upload Error: {e}")
 
-    # 3. Gemini Parsing
+    # 3. GPT Parsing using OpenAI
     parsed = None
     for attempt in range(3):
         try:
             prompt = MEGA_PROMPT.replace("{text}", f"[파일명: {filename}]\n\n" + text[:6000])
-            res = model.generate_content(prompt)
-            raw = res.text.replace("```json", "").replace("```", "").strip()
+            response = openai_client.chat.completions.create(
+                model=GPT_MODEL,
+                messages=[{"role": "system", "content": "You are a resume analyst."},
+                          {"role": "user", "content": prompt}],
+                temperature=0.0,
+                max_tokens=2000
+            )
+            raw = response.choices[0].message.content.strip()
+            # Strip any markdown fences
+            raw = raw.replace('```json', '').replace('```', '').strip()
             parsed = json.loads(raw)
             break
         except Exception as e:
+            print(f"GPT parse error (attempt {attempt+1}): {e}")
             time.sleep(2)
-            
+
     if not parsed:
-        return False, "Gemini Parsing Failed"
+        return False, "GPT Parsing Failed"
 
     name_kr = parsed.get("name_kr")
     if not name_kr: name_kr = extract_fallback_name(filename)
@@ -296,6 +310,7 @@ def process_file(filepath):
     edu = parsed.get("education_json", [])
     
     current_company, total_years = calculate_career_stats(careers)
+    has_big_company, has_startup = detect_company_type(current_company)
 
     # 4. Duplicate Check (Phone/Email)
     is_duplicate = 0
@@ -337,10 +352,11 @@ def process_file(filepath):
             INSERT INTO candidates (
                 id, name_kr, email, phone, birth_year, sector, profile_summary, total_years, current_company,
                 google_drive_url, raw_text, document_hash, is_duplicate, is_parsed, is_neo4j_synced, is_pinecone_synced,
-                careers_json, education_json, created_at, updated_at
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, 1, 1, ?, ?, datetime('now'), datetime('now'))
+                careers_json, education_json, has_big_company, has_startup, created_at, updated_at, source_file
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, 1, 1, ?, ?, ?, ?, datetime('now'), datetime('now'), ?)
         ''', (c_id, name_kr, email, phone, birth_year, sector, summary, total_years, current_company,
-              drive_link, text, doc_hash, is_duplicate, json.dumps(careers, ensure_ascii=False), json.dumps(edu, ensure_ascii=False)))
+              drive_link, text, doc_hash, is_duplicate, json.dumps(careers, ensure_ascii=False), json.dumps(edu, ensure_ascii=False),
+              has_big_company, has_startup, filename))
         conn.commit()
         conn.close()
 
@@ -400,12 +416,16 @@ def process_file(filepath):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--test', action='store_true', help='Run in test mode (max 3 files)')
+    parser.add_argument('--folder', type=str, help='Folder to process')
+    parser.add_argument('--skip-existing', action='store_true', help='Skip existing files')
+    parser.add_argument('--dedup-check', action='store_true', help='Check duplicates')
     args = parser.parse_args()
 
     init_db()
 
+    target_dirs = [args.folder] if args.folder else TARGET_DIRS
     files = []
-    for d in TARGET_DIRS:
+    for d in target_dirs:
         if os.path.exists(d):
             files.extend([os.path.join(d, f) for f in os.listdir(d) 
                          if f.endswith(('.pdf', '.docx', '.doc')) and not f.startswith('~$')])

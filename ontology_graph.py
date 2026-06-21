@@ -8358,6 +8358,53 @@ if __name__ == "__main__":
 # ⚙️ [핵심] UNIFIED_GRAVITY_FIELD 스마트 동적 병합기 (Smart Auto-Generator)
 # -------------------------------------------------------------------------
 UNIFIED_GRAVITY_FIELD = {
+    'Network_on_Chip': {
+        'sector': 'Semiconductor_SoC',
+        'core_attracts': {
+            'SoC': 0.9,
+            'Chiplet_Architecture': 0.85,
+            'ASIC': 0.8,
+            'ARM_Architecture': 0.7,
+            'RISC_V': 0.6,
+        },
+        'synergy_attracts': {
+            'High_Performance_Computing': 0.5,
+            'GPU_Acceleration': 0.4,
+        },
+        'repels': {}
+    },
+
+    'Chiplet_Architecture': {
+        'sector': 'Semiconductor_SoC',
+        'core_attracts': {
+            'SoC': 0.9,
+            'Network_on_Chip': 0.85,
+            'ASIC': 0.8,
+            'DRAM_and_Memory_Architecture': 0.6,
+        },
+        'synergy_attracts': {
+            'High_Bandwidth_Memory': 0.5,
+            'PIM_and_AI_Memory_Architecture': 0.4,
+        },
+        'repels': {}
+    },
+
+    'RISC_V': {
+        'sector': 'Semiconductor_NPU',
+        'core_attracts': {
+            'NPU': 0.9,
+            'NPU_Kernel': 0.85,
+            'Digital_Signal_Processing': 0.8,
+            'Embedded_Firmware': 0.7,
+            'ASIC': 0.65,
+        },
+        'synergy_attracts': {
+            'AI_Compiler_and_System_Tools': 0.5,
+            'CUDA': 0.4,
+        },
+        'repels': {}
+    },
+
     "SW_AI": {
         "core_attracts": {
             "LLM_Inference": 0.9, "Model_Parallelism": 0.9, "vLLM": 0.9, "MLOps": 0.8,
@@ -8386,6 +8433,7 @@ UNIFIED_GRAVITY_FIELD = {
     },
     "Semiconductor_NPU": {
         "core_attracts": {
+            "Network_on_Chip": 0.9,
             "NPU_Design": 1.0,
             "NPU_Kernel": 1.0,
             "NPU_Runtime": 0.9,
@@ -8407,6 +8455,7 @@ UNIFIED_GRAVITY_FIELD = {
     },
     "Semiconductor_SoC": {
         "core_attracts": {
+            "Chiplet_Architecture": 0.9,
             "SoC": 0.9, "ASIC": 0.9, "FPGA": 0.9, "Physical_Design": 0.9,
             "RTL_Design": 0.8, "Tape_Out": 0.8, "IP_Design": 0.8,
             "ARM_Architecture": 0.8, "Memory_Architecture": 0.8, "PCIe_Protocol": 0.8
@@ -9455,4 +9504,47 @@ CANONICAL_MAP.update({
     "공급망": "SCM",
     "supply chain": "SCM",
     "procurement": "Procurement_Buyer",
+
+    # NoC / SoC Interconnect (한경환)
+    'NoC': 'Network_on_Chip',
+    'Network-on-Chip': 'Network_on_Chip',
+    'Network on Chip': 'Network_on_Chip',
+    'Arteris FlexNoC': 'Network_on_Chip',
+    'NoC architecture': 'Network_on_Chip',
+    'SoC interconnect': 'Network_on_Chip',
+    'SoC fabric': 'Network_on_Chip',
+    'SoC Architect': 'SoC',
+    'SoC architecture': 'SoC',
+    'Multi-die': 'Chiplet_Architecture',
+    'Chiplet': 'Chiplet_Architecture',
+    'chiplet-based': 'Chiplet_Architecture',
+
+    # AiM / In-Memory (이형덕)
+    'AiM': 'PIM_and_AI_Memory_Architecture',
+    'AiMX': 'PIM_and_AI_Memory_Architecture',
+    'in-memory computing': 'PIM_and_AI_Memory_Architecture',
+    'In-Memory': 'PIM_and_AI_Memory_Architecture',
+    'Processing-In-Memory': 'PIM_and_AI_Memory_Architecture',
+    'processing in memory': 'PIM_and_AI_Memory_Architecture',
+
+    # HPC / Parallel (박천혁)
+    'RUST': 'Rust',
+    'Rust programming': 'Rust',
+    'OpenMP': 'High_Performance_Computing',
+    'Multi-threading': 'High_Performance_Computing',
+    'parallel computing': 'High_Performance_Computing',
+    'Parallel computing': 'High_Performance_Computing',
+    'CFD': 'High_Performance_Computing',
+    'Lattice Boltzmann': 'High_Performance_Computing',
+    'PTX ISA': 'CUDA',
+    'NVCC': 'CUDA',
+    'Multi-GPU': 'GPU_Acceleration',
+
+    # Automotive Embedded (신기욱)
+    'AUTOSAR': 'Automotive_Software',
+    'CAN bus': 'Automotive_Software',
+    'Vector CANalyzer': 'Automotive_Software',
+    'CANoe': 'Automotive_Software',
+    'HIL': 'Automotive_Software',
+    'MISRA': 'Automotive_Compliance',
 })

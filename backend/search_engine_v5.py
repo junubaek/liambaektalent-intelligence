@@ -25,7 +25,7 @@ except ImportError:
 
 # Load secrets from local file for runtime instead of env vars
 try:
-    with open(os.path.join(os.path.dirname(os.path.dirname(__file__)), "secrets.json"), "r") as f:
+    with open(os.path.join(os.path.dirname(os.path.dirname(__file__)), "secrets.json"), "r", encoding="utf-8") as f:
         _secrets = json.load(f)
 except FileNotFoundError:
     _secrets = {}

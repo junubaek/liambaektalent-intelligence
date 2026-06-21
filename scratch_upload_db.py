@@ -1,10 +1,15 @@
 import json
+import os
+import sys
 from connectors.gdrive_api import GDriveConnector
 from googleapiclient.http import MediaFileUpload
 
-gdrive = GDriveConnector()
-with open('secrets.json', 'r', encoding='utf-8') as f:
+# Load secrets with proper encoding to avoid UnicodeDecodeError
+secrets_path = os.path.join(os.path.dirname(__file__), 'secrets.json')
+with open(secrets_path, 'r', encoding='utf-8', errors='ignore') as f:
     secrets = json.load(f)
+
+gdrive = GDriveConnector(secrets_path=secrets_path)
 
 folder_id = secrets.get('GOOGLE_DRIVE_FOLDER_ID')
 print('Folder ID:', folder_id)

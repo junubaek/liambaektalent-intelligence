@@ -9,7 +9,7 @@ from app.models import Candidate
 from openai import OpenAI
 from connectors.pinecone_api import PineconeClient
 
-with open("secrets.json", "r") as f:
+with open("secrets.json", "r", encoding="utf-8") as f:
     secrets = json.load(f)
 
 openai_client = OpenAI(api_key=secrets.get("OPENAI_API_KEY", ""))
