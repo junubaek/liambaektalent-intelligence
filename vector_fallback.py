@@ -5,9 +5,13 @@ import numpy as np
 from numpy.linalg import norm
 from openai import OpenAI
 
-with open("secrets.json", "r", encoding="utf-8") as f:
-    secrets = json.load(f)
-client = OpenAI(api_key=secrets["OPENAI_API_KEY"])
+try:
+    with open("secrets.json", "r", encoding="utf-8") as f:
+        secrets = json.load(f)
+    client = OpenAI(api_key=secrets["OPENAI_API_KEY"])
+except Exception:
+    # Fallback: no API key; disable vector fallback
+    client = None
 
 # 1. 서버 구동 시 미리 메모리에 로드 (0.01초 소요, 매우 가벼움)
 try:
@@ -21,6 +25,10 @@ def get_closest_node(user_keyword: str, threshold: float = 0.45):
     """
     [L2 Fallback] 벡터 공간에서 가장 유사한 표준 노드를 반환합니다.
     """
+    if client is None:
+        # No vector fallback available; skip and return None
+        return None
+
     # 1. 유저 키워드를 벡터로 변환
     res = client.embeddings.create(
         model="text-embedding-3-small",
