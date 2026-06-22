@@ -1,55 +1,33 @@
+import sqlite3, sys, codecs
+sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer)
+conn = sqlite3.connect('candidates.db')
+cur = conn.cursor()
 
+print("=== 1. 전체 현황 ===")
+cur.execute("SELECT COUNT(*) FROM candidates WHERE is_duplicate=0")
+print("Active candidates:", cur.fetchone()[0])
+cur.execute("SELECT COUNT(*) FROM candidates WHERE is_duplicate=1")
+print("Duplicates:", cur.fetchone()[0])
 
-import json
-from connectors.pinecone_api import PineconeClient
-from connectors.openai_api import OpenAIClient
+print("\n=== 2. 이름 인코딩 상태 ===")
+cur.execute("SELECT COUNT(*) FROM candidates WHERE is_duplicate=0 AND (name_kr IS NULL OR name_kr='')")
+print("name_kr 비어있음:", cur.fetchone()[0])
+cur.execute("SELECT id, name_kr FROM candidates WHERE is_duplicate=0 LIMIT 10")
+for r in cur.fetchall():
+    print(r[0][:8], '|', r[1])
 
-def check_pinecone():
-    try:
-        with open("secrets.json", "r") as f:
-            secrets = json.load(f)
-        
-        # 1. Setup Pinecone
-        pc_host = secrets.get("PINECONE_HOST", "")
-        if not pc_host.startswith("https://"): pc_host = f"https://{pc_host}"
-        pc = PineconeClient(secrets["PINECONE_API_KEY"], pc_host)
-        
-        # 2. Setup OpenAI
-        openai = OpenAIClient(secrets["OPENAI_API_KEY"])
-        
-        print(f"Connecting to Host: {pc_host}")
-        
-        # 3. Real Semantic Query
-        query_text = "AI Cloud Engineer Kubernetes Python Go"
-        print(f"\n--- Embedding Query: '{query_text}' ---")
-        
-        query_vec = openai.embed_content(query_text)
-        if not query_vec:
-            print("❌ Failed to generate embedding.")
-            return
+print("\n=== 3. 섹터 분포 ===")
+cur.execute("SELECT sector, COUNT(*) as cnt FROM candidates WHERE is_duplicate=0 GROUP BY sector ORDER BY cnt DESC")
+for r in cur.fetchall():
+    print(r[0], '|', r[1])
+print("\n=== 4. UI 핵심 컬럼 NULL 현황 ===")
+for col in ['name_kr','current_title','current_company','raw_text','sector','total_years']:
+    cur.execute(f"SELECT COUNT(*) FROM candidates WHERE is_duplicate=0 AND ({col} IS NULL OR {col}='')")
+    print(f"{col} 비어있음:", cur.fetchone()[0])
 
-        print(f"✅ Generated Vector (Dim: {len(query_vec)})")
-        
-        # 4. Search Pinecone
-        print("\n--- Searching Top 20 Candidates ---")
-        res = pc.query(vector=query_vec, top_k=20, namespace="ns1")
-        
-        if res and 'matches' in res:
-            matches = res['matches']
-            print(f"Found {len(matches)} matches.")
-            
-            for i, m in enumerate(matches):
-                meta = m.get('metadata', {})
-                name = meta.get('name', 'N/A')
-                role = meta.get('role', 'N/A')
-                score = m['score']
-                print(f"[{i+1}] {name} | Role: {role} | Score: {score:.4f}")
-        else:
-            print("❌ Query returned None or invalid response.")
-            print(res)
+print("\n=== 5. 신규 이력서 인제스트 확인 (최근 등록 20개) ===")
+cur.execute("SELECT id, name_kr, current_company, created_at FROM candidates WHERE is_duplicate=0 ORDER BY created_at DESC LIMIT 20")
+for r in cur.fetchall():
+    print(r[0][:8], '|', r[1], '|', r[2], '|', r[3])
 
-    except Exception as e:
-        print(f"Error: {e}")
-
-if __name__ == "__main__":
-    check_pinecone()
+conn.close()

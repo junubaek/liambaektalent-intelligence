@@ -1,0 +1,291 @@
+{
+  "version": "v10",
+  "description": "MARKDOWN Talent Intelligence OS - Golden Dataset (ID remapped)",
+  "queries": [
+    {
+      "query_id": "q01",
+      "query": "PR Communication Manager",
+      "sector": "Marketing",
+      "relevant_ids": ["028449d0-5ae4-46cf-b403-20f23e1e5fab"]
+    },
+    {
+      "query_id": "q02",
+      "query": "Financial Systems FP&A Manager",
+      "sector": "Finance",
+      "relevant_ids": ["29318c96-d490-406e-add8-d13226f047f5"]
+    },
+    {
+      "query_id": "q03",
+      "query": "Power Grid Engineering Smart Grid Operations",
+      "sector": "Operations",
+      "relevant_ids": ["e38d8265-e1ae-446f-9a83-1d16ab040acf"]
+    },
+    {
+      "query_id": "q04",
+      "query": "Ethernet Verification Engineer",
+      "sector": "Eng_Semi",
+      "relevant_ids": ["cab5499b-80f5-4e5e-bca3-5092d60a498f"]
+    },
+    {
+      "query_id": "q05",
+      "query": "Enterprise Sales Partner Alliance Manager",
+      "sector": "Sales",
+      "relevant_ids": ["6bfbcacb-7a25-4e7f-8406-f4b1a2e5f892"]
+    },
+    {
+      "query_id": "q06",
+      "query": "NPU Driver Kernel Engineer",
+      "sector": "Eng_AI",
+      "relevant_ids": [
+        "cddf80d2-811a-43bd-bb6d-e8ecdfa3b2d9",
+        "f65fe4c5-c1c5-4f83-95b0-56ea193ef57b",
+        "0551f4b7-f6bd-429a-a8e9-8b4da86b63bc",
+        "aaffc596-a687-4578-bebe-ee65cf011367",
+        "6fd1c961-3a9e-4c76-a035-8a4d95772d12",
+        "5790b72b-2f15-4ec6-80f7-74a57194f574"
+      ]
+    },
+    {
+      "query_id": "q07",
+      "query": "LLM Serving Inference Optimization",
+      "sector": "Eng_AI",
+      "relevant_ids": [
+        "83e59120-44de-48b8-9ec2-797018f096d5",
+        "fc2939d3-aacf-4088-8827-b60ebbe1fcde",
+        "be0c1f47-d9b5-432e-b445-b463a4564af0",
+        "346fb25b-1768-40f1-b8ed-069b9619a8c0",
+        "ad4c239e-c8f9-4eb6-83d1-b508edf9ddd5",
+        "60830188-39f4-4824-9ecb-cb68736801ee"
+      ]
+    },
+    {
+      "query_id": "q08",
+      "query": "SoC Architect Network on Chip",
+      "sector": "Eng_Semi",
+      "relevant_ids": [
+        "6a0129ad-744f-40d1-a583-f8c9f3c02cf6",
+        "cddf80d2-811a-43bd-bb6d-e8ecdfa3b2d9",
+        "74a4261a-775a-4719-bcdf-0c24b984fabb",
+        "c1bc09b1-2b4e-4d06-a66d-9ba7a6839cf2",
+        "f65fe4c5-c1c5-4f83-95b0-56ea193ef57b",
+        "dddda596-e6d7-4b11-92fc-739dcda2adab",
+        "35612c65-8754-447f-9485-c50e694bbbdf"
+      ]
+    },
+    {
+      "query_id": "q09",
+      "query": "Finance FP&A Corporate Planning Manager",
+      "sector": "Finance",
+      "relevant_ids": [
+        "29318c96-d490-406e-add8-d13226f047f5",
+        "0899e369-ecb1-4773-8301-78d3dfa79fb3",
+        "eb58c8e2-c832-4c69-ac63-c5decafa5b01",
+        "63c38481-553f-4c66-8a6b-b8c0c60e2561",
+        "3471bdc7-7e6b-4ebd-aa51-14f3a668dec5",
+        "67f58b5c-644f-4f73-9846-5cef9dd8dc79"
+      ]
+    },
+    {
+      "query_id": "q10",
+      "query": "DevOps Engineer Kubernetes Infrastructure",
+      "sector": "Eng_SW",
+      "relevant_ids": [
+        "477533f6-2a75-40bb-8f7b-0fa457695ec5",
+        "7c485f64-0e19-41b3-8586-29a150f0ef32",
+        "468fbf1a-acfc-46d3-b2ff-20bb69edd1d7",
+        "f68a4335-be01-4e89-8994-fa0da7b57674",
+        "98cab52c-163b-48f2-bf1f-06613786d839"
+      ]
+    },
+    {
+      "query_id": "q11",
+      "query": "Backend Node.js Engineer",
+      "sector": "Eng_SW",
+      "relevant_ids": [
+        "6f8df9c4-0462-4f2a-87f5-7a5e83b897db",
+        "5ee4dba1-f3ee-46a3-87db-55a8ca1f6a4f",
+        "36b34cb9-0778-48e5-9aaa-ddfd9bd82d15",
+        "d52721e4-b75c-4c8f-8660-ceb38e427e02"
+      ]
+    },
+    {
+      "query_id": "q12",
+      "query": "B2B Enterprise Sales Manager",
+      "sector": "Sales",
+      "relevant_ids": [
+        "6bfbcacb-7a25-4e7f-8406-f4b1a2e5f892",
+        "19b3e6f9-91b0-47e8-8a11-95d19662b016",
+        "8adc6a04-0711-4ee8-a854-d00cc8fb0fea",
+        "6a4ede20-d46f-4bcf-9e28-f5dd1905d43d"
+      ]
+    },
+    {
+      "query_id": "q13",
+      "query": "Treasury Manager Cash Management",
+      "sector": "Finance",
+      "relevant_ids": [
+        "768b51d9-abf9-4cc6-9a2a-a728f06acefa",
+        "5d362326-5328-4afd-8084-cd186d9684cd",
+        "c555f889-917a-4c4a-b2b4-a4ee215215ee",
+        "6f7e401c-b11c-47e4-8def-693505b389f7",
+        "be5bceaa-d8d9-4f3c-97b7-369425bb31fd"
+      ]
+    },
+    {
+      "query_id": "q14",
+      "query": "Data Scientist Machine Learning Engineer",
+      "sector": "Eng_Data",
+      "relevant_ids": [
+        "07b872cc-9c5f-4f5b-b807-1fb323481c19",
+        "0f011226-664e-41ec-93f5-26517684c29a",
+        "8ee4d752-cfb6-4ff8-a91e-32c6dedff7e1",
+        "96af50b7-236b-45da-94b4-2dbae33f244d",
+        "8af47ac9-e29d-4da2-befc-9ec3d7e3e516"
+      ]
+    },
+    {
+      "query_id": "q15",
+      "query": "General Affairs Office Manager",
+      "sector": "Operations",
+      "relevant_ids": [
+        "b15d2d9d-d6ad-49f8-9d9b-8f6b368c1cef",
+        "e8e9942d-2689-46d5-b908-1a4693d85ecb",
+        "f33f11a9-470c-4457-83f4-f993f0d18a43",
+        "877ad451-9b23-457d-938f-9dce746b7da5",
+        "181dfe64-2066-4081-9995-f2055ec6dcea"
+      ]
+    },
+    {
+      "query_id": "q16",
+      "query": "UI UX Designer Product Design",
+      "sector": "Design",
+      "relevant_ids": [
+        "3e8a4012-15ec-4eed-a694-da72e45b3064",
+        "93417187-bafe-4dae-8585-c47b83802eb8",
+        "35721c11-62e1-4702-9165-b311a1963be0",
+        "cd57bae7-5840-4745-98a2-c9652a73c72e",
+        "0e8415f0-a361-450a-a5a1-70e9790b27ff",
+        "ade17375-7308-4c3a-8ebe-2a376e6430ea",
+        "3a0e2774-1494-4228-a97a-dafb17f33b28"
+      ]
+    },
+    {
+      "query_id": "q17",
+      "query": "PCIe Validation Engineer Semiconductor",
+      "sector": "Eng_Semi",
+      "relevant_ids": [
+        "cab5499b-80f5-4e5e-bca3-5092d60a498f",
+        "811188fc-6a58-40ac-931a-621c5b14f524"
+      ]
+    },
+    {
+      "query_id": "q18",
+      "query": "Signal Power Integrity Engineer",
+      "sector": "Eng_HW",
+      "relevant_ids": ["75242bee-0675-4fa0-9e73-5648782aacff"]
+    },
+    {
+      "query_id": "q19",
+      "query": "Technical Program Manager Cross Functional",
+      "sector": "Product",
+      "relevant_ids": [
+        "5623d058-49a5-46a3-b0bc-95e49332ec55",
+        "15e72ee7-faf4-44f4-844b-874342cd40bc",
+        "3e88c46c-9a43-48e7-bd78-82bd82d473af"
+      ]
+    },
+    {
+      "query_id": "q20",
+      "query": "Kafka Infrastructure Data Pipeline Engineer",
+      "sector": "Eng_SW",
+      "relevant_ids": ["0131e557-737c-46e6-8ad9-3abca642a864"]
+    },
+    {
+      "query_id": "q21",
+      "query": "Head of Operations COO Chief Operating Officer",
+      "sector": "Operations",
+      "relevant_ids": ["2232a190-fa6d-4496-8614-d0c22a3dc425"]
+    },
+    {
+      "query_id": "q22",
+      "query": "CTO Technical Leader Engineering Organization",
+      "sector": "C_Level",
+      "relevant_ids": [
+        "abd36b7f-66d3-4788-9905-750bf3727563",
+        "58e99937-3911-4430-a6e3-83c3ce69f0f0"
+      ]
+    },
+    {
+      "query_id": "q23",
+      "query": "CFO Chief Financial Officer Finance Executive",
+      "sector": "Finance",
+      "relevant_ids": ["0633ce8e-7b17-4c04-946d-6ca70cef801a"]
+    },
+    {
+      "query_id": "q24",
+      "query": "CISO Information Security Manager",
+      "sector": "Eng_SW",
+      "relevant_ids": ["ef14110c-cc07-4df0-ae99-7a4e9a5ec76f"]
+    },
+    {
+      "query_id": "q25",
+      "query": "AML Compliance Anti Money Laundering Manager",
+      "sector": "Finance",
+      "relevant_ids": ["2ac81324-c62a-4ff0-ad58-92ab32691a01"]
+    },
+    {
+      "query_id": "q26",
+      "query": "Performance Marketing Manager Digital Advertising",
+      "sector": "Marketing",
+      "relevant_ids": ["38318eb5-6864-45d9-8fb2-a92bb882f85e"]
+    },
+    {
+      "query_id": "q27",
+      "query": "IR Manager Investor Relations IPO",
+      "sector": "Finance",
+      "relevant_ids": ["ec6134e3-97fd-46bd-9879-335312ae7ce0"]
+    },
+    {
+      "query_id": "q28",
+      "query": "CRM Data Analyst Marketing Analytics",
+      "sector": "Marketing",
+      "relevant_ids": ["cc1a05cf-f2e5-4d82-9281-e6d2d16bf115"]
+    },
+    {
+      "query_id": "q29",
+      "query": "SCM Supply Chain Operations Manager",
+      "sector": "Operations",
+      "relevant_ids": ["bc76bd09-df76-4b8c-b595-7abbfccc3722"]
+    },
+    {
+      "query_id": "q30",
+      "query": "Internal Audit Forensic Accounting Investigation",
+      "sector": "Finance",
+      "relevant_ids": ["4de496fb-08f4-4b8e-9bc2-cad42692748d"]
+    },
+    {
+      "query_id": "q31",
+      "query": "Consolidated Accounting IFRS Financial Reporting",
+      "sector": "Finance",
+      "relevant_ids": ["98ba0bd9-98af-4491-b87c-cf2bde25b5ba"]
+    },
+    {
+      "query_id": "q32",
+      "query": "Tech Recruiter Talent Acquisition Manager",
+      "sector": "HR",
+      "relevant_ids": ["7ddc3664-9cb3-423f-bed1-61849ac0af4e"]
+    },
+    {
+      "query_id": "q33",
+      "query": "In-house Counsel Corporate Legal IT Law",
+      "sector": "Legal",
+      "relevant_ids": ["ce3660ac-1416-4ea9-8a52-f463402b7e7a"]
+    },
+    {
+      "query_id": "q34",
+      "query": "NoC Network on Chip SoC Architecture",
+      "sector": "Eng_Semi",
+      "relevant_ids": ["6a0129ad-744f-40d1-a583-f8c9f3c02cf6"]
+    }
+  ]
+}

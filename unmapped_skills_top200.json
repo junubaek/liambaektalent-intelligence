@@ -1,0 +1,802 @@
+[
+  [
+    "Team Leadership",
+    86
+  ],
+  [
+    "Financial Analysis",
+    72
+  ],
+  [
+    "Cost Reduction",
+    67
+  ],
+  [
+    "UI/UX Design",
+    63
+  ],
+  [
+    "Product Launch",
+    57
+  ],
+  [
+    "HR Management",
+    56
+  ],
+  [
+    "Recruitment Process",
+    44
+  ],
+  [
+    "Process Improvement",
+    42
+  ],
+  [
+    "UX/UI Design",
+    40
+  ],
+  [
+    "Tax Filing",
+    40
+  ],
+  [
+    "Tax Reporting",
+    38
+  ],
+  [
+    "Sales Data Analysis",
+    37
+  ],
+  [
+    "Cash Management",
+    33
+  ],
+  [
+    "Project Leadership",
+    29
+  ],
+  [
+    "SNS Marketing",
+    28
+  ],
+  [
+    "Sales Growth",
+    27
+  ],
+  [
+    "Performance Evaluation System",
+    27
+  ],
+  [
+    "Supplier Management",
+    26
+  ],
+  [
+    "Content Planning",
+    26
+  ],
+  [
+    "New Product Development",
+    25
+  ],
+  [
+    "Budget Management",
+    25
+  ],
+  [
+    "Organizational Culture",
+    24
+  ],
+  [
+    "Web Design",
+    24
+  ],
+  [
+    "Overseas Sales",
+    24
+  ],
+  [
+    "Marketing Campaign",
+    23
+  ],
+  [
+    "Brand Launching",
+    23
+  ],
+  [
+    "Production Management",
+    22
+  ],
+  [
+    "UI Design",
+    21
+  ],
+  [
+    "Sales Strategy",
+    20
+  ],
+  [
+    "Employee Training",
+    20
+  ],
+  [
+    "Market Trend Analysis",
+    20
+  ],
+  [
+    "Online Marketing",
+    19
+  ],
+  [
+    "Financial Statement Analysis",
+    19
+  ],
+  [
+    "SAP ERP",
+    19
+  ],
+  [
+    "Internal Control System",
+    18
+  ],
+  [
+    "Customer Communication",
+    17
+  ],
+  [
+    "Tax Adjustment",
+    17
+  ],
+  [
+    "ERP Implementation",
+    17
+  ],
+  [
+    "New Market Development",
+    17
+  ],
+  [
+    "Yield Improvement",
+    17
+  ],
+  [
+    "Brand Launch",
+    17
+  ],
+  [
+    "IPO Process",
+    16
+  ],
+  [
+    "Cash Flow Management",
+    16
+  ],
+  [
+    "Financial Statements",
+    16
+  ],
+  [
+    "HR Planning",
+    16
+  ],
+  [
+    "Cost Accounting",
+    16
+  ],
+  [
+    "Brand Identity Design",
+    15
+  ],
+  [
+    "Supplier Negotiation",
+    15
+  ],
+  [
+    "Brand Strategy",
+    15
+  ],
+  [
+    "New Product Launch",
+    15
+  ],
+  [
+    "Financial Closing",
+    14
+  ],
+  [
+    "Price Negotiation",
+    14
+  ],
+  [
+    "Sales Analysis",
+    14
+  ],
+  [
+    "Purchasing Management",
+    14
+  ],
+  [
+    "Production Planning",
+    13
+  ],
+  [
+    "Partner Management",
+    13
+  ],
+  [
+    "Information Security Management",
+    13
+  ],
+  [
+    "Security Policy",
+    13
+  ],
+  [
+    "Legal Advisory",
+    13
+  ],
+  [
+    "Overseas Subsidiary Management",
+    13
+  ],
+  [
+    "M&A Due Diligence",
+    12
+  ],
+  [
+    "Team Building",
+    12
+  ],
+  [
+    "Performance Evaluation",
+    12
+  ],
+  [
+    "Digital Marketing Campaign",
+    12
+  ],
+  [
+    "Order Management",
+    11
+  ],
+  [
+    "Stakeholder Communication",
+    11
+  ],
+  [
+    "Requirement Analysis",
+    11
+  ],
+  [
+    "Customer Data Analysis",
+    11
+  ],
+  [
+    "Digital Transformation",
+    11
+  ],
+  [
+    "HR Policy Design",
+    11
+  ],
+  [
+    "Cross-department Communication",
+    11
+  ],
+  [
+    "Backend Development",
+    11
+  ],
+  [
+    "Data-driven Marketing",
+    11
+  ],
+  [
+    "Marketing Campaigns",
+    11
+  ],
+  [
+    "Cross-functional Communication",
+    11
+  ],
+  [
+    "Service Launch",
+    11
+  ],
+  [
+    "PR Strategy",
+    11
+  ],
+  [
+    "Responsive Web Design",
+    11
+  ],
+  [
+    "Accounting Audit",
+    10
+  ],
+  [
+    "Budget Planning",
+    10
+  ],
+  [
+    "KPI Analysis",
+    10
+  ],
+  [
+    "Government Subsidy Management",
+    10
+  ],
+  [
+    "AWS Lambda",
+    10
+  ],
+  [
+    "Microservices Architecture",
+    10
+  ],
+  [
+    "Oracle Database",
+    9
+  ],
+  [
+    "UX Design",
+    9
+  ],
+  [
+    "Cost Negotiation",
+    9
+  ],
+  [
+    "Adobe Analytics",
+    9
+  ],
+  [
+    "Labor Management",
+    9
+  ],
+  [
+    "Failure Analysis",
+    9
+  ],
+  [
+    "Equipment Maintenance",
+    9
+  ],
+  [
+    "Personal Information Protection",
+    9
+  ],
+  [
+    "SNS Channel Operation",
+    9
+  ],
+  [
+    "SAP FI/CO",
+    8
+  ],
+  [
+    "Quality Improvement",
+    8
+  ],
+  [
+    "IFRS Conversion",
+    8
+  ],
+  [
+    "New Business Launch",
+    8
+  ],
+  [
+    "Sales Forecasting",
+    8
+  ],
+  [
+    "Information Security Policy",
+    8
+  ],
+  [
+    "Big Data Platform",
+    8
+  ],
+  [
+    "Production Scheduling",
+    8
+  ],
+  [
+    "Store Operations",
+    8
+  ],
+  [
+    "Android App Development",
+    8
+  ],
+  [
+    "E-commerce Platform Management",
+    8
+  ],
+  [
+    "HR Evaluation System",
+    8
+  ],
+  [
+    "Onboarding Program",
+    8
+  ],
+  [
+    "Profit and Loss Analysis",
+    8
+  ],
+  [
+    "E-commerce Platform",
+    8
+  ],
+  [
+    "Membership Program",
+    8
+  ],
+  [
+    "Marketing Performance Analysis",
+    8
+  ],
+  [
+    "UI/UX Planning",
+    8
+  ],
+  [
+    "HR Data Analysis",
+    8
+  ],
+  [
+    "Exhibition Planning",
+    8
+  ],
+  [
+    "Partner Communication",
+    7
+  ],
+  [
+    "Algorithm Development",
+    7
+  ],
+  [
+    "Portfolio Management",
+    7
+  ],
+  [
+    "Accounts Receivable Management",
+    7
+  ],
+  [
+    "Security Consulting",
+    7
+  ],
+  [
+    "Media Communication",
+    7
+  ],
+  [
+    "Digital Marketing Strategy",
+    7
+  ],
+  [
+    "Security Incident Response",
+    7
+  ],
+  [
+    "Logistics Process Improvement",
+    7
+  ],
+  [
+    "Financial Planning & Analysis",
+    7
+  ],
+  [
+    "New Business Planning",
+    7
+  ],
+  [
+    "Live Commerce",
+    7
+  ],
+  [
+    "YouTube Channel Management",
+    7
+  ],
+  [
+    "Product Sourcing",
+    7
+  ],
+  [
+    "Linux Server",
+    7
+  ],
+  [
+    "Investment Strategy",
+    7
+  ],
+  [
+    "AWS EKS",
+    7
+  ],
+  [
+    "IMC Campaign",
+    7
+  ],
+  [
+    "Customer Technical Support",
+    7
+  ],
+  [
+    "Document Preparation",
+    7
+  ],
+  [
+    "Labor Risk Management",
+    7
+  ],
+  [
+    "Information Security Management System (ISMS)",
+    7
+  ],
+  [
+    "Store Opening",
+    7
+  ],
+  [
+    "Big Data",
+    7
+  ],
+  [
+    "HR Policy",
+    7
+  ],
+  [
+    "Security Audit",
+    7
+  ],
+  [
+    "Employee Welfare",
+    7
+  ],
+  [
+    "Global Marketing",
+    7
+  ],
+  [
+    "Supplier Relationship Management",
+    7
+  ],
+  [
+    "AWS Cost Optimization",
+    7
+  ],
+  [
+    "Cross-department Collaboration",
+    7
+  ],
+  [
+    "Compensation System",
+    7
+  ],
+  [
+    "Adobe XD",
+    6
+  ],
+  [
+    "Organizational Culture Improvement",
+    6
+  ],
+  [
+    "Tax Management",
+    6
+  ],
+  [
+    "Audit Response",
+    6
+  ],
+  [
+    "Statistical Analysis",
+    6
+  ],
+  [
+    "IMC Marketing",
+    6
+  ],
+  [
+    "Logistics Management",
+    6
+  ],
+  [
+    "Multilingual Communication",
+    6
+  ],
+  [
+    "CRM System",
+    6
+  ],
+  [
+    "Financial Disclosure",
+    6
+  ],
+  [
+    "Press Release Writing",
+    6
+  ],
+  [
+    "SNS Content Planning",
+    6
+  ],
+  [
+    "Urban Planning",
+    6
+  ],
+  [
+    "Digital Campaign",
+    6
+  ],
+  [
+    "Integrated Marketing Communication",
+    6
+  ],
+  [
+    "Web Development",
+    6
+  ],
+  [
+    "AI Agent",
+    6
+  ],
+  [
+    "Active Directory",
+    6
+  ],
+  [
+    "Employee Benefits",
+    6
+  ],
+  [
+    "Overseas Business Development",
+    6
+  ],
+  [
+    "AWS EC2",
+    6
+  ],
+  [
+    "SAP CO Module",
+    6
+  ],
+  [
+    "POS System",
+    6
+  ],
+  [
+    "Cross-cultural Communication",
+    6
+  ],
+  [
+    "Campaign Management",
+    6
+  ],
+  [
+    "Training Program",
+    6
+  ],
+  [
+    "Security Management",
+    6
+  ],
+  [
+    "HR Analytics",
+    6
+  ],
+  [
+    "Microsoft Azure",
+    6
+  ],
+  [
+    "Internal Audit",
+    6
+  ],
+  [
+    "Production Line Setup",
+    6
+  ],
+  [
+    "Client Relationship Management",
+    6
+  ],
+  [
+    "Marketing Promotion",
+    6
+  ],
+  [
+    "Organizational Culture Program",
+    6
+  ],
+  [
+    "Investment Analysis",
+    6
+  ],
+  [
+    "Corporate Card Management",
+    6
+  ],
+  [
+    "IR and Disclosure",
+    5
+  ],
+  [
+    "Excel VBA",
+    5
+  ],
+  [
+    "Market Share Growth",
+    5
+  ],
+  [
+    "SAP FI Module",
+    5
+  ],
+  [
+    "Sales Negotiation",
+    5
+  ],
+  [
+    "Organizational Culture Development",
+    5
+  ],
+  [
+    "Vehicle Management",
+    5
+  ],
+  [
+    "Office Management",
+    5
+  ],
+  [
+    "Disclosure Management",
+    5
+  ],
+  [
+    "Marketing Communication",
+    5
+  ],
+  [
+    "Excel Automation",
+    5
+  ],
+  [
+    "AWS Architecture",
+    5
+  ],
+  [
+    "Sales Performance Analysis",
+    5
+  ],
+  [
+    "KPI Setting",
+    5
+  ],
+  [
+    "Employee Welfare Programs",
+    5
+  ],
+  [
+    "Investment Feasibility Analysis",
+    5
+  ],
+  [
+    "Project Planning",
+    5
+  ],
+  [
+    "System Design",
+    5
+  ],
+  [
+    "Labor-Management Council",
+    5
+  ]
+]

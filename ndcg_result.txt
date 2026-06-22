@@ -1,0 +1,38 @@
+ID    Query                                         NDCG@10
+------------------------------------------------------------
+q01   PR Communication Manager                      0.3333
+q02   Financial Systems FP&A Manager                0.0000
+q03   Power Grid Engineering Smart Grid Operations  0.6309
+q04   Ethernet Verification Engineer                0.0000
+q05   Enterprise Sales Partner Alliance Manager     0.3155
+q06   NPU Driver Kernel Engineer                    0.0000
+q07   LLM Serving Inference Optimization            0.0000
+q08   SoC Architect Network on Chip                 0.1374
+q09   Finance FP&A Corporate Planning Manager       0.0000
+q10   DevOps Engineer Kubernetes Infrastructure     0.3836
+q11   Backend Node.js Engineer                      0.1301
+q12   B2B Enterprise Sales Manager                  0.1681
+q13   Treasury Manager Cash Management              0.7227
+q14   Data Scientist Machine Learning Engineer      0.0000
+q15   General Affairs Office Manager                0.3156
+q16   UI UX Designer Product Design                 0.0000
+q17   PCIe Validation Engineer Semiconductor        0.0000
+q18   Signal Power Integrity Engineer               1.0000
+q19   Technical Program Manager Cross Functional    0.6714
+q20   Kafka Infrastructure Data Pipeline Engineer   0.0000
+q21   Head of Operations COO Chief Operating Offic  0.5000
+q22   CTO Technical Leader Engineering Organizatio  0.0000
+q23   CFO Chief Financial Officer Finance Executiv  0.0000
+q24   CISO Information Security Manager             0.0000
+q25   AML Compliance Anti Money Laundering Manager  0.0000
+q26   Performance Marketing Manager Digital Advert  0.0000
+q27   IR Manager Investor Relations IPO             0.0000
+q28   CRM Data Analyst Marketing Analytics          0.0000
+q29   SCM Supply Chain Operations Manager           0.3333
+q30   Internal Audit Forensic Accounting Investiga  1.0000
+q31   Consolidated Accounting IFRS Financial Repor  0.0000
+q32   Tech Recruiter Talent Acquisition Manager     0.3869
+q33   In-house Counsel Corporate Legal IT Law       0.2891
+q34   NoC Network on Chip SoC Architecture          0.0000
+------------------------------------------------------------
+Mean NDCG@10: 0.2152  (34 queries)
