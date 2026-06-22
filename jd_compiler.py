@@ -1563,19 +1563,13 @@ def api_search_v8(prompt: str, session_id: str = None, **kwargs) -> dict:
     conds = apply_downgrade_map(conds)
     conds = inject_node_affinity(conds)
 
-    with open(SECRETS_PATH, "r", encoding="utf-8") as f:
-        secrets = json.load(f)
-    api_key = secrets.get("OPENAI_API_KEY") or secrets.get("openai_api_key")
-    
-    client = OpenAI(api_key=api_key)
-
     # Ontology Vector Index: LLM skills → 유사 온톨로지 노드 탐색
     _llm_skills_for_onto = _jd_llm.get('skills', []) if '_jd_llm' in dir() else []
     if _llm_skills_for_onto:
         existing_skill_names = {c.get('skill') for c in conds}
         _onto_added = []
         for _skill_txt in _llm_skills_for_onto[:6]:  # 최대 6개 skill만
-            _matches = _ontology_index.search(_skill_txt, client,
+            _matches = _ontology_index.search(_skill_txt, _openai_client,
                                               threshold=0.80, top_k=3)
             for _node, _sim in _matches:
                 if _node not in existing_skill_names:
@@ -1585,6 +1579,12 @@ def api_search_v8(prompt: str, session_id: str = None, **kwargs) -> dict:
                     _onto_added.append(f"{_node}({_sim:.2f})")
         if _onto_added:
             logger.info(f"[OntologyVector] Added {len(_onto_added)} nodes: {_onto_added}")
+    
+    with open(SECRETS_PATH, "r", encoding="utf-8") as f:
+        secrets = json.load(f)
+    api_key = secrets.get("OPENAI_API_KEY") or secrets.get("openai_api_key")
+    
+    client = OpenAI(api_key=api_key)
     
     # [Phase 1: Vector Search (Tower 1)]
     emb_res = client.embeddings.create(input=[prompt], model="text-embedding-3-small")
@@ -1599,29 +1599,22 @@ def api_search_v8(prompt: str, session_id: str = None, **kwargs) -> dict:
     n_pw = _get_secret('NEO4J_PASSWORD')
     driver = GraphDatabase.driver(n_uri, auth=(n_user, n_pw))
     try:
-        from pinecone import Pinecone as PineconeClient
-        pc = PineconeClient(api_key=_get_secret('PINECONE_API_KEY'))
-        pc_index = pc.Index(host=_get_secret('PINECONE_HOST'))
-        res = pc_index.query(
-            vector=query_vector,
-            top_k=75,
-            namespace='resume_vectors',
-            include_metadata=True
-        )
-        seen_ids = set()
-        for match in res.get('matches', []):
-            meta = match.get('metadata', {})
-            cid = meta.get('candidate_id') or match['id'].split('_chunk_')[0]
-            if cid in seen_ids:
-                continue
-            seen_ids.add(cid)
-            score = match['score']
-            name = meta.get('name_kr', '')
-            vector_results.append({'id': cid, 'name': name, 'score': score})
-            id_to_name[cid] = name
+        with driver.session() as session:
+            q_vec = """
+            CALL db.index.vector.queryNodes('candidate_embedding', 75, $queryVector)
+            YIELD node AS c, score
+            RETURN c.id AS id, coalesce(c.name_kr, c.name) AS name, score
+            """
+            res = session.run(q_vec, queryVector=query_vector)
+            for r in res:
+                cid = str(r["id"]) if r["id"] else r["name"]
+                if cid:
+                    vector_results.append({'id': cid, 'name': r['name'], 'score': r['score']})
+                    id_to_name[cid] = r['name']
     except Exception as e:
         logger.error(f"[Tower 1] Vector error: {e}")
-    logger.info(f"[Tower 1] Extracted Top-75 via Pinecone.")
+        
+    logger.info(f"[Tower 1] Extracted Top-30 via Pinecone.")
 
     # [Phase 2: Graph Score (Tower 2)]
     target_skills = list(set([c.get("skill") for c in conds if c.get("skill")]))
@@ -2107,15 +2100,15 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     
     # 1. Parse & Expand Query
     logger.info(f"DEBUG [V9] Step 1: Parsing query...")
-    with open(SECRETS_PATH, "r", encoding="utf-8") as f:
-        secrets = json.load(f)
-    client = OpenAI(api_key=secrets.get("OPENAI_API_KEY"))
+    with open(SECRETS_PATH, "r", encoding="utf-8") as _f_sec:
+        _sec = json.load(_f_sec)
+    _openai_client = client if 'client' in dir() else OpenAI(api_key=_sec.get("OPENAI_API_KEY"))
     # 규칙 기반 파서 (스킬 매핑 주담당)
     extracted = parse_jd_to_json(prompt)
     conds = extracted.get("conditions", [])
     min_years_rule = extracted.get("min_years", 0)
     # LLM 파서: preferred_companies + 명시적 min_years 보강
-    _jd_llm = parse_jd_with_llm(prompt, client)
+    _jd_llm = parse_jd_with_llm(prompt, _openai_client)
     preferred_companies = _jd_llm.get("preferred_companies", [])
     _min_years_llm = _jd_llm.get("min_years", 0)
     min_years = _min_years_llm if _min_years_llm > 0 else min_years_rule
@@ -2151,7 +2144,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     conds = apply_downgrade_map(conds)
     conds = inject_node_affinity(conds)
     
-    # 2. Tower 1: Vector Search (Pinecone - replacing Neo4j queryNodes)
+    # 2. Tower 1: Vector Search (Neo4j - V8 logic)
     n_uri = _get_secret('NEO4J_URI')
     n_user = _get_secret('NEO4J_USERNAME')
     n_pw = _get_secret('NEO4J_PASSWORD')
@@ -2168,28 +2161,18 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     v_scores = {}
     id_to_name = {}
     try:
-        from pinecone import Pinecone as PineconeClient
-        pc = PineconeClient(api_key=_get_secret('PINECONE_API_KEY'))
-        pc_index = pc.Index(host=_get_secret('PINECONE_HOST'))
-        res = pc_index.query(
-            vector=query_vector,
-            top_k=75,
-            namespace='resume_vectors',
-            include_metadata=True
-        )
-        seen_ids = set()
-        for match in res.get('matches', []):
-            meta = match.get('metadata', {})
-            cid = meta.get('candidate_id') or match['id'].split('_chunk_')[0]
-            if cid in seen_ids:
-                continue
-            seen_ids.add(cid)
-            score = match['score']
-            name = meta.get('name_kr', '')
-            v_scores[cid] = score
-            id_to_name[cid] = name
+        with driver.session() as session:
+            res_v = session.run("""
+                CALL db.index.vector.queryNodes('candidate_embedding', 200, $queryVector)
+                YIELD node AS c, score
+                RETURN c.id AS id, coalesce(c.name_kr, c.name) AS name, score
+            """, queryVector=query_vector)
+            for r in res_v:
+                cid = str(r["id"])
+                v_scores[cid] = r["score"]
+                id_to_name[cid] = r["name"]
     except Exception as e:
-        logger.error(f"[V9] Pinecone Vector Error: {e}")
+        logger.error(f"[V9] Vector Error: {e}")
 
     # 3. Tower 2: Graph Candidates (Skill Match)
     g_matched_ids = []
