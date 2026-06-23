@@ -2384,7 +2384,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         query = f"""
             SELECT id, name_kr, raw_text, sector, current_company, total_years, 
                    profile_summary, careers_json, education_json, email, phone, birth_year, google_drive_url,
-                   program_signal, program_stage
+                   program_signal, program_stage, has_startup, has_big_company
             FROM candidates 
             WHERE id IN ({placeholders})
         """
@@ -2396,7 +2396,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
                 query = f"""
                     SELECT id, name_kr, raw_text, sector, current_company, total_years, 
                            profile_summary, careers_json, education_json, email, phone, birth_year, google_drive_url,
-                           0.0 as program_signal, NULL as program_stage
+                           0.0 as program_signal, NULL as program_stage, has_startup, has_big_company
                     FROM candidates 
                     WHERE id IN ({placeholders})
                 """
@@ -2438,7 +2438,9 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
                 'birth_year': r[11] or '',
                 'google_drive_url': r[12] or '',
                 'program_signal': r[13] or 0.0,
-                'program_stage': r[14] or None
+                'program_stage': r[14] or None,
+                'has_startup': r[15] or 0,
+                'has_big_company': r[16] or 0
             }
     finally:
         pass
@@ -2617,7 +2619,9 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
             'google_drive_url': c_info.get('google_drive_url', ''),
             'program_stage': c_info.get('program_stage', None),
             'seniority': get_seniority_label(c_info.get('total_years', 0)),
-            '연차등급': get_seniority_label(c_info.get('total_years', 0))
+            '연차등급': get_seniority_label(c_info.get('total_years', 0)),
+            'has_startup': c_info.get('has_startup', 0),
+            'has_big_company': c_info.get('has_big_company', 0)
         }
         matched_candidates.append(candidate_obj)
 
