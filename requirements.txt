@@ -2,7 +2,7 @@ fastapi
 uvicorn
 pydantic
 neo4j
-pinecone-client
+pinecone
 google-genai
 pdfplumber
 python-docx
