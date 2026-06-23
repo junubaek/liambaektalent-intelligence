@@ -66,6 +66,32 @@ export default function MarkdownMain() {
     ...(token && { 'Authorization': `Bearer ${token}` })
   };
 
+  const handleFindSimilar = async (candidateId, candidateName) => {
+    setIsLoading(true);
+    try {
+      const response = await fetch('/api/similar', {
+        method: 'POST',
+        headers,
+        body: JSON.stringify({ candidate_id: candidateId })
+      });
+      const data = await response.json();
+      if (data.matched) {
+        setCandidates(data.matched);
+        setTotalCandidatesCount(data.matched.length);
+        setSearchQuery(`[유사 후보자] ${candidateName}`);
+        setHasSearched(true);
+      } else {
+        alert("유사 후보자를 찾을 수 없습니다.");
+      }
+    } catch (e) {
+      console.error(e);
+      alert("오류가 발생했습니다.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+
   useEffect(() => {
     if (token) {
       fetchUser();
@@ -531,13 +557,23 @@ export default function MarkdownMain() {
                   </div>
                 )}
                 
-                {candidate.google_drive_url && (
-                    <div className="flex justify-end mt-4 pt-4 border-t border-gray-100">
-                        <a href={candidate.google_drive_url} target="_blank" rel="noopener noreferrer" className="inline-block px-5 py-2.5 bg-black text-white rounded-xl text-[10px] font-black tracking-widest hover:bg-gray-800 transition-colors uppercase shadow-sm" onClick={e => e.stopPropagation()}>
-                            📄 OPEN CV
-                        </a>
+                    <div className="flex justify-end gap-3 mt-4 pt-4 border-t border-gray-100">
+                        <button 
+                            onClick={(e) => { 
+                                e.stopPropagation(); 
+                                const name = (candidate.이름 || candidate.name || candidate.name_kr || 'Unknown').replace(/\[.*?\]/, '').trim();
+                                handleFindSimilar(candidate.id, name); 
+                            }} 
+                            className="inline-block px-5 py-2.5 bg-indigo-600 text-white rounded-xl text-[10px] font-black tracking-widest hover:bg-indigo-700 transition-colors uppercase shadow-sm cursor-pointer"
+                        >
+                            🔍 유사 후보자 찾기
+                        </button>
+                        {candidate.google_drive_url && (
+                            <a href={candidate.google_drive_url} target="_blank" rel="noopener noreferrer" className="inline-block px-5 py-2.5 bg-black text-white rounded-xl text-[10px] font-black tracking-widest hover:bg-gray-800 transition-colors uppercase shadow-sm" onClick={e => e.stopPropagation()}>
+                                📄 OPEN CV
+                            </a>
+                        )}
                     </div>
-                )}
             </div>
         </div>
     );
