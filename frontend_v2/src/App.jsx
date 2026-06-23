@@ -592,6 +592,16 @@ export default function MarkdownMain() {
                       잦은이직
                     </span>
                   )}
+                  {candidate.has_startup === 1 && (
+                    <span className="text-[9px] font-black text-orange-600 bg-orange-50 px-1.5 py-0.5 rounded border border-orange-200 leading-none">
+                      🚀 스타트업
+                    </span>
+                  )}
+                  {candidate.has_big_company === 1 && (
+                    <span className="text-[9px] font-black text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded border border-blue-200 leading-none">
+                      🏢 대기업
+                    </span>
+                  )}
                 </div>
               )}
             </div>
