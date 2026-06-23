@@ -27,8 +27,32 @@ from typing import Dict
 import hashlib
 from functools import lru_cache
 
-# 서버 시작 시 JD 캐시 딕셔너리 초기화
-jd_cache = {}
+# 서버 시작 시 JD 캐시 - TTL + 계정별 (최근 10개, 30분 만료)
+import time as _time
+class _UserCache:
+    def __init__(self, max_per_user=10, ttl=1800):
+        self._store = {}  # user_id -> [(ts, key, val), ...]
+        self.max_per_user = max_per_user
+        self.ttl = ttl
+    def get(self, user_id, key):
+        now = _time.time()
+        entries = self._store.get(user_id, [])
+        entries = [(ts,k,v) for ts,k,v in entries if now-ts < self.ttl]
+        self._store[user_id] = entries
+        for ts,k,v in entries:
+            if k == key:
+                return v
+        return None
+    def set(self, user_id, key, val):
+        now = _time.time()
+        entries = self._store.get(user_id, [])
+        entries = [(ts,k,v) for ts,k,v in entries if now-ts < self.ttl and k != key]
+        entries.append((now, key, val))
+        if len(entries) > self.max_per_user:
+            entries = entries[-self.max_per_user:]
+        self._store[user_id] = entries
+    def __contains__(self, key): return False  # legacy compat
+jd_cache = _UserCache()
 
 # 서버 시작 시 1회 메모리 로드
 _CANDIDATES_CACHE = None
@@ -561,11 +585,13 @@ def api_search_v8_endpoint(req: SearchRequestV5):
         cache_key = hashlib.md5(
             f"{req.prompt}_{req.seniority}_{sorted(req.required)}".encode()
         ).hexdigest()
+        _uid = req.session_id or 'anonymous'
         
-        # 캐시 히트
-        if cache_key in jd_cache:
-            print(f"[CACHE HIT] {req.prompt[:30]}")
-            return jd_cache[cache_key]
+        # 캐시 히트 (계정별)
+        _cached = jd_cache.get(_uid, cache_key)
+        if _cached is not None:
+            print(f"[CACHE HIT] {req.prompt[:30]} | user:{_uid[:8]}")
+            return _cached
             
         from jd_compiler import api_search_v9
         weights = getattr(req, "weights", None)
@@ -630,16 +656,66 @@ def api_search_v8_endpoint(req: SearchRequestV5):
         else:
             print(f"[FILTER] Seniority Filter Skipped: {req_sens} | Total: {raw_count}")
             
-        # 결과 캐시 저장 (최대 200개)
-        if len(jd_cache) >= 200:
-            oldest = next(iter(jd_cache))
-            del jd_cache[oldest]
-            
-        jd_cache[cache_key] = res
+        # 결과 캐시 저장 (계정별, 최근 10개, TTL 30분)
+        jd_cache.set(_uid, cache_key, res)
         print(f"[CACHE MISS] {req.prompt[:30]} | Final Count: {res.get('total')}")
         return res
     except Exception as e:
         logger.error(f"v8 Search error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/similar")
+def find_similar_candidates(req: dict):
+    try:
+        candidate_id = req.get("candidate_id")
+        if not candidate_id:
+            raise HTTPException(status_code=400, detail="candidate_id required")
+        import json as _json
+        s = _json.load(open("secrets.json", encoding="utf-8")) if os.path.exists("secrets.json") else {}
+        pc_key = s.get("PINECONE_API_KEY") or os.environ.get("PINECONE_API_KEY","")
+        pc_host = s.get("PINECONE_HOST") or os.environ.get("PINECONE_HOST","")
+        from pinecone import Pinecone as PC
+        pc = PC(api_key=pc_key)
+        idx = pc.Index(host=pc_host)
+        fetch_res = idx.fetch(ids=[f"{candidate_id}_chunk_0"], namespace="resume_vectors")
+        vectors = fetch_res.get("vectors", {})
+        if not vectors:
+            return {"matched": []}
+        vec = list(vectors.values())[0]["values"]
+        sim_res = idx.query(vector=vec, top_k=11, namespace="resume_vectors", include_metadata=True)
+        seen = set()
+        similar_ids = []
+        for m in sim_res.get("matches", []):
+            cid = m.get("metadata", {}).get("candidate_id") or m["id"].split("_chunk_")[0]
+            if cid != candidate_id and cid not in seen:
+                seen.add(cid)
+                similar_ids.append(cid)
+            if len(similar_ids) >= 5:
+                break
+        conn2 = sqlite3.connect(DB_PATH)
+        cur2 = conn2.cursor()
+        results = []
+        for cid in similar_ids:
+            cur2.execute("""
+                SELECT id, name_kr, current_title, current_company, sector,
+                       total_years, profile_summary, google_drive_url,
+                       has_startup, has_big_company, cei_json
+                FROM candidates WHERE id=? AND is_duplicate=0
+            """, (cid,))
+            row = cur2.fetchone()
+            if row:
+                results.append({
+                    "id": row[0], "name_kr": row[1], "current_title": row[2],
+                    "current_company": row[3], "sector": row[4],
+                    "total_years": row[5], "profile_summary": row[6],
+                    "google_drive_url": row[7], "has_startup": row[8],
+                    "has_big_company": row[9],
+                    "cei": _json.loads(row[10]) if row[10] else None
+                })
+        conn2.close()
+        return {"matched": results}
+    except Exception as e:
+        logger.error(f"Similar search error: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/api/parse-career")
