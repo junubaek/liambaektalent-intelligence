@@ -1715,7 +1715,7 @@ def api_search_v8(prompt: str, session_id: str = None, **kwargs) -> dict:
     
     for cid in combined_ids:
         name = id_to_name.get(cid, cid)
-        c_info = cache_map.get(cid) or cache_map.get(name) or {}
+        c_info = cache_map.get(cid) or {}
         sectors = c_info.get("main_sectors", [])
         
         cand_edges = edges_map.get(cid, [])
@@ -2589,7 +2589,7 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
         name = c['name_kr']
         
         # Use DB metadata first, fallback to cache_map
-        c_info = db_metadata_map.get(cid) or cache_map.get(cid) or cache_map.get(name) or {}
+        c_info = db_metadata_map.get(cid) or cache_map.get(cid) or {}
         
         cand_edges = edges_map.get(cid, [])
         # V9: Map edges/skills to format UI expects (MATCHEDGE)
