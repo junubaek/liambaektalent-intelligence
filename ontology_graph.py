@@ -8458,7 +8458,8 @@ UNIFIED_GRAVITY_FIELD = {
             "Chiplet_Architecture": 0.9,
             "SoC": 0.9, "ASIC": 0.9, "FPGA": 0.9, "Physical_Design": 0.9,
             "RTL_Design": 0.8, "Tape_Out": 0.8, "IP_Design": 0.8,
-            "ARM_Architecture": 0.8, "Memory_Architecture": 0.8, "PCIe_Protocol": 0.8
+            "ARM_Architecture": 0.8, "Memory_Architecture": 0.8, "PCIe_Protocol": 0.8,
+            "SoC_Design": 0.9, "SoC_Architecture": 0.9
         },
         "repels": {
             "Backend": -0.3, "Frontend": -0.3, "Marketing": -0.3, "Financial_Accounting": -0.3,
@@ -8914,7 +8915,16 @@ UNIFIED_GRAVITY_FIELD.update({
         "core_attracts": {
             "RTL_Design":0.9,
             "NPU":0.8,
-            "Semiconductor_Engineering":0.8
+            "Semiconductor_Engineering":0.8,
+            "SoC_Design": 0.95,
+            "SoC_Architecture": 0.95,
+            "SoC_Architecture_Design": 0.9,
+            "SoC_Design_Service": 0.8,
+            "System_on_a_Chip": 0.9,
+            "System_on_Chip_Communication": 0.85,
+            "ASIC": 0.85,
+            "ASIC_Design": 0.85,
+            "ASIC_Architecture": 0.85
         },
         "repels": {
             "Backend_Engineering":-0.3,
