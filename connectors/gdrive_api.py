@@ -61,7 +61,7 @@ class GDriveConnector:
                     }
                 }
                 flow = InstalledAppFlow.from_client_config(client_config, self.scopes)
-                self.creds = flow.run_local_server(port=8080, access_type='offline', prompt='consent')
+                self.creds = flow.run_local_server(port=0, access_type='offline', prompt='consent')
             
             with open(self.token_path, 'wb') as token:
                 pickle.dump(self.creds, token)

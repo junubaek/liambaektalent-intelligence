@@ -1009,6 +1009,14 @@ export default function MarkdownMain() {
           </div>
 
           {hasSearched && (
+            <button
+              onClick={() => { setHasSearched(false); setCandidates([]); setSearchQuery(""); }}
+              className="flex items-center gap-1 px-3 py-1.5 text-xs font-bold text-gray-500 hover:text-black hover:bg-gray-100 rounded-lg transition-all"
+            >
+              ← 처음으로
+            </button>
+          )}
+          {hasSearched && (
             <div className="flex-1 max-w-xl mx-8 animate-fade-in">
               <div className="bg-gray-50 border border-gray-200 rounded-2xl flex items-center px-4 py-2">
                 <Search className="w-4 h-4 text-gray-400 mr-2" />
