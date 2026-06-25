@@ -2344,16 +2344,16 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
 
     # Vector/BM25 풀에서 allowed sector 아닌 후보 제거
     if allowed:
-        def get_primary_sector(cid):
+        def candidate_in_allowed(cid):
             sector_str = candidate_sector_map.get(cid, '')
-            return sector_str.split(',')[0].strip() if sector_str else ''
-        
-        vector_ids = [cid for cid in vector_ids 
-                      if get_primary_sector(cid) in allowed]
-        bm25_ids   = [cid for cid in bm25_ids 
-                      if get_primary_sector(cid) in allowed]
-        graph_ids  = [cid for cid in graph_ids 
-                      if get_primary_sector(cid) in allowed]
+            if not sector_str:
+                return False
+            sectors = [s.strip() for s in sector_str.replace(',', ';').split(';')]
+            return any(s in allowed for s in sectors)
+
+        vector_ids = [cid for cid in vector_ids if candidate_in_allowed(cid)]
+        bm25_ids   = [cid for cid in bm25_ids   if candidate_in_allowed(cid)]
+        graph_ids  = [cid for cid in graph_ids  if candidate_in_allowed(cid)]
     
     combined_ids = list(set(vector_ids) | set(graph_ids) | set(bm25_ids))
     if combined_ids:
