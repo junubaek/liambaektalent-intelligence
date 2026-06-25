@@ -2160,8 +2160,39 @@ def api_search_v9(prompt: str, session_id: str = None, seniority: str = 'All', w
     with open(SECRETS_PATH, "r", encoding="utf-8") as f:
         secrets = json.load(f)
     client = OpenAI(api_key=secrets.get("OPENAI_API_KEY"))
+    # 한국어 쿼리 영어 확장 (벡터 검색 품질 향상)
+    import re as _re
+    _kr_map = {
+        'soc': 'SoC system on chip semiconductor design',
+        '반도체': 'semiconductor chip design engineer',
+        '펌웨어': 'firmware embedded engineer',
+        '임베디드': 'embedded systems engineer',
+        '백엔드': 'backend server engineer',
+        '프론트엔드': 'frontend web engineer',
+        '데이터': 'data engineer scientist',
+        '마케팅': 'marketing manager',
+        '인사': 'HR human resources manager',
+        '재무': 'finance FP&A manager',
+        '영업': 'sales manager business development',
+        '개발': 'software engineer developer',
+        '기획': 'product manager planner',
+        '디자인': 'designer UX UI',
+        '보안': 'security engineer CISO',
+        '인프라': 'infrastructure DevOps cloud engineer',
+        '머신러닝': 'machine learning AI engineer',
+        '클라우드': 'cloud infrastructure engineer',
+    }
     search_text = prompt
-    logger.info(f"[Vector Search] Kept Raw Query (Query Expansion Disabled): {search_text}")
+    _prompt_lower = prompt.lower()
+    _expansions = []
+    for kr, en in _kr_map.items():
+        if kr in _prompt_lower:
+            _expansions.append(en)
+    if _expansions:
+        search_text = prompt + ' ' + ' '.join(_expansions)
+        logger.info(f"[Vector Search] Query Expanded: {search_text[:80]}")
+    else:
+        logger.info(f"[Vector Search] Raw Query: {search_text}")
     emb_res = client.embeddings.create(input=[search_text], model="text-embedding-3-small")
     query_vector = emb_res.data[0].embedding
 
