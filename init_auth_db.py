@@ -8,13 +8,14 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
 DB_PATH = os.environ.get("DB_PATH", "candidates.db")
+AUTH_DB_PATH = os.environ.get("AUTH_DB_PATH", "/data/auth.db")
 
 def get_password_hash(password):
     salt = bcrypt.gensalt()
     return bcrypt.hashpw(password.encode('utf-8'), salt).decode('utf-8')
 
 def init_db():
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(AUTH_DB_PATH)
     cursor = conn.cursor()
 
     logger.info("Creating users table...")

@@ -136,9 +136,10 @@ ACCESS_TOKEN_EXPIRE_DAYS = 7
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="api/auth/login")
 
 DB_PATH = os.environ.get("DB_PATH", os.path.join(ROOT_DIR, "candidates.db"))
+AUTH_DB_PATH = os.environ.get("AUTH_DB_PATH", "/data/auth.db")
 
 def get_db():
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(AUTH_DB_PATH)
     conn.row_factory = sqlite3.Row
     try:
         yield conn
@@ -166,7 +167,7 @@ async def get_current_user(token: str = Depends(oauth2_scheme)):
     except JWTError:
         raise credentials_exception
     
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(AUTH_DB_PATH)
     conn.row_factory = sqlite3.Row
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM users WHERE id = ?", (user_id,))
@@ -241,7 +242,7 @@ from jd_compiler import api_search_v9
 
 @app.post("/api/auth/login")
 def login(req: LoginRequest):
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(AUTH_DB_PATH)
     conn.row_factory = sqlite3.Row
     user = conn.cursor().execute("SELECT * FROM users WHERE LOWER(id) = LOWER(?)", (req.id,)).fetchone()
     print(f"[DEBUG] Login attempt: {req.id}, User found: {bool(user)}")
