@@ -76,6 +76,15 @@ def init_db():
         VALUES (?, ?, ?, ?, ?, ?)
         """, ('userB', 'Recruiter B', 'Tech Recruiter', get_password_hash('user1234'), 0, default_settings_json))
 
+    # Add Michael
+    cursor.execute("SELECT id FROM users WHERE id = 'michael'")
+    if not cursor.fetchone():
+        logger.info("Inserting user: michael (Recruiter)")
+        cursor.execute("""
+        INSERT INTO users (id, name, role, password_hash, is_admin, settings_json)
+        VALUES (?, ?, ?, ?, ?, ?)
+        """, ('michael', 'Michael', 'Recruiter', get_password_hash('sd561014!!'), 0, default_settings_json))
+
     conn.commit()
     conn.close()
     logger.info("DB Initialization complete!")
