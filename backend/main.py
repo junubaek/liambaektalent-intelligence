@@ -7,6 +7,20 @@ from backend import startup
 startup.ensure_db()
 startup.ensure_indexes()
 
+# Auth DB 초기화 (candidates.db와 별도)
+try:
+    from init_auth_db import init_db as init_auth_db_func
+    init_auth_db_func()
+except Exception as e:
+    print(f"Auth DB init error: {e}")
+    try:
+        import sys, os
+        sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+        from init_auth_db import init_db as init_auth_db_func2
+        init_auth_db_func2()
+    except Exception as e2:
+        print(f"Auth DB init fallback error: {e2}")
+
 try:
     from backend.check_railway_db import check_db
     check_db()
