@@ -9398,6 +9398,122 @@ UNIFIED_GRAVITY_FIELD["B2B_Sales"] = {
     }
 }
 
+# IoT/통신 gravity (2025-06)
+UNIFIED_GRAVITY_FIELD["BLE"] = {
+    "core_attracts": {
+        "IoT": 0.8,
+        "Matter_Protocol": 0.75,
+        "Embedded_Systems": 0.65,
+        "Smart_Home": 0.7,
+    },
+    "repels": {}
+}
+UNIFIED_GRAVITY_FIELD["Matter_Protocol"] = {
+    "core_attracts": {
+        "IoT": 0.85,
+        "BLE": 0.75,
+        "Smart_Home": 0.8,
+        "Embedded_Systems": 0.6,
+    },
+    "repels": {}
+}
+
+# 모빌리티 gravity (2025-06)
+UNIFIED_GRAVITY_FIELD["TMS"] = {
+    "core_attracts": {
+        "FMS": 0.85,
+        "MaaS": 0.75,
+        "DRT": 0.7,
+        "Logistics": 0.65,
+    },
+    "repels": {}
+}
+
+# 전장 UX gravity (2025-06)
+UNIFIED_GRAVITY_FIELD["IVI"] = {
+    "core_attracts": {
+        "HMI": 0.9,
+        "Digital_Cockpit": 0.85,
+        "Android_Automotive": 0.8,
+        "UX_UI_Design": 0.7,
+    },
+    "repels": {}
+}
+UNIFIED_GRAVITY_FIELD["HMI"] = {
+    "core_attracts": {
+        "IVI": 0.9,
+        "Digital_Cockpit": 0.85,
+        "UX_UI_Design": 0.75,
+        "Android_Automotive": 0.7,
+    },
+    "repels": {}
+}
+UNIFIED_GRAVITY_FIELD["Digital_Cockpit"] = {
+    "core_attracts": {
+        "IVI": 0.9,
+        "HMI": 0.85,
+        "Android_Automotive": 0.85,
+        "UX_UI_Design": 0.7,
+        "AR_MR": 0.6,
+    },
+    "repels": {}
+}
+UNIFIED_GRAVITY_FIELD["Android_Automotive"] = {
+    "core_attracts": {
+        "IVI": 0.85,
+        "Digital_Cockpit": 0.85,
+        "HMI": 0.75,
+        "Android": 0.6,
+    },
+    "repels": {}
+}
+UNIFIED_GRAVITY_FIELD["Axure"] = {
+    "core_attracts": {
+        "UX_UI_Design": 0.85,
+        "Figma": 0.7,
+        "Prototyping": 0.8,
+    },
+    "repels": {}
+}
+UNIFIED_GRAVITY_FIELD["AR_MR"] = {
+    "core_attracts": {
+        "UX_UI_Design": 0.7,
+        "Digital_Cockpit": 0.6,
+        "HMI": 0.6,
+        "Computer_Vision": 0.65,
+    },
+    "repels": {}
+}
+
+# Finance gravity (2025-06)
+UNIFIED_GRAVITY_FIELD["Market_Sizing"] = {
+    "core_attracts": {
+        "Business_Strategy": 0.8,
+        "Market_Analysis": 0.85,
+        "Financial_Modeling": 0.7,
+        "Commercial_Due_Diligence": 0.75,
+    },
+    "repels": {}
+}
+UNIFIED_GRAVITY_FIELD["Fund_Raising"] = {
+    "core_attracts": {
+        "Venture_Capital": 0.85,
+        "LP_Management": 0.85,
+        "Deal_Sourcing": 0.75,
+        "Portfolio_Management": 0.7,
+    },
+    "repels": {}
+}
+UNIFIED_GRAVITY_FIELD["LP_Management"] = {
+    "core_attracts": {
+        "Fund_Raising": 0.85,
+        "Venture_Capital": 0.8,
+        "Portfolio_Management": 0.75,
+        "Investor_Relations": 0.7,
+    },
+    "repels": {}
+}
+
 # Technical_Sales 기존 한글 노드 참조 수정
 if "Technical_Sales" in UNIFIED_GRAVITY_FIELD:
     UNIFIED_GRAVITY_FIELD["Technical_Sales"]["core_attracts"] = {
@@ -9563,4 +9679,67 @@ CANONICAL_MAP.update({
     'CANoe': 'Automotive_Software',
     'HIL': 'Automotive_Software',
     'MISRA': 'Automotive_Compliance',
+
+    # IoT/통신 추가 (2025-06)
+    "BLE": "BLE",
+    "Bluetooth Low Energy": "BLE",
+    "블루투스LE": "BLE",
+    "Bluetooth LE": "BLE",
+    "BLE 통신": "BLE",
+    "Matter": "Matter_Protocol",
+    "Matter 프로토콜": "Matter_Protocol",
+    "Matter protocol": "Matter_Protocol",
+    "스마트홈 Matter": "Matter_Protocol",
+
+    # 모빌리티 추가 (2025-06)
+    "TMS": "TMS",
+    "Transport Management System": "TMS",
+    "수송관리시스템": "TMS",
+    "TMS 플랫폼": "TMS",
+
+    # 전장 UX 추가 (2025-06)
+    "IVI": "IVI",
+    "In-Vehicle Infotainment": "IVI",
+    "차량용 인포테인먼트": "IVI",
+    "IVI 시스템": "IVI",
+    "차량 IVI": "IVI",
+    "HMI": "HMI",
+    "Human Machine Interface": "HMI",
+    "인간기계인터페이스": "HMI",
+    "HMI 설계": "HMI",
+    "HMI 디자인": "HMI",
+    "Digital Cockpit": "Digital_Cockpit",
+    "디지털 콕핏": "Digital_Cockpit",
+    "차량 콕핏 UI": "Digital_Cockpit",
+    "Android Automotive": "Android_Automotive",
+    "Android Automotive OS": "Android_Automotive",
+    "AAOS": "Android_Automotive",
+    "안드로이드 오토모티브": "Android_Automotive",
+    "Axure": "Axure",
+    "Axure RP": "Axure",
+    "액슈어": "Axure",
+    "Axure 프로토타이핑": "Axure",
+
+    # 선행기술 추가 (2025-06)
+    "AR/MR": "AR_MR",
+    "AR MR": "AR_MR",
+    "증강현실": "AR_MR",
+    "혼합현실": "AR_MR",
+    "Augmented Reality": "AR_MR",
+    "Mixed Reality": "AR_MR",
+
+    # Finance 추가 (2025-06)
+    "Market Sizing": "Market_Sizing",
+    "시장규모 분석": "Market_Sizing",
+    "TAM SAM SOM": "Market_Sizing",
+    "시장 사이징": "Market_Sizing",
+    "Fund Raising": "Fund_Raising",
+    "펀드레이징": "Fund_Raising",
+    "투자유치": "Fund_Raising",
+    "자금조달": "Fund_Raising",
+    "LP Management": "LP_Management",
+    "LP 관리": "LP_Management",
+    "출자자 관리": "LP_Management",
+    "Limited Partner": "LP_Management",
+    "LP Relations": "LP_Management",
 })
