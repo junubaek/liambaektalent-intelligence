@@ -53,7 +53,7 @@ def init_db():
     """)
 
     # Default Settings
-    default_settings_json = json.dumps({"wv": 0.6, "wg": 0.4, "synergy": 1.4, "depth": 1.3})
+    default_settings_json = json.dumps({"wv": 0.6, "wg": 0.28, "bm25": 0.05, "depth": 0.07, "synergy": 1.4})
 
     # Add Liam
     cursor.execute("SELECT id FROM users WHERE id = 'liam'")
