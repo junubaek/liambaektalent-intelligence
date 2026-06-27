@@ -129,10 +129,10 @@ export default function MarkdownMain() {
           const b = parseFloat(loadedSettings.bm25);
           const d = parseFloat(loadedSettings.depth);
           
-          const safeV = isNaN(v) ? 0 : v;
-          const safeG = isNaN(g) ? 0 : g;
-          const safeB = isNaN(b) ? 0 : b;
-          const safeD = isNaN(d) ? 0 : d;
+          const safeV = isNaN(v) ? 0.6 : v;
+          const safeG = isNaN(g) ? 0.35 : g;
+          const safeB = isNaN(b) ? 0.03 : b;
+          const safeD = isNaN(d) ? 0.02 : d;
           
           const totalW = safeV + safeG + safeB + safeD;
           
