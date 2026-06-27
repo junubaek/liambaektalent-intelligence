@@ -20,7 +20,7 @@ export default function MarkdownMain() {
   const [token, setToken] = useState(localStorage.getItem('token') || '');
   const [currentUserData, setCurrentUserData] = useState(null);
   
-  const [settings, setSettings] = useState({ vector: 0.6, graph: 0.28, bm25: 0.05, depth: 0.07, synergy: 1.4 });
+  const [settings, setSettings] = useState({ vector: 0.6, graph: 0.35, bm25: 0.03, depth: 0.02, synergy: 1.4 });
   const [userBookmarks, setUserBookmarks] = useState([]);
   const [userHistory, setUserHistory] = useState([]);
   const [historyPage, setHistoryPage] = useState(1);
@@ -137,7 +137,7 @@ export default function MarkdownMain() {
           const totalW = safeV + safeG + safeB + safeD;
           
           if (totalW < 0.1) {
-            setSettings({ vector: 0.6, graph: 0.28, bm25: 0.05, depth: 0.07, synergy: 1.4 });
+            setSettings({ vector: 0.6, graph: 0.35, bm25: 0.03, depth: 0.02, synergy: 1.4 });
           } else {
             setSettings({ vector: safeV, graph: safeG, bm25: safeB, depth: safeD, synergy: 1.4 });
           }
@@ -231,7 +231,7 @@ export default function MarkdownMain() {
   };
   
   const resetSettings = () => {
-      const defaults = { vector: 0.6, graph: 0.28, bm25: 0.05, depth: 0.07, synergy: 1.4 };
+      const defaults = { vector: 0.6, graph: 0.35, bm25: 0.03, depth: 0.02, synergy: 1.4 };
       setSettings(defaults);
       if (token) {
         fetch('/api/auth/settings', {
